@@ -1,0 +1,110 @@
+:root {
+  --tan6: #473d29;
+}
+
+.embed-input-container {
+  margin: 1em 2em;
+}
+
+.embed-input-container textarea {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.bottomFadeCss {
+  position: relative;
+}
+
+.bottomFadeCss::after {
+  content: '';
+  position: absolute;
+  z-index: 10;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4em;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 70%);
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0.5em 0;
+}
+
+.note {
+  font-style: italic;
+  font-size: 0.9em;
+  margin-bottom: 0.3em;
+  margin-top: 0.3em;
+}
+
+.table {
+  width: 100%;
+  margin-top: 0.5em;
+}
+
+.table tbody {
+  border-top: 1px solid #ddd;
+  background-color: #eae3da;
+}
+
+.table tr {
+  border-bottom: 1px solid var(--tan6);
+  margin: 0 0.2em;
+}
+
+.table tr:first-of-type {
+  border-top: 1px solid var(--tan6);
+}
+
+.table td {
+  padding: 0.5em 0.5em;
+}
+
+.table th {
+  font-weight: normal;
+  font-style: italic;
+  vertical-align: bottom;
+  padding: 0.3em 0.5em;
+}
+
+.cell-centered {
+  text-align: center;
+}
+
+.bottom-fade {
+  position: relative;
+}
+
+.bottom-fade:after {
+  content: '';
+  position: absolute;
+  z-index: 10;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4em;
+  background-image: linear-gradient(to bottom,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 1) 70%);
+}
+
+.inline-button {
+  display: inline-block;
+  border: 1px solid var(--tan6);
+  padding: 0.2em 0.5em;
+  color: var(--tan6);
+  background-color: rgba(255, 255, 255, 0);
+  text-align: left;
+  font-size: 1em;
+  text-transform: none;
+  letter-spacing: normal;
+  font-weight: normal;
+}
+
+.inline-button:hover {
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid #ce5a00;
+  color: #ce5a00;
+  text-decoration: none;
+}
