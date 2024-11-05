@@ -5,7 +5,7 @@ const nextConfig = {
     output: 'export',
     distDir: 'build',
     assetPrefix: isProd ? 'https://apps.montanafreepress.org/election-guide-2024' : undefined,
-    basePath: '/election-guide-2024',
+    basePath: '/capitol-tracker-2025',
     trailingSlash: true,
     compiler: {
         emotion: true,

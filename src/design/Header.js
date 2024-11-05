@@ -7,6 +7,9 @@ import MTFPLogo from '../images/mtfp-logo.png';
 import headerData from '../data/header.json';
 import { formatTimeLong } from '../config/utils';
 
+import '../styles/base.css';
+
+
 import headerBackground from "../images/cap-tracker-background.png";
 
 const title = '2025 Capitol Tracker';
@@ -33,6 +36,7 @@ const titleStyle = css`
 
   a {
     color: var(--gray1);
+    text-decoration: none;
   }
   a:hover {
     color: var(--link);

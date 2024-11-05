@@ -1,6 +1,6 @@
 import React from "react";
 import Link from 'next/link';
-import Layout from '../components/Layout';
+import Layout from '../design/Layout';
 import BillTable from '../components/BillTable';
 import InfoPopup from '../components/InfoPopup';
 import NewsletterSignup from '../components/NewsletterSignup';
