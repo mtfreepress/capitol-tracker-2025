@@ -2,6 +2,7 @@ import { css } from "@emotion/react";
 import PropTypes from "prop-types";
 
 import Head from 'next/head';
+import "../styles/base.css"
 
 import Header from './Header'
 import Nav from './Nav'

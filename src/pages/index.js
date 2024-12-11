@@ -75,12 +75,4 @@ export async function getStaticProps() {
   };
 }
 
-// TODO - Ask Eric if we need to have this or not
-// SEO - Isn't being used in gatsby so we prob don't need this. 
-// export function Head() {
-//   return (
-//     <Seo title="Your Page Title" pageRelativeUrl="" />
-//   );
-// }
-
 export default Index;

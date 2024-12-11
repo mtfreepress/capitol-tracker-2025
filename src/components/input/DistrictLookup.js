@@ -56,7 +56,7 @@ const messageLineCss = css`
 `;
 
 const defaultAddress = 'e.g., 1301 E 6th Ave, Helena';
-
+// TODO: Have this use the CORS Proxy from 
 class DistrictLookup extends Component {
     constructor(props) {
         super(props);
