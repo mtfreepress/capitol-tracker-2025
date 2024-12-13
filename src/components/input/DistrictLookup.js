@@ -56,7 +56,6 @@ const messageLineCss = css`
 `;
 
 const defaultAddress = 'e.g., 1301 E 6th Ave, Helena';
-// TODO: Have this use the CORS Proxy from 
 class DistrictLookup extends Component {
     constructor(props) {
         super(props);
@@ -87,8 +86,8 @@ class DistrictLookup extends Component {
 
     handleResult({ hd, sd, location }) {
         const lawmakers = this.props.lawmakers;
-        const representative = lawmakers.find(lawmaker => lawmaker.district.replace(' ', '') === hd);
-        const senator = lawmakers.find(lawmaker => lawmaker.district.replace(' ', '') === sd);
+        const representative = lawmakers.find(lawmaker => lawmaker.district === hd);
+        const senator = lawmakers.find(lawmaker => lawmaker.district === sd);
         this.setState({
             matchedAddress: location,
             errorMessage: null,
@@ -96,6 +95,7 @@ class DistrictLookup extends Component {
             senator,
         });
     }
+    
 
     handleFailedSubmit() {
         this.setState({
