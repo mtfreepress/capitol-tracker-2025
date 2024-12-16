@@ -1,1 +1,25 @@
-node_modules
+# logs
+logs
+*.log
+npm-debug.log*
+
+# dependency
+node_modules/
+
+# build output
+.next/
+build/
+
+# static exports
+out/
+
+# env vars
+.env.local
+.env.*.local
+
+# IDE specific
+.vscode/
+
+# misc
+.DS_Store
+*.swp
