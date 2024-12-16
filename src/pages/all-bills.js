@@ -70,7 +70,7 @@ const AllBills = () => {
   );
 };
 
-// Head component for SEO
+// head component for SEO
 import Head from "next/head";
 
 export const SeoHead = () => (

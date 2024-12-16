@@ -1,4 +1,4 @@
-// Central storage point for reused styles
+// central storage point for reused styles
 import { css } from '@emotion/react'
 
 export const embedInputContainerStyle = css`
