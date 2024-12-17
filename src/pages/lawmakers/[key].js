@@ -89,7 +89,7 @@ const LawmakerPage = ({ lawmaker }) => {
 
       <div css={topperBar}>
         <div css={portraitColCss} style={{ borderTop: `6px solid ${partyColors(party)}` }}>
-          <LawmakerPortrait image={portrait} alt={`${title} ${name}, ${district}`} />
+          <LawmakerPortrait image={lawmaker.portrait} alt={`${title} ${name}, ${district}`} />
         </div>
         <div css={infoCol}>
           <h1>{`${title} ${name}`}</h1>
@@ -169,10 +169,18 @@ const History = ({ name, history }) => {
 // Fetch Data for Static Generation
 export async function getStaticProps({ params }) {
   const lawmaker = await fetchLawmakerData(params.key);
-  console.log(lawmaker)
   const portrait = await fetchPortraitImage(lawmaker.portrait);
-  return { props: { lawmaker, portrait } };
+  console.log('Fetched portrait:', portrait); // Debug log
+  return {
+    props: {
+      lawmaker: {
+        ...lawmaker,
+        portrait,
+      },
+    },
+  };
 }
+
 
 export async function getStaticPaths() {
   const paths = await fetchLawmakerPaths();

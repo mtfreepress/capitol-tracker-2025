@@ -1,7 +1,7 @@
 import React from "react";
 import { css } from '@emotion/react';
 import ReactMarkdown from 'react-markdown';
-import Layout from '../Layout';
+import Layout from '../../design/Layout';
 import ContactUs from '../ContactUs';
 import NewsletterSignup from '../NewsletterSignup';
 import CommitteeSummary from './Summary';

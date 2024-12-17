@@ -3,14 +3,15 @@ import { css } from '@emotion/react';
 
 import Link from 'next/link';
 
-import MTFPLogo from '../images/mtfp-logo.png';
+// import MTFPLogo from '../images/mtfp-logo.png';
+import MTFPLogo from '../../public/mtfp-logo.png'
 import headerData from '../data/header.json';
 import { formatTimeLong } from '../config/utils';
 
 import '../styles/base.css';
 
 
-import headerBackground from "../images/cap-tracker-background.png";
+import headerBackground from "../../public/cap-tracker-background.png";
 
 const title = '2025 Capitol Tracker';
 const subtitle = 'The lawmakers, bills and votes of the 69th Montana Legislature'; 

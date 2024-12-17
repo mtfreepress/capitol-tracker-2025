@@ -14,7 +14,7 @@ import NewsletterSignup from '../components/NewsletterSignup';
 
 import houseData from '../data/house.json';
 import committeesData from '../data/data-nodes/committees.json';
-import lawmakers from '../data/data-nodes/lawmakers.json'; // Import your lawmakers data
+import lawmakers from '../data/data-nodes/lawmakers.json'; 
 
 const committeeItemStyle = css`
   border: 1px solid var(--tan5);

@@ -1,4 +1,6 @@
 import lawmakersData from '../data/data-nodes/lawmakers.json';
+import getConfig from 'next/config';
+
 
 export const getAllLawmakerKeys = () => {
     return lawmakersData.map(lawmaker => lawmaker.key);
@@ -31,15 +33,18 @@ export const fetchLawmakerData = (key) => {
         email: lawmaker.email || null,
         articles: lawmaker.articles || [],
         districtLocale: lawmaker.districtLocale || '', // not sure if this is used
+        portrait: lawmaker.imageSlug,
     };
 };
 
+
+
 export const fetchPortraitImage = (imageSlug) => {
-    const imagePath = `/images/${imageSlug}.jpg`;
-    return fetch(imagePath)
-        .then((response) => (response.ok ? imagePath : '/images/default-portrait.jpg'))
-        .catch(() => '/images/default-portrait.jpg');
-};
+    const basePath = process.env.BASE_PATH || '';
+    const imagePath = `${basePath}/images/portraits/${imageSlug}`;
+    return imagePath;
+  };
+
 
 export const fetchLawmakerPaths = () => {
     return lawmakersData.map((lawmaker) => ({
