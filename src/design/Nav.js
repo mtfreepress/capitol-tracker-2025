@@ -43,18 +43,16 @@ const navItemStyle = css`
 `;
 
 const navPrimaryStyle = css`
-    flex: 1; // Adjusted
+    flex: 1 1 4em;
     padding: 0.2em;
     border: 1px solid #404040;
     background-color: #eee;
     box-shadow: 1px 1px 2px #ccc;
     display: flex;
     flex-direction: column;
-    width: 100%; // Added
 
     :hover {
         border: 1px solid #ce5a00;
-        text-decoration: none;
         box-shadow: 1px 1px 2px #666;
     }
 `;
@@ -76,13 +74,12 @@ const navPrimaryInfo = css`
 `;
 
 const navSecondaryStyle = css`
-    flex: 1; // Adjusted
+    flex: 1 0 8em;
     display: block;
     border: 1px solid var(--gray2);
     padding: 0.2em 0.5em;
     margin: 0em 0.25em;
     margin-bottom: 0.25em;
-    width: 100%; // Added
 `;
 
 const activeStyle = css`
@@ -102,17 +99,16 @@ const PAGE_LINKS = [
 ];
 
 const Nav = ({ location }) => {
-    const isActiveStyle = null; 
+    // We can add active state management here, if required
+    const isActiveStyle = location ? activeStyle : null;
 
-    const links = PAGE_LINKS.map(l => {
-        return (
-            <Link key={l.path} href={l.path} passHref>
-                <div css={[navItemStyle, navSecondaryStyle, isActiveStyle]}>
-                    {l.label}
-                </div>
-            </Link>
-        );
-    });
+    const links = PAGE_LINKS.map((l) => (
+        <Link key={l.path} href={l.path} passHref legacyBehavior>
+            <a css={[navItemStyle, navSecondaryStyle, isActiveStyle]}>
+                {l.label}
+            </a>
+        </Link>
+    ));
 
     return (
         <div css={navStyle}>
@@ -121,23 +117,23 @@ const Nav = ({ location }) => {
             </div>
 
             <div css={[navRowStyle, navRowPrimary]}>
-                <Link href='/house' passHref>
-                    <div css={[navItemStyle, navPrimaryStyle]}>
+                <Link href='/house' passHref legacyBehavior>
+                    <a css={[navItemStyle, navPrimaryStyle]}>
                         <div css={navPrimaryTitle}>🏛 House</div>
                         <div css={navPrimaryInfo}>GOP-held 68-32</div>
-                    </div>
+                    </a>
                 </Link>
-                <Link href='/senate' passHref>
-                    <div css={[navItemStyle, navPrimaryStyle]}>
+                <Link href='/senate' passHref legacyBehavior>
+                    <a css={[navItemStyle, navPrimaryStyle]}>
                         <div css={navPrimaryTitle}>🏛 Senate</div>
                         <div css={navPrimaryInfo}>GOP-held 34-16</div>
-                    </div>
+                    </a>
                 </Link>
-                <Link href='/governor' passHref>
-                    <div css={[navItemStyle, navPrimaryStyle]}>
+                <Link href='/governor' passHref legacyBehavior>
+                    <a css={[navItemStyle, navPrimaryStyle]}>
                         <div css={navPrimaryTitle}>🖋 Governor</div>
                         <div css={navPrimaryInfo}>Greg Gianforte (R)</div>
-                    </div>
+                    </a>
                 </Link>
             </div>
         </div>

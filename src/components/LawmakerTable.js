@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 import { partyColors } from '../config/config';
 import { lawmakerUrl } from '../config/utils';
-// import { tableStyle } from '../config/styles.js';
+import { fetchPortraitImage } from '@/lib/lawmaker';
 
 const lawmakerTableCss = css`
     max-width: 95vw;
@@ -12,14 +12,6 @@ const lawmakerTableCss = css`
 const tableLinkStyle = css`
     font-weight: bold;
 `;
-// const colorGopCss = css`
-//     color: ${partyColors('R')};
-//     font-weight: bold;
-// `;
-// const colorDemCss = css`
-//     color: ${partyColors('D')};
-//     font-weight: bold;
-// `;
 
 const partyControlCss = party => css`
     background-color: ${partyColors(party)};
@@ -37,15 +29,6 @@ const col2 = css`
         min-width: 8em;
     }
 `;
-// const col3 = css`
-//     min-width: 4.5em;
-//     padding: 0.5em 0 !important;
-//     text-align: right;
-// `;
-// const col4 = css`
-//     min-width: 6.5em;
-//     text-align: right;
-// `;
 
 const clickableCol = css`
     cursor: pointer;
@@ -90,6 +73,7 @@ const LawmakerTable = ({ lawmakers }) => {
         if (key !== sortFunctionKey) setSortFunctionKey(key);
         else setIsSortReversed(!isSortReversed);
     };
+
     const getInteractionStyle = (colKey) => {
         if (colKey === sortFunctionKey) {
             if (!isSortReversed) return [activeCol, sortNotReversed];
@@ -101,23 +85,18 @@ const LawmakerTable = ({ lawmakers }) => {
     const rowSort = isSortReversed ?
         (a, b) => sortFunctions[sortFunctionKey](b, a) // reverse sort direction
         : sortFunctions[sortFunctionKey];
+
     const rows = lawmakers
         .sort(rowSort)
-        .map(lawmaker => <Row key={lawmaker.key} {...lawmaker} />);
+        .map(lawmaker => <Row key={lawmaker.key} lawmakers={lawmakers} {...lawmaker} />);
+
     return (
         <div>
-             <table css={lawmakerTableCss} className="table">
+            <table css={lawmakerTableCss} className="table">
                 <thead>
                     <tr>
                         <th css={[col1, ...getInteractionStyle('district')]} onClick={() => handleColClick('district')}>Dist.</th>
                         <th css={col2}>Lawmaker</th>
-                        {/* 
-                        <th css={[col3, ...getInteractionStyle('votesInMajority')]} onClick={() => handleColClick('fractionVotesOnWinningSide')}>Votes in majority</th>
-                        <th css={col4}>
-                            <div css={[...getInteractionStyle('votesWithGopMajority')]} onClick={() => handleColClick('fractionVotesWithGopCaucus')}> w / most Rs</div>
-                            <div css={[...getInteractionStyle('votesWithDemMajority')]} onClick={() => handleColClick('fractionVotesWithDemCaucus')}> w / most Ds</div>
-                        </th> 
-                        */}
                     </tr>
                 </thead>
                 <tbody>{rows}</tbody>
@@ -126,7 +105,12 @@ const LawmakerTable = ({ lawmakers }) => {
     );
 };
 
-const Row = ({ name, party, district, locale, votingSummary }) => {
+const Row = ({ name, party, district, locale, portrait, lawmakers }) => {
+    const lawmakerData = lawmakers.find(lawmaker => lawmaker.name === name);
+
+    const imageSlug = lawmakerData.imageSlug; 
+    const imageUrl = imageSlug ? fetchPortraitImage(imageSlug) : null; 
+
     return (
         <tr>
             <td css={[col1, partyControlCss(party)]}>
@@ -139,19 +123,9 @@ const Row = ({ name, party, district, locale, votingSummary }) => {
                 </div>
                 <div>{party}-{locale}</div>
             </td>
-            {/* 
-            <td css={col3}>
-                {percentFormat(fractionVotesOnWinningSide)}
+            <td>
+                {imageUrl && <img src={imageUrl} alt={`Portrait of ${name}`} css={{ width: '50px', height: 'auto' }} />}
             </td>
-            <td css={col4}>
-                <div>
-                    <span css={colorGopCss}>{percentFormat(fractionVotesWithGopCaucus)}</span> w/ Rs
-                </div>
-                <div>
-                    <span css={colorDemCss}>{percentFormat(fractionVotesWithDemCaucus)}</span> w/ Ds
-                </div>
-            </td> 
-            */}
         </tr>
     );
 };

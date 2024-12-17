@@ -10,7 +10,7 @@ import { lawmakerUrl, shortDateWithWeekday } from '../../config/utils';
 import { partyColors } from '../../config/config';
 
 const committeeMemberListStyle = css`
-    // your CSS here...
+        // TODO: Needs styling
 `;
 
 const getDay = d => shortDateWithWeekday(new Date(d));
