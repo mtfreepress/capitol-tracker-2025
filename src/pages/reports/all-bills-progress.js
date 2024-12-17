@@ -2,11 +2,11 @@ import React from "react";
 import Link from 'next/link';
 import { css } from "@emotion/react";
 
-import Layout from '../../components/Layout';
+import Layout from '../../design/Layout.js';
 import Seo from '../../components/SEO';
 
 import { dateFormat } from '../../config/utils.js';
-import bills from '../../data-nodes/bills.json';
+import bills from '../../data/data-nodes/bills.json';
 
 const tableStyle = css`
     td {

@@ -1,9 +1,9 @@
 import React from "react";
-import Layout from '../../components/Layout';
+import Layout from '../../design/Layout';
 import BillTable from '../../components/BillTable';
 import ContactUs from '../../components/ContactUs';
 import { percentFormat } from '../../config/utils';
-import billsData from '../../data-nodes/bills.json';
+import billsData from '../../data/data-nodes/bills.json';
 
 const RedTapeBills = () => {
   const bills = billsData.filter(bill => bill.tags.includes("Red Tape Relief bills"))
