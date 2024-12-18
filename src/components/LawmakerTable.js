@@ -124,10 +124,16 @@ const Row = ({ name, party, district, locale, portrait, lawmakers }) => {
                 <div>{party}-{locale}</div>
             </td>
             <td>
-                {imageUrl && <img src={imageUrl} alt={`Portrait of ${name}`} css={{ width: '50px', height: 'auto' }} />}
+                {imageUrl && (
+                    <a href={imageUrl} target="_blank" rel="noopener noreferrer">
+                        {/* TODO: Adjust sizing on the photo */}
+                        <img src={imageUrl} alt={`Portrait of ${name}`} css={{ width: '80px', height: 'auto' }} />
+                    </a>
+                )}
             </td>
         </tr>
     );
 };
 
 export default LawmakerTable;
+
