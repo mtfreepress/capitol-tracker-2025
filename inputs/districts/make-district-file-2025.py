@@ -104,7 +104,12 @@ for d in districts:
         },
 
         # "locale": "Libby", # e.g for "R-Libby" in lawmaker titles.
-            #  Removing from this file because this is better conceptualzied as being attached to lawmakers than to the district
+        # Removing from this file because this is better conceptualzied as being attached to lawmakers than to the district
+        # Suggested replacement logic: Pull from legislator-roster-YYYY, "custom_locale" field if present, "City" field if not
+        # The city field is the right way to locate most lawmakers, but some have strong preferences for
+        # labels that don't match their roster addressses that we've honored in the past
+        # For example, Barry Usher should be R-Laurel, but puts his Billings motorcycle dealership address
+        # on the legislative roster
         "locale_description": d['locale'], # Brief but multi-word description of district scope
         "region": d['region'], # Broad part of the state
         "counties": d['counties'], # Counties covered by the district 
