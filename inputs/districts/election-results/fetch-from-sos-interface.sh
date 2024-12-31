@@ -24,7 +24,7 @@ curl -o \
     https://raw.githubusercontent.com/mtfreepress/sos-election-data-interface/refs/heads/main/outputs/2022/general/2022-general-legislative-vote-counts.csv
 
 # 2024 Statewide general election results
-# Fetches all of them, even though we're only interested in a couple for the Capitol Tracker project
+# Precinct-by-precinct so we can tabulate statewide results in specific legislative districts
 curl -o \
-    ./inputs/districts/election-results/2024-general-statewide-vote-counts.csv \
-    https://raw.githubusercontent.com/mtfreepress/sos-election-data-interface/refs/heads/main/outputs/2024/general/2024-general-statewide-vote-counts.csv
+    ./inputs/districts/election-results/2024-general-statewide-precinct-vote-counts.csv \
+    https://raw.githubusercontent.com/mtfreepress/sos-election-data-interface/refs/heads/main/cleaned/2024/general/precinct-results.csv
