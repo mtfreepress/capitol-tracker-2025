@@ -25,21 +25,24 @@ const billsRaw = getJson('./inputs/laws/bills.json')
 const actionsRaw = getJson('./inputs/laws/actions.json')
 const votesRaw = getJson('./inputs/laws/votes.json')
 
-// Pre-baked lawmaker inputs
-const districtsRaw = getJson('./inputs/lawmakers/districts-2023.json')
-const lawmakersRaw = getJson('./inputs/lawmakers/leg-roster-2023.json')
+
+const districtsRaw = await getCsv('./inputs/districts/districts-2025.json')
+const lawmakersRaw = getJson('./inputs/lawmakers/leg-roster-2025.json')
 
 // Legislative article list from Montana Free Press CMS
 const articlesRaw = getJson('./inputs/coverage/articles.json')
 
-// List of hearing/floor recordings and associated pages in the third-party Council Data Project system
-const recordings = getJson('./inputs/hearing-transcripts/recordings.json')
+// // List of hearing/floor recordings and associated pages in the third-party Council Data Project system
+// const recordings = getJson('./inputs/hearing-transcripts/recordings.json')
+const recordings = [] // Won't have these for 2025
 
 // Bill annotations from standalone Strapi CMS
-const billAnnotations = getJson('./inputs/annotations/bill-annotations.json')
-const lawmakerAnnotations = getJson('./inputs/annotations/lawmaker-annotations.json')
-const processAnnotations = getJson('./inputs/annotations/process-annotations.json')
-const guideText = getJson('./inputs/annotations/guide-text.json')
+// TODO - replace these with YAML/CSV/MD files we can edit in the repo
+// Model after /content input flow in 2024 Election Guide
+const billAnnotations = getJson('./inputs/annotations/old-bill-annotations.json')
+const lawmakerAnnotations = getJson('./inputs/annotations/old-lawmaker-annotations.json')
+const processAnnotations = getJson('./inputs/annotations/old-process-annotations.json')
+const guideText = getJson('./inputs/annotations/old-guide-text.json')
 
 const articles = articlesRaw.map(article => new Article({ article }).export())
 
@@ -111,6 +114,9 @@ lawmakers.forEach(lawmaker => {
     }
 })
 
+// As of Dec. 2024 Eric can't remember why he thought this summaryRoster was necessary
+// Maybe to avoid circular logic somewhere in the data model creation logic?
+// In 2023, this code stub output this once so it could be a static input
 // const summaryRoster = lawmakers.map(d => {
 //     return {
 //         title: d.data.title,
@@ -159,34 +165,6 @@ const participationPageOutput = {
     text: guideText.ParticipationPage
 }
 
-// Hacky analyses
-// console.log({ votesCast: votes.map(v => v.votes).flat().length })
-// console.log({ keyBills: bills.filter(bill => bill.data.isMajorBill).length })
-// console.log({ liveAtSessionEnd: bills.map(b => b.exportBillDataOnly().status).filter(d => ['became law', 'pending, passed legislature'].includes(d.statusAtSessionEnd)).length })
-// console.log(
-//     {
-//         atOrPastGovernor: bills.map(b => b.exportBillDataOnly().progress.slice(-1)[0])
-//             .filter(d => ['current', 'passed'].includes(d.status))
-//             .length
-//     }
-// )
-// console.log({
-//     hearingCount: actions.filter(d => d.hearing).length,
-//     floorDebateCount: actions.filter(d => d.floorDebate).length
-// })
-
-// const start = new Date('03/27/23')
-// const end = new Date('03/31/23')
-// const hearingsOnFBBillsThisWeek = bills
-//     .filter(d => d.data.fiscalNoteUrl)
-//     .map(d => d.actions.filter(d => d.data.description === 'Hearing')).flat()
-//     .filter(a => (new Date(a.data.date) >= start) && (new Date(a.data.date) <= end))
-// const hearingsOnCABillsThisWeek = bills
-//     .filter(d => d.data.type === 'constitutional amendment')
-//     .map(d => d.actions.filter(d => d.data.description === 'Hearing')).flat()
-//     .filter(a => (new Date(a.data.date) >= start) && (new Date(a.data.date) <= end))
-// console.log('Fiscal note bill hearings week of 3/27:', hearingsOnFBBillsThisWeek.length)
-// console.log('Const. Amend. bill hearings week of 3/27:', hearingsOnCABillsThisWeek.length)
 
 
 // Outputs 
@@ -226,16 +204,5 @@ writeJson('./app/src/data/participation.json', participationPageOutput)
 writeJson('./app/src/data/house.json', housePageOutput)
 writeJson('./app/src/data/senate.json', senatePageOutput)
 writeJson('./app/src/data/governor.json', governorPageOutput)
-
-
-
-
-// // // Possibly experiment with doing this data merge in gatsby-node
-// // // For performance optimization
-// // Problem: Gatsby seems to be choking on inferring data structures here
-// const actionsOutput = bills.map(b => b.exportActionData())
-// const votesOutput = bills.map(b => b.exportVoteData())
-// writeJson('./app/src/data-nodes/votes.json', votesOutput)
-// writeJson('./app/src/data-nodes/actions.json', actionsOutput)
 
 
