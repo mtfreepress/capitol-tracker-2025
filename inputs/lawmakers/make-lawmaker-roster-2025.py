@@ -64,13 +64,26 @@ into format expected by process step
 import json
 import pandas as pd
 
+def read_json(path):
+    with open(path, 'r') as f:
+        data = json.load(f)
+    return data
+
 def write_json(dict, path):
     with open(path, 'w') as f:
         json.dump(dict, f, indent=4)
 
-lawmakers = pd.read_csv('./inputs/lawmakers/official-roster-2025-annotated.csv')
+lawmakers = pd.read_csv('./inputs/lawmakers/official-roster-2025.csv')
+annotations = pd.read_csv('./inputs/lawmakers/roster-annotations.csv')
+committee_assignments = pd.read_csv('./inputs/lawmakers/committee-assignments-2025.csv')
+session_history = read_json('./inputs/lawmakers/legislator-session-history.json')
+
+lawmakers['name'] = lawmakers['First Name'] + ' ' + lawmakers['Last Name']
+lawmakers = lawmakers.merge(annotations, left_on='name', right_on='roster_name', how='left')
 
 lawmakers['name'] = lawmakers['custom_name'].where(lawmakers['custom_name'].notnull(), lawmakers['First Name'] + ' ' + lawmakers['Last Name']) 
+lawmakers['first_name'] = lawmakers['First Name']
+lawmakers['last_name'] = lawmakers['Last Name']
 lawmakers['district'] = lawmakers['District'].str.replace('House District','HD').str.replace('Senate District','SD')
 lawmakers['party'] = lawmakers['Party'].str[:1]
 # lawmakers[''] = lawmakers.apply(lambda row: row['custom_locale'] if row['custom_locale'] else row['city'], axis=1)
@@ -80,11 +93,17 @@ lawmakers['address'] = 'TK'
 lawmakers['email'] = lawmakers['Email']
 lawmakers['image_path'] = 'TK' # May not be necessary depending on how we implement portraits
 
-lawmakers = lawmakers[['name','district','party','locale','phone','email']].to_dict(orient='records')
+
+
+
+lawmakers = lawmakers[['name','first_name', 'last_name','district','party','locale','phone','email']].to_dict(orient='records')
 
 for lawmaker in lawmakers:
-    lawmaker['sessions'] = [] # TODO
-    lawmaker['committees'] = [] # TODO - merge in assignments from committee-assignments-2025.csv
+    committee_key = (lawmaker['last_name'] + ', ' + lawmaker['first_name'])
+    lawmaker_committees = committee_assignments[committee_assignments['lawmaker'] == committee_key]
+    
+    lawmaker['sessions'] = next(filter(lambda l: l['name'] == lawmaker['name'], session_history), [])
+    lawmaker['committees'] = lawmaker_committees[['committee','role']].to_dict(orient='records')
     lawmaker['note'] = '' # Possible TODO depending on how we do annotations
     lawmaker['source'] = None # May be able to update with link to official roster page
 
