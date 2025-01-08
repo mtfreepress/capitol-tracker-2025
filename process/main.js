@@ -160,7 +160,7 @@ const actionsOutput = bills.map(b => ({
     actions: b.exportActionDataWithVotes()
 }))
 
-writeJson('./src/data/data-nodes/bills.json', billsOutput)
+writeJson('./src/data/bills.json', billsOutput)
 
 // Breaking this into chunks to avoid too-large-for-github-files
 const chunkSize = 200
@@ -171,9 +171,9 @@ for (let start = 0; start < actionsOutput.length; start += chunkSize) {
 }
 
 const lawmakerOutput = lawmakers.map(l => l.exportMerged())
-writeJson('./src/data/data-nodes/lawmakers.json', lawmakerOutput)
+writeJson('./src/data/lawmakers.json', lawmakerOutput)
 const committeeOutput = committees.map(l => l.export())
-writeJson('./src/data/data-nodes/committees.json', committeeOutput)
+writeJson('./src/data/committees.json', committeeOutput)
 
 writeJson('./src/data/header.json', headerOutput)
 writeJson('./src/data/articles.json', articles)

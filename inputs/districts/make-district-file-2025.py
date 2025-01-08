@@ -76,11 +76,13 @@ def parse_statewide_votes (precinctResults, district, raceLabel):
     race_votes['votes'] =  race_votes['votes'].round().astype(int)
     total_votes = race_votes['votes'].sum()
     race_votes['percent'] = race_votes['votes'] / total_votes
+    race_votes.rename(columns={'candidate': 'name'}, inplace=True)
     return race_votes.to_dict(orient='records')
     
 def parse_legislative_votes(results, district):
     districtKey = district.replace(' ','-')
     race_votes = results[results['district'] == districtKey][['party','candidate','votes']]
+    race_votes.rename(columns={'candidate': 'name'}, inplace=True)
     race_votes['party'] = race_votes['party'].str[:1]
     total_votes = race_votes['votes'].sum()
     race_votes['percent'] = race_votes['votes'] / total_votes

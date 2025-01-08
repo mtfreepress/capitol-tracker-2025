@@ -11,8 +11,8 @@ import DistrictLookup from '../components/input/DistrictLookup';
 import { urlize } from '../config/utils';
 import processAnnotations from '../data/process-annotations.json';
 import keyBillCategories from '../data/bill-categories.json';
-import bills from '../data/data-nodes/bills.json'
-import lawmakers from '../data/data-nodes/lawmakers.json'
+import bills from '../data/bills.json'
+import lawmakers from '../data/lawmakers.json'
 
 const Index = ({ keyBills, billIndex, lawmakerIndex }) => {
   const { howBillsMove } = processAnnotations;

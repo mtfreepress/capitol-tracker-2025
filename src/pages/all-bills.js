@@ -6,7 +6,7 @@ import BillTable from "../components/BillTable";
 import ContactUs from "../components/ContactUs";
 import NewsletterSignup from "../components/NewsletterSignup";
 import { capitalize, numberFormat } from "../config/utils";
-import billsJson from "../data/data-nodes/bills.json";
+import billsJson from "../data/bills.json";
 const types = [
   "budget bill",
   "house bill",

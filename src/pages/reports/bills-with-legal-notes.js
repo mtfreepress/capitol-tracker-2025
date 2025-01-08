@@ -2,7 +2,7 @@ import React from "react";
 import Layout from '../../design/Layout';
 import BillTable from '../../components/BillTable';
 import ContactUs from '../../components/ContactUs';
-import bills from '../../data/data-nodes/bills.json'
+import bills from '../../data/bills.json'
 
 const LegalNoteBills = ({ billsWithLegalNotes }) => {
   return (

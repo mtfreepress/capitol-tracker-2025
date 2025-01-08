@@ -6,7 +6,7 @@ import Layout from '../../design/Layout.js';
 import Seo from '../../components/SEO';
 
 import { dateFormat } from '../../config/utils.js';
-import bills from '../../data/data-nodes/bills.json';
+import bills from '../../data/bills.json';
 
 const tableStyle = css`
     td {

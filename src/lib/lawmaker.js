@@ -1,4 +1,4 @@
-import lawmakersData from '../data/data-nodes/lawmakers.json';
+import lawmakersData from '../data/lawmakers.json';
 import getConfig from 'next/config';
 
 

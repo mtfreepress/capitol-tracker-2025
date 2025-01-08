@@ -1,7 +1,7 @@
 import React from 'react'
 import { css } from '@emotion/react'
 import LawmakerTable from '../components/LawmakerTable'
-import lawmakers from '../data/data-nodes/lawmakers.json' 
+import lawmakers from '../data/lawmakers.json' 
 
 
 const sideBySideTableCss = css`
