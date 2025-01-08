@@ -4,6 +4,8 @@ import { fileURLToPath } from 'url';
 import path from 'path';
 import { writeJson } from '../../process/utils.js';
 
+// TODO: NEED TO ADD VOTES ONCE THEY START HAPPENING
+
 const BILL_LIST_URL = 'https://raw.githubusercontent.com/mtfreepress/legislative-interface/refs/heads/main/list-bills-2.json';
 const GITHUB_API_URL_BILLS = 'https://api.github.com/repos/mtfreepress/legislative-interface/contents/process/cleaned/bills-2';
 const GITHUB_API_URL_ACTIONS = 'https://api.github.com/repos/mtfreepress/legislative-interface/contents/process/cleaned/actions-2';
@@ -58,7 +60,7 @@ const main = async () => {
         console.log(`Found action JSON files:`, jsonActionFiles.map(file => file.name));
 
         for (const bill of billList) {
-            const billIdentifier = `${bill.billType}${bill.billNumber}`;
+            const billIdentifier = `${bill.billType}-${bill.billNumber}`;
             const folderPath = path.join(OUT_DIR, billIdentifier);
 
             await createFolderIfNotExists(folderPath);
