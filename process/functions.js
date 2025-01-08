@@ -7,7 +7,7 @@ import {
 
 import {
     COMMITEE_NAME_CLEANING,
-    COMMITTEES,
+    // COMMITTEES,
     // EXCLUDE_COMMITTEES,
 } from './config/committees.js'
 
@@ -18,7 +18,9 @@ const roster = getJson('./inputs/lawmakers/legislator-roster-2025.json')
 
 export const billKey = (identifier) => identifier.substring(0, 2).toLowerCase() + '-' + identifier.substring(3,)
 export const lawmakerKey = (name) => name.replace(/\s/g, '-')
-export const commiteeKey = (name) => name.replace(/,/g, '').replace(/\s/g, '-').toLowerCase()
+
+// Should be replaced by manual config
+// export const commiteeKey = (name) => name.replace(/,/g, '').replace(/\s/g, '-').toLowerCase()
 
 export const capitalize = string => string[0].toUpperCase() + string.slice(1).toLowerCase()
 

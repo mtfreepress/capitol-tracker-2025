@@ -1,4 +1,4 @@
-import { getJson, collectJsons, writeJson, getYaml, collectYamls, getText } from './utils.js'
+import { getJson, collectJsons, writeJson, getYaml, collectYamls, getText, getCsv } from './utils.js'
 
 import Lawmaker from './models/Lawmaker.js'
 import Bill from './models/Bill.js'
@@ -13,10 +13,10 @@ import HousePage from './models/HousePage.js'
 import SenatePage from './models/SenatePage.js'
 import GovernorPage from './models/GovernorPage.js'
 
-import { COMMITTEES } from './config/committees.js'
-
 const updateTime = new Date()
+
 /*
+### LOAD INPUTS
 Approach here — each of these input buckets has a fetch script that needs to be run independently to update their contents
 */
 
@@ -25,9 +25,10 @@ const billsRaw = collectJsons('./inputs/bills/*/*-data.json')
 const actionsRaw = collectJsons('./inputs/bills/*/*-actions.json')
 const votesRaw = collectJsons('./inputs/bills/*/*-votes.json')
 
-// District and lawmaker information (mostly static)
+// Session-specific data -- mostly static; updated manually as necessary
 const districtsRaw = getJson('./inputs/districts/districts-2025.json')
 const lawmakersRaw = getJson('./inputs/lawmakers/legislator-roster-2025.json')
+const committeesRaw = await getCsv('./inputs/committees/committees.csv')
 
 // Legislative article list from Montana Free Press CMS
 const articlesRaw = getJson('./inputs/coverage/articles.json')
@@ -37,11 +38,20 @@ const billAnnotations = collectYamls('./inputs/annotations/bills/*.yml')
 const lawmakerAnnotations = collectYamls('./inputs/annotations/lawmakers/*.yml')
 const processNotes = getYaml('./inputs/annotations/process-notes.yml')
 
+// Text content
 const homePageTopper = getText('./inputs/annotations/pages/home.md')
 const housePageTopper = getText('./inputs/annotations/pages/house.md')
 const senatePageTopper = getText('./inputs/annotations/pages/senate.md')
 const governorPageTopper = getText('./inputs/annotations/pages/governor.md')
 const participationPageContent = getText('./inputs/annotations/pages/participation.md')
+
+/* 
+### DATA BUNDLING + WRANGLING
+*/
+
+// config stuff
+const committeeOrder = committeesRaw.map(d => d.name)
+
 
 const articles = articlesRaw.map(article => new Article({ article }).export())
 
@@ -53,6 +63,7 @@ const lawmakers = lawmakersRaw.map(lawmaker => new Lawmaker({
     articles: articles.filter(d => d.lawmakerTags.includes(lawmaker.name)),
     // leave sponsoredBills until after bills objects are created
     // same with keyVotes
+    committeeOrder, // controls what order committee assignments are displayed on lawmaker pages
 }))
 
 const bills = billsRaw.map(bill => new Bill({
@@ -71,7 +82,7 @@ const senateFloorVotes = votes.filter(v => v.type === 'floor' && v.voteChamber =
 const houseFloorVoteAnalysis = new VotingAnalysis({ votes: houseFloorVotes })
 const senateFloorVoteAnalysis = new VotingAnalysis({ votes: senateFloorVotes })
 
-const committees = COMMITTEES
+const committees = committeesRaw
     .filter(d => ![
         'conference',
         'select',
@@ -80,9 +91,8 @@ const committees = COMMITTEES
     ].includes(d.type))
     .map(schema => new Committee({
         schema,
-        committeeBills: bills.filter(b => b.committees.includes(schema.name)),
-        // billActions: actions.filter(a => a.committee === schema.name),
-        lawmakers: lawmakers.filter(l => l.data.committees.map(d => d.committee).includes(schema.name)),
+        committeeBills: bills.filter(b => b.committees.includes(schema.displayName)),
+        lawmakers: lawmakers.filter(l => l.data.committees.map(d => d.committee).includes(schema.name)), // Cleaner to do this backwards -- assign lawmakers based on committee data?
         updateTime
     }))
 
@@ -137,7 +147,9 @@ const participationPageOutput = {
 }
 
 
-// Outputs 
+/* 
+### OUTPUTS 
+*/
 console.log('### Bundling tracker data')
 /*
 Exporting bill actions separately here so they can be kept outside of Gatsby graphql scope
