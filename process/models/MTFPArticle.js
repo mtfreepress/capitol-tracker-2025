@@ -9,16 +9,16 @@ const cleanBillTags = tag => tag.replace('House ', 'H').replace('Senate ', 'S').
 
 export default class Article {
     constructor({ article }) {
-        this.tags = article.tags.nodes.map(d => d.name)
+        this.tags = article.tags
         this.data = {
             title: article.title,
-            category: article.categories.nodes[0].name,
+            category: article.categories[0],
             subtitle: '', // Hard to get
             date: new Date(article.date),
             link: article.link,
             // tags: this.tags,
-            author: article.author.node.name,
-            imageUrl: article.featuredImage && article.featuredImage.node.link,
+            author: article.author,
+            imageUrl: article.featuredImage,
 
             billTags: this.tags.filter(billTagTest).map(cleanBillTags),
             lawmakerTags: this.tags.filter(lawmakerTagTest),

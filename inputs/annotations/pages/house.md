@@ -1,0 +1,1 @@
+The Montana House is the Legislature’s larger chamber, with 100 representatives elected to two-year terms. Appropriations measures, such as the state budget bill, typically originate in the House.

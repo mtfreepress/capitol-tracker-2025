@@ -1,4 +1,4 @@
-import { getJson, writeJson } from './utils.js'
+import { getJson, writeJson, getYaml, collectYamls, getText } from './utils.js'
 
 import Lawmaker from './models/Lawmaker.js'
 import Bill from './models/Bill.js'
@@ -21,28 +21,31 @@ Approach here — each of these input buckets has a fetch script that needs to 
 */
 
 // LAWS scraper inputs
-const billsRaw = getJson('./inputs/laws/bills.json')
-const actionsRaw = getJson('./inputs/laws/actions.json')
-const votesRaw = getJson('./inputs/laws/votes.json')
+const billsRaw = getJson('./inputs/bills/bills.json')
+const actionsRaw = getJson('./inputs/bills/actions.json')
+const votesRaw = getJson('./inputs/bills/votes.json')
+// // For testing
+// const billsRaw = []
+// const actionsRaw = []
+// const votesRaw = []
 
-// Pre-baked lawmaker inputs
-const districtsRaw = getJson('./inputs/lawmakers/districts-2023.json')
-const lawmakersRaw = getJson('./inputs/lawmakers/leg-roster-2023.json')
+// district and lawmaker inputs
+const districtsRaw = getJson('./inputs/districts/districts-2025.json')
+const lawmakersRaw = getJson('./inputs/lawmakers/legislator-roster-2025.json')
 
 // Legislative article list from Montana Free Press CMS
 const articlesRaw = getJson('./inputs/coverage/articles.json')
 
-// // List of hearing/floor recordings and associated pages in the third-party Council Data Project system
-// const recordings = getJson('./inputs/hearing-transcripts/recordings.json')
-const recordings = [] // Won't have these for 2025
+// Annotations from YAML and MD files (can also use CSVs in future here)
+const billAnnotations = collectYamls('./inputs/annotations/bills/*.yml')
+const lawmakerAnnotations = collectYamls('./inputs/annotations/lawmakers/*.yml')
+const processNotes = getYaml('./inputs/annotations/process-notes.yml')
 
-// Bill annotations from standalone Strapi CMS
-// TODO - replace these with YAML/CSV/MD files we can edit in the repo
-// Model after /content input flow in 2024 Election Guide
-const billAnnotations = getJson('./inputs/annotations/old-bill-annotations.json')
-const lawmakerAnnotations = getJson('./inputs/annotations/old-lawmaker-annotations.json')
-const processAnnotations = getJson('./inputs/annotations/old-process-annotations.json')
-const guideText = getJson('./inputs/annotations/old-guide-text.json')
+const homePageTopper = getText('./inputs/annotations/pages/home.md')
+const housePageTopper = getText('./inputs/annotations/pages/house.md')
+const senatePageTopper = getText('./inputs/annotations/pages/senate.md')
+const governorPageTopper = getText('./inputs/annotations/pages/governor.md')
+const participationPageContent = getText('./inputs/annotations/pages/participation.md')
 
 const articles = articlesRaw.map(article => new Article({ article }).export())
 
@@ -58,17 +61,7 @@ const lawmakers = lawmakersRaw.map(lawmaker => new Lawmaker({
 
 const bills = billsRaw.map(bill => new Bill({
     bill,
-    actions: actionsRaw.filter(d => d.bill === bill.key).map(a => {
-        const match = recordings.find(d => a.recordings.includes(d.external_source_id))
-        let transcriptUrl = null
-        if (match) {
-            transcriptUrl = `https://www.openmontana.org/montana-legislature-council-data-project/#/events/${match.event_id}`
-        }
-        return {
-            ...a,
-            transcriptUrl,
-        }
-    }),
+    actions: actionsRaw.filter(d => d.bill === bill.key),
     votes: votesRaw.filter(d => d.bill === bill.key),
     annotation: billAnnotations.find(d => d.Identifier === bill.key) || {},
     articles: articles.filter(d => d.billTags.includes(bill.key)),
@@ -131,21 +124,20 @@ const keyBillCategoryList = keyBillCategoryKeys.map(category => {
 const headerOutput = { updateTime }
 
 const overviewPageOutput = {
-    aboveFoldText: guideText.HomePageAboveTheFold,
-    // TODO figure out what else needs to be in here
+    aboveFoldText: homePageTopper,
 }
 const housePageOutput = new HousePage({
-    text: guideText.HousePageText
+    text: housePageTopper
 }).export()
 const senatePageOutput = new SenatePage({
-    text: guideText.SenatePageText
+    text: senatePageTopper
 }).export()
 const governorPageOutput = new GovernorPage({
-    text: guideText.GovernorPageText,
+    text: governorPageTopper,
     articles: articles.filter(article => article.governorTags.includes('Greg Gianforte'))
 }).export()
 const participationPageOutput = {
-    text: guideText.ParticipationPage
+    text: participationPageContent
 }
 
 
@@ -178,7 +170,7 @@ writeJson('./app/src/data-nodes/committees.json', committeeOutput)
 
 writeJson('./app/src/data/header.json', headerOutput)
 writeJson('./app/src/data/articles.json', articles)
-writeJson('./app/src/data/process-annotations.json', processAnnotations)
+writeJson('./app/src/data/process-annotations.json', processNotes)
 writeJson('./app/src/data/bill-categories.json', keyBillCategoryList)
 writeJson('./app/src/data/calendar.json', calendarOutput)
 writeJson('./app/src/data/recap.json', recapOutput)
