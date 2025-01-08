@@ -81,6 +81,7 @@ session_history = read_json('./inputs/lawmakers/legislator-session-history.json'
 lawmakers['name'] = lawmakers['First Name'] + ' ' + lawmakers['Last Name']
 lawmakers = lawmakers.merge(annotations, left_on='name', right_on='roster_name', how='left')
 
+lawmakers['slug'] = lawmakers['custom_key'].where(lawmakers['custom_key'].notnull(), lawmakers['First Name'].str.lower() + '-' + lawmakers['Last Name']).str.lower() 
 lawmakers['name'] = lawmakers['custom_name'].where(lawmakers['custom_name'].notnull(), lawmakers['First Name'] + ' ' + lawmakers['Last Name']) 
 lawmakers['first_name'] = lawmakers['First Name']
 lawmakers['last_name'] = lawmakers['Last Name']
@@ -102,9 +103,10 @@ for lawmaker in lawmakers:
     committee_key = (lawmaker['last_name'] + ', ' + lawmaker['first_name'])
     lawmaker_committees = committee_assignments[committee_assignments['lawmaker'] == committee_key]
     
-    lawmaker['sessions'] = next(filter(lambda l: l['name'] == lawmaker['name'], session_history), [])
+    lawmaker['sessions'] = next(filter(lambda l: l['name'] == lawmaker['name'], session_history), [])['sessions']
     lawmaker['committees'] = lawmaker_committees[['committee','role']].to_dict(orient='records')
     lawmaker['note'] = '' # Possible TODO depending on how we do annotations
     lawmaker['source'] = None # May be able to update with link to official roster page
+    lawmaker['image_path'] = '' # Need to figure this out later, probably with a standard slug
 
 write_json(lawmakers, './inputs/lawmakers/legislator-roster-2025.json')
