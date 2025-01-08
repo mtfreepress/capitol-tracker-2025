@@ -59,8 +59,6 @@ export default class Bill {
             vetoMemoUrl,
         } = annotation
 
-        console.log(bill)
-
         this.identifer = key
         this.chamber = this.getChamber(key)
         this.type = this.getType(bill)
@@ -367,7 +365,6 @@ export default class Bill {
     }
 
     getVoteMajorityRequired = (subjects) => {
-        console.log(this)
         const thisBillThresholds = subjects.map(d => d.voteReq)
         if (thisBillThresholds.length === 0) {
             throw `${this.identifier} has no subjects, causes error in getVoteMajorityRequired`

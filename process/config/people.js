@@ -388,6 +388,7 @@ export const LAWMAKER_NAME_CLEANING = {
     'Steven Kelly': 'Steven Kelly',
     'Shane Klakken': 'Shane Klakken',
     'Gayle Lammers': 'Gayle Lammers',
+    'Gayle  Lammers': 'Gayle Lammers',
     'Marc Lee': 'Marc Lee',
     'Kathy Love': 'Kathy Love',
     'Shannon Maness': 'Shannon Maness',

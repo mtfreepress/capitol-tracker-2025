@@ -117,7 +117,7 @@ const calendarOutput = new CalendarPage({ actions, bills, updateTime }).export()
 bills.forEach(bill => bill.data.isOnCalendar = calendarOutput.billsOnCalendar.includes(bill.data.identifier))
 const recapOutput = new RecapPage({ actions, bills, updateTime }).export()
 
-const keyBillCategoryKeys = Array.from(new Set(billAnnotations.map(d => d.category))).filter(d => d !== null)
+const keyBillCategoryKeys = Array.from(new Set(billAnnotations.map(d => d.category))).filter(d => d !== null).filter(d => d !== undefined)
 const keyBillCategoryList = keyBillCategoryKeys.map(category => {
     const match = billAnnotations.find(d => d.category === category)
     return {
@@ -150,7 +150,7 @@ const participationPageOutput = {
 /* 
 ### OUTPUTS 
 */
-console.log('### Bundling tracker data')
+console.log('\n### Bundling tracker data')
 /*
 Exporting bill actions separately here so they can be kept outside of Gatsby graphql scope
 */
@@ -159,30 +159,29 @@ const actionsOutput = bills.map(b => ({
     bill: b.data.identifier,
     actions: b.exportActionDataWithVotes()
 }))
-// segment actionsOutput
 
-writeJson('./app/src/data-nodes/bills.json', billsOutput)
+writeJson('./src/data/data-nodes/bills.json', billsOutput)
 
 // Breaking this into chunks to avoid too-large-for-github-files
 const chunkSize = 200
 let index = 1
 for (let start = 0; start < actionsOutput.length; start += chunkSize) {
-    writeJson(`./app/src/data/bill-actions-${index}.json`, actionsOutput.slice(start, start + chunkSize))
+    writeJson(`./src/data/bill-actions-${index}.json`, actionsOutput.slice(start, start + chunkSize))
     index += 1
 }
 
 const lawmakerOutput = lawmakers.map(l => l.exportMerged())
-writeJson('./app/src/data-nodes/lawmakers.json', lawmakerOutput)
+writeJson('./src/data/data-nodes/lawmakers.json', lawmakerOutput)
 const committeeOutput = committees.map(l => l.export())
-writeJson('./app/src/data-nodes/committees.json', committeeOutput)
+writeJson('./src/data/data-nodes/committees.json', committeeOutput)
 
-writeJson('./app/src/data/header.json', headerOutput)
-writeJson('./app/src/data/articles.json', articles)
-writeJson('./app/src/data/process-annotations.json', processNotes)
-writeJson('./app/src/data/bill-categories.json', keyBillCategoryList)
-writeJson('./app/src/data/calendar.json', calendarOutput)
-writeJson('./app/src/data/recap.json', recapOutput)
-writeJson('./app/src/data/participation.json', participationPageOutput)
-writeJson('./app/src/data/house.json', housePageOutput)
-writeJson('./app/src/data/senate.json', senatePageOutput)
-writeJson('./app/src/data/governor.json', governorPageOutput)
+writeJson('./src/data/header.json', headerOutput)
+writeJson('./src/data/articles.json', articles)
+writeJson('./src/data/process-annotations.json', processNotes)
+writeJson('./src/data/bill-categories.json', keyBillCategoryList)
+writeJson('./src/data/calendar.json', calendarOutput)
+writeJson('./src/data/recap.json', recapOutput)
+writeJson('./src/data/participation.json', participationPageOutput)
+writeJson('./src/data/house.json', housePageOutput)
+writeJson('./src/data/senate.json', senatePageOutput)
+writeJson('./src/data/governor.json', governorPageOutput)
