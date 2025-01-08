@@ -127,7 +127,6 @@ for lawmaker in lawmakers:
     lawmaker['committees'] = lawmaker_committees[['committee', 'role']].to_dict(orient='records')
     lawmaker['note'] = ''  # Possible TODO depending on how we do annotations
     lawmaker['source'] = None  # May be able to update with link to official roster page
-    # Set relative image path
     lawmaker['image_path'] = f"portraits/2025/{lawmaker['first_name'].lower().replace(' ', '-')}-{lawmaker['last_name'].lower().replace(' ', '-')}.jpg"
 
 
