@@ -11,7 +11,7 @@ const RAW_URL_BASE_BILLS = 'https://raw.githubusercontent.com/mtfreepress/legisl
 const RAW_URL_BASE_ACTIONS = 'https://raw.githubusercontent.com/mtfreepress/legislative-interface/main/process/cleaned/actions-2/';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const OUT_DIR = path.resolve(__dirname, '../../src/data/bills');
+const OUT_DIR = path.resolve(__dirname, '../bills');
 
 const fetchJson = async url => {
     const response = await fetch(url);
