@@ -138,7 +138,7 @@ const Governor = ({ bills }) => {
 
 // Fetch data at build time
 export async function getStaticProps() {
-  const bills = await import('../data/data-nodes/bills.json');
+  const bills = await import('../data/bills.json');
 
   return {
     props: {

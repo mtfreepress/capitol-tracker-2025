@@ -13,7 +13,7 @@ export const collectJsons = (glob_path) => {
 export const getYaml = (path) => YAML.parse(fs.readFileSync(path, 'utf8'))
 
 export const collectYamls = (glob_path) => {
-    const files = glob.sync(glob_path)
+    const files = globSync(glob_path)
     return files.map(getYaml)
 }
 

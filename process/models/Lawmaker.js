@@ -1,11 +1,14 @@
+import { getCsv } from '../utils.js'
+
 import {
     LAWMAKER_REPLACEMENTS,
 } from '../config/overrides.js'
 
 import {
-    COMMITTEES,
+    // COMMITTEES,
     EXCLUDE_COMMITTEES,
 } from '../config/committees.js'
+
 
 import {
     // filterToFloorVotes,
@@ -26,6 +29,7 @@ export default class Lawmaker {
         district,
         annotation,
         articles,
+        committeeOrder,
     }) {
 
         const {
@@ -48,7 +52,6 @@ export default class Lawmaker {
         this.name = standardName
         this.summary = getLawmakerSummary(standardName)
 
-        const committeeOrder = COMMITTEES.map(d => d.name)
         const committeesCleaned = committees
             .map(d => {
                 return {
@@ -93,14 +96,7 @@ export default class Lawmaker {
 
             imageSlug: image_path.replace('portraits/', '').toLowerCase(),
 
-            // Merge this stuff in later, see main.js
-            // votingSummary: this.getVotingSummary(lawmaker, this.votes), 
-            // voteTabulation: this.getVoteTabulation(lawmaker, filterToFloorVotes(this.votes)), // BIG DATA
-            // keyBillVotes: [], // TODO,
-            // sponsoredBills: this.sponsoredBills,
-            // votes: this.votes.map(vote => vote.data)
         }
-        // console.log(lawmaker.name, this.sponsoredBills.length)
     }
 
 
@@ -163,7 +159,6 @@ export default class Lawmaker {
                     voteData: bill.lawmakerLastVote.data,
                 }
             })
-        // console.log(keyBillVotes)
         this.keyBillVotes = keyBillVotes
 
     }

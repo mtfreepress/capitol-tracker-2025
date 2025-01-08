@@ -1,9 +1,17 @@
 export const VOTE_THRESHOLDS = [
+    // 2023 lables
     // ranked most to least stringent
     '2/3 of Entire Legislature', // constitutional amendments - these are weird
     '3/4 of Each House',
     '2/3 of Each House',
     'Simple',
+
+    // 2025 labels, which are of course different
+    // Will need to add reader-frindly label logic here
+    'TWO_THIRDS_LEGISLATURE',
+    'THREE_FOURTHS',
+    'TWO_THIRDS',
+    'SIMPLE',
 ]
 
 export const BILL_TYPES = [

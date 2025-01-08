@@ -13,8 +13,8 @@ import ContactUs from '../components/ContactUs';
 import NewsletterSignup from '../components/NewsletterSignup';
 
 import houseData from '../data/house.json';
-import committeesData from '../data/data-nodes/committees.json';
-import lawmakers from '../data/data-nodes/lawmakers.json'; 
+import committeesData from '../data/committees.json';
+import lawmakers from '../data/lawmakers.json'; 
 
 const committeeItemStyle = css`
   border: 1px solid var(--tan5);

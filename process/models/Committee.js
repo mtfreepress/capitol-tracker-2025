@@ -1,5 +1,5 @@
 
-import { commiteeKey, dateParse } from '../functions.js'
+import { dateParse } from '../functions.js'
 
 
 const PARTY_ORDER = ['R', 'D'] // majority, minority
@@ -8,18 +8,19 @@ const ROLE_ORDER = ['Chair', 'Vice Chair', 'Member']
 export default class Committee {
     constructor({ schema, committeeBills, lawmakers, updateTime }) {
         const {
-            name,
-            // daysOfWeek,
-            time,
+            commiteeKey,
+            displayName,
+            usualDays,
+            usualTime,
+            chamber,
             type
         } = schema
-        const chamber = name.split(' ')[0].toLowerCase() // hacky - should be in schema
 
         const beginningOfToday = new Date(updateTime).setUTCHours(7, 0, 0, 0) // 7 accounts for Montana vs GMT time
 
         const committeeBillIds = committeeBills.map(b => b.data.identifier)
         const committeeBillActions = committeeBills.map(b => b.actions.map(a => a.export())).flat() // includes non-committee actions on these bills
-        const committeeActions = committeeBillActions.filter(a => a.committee === name)
+        const committeeActions = committeeBillActions.filter(a => a.committee === commiteeKey)
 
         // // Sorting bills by where they are in committee process
 
@@ -27,7 +28,7 @@ export default class Committee {
         let billsReferredElsewhere = []
         committeeBills.forEach(bill => {
             const billActions = bill.actions.map(a => a.export())
-            const billActionsInCommittee = billActions.filter(a => a.committee === name)
+            const billActionsInCommittee = billActions.filter(a => a.committee === commiteeKey)
             const lastCommitteeActionIndex = billActions.findIndex(a => a.id === billActionsInCommittee.slice(-1)[0].id)
             const postCommitteeActions = billActions
                 .slice(lastCommitteeActionIndex + 1,)
@@ -82,7 +83,6 @@ export default class Committee {
         // remove bills later re-referred to/from other committees after advancing here
         billsReferredElsewhere = billsReferredElsewhere.filter(d => !billsAdvanced.includes(d) && !billsBlasted.includes(d))
 
-        // console.log({ name, billsWithdrawn, billsVotedDown, billsReferredElsewhere })
 
         const billsAwaitingVote = billsHeard.filter(d =>
             !billsFailed.includes(d)
@@ -98,17 +98,17 @@ export default class Committee {
                 name: lawmaker.name,
                 party: lawmaker.party,
                 locale: lawmaker.locale,
-                role: lawmaker.committees.find(c => c.committee === name).role,
+                role: lawmaker.committees.find(c => c.committee === commiteeKey).role,
             }
         }).sort((a, b) => (PARTY_ORDER.indexOf(a.party) - PARTY_ORDER.indexOf(b.party))
             || (ROLE_ORDER.indexOf(a.role) - ROLE_ORDER.indexOf(b.role))
         )
 
         this.data = {
-            name,
-            key: commiteeKey(name),
-            chamber: this.chamberFromName(name),
-            time,
+            name: displayName,
+            key: commiteeKey,
+            chamber,
+            time: usualTime,
             type,
             bills: committeeBillIds,
             billCount: committeeBillIds.length - billsReferredElsewhere.length,
