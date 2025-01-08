@@ -13,7 +13,8 @@ import {
 
 import { getJson } from './utils.js'
 
-const roster = getJson('./process/config/lawmaker-roster-2023.json')
+// const roster = getJson('./process/config/lawmaker-roster-2023.json')
+const roster = getJson('./inputs/lawmakers/legislator-roster-2025.json')
 
 export const billKey = (identifier) => identifier.substring(0, 2).toLowerCase() + '-' + identifier.substring(3,)
 export const lawmakerKey = (name) => name.replace(/\s/g, '-')

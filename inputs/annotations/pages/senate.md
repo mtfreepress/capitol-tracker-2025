@@ -1,0 +1,1 @@
+The Montana Senate is the Legislature’s smaller chamber, with 50 senators elected to staggered four-year terms. Each Senate district spans two House districts.
