@@ -65,7 +65,7 @@ import json
 import pandas as pd
 from pathlib import Path
 
-# Get the absolute path of the script's directory
+# absolute path of the script's directory
 script_dir = Path(__file__).resolve().parent
 
 # Helper functions
@@ -78,20 +78,18 @@ def write_json(dict_data, path):
     with open(path, 'w') as f:
         json.dump(dict_data, f, indent=4)
 
-# Define file paths relative to the script's directory
+# now defined relative to the python script rather than where it is executed
 lawmakers_path = script_dir / 'official-roster-2025.csv'
 annotations_path = script_dir / 'roster-annotations.csv'
 committee_assignments_path = script_dir / 'committee-assignments-2025.csv'
 session_history_path = script_dir / 'legislator-session-history.json'
 output_path = script_dir / 'legislator-roster-2025.json'
 
-# Read files
 lawmakers = pd.read_csv(lawmakers_path)
 annotations = pd.read_csv(annotations_path)
 committee_assignments = pd.read_csv(committee_assignments_path)
 session_history = read_json(session_history_path)
 
-# Process lawmakers data
 lawmakers['name'] = lawmakers['First Name'] + ' ' + lawmakers['Last Name']
 lawmakers = lawmakers.merge(annotations, left_on='name', right_on='roster_name', how='left')
 
@@ -130,7 +128,8 @@ for lawmaker in lawmakers:
     lawmaker['note'] = ''  # Possible TODO depending on how we do annotations
     lawmaker['source'] = None  # May be able to update with link to official roster page
     # Set relative image path
-    lawmaker['image_path'] = f"portraits/2025/{lawmaker['first_name'].lower()}-{lawmaker['last_name'].lower()}.jpg"
+    lawmaker['image_path'] = f"portraits/2025/{lawmaker['first_name'].lower().replace(' ', '-')}-{lawmaker['last_name'].lower().replace(' ', '-')}.jpg"
+
 
 # Write output
 write_json(lawmakers, output_path)
