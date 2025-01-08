@@ -1,12 +1,12 @@
 import fs from 'fs'
-import { glob } from 'glob'
+import { sync as globSync } from 'glob'
 import csv from 'async-csv'
 import YAML from 'yaml'
 
 export const getJson = (path) => JSON.parse(fs.readFileSync(path))
 
 export const collectJsons = (glob_path) => {
-    const files = glob.sync(glob_path)
+    const files = globSync(glob_path)
     return files.map(getJson)
 }
 
@@ -34,4 +34,3 @@ export const writeJson = (path, data) => {
         console.log('    JSON written to', path);
     });
 }
-

@@ -107,23 +107,6 @@ lawmakers.forEach(lawmaker => {
     }
 })
 
-// As of Dec. 2024 Eric can't remember why he thought this summaryRoster was necessary
-// Maybe to avoid circular logic somewhere in the data model creation logic?
-// In 2023, this code stub output this once so it could be a static input
-// const summaryRoster = lawmakers.map(d => {
-//     return {
-//         title: d.data.title,
-//         name: d.data.name,
-//         lastName: d.data.name,
-//         party: d.data.party,
-//         locale: d.data.locale_short || '',
-//         district: d.data.district,
-//         active: d.data.isActive,
-//     }
-// })
-// writeJson('./process/config/lawmaker-roster-2023.json', summaryRoster)
-
-
 const calendarOutput = new CalendarPage({ actions, bills, updateTime }).export()
 bills.forEach(bill => bill.data.isOnCalendar = calendarOutput.billsOnCalendar.includes(bill.data.identifier))
 const recapOutput = new RecapPage({ actions, bills, updateTime }).export()
@@ -156,7 +139,6 @@ const governorPageOutput = new GovernorPage({
 const participationPageOutput = {
     text: participationPageContent
 }
-
 
 
 // Outputs 
@@ -196,5 +178,3 @@ writeJson('./app/src/data/participation.json', participationPageOutput)
 writeJson('./app/src/data/house.json', housePageOutput)
 writeJson('./app/src/data/senate.json', senatePageOutput)
 writeJson('./app/src/data/governor.json', governorPageOutput)
-
-
