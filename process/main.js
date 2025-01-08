@@ -1,4 +1,4 @@
-import { getJson, writeJson, getYaml, collectYamls, getText } from './utils.js'
+import { getJson, collectJsons, writeJson, getYaml, collectYamls, getText } from './utils.js'
 
 import Lawmaker from './models/Lawmaker.js'
 import Bill from './models/Bill.js'
@@ -20,16 +20,12 @@ const updateTime = new Date()
 Approach here — each of these input buckets has a fetch script that needs to be run independently to update their contents
 */
 
-// LAWS scraper inputs
-const billsRaw = getJson('./inputs/bills/bills.json')
-const actionsRaw = getJson('./inputs/bills/actions.json')
-const votesRaw = getJson('./inputs/bills/votes.json')
-// // For testing
-// const billsRaw = []
-// const actionsRaw = []
-// const votesRaw = []
+// Inputs from official bill tracking system
+const billsRaw = collectJsons('./inputs/bills/*/*-data.json')
+const actionsRaw = collectJsons('./inputs/bills/*/*-actions.json')
+const votesRaw = collectJsons('./inputs/bills/*/*-votes.json')
 
-// district and lawmaker inputs
+// District and lawmaker information (mostly static)
 const districtsRaw = getJson('./inputs/districts/districts-2025.json')
 const lawmakersRaw = getJson('./inputs/lawmakers/legislator-roster-2025.json')
 
