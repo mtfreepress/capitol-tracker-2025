@@ -100,3 +100,14 @@ export const cleanCommitteeName = rawCommitteeName => {
     if (!match) console.error(`Committee list missing`, rawCommitteeName)
     return match.name
 }
+
+export const getLegislativeLeaderDetails = (lawmakers, title) => {
+    const lawmaker = lawmakers.find(l => l.data.leadershipTitle === title)
+    return {
+        role: title,
+        key: lawmaker.data.key,
+        name: lawmaker.data.name,
+        party: lawmaker.data.party,
+        locale: lawmaker.data.locale,
+    }
+}

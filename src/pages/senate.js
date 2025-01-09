@@ -32,16 +32,9 @@ const committeeItemStyle = css`
   }
 `;
 
-// Leadership Data
-const leadership = [
-  { role: 'Senate President', name: 'Sen. Jason Ellsworth (R-Hamilton)', key: 'Jason-Ellsworth' },
-  { role: 'Senate Majority Leader', name: 'Sen. Steve Fitzpatrick (R-Great Falls)', key: 'Steve-Fitzpatrick' },
-  { role: 'Senate Minority Leader', name: 'Sen. Pat Flowers (D-Belgrade)', key: 'Pat-Flowers' },
-];
-
 // Page Component
 const Senate = ({ senators, committees }) => {
-  const { text } = senateData;
+  const { text, leadership } = senateData
 
   return (
     <Layout>

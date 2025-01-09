@@ -44,11 +44,14 @@ export default class Lawmaker {
         } = lawmaker
 
         const {
-            LawmakerPageText,
-            LeadershipRole
+            // displayName could in theory be used to assign custom lawmaker names from annotation file -- unimplemented though
+            // Currently this is being handled by the config list acccessed by standardizeLawmakerName
+            // displayName, 
+            leadershipRole,
+            lawmakerPageText
         } = annotation
 
-        const standardName = standardizeLawmakerName(name)
+        const standardName = standardizeLawmakerName(name) 
         this.name = standardName
         this.summary = getLawmakerSummary(standardName)
 
@@ -85,14 +88,13 @@ export default class Lawmaker {
             phone,
             email,
             committees: committeesCleaned,
-            leadershipTitle: LeadershipRole,
+            leadershipTitle: leadershipRole,
 
             legislativeHistory: sessions.map(({ year, chamber }) => ({ year, chamber })),
 
             articles,
 
-            // annotations
-            lawmakerPageText: LawmakerPageText,
+            lawmakerPageText: lawmakerPageText,
 
             imageSlug: image_path.replace('portraits/', '').toLowerCase(),
 

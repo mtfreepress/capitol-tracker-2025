@@ -1,7 +1,15 @@
+import { getLegislativeLeaderDetails } from '../functions.js'
+
 class HousePage {
-    constructor({ text }) {
+    constructor({ text, lawmakers }) {
         this.data = {
             text,
+            leadership: [
+                // Should pull from `inputs/annotations/lawmakers/*.yml
+                getLegislativeLeaderDetails(lawmakers, 'Speaker of the House'),
+                getLegislativeLeaderDetails(lawmakers, 'House Majority Leader'),
+                getLegislativeLeaderDetails(lawmakers, 'House Minority Leader'),
+            ]
             // committees: committees.map(c => ({
             //     // select fields only  to manage data size
             //     name: c.data.name,

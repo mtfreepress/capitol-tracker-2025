@@ -32,7 +32,7 @@ const ChamberLeadership = ({ leadership }) => {
             <div css={roleCss}>{d.role}</div>
             <div css={nameCss}>
               <Link href={`/lawmakers/${d.key}`}>
-                {d.name}
+                {d.name} ({d.party}-{d.locale})
               </Link>
             </div>
           </div>
