@@ -5,6 +5,7 @@ class SenatePage {
         this.data = {
             text,
             leadership: [
+                // Should pull from `inputs/annotations/lawmakers/*.yml
                 getLegislativeLeaderDetails(lawmakers, 'Senate President'),
                 getLegislativeLeaderDetails(lawmakers, 'Senate Majority Leader'),
                 getLegislativeLeaderDetails(lawmakers, 'Senate Minority Leader'),

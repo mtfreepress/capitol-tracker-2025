@@ -5,6 +5,7 @@ class HousePage {
         this.data = {
             text,
             leadership: [
+                // Should pull from `inputs/annotations/lawmakers/*.yml
                 getLegislativeLeaderDetails(lawmakers, 'Speaker of the House'),
                 getLegislativeLeaderDetails(lawmakers, 'House Majority Leader'),
                 getLegislativeLeaderDetails(lawmakers, 'House Minority Leader'),
