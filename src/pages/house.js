@@ -33,14 +33,9 @@ const committeeItemStyle = css`
   }
 `;
 
-const leadership = [
-  { role: 'Speaker of the House', name: 'Rep. Matt Regier (R-Kalispell)', key: 'Matt-Regier' },
-  { role: 'Majority Leader', name: 'Rep. Sue Vinton (R-Billings)', key: 'Sue-Vinton' },
-  { role: 'Minority Leader', name: 'Rep. Kim Abbott (D-Helena)', key: 'Kim-Abbott' },
-];
 
 const House = ({ representatives, committees }) => {
-  const { text } = houseData;
+  const { text, leadership } = houseData
 
   return (
     <div>

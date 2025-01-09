@@ -144,19 +144,11 @@ const getLegislativeLeaderDetails = (lawmakers, title) => {
 }
 const housePageOutput = new HousePage({
     text: housePageTopper,
-    leadership: [
-        getLegislativeLeaderDetails(lawmakers, 'Speaker of the House'),
-        getLegislativeLeaderDetails(lawmakers, 'House Majority Leader'),
-        getLegislativeLeaderDetails(lawmakers, 'House Minority Leader'),
-    ]
+    lawmakers,
 }).export()
 const senatePageOutput = new SenatePage({
     text: senatePageTopper,
-    leadership: [
-        getLegislativeLeaderDetails(lawmakers, 'Senate President'),
-        getLegislativeLeaderDetails(lawmakers, 'Senate Majority Leader'),
-        getLegislativeLeaderDetails(lawmakers, 'Senate Minority Leader'),
-    ]
+    lawmakers,
 }).export()
 const governorPageOutput = new GovernorPage({
     text: governorPageTopper,

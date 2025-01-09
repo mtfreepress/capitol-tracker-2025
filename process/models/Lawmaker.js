@@ -51,8 +51,6 @@ export default class Lawmaker {
             lawmakerPageText
         } = annotation
 
-        console.log({annotation})
-
         const standardName = standardizeLawmakerName(name) 
         this.name = standardName
         this.summary = getLawmakerSummary(standardName)
