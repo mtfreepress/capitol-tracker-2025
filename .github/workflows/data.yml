@@ -5,6 +5,8 @@ on:
   push:
     branches:
       - main
+      # TODO: REMOVE THIS, ONLY FOR TESTING
+      - jolness/github-actions-setup
   schedule:
     - cron: '*/20 * * * *'
   workflow_dispatch:
