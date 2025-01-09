@@ -38,7 +38,7 @@ const AllBills = () => {
   return (
     <div css={allBillsPageStyle}>
       <Layout>
-        <h1>All 2023 bills</h1>
+        <h1>All 2025 bills</h1>
         <div className="note">
           <strong>{numberFormat(allBills.length)}</strong> total bills, resolutions, and other measures introduced
         </div>
@@ -75,8 +75,8 @@ import Head from "next/head";
 
 export const SeoHead = () => (
   <Head>
-    <title>All 2023 bills</title>
-    <meta name="description" content="Page for all 2023 bills" />
+    <title>All 2025 bills</title>
+    <meta name="description" content="Page for all 2025 bills" />
   </Head>
 );
 
