@@ -15,7 +15,8 @@ import bills from '../data/bills.json'
 import lawmakers from '../data/lawmakers.json'
 
 const Index = ({ keyBills, billIndex, lawmakerIndex }) => {
-  const { howBillsMove } = processAnnotations;
+  const howBillsMoveObj = processAnnotations.find(item => item.key === "howBillsMove");
+  const howBillsMove = howBillsMoveObj ? howBillsMoveObj.content : null;
 
   return (
     <div>

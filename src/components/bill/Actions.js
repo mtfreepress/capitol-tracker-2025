@@ -102,7 +102,8 @@ const BillActions = ({ actions, lawsUrl, vetoMemoUrl }) => {
 
   const toggleShowMinorActions = () => setShowMinorActions(!showMinorActions);
 
-  const { howBillsMove } = processAnnotations;
+  const howBillsMoveObj = processAnnotations.find(item => item.key === "howBillsMove");
+  const howBillsMove = howBillsMoveObj ? howBillsMoveObj.content : null;
   const actionFilter = showMinorActions ? (d) => true : (d) => d.isMajor;
   const annotations = [
     {

@@ -1,6 +1,7 @@
 import React from 'react';
 import { css } from '@emotion/react';
 import Link from 'next/link';
+import lawmakers from '../data/lawmakers.json'
 
 const navStyle = css`
     border-bottom: 1px solid #444;
@@ -98,8 +99,22 @@ const PAGE_LINKS = [
     { path: '/participation/', label: '🙋 How to participate' },
 ];
 
+function getChamberControl(chamber) {
+    const activeLawmakers = lawmakers.filter((lawmaker) => lawmaker.isActive && lawmaker.chamber === chamber);
+
+    const republicans = activeLawmakers.filter((lawmaker) => lawmaker.party === 'R').length;
+    const democrats = activeLawmakers.filter((lawmaker) => lawmaker.party === 'D').length;
+
+    const control = republicans > democrats ? 'GOP' : 'Dem';
+    const split = `${republicans}-${democrats}`;
+
+    return { control, split };
+}
+
 const Nav = ({ location }) => {
-    // We can add active state management here, if required
+    const { control: houseControl, split: houseSplit } = getChamberControl('house');
+    const { control: senateControl, split: senateSplit } = getChamberControl('senate');
+
     const isActiveStyle = location ? activeStyle : null;
 
     const links = PAGE_LINKS.map((l) => (
@@ -120,13 +135,13 @@ const Nav = ({ location }) => {
                 <Link href='/house' passHref legacyBehavior>
                     <a css={[navItemStyle, navPrimaryStyle]}>
                         <div css={navPrimaryTitle}>🏛 House</div>
-                        <div css={navPrimaryInfo}>GOP-held 68-32</div>
+                        <div css={navPrimaryInfo}>{houseControl}-held {houseSplit}</div>
                     </a>
                 </Link>
                 <Link href='/senate' passHref legacyBehavior>
                     <a css={[navItemStyle, navPrimaryStyle]}>
                         <div css={navPrimaryTitle}>🏛 Senate</div>
-                        <div css={navPrimaryInfo}>GOP-held 34-16</div>
+                        <div css={navPrimaryInfo}>{senateControl}-held {senateSplit}</div>
                     </a>
                 </Link>
                 <Link href='/governor' passHref legacyBehavior>
