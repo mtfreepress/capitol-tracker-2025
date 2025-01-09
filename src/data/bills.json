@@ -8,10 +8,10 @@
         "lcIdentifier": "LC2244",
         "type": "senate resolution",
         "status": {
-            "key": "In First House--Out of Committee",
-            "step": "First chamber",
-            "label": "Out of committee",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -2973,10 +2973,10 @@
         "lcIdentifier": "LC0724",
         "type": "senate bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
-            "step": "First chamber",
-            "label": "In committee",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -4091,7 +4091,7 @@
         "key": "sb-59",
         "identifier": "SB 59",
         "chamber": "senate",
-        "title": "John Rambo memorial bridge",
+        "title": "Staff Sergeant Arthur J Rambo memorial bridge",
         "session": "2",
         "lcIdentifier": "LC0193",
         "type": "senate bill",
@@ -5224,10 +5224,10 @@
         "lcIdentifier": "LC0541",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Introduced",
-            "step": "First chamber",
-            "label": "Introduced",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -5792,10 +5792,10 @@
         "lcIdentifier": "LC0085",
         "type": "senate bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
-            "step": "First chamber",
-            "label": "In committee",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -5958,10 +5958,10 @@
         "lcIdentifier": "LC0612",
         "type": "senate bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
-            "step": "First chamber",
-            "label": "In committee",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -8273,6 +8273,166 @@
         "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0277?open_tab=bill",
         "fiscalNoteUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0277?open_tab=amend",
         "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0277?open_tab=amend",
+        "legalNoteUrl": "undefined",
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0,
+        "isOnCalendar": false
+    },
+    {
+        "key": "sb-113",
+        "identifier": "SB 113",
+        "chamber": "senate",
+        "title": "Revise exemptions related to tow truck lien law",
+        "session": "2",
+        "lcIdentifier": "LC2084",
+        "type": "senate bill",
+        "status": {
+            "key": "In First House--Introduced",
+            "step": "First chamber",
+            "label": "Introduced",
+            "status": "live",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "future",
+                "statusLabel": "Not introduced",
+                "statusDate": null
+            },
+            {
+                "step": "first committee",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Mike Yakawich",
+            "party": "R",
+            "locale": "Billings",
+            "district": "SD 24"
+        },
+        "requestor": "Mike Yakawich",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "SIMPLE",
+        "subjects": [
+            "Motor Vehicles (see also: Taxation--Trans; Traffic Regulations; Transportation)"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2084?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2084?open_tab=bill",
+        "fiscalNoteUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2084?open_tab=amend",
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2084?open_tab=amend",
+        "legalNoteUrl": "undefined",
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0,
+        "isOnCalendar": false
+    },
+    {
+        "key": "sb-112",
+        "identifier": "SB 112",
+        "chamber": "senate",
+        "title": "Revise laws related to state purchase of opioid antagonists",
+        "session": "2",
+        "lcIdentifier": "LC2083",
+        "type": "senate bill",
+        "status": {
+            "key": "In First House--Introduced",
+            "step": "First chamber",
+            "label": "Introduced",
+            "status": "live",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "future",
+                "statusLabel": "Not introduced",
+                "statusDate": null
+            },
+            {
+                "step": "first committee",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Mike Yakawich",
+            "party": "R",
+            "locale": "Billings",
+            "district": "SD 24"
+        },
+        "requestor": "Mike Yakawich",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "SIMPLE",
+        "subjects": [
+            "Alcohol and Drugs",
+            "Rule Making",
+            "Public Contracts  (see also: Contracts)"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2083?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2083?open_tab=bill",
+        "fiscalNoteUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2083?open_tab=amend",
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2083?open_tab=amend",
         "legalNoteUrl": "undefined",
         "vetoMemoUrl": null,
         "articles": [],
@@ -10827,10 +10987,10 @@
         "lcIdentifier": "LC0201",
         "type": "house bill",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
+            "key": "In First House Committee--Nontabled",
+            "step": "First chamber",
+            "label": "In committee",
+            "status": "live",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -16381,10 +16541,10 @@
         "lcIdentifier": "LC0287",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
-            "step": "First chamber",
-            "label": "In committee",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -16798,10 +16958,10 @@
         "lcIdentifier": "LC0080",
         "type": "house bill",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
+            "key": "In First House Committee--Nontabled",
+            "step": "First chamber",
+            "label": "In committee",
+            "status": "live",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -16962,10 +17122,10 @@
         "lcIdentifier": "LC0076",
         "type": "house bill",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
+            "key": "In First House Committee--Nontabled",
+            "step": "First chamber",
+            "label": "In committee",
+            "status": "live",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -17032,6 +17192,327 @@
         "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0076?open_tab=bill",
         "fiscalNoteUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0076?open_tab=amend",
         "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0076?open_tab=amend",
+        "legalNoteUrl": "undefined",
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0,
+        "isOnCalendar": false
+    },
+    {
+        "key": "hb-153",
+        "identifier": "HB 153",
+        "chamber": "house",
+        "title": "Revise laws related to the school funding interim commission.",
+        "session": "2",
+        "lcIdentifier": "LC1443",
+        "type": "house bill",
+        "status": {
+            "key": "In First House--Introduced",
+            "step": "First chamber",
+            "label": "Introduced",
+            "status": "live",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "future",
+                "statusLabel": "Not introduced",
+                "statusDate": null
+            },
+            {
+                "step": "first committee",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "David Bedey",
+            "party": "R",
+            "locale": "Hamilton",
+            "district": "HD 86"
+        },
+        "requestor": "David Bedey",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "SIMPLE",
+        "subjects": [
+            "Schools and Education"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1443?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1443?open_tab=bill",
+        "fiscalNoteUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1443?open_tab=amend",
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1443?open_tab=amend",
+        "legalNoteUrl": "undefined",
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0,
+        "isOnCalendar": false
+    },
+    {
+        "key": "hb-152",
+        "identifier": "HB 152",
+        "chamber": "house",
+        "title": "Revise election laws related to county attorney elections",
+        "session": "2",
+        "lcIdentifier": "LC1962",
+        "type": "house bill",
+        "status": {
+            "key": "In First House--Introduced",
+            "step": "First chamber",
+            "label": "Introduced",
+            "status": "live",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "future",
+                "statusLabel": "Not introduced",
+                "statusDate": null
+            },
+            {
+                "step": "first committee",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Jerry Schillinger",
+            "party": "R",
+            "locale": "Circle",
+            "district": "HD 34"
+        },
+        "requestor": "Jerry Schillinger",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "SIMPLE",
+        "subjects": [
+            "Elections  (see also: Ballot Issues)",
+            "Counties  (see also: Local Government)",
+            "Local Government  (see also: City Subjects; County Subjects)"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1962?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1962?open_tab=bill",
+        "fiscalNoteUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1962?open_tab=amend",
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1962?open_tab=amend",
+        "legalNoteUrl": "undefined",
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0,
+        "isOnCalendar": false
+    },
+    {
+        "key": "hb-151",
+        "identifier": "HB 151",
+        "chamber": "house",
+        "title": "Revise educational laws pertaining to recruitment and retention and MSDB",
+        "session": "2",
+        "lcIdentifier": "LC0043",
+        "type": "house bill",
+        "status": {
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "future",
+                "statusLabel": "Not introduced",
+                "statusDate": null
+            },
+            {
+                "step": "first committee",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Connie Keogh",
+            "party": "D",
+            "locale": "Missoula",
+            "district": "HD 92"
+        },
+        "requestor": "John Fuller",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "SIMPLE",
+        "subjects": [
+            "Schools and Education",
+            "Developmental Disabilities, Persons With (see also: Institutions)",
+            "Teachers"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0043?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0043?open_tab=bill",
+        "fiscalNoteUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0043?open_tab=amend",
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0043?open_tab=amend",
+        "legalNoteUrl": "undefined",
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0,
+        "isOnCalendar": false
+    },
+    {
+        "key": "hb-150",
+        "identifier": "HB 150",
+        "chamber": "house",
+        "title": "Generally revise alcohol and gaming laws",
+        "session": "2",
+        "lcIdentifier": "LC0223",
+        "type": "house bill",
+        "status": {
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "future",
+                "statusLabel": "Not introduced",
+                "statusDate": null
+            },
+            {
+                "step": "first committee",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Steve Fitzpatrick",
+            "party": "R",
+            "locale": "Great Falls",
+            "district": "HD 24"
+        },
+        "requestor": "Steve Fitzpatrick",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "SIMPLE",
+        "subjects": [
+            "Alcohol and Drugs",
+            "Gambling"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0223?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0223?open_tab=bill",
+        "fiscalNoteUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0223?open_tab=amend",
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0223?open_tab=amend",
         "legalNoteUrl": "undefined",
         "vetoMemoUrl": null,
         "articles": [],
@@ -17113,6 +17594,248 @@
         "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0720?open_tab=bill",
         "fiscalNoteUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0720?open_tab=amend",
         "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0720?open_tab=amend",
+        "legalNoteUrl": "undefined",
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0,
+        "isOnCalendar": false
+    },
+    {
+        "key": "hb-149",
+        "identifier": "HB 149",
+        "chamber": "house",
+        "title": "Generally revise alternative nicotine and vapor products laws",
+        "session": "2",
+        "lcIdentifier": "LC1625",
+        "type": "house bill",
+        "status": {
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "future",
+                "statusLabel": "Not introduced",
+                "statusDate": null
+            },
+            {
+                "step": "first committee",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Ron Marshall",
+            "party": "R",
+            "locale": "Hamilton",
+            "district": "HD 87"
+        },
+        "requestor": "Ron Marshall",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "SIMPLE",
+        "subjects": [
+            "Cigarettes and Tobacco",
+            "Revenue, State"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1625?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1625?open_tab=bill",
+        "fiscalNoteUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1625?open_tab=amend",
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1625?open_tab=amend",
+        "legalNoteUrl": "undefined",
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0,
+        "isOnCalendar": false
+    },
+    {
+        "key": "hb-148",
+        "identifier": "HB 148",
+        "chamber": "house",
+        "title": "Repeal state tax on social security income",
+        "session": "2",
+        "lcIdentifier": "LC1627",
+        "type": "house bill",
+        "status": {
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "future",
+                "statusLabel": "Not introduced",
+                "statusDate": null
+            },
+            {
+                "step": "first committee",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Ron Marshall",
+            "party": "R",
+            "locale": "Hamilton",
+            "district": "HD 87"
+        },
+        "requestor": "Ron Marshall",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "SIMPLE",
+        "subjects": [
+            "Taxation--Individual Income",
+            "Senior Citizens  (see also: Retirement)",
+            "Retirement (see also: Senior Citizens)",
+            "Revenue, State"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1627?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1627?open_tab=bill",
+        "fiscalNoteUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1627?open_tab=amend",
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1627?open_tab=amend",
+        "legalNoteUrl": "undefined",
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0,
+        "isOnCalendar": false
+    },
+    {
+        "key": "hb-147",
+        "identifier": "HB 147",
+        "chamber": "house",
+        "title": "Revise laws related to covenants to provide definition of enforcement action",
+        "session": "2",
+        "lcIdentifier": "LC1272",
+        "type": "house bill",
+        "status": {
+            "key": "In First House--Introduced",
+            "step": "First chamber",
+            "label": "Introduced",
+            "status": "live",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "future",
+                "statusLabel": "Not introduced",
+                "statusDate": null
+            },
+            {
+                "step": "first committee",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Jedediah Hinkle",
+            "party": "R",
+            "locale": "Belgrade",
+            "district": "HD 67"
+        },
+        "requestor": "Jedediah Hinkle",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "SIMPLE",
+        "subjects": [
+            "Property",
+            "Courts  (see also: Judges and Justices; Juries and Jurors)"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1272?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1272?open_tab=bill",
+        "fiscalNoteUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1272?open_tab=amend",
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1272?open_tab=amend",
         "legalNoteUrl": "undefined",
         "vetoMemoUrl": null,
         "articles": [],
@@ -17771,9 +18494,9 @@
         "lcIdentifier": "LC1206",
         "type": "house bill",
         "status": {
-            "key": "In First House--Introduced",
+            "key": "In First House Committee--Nontabled",
             "step": "First chamber",
-            "label": "Introduced",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -18980,9 +19703,9 @@
         "lcIdentifier": "LC3259",
         "type": "house bill",
         "status": {
-            "key": "In First House--Introduced",
+            "key": "In First House Committee--Nontabled",
             "step": "First chamber",
-            "label": "Introduced",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -19059,9 +19782,9 @@
         "lcIdentifier": "LC0884",
         "type": "house bill",
         "status": {
-            "key": "In First House--Introduced",
+            "key": "In First House Committee--Nontabled",
             "step": "First chamber",
-            "label": "Introduced",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -19547,9 +20270,9 @@
         "lcIdentifier": "LC1352",
         "type": "house bill",
         "status": {
-            "key": "In First House--Introduced",
+            "key": "In First House Committee--Nontabled",
             "step": "First chamber",
-            "label": "Introduced",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
