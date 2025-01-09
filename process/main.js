@@ -59,7 +59,7 @@ const articles = articlesRaw.map(article => new Article({ article }).export())
 const lawmakers = lawmakersRaw.map(lawmaker => new Lawmaker({
     lawmaker,
     district: districtsRaw.find(d => d.key === lawmaker.district),
-    annotation: lawmakerAnnotations.find(d => d.Name === lawmaker.name) || {}, // Unwired currently
+    annotation: lawmakerAnnotations.find(d => d.slug === lawmaker.name.replace(/\s/g, '-').toLowerCase()) || {},
     articles: articles.filter(d => d.lawmakerTags.includes(lawmaker.name)),
     // leave sponsoredBills until after bills objects are created
     // same with keyVotes
@@ -132,11 +132,31 @@ const headerOutput = { updateTime }
 const overviewPageOutput = {
     aboveFoldText: homePageTopper,
 }
+
+const getLegislativeLeaderDetails = (lawmakers, title) => {
+    const lawmaker = lawmakers.find(l => l.data.leadershipTitle === title)
+    return {
+        role: title,
+        name: lawmaker.data.name,
+        party: lawmaker.data.party,
+        locale: lawmaker.data.locale,
+    }
+}
 const housePageOutput = new HousePage({
-    text: housePageTopper
+    text: housePageTopper,
+    leadership: [
+        getLegislativeLeaderDetails(lawmakers, 'Speaker of the House'),
+        getLegislativeLeaderDetails(lawmakers, 'House Majority Leader'),
+        getLegislativeLeaderDetails(lawmakers, 'House Minority Leader'),
+    ]
 }).export()
 const senatePageOutput = new SenatePage({
-    text: senatePageTopper
+    text: senatePageTopper,
+    leadership: [
+        getLegislativeLeaderDetails(lawmakers, 'Senate President'),
+        getLegislativeLeaderDetails(lawmakers, 'Senate Majority Leader'),
+        getLegislativeLeaderDetails(lawmakers, 'Senate Minority Leader'),
+    ]
 }).export()
 const governorPageOutput = new GovernorPage({
     text: governorPageTopper,
