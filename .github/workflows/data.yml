@@ -1,0 +1,64 @@
+name: Run data pipeline scripts on schedule or push
+# TODO: Add the deploy stuff later
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '*/20 * * * *'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest 
+
+    steps:
+    # Checkout the repository
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    # Restore dependencies if needed 
+    - name: Restore Node.js dependencies cache
+      uses: actions/cache@v4
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-npm-cache-${{ hashFiles('package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-npm-cache-
+
+    # Set up Node.js
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '23'
+        cache: 'npm'
+
+    # Install dependencies
+    - name: Install dependencies
+      run: npm install
+
+    # Ensure the script is executable
+    - name: Make refresh-inputs.sh executable
+      run: chmod +x ./refresh-inputs.sh
+
+    # Run the shell script
+    - name: Run the shell script
+      run: ./refresh-inputs.sh
+
+    # Save Node.js dependencies cache
+    - name: Save Node.js dependencies cache
+      if: always()
+      uses: actions/cache@v4
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-npm-cache-${{ hashFiles('package-lock.json') }}
+
+    - name: Commit and push if changed
+      run: |-
+        git config user.name "Automated"
+        git config user.email "actions@users.noreply.github.com"
+        git add -A
+        timestamp=$(date -u)
+        git commit -m "Latest data: ${timestamp}" || exit 0
+        git push
