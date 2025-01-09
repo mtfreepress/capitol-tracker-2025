@@ -13,6 +13,8 @@ import ContactUs from '../components/ContactUs';
 import NewsletterSignup from '../components/NewsletterSignup';
 
 import senateData from '../data/senate.json';
+import committeesData from '../data/committees.json';
+import lawmakers from '../data/lawmakers.json'; 
 
 const committeeItemStyle = css`
   border: 1px solid var(--tan5);
@@ -83,8 +85,9 @@ const Senate = ({ senators, committees }) => {
 export default Senate;
 
 export const getStaticProps = async () => {
-  const senators = senateData.senators || [];
-  const committees = senateData.committees || [];
+    const senators = lawmakers.filter(lawmaker => lawmaker.chamber === 'senate' && lawmaker.isActive);
+    
+    const committees = committeesData.filter(committee => committee.chamber === 'senate');
 
   return {
     props: {

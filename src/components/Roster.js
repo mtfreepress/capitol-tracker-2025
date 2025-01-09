@@ -15,7 +15,7 @@ const tableContainerCss = css`
   margin: 0.5em;
 `
 
-const Roster = () => {
+const Roster = ({ lawmakers }) => {
   return (
     <div>
       <div css={sideBySideTableCss}>
