@@ -26,8 +26,8 @@ export const footerMenus = [
                 url: 'https://montanafreepress.org/long-streets/',
             },
             {
-                label: '2023 Capitol Tracker',
-                url: 'https://montanafreepress.org/2023-capitol-tracker/',
+                label: '2025 Capitol Tracker',
+                url: 'https://montanafreepress.org/2025-capitol-tracker/',
             },
             {
                 label: 'Shared State',
