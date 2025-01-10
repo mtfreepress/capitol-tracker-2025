@@ -106,7 +106,7 @@ const progressStepStyle = css`
   }
 `
 
-const BASE_URL = 'https://apps.montanafreepress.org/capitol-tracker-2025';
+const BASE_URL = 'https://projects.montanafreepress.org/capitol-tracker-2025';
 
 const BillCard = ({ bill }) => {
     const {
@@ -181,7 +181,7 @@ const BillCard = ({ bill }) => {
                     </div>
                 </div>
                 <div className="promo">
-                    <a href={`${BASE_URL}/bills/${key}`} target="_blank" rel="noopener noreferrer">See more</a> on MTFP&#39;s 2023 Capitol Tracker.
+                    <a href={`${BASE_URL}/bills/${key}`} target="_blank" rel="noopener noreferrer">See more</a> on MTFP&#39;s 2025 Capitol Tracker.
                 </div>
             </div>
 

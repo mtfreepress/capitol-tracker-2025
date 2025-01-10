@@ -1,8 +1,9 @@
 // export const metaData = {
 //     siteTitle: 
 
+// TODO: Update this
 export const metaData = {
-    baseUrl: 'https://apps.montanafreepress.org/election-guide-2024',
+    baseUrl: 'https://projects.montanafreepress.org/capitol-tracker-2025',
     // On-page display
     // webTitle: '2024 Election Guide', // Replacing with custom design in Header
     webSubtitle: 'Montana\'s candidates for state and federal office.',

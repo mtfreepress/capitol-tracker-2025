@@ -101,8 +101,8 @@ const lawmakerCardCss = css`
     }
 
 `
-
-const BASE_URL = 'https://apps.montanafreepress.org/capitol-tracker-2025';
+// TODO: Change this to projects.montanafreepress.org
+const BASE_URL = 'https://projects.montanafreepress.org/capitol-tracker-2025';
 
 const LawmakerCard = ({ lawmaker, portrait }) => {
   const {
@@ -148,7 +148,7 @@ const LawmakerCard = ({ lawmaker, portrait }) => {
 
       </div>
       <div className="bottom-section">
-        <div className="session">2023 Legislature – {ordinalize(legislativeHistory.length)} session</div>
+        <div className="session">2025 Legislature – {ordinalize(legislativeHistory.length)} session</div>
         <div className="item">
           {committees.length > 0 ? (
             <>👥 {mainCommittee.role} {mainCommittee.committee} and <strong>{otherCommittees.length}</strong> <Link href={`${BASE_URL}/lawmakers/${key}#committees`} passHref>other committee assignments</Link></>
@@ -157,7 +157,7 @@ const LawmakerCard = ({ lawmaker, portrait }) => {
           )}
         </div>
         <div className="item"><Link href={`${BASE_URL}/lawmakers/${key}#bills-sponsored`} passHref>📋 <strong>{sponsoredBills.length}</strong> bill(s) introduced</Link></div>
-        <div className="promo"><Link href={`${BASE_URL}/`} passHref>See more</Link> on MTFP&#39;s 2023 Capitol Tracker.</div>
+        <div className="promo"><Link href={`${BASE_URL}/`} passHref>See more</Link> on MTFP&#39;s 2025 Capitol Tracker.</div>
       </div>
     </div>
   );
