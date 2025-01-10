@@ -44,6 +44,7 @@ const housePageTopper = getText('./inputs/annotations/pages/house.md')
 const senatePageTopper = getText('./inputs/annotations/pages/senate.md')
 const governorPageTopper = getText('./inputs/annotations/pages/governor.md')
 const participationPageContent = getText('./inputs/annotations/pages/participation.md')
+const contactUsComponentText = getText('./inputs/annotations/components/about.md')
 
 /* 
 ### DATA BUNDLING + WRANGLING
@@ -157,6 +158,10 @@ const governorPageOutput = new GovernorPage({
 const participationPageOutput = {
     text: participationPageContent
 }
+const contactComponentOutput = {
+    text: contactUsComponentText
+}
+
 
 
 /* 
@@ -194,6 +199,7 @@ writeJson('./src/data/bill-categories.json', keyBillCategoryList)
 writeJson('./src/data/calendar.json', calendarOutput)
 writeJson('./src/data/recap.json', recapOutput)
 writeJson('./src/data/participation.json', participationPageOutput)
+writeJson('./src/data/contact.json', contactComponentOutput)
 writeJson('./src/data/house.json', housePageOutput)
 writeJson('./src/data/senate.json', senatePageOutput)
 writeJson('./src/data/governor.json', governorPageOutput)
