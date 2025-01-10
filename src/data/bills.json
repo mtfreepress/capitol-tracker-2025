@@ -11539,10 +11539,10 @@
         "lcIdentifier": "LC0092",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
-            "step": "First chamber",
-            "label": "In committee",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -17668,6 +17668,248 @@
         "isOnCalendar": false
     },
     {
+        "key": "hb-172",
+        "identifier": "HB 172",
+        "chamber": "house",
+        "title": "Revise laws for prioritization of highway projects",
+        "session": "2",
+        "lcIdentifier": "LC2215",
+        "type": "house bill",
+        "status": {
+            "key": "In First House--Introduced",
+            "step": "First chamber",
+            "label": "Introduced",
+            "status": "live",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "future",
+                "statusLabel": "Not introduced",
+                "statusDate": null
+            },
+            {
+                "step": "first committee",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Zack Wirth",
+            "party": "R",
+            "locale": "Wolf Creek",
+            "district": "HD 17"
+        },
+        "requestor": "Zack Wirth",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "SIMPLE",
+        "subjects": [
+            "Highways and Roads",
+            "Legislature"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2215?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2215?open_tab=bill",
+        "fiscalNoteUrl": "https://bills.legmt.gov/#/bill/2/LC2215?open_tab=fiscal",
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2215?open_tab=amend",
+        "legalNoteUrl": "undefined",
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0,
+        "isOnCalendar": false
+    },
+    {
+        "key": "hb-171",
+        "identifier": "HB 171",
+        "chamber": "house",
+        "title": "Eliminate Montana alfalfa seed committee",
+        "session": "2",
+        "lcIdentifier": "LC0425",
+        "type": "house bill",
+        "status": {
+            "key": "In First House--Introduced",
+            "step": "First chamber",
+            "label": "Introduced",
+            "status": "live",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "future",
+                "statusLabel": "Not introduced",
+                "statusDate": null
+            },
+            {
+                "step": "first committee",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Eric Tilleman",
+            "party": "R",
+            "locale": "Cascade",
+            "district": "HD 23"
+        },
+        "requestor": "Wendy McKamey",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "SIMPLE",
+        "subjects": [
+            "Agriculture  (see also: Livestock; Taxation--Agriculture/Livestock)",
+            "Rule Making",
+            "State Government"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0425?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0425?open_tab=bill",
+        "fiscalNoteUrl": "https://bills.legmt.gov/#/bill/2/LC0425?open_tab=fiscal",
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0425?open_tab=amend",
+        "legalNoteUrl": "undefined",
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0,
+        "isOnCalendar": false
+    },
+    {
+        "key": "hb-170",
+        "identifier": "HB 170",
+        "chamber": "house",
+        "title": "Require legislative review of federal financial assistance",
+        "session": "2",
+        "lcIdentifier": "LC2031",
+        "type": "house bill",
+        "status": {
+            "key": "In First House--Introduced",
+            "step": "First chamber",
+            "label": "Introduced",
+            "status": "live",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "future",
+                "statusLabel": "Not introduced",
+                "statusDate": null
+            },
+            {
+                "step": "first committee",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Tom Millett",
+            "party": "R",
+            "locale": "Marion",
+            "district": "HD 2"
+        },
+        "requestor": "Tom Millett",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "SIMPLE",
+        "subjects": [
+            "Federal Government",
+            "State Finance  (see also: Appropriations; Taxation Subjects)",
+            "Legislature"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2031?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2031?open_tab=bill",
+        "fiscalNoteUrl": "https://bills.legmt.gov/#/bill/2/LC2031?open_tab=fiscal",
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2031?open_tab=amend",
+        "legalNoteUrl": "undefined",
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0,
+        "isOnCalendar": false
+    },
+    {
         "key": "hb-17",
         "identifier": "HB 17",
         "chamber": "house",
@@ -17743,6 +17985,166 @@
         "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0079?open_tab=bill",
         "fiscalNoteUrl": "https://bills.legmt.gov/#/bill/2/LC0079?open_tab=fiscal",
         "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0079?open_tab=amend",
+        "legalNoteUrl": "undefined",
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0,
+        "isOnCalendar": false
+    },
+    {
+        "key": "hb-169",
+        "identifier": "HB 169",
+        "chamber": "house",
+        "title": "Revise judicial conduct laws",
+        "session": "2",
+        "lcIdentifier": "LC2033",
+        "type": "house bill",
+        "status": {
+            "key": "In First House--Introduced",
+            "step": "First chamber",
+            "label": "Introduced",
+            "status": "live",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "future",
+                "statusLabel": "Not introduced",
+                "statusDate": null
+            },
+            {
+                "step": "first committee",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Tom Millett",
+            "party": "R",
+            "locale": "Marion",
+            "district": "HD 2"
+        },
+        "requestor": "Tom Millett",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "SIMPLE",
+        "subjects": [
+            "Judges and Justices  (see also: Courts)"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2033?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2033?open_tab=bill",
+        "fiscalNoteUrl": "https://bills.legmt.gov/#/bill/2/LC2033?open_tab=fiscal",
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2033?open_tab=amend",
+        "legalNoteUrl": "undefined",
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0,
+        "isOnCalendar": false
+    },
+    {
+        "key": "hb-168",
+        "identifier": "HB 168",
+        "chamber": "house",
+        "title": "Provide state funding for preschool children with disabilities",
+        "session": "2",
+        "lcIdentifier": "LC1786",
+        "type": "house bill",
+        "status": {
+            "key": "In First House--Introduced",
+            "step": "First chamber",
+            "label": "Introduced",
+            "status": "live",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "future",
+                "statusLabel": "Not introduced",
+                "statusDate": null
+            },
+            {
+                "step": "first committee",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Jonathan Karlen",
+            "party": "D",
+            "locale": "Missoula",
+            "district": "HD 98"
+        },
+        "requestor": "Jonathan Karlen",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "SIMPLE",
+        "subjects": [
+            "School Finance",
+            "Developmental Disabilities, Persons With (see also: Institutions)",
+            "Schools and Education"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1786?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1786?open_tab=bill",
+        "fiscalNoteUrl": "https://bills.legmt.gov/#/bill/2/LC1786?open_tab=fiscal",
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1786?open_tab=amend",
         "legalNoteUrl": "undefined",
         "vetoMemoUrl": null,
         "articles": [],
