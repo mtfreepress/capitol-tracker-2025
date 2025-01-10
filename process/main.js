@@ -21,22 +21,22 @@ Approach here — each of these input buckets has a fetch script that needs to 
 */
 
 // Inputs from official bill tracking system
-const billsRaw = collectJsons('./inputs/bills/*/*-data.json')
+// const billsRaw = collectJsons('./inputs/bills/*/*-data.json')
 const actionsRaw = collectJsons('./inputs/bills/*/*-actions.json')
-const votesRaw = collectJsons('./inputs/bills/*/*-votes.json')
+// const votesRaw = collectJsons('./inputs/bills/*/*-votes.json')
 
-// Session-specific data -- mostly static; updated manually as necessary
-const districtsRaw = getJson('./inputs/districts/districts-2025.json')
-const lawmakersRaw = getJson('./inputs/lawmakers/legislator-roster-2025.json')
-const committeesRaw = await getCsv('./inputs/committees/committees.csv')
+// // Session-specific data -- mostly static; updated manually as necessary
+// const districtsRaw = getJson('./inputs/districts/districts-2025.json')
+// const lawmakersRaw = getJson('./inputs/lawmakers/legislator-roster-2025.json')
+// const committeesRaw = await getCsv('./inputs/committees/committees.csv')
 
-// Legislative article list from Montana Free Press CMS
-const articlesRaw = getJson('./inputs/coverage/articles.json')
+// // Legislative article list from Montana Free Press CMS
+// const articlesRaw = getJson('./inputs/coverage/articles.json')
 
-// Annotations from YAML and MD files (can also use CSVs in future here)
-const billAnnotations = collectYamls('./inputs/annotations/bills/*.yml')
-const lawmakerAnnotations = collectYamls('./inputs/annotations/lawmakers/*.yml')
-const processNotes = getYaml('./inputs/annotations/process-notes.yml')
+// // Annotations from YAML and MD files (can also use CSVs in future here)
+// const billAnnotations = collectYamls('./inputs/annotations/bills/*.yml')
+// const lawmakerAnnotations = collectYamls('./inputs/annotations/lawmakers/*.yml')
+// const processNotes = getYaml('./inputs/annotations/process-notes.yml')
 
 // Text content
 const homePageTopper = getText('./inputs/annotations/pages/home.md')
@@ -51,88 +51,94 @@ const contactUsComponentText = getText('./inputs/annotations/components/about.md
 */
 
 // config stuff
-const committeeOrder = committeesRaw.map(d => d.name)
+// const committeeOrder = committeesRaw.map(d => d.name)
 
 
-const articles = articlesRaw.map(article => new Article({ article }).export())
+// const articles = articlesRaw.map(article => new Article({ article }).export())
 
-/// do lawmakers first, then bills
-const lawmakers = lawmakersRaw.map(lawmaker => new Lawmaker({
-    lawmaker,
-    district: districtsRaw.find(d => d.key === lawmaker.district),
-    annotation: lawmakerAnnotations.find(d => d.slug === lawmaker.name.replace(/\s/g, '-').toLowerCase()) || {},
-    articles: articles.filter(d => d.lawmakerTags.includes(lawmaker.name)),
-    // leave sponsoredBills until after bills objects are created
-    // same with keyVotes
-    committeeOrder, // controls what order committee assignments are displayed on lawmaker pages
-}))
+// /// do lawmakers first, then bills
+// const lawmakers = lawmakersRaw.map(lawmaker => new Lawmaker({
+//     lawmaker,
+//     district: districtsRaw.find(d => d.key === lawmaker.district),
+//     annotation: lawmakerAnnotations.find(d => d.slug === lawmaker.name.replace(/\s/g, '-').toLowerCase()) || {},
+//     articles: articles.filter(d => d.lawmakerTags.includes(lawmaker.name)),
+//     // leave sponsoredBills until after bills objects are created
+//     // same with keyVotes
+//     committeeOrder, // controls what order committee assignments are displayed on lawmaker pages
+// }))
 
-const bills = billsRaw.map(bill => new Bill({
-    bill,
-    actions: actionsRaw.filter(d => d.bill === bill.key),
-    votes: votesRaw.filter(d => d.bill === bill.key),
-    annotation: billAnnotations.find(d => d.Identifier === bill.key) || {},
-    articles: articles.filter(d => d.billTags.includes(bill.key)),
-}))
+// const bills = billsRaw.map(bill => new Bill({
+//     bill,
+//     actions: actionsRaw.filter(d => d.bill === bill.key),
+//     votes: votesRaw.filter(d => d.bill === bill.key),
+//     annotation: billAnnotations.find(d => d.Identifier === bill.key) || {},
+//     articles: articles.filter(d => d.billTags.includes(bill.key)),
+// }))
 
-const actions = bills.map(bill => bill.exportActionData()).flat()
-const votes = bills.map(bill => bill.exportVoteData()).flat()
+console.log(actionsRaw)
 
-const houseFloorVotes = votes.filter(v => v.type === 'floor' && v.voteChamber === 'house')
-const senateFloorVotes = votes.filter(v => v.type === 'floor' && v.voteChamber === 'senate')
-const houseFloorVoteAnalysis = new VotingAnalysis({ votes: houseFloorVotes })
-const senateFloorVoteAnalysis = new VotingAnalysis({ votes: senateFloorVotes })
+// const actions = bills.map(bill => {
+//     const billActions = actionsRaw.filter(d => d.bill === bill.key);
+//     console.log(`Actions for Bill ${bill.key}:`, billActions);
+//     return bill.exportActionData();
+// }).flat();
+// const votes = bills.map(bill => bill.exportVoteData()).flat()
 
-const committees = committeesRaw
-    .filter(d => ![
-        'conference',
-        'select',
-        'procedural',
-        // 'fiscal-sub'
-    ].includes(d.type))
-    .map(schema => new Committee({
-        schema,
-        committeeBills: bills.filter(b => b.committees.includes(schema.displayName)),
-        lawmakers: lawmakers.filter(l => l.data.committees.map(d => d.committee).includes(schema.name)), // Cleaner to do this backwards -- assign lawmakers based on committee data?
-        updateTime
-    }))
+// const houseFloorVotes = votes.filter(v => v.type === 'floor' && v.voteChamber === 'house')
+// const senateFloorVotes = votes.filter(v => v.type === 'floor' && v.voteChamber === 'senate')
+// const houseFloorVoteAnalysis = new VotingAnalysis({ votes: houseFloorVotes })
+// const senateFloorVoteAnalysis = new VotingAnalysis({ votes: senateFloorVotes })
 
-// Calculations that need both lawmakers and bills populated
-lawmakers.forEach(lawmaker => {
-    lawmaker.addSponsoredBills({
-        sponsoredBills: bills.filter(bill => bill.sponsor === lawmaker.name)
-    })
-    lawmaker.addKeyBillVotes({
-        name: lawmaker.name,
-        keyBills: bills.filter(bill => bill.data.isMajorBill)
-    })
-    // TODO - Add last vote on key bills
-    if (lawmaker.data.chamber === 'house') {
-        lawmaker.votingSummary = houseFloorVoteAnalysis.getLawmakerStats(lawmaker.name)
-    } else if (lawmaker.data.chamber === 'senate') {
-        lawmaker.votingSummary = senateFloorVoteAnalysis.getLawmakerStats(lawmaker.name)
-    }
-})
+// const committees = committeesRaw
+//     .filter(d => ![
+//         'conference',
+//         'select',
+//         'procedural',
+//         // 'fiscal-sub'
+//     ].includes(d.type))
+//     .map(schema => new Committee({
+//         schema,
+//         committeeBills: bills.filter(b => b.committees.includes(schema.displayName)),
+//         lawmakers: lawmakers.filter(l => l.data.committees.map(d => d.committee).includes(schema.name)), // Cleaner to do this backwards -- assign lawmakers based on committee data?
+//         updateTime
+//     }))
 
-const calendarOutput = new CalendarPage({ actions, bills, updateTime }).export()
-bills.forEach(bill => bill.data.isOnCalendar = calendarOutput.billsOnCalendar.includes(bill.data.identifier))
-const recapOutput = new RecapPage({ actions, bills, updateTime }).export()
+// // Calculations that need both lawmakers and bills populated
+// lawmakers.forEach(lawmaker => {
+//     lawmaker.addSponsoredBills({
+//         sponsoredBills: bills.filter(bill => bill.sponsor === lawmaker.name)
+//     })
+//     lawmaker.addKeyBillVotes({
+//         name: lawmaker.name,
+//         keyBills: bills.filter(bill => bill.data.isMajorBill)
+//     })
+//     // TODO - Add last vote on key bills
+//     if (lawmaker.data.chamber === 'house') {
+//         lawmaker.votingSummary = houseFloorVoteAnalysis.getLawmakerStats(lawmaker.name)
+//     } else if (lawmaker.data.chamber === 'senate') {
+//         lawmaker.votingSummary = senateFloorVoteAnalysis.getLawmakerStats(lawmaker.name)
+//     }
+// })
 
-const keyBillCategoryKeys = Array.from(new Set(billAnnotations.map(d => d.category))).filter(d => d !== null).filter(d => d !== undefined)
-const keyBillCategoryList = keyBillCategoryKeys.map(category => {
-    const match = billAnnotations.find(d => d.category === category)
-    return {
-        category,
-        description: match.categoryDescription,
-        order: match.categoryOrder,
-        show: match.showCategory,
-    }
-})
-const headerOutput = { updateTime }
+// const calendarOutput = new CalendarPage({ actions, bills, updateTime }).export()
+// bills.forEach(bill => bill.data.isOnCalendar = calendarOutput.billsOnCalendar.includes(bill.data.identifier))
+// const recapOutput = new RecapPage({ actions, bills, updateTime }).export()
 
-const overviewPageOutput = {
-    aboveFoldText: homePageTopper,
-}
+// const keyBillCategoryKeys = Array.from(new Set(billAnnotations.map(d => d.category))).filter(d => d !== null).filter(d => d !== undefined)
+// const keyBillCategoryList = keyBillCategoryKeys.map(category => {
+//     const match = billAnnotations.find(d => d.category === category)
+//     return {
+//         category,
+//         description: match.categoryDescription,
+//         order: match.categoryOrder,
+//         show: match.showCategory,
+//     }
+// })
+// const headerOutput = { updateTime }
+
+// const overviewPageOutput = {
+//     aboveFoldText: homePageTopper,
+// }
 
 const getLegislativeLeaderDetails = (lawmakers, title) => {
     const lawmaker = lawmakers.find(l => l.data.leadershipTitle === title)
@@ -171,26 +177,26 @@ console.log('\n### Bundling tracker data')
 /*
 Exporting bill actions separately here so they can be kept outside of Gatsby graphql scope
 */
-const billsOutput = bills.map(b => b.exportBillDataOnly())
-const actionsOutput = bills.map(b => ({
-    bill: b.data.identifier,
-    actions: b.exportActionDataWithVotes()
-}))
+// const billsOutput = bills.map(b => b.exportBillDataOnly())
+// const actionsOutput = bills.map(b => ({
+//     bill: b.data.identifier,
+//     actions: b.exportActionDataWithVotes()
+// }))
 
-writeJson('./src/data/bills.json', billsOutput)
+// writeJson('./src/data/bills.json', billsOutput)
 
-// Breaking this into chunks to avoid too-large-for-github-files
-const chunkSize = 200
-let index = 1
-for (let start = 0; start < actionsOutput.length; start += chunkSize) {
-    writeJson(`./src/data/bill-actions-${index}.json`, actionsOutput.slice(start, start + chunkSize))
-    index += 1
-}
+// // Breaking this into chunks to avoid too-large-for-github-files
+// const chunkSize = 200
+// let index = 1
+// for (let start = 0; start < actionsOutput.length; start += chunkSize) {
+//     writeJson(`./src/data/bill-actions-${index}.json`, actionsOutput.slice(start, start + chunkSize))
+//     index += 1
+// }
 
-const lawmakerOutput = lawmakers.map(l => l.exportMerged())
-writeJson('./src/data/lawmakers.json', lawmakerOutput)
-const committeeOutput = committees.map(l => l.export())
-writeJson('./src/data/committees.json', committeeOutput)
+// const lawmakerOutput = lawmakers.map(l => l.exportMerged())
+// writeJson('./src/data/lawmakers.json', lawmakerOutput)
+// const committeeOutput = committees.map(l => l.export())
+// writeJson('./src/data/committees.json', committeeOutput)
 
 writeJson('./src/data/header.json', headerOutput)
 writeJson('./src/data/articles.json', articles)
