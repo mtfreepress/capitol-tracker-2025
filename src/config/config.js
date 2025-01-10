@@ -67,23 +67,35 @@ export const positionColors = (positionLetter) => {
 
 
 // Menus
-// TODO: Automate pulling these from WordPress
+// TODO: Automate pulling these from WordPress?
 export const footerLogoUrl = 'https://montanafreepress.org/wp-content/uploads/2020/05/website-footer-logo-1.png'
 export const footerMenus = [
     {
-        label: 'Projects',
+        label: 'Newsletters',
         items: [
             {
-                label: 'COVID-19 Pandemic',
+                label: 'Capitolized',
                 url: 'https://montanafreepress.org/covid-19-pandemic/',
             },
             {
-                label: 'Shared State',
+                label: 'MT Lowdown',
                 url: 'https://montanafreepress.org/election/',
             },
             {
-                label: 'The Long Streets Project',
+                label: 'Helena This Week',
                 url: 'https://montanafreepress.org/long-streets/',
+            },
+            {
+                label: 'Great Falls This Week',
+                url: 'https://montanafreepress.org/long-streets/',
+            },
+            {
+                label: 'Missoula This Week',
+                url: 'https://montanafreepress.org/missoula-this-week/',
+            },
+            {
+                label: 'Wide Open Table',
+                url: 'https://montanafreepress.org/wide-open-table/',
             },
         ]
     },
@@ -95,8 +107,12 @@ export const footerMenus = [
                 url: 'https://montanafreepress.org/about-mtfp/',
             },
             {
+                label: 'Jobs',
+                url: 'https://montanafreepress.org/jobs/',
+            },
+            {
                 label: 'Publish our work',
-                url: 'https://montanafreepress.org/publish-our-work/',
+                url: 'https://montanafreepress.org/publish-our-stories/',
             },
             {
                 label: 'Contact us',
@@ -113,7 +129,7 @@ export const footerMenus = [
             },
             {
                 label: 'Donate',
-                url: 'https://checkout.fundjournalism.org/memberform?org_id=montanafreepress&campaign=7014o000000JNZvAAO',
+                url: 'https://montanafreepress.org/donate/?campaign=website-footer-menu',
             }
         ]
     }
