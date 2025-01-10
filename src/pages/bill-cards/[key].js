@@ -18,7 +18,7 @@ export async function getStaticProps({ params }) {
         return { notFound: true };
     }
 
-    // Load actions for the current bill
+
     const actions = await loadBillActions(bill.identifier);
 
     return {
