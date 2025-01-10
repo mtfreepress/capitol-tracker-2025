@@ -5,7 +5,7 @@ const currentBasePath = '/capitol-tracker-2025'
 const nextConfig = {
     output: 'export',
     distDir: 'build',
-    assetPrefix: isProd ? 'https://apps.montanafreepress.org/election-guide-2024' : undefined,
+    assetPrefix: isProd ? 'https://projects.montanafreepress.org/capitol-tracker-2025' : undefined,
     basePath: currentBasePath,
     env: {
         BASE_PATH: currentBasePath,
@@ -19,7 +19,7 @@ const nextConfig = {
         remotePatterns: [
             {
                 protocol: 'https',
-                hostname: 'apps.montanafreepress.org',
+                hostname: 'projects.montanafreepress.org',
                 port: '',
                 pathname: '/',
             }

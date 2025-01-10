@@ -110,7 +110,7 @@ const LawmakerPage = ({ lawmaker }) => {
         <a href="#bills-sponsored">Bills</a> •
         <a href="#key-votes">Key votes</a> •
         <a href="#floor-statistics">Voting stats</a> •
-        <a href="#election-history">2022 election margin</a> •
+        <a href="#election-history">2024 election margin</a> •
         {articles.length > 0 && <a href="#mtfp-coverage">MTFP Coverage</a>}
       </div>
 
@@ -145,12 +145,12 @@ const LawmakerPage = ({ lawmaker }) => {
 export default LawmakerPage;
 
 const History = ({ name, history }) => {
-  const pastSessions = history.filter((d) => d.year !== '2023');
+  const pastSessions = history.filter((d) => d.year !== '2025');
   const pastHouseSessions = pastSessions.filter((d) => d.chamber === 'house');
   const pastSenateSessions = pastSessions.filter((d) => d.chamber === 'senate');
 
   if (!pastSessions.length) {
-    return <p>{`2023 is the first session ${name} has served in the Legislature.`}</p>;
+    return <p>{`2025 is the first session ${name} has served in the Legislature.`}</p>;
   } else if (!pastSenateSessions.length) {
     return <p>{`${name} previously served in the Montana House in ${listToText(pastHouseSessions.map((d) => d.year))}.`}</p>;
   } else if (!pastHouseSessions.length) {

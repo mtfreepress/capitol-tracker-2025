@@ -21,7 +21,8 @@ const Index = ({ keyBills, billIndex, lawmakerIndex }) => {
   return (
     <div>
       <Layout>
-        <h2 id="key-bill-status">Key bill progress</h2>
+        {/* TODO: Rework "Key Bills" */}
+        {/* <h2 id="key-bill-status">Key bill progress</h2>
         <div>
           {keyBillCategories.sort((a, b) => a.order - b.order).map((c, i) => (
             <span key={c.category}>
@@ -32,7 +33,7 @@ const Index = ({ keyBills, billIndex, lawmakerIndex }) => {
         </div>
         <div className="note">
           Major legislation identified by MTFP reporters. Where ambiguous, official bill titles are annotated with plain language summaries.
-        </div>
+        </div> */}
         <InfoPopup label="How bills move through the Legislature" content={howBillsMove} />
         {
           keyBillCategories
