@@ -171,26 +171,26 @@ console.log('\n### Bundling tracker data')
 /*
 Exporting bill actions separately here so they can be kept outside of Gatsby graphql scope
 */
-const billsOutput = bills.map(b => b.exportBillDataOnly())
-const actionsOutput = bills.map(b => ({
-    bill: b.data.identifier,
-    actions: b.exportActionDataWithVotes()
-}))
+// const billsOutput = bills.map(b => b.exportBillDataOnly())
+// const actionsOutput = bills.map(b => ({
+//     bill: b.data.identifier,
+//     actions: b.exportActionDataWithVotes()
+// }))
 
-writeJson('./src/data/bills.json', billsOutput)
+// writeJson('./src/data/bills.json', billsOutput)
 
-// Breaking this into chunks to avoid too-large-for-github-files
-const chunkSize = 200
-let index = 1
-for (let start = 0; start < actionsOutput.length; start += chunkSize) {
-    writeJson(`./src/data/bill-actions-${index}.json`, actionsOutput.slice(start, start + chunkSize))
-    index += 1
-}
+// // Breaking this into chunks to avoid too-large-for-github-files
+// const chunkSize = 200
+// let index = 1
+// for (let start = 0; start < actionsOutput.length; start += chunkSize) {
+//     writeJson(`./src/data/bill-actions-${index}.json`, actionsOutput.slice(start, start + chunkSize))
+//     index += 1
+// }
 
-const lawmakerOutput = lawmakers.map(l => l.exportMerged())
-writeJson('./src/data/lawmakers.json', lawmakerOutput)
-const committeeOutput = committees.map(l => l.export())
-writeJson('./src/data/committees.json', committeeOutput)
+// const lawmakerOutput = lawmakers.map(l => l.exportMerged())
+// writeJson('./src/data/lawmakers.json', lawmakerOutput)
+// const committeeOutput = committees.map(l => l.export())
+// writeJson('./src/data/committees.json', committeeOutput)
 
 writeJson('./src/data/header.json', headerOutput)
 writeJson('./src/data/articles.json', articles)
