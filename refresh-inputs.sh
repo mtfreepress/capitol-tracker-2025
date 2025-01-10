@@ -13,7 +13,11 @@
 # node inputs/hearing-transcripts/fetch.js
 
 # Check laws-interface repo for bill/vote info pulled from official legislative system
-node inputs/bills/fetch.js
+# node inputs/bills/fetch.js
 
 # Run data process
-node  process/main.js
+# node  process/main.js
+
+# TEST:
+# TODO: Nuke this later
+node process/actions-test.js
