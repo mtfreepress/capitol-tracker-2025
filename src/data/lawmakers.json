@@ -7714,9 +7714,9 @@
                 "title": "Revise law related to petitions to initiate agency rulemaking",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House Committee--Nontabled",
+                    "key": "In First House--Out of Committee",
                     "step": "First chamber",
-                    "label": "In committee",
+                    "label": "Out of committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -12446,10 +12446,10 @@
                 "title": "Generally revise consumer protection laws",
                 "chamber": "house",
                 "status": {
-                    "key": "Probably Dead",
-                    "label": "",
-                    "step": "Failed",
-                    "status": "stalled",
+                    "key": "In First House Committee--Nontabled",
+                    "step": "First chamber",
+                    "label": "In committee",
+                    "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -23075,10 +23075,10 @@
                 "title": "Require unlimited wolf hunting quota when population is at or above 450 wolves",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Introduced",
-                    "step": "First chamber",
-                    "label": "Introduced",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -23136,10 +23136,10 @@
                 "title": "Require fish, wildlife, and parks to publish a report detailing data on hunting districts",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Introduced",
-                    "step": "First chamber",
-                    "label": "Introduced",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -33317,7 +33317,69 @@
         ],
         "articles": [],
         "imageSlug": "2025/frank-smith.jpg",
-        "sponsoredBills": [],
+        "sponsoredBills": [
+            {
+                "key": "hb-177",
+                "identifier": "HB 177",
+                "title": "Revise tobacco, alternative nicotine, and vapor product laws",
+                "chamber": "house",
+                "status": {
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "future",
+                        "statusLabel": "Not introduced",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3689?open_tab=bill",
+                "fiscalNoteUrl": "https://bills.legmt.gov/#/bill/2/LC3689?open_tab=fiscal",
+                "legalNoteUrl": "undefined",
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Frank Smith",
+                    "party": "D",
+                    "locale": "Poplar",
+                    "district": "HD 31"
+                }
+            }
+        ],
         "votingSummary": {
             "averageAbsences": null,
             "averageVotesOnWinningSideGop": null,
