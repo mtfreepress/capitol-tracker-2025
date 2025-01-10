@@ -75,15 +75,7 @@ const bills = billsRaw.map(bill => new Bill({
     articles: articles.filter(d => d.billTags.includes(bill.key)),
 }))
 
-console.log(actionsRaw)
-
-const actions = bills.map(bill => {
-    const billActions = actionsRaw.filter(d => d.bill === bill.key);
-    console.log(`Actions for Bill ${bill.key}:`, billActions);
-    return bill.exportActionData();
-}).flat();
-const votes = bills.map(bill => bill.exportVoteData()).flat()
-
+const actions = bills.map(bill => bill.exportActionData()).flat()
 const houseFloorVotes = votes.filter(v => v.type === 'floor' && v.voteChamber === 'house')
 const senateFloorVotes = votes.filter(v => v.type === 'floor' && v.voteChamber === 'senate')
 const houseFloorVoteAnalysis = new VotingAnalysis({ votes: houseFloorVotes })
