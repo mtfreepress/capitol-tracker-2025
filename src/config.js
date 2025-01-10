@@ -1,8 +1,9 @@
 // export const metaData = {
 //     siteTitle: 
 
+// TODO: Update this
 export const metaData = {
-    baseUrl: 'https://apps.montanafreepress.org/election-guide-2024',
+    baseUrl: 'https://projects.montanafreepress.org/capitol-tracker-2025',
     // On-page display
     // webTitle: '2024 Election Guide', // Replacing with custom design in Header
     webSubtitle: 'Montana\'s candidates for state and federal office.',
@@ -26,8 +27,8 @@ export const footerMenus = [
                 url: 'https://montanafreepress.org/long-streets/',
             },
             {
-                label: '2023 Capitol Tracker',
-                url: 'https://montanafreepress.org/2023-capitol-tracker/',
+                label: '2025 Capitol Tracker',
+                url: 'https://montanafreepress.org/2025-capitol-tracker/',
             },
             {
                 label: 'Shared State',

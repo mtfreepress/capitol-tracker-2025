@@ -1,20 +1,112 @@
 import React from "react";
 import { css } from '@emotion/react';
 
-import "../config/base.css";
-import { embedInputContainerStyle } from '../config/styles';
-import { lawmakerUrl } from '../config/utils';
-import { billStatusSymbols, billProgressStepLabels } from '../config/config';
+import "../../styles/base.css";
+import { embedInputContainerStyle } from '../../config/styles';
+import { lawmakerUrl } from '../../config/utils'
+import { billStatusSymbols, billProgressStepLabels } from '../../config/config';
 
 const billCardCss = css`
-    // ... existing styles ...
-`;
+    width: 300px;
+    height: 300px;
+    background: var(--tan1);
+    position: relative;
+    font-size: 15px;
+
+    .info {
+        
+
+        font-size: 1.1em;
+        text-align: center;
+        background: var(--gray6);
+        
+        color: white;
+        padding: 0.5em;
+        /* height: 40px; */
+        .title {
+            color: white;
+        }
+        .explanation {
+            font-style: italic;
+            font-size: 0.9rem;
+        }
+    }
+    .sponsor {
+        padding: 0.5em;
+    }
+    .status {
+        padding: 0.5em;
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        /* padding: 0.5em; */
+
+    }
+    .info-boxes {
+        flex: 0 0 45%;
+    }
+    .info-text,
+    .info-fiscal,
+    .info-legal {
+        border: 1px solid var(--tan4);
+        padding: 0.25em;
+        margin: 0 0.5em;
+        margin-bottom: 5px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+    }
+    .info-absent {
+        opacity: 0.5;
+        font-style: italic;
+    }
+    .progression {
+        flex: 0 0 45%;
+        height: 111px;
+        border: 1px solid var(--tan4);
+        padding: 0.5em;
+
+        .progress-title {
+            margin-bottom: 0.3em;
+            color: var(--tan5);
+        }
+    }
+
+    
+    .promo {
+        font-style: italic;
+        position: absolute;
+        bottom: 5px;
+        padding: 0.5em;
+    }
+`
 
 const progressStepStyle = css`
-    // ... existing styles ...
-`;
+  margin-bottom: 0.1em;
+  font-size: 12px;
+  
+  .icon {
+    /* background-color: var(--gray1); */
+    display: inline-block;
+    width: 1.2em;
+    height: 1.2em;
+    text-align: center;
+    margin: 0.1em;
+    margin-right: 0.5em;
+  }
+  .label {
+    color: var(--gray4);
+    display: inline-block;
+    text-transform: uppercase;
+    @media (max-width: 400px) {
+      font-size: 12px;
+    }
+  }
+`
 
-const BASE_URL = 'https://apps.montanafreepress.org/capitol-tracker-2023';
+const BASE_URL = 'https://projects.montanafreepress.org/capitol-tracker-2025';
 
 const BillCard = ({ bill }) => {
     const {
@@ -89,7 +181,7 @@ const BillCard = ({ bill }) => {
                     </div>
                 </div>
                 <div className="promo">
-                    <a href={`${BASE_URL}/bills/${key}`} target="_blank" rel="noopener noreferrer">See more</a> on MTFP&#39;s 2023 Capitol Tracker.
+                    <a href={`${BASE_URL}/bills/${key}`} target="_blank" rel="noopener noreferrer">See more</a> on MTFP&#39;s 2025 Capitol Tracker.
                 </div>
             </div>
 

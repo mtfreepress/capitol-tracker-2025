@@ -83,7 +83,7 @@ const LawmakerVotingSummary = ({ lawmaker, votingSummary }) => {
     demVoteComparison = votingSummary.averageVotesWithDemCaucusDem
   }
   return <div css={votingSummaryStyle}>
-    <div className="text">Calculations based on {numberFormat(votingSummary.numVotesCast || 0)} {capitalize(lawmaker.chamber)} floor votes in 2023 involving bills.</div>
+    <div className="text">Calculations based on {numberFormat(votingSummary.numVotesCast || 0)} {capitalize(lawmaker.chamber)} floor votes in 2025 involving bills.</div>
     <div className="pull-stat-container">
       <div className="pull-stat-item">
         <div className="stat">🥇 {percentFormat(votingSummary.fractionVotesOnWinningSide || 0)}</div>
