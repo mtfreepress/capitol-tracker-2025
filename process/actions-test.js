@@ -1,31 +1,28 @@
 import { collectJsons, writeJson } from './utils.js';
 
-const actionsRaw = collectJsons('./inputs/bills/*/*-actions.json');
-const votesRaw = collectJsons('./inputs/bills/*/*-votes.json');
+let actionsRaw = collectJsons('./inputs/bills/*/*-actions.json') || [];
+// flatten to get rid of nested array issue
+actionsRaw = Array.isArray(actionsRaw) && actionsRaw.some(Array.isArray) ? actionsRaw.flat() : actionsRaw;
+const votesRaw = collectJsons('./inputs/bills/*/*-votes.json') || [];
 
-const actions = actionsRaw || [];
-const votes = votesRaw || [];
-
-const actionsGroupedByBill = {};
-
-actions.forEach(action => {
-    const relatedVotes = votes.filter(vote => vote.bill === action.bill);
-    
-    if (!actionsGroupedByBill[action.bill]) {
-        actionsGroupedByBill[action.bill] = {
+// group actions by bill name with desired structure
+const actionsGroupedByBill = actionsRaw.reduce((acc, action) => {
+    const relatedVotes = votesRaw.filter(vote => vote.bill === action.bill);
+    if (!acc[action.bill]) {
+        acc[action.bill] = {
             bill: action.bill,
             actions: []
         };
     }
-    
-    actionsGroupedByBill[action.bill].actions.push({
+
+    acc[action.bill].actions.push({
         ...action,
         votes: relatedVotes || []
     });
-});
 
-const actionsOutput = Object.values(actionsGroupedByBill);
+    return acc;
+}, {});
 
-console.log('Grouped Actions by Bill:', JSON.stringify(actionsOutput, null, 2));
-
+// alphabatize and sort into desired structure to match old data:
+const actionsOutput = Object.values(actionsGroupedByBill).sort((a, b) => a.bill.localeCompare(b.bill));
 writeJson('./src/data/bill-actions-TEST.json', actionsOutput);
