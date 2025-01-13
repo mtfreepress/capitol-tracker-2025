@@ -91,7 +91,7 @@ const Layout = ({
       `}
       </Script>
       {/* Parsely information */}
-      <Script type="application/ld+json" id="parsely">
+      <Script id="parsely-jsonld" type="application/ld+json" strategy="afterInteractive">
         {`
           {
             "@context": "http://schema.org",
@@ -100,7 +100,7 @@ const Layout = ({
             "headline": "${pageTitle}",
             "url": "${pageUrl}",
             "thumbnailUrl": "${featureImage}",
-            "datePublished: "2024-05-07T20:38:48Z",
+            "datePublished: "2025-01-013T20:38:48Z",
             "dateModified": "${new Date().toISOString()}",
             "articleSection": "News apps",
             "author": [
