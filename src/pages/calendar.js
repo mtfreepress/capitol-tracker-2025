@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import { css } from "@emotion/react";
-import Head from "next/head";
 import Layout from "../design/Layout";
 import ContactUs from "../components/ContactUs";
 import NewsletterSignup from "../components/NewsletterSignup";
@@ -123,10 +122,6 @@ const Calendar = ({ onCalendarBills, committees }) => {
             socialTitle={"Calendar | 2025 MTFP Capitol Tracker"}
             socialDescription={"The lawmakers, bills and votes making Montana's laws at the 2025 Legislature."}
         >
-            <Head>
-                <title>Calendar</title>
-                <meta name="description" content="What's coming up at the Legislature" />
-            </Head>
             <h1>What&apos;s Coming Up at the Legislature</h1>
 
             {/* Navigation for days */}

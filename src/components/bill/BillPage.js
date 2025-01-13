@@ -2,7 +2,6 @@ import React from "react";
 import ReactMarkdown from 'react-markdown';
 
 import Layout from '../../design/Layout';
-import SEO from "../Seo";
 import ContactUs from '../ContactUs';
 import LinksList from '../LinksList';
 import NewsletterSignup from '../NewsletterSignup';
@@ -60,17 +59,6 @@ const BillPage = ({ bill }) => {
         <ContactUs />
       </Layout>
     </div>
-  );
-};
-
-export const Head = ({ bill }) => {
-  const { key, identifier, title } = bill;
-  return (
-    <SEO
-      title={`${identifier}: ${title}`}
-      description={`Bill details, sponsor, text, procedural status and more for ${identifier}: ${title}.`}
-      pageRelativeUrl={`bills/${key}/`}
-    />
   );
 };
 

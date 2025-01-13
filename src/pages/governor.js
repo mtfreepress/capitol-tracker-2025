@@ -79,10 +79,6 @@ const Governor = ({ bills }) => {
         socialTitle={"Gov. Greg Gianforte | 2025 MTFP Capitol Tracker"}
         socialDescription={"Montana Gov. Greg Gianforte's 2025 bill signatures and vetoes.."}
       >
-        <Head>
-          <title>Gov. Greg Gianforte - 2023 Legislative Bills</title>
-          <meta name="description" content="Vetos, signatures, and 2023 bills on the desk of Montana Gov. Greg Gianforte." />
-        </Head>
 
         <h1>Gov. Greg Gianforte</h1>
         <ReactMarkdown>{text}</ReactMarkdown>

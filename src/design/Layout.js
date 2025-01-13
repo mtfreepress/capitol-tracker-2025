@@ -58,7 +58,7 @@ const Layout = ({
       <Head>
         {/* TODO: Populate SEO stuff here -- adapt from elex guide */}
         <meta charSet="utf-8" />
-        <title>{siteSeoTitle}</title>
+        <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
         <meta name="image" content={featureImage} />
         <link rel="canonical" href={pageUrl} />

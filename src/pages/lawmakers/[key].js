@@ -1,6 +1,5 @@
 import React from "react";
 import { css } from '@emotion/react';
-import Head from 'next/head';
 import Link from 'next/link';
 import ReactMarkdown from 'react-markdown';
 
@@ -60,6 +59,7 @@ const getPartyLabel = (key) => {
 
 const LawmakerPage = ({ lawmaker }) => {
   const {
+    key,
     title,
     name,
     party,
@@ -84,9 +84,9 @@ const LawmakerPage = ({ lawmaker }) => {
     <Layout
       relativePath={`/${key}`}
       pageTitle={`${title} ${name}, ${party}-${locale} | 2025 MTFP Capitol Tracker`}
-      pageDescription={`Election history, sponsored bills, committee assignments and more for ${district} ${title} ${name}, ${party}-${locale}.`}
+      pageDescription={`Election history, sponsored bills, committee assignments and more for ${title} ${name}, ${party}-${locale}.`}
       socialTitle={`${title} ${name}, ${party}-${locale} | 2025 MTFP Capitol Tracker`}
-      socialDescription={`Election history, sponsored bills, committee assignments and more for ${district} ${title} ${name}, ${party}-${locale}.`}
+      socialDescription={`Election history, sponsored bills, committee assignments and more for ${title} ${name}, ${party}-${locale}.`}
     >
 
       <div css={topperBar}>

@@ -35,17 +35,4 @@ export async function getStaticProps() {
     };
 }
 
-import Head from 'next/head'
-
-export const MetaHead = () => (
-    <Head>
-        <title>Participate</title>
-        <meta
-            name="description"
-            content="How to participate in Montana's 2023 Legislature"
-        />
-        <meta property="og:url" content="participation/" />
-    </Head>
-)
-
 export default Participate;
