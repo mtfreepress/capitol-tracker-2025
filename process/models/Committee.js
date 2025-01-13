@@ -8,6 +8,7 @@ const ROLE_ORDER = ['Chair', 'Vice Chair', 'Member']
 export default class Committee {
     constructor({ schema, committeeBills, lawmakers, updateTime }) {
         const {
+            commiteeKey,
             displayName,
             usualDays,
             usualTime,
@@ -15,7 +16,7 @@ export default class Committee {
             type
         } = schema;
 
-        const commiteeKey = displayName.toLowerCase().replace(/\s+/g, '-'); // Dynamically generate the key
+        const addressKey = displayName.toLowerCase().replace(/\s+/g, '-'); // Dynamically generate the key
 
         const beginningOfToday = new Date(updateTime).setUTCHours(7, 0, 0, 0); // 7 accounts for Montana vs GMT time
 
@@ -107,7 +108,8 @@ export default class Committee {
 
         this.data = {
             name: displayName,
-            key: commiteeKey,
+            key: addressKey,
+            comitteeKey: commiteeKey,
             chamber,
             time: usualTime,
             type,
