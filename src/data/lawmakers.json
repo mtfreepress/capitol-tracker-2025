@@ -3826,10 +3826,10 @@
                 "title": "Revise infrastructure loan program and tax credit",
                 "chamber": "house",
                 "status": {
-                    "key": "Probably Dead",
-                    "label": "",
-                    "step": "Failed",
-                    "status": "stalled",
+                    "key": "In First House--Through 3rd Reading",
+                    "step": "First chamber",
+                    "label": "Passed chamber",
+                    "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -3847,14 +3847,14 @@
                     },
                     {
                         "step": "first chamber",
-                        "status": "current",
-                        "statusLabel": "Passed preliminary floor vote",
-                        "statusDate": "01/10/2025"
+                        "status": "passed",
+                        "statusLabel": "Passed House",
+                        "statusDate": "01/13/2025"
                     },
                     {
                         "step": "second chamber",
-                        "status": "future",
-                        "statusLabel": null,
+                        "status": "current",
+                        "statusLabel": "Pending",
                         "statusDate": null
                     },
                     {
@@ -11047,10 +11047,10 @@
                 "title": "Revise law related to damage-based muskrat and beaver harvesting",
                 "chamber": "house",
                 "status": {
-                    "key": "Probably Dead",
-                    "label": "",
-                    "step": "Failed",
-                    "status": "stalled",
+                    "key": "In First House--Through 2nd Reading",
+                    "step": "First chamber",
+                    "label": "Passed second reading vote",
+                    "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -11069,8 +11069,8 @@
                     {
                         "step": "first chamber",
                         "status": "current",
-                        "statusLabel": "Pending",
-                        "statusDate": null
+                        "statusLabel": "Passed preliminary floor vote",
+                        "statusDate": "01/13/2025"
                     },
                     {
                         "step": "second chamber",
@@ -24896,6 +24896,67 @@
                 }
             },
             {
+                "key": "sb-132",
+                "identifier": "SB 132",
+                "title": "Generally revise minor in possession laws",
+                "chamber": "senate",
+                "status": {
+                    "key": "In First House--Introduced",
+                    "step": "First chamber",
+                    "label": "Introduced",
+                    "status": "live",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "01/13/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2796?open_tab=bill",
+                "fiscalNoteUrl": "https://bills.legmt.gov/#/bill/2/LC2796?open_tab=fiscal",
+                "legalNoteUrl": "undefined",
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Tom McGillvray",
+                    "party": "R",
+                    "locale": "Billings",
+                    "district": "SD 26"
+                }
+            },
+            {
                 "key": "sb-120",
                 "identifier": "SB 120",
                 "title": "Provide for article V commissioner selection and oversight",
@@ -31423,10 +31484,10 @@
                 "title": "Align home value amounts for school district property tax impact statements",
                 "chamber": "house",
                 "status": {
-                    "key": "Probably Dead",
-                    "label": "",
-                    "step": "Failed",
-                    "status": "stalled",
+                    "key": "In First House--Through 3rd Reading",
+                    "step": "First chamber",
+                    "label": "Passed chamber",
+                    "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -31444,14 +31505,14 @@
                     },
                     {
                         "step": "first chamber",
-                        "status": "current",
-                        "statusLabel": "Passed preliminary floor vote",
-                        "statusDate": "01/10/2025"
+                        "status": "passed",
+                        "statusLabel": "Passed House",
+                        "statusDate": "01/13/2025"
                     },
                     {
                         "step": "second chamber",
-                        "status": "future",
-                        "statusLabel": null,
+                        "status": "current",
+                        "statusLabel": "Pending",
                         "statusDate": null
                     },
                     {
@@ -35228,10 +35289,10 @@
                 "title": "Revise terms for forest lands taxation advisory committee",
                 "chamber": "house",
                 "status": {
-                    "key": "Probably Dead",
-                    "label": "",
-                    "step": "Failed",
-                    "status": "stalled",
+                    "key": "In First House--Through 3rd Reading",
+                    "step": "First chamber",
+                    "label": "Passed chamber",
+                    "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -35249,14 +35310,14 @@
                     },
                     {
                         "step": "first chamber",
-                        "status": "current",
-                        "statusLabel": "Passed preliminary floor vote",
-                        "statusDate": "01/10/2025"
+                        "status": "passed",
+                        "statusLabel": "Passed House",
+                        "statusDate": "01/13/2025"
                     },
                     {
                         "step": "second chamber",
-                        "status": "future",
-                        "statusLabel": null,
+                        "status": "current",
+                        "statusLabel": "Pending",
                         "statusDate": null
                     },
                     {
