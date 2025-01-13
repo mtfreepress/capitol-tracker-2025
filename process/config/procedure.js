@@ -234,6 +234,7 @@ export const ACTIONS = [
     // resolutions
     { key: 'Resolution Adopted', isMajor, isHighlight, firstChamberFloorAction, floorDebate, secondChamberAction, finalPassage },
     { key: 'Resolution Not Adopted', isMajor, isHighlight, firstChamberFloorAction, floorDebate, secondChamberAction, failed },
+    { key: 'Resolution Failed', isMajor, isHighlight, firstChamberFloorAction, floorDebate, secondChamberAction, failed },
     { key: 'Adverse Committee Report Adopted', isMajor, isHighlight, firstChamberFloorAction, secondChamberAction, failed }, // Seems to be how resolutions are killed?
     // some constitutional amendments
     { key: '2nd Reading Pass Motion Failed; 3rd Reading Vote Required', isMajor, isHighlight, firstChamberFloorAction, floorDebate, advanced },
