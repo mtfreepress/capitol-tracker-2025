@@ -374,6 +374,7 @@ export const ACTIONS = [
 
 
     // Minor actions (exclude from default bill table view)
+    { key: 'Drafter Assigned' },
     { key: 'Draft Request Received', draftRequest },
     { key: 'Bill Draft Text Available Electronically', draftReady },
     { key: 'Draft Delivered to Requester' },

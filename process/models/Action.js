@@ -22,7 +22,7 @@ export default class Action {
             transcriptUrl, // From third-party council data project integration
         } = action
 
-        const description = action.action.replace(/\((C|H|S)\) /, '').replace(/\&nbsp/g, '')
+        const description = action.description.replace(/\((C|LC|H|S)\) /, '').replace(/\&nbsp/g, '')
 
 
         this.vote = vote
@@ -48,10 +48,11 @@ export default class Action {
     }
 
     determinePosession = (action, description) => {
-        const posessionSearch = action.action.match(/(?<=\()(C|H|S)(?=\))/)
+        const posessionSearch = action.description.match(/(?<=\()(C|LC|H|S)(?=\))/)
         const posessionKey = posessionSearch && posessionSearch[0] || 'O'
         const posession = {
             'C': 'staff',
+            'LC': 'staff',
             'H': 'house',
             'S': 'senate',
             'O': 'other'
