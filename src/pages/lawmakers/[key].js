@@ -81,15 +81,17 @@ const LawmakerPage = ({ lawmaker }) => {
   } = lawmaker;
 
   return (
-    <Layout>
-      <Head>
-        <title>{`${title} ${name}, ${party}-${locale}`}</title>
-        <meta name="description" content={`Election history, sponsored bills, committee assignments and more for ${title} ${name}, ${district}.`} />
-      </Head>
+    <Layout
+      relativePath={`/${key}`}
+      pageTitle={`${title} ${name}, ${party}-${locale} | 2025 MTFP Capitol Tracker`}
+      pageDescription={`Election history, sponsored bills, committee assignments and more for ${district} ${title} ${name}, ${party}-${locale}.`}
+      socialTitle={`${title} ${name}, ${party}-${locale} | 2025 MTFP Capitol Tracker`}
+      socialDescription={`Election history, sponsored bills, committee assignments and more for ${district} ${title} ${name}, ${party}-${locale}.`}
+    >
 
       <div css={topperBar}>
         <div css={portraitColCss} style={{ borderTop: `6px solid ${partyColors(party)}` }}>
-          <LawmakerPortrait image={lawmaker.portrait} alt={`${title} ${name}, ${district}`} />
+          <LawmakerPortrait image={portrait} alt={`${title} ${name}, ${district}`} />
         </div>
         <div css={infoCol}>
           <h1>{`${title} ${name}`}</h1>

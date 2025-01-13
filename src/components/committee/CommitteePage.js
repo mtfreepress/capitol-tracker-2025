@@ -17,7 +17,7 @@ const getDay = d => shortDateWithWeekday(new Date(d));
 
 const CommitteePage = ({ committee, bills }) => {
     const {
-        name, time, type, billCount, billsWithdrawn,
+        key, name, time, type, billCount, billsWithdrawn,
         billsUnscheduled, billsScheduledByDay, billsAwaitingVote,
         billsFailed, billsAdvanced, billsBlasted, members, committeePageText
     } = committee;
@@ -37,7 +37,13 @@ const CommitteePage = ({ committee, bills }) => {
     const chair = members.find(d => d.role === 'Chair');
 
     return (
-        <Layout>
+        <Layout
+            relativePath={`/${key}`}
+            pageTitle={`${name} | 2025 MTFP Capitol Tracker`}
+            pageDescription={`${name} members and bills.`}
+            socialTitle={`${name} | 2025 MTFP Capitol Tracker`}
+            socialDescription={`${name} members and bills.`}
+        >
             <h1>{name} Committee</h1>
             <CommitteeSummary {...committee} />
 

@@ -37,7 +37,13 @@ const Senate = ({ senators, committees }) => {
   const { text, leadership } = senateData
 
   return (
-    <Layout>
+    <Layout
+      relativePath='/senate'
+      pageTitle={"Montana Senate | 2025 MTFP Capitol Tracker"}
+      pageDescription={"The senators and committees of the 2025 Montana Senate."}
+      socialTitle={"Montana Senate: 2025 MTFP Capitol Tracker"}
+      socialDescription={"The senators and committees of the 2025 Montana Senate."}
+    >
       <Head>
         <title>Senate</title>
         <meta name="description" content="Senators and committees of the Montana Senate" />

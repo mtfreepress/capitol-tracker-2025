@@ -37,7 +37,13 @@ const AllBills = () => {
 
   return (
     <div css={allBillsPageStyle}>
-      <Layout>
+      <Layout
+        relativePath='/all-bills'
+        pageTitle={"All Introduced Bills | 2025 MTFP Capitol Tracker"}
+        pageDescription={"The lawmakers, bills and votes making Montana's laws at the 2025 Legislature."}
+        socialTitle={"All Introduced Bills | 2025 MTFP Capitol Tracker"}
+        socialDescription={"The lawmakers, bills and votes making Montana's laws at the 2025 Legislature."}
+      >
         <h1>All 2025 bills</h1>
         <div className="note">
           <strong>{numberFormat(allBills.length)}</strong> total bills, resolutions, and other measures introduced

@@ -39,7 +39,13 @@ const House = ({ representatives, committees }) => {
 
   return (
     <div>
-      <Layout>
+      <Layout
+        relativePath='/house'
+        pageTitle={"Montana House | 2025 MTFP Capitol Tracker"}
+        pageDescription={"The representatives and committees of the Montana House."}
+        socialTitle={"Montana House: 2025 MTFP Capitol Tracker"}
+        socialDescription={"The representatives and committees of the Montana House."}
+        >
         <Head>
           <title>House</title>
           <meta name="description" content="Representatives and committees of the Montana House" />

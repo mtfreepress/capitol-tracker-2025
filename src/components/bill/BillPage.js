@@ -13,7 +13,7 @@ import BillActions from '../bill/Actions';
 
 const BillPage = ({ bill }) => {
   const {
-    identifier, title, status, progress, chamber,
+    key, identifier, title, status, progress, chamber,
     lawsUrl, vetoMemoUrl, articles, actions,
     explanation, type,
     billPageText
@@ -21,7 +21,13 @@ const BillPage = ({ bill }) => {
 
   return (
     <div>
-      <Layout>
+      <Layout
+        relativePath={`/${key}`}
+        pageTitle={`${identifier}: ${title} | 2025 MTFP Capitol Tracker`}
+        pageDescription={"Bill text, details and status."}
+        socialTitle={`${identifier} | 2025 MTFP Capitol Tracker`}
+        socialDescription={`${title}`}
+      >
         <h1>{identifier}: {title}</h1>
         <div>{explanation}</div>
 

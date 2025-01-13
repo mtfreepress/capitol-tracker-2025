@@ -8,7 +8,13 @@ import participationData from '../data/participation.json'
 const Participate = ({ text }) => {
     return (
         <div>
-            <Layout>
+            <Layout
+                 relativePath='/participation'
+                 pageTitle={"Participate | 2025 MTFP Capitol Tracker"}
+                 pageDescription={"How to participate in the 2025 Montana Legislature."}
+                 socialTitle={"Participate | 2025 MTFP Capitol Tracker"}
+                 socialDescription={"How to participate in the 2025 Montana Legislature."}
+            >
                 <h1 id="participation">Participating in the 2021 Legislature</h1>
                 <div className="note">Compiled by Amanda Eggert</div>
                 <ReactMarkdown>{text}</ReactMarkdown>

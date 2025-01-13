@@ -116,12 +116,18 @@ const Calendar = ({ onCalendarBills, committees }) => {
     });
 
     return (
-        <Layout>
+        <Layout
+            relativePath='/calendar'
+            pageTitle={"Calendar | 2025 MTFP Capitol Tracker"}
+            pageDescription={"The lawmakers, bills and votes making Montana's laws at the 2025 Legislature."}
+            socialTitle={"Calendar | 2025 MTFP Capitol Tracker"}
+            socialDescription={"The lawmakers, bills and votes making Montana's laws at the 2025 Legislature."}
+        >
             <Head>
                 <title>Calendar</title>
                 <meta name="description" content="What's coming up at the Legislature" />
             </Head>
-            <h1>What's Coming Up at the Legislature</h1>
+            <h1>What&apos;s Coming Up at the Legislature</h1>
 
             {/* Navigation for days */}
             <div>
