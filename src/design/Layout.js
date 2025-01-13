@@ -80,14 +80,14 @@ const Layout = ({
 
       </Head>
       {/* Google Analytics */}
-      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-PC1205XZ5F"></Script>
+      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-S068DPGXET"></Script>
       <Script id="ga">
         {`
         window.dataLayer = window.dataLayer || [];
         function gtag(){window.dataLayer.push(arguments);}
         gtag('js', new Date());
         
-        gtag('config', 'G-PC1205XZ5F'); // OLD ELEX GUIDE TAG -- TODO UPDATE
+        gtag('config', 'G-S068DPGXET');
       `}
       </Script>
       {/* Parsely information */}
