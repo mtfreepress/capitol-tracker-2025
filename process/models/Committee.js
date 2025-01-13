@@ -8,19 +8,20 @@ const ROLE_ORDER = ['Chair', 'Vice Chair', 'Member']
 export default class Committee {
     constructor({ schema, committeeBills, lawmakers, updateTime }) {
         const {
-            commiteeKey,
             displayName,
             usualDays,
             usualTime,
             chamber,
             type
-        } = schema
+        } = schema;
 
-        const beginningOfToday = new Date(updateTime).setUTCHours(7, 0, 0, 0) // 7 accounts for Montana vs GMT time
+        const commiteeKey = displayName.toLowerCase().replace(/\s+/g, '-'); // Dynamically generate the key
 
-        const committeeBillIds = committeeBills.map(b => b.data.identifier)
-        const committeeBillActions = committeeBills.map(b => b.actions.map(a => a.export())).flat() // includes non-committee actions on these bills
-        const committeeActions = committeeBillActions.filter(a => a.committee === commiteeKey)
+        const beginningOfToday = new Date(updateTime).setUTCHours(7, 0, 0, 0); // 7 accounts for Montana vs GMT time
+
+        const committeeBillIds = committeeBills.map(b => b.data.identifier);
+        const committeeBillActions = committeeBills.map(b => b.actions.map(a => a.export())).flat(); // includes non-committee actions on these bills
+        const committeeActions = committeeBillActions.filter(a => a.committee === commiteeKey);
 
         // // Sorting bills by where they are in committee process
 
