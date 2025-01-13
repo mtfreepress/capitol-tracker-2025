@@ -135,15 +135,6 @@ const overviewPageOutput = {
     aboveFoldText: homePageTopper,
 }
 
-const getLegislativeLeaderDetails = (lawmakers, title) => {
-    const lawmaker = lawmakers.find(l => l.data.leadershipTitle === title)
-    return {
-        role: title,
-        name: lawmaker.data.name,
-        party: lawmaker.data.party,
-        locale: lawmaker.data.locale,
-    }
-}
 const housePageOutput = new HousePage({
     text: housePageTopper,
     lawmakers,

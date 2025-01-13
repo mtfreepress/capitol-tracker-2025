@@ -72,11 +72,13 @@ const Governor = ({ bills }) => {
 
   return (
     <div>
-      <Layout>
-        <Head>
-          <title>Gov. Greg Gianforte - 2023 Legislative Bills</title>
-          <meta name="description" content="Vetos, signatures, and 2023 bills on the desk of Montana Gov. Greg Gianforte." />
-        </Head>
+      <Layout
+        relativePath='/governor'
+        pageTitle={"Gov. Greg Gianforte | 2025 MTFP Capitol Tracker"}
+        pageDescription={"Montana Gov. Greg Gianforte's 2025 bill signatures and vetoes."}
+        socialTitle={"Gov. Greg Gianforte | 2025 MTFP Capitol Tracker"}
+        socialDescription={"Montana Gov. Greg Gianforte's 2025 bill signatures and vetoes.."}
+      >
 
         <h1>Gov. Greg Gianforte</h1>
         <ReactMarkdown>{text}</ReactMarkdown>

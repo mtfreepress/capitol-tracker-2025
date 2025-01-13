@@ -1,6 +1,5 @@
 import React from 'react';
 import { css } from '@emotion/react';
-import Head from 'next/head';
 import Link from 'next/link';
 import ReactMarkdown from 'react-markdown';
 
@@ -37,11 +36,13 @@ const Senate = ({ senators, committees }) => {
   const { text, leadership } = senateData
 
   return (
-    <Layout>
-      <Head>
-        <title>Senate</title>
-        <meta name="description" content="Senators and committees of the Montana Senate" />
-      </Head>
+    <Layout
+      relativePath='/senate'
+      pageTitle={"Montana Senate | 2025 MTFP Capitol Tracker"}
+      pageDescription={"The senators and committees of the 2025 Montana Senate."}
+      socialTitle={"Montana Senate: 2025 MTFP Capitol Tracker"}
+      socialDescription={"The lawmakers and committees of the 2025 Montana Senate."}
+    >
       
       <h1>The Montana Senate</h1>
       <Link href="/senate#members">Senators ({senators.length})</Link> • <Link href="/senate#committees">Committees ({committees.length})</Link>

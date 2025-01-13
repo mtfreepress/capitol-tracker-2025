@@ -9,7 +9,7 @@ import Header from './Header'
 import Nav from './Nav'
 import Footer from './Footer'
 
-// import { metaData } from "@/config";
+import { metaData } from "@/config";
 
 // filler stuff until we can get metadata pipeline worked out
 const pageTitle = 'TK'
@@ -38,26 +38,60 @@ const navCss = css`
   z-index: 1000;
 `;
 
-const Layout = ({ children, location }) => {
+const Layout = ({ 
+  pageTitle,
+  pageDescription,
+  pageFeatureImage,
+  relativePath,
+  socialTitle,
+  socialDescription,
+  children, 
+  location 
+}) => {
+  const {
+    baseUrl,
+  } = metaData
+  const pageUrl = relativePath === '/' ? `${baseUrl}/` : `${baseUrl}/${relativePath}/`
+  const featureImage = pageFeatureImage || null
   return (
     <div>
       <Head>
         {/* TODO: Populate SEO stuff here -- adapt from elex guide */}
+        <meta charSet="utf-8" />
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
+        <meta name="image" content={featureImage} />
+        <link rel="canonical" href={pageUrl} />
+        {/* OpenGraph / FB */}
+        <meta property="og:url" content={pageUrl} />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:site_name" content="Montana Free Press" />
+        <meta property="og:title" content={socialTitle || pageTitle } />
+        <meta property="og:image" content={featureImage} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:type" content="website" />
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:creator" content="@mtfreepress" />
+        <meta name="twitter:title" content={socialTitle || pageTitle} />
+        <meta name="twitter:image" content={featureImage} />
+        <meta name="twitter:description" content={socialDescription || pageDescription} />
 
       </Head>
       {/* Google Analytics */}
-      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-PC1205XZ5F"></Script>
+      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-S068DPGXET"></Script>
       <Script id="ga">
         {`
         window.dataLayer = window.dataLayer || [];
         function gtag(){window.dataLayer.push(arguments);}
         gtag('js', new Date());
         
-        gtag('config', 'G-PC1205XZ5F'); // OLD ELEX GUIDE TAG -- TODO UPDATE
+        gtag('config', 'G-S068DPGXET');
       `}
       </Script>
       {/* Parsely information */}
-      <Script type="application/ld+json" id="parsely">
+      <Script id="parsely-jsonld" type="application/ld+json" strategy="afterInteractive">
         {`
           {
             "@context": "http://schema.org",
@@ -66,7 +100,7 @@ const Layout = ({ children, location }) => {
             "headline": "${pageTitle}",
             "url": "${pageUrl}",
             "thumbnailUrl": "${featureImage}",
-            "datePublished: "2024-05-07T20:38:48Z",
+            "datePublished: "2025-01-013T20:38:48Z",
             "dateModified": "${new Date().toISOString()}",
             "articleSection": "News apps",
             "author": [

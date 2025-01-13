@@ -20,7 +20,13 @@ const Index = ({ keyBills, billIndex, lawmakerIndex }) => {
 
   return (
     <div>
-      <Layout>
+      <Layout home
+          relativePath='/'
+          pageTitle={"2025 Montana Capitol Tracker | Montana Free Press"}
+          pageDescription={"The lawmakers, bills and votes making Montana's laws at the 2025 Legislature."}
+          socialTitle={"2025 Montana Free Press Capitol Tracker"}
+          socialDescription={"The lawmakers, bills and votes making Montana's laws at the 2025 Legislature."}
+        >
         {/* TODO: Rework "Key Bills" */}
         {/* <h2 id="key-bill-status">Key bill progress</h2>
         <div>

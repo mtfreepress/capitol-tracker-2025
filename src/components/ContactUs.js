@@ -20,7 +20,6 @@ const containerCss = css`
 `;
 
 const ContactUs = () => {
-    console.log(text)
     return (
         <div css={containerCss}>
             <ReactMarkdown>{text}</ReactMarkdown>

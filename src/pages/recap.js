@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { shortDateWithWeekday, billUrl } from '../lib/utils';
 
 import Layout from '../design/Layout';
-import Seo from '../components/SEO';
 import ContactUs from '../components/ContactUs';
 import NewsletterSignup from '../components/NewsletterSignup';
 
@@ -115,7 +114,13 @@ const Actions = () => {
   });
 
   return (
-    <Layout>
+    <Layout
+      relativePath='/recap'
+      pageTitle={"What's happened | 2025 MTFP Capitol Tracker"}
+      pageDescription={"The lawmakers, bills and votes making Montana's laws at the 2025 Legislature."}
+      socialTitle={"What's happened | 2025 MTFP Capitol Tracker"}
+      socialDescription={"The lawmakers, bills and votes making Montana's laws at the 2025 Legislature."}
+    >
       <h1>What lawmakers have done so far</h1>
       <p>Procedural action on bills under consideration by the 2023 Legislature.</p>
 
@@ -127,14 +132,6 @@ const Actions = () => {
 };
 
 export default Actions;
-
-export const Head = () => (
-  <Seo
-    title="Recap"
-    description="Procedural action on bills under consideration by the 2023 Legislature."
-    pageRelativeUrl="recap/"
-  />
-);
 
 const Action = ({ data }) => {
   const { bill, title, explanation } = data;

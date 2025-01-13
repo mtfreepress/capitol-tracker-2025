@@ -4,7 +4,6 @@ import { css } from '@emotion/react';
 import ReactMarkdown from 'react-markdown';
 
 import Layout from '../design/Layout';
-import Head from 'next/head';
 import TruncatedContainer from '../components/TruncatedContainer';
 import Roster from '../components/Roster';
 import ChamberLeadership from '../components/ChamberLeadership';
@@ -39,11 +38,13 @@ const House = ({ representatives, committees }) => {
 
   return (
     <div>
-      <Layout>
-        <Head>
-          <title>House</title>
-          <meta name="description" content="Representatives and committees of the Montana House" />
-        </Head>
+      <Layout
+        relativePath='/house'
+        pageTitle={"Montana House | 2025 MTFP Capitol Tracker"}
+        pageDescription={"The representatives and committees of the Montana House."}
+        socialTitle={"Montana House: 2025 MTFP Capitol Tracker"}
+        socialDescription={"The representatives and committees of the Montana House."}
+      >
 
         <h1>The Montana House</h1>
         <Link href="/house#members">Representatives ({representatives.length})</Link> {' • '}
