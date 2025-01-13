@@ -5,6 +5,8 @@ let actionsRaw = collectJsons('./inputs/bills/*/*-actions.json') || [];
 actionsRaw = Array.isArray(actionsRaw) && actionsRaw.some(Array.isArray) ? actionsRaw.flat() : actionsRaw;
 const votesRaw = collectJsons('./inputs/bills/*/*-votes.json') || [];
 
+writeJson('./src/data/TEST-actions-raw.json', actionsRaw);
+
 // group actions by bill name with desired structure
 const actionsGroupedByBill = actionsRaw.reduce((acc, action) => {
     const relatedVotes = votesRaw.filter(vote => vote.bill === action.bill);

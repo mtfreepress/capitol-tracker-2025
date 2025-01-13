@@ -23,6 +23,8 @@ Approach here — each of these input buckets has a fetch script that needs to 
 // Inputs from official bill tracking system
 const billsRaw = collectJsons('./inputs/bills/*/*-data.json')
 const actionsRaw = collectJsons('./inputs/bills/*/*-actions.json')
+// flatten actionsRaw to get rid of nested array issue
+const actionsFlat = Array.isArray(actionsRaw) && actionsRaw.some(Array.isArray) ? actionsRaw.flat() : actionsRaw;
 const votesRaw = collectJsons('./inputs/bills/*/*-votes.json')
 
 // Session-specific data -- mostly static; updated manually as necessary
@@ -69,7 +71,7 @@ const lawmakers = lawmakersRaw.map(lawmaker => new Lawmaker({
 
 const bills = billsRaw.map(bill => new Bill({
     bill,
-    actions: actionsRaw.filter(d => d.bill === bill.key),
+    actions: actionsFlat.filter(d => d.bill === bill.key),
     votes: votesRaw.filter(d => d.bill === bill.key),
     annotation: billAnnotations.find(d => d.Identifier === bill.key) || {},
     articles: articles.filter(d => d.billTags.includes(bill.key)),
@@ -114,8 +116,8 @@ lawmakers.forEach(lawmaker => {
     }
 })
 
-const calendarOutput = new CalendarPage({ actions, bills, updateTime }).export()
-bills.forEach(bill => bill.data.isOnCalendar = calendarOutput.billsOnCalendar.includes(bill.data.identifier))
+// const calendarOutput = new CalendarPage({ actions, bills, updateTime }).export()
+// bills.forEach(bill => bill.data.isOnCalendar = calendarOutput.billsOnCalendar.includes(bill.data.identifier))
 const recapOutput = new RecapPage({ actions, bills, updateTime }).export()
 
 const keyBillCategoryKeys = Array.from(new Set(billAnnotations.map(d => d.category))).filter(d => d !== null).filter(d => d !== undefined)
@@ -196,7 +198,7 @@ writeJson('./src/data/header.json', headerOutput)
 writeJson('./src/data/articles.json', articles)
 writeJson('./src/data/process-annotations.json', processNotes)
 writeJson('./src/data/bill-categories.json', keyBillCategoryList)
-writeJson('./src/data/calendar.json', calendarOutput)
+// writeJson('./src/data/calendar.json', calendarOutput)
 writeJson('./src/data/recap.json', recapOutput)
 writeJson('./src/data/participation.json', participationPageOutput)
 writeJson('./src/data/contact.json', contactComponentOutput)
