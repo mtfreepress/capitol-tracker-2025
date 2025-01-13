@@ -17,7 +17,3 @@
 
 # Run data process
 node  process/main.js
-
-# TEST:
-# TODO: Nuke this later
-# node process/actions-test.js
