@@ -23,6 +23,7 @@ Approach here — each of these input buckets has a fetch script that needs to 
 // Inputs from official bill tracking system
 const billsRaw = collectJsons('./inputs/bills/*/*-data.json')
 const actionsRaw = collectJsons('./inputs/bills/*/*-actions.json')
+const actionsFlat = Array.isArray(actionsRaw) && actionsRaw.some(Array.isArray) ? actionsRaw.flat() : actionsRaw;
 const votesRaw = collectJsons('./inputs/bills/*/*-votes.json')
 
 // Session-specific data -- mostly static; updated manually as necessary
@@ -69,7 +70,7 @@ const lawmakers = lawmakersRaw.map(lawmaker => new Lawmaker({
 
 const bills = billsRaw.map(bill => new Bill({
     bill,
-    actions: actionsRaw.filter(d => d.bill === bill.key),
+    actions: actionsFlat.filter(d => d.bill === bill.key),
     votes: votesRaw.filter(d => d.bill === bill.key),
     annotation: billAnnotations.find(d => d.Identifier === bill.key) || {},
     articles: articles.filter(d => d.billTags.includes(bill.key)),
