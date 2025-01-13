@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { css } from "@emotion/react";
 
 import Layout from '../../design/Layout.js';
-import Seo from '../../components/SEO';
 
 import { dateFormat } from '../../config/utils.js';
 import bills from '../../data/bills.json';
@@ -44,7 +43,6 @@ const AllBillsProgress = () => {
 
     return (
         <div>
-            <Seo title="All bills" />
             <Layout>
                 <h1>List of all bills</h1>
                 <table css={tableStyle}>
