@@ -379,10 +379,10 @@
                 "title": "Generally revise power and duties of agents",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Out of Committee",
-                    "step": "First chamber",
-                    "label": "Out of committee",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -4420,10 +4420,10 @@
                 "title": "Generally revise state auditor laws",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Through 2nd Reading",
-                    "step": "First chamber",
-                    "label": "Passed second reading vote",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -6081,10 +6081,10 @@
                 "title": "Staff Sergeant Arthur J Rambo memorial bridge",
                 "chamber": "senate",
                 "status": {
-                    "key": "In Second House--Through 2nd Reading",
-                    "step": "Second chamber",
-                    "label": "Passed 2nd reading vote",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -6878,10 +6878,10 @@
                 "title": "Extend application of bond validating act",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Through 2nd Reading",
-                    "step": "First chamber",
-                    "label": "Passed second reading vote",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -6939,10 +6939,10 @@
                 "title": "Generally revise laws related to the administration of MPERA",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Through 2nd Reading",
-                    "step": "First chamber",
-                    "label": "Passed second reading vote",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -8203,10 +8203,10 @@
                 "title": "Revise law related to petitions to initiate agency rulemaking",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Through 2nd Reading",
-                    "step": "First chamber",
-                    "label": "Passed second reading vote",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -10734,6 +10734,128 @@
         "articles": [],
         "imageSlug": "2025/jodee-etchart.jpg",
         "sponsoredBills": [
+            {
+                "key": "hb-199",
+                "identifier": "HB 199",
+                "title": "Increase physician assistant  membership on the board of medical examiners",
+                "chamber": "house",
+                "status": {
+                    "key": "In First House--Introduced",
+                    "step": "First chamber",
+                    "label": "Introduced",
+                    "status": "live",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "01/14/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2875?open_tab=bill",
+                "fiscalNoteUrl": "https://bills.legmt.gov/#/bill/2/LC2875?open_tab=fiscal",
+                "legalNoteUrl": "undefined",
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Jodee Etchart",
+                    "party": "R",
+                    "locale": "Billings",
+                    "district": "HD 51"
+                }
+            },
+            {
+                "key": "hb-198",
+                "identifier": "HB 198",
+                "title": "Revise laws that prohibit contracts that restrict practice of health care providers",
+                "chamber": "house",
+                "status": {
+                    "key": "In First House--Introduced",
+                    "step": "First chamber",
+                    "label": "Introduced",
+                    "status": "live",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "01/14/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2883?open_tab=bill",
+                "fiscalNoteUrl": "https://bills.legmt.gov/#/bill/2/LC2883?open_tab=fiscal",
+                "legalNoteUrl": "undefined",
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Jodee Etchart",
+                    "party": "R",
+                    "locale": "Billings",
+                    "district": "HD 51"
+                }
+            },
             {
                 "key": "hb-183",
                 "identifier": "HB 183",
@@ -15526,10 +15648,10 @@
                 "title": "Authorize county commissioners to initiate mandamus proceedings",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Through 2nd Reading",
-                    "step": "First chamber",
-                    "label": "Passed second reading vote",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -22916,6 +23038,128 @@
                 }
             },
             {
+                "key": "sb-149",
+                "identifier": "SB 149",
+                "title": "Revise emotional support animal laws",
+                "chamber": "senate",
+                "status": {
+                    "key": "In First House--Introduced",
+                    "step": "First chamber",
+                    "label": "Introduced",
+                    "status": "live",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "01/14/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2003?open_tab=bill",
+                "fiscalNoteUrl": "https://bills.legmt.gov/#/bill/2/LC2003?open_tab=fiscal",
+                "legalNoteUrl": "undefined",
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Denley Loge",
+                    "party": "R",
+                    "locale": "St Regis",
+                    "district": "SD 45"
+                }
+            },
+            {
+                "key": "sb-148",
+                "identifier": "SB 148",
+                "title": "Allow landowners to designate licenses to persons with disabilities",
+                "chamber": "senate",
+                "status": {
+                    "key": "In First House--Introduced",
+                    "step": "First chamber",
+                    "label": "Introduced",
+                    "status": "live",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "01/14/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1994?open_tab=bill",
+                "fiscalNoteUrl": "https://bills.legmt.gov/#/bill/2/LC1994?open_tab=fiscal",
+                "legalNoteUrl": "undefined",
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Denley Loge",
+                    "party": "R",
+                    "locale": "St Regis",
+                    "district": "SD 45"
+                }
+            },
+            {
                 "key": "sb-111",
                 "identifier": "SB 111",
                 "title": "Revising laws related to green lights on snow removal equipment",
@@ -23179,10 +23423,10 @@
                 "title": "Generally revise laws related to crimes against children",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Out of Committee",
-                    "step": "First chamber",
-                    "label": "Out of committee",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -24811,10 +25055,10 @@
                 "title": "Provide protections to parents and pregnant women with substance use disorder",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Out of Committee",
-                    "step": "First chamber",
-                    "label": "Out of committee",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -26830,10 +27074,10 @@
                 "title": "Repeal law disallowing parties from contributing to judicial candidates",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Through 2nd Reading",
-                    "step": "First chamber",
-                    "label": "Passed second reading vote",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -30331,10 +30575,10 @@
                 "title": "Adopt pet insurance model act",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Out of Committee",
-                    "step": "First chamber",
-                    "label": "Out of committee",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -30642,10 +30886,10 @@
                 "title": "Revising laws related to possession and validation of licenses, permits, or tags",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Out of Committee",
-                    "step": "First chamber",
-                    "label": "Out of committee",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -30703,10 +30947,10 @@
                 "title": "Revise inter-entity loan process",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Through 2nd Reading",
-                    "step": "First chamber",
-                    "label": "Passed second reading vote",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -34373,6 +34617,67 @@
                 }
             },
             {
+                "key": "hb-200",
+                "identifier": "HB 200",
+                "title": "Provide for increase in total MEDIA act film tax credits",
+                "chamber": "house",
+                "status": {
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "01/14/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3553?open_tab=bill",
+                "fiscalNoteUrl": "https://bills.legmt.gov/#/bill/2/LC3553?open_tab=fiscal",
+                "legalNoteUrl": "undefined",
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Kerri Seekins-Crowe",
+                    "party": "R",
+                    "locale": "Billings",
+                    "district": "HD 39"
+                }
+            },
+            {
                 "key": "hb-131",
                 "identifier": "HB 131",
                 "title": "Revising the duration of unemployment insurance benefits",
@@ -34439,10 +34744,10 @@
                 "title": "Provide privacy in certain restrooms, changing rooms, and sleeping quarters",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Out of Committee",
-                    "step": "First chamber",
-                    "label": "Out of committee",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
