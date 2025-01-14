@@ -11475,10 +11475,10 @@
                 "title": "Revise law related to damage-based muskrat and beaver harvesting",
                 "chamber": "house",
                 "status": {
-                    "key": "Probably Dead",
-                    "label": "",
-                    "step": "Failed",
-                    "status": "stalled",
+                    "key": "In First House--Through 3rd Reading",
+                    "step": "First chamber",
+                    "label": "Passed chamber",
+                    "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -11496,14 +11496,14 @@
                     },
                     {
                         "step": "first chamber",
-                        "status": "current",
-                        "statusLabel": "Passed preliminary floor vote",
-                        "statusDate": "01/13/2025"
+                        "status": "passed",
+                        "statusLabel": "Passed House",
+                        "statusDate": "01/14/2025"
                     },
                     {
                         "step": "second chamber",
-                        "status": "future",
-                        "statusLabel": null,
+                        "status": "current",
+                        "statusLabel": "Pending",
                         "statusDate": null
                     },
                     {
@@ -11536,10 +11536,10 @@
                 "title": "Designate quail as upland game bird",
                 "chamber": "house",
                 "status": {
-                    "key": "Probably Dead",
-                    "label": "",
-                    "step": "Failed",
-                    "status": "stalled",
+                    "key": "In First House--Through 3rd Reading",
+                    "step": "First chamber",
+                    "label": "Passed chamber",
+                    "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -11557,14 +11557,14 @@
                     },
                     {
                         "step": "first chamber",
-                        "status": "current",
-                        "statusLabel": "Passed preliminary floor vote",
-                        "statusDate": "01/13/2025"
+                        "status": "passed",
+                        "statusLabel": "Passed House",
+                        "statusDate": "01/14/2025"
                     },
                     {
                         "step": "second chamber",
-                        "status": "future",
-                        "statusLabel": null,
+                        "status": "current",
+                        "statusLabel": "Pending",
                         "statusDate": null
                     },
                     {
@@ -30825,10 +30825,10 @@
                 "title": "Repeal DLI commissioner signature requirement",
                 "chamber": "house",
                 "status": {
-                    "key": "Probably Dead",
-                    "label": "",
-                    "step": "Failed",
-                    "status": "stalled",
+                    "key": "In First House--Through 3rd Reading",
+                    "step": "First chamber",
+                    "label": "Passed chamber",
+                    "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -30846,14 +30846,14 @@
                     },
                     {
                         "step": "first chamber",
-                        "status": "current",
-                        "statusLabel": "Passed preliminary floor vote",
-                        "statusDate": "01/13/2025"
+                        "status": "passed",
+                        "statusLabel": "Passed House",
+                        "statusDate": "01/14/2025"
                     },
                     {
                         "step": "second chamber",
-                        "status": "future",
-                        "statusLabel": null,
+                        "status": "current",
+                        "statusLabel": "Pending",
                         "statusDate": null
                     },
                     {
@@ -31999,10 +31999,10 @@
                 "title": "Allow audio and video recording of public events",
                 "chamber": "house",
                 "status": {
-                    "key": "Probably Dead",
-                    "label": "",
-                    "step": "Failed",
-                    "status": "stalled",
+                    "key": "In First House--Through 3rd Reading",
+                    "step": "First chamber",
+                    "label": "Passed chamber",
+                    "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -32020,14 +32020,14 @@
                     },
                     {
                         "step": "first chamber",
-                        "status": "current",
-                        "statusLabel": "Passed preliminary floor vote",
-                        "statusDate": "01/13/2025"
+                        "status": "passed",
+                        "statusLabel": "Passed House",
+                        "statusDate": "01/14/2025"
                     },
                     {
                         "step": "second chamber",
-                        "status": "future",
-                        "statusLabel": null,
+                        "status": "current",
+                        "statusLabel": "Pending",
                         "statusDate": null
                     },
                     {
@@ -40329,6 +40329,67 @@
         "imageSlug": "2025/jonathan-windy-boy.jpg",
         "sponsoredBills": [
             {
+                "key": "sb-147",
+                "identifier": "SB 147",
+                "title": "Generally revise Montana Indian child welfare laws",
+                "chamber": "senate",
+                "status": {
+                    "key": "In First House--Introduced",
+                    "step": "First chamber",
+                    "label": "Introduced",
+                    "status": "live",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "01/14/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1347?open_tab=bill",
+                "fiscalNoteUrl": "https://bills.legmt.gov/#/bill/2/LC1347?open_tab=fiscal",
+                "legalNoteUrl": "undefined",
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Jonathan Windy Boy",
+                    "party": "D",
+                    "locale": "Box Elder",
+                    "district": "SD 16"
+                }
+            },
+            {
                 "key": "sb-105",
                 "identifier": "SB 105",
                 "title": "Generally revise election laws related to electioneering at polling locations",
@@ -41657,10 +41718,10 @@
                 "title": "Revise state building energy conservation program",
                 "chamber": "house",
                 "status": {
-                    "key": "Probably Dead",
-                    "label": "",
-                    "step": "Failed",
-                    "status": "stalled",
+                    "key": "In First House--Through 3rd Reading",
+                    "step": "First chamber",
+                    "label": "Passed chamber",
+                    "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -41678,14 +41739,14 @@
                     },
                     {
                         "step": "first chamber",
-                        "status": "current",
-                        "statusLabel": "Passed preliminary floor vote",
-                        "statusDate": "01/13/2025"
+                        "status": "passed",
+                        "statusLabel": "Passed House",
+                        "statusDate": "01/14/2025"
                     },
                     {
                         "step": "second chamber",
-                        "status": "future",
-                        "statusLabel": null,
+                        "status": "current",
+                        "statusLabel": "Pending",
                         "statusDate": null
                     },
                     {
