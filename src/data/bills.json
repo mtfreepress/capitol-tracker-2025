@@ -333,7 +333,7 @@
         "vetoMemoUrl": null,
         "articles": [],
         "numArticles": 0,
-        "isOnCalendar": true
+        "isOnCalendar": false
     },
     {
         "key": "sj-4",
@@ -1528,10 +1528,10 @@
         "lcIdentifier": "LC0241",
         "type": "senate bill",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
+            "key": "In First House Committee--Nontabled",
+            "step": "First chamber",
+            "label": "In committee",
+            "status": "live",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -2882,7 +2882,7 @@
         "vetoMemoUrl": null,
         "articles": [],
         "numArticles": 0,
-        "isOnCalendar": true
+        "isOnCalendar": false
     },
     {
         "key": "sb-73",
@@ -5958,10 +5958,10 @@
         "lcIdentifier": "LC0612",
         "type": "senate bill",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
+            "key": "In First House Committee--Nontabled",
+            "step": "First chamber",
+            "label": "In committee",
+            "status": "live",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -6511,7 +6511,7 @@
         "vetoMemoUrl": null,
         "articles": [],
         "numArticles": 0,
-        "isOnCalendar": true
+        "isOnCalendar": false
     },
     {
         "key": "sb-31",
@@ -8117,6 +8117,88 @@
         "isOnCalendar": false
     },
     {
+        "key": "sb-135",
+        "identifier": "SB 135",
+        "chamber": "senate",
+        "title": "Eliminate termination of chemical dependency voucher program",
+        "session": "2",
+        "lcIdentifier": "LC2097",
+        "type": "senate bill",
+        "status": {
+            "key": "In First House--Introduced",
+            "step": "First chamber",
+            "label": "Introduced",
+            "status": "live",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "passed",
+                "statusLabel": "Introduced",
+                "statusDate": "01/13/2025"
+            },
+            {
+                "step": "first committee",
+                "status": "current",
+                "statusLabel": "Pending",
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Mike Yakawich",
+            "party": "R",
+            "locale": "Billings",
+            "district": "SD 24"
+        },
+        "requestor": "Mike Yakawich",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "SIMPLE",
+        "subjects": [
+            "Health (see also: Health Care Services; Safety)",
+            "Housing",
+            "Rule Making",
+            "Social Services"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2097?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2097?open_tab=bill",
+        "fiscalNoteUrl": "https://bills.legmt.gov/#/bill/2/LC2097?open_tab=fiscal",
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2097?open_tab=amend",
+        "legalNoteUrl": "undefined",
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0,
+        "isOnCalendar": false
+    },
+    {
         "key": "sb-134",
         "identifier": "SB 134",
         "chamber": "senate",
@@ -8769,10 +8851,10 @@
         "lcIdentifier": "LC0652",
         "type": "senate bill",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
+            "key": "In First House Committee--Nontabled",
+            "step": "First chamber",
+            "label": "In committee",
+            "status": "live",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -11865,10 +11947,10 @@
         "lcIdentifier": "LC0172",
         "type": "house bill",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
+            "key": "In First House Committee--Nontabled",
+            "step": "First chamber",
+            "label": "In committee",
+            "status": "live",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -13385,7 +13467,7 @@
         "vetoMemoUrl": null,
         "articles": [],
         "numArticles": 0,
-        "isOnCalendar": true
+        "isOnCalendar": false
     },
     {
         "key": "hb-8",
@@ -13468,7 +13550,7 @@
         "vetoMemoUrl": null,
         "articles": [],
         "numArticles": 0,
-        "isOnCalendar": true
+        "isOnCalendar": false
     },
     {
         "key": "hb-79",
@@ -13549,7 +13631,7 @@
         "vetoMemoUrl": null,
         "articles": [],
         "numArticles": 0,
-        "isOnCalendar": true
+        "isOnCalendar": false
     },
     {
         "key": "hb-78",
@@ -13951,7 +14033,7 @@
         "vetoMemoUrl": null,
         "articles": [],
         "numArticles": 0,
-        "isOnCalendar": true
+        "isOnCalendar": false
     },
     {
         "key": "hb-73",
@@ -14424,7 +14506,7 @@
         "vetoMemoUrl": null,
         "articles": [],
         "numArticles": 0,
-        "isOnCalendar": true
+        "isOnCalendar": false
     },
     {
         "key": "hb-68",
@@ -14825,7 +14907,7 @@
         "vetoMemoUrl": null,
         "articles": [],
         "numArticles": 0,
-        "isOnCalendar": true
+        "isOnCalendar": false
     },
     {
         "key": "hb-63",
@@ -14984,7 +15066,7 @@
         "vetoMemoUrl": null,
         "articles": [],
         "numArticles": 0,
-        "isOnCalendar": true
+        "isOnCalendar": false
     },
     {
         "key": "hb-61",
@@ -15307,7 +15389,7 @@
         "vetoMemoUrl": null,
         "articles": [],
         "numArticles": 0,
-        "isOnCalendar": true
+        "isOnCalendar": false
     },
     {
         "key": "hb-58",
@@ -17161,7 +17243,7 @@
         "vetoMemoUrl": null,
         "articles": [],
         "numArticles": 0,
-        "isOnCalendar": true
+        "isOnCalendar": false
     },
     {
         "key": "hb-37",
@@ -18467,9 +18549,9 @@
         "lcIdentifier": "LC0285",
         "type": "house bill",
         "status": {
-            "key": "In First House--Through 3rd Reading",
-            "step": "First chamber",
-            "label": "Passed chamber",
+            "key": "Transmitted to Second House",
+            "step": "Second chamber",
+            "label": "Transmitted",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -18537,7 +18619,7 @@
         "vetoMemoUrl": null,
         "articles": [],
         "numArticles": 0,
-        "isOnCalendar": true
+        "isOnCalendar": false
     },
     {
         "key": "hb-21",
@@ -18789,6 +18871,86 @@
         "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0084?open_tab=bill",
         "fiscalNoteUrl": "https://bills.legmt.gov/#/bill/2/LC0084?open_tab=fiscal",
         "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0084?open_tab=amend",
+        "legalNoteUrl": "undefined",
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0,
+        "isOnCalendar": false
+    },
+    {
+        "key": "hb-187",
+        "identifier": "HB 187",
+        "chamber": "house",
+        "title": "Revise election laws to remove continuous tabulation requirement",
+        "session": "2",
+        "lcIdentifier": "LC2114",
+        "type": "house bill",
+        "status": {
+            "key": "In First House--Introduced",
+            "step": "First chamber",
+            "label": "Introduced",
+            "status": "live",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "passed",
+                "statusLabel": "Introduced",
+                "statusDate": "01/13/2025"
+            },
+            {
+                "step": "first committee",
+                "status": "current",
+                "statusLabel": "Pending",
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Bob Carter",
+            "party": "D",
+            "locale": "Missoula",
+            "district": "HD 96"
+        },
+        "requestor": "Bob Carter",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "SIMPLE",
+        "subjects": [
+            "Elections  (see also: Ballot Issues)",
+            "Counties  (see also: Local Government)"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2114?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2114?open_tab=bill",
+        "fiscalNoteUrl": "https://bills.legmt.gov/#/bill/2/LC2114?open_tab=fiscal",
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2114?open_tab=amend",
         "legalNoteUrl": "undefined",
         "vetoMemoUrl": null,
         "articles": [],
@@ -19692,7 +19854,7 @@
         "vetoMemoUrl": null,
         "articles": [],
         "numArticles": 0,
-        "isOnCalendar": true
+        "isOnCalendar": false
     },
     {
         "key": "hb-176",
@@ -20171,7 +20333,7 @@
         "vetoMemoUrl": null,
         "articles": [],
         "numArticles": 0,
-        "isOnCalendar": true
+        "isOnCalendar": false
     },
     {
         "key": "hb-170",
@@ -20263,9 +20425,9 @@
         "lcIdentifier": "LC0079",
         "type": "house bill",
         "status": {
-            "key": "In First House--Through 3rd Reading",
-            "step": "First chamber",
-            "label": "Passed chamber",
+            "key": "Transmitted to Second House",
+            "step": "Second chamber",
+            "label": "Transmitted",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -20334,7 +20496,7 @@
         "vetoMemoUrl": null,
         "articles": [],
         "numArticles": 0,
-        "isOnCalendar": true
+        "isOnCalendar": false
     },
     {
         "key": "hb-169",
@@ -20413,7 +20575,7 @@
         "vetoMemoUrl": null,
         "articles": [],
         "numArticles": 0,
-        "isOnCalendar": true
+        "isOnCalendar": false
     },
     {
         "key": "hb-168",
@@ -21153,9 +21315,9 @@
         "lcIdentifier": "LC0076",
         "type": "house bill",
         "status": {
-            "key": "In First House--Through 3rd Reading",
-            "step": "First chamber",
-            "label": "Passed chamber",
+            "key": "Transmitted to Second House",
+            "step": "Second chamber",
+            "label": "Transmitted",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -21227,7 +21389,7 @@
         "vetoMemoUrl": null,
         "articles": [],
         "numArticles": 0,
-        "isOnCalendar": true
+        "isOnCalendar": false
     },
     {
         "key": "hb-159",
@@ -22041,7 +22203,7 @@
         "vetoMemoUrl": null,
         "articles": [],
         "numArticles": 0,
-        "isOnCalendar": true
+        "isOnCalendar": false
     },
     {
         "key": "hb-15",
@@ -22365,7 +22527,7 @@
         "vetoMemoUrl": null,
         "articles": [],
         "numArticles": 0,
-        "isOnCalendar": true
+        "isOnCalendar": false
     },
     {
         "key": "hb-146",
@@ -23168,7 +23330,7 @@
         "vetoMemoUrl": null,
         "articles": [],
         "numArticles": 0,
-        "isOnCalendar": true
+        "isOnCalendar": false
     },
     {
         "key": "hb-136",
@@ -23247,7 +23409,7 @@
         "vetoMemoUrl": null,
         "articles": [],
         "numArticles": 0,
-        "isOnCalendar": true
+        "isOnCalendar": false
     },
     {
         "key": "hb-135",
@@ -23328,7 +23490,7 @@
         "vetoMemoUrl": null,
         "articles": [],
         "numArticles": 0,
-        "isOnCalendar": true
+        "isOnCalendar": false
     },
     {
         "key": "hb-134",
@@ -23729,7 +23891,7 @@
         "vetoMemoUrl": null,
         "articles": [],
         "numArticles": 0,
-        "isOnCalendar": true
+        "isOnCalendar": false
     },
     {
         "key": "hb-13",
@@ -24056,7 +24218,7 @@
         "vetoMemoUrl": null,
         "articles": [],
         "numArticles": 0,
-        "isOnCalendar": true
+        "isOnCalendar": false
     },
     {
         "key": "hb-126",
@@ -25585,7 +25747,7 @@
         "vetoMemoUrl": null,
         "articles": [],
         "numArticles": 0,
-        "isOnCalendar": true
+        "isOnCalendar": false
     },
     {
         "key": "hb-109",
@@ -26483,8 +26645,8 @@
         "lcIdentifier": "LC1374",
         "type": "budget bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
-            "step": "First chamber",
+            "key": "In Second House Committee--Nontabled",
+            "step": "Second chamber",
             "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
