@@ -3232,14 +3232,14 @@
                     },
                     {
                         "step": "first committee",
-                        "status": "current",
-                        "statusLabel": "Pending",
-                        "statusDate": null
+                        "status": "passed",
+                        "statusLabel": "Advanced",
+                        "statusDate": "01/15/2025"
                     },
                     {
                         "step": "first chamber",
-                        "status": "future",
-                        "statusLabel": null,
+                        "status": "current",
+                        "statusLabel": "Pending",
                         "statusDate": null
                     },
                     {
@@ -26879,10 +26879,10 @@
                 "title": "Increase MUS-RP supplemental contribution to TRS",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House Committee--Nontabled",
-                    "step": "First chamber",
-                    "label": "In committee",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -28247,6 +28247,67 @@
         "articles": [],
         "imageSlug": "2025/bill-mercer.jpg",
         "sponsoredBills": [
+            {
+                "key": "hb-228",
+                "identifier": "HB 228",
+                "title": "Revised requirements for the reporting of actual costs for legislation with projected fiscal impacts",
+                "chamber": "house",
+                "status": {
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "01/15/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3417?open_tab=bill",
+                "fiscalNoteUrl": "https://bills.legmt.gov/#/bill/2/LC3417?open_tab=fiscal",
+                "legalNoteUrl": "undefined",
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Bill Mercer",
+                    "party": "R",
+                    "locale": "Billings",
+                    "district": "HD 52"
+                }
+            },
             {
                 "key": "hb-195",
                 "identifier": "HB 195",
@@ -45220,6 +45281,67 @@
                 ],
                 "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0245?open_tab=bill",
                 "fiscalNoteUrl": "https://bills.legmt.gov/#/bill/2/LC0245?open_tab=fiscal",
+                "legalNoteUrl": "undefined",
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Daniel Zolnikov",
+                    "party": "R",
+                    "locale": "Billings",
+                    "district": "SD 22"
+                }
+            },
+            {
+                "key": "sb-163",
+                "identifier": "SB 163",
+                "title": "Generally revise privacy laws related to biometric, genetic, and neural data",
+                "chamber": "senate",
+                "status": {
+                    "key": "In First House--Introduced",
+                    "step": "First chamber",
+                    "label": "Introduced",
+                    "status": "live",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "01/15/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0005?open_tab=bill",
+                "fiscalNoteUrl": "https://bills.legmt.gov/#/bill/2/LC0005?open_tab=fiscal",
                 "legalNoteUrl": "undefined",
                 "numArticles": 0,
                 "sponsor": {
