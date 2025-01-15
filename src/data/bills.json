@@ -12135,7 +12135,7 @@
         "vetoMemoUrl": null,
         "articles": [],
         "numArticles": 0,
-        "isOnCalendar": true
+        "isOnCalendar": false
     },
     {
         "key": "sb-106",
@@ -12923,6 +12923,73 @@
         "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2183?open_tab=bill",
         "fiscalNoteUrl": "https://bills.legmt.gov/#/bill/2/LC2183?open_tab=fiscal",
         "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2183?open_tab=amend",
+        "legalNoteUrl": "undefined",
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0,
+        "isOnCalendar": false
+    },
+    {
+        "key": "hj-5",
+        "identifier": "HJ 5",
+        "chamber": "house",
+        "title": "Resolution for Article V of US Constitution convention of states",
+        "session": "2",
+        "lcIdentifier": "LC1603",
+        "type": "joint resolution",
+        "status": {
+            "key": "In First House--Introduced",
+            "step": "First chamber",
+            "label": "Introduced",
+            "status": "live",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "passed",
+                "statusLabel": "Introduced",
+                "statusDate": "01/15/2025"
+            },
+            {
+                "step": "first committee",
+                "status": "current",
+                "statusLabel": "Pending",
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Shane Klakken",
+            "party": "R",
+            "locale": "Grass Range",
+            "district": "HD 37"
+        },
+        "requestor": "Shane Klakken",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "SIMPLE",
+        "subjects": [
+            "Federal Government"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1603?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1603?open_tab=bill",
+        "fiscalNoteUrl": "https://bills.legmt.gov/#/bill/2/LC1603?open_tab=fiscal",
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1603?open_tab=amend",
         "legalNoteUrl": "undefined",
         "vetoMemoUrl": null,
         "articles": [],
@@ -14256,10 +14323,10 @@
         "lcIdentifier": "LC0092",
         "type": "house bill",
         "status": {
-            "key": "In First House--Out of Committee",
-            "step": "First chamber",
-            "label": "Out of committee",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
