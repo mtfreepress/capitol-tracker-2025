@@ -4163,11 +4163,11 @@
         "lcIdentifier": "LC0193",
         "type": "senate bill",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
-            "statusAtSessionEnd": "failed"
+            "key": "Passed By Legislature--Enrolling and Final Preparation Process",
+            "step": "Through Legislature",
+            "label": "Passed both chambers",
+            "status": "live",
+            "statusAtSessionEnd": "pending, passed legislature"
         },
         "progress": [
             {
@@ -4190,9 +4190,9 @@
             },
             {
                 "step": "second chamber",
-                "status": "current",
-                "statusLabel": "Passed preliminary vote",
-                "statusDate": "01/14/2025"
+                "status": "passed",
+                "statusLabel": "Passed House",
+                "statusDate": "01/15/2025"
             },
             {
                 "step": "reconciliation",
@@ -4202,8 +4202,8 @@
             },
             {
                 "step": "governor",
-                "status": "future",
-                "statusLabel": null,
+                "status": "current",
+                "statusLabel": "Pending",
                 "statusDate": null
             }
         ],
@@ -14413,9 +14413,9 @@
         "lcIdentifier": "LC0203",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
+            "key": "In First House--Out of Committee",
             "step": "First chamber",
-            "label": "In committee",
+            "label": "Out of committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -16582,10 +16582,10 @@
         "lcIdentifier": "LC0113",
         "type": "house bill",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
+            "key": "In First House--Through 3rd Reading",
+            "step": "First chamber",
+            "label": "Passed chamber",
+            "status": "live",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -16603,14 +16603,14 @@
             },
             {
                 "step": "first chamber",
-                "status": "current",
-                "statusLabel": "Passed preliminary floor vote",
-                "statusDate": "01/14/2025"
+                "status": "passed",
+                "statusLabel": "Passed House",
+                "statusDate": "01/15/2025"
             },
             {
                 "step": "second chamber",
-                "status": "future",
-                "statusLabel": null,
+                "status": "current",
+                "statusLabel": "Pending",
                 "statusDate": null
             },
             {
@@ -16983,10 +16983,10 @@
         "lcIdentifier": "LC0275",
         "type": "house bill",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
+            "key": "In First House--Through 3rd Reading",
+            "step": "First chamber",
+            "label": "Passed chamber",
+            "status": "live",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -17004,14 +17004,14 @@
             },
             {
                 "step": "first chamber",
-                "status": "current",
-                "statusLabel": "Passed preliminary floor vote",
-                "statusDate": "01/14/2025"
+                "status": "passed",
+                "statusLabel": "Passed House",
+                "statusDate": "01/15/2025"
             },
             {
                 "step": "second chamber",
-                "status": "future",
-                "statusLabel": null,
+                "status": "current",
+                "statusLabel": "Pending",
                 "statusDate": null
             },
             {
@@ -18991,10 +18991,10 @@
         "lcIdentifier": "LC0563",
         "type": "house bill",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
+            "key": "In First House--Out of Committee",
+            "step": "First chamber",
+            "label": "Out of committee",
+            "status": "live",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -19319,9 +19319,9 @@
         "lcIdentifier": "LC0234",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
+            "key": "In First House--Out of Committee",
             "step": "First chamber",
-            "label": "In committee",
+            "label": "Out of committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -19560,10 +19560,10 @@
         "lcIdentifier": "LC0282",
         "type": "house bill",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
+            "key": "In First House--Out of Committee",
+            "step": "First chamber",
+            "label": "Out of committee",
+            "status": "live",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -20606,6 +20606,88 @@
         "isOnCalendar": false
     },
     {
+        "key": "hb-220",
+        "identifier": "HB 220",
+        "chamber": "house",
+        "title": "Provide for a child tax credit",
+        "session": "2",
+        "lcIdentifier": "LC2036",
+        "type": "house bill",
+        "status": {
+            "key": "In First House--Introduced",
+            "step": "First chamber",
+            "label": "Introduced",
+            "status": "live",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "passed",
+                "statusLabel": "Introduced",
+                "statusDate": "01/15/2025"
+            },
+            {
+                "step": "first committee",
+                "status": "current",
+                "statusLabel": "Pending",
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Mary Caferro",
+            "party": "D",
+            "locale": "Helena",
+            "district": "HD 81"
+        },
+        "requestor": "Mary Caferro",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "SIMPLE",
+        "subjects": [
+            "Taxation--Individual Income",
+            "Minors  (see also: Family Law)",
+            "Revenue, State",
+            "Taxation (Generally)"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2036?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2036?open_tab=bill",
+        "fiscalNoteUrl": "https://bills.legmt.gov/#/bill/2/LC2036?open_tab=fiscal",
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2036?open_tab=amend",
+        "legalNoteUrl": "undefined",
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0,
+        "isOnCalendar": false
+    },
+    {
         "key": "hb-22",
         "identifier": "HB 22",
         "chamber": "house",
@@ -20680,6 +20762,85 @@
         "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0285?open_tab=bill",
         "fiscalNoteUrl": "https://bills.legmt.gov/#/bill/2/LC0285?open_tab=fiscal",
         "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0285?open_tab=amend",
+        "legalNoteUrl": "undefined",
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0,
+        "isOnCalendar": false
+    },
+    {
+        "key": "hb-219",
+        "identifier": "HB 219",
+        "chamber": "house",
+        "title": "Generally revise hunting laws related to unlawful contest or prize",
+        "session": "2",
+        "lcIdentifier": "LC3065",
+        "type": "house bill",
+        "status": {
+            "key": "In First House--Introduced",
+            "step": "First chamber",
+            "label": "Introduced",
+            "status": "live",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "passed",
+                "statusLabel": "Introduced",
+                "statusDate": "01/15/2025"
+            },
+            {
+                "step": "first committee",
+                "status": "current",
+                "statusLabel": "Pending",
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Lukas Schubert",
+            "party": "R",
+            "locale": "Kalispell",
+            "district": "HD 8"
+        },
+        "requestor": "Lukas Schubert",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "SIMPLE",
+        "subjects": [
+            "Fish and Wildlife"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3065?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3065?open_tab=bill",
+        "fiscalNoteUrl": "https://bills.legmt.gov/#/bill/2/LC3065?open_tab=fiscal",
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3065?open_tab=amend",
         "legalNoteUrl": "undefined",
         "vetoMemoUrl": null,
         "articles": [],
@@ -24107,9 +24268,9 @@
         "lcIdentifier": "LC0080",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
+            "key": "In First House--Out of Committee",
             "step": "First chamber",
-            "label": "In committee",
+            "label": "Out of committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -30321,9 +30482,9 @@
         "lcIdentifier": "LC0101",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
+            "key": "In First House--Out of Committee",
             "step": "First chamber",
-            "label": "In committee",
+            "label": "Out of committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },

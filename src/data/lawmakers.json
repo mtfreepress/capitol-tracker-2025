@@ -3765,10 +3765,10 @@
                 "title": "Revise law to establish permanent disaster resilience fund",
                 "chamber": "house",
                 "status": {
-                    "key": "Probably Dead",
-                    "label": "",
-                    "step": "Failed",
-                    "status": "stalled",
+                    "key": "In First House--Out of Committee",
+                    "step": "First chamber",
+                    "label": "Out of committee",
+                    "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -4298,9 +4298,9 @@
                 "title": "Generally revise laws related to alcohol regulation",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House Committee--Nontabled",
+                    "key": "In First House--Out of Committee",
                     "step": "First chamber",
-                    "label": "In committee",
+                    "label": "Out of committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -5152,7 +5152,69 @@
         ],
         "articles": [],
         "imageSlug": "2025/mary-caferro.jpg",
-        "sponsoredBills": [],
+        "sponsoredBills": [
+            {
+                "key": "hb-220",
+                "identifier": "HB 220",
+                "title": "Provide for a child tax credit",
+                "chamber": "house",
+                "status": {
+                    "key": "In First House--Introduced",
+                    "step": "First chamber",
+                    "label": "Introduced",
+                    "status": "live",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "01/15/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2036?open_tab=bill",
+                "fiscalNoteUrl": "https://bills.legmt.gov/#/bill/2/LC2036?open_tab=fiscal",
+                "legalNoteUrl": "undefined",
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Mary Caferro",
+                    "party": "D",
+                    "locale": "Helena",
+                    "district": "HD 81"
+                }
+            }
+        ],
         "votingSummary": {
             "averageAbsences": null,
             "averageVotesOnWinningSideGop": null,
@@ -6265,11 +6327,11 @@
                 "title": "Staff Sergeant Arthur J Rambo memorial bridge",
                 "chamber": "senate",
                 "status": {
-                    "key": "Probably Dead",
-                    "label": "",
-                    "step": "Failed",
-                    "status": "stalled",
-                    "statusAtSessionEnd": "failed"
+                    "key": "Passed By Legislature--Enrolling and Final Preparation Process",
+                    "step": "Through Legislature",
+                    "label": "Passed both chambers",
+                    "status": "live",
+                    "statusAtSessionEnd": "pending, passed legislature"
                 },
                 "progress": [
                     {
@@ -6292,9 +6354,9 @@
                     },
                     {
                         "step": "second chamber",
-                        "status": "current",
-                        "statusLabel": "Passed preliminary vote",
-                        "statusDate": "01/14/2025"
+                        "status": "passed",
+                        "statusLabel": "Passed House",
+                        "statusDate": "01/15/2025"
                     },
                     {
                         "step": "reconciliation",
@@ -6304,8 +6366,8 @@
                     },
                     {
                         "step": "governor",
-                        "status": "future",
-                        "statusLabel": null,
+                        "status": "current",
+                        "statusLabel": "Pending",
                         "statusDate": null
                     }
                 ],
@@ -7062,10 +7124,10 @@
                 "title": "Extend application of bond validating act",
                 "chamber": "house",
                 "status": {
-                    "key": "Probably Dead",
-                    "label": "",
-                    "step": "Failed",
-                    "status": "stalled",
+                    "key": "In First House--Through 3rd Reading",
+                    "step": "First chamber",
+                    "label": "Passed chamber",
+                    "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -7083,14 +7145,14 @@
                     },
                     {
                         "step": "first chamber",
-                        "status": "current",
-                        "statusLabel": "Passed preliminary floor vote",
-                        "statusDate": "01/14/2025"
+                        "status": "passed",
+                        "statusLabel": "Passed House",
+                        "statusDate": "01/15/2025"
                     },
                     {
                         "step": "second chamber",
-                        "status": "future",
-                        "statusLabel": null,
+                        "status": "current",
+                        "statusLabel": "Pending",
                         "statusDate": null
                     },
                     {
@@ -12818,10 +12880,10 @@
                 "title": "Revise public water supply fee accounts",
                 "chamber": "house",
                 "status": {
-                    "key": "Probably Dead",
-                    "label": "",
-                    "step": "Failed",
-                    "status": "stalled",
+                    "key": "In First House--Out of Committee",
+                    "step": "First chamber",
+                    "label": "Out of committee",
+                    "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -14266,9 +14328,9 @@
                 "title": "Revise professional licensing laws to correct errata",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House Committee--Nontabled",
+                    "key": "In First House--Out of Committee",
                     "step": "First chamber",
-                    "label": "In committee",
+                    "label": "Out of committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -16552,10 +16614,10 @@
                 "title": "Authorize county commissioners to initiate mandamus proceedings",
                 "chamber": "house",
                 "status": {
-                    "key": "Probably Dead",
-                    "label": "",
-                    "step": "Failed",
-                    "status": "stalled",
+                    "key": "In First House--Through 3rd Reading",
+                    "step": "First chamber",
+                    "label": "Passed chamber",
+                    "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -16573,14 +16635,14 @@
                     },
                     {
                         "step": "first chamber",
-                        "status": "current",
-                        "statusLabel": "Passed preliminary floor vote",
-                        "statusDate": "01/14/2025"
+                        "status": "passed",
+                        "statusLabel": "Passed House",
+                        "statusDate": "01/15/2025"
                     },
                     {
                         "step": "second chamber",
-                        "status": "future",
-                        "statusLabel": null,
+                        "status": "current",
+                        "statusLabel": "Pending",
                         "statusDate": null
                     },
                     {
@@ -31569,9 +31631,9 @@
                 "title": "Revise property tax information required in preliminary budgets",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House Committee--Nontabled",
+                    "key": "In First House--Out of Committee",
                     "step": "First chamber",
-                    "label": "In committee",
+                    "label": "Out of committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -35780,6 +35842,67 @@
         "imageSlug": "2025/lukas-schubert.jpg",
         "sponsoredBills": [
             {
+                "key": "hb-219",
+                "identifier": "HB 219",
+                "title": "Generally revise hunting laws related to unlawful contest or prize",
+                "chamber": "house",
+                "status": {
+                    "key": "In First House--Introduced",
+                    "step": "First chamber",
+                    "label": "Introduced",
+                    "status": "live",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "01/15/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3065?open_tab=bill",
+                "fiscalNoteUrl": "https://bills.legmt.gov/#/bill/2/LC3065?open_tab=fiscal",
+                "legalNoteUrl": "undefined",
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Lukas Schubert",
+                    "party": "R",
+                    "locale": "Kalispell",
+                    "district": "HD 8"
+                }
+            },
+            {
                 "key": "hb-142",
                 "identifier": "HB 142",
                 "title": "Revise laws relating to interim committees",
@@ -38785,9 +38908,9 @@
                 "title": "Deposit non-levy revenue in school equalization and property tax relief account",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House Committee--Nontabled",
+                    "key": "In First House--Out of Committee",
                     "step": "First chamber",
-                    "label": "In committee",
+                    "label": "Out of committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
