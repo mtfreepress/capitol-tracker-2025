@@ -468,7 +468,7 @@
         "vetoMemoUrl": null,
         "articles": [],
         "numArticles": 0,
-        "isOnCalendar": false
+        "isOnCalendar": true
     },
     {
         "key": "sj-3",
@@ -1162,7 +1162,7 @@
         "vetoMemoUrl": null,
         "articles": [],
         "numArticles": 0,
-        "isOnCalendar": false
+        "isOnCalendar": true
     },
     {
         "key": "sb-94",
@@ -1971,7 +1971,7 @@
         "vetoMemoUrl": null,
         "articles": [],
         "numArticles": 0,
-        "isOnCalendar": false
+        "isOnCalendar": true
     },
     {
         "key": "sb-85",
@@ -3339,7 +3339,7 @@
         "vetoMemoUrl": null,
         "articles": [],
         "numArticles": 0,
-        "isOnCalendar": false
+        "isOnCalendar": true
     },
     {
         "key": "sb-7",
@@ -3499,7 +3499,7 @@
         "vetoMemoUrl": null,
         "articles": [],
         "numArticles": 0,
-        "isOnCalendar": false
+        "isOnCalendar": true
     },
     {
         "key": "sb-68",
@@ -5024,7 +5024,7 @@
         "vetoMemoUrl": null,
         "articles": [],
         "numArticles": 0,
-        "isOnCalendar": false
+        "isOnCalendar": true
     },
     {
         "key": "sb-5",
@@ -10666,7 +10666,7 @@
         "vetoMemoUrl": null,
         "articles": [],
         "numArticles": 0,
-        "isOnCalendar": false
+        "isOnCalendar": true
     },
     {
         "key": "sb-134",
@@ -26347,10 +26347,10 @@
         "lcIdentifier": "LC0425",
         "type": "house bill",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
+            "key": "In First House--Out of Committee",
+            "step": "First chamber",
+            "label": "Out of committee",
+            "status": "live",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -26428,10 +26428,10 @@
         "lcIdentifier": "LC2031",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
-            "step": "First chamber",
-            "label": "In committee",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -26443,9 +26443,9 @@
             },
             {
                 "step": "first committee",
-                "status": "current",
-                "statusLabel": "Pending",
-                "statusDate": null
+                "status": "blocked",
+                "statusLabel": "Withdrawn",
+                "statusDate": "01/16/2025"
             },
             {
                 "step": "first chamber",
