@@ -11804,7 +11804,7 @@
         "vetoMemoUrl": null,
         "articles": [],
         "numArticles": 0,
-        "isOnCalendar": false
+        "isOnCalendar": true
     },
     {
         "key": "sb-12",
@@ -20830,6 +20830,86 @@
         "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0289?open_tab=bill",
         "fiscalNoteUrl": "https://bills.legmt.gov/#/bill/2/LC0289?open_tab=fiscal",
         "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0289?open_tab=amend",
+        "legalNoteUrl": "undefined",
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0,
+        "isOnCalendar": false
+    },
+    {
+        "key": "hb-230",
+        "identifier": "HB 230",
+        "chamber": "house",
+        "title": "Generally revise Medicaid laws",
+        "session": "2",
+        "lcIdentifier": "LC1217",
+        "type": "house bill",
+        "status": {
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "passed",
+                "statusLabel": "Introduced",
+                "statusDate": "01/16/2025"
+            },
+            {
+                "step": "first committee",
+                "status": "current",
+                "statusLabel": "Pending",
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Mary Caferro",
+            "party": "D",
+            "locale": "Helena",
+            "district": "HD 81"
+        },
+        "requestor": "Mary Caferro",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "SIMPLE",
+        "subjects": [
+            "Health Care Services (see also: Health)",
+            "Appropriations  (see also: State Finance)"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1217?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1217?open_tab=bill",
+        "fiscalNoteUrl": "https://bills.legmt.gov/#/bill/2/LC1217?open_tab=fiscal",
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1217?open_tab=amend",
         "legalNoteUrl": "undefined",
         "vetoMemoUrl": null,
         "articles": [],
