@@ -1,5 +1,4 @@
 name: Run data pipeline scripts on schedule or push
-# TODO: Add the deploy stuff later
 
 on:
   push:
@@ -38,13 +37,29 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    # Ensure the script is executable
+    # Ensure the refresh-inputs.sh script is executable
     - name: Make refresh-inputs.sh executable
       run: chmod +x ./refresh-inputs.sh
 
-    # Run the shell script
-    - name: Run the shell script
+    # Run the refresh-inputs.sh script
+    - name: Run the refresh-inputs.sh script
       run: ./refresh-inputs.sh
+
+    # Configure AWS credentials
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: us-west-2
+
+    # Ensure the build-and-deploy.sh script is executable
+    - name: Make build-and-deploy.sh executable
+      run: chmod +x ./build-and-deploy.sh
+
+    # Run the build-and-deploy.sh script
+    - name: Run the build-and-deploy.sh script
+      run: ./build-and-deploy.sh
 
     # Save Node.js dependencies cache
     - name: Save Node.js dependencies cache
@@ -54,6 +69,7 @@ jobs:
         path: ~/.npm
         key: ${{ runner.os }}-npm-cache-${{ hashFiles('package-lock.json') }}
 
+    # Commit and push if changed
     - name: Commit and push if changed
       run: |-
         git config user.name "Automated"
