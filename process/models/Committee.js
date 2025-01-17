@@ -109,7 +109,7 @@ export default class Committee {
         this.data = {
             name: displayName,
             key: addressKey,
-            key: commiteeKey,
+            commiteeKey: commiteeKey,
             chamber,
             time: usualTime,
             type,
