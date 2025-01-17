@@ -15,12 +15,12 @@ const committeeMemberListStyle = css`
 // TODO: Needs styling
 `;
 
-const { publicRuntimeConfig } = getConfig();
-const basePath = process.env.BASE_PATH || '';
-
 const getDay = d => shortDateWithWeekday(new Date(d));
 
 const CommitteePage = ({ committee, bills }) => {
+    const { publicRuntimeConfig } = getConfig() || {};
+    const basePath = publicRuntimeConfig.basePath || process.env.BASE_PATH || '';
+
     const {
         key, name, time, type, billCount, billsWithdrawn,
         billsUnscheduled, billsScheduledByDay, billsAwaitingVote,
@@ -52,14 +52,17 @@ const CommitteePage = ({ committee, bills }) => {
             <h1>{name} Committee</h1>
             <CommitteeSummary {...committee} />
 
-            <div style={{ fontSize: '1.2em', margin: '0.5em 0' }}>
-                🪑 Chair: 
-                <a href={`${basePath}/lawmakers/${lawmakerUrl(chair.name)}`}>
-                    <strong>{chair.name}</strong> <span style={{ color: partyColors(chair.party) }}>
-                        ({chair.party}-{chair.locale})
-                    </span>
-                </a>
-            </div>
+            {chair && (
+                <div style={{ fontSize: '1.2em', margin: '0.5em 0' }}>
+                    🪑 Chair: 
+                    <a href={`${basePath}/lawmakers/${lawmakerUrl(chair.name)}`}>
+                        <strong>{chair.name}</strong> 
+                        <span style={{ color: partyColors(chair.party) }}>
+                            ({chair.party}-{chair.locale})
+                        </span>
+                    </a>
+                </div>
+            )}
 
             <ReactMarkdown>{committeePageText}</ReactMarkdown>
 
@@ -68,7 +71,8 @@ const CommitteePage = ({ committee, bills }) => {
                 {members.map(member => (
                     <div key={member.id}>
                         <a href={`${basePath}/lawmakers/${lawmakerUrl(member.name)}`}>
-                            <strong>{member.name}</strong> <span style={{ color: partyColors(member.party) }}>
+                            <strong>{member.name}</strong> 
+                            <span style={{ color: partyColors(member.party) }}>
                                 ({member.party}-{member.locale})
                             </span>
                         </a>
