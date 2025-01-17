@@ -8,10 +8,15 @@ import CommitteeSummary from './Summary';
 import BillTable from '../BillTable';
 import { lawmakerUrl, shortDateWithWeekday } from '../../config/utils';
 import { partyColors } from '../../config/config';
+import getConfig from 'next/config';
+
 
 const committeeMemberListStyle = css`
-        // TODO: Needs styling
+// TODO: Needs styling
 `;
+
+const { publicRuntimeConfig } = getConfig();
+const basePath = process.env.BASE_PATH || '';
 
 const getDay = d => shortDateWithWeekday(new Date(d));
 
@@ -34,7 +39,7 @@ const CommitteePage = ({ committee, bills }) => {
     const passedBills = bills.filter(d => billsAdvanced.includes(d.identifier));
     const blastedBills = bills.filter(d => billsBlasted.includes(d.identifier));
     
-    const chair = members.find(d => d.role === 'Chair');
+    const chair = members.find(d => d.role === 'chair');
 
     return (
         <Layout
@@ -49,7 +54,7 @@ const CommitteePage = ({ committee, bills }) => {
 
             <div style={{ fontSize: '1.2em', margin: '0.5em 0' }}>
                 🪑 Chair: 
-                <a href={`/lawmakers/${lawmakerUrl(chair.name)}`}>
+                <a href={`${basePath}/lawmakers/${lawmakerUrl(chair.name)}`}>
                     <strong>{chair.name}</strong> <span style={{ color: partyColors(chair.party) }}>
                         ({chair.party}-{chair.locale})
                     </span>
@@ -60,10 +65,9 @@ const CommitteePage = ({ committee, bills }) => {
 
             <h2>Members ({members.length})</h2>
             <div css={committeeMemberListStyle}>
-                {/* Members list rendering */}
                 {members.map(member => (
                     <div key={member.id}>
-                        <a href={`/lawmakers/${lawmakerUrl(member.name)}`}>
+                        <a href={`${basePath}/lawmakers/${lawmakerUrl(member.name)}`}>
                             <strong>{member.name}</strong> <span style={{ color: partyColors(member.party) }}>
                                 ({member.party}-{member.locale})
                             </span>
