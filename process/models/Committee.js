@@ -14,7 +14,9 @@ export default class Committee {
             usualTime,
             chamber,
             type
-        } = schema
+        } = schema;
+
+        const addressKey = displayName.toLowerCase().replace(/\s+/g, '-'); // Dynamically generate the key
 
         const beginningOfToday = new Date(updateTime).setUTCHours(7, 0, 0, 0) // 7 accounts for Montana vs GMT time
 
@@ -106,6 +108,7 @@ export default class Committee {
 
         this.data = {
             name: displayName,
+            key: addressKey,
             key: commiteeKey,
             chamber,
             time: usualTime,
