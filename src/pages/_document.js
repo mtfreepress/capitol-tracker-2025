@@ -1,14 +1,14 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
-import { CacheProvider } from '@emotion/react';
 import createEmotionServer from '@emotion/server/create-instance';
+import { CacheProvider } from '@emotion/react';
 import createEmotionCache from '../lib/createEmotionCache';
+
+const cache = createEmotionCache();
+const { extractCriticalToChunks } = createEmotionServer(cache);
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
     const originalRenderPage = ctx.renderPage;
-
-    const cache = createEmotionCache();
-    const { extractCriticalToChunks } = createEmotionServer(cache);
 
     ctx.renderPage = () =>
       originalRenderPage({
@@ -42,7 +42,9 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head />
+        <Head>
+          <meta name="emotion-insertion-point" content="" />
+        </Head>
         <body>
           <Main />
           <NextScript />
