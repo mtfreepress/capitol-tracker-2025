@@ -1,25 +1,26 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
-import React from 'react';
+import { CacheProvider } from '@emotion/react';
 import createEmotionServer from '@emotion/server/create-instance';
-import createCache from '@emotion/cache';
+import createEmotionCache from '../lib/createEmotionCache';
 
-// Create an Emotion cache instance
-const cache = createCache({ key: 'css', prepend: true });
-const { extractCriticalToChunks } = createEmotionServer(cache);
-
-export default class MyDocument extends Document {
+class MyDocument extends Document {
   static async getInitialProps(ctx) {
     const originalRenderPage = ctx.renderPage;
 
-    // Render the app and get the initial props
+    const cache = createEmotionCache();
+    const { extractCriticalToChunks } = createEmotionServer(cache);
+
     ctx.renderPage = () =>
       originalRenderPage({
-        enhanceApp: (App) => (props) => <App {...props} />,
+        enhanceApp: (App) => (props) =>
+          (
+            <CacheProvider value={cache}>
+              <App {...props} />
+            </CacheProvider>
+          ),
       });
 
     const initialProps = await Document.getInitialProps(ctx);
-
-    // Extract Emotion critical CSS
     const emotionStyles = extractCriticalToChunks(initialProps.html);
     const emotionStyleTags = emotionStyles.styles.map((style) => (
       <style
@@ -32,7 +33,7 @@ export default class MyDocument extends Document {
     return {
       ...initialProps,
       styles: [
-        ...React.Children.toArray(initialProps.styles),
+        ...initialProps.styles,
         ...emotionStyleTags,
       ],
     };
@@ -41,9 +42,7 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head>
-          {/* Emotion CSS is automatically injected here */}
-        </Head>
+        <Head />
         <body>
           <Main />
           <NextScript />
@@ -52,3 +51,5 @@ export default class MyDocument extends Document {
     );
   }
 }
+
+export default MyDocument;
