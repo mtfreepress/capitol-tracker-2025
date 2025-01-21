@@ -9,12 +9,13 @@ import { writeJson } from '../../process/utils.js';
 const BILL_LIST_URL = 'https://raw.githubusercontent.com/mtfreepress/legislative-interface/refs/heads/main/list-bills-2.json';
 const GITHUB_API_URL_BILLS = 'https://api.github.com/repos/mtfreepress/legislative-interface/contents/process/cleaned/bills-2';
 const GITHUB_API_URL_ACTIONS = 'https://api.github.com/repos/mtfreepress/legislative-interface/contents/process/cleaned/actions-2';
+const GITHUB_API_URL_MATCHED_ACTIONS = 'https://api.github.com/repos/mtfreepress/legislative-interface/contents/interface/downloads/matched-2-votes';
 const RAW_URL_BASE_BILLS = 'https://raw.githubusercontent.com/mtfreepress/legislative-interface/main/process/cleaned/bills-2/';
 const RAW_URL_BASE_ACTIONS = 'https://raw.githubusercontent.com/mtfreepress/legislative-interface/main/process/cleaned/actions-2/';
+const RAW_URL_BASE_MATCHED_ACTIONS = 'https://raw.githubusercontent.com/mtfreepress/legislative-interface/refs/heads/main/interface/downloads/matched-2-votes/';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const OUT_DIR = __dirname;
-
 
 const fetchJson = async url => {
     const response = await fetch(url);
@@ -54,11 +55,16 @@ const main = async () => {
         console.log(`Fetching action file list from ${GITHUB_API_URL_ACTIONS}`);
         const actionFiles = await fetchJson(GITHUB_API_URL_ACTIONS);
 
+        console.log(`Fetching matched action file list from ${GITHUB_API_URL_MATCHED_ACTIONS}`);
+        const matchedActionFiles = await fetchJson(GITHUB_API_URL_MATCHED_ACTIONS);
+
         const jsonBillFiles = billFiles.filter(file => file.name.endsWith('.json'));
         const jsonActionFiles = actionFiles.filter(file => file.name.endsWith('.json'));
+        const jsonMatchedActionFiles = matchedActionFiles.filter(file => file.name.endsWith('.json'));
 
         console.log(`Found bill JSON files:`, jsonBillFiles.map(file => file.name));
         console.log(`Found action JSON files:`, jsonActionFiles.map(file => file.name));
+        console.log(`Found matched action JSON files:`, jsonMatchedActionFiles.map(file => file.name));
 
         for (const bill of billList) {
             const billIdentifier = `${bill.billType}-${bill.billNumber}`;
@@ -87,9 +93,22 @@ const main = async () => {
             } else {
                 console.warn(`Action file not found for: ${billIdentifier}`);
             }
+
+            // Handle Matched Action Data
+            const matchedActionFileName = `${billIdentifier}-matched-actions.json`;
+            const matchedActionFileExists = jsonMatchedActionFiles.some(file => file.name === matchedActionFileName);
+
+            if (matchedActionFileExists) {
+                const matchedActionFileUrl = `${RAW_URL_BASE_MATCHED_ACTIONS}${matchedActionFileName}`;
+                const completeActionsFolderPath = path.join(OUT_DIR, 'downloads', 'matched-actions');
+                await createFolderIfNotExists(completeActionsFolderPath);
+                await downloadFile(matchedActionFileUrl, matchedActionFileName, completeActionsFolderPath);
+            } else {
+                console.warn(`Matched action file not found for: ${billIdentifier}`);
+            }
         }
 
-        console.log('### All bill and action JSON files fetched successfully!');
+        console.log('### All bill, action, and matched action JSON files fetched successfully!');
     } catch (error) {
         console.error('Error:', error.message);
     }
