@@ -4,7 +4,7 @@ import { fileURLToPath } from 'url';
 import path from 'path';
 import { writeJson } from '../../process/utils.js';
 
-// TODO: NEED TO ADD VOTES ONCE THEY START HAPPENING
+// TODO: Ditch Bill/Actions separate files and use the unified one
 
 const BILL_LIST_URL = 'https://raw.githubusercontent.com/mtfreepress/legislative-interface/refs/heads/main/list-bills-2.json';
 const GITHUB_API_URL_BILLS = 'https://api.github.com/repos/mtfreepress/legislative-interface/contents/process/cleaned/bills-2';
@@ -72,7 +72,7 @@ const main = async () => {
 
             await createFolderIfNotExists(folderPath);
 
-            // Handle Bill Data
+            // bills
             const billFileName = `${billIdentifier}-data.json`;
             const billFileExists = jsonBillFiles.some(file => file.name === billFileName);
 
@@ -83,7 +83,7 @@ const main = async () => {
                 console.warn(`Bill file not found for: ${billIdentifier}`);
             }
 
-            // Handle Action Data
+            // actions
             const actionFileName = `${billIdentifier}-actions.json`;
             const actionFileExists = jsonActionFiles.some(file => file.name === actionFileName);
 
@@ -94,13 +94,13 @@ const main = async () => {
                 console.warn(`Action file not found for: ${billIdentifier}`);
             }
 
-            // Handle Matched Action Data
+            // combined bill/actions
             const matchedActionFileName = `${billIdentifier}-matched-actions.json`;
             const matchedActionFileExists = jsonMatchedActionFiles.some(file => file.name === matchedActionFileName);
 
             if (matchedActionFileExists) {
                 const matchedActionFileUrl = `${RAW_URL_BASE_MATCHED_ACTIONS}${matchedActionFileName}`;
-                const completeActionsFolderPath = path.join(OUT_DIR, 'downloads', 'matched-actions');
+                const completeActionsFolderPath = path.join(OUT_DIR, 'matched-actions');
                 await createFolderIfNotExists(completeActionsFolderPath);
                 await downloadFile(matchedActionFileUrl, matchedActionFileName, completeActionsFolderPath);
             } else {
