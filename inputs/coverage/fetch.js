@@ -9,7 +9,7 @@ const writeJson = (path, data) => {
   );
 }
 
-const TAG = "2024-election-guide" // Replace spaces in tag as seen in CMS with hyphens here
+const TAG = "2025-legislature" // Replace spaces in tag as seen in CMS with hyphens here
 const EXCLUDE_TAG = 'Tracker Exclude'
 const QUERY_LIMIT = 100
 
