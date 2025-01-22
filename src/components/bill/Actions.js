@@ -115,50 +115,58 @@ const BillActions = ({ actions, lawsUrl, vetoMemoUrl }) => {
     },
   ];
 
-  const rows = actions.filter(actionFilter).map((d, i) => Action(d, showVotes, annotations));
+  // Sort actions by committeeHearingTime if it exists, otherwise by date
+  const sortedActions = actions.sort((a, b) => {
+    const dateA = a.committeeHearingTime ? new Date(a.committeeHearingTime) : new Date(a.date);
+    const dateB = b.committeeHearingTime ? new Date(b.committeeHearingTime) : new Date(b.date);
+    return dateA - dateB;
+  });
 
+  const rows = sortedActions.filter(actionFilter).map((d, i) => Action(d, showVotes, annotations));
 
   return (
-      <div>
-        <h3>Legislative actions</h3>
-        <InfoPopup label="How bills move through the Legislature" content={howBillsMove} />
-        <div className="note">
-          {showMinorActions ? 'Showing all recorded bill actions. ' : 'Showing major bill actions only. '}
-          <button className='inlineButton' onClick={toggleShowMinorActions}>
-            {showMinorActions ? 'See fewer' : 'See all.'}
-          </button>
-        </div>
-        <table className='table'>
-          <thead className="tableHeader">
-            <tr>
-              <th>Date</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>{rows}</tbody>
-        </table>
-        <div className="note">
-          {showMinorActions ? 'Showing all recorded bill actions. ' : 'Showing major bill actions only. '}
-          <button className='inlineButton' onClick={toggleShowMinorActions}>
-            {showMinorActions ? 'See fewer' : 'See all.'}
-          </button>
-        </div>
-        <div className="note">
-          This table may omit bill actions recorded since this guide&#39;s last update. See the{' '}
-          <a href={lawsUrl}>bill page in LAWS</a> for an official reference.
-        </div>
+    <div>
+      <h3>Legislative actions</h3>
+      <InfoPopup label="How bills move through the Legislature" content={howBillsMove} />
+      <div className="note">
+        {showMinorActions ? 'Showing all recorded bill actions. ' : 'Showing major bill actions only. '}
+        <button className='inlineButton' onClick={toggleShowMinorActions}>
+          {showMinorActions ? 'See fewer' : 'See all.'}
+        </button>
       </div>
+      <table className='table'>
+        <thead className="tableHeader">
+          <tr>
+            <th>Date</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>{rows}</tbody>
+      </table>
+      <div className="note">
+        {showMinorActions ? 'Showing all recorded bill actions. ' : 'Showing major bill actions only. '}
+        <button className='inlineButton' onClick={toggleShowMinorActions}>
+          {showMinorActions ? 'See fewer' : 'See all.'}
+        </button>
+      </div>
+      <div className="note">
+        This table may omit bill actions recorded since this guide&#39;s last update. See the{' '}
+        <a href={lawsUrl}>bill page in LAWS</a> for an official reference.
+      </div>
+    </div>
   );
 };
 
 const Action = (action, showVotes, annotations) => {
-  const { id, committee, description, vote, date, recordings, isHighlight, transcriptUrl } = action;
+  const { id, committee, description, vote, date, recordings, isHighlight, transcriptUrl, committeeHearingTime } = action;
   const { thresholdRequired } = vote || {};
+
+  const displayDate = committeeHearingTime ? committeeHearingTime : date;
 
   return (
     <tr key={id} css={isHighlight ? highlightRow : null}>
       <td css={dateCss}>
-        <div css={dateColWidth}>{dateFormat(new Date(date))}</div>
+        <div css={dateColWidth}>{dateFormat(new Date(displayDate))}</div>
       </td>
 
       <td css={actionCss}>
