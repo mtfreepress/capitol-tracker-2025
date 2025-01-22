@@ -1,8 +1,13 @@
 {
     "datesOnCalendar": [
-        "01/22/2025"
+        "01/22/2025",
+        "01/23/2025"
     ],
     "billsOnCalendar": [
+        "HB 202",
+        "HB 194",
+        "HB 175",
+        "HB 145",
         "SB 55",
         "HB 85",
         "HB 80",
@@ -27,7 +32,64 @@
         "HB 108",
         "HB 1"
     ],
-    "scheduledHearings": [],
+    "scheduledHearings": [
+        {
+            "id": "HB202-0012",
+            "bill": "HB 202",
+            "date": "01/22/2025",
+            "description": "Hearing",
+            "posession": "house",
+            "committee": null,
+            "actionUrl": null,
+            "recordings": [],
+            "transcriptUrl": null,
+            "key": "Hearing",
+            "isMajor": true,
+            "hearing": true
+        },
+        {
+            "id": "HB194-0016",
+            "bill": "HB 194",
+            "date": "01/23/2025",
+            "description": "Hearing",
+            "posession": "house",
+            "committee": null,
+            "actionUrl": null,
+            "recordings": [],
+            "transcriptUrl": null,
+            "key": "Hearing",
+            "isMajor": true,
+            "hearing": true
+        },
+        {
+            "id": "HB175-0017",
+            "bill": "HB 175",
+            "date": "01/22/2025",
+            "description": "Hearing",
+            "posession": "house",
+            "committee": null,
+            "actionUrl": null,
+            "recordings": [],
+            "transcriptUrl": null,
+            "key": "Hearing",
+            "isMajor": true,
+            "hearing": true
+        },
+        {
+            "id": "HB145-0012",
+            "bill": "HB 145",
+            "date": "01/22/2025",
+            "description": "Hearing",
+            "posession": "house",
+            "committee": null,
+            "actionUrl": null,
+            "recordings": [],
+            "transcriptUrl": null,
+            "key": "Hearing",
+            "isMajor": true,
+            "hearing": true
+        }
+    ],
     "scheduledFloorDebates": [
         {
             "id": "SB55-0016",
