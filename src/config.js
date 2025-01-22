@@ -71,7 +71,7 @@ export const footerMenus = [
             },
             {
                 label: 'Donate',
-                url: 'https://checkout.fundjournalism.org/memberform?org_id=montanafreepress&campaign=7014o000000JNZvAAO',
+                url: 'https://montanafreepress.org/donate?utm_source=website&utm_medium=capitoltracker&utm_campaign=2025-CapitolTracker-donate-footer',
             }
         ]
     }
