@@ -4,17 +4,19 @@ import { fileURLToPath } from 'url';
 import path from 'path';
 import { writeJson } from '../../process/utils.js';
 
-// TODO: NEED TO ADD VOTES ONCE THEY START HAPPENING
+// TODO: Get rid of separate actions and votes once combined data is working
 
 const BILL_LIST_URL = 'https://raw.githubusercontent.com/mtfreepress/legislative-interface/refs/heads/main/list-bills-2.json';
 const GITHUB_API_URL_BILLS = 'https://api.github.com/repos/mtfreepress/legislative-interface/contents/process/cleaned/bills-2';
 const GITHUB_API_URL_ACTIONS = 'https://api.github.com/repos/mtfreepress/legislative-interface/contents/process/cleaned/actions-2';
+const GITHUB_API_URL_MERGED_ACTIONS = 'https://api.github.com/repos/mtfreepress/legislative-interface/contents/process/cleaned/merged-actions-2';
 const RAW_URL_BASE_BILLS = 'https://raw.githubusercontent.com/mtfreepress/legislative-interface/main/process/cleaned/bills-2/';
 const RAW_URL_BASE_ACTIONS = 'https://raw.githubusercontent.com/mtfreepress/legislative-interface/main/process/cleaned/actions-2/';
+const RAW_URL_BASE_MERGED_ACTIONS = 'https://raw.githubusercontent.com/mtfreepress/legislative-interface/main/process/cleaned/merged-actions-2/';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const OUT_DIR = __dirname;
-
+const DATA_DIR = path.join(__dirname, '../../src/data');
 
 const fetchJson = async url => {
     const response = await fetch(url);
@@ -54,11 +56,16 @@ const main = async () => {
         console.log(`Fetching action file list from ${GITHUB_API_URL_ACTIONS}`);
         const actionFiles = await fetchJson(GITHUB_API_URL_ACTIONS);
 
+        console.log(`Fetching merged action file list from ${GITHUB_API_URL_MERGED_ACTIONS}`);
+        const mergedActionFiles = await fetchJson(GITHUB_API_URL_MERGED_ACTIONS);
+
         const jsonBillFiles = billFiles.filter(file => file.name.endsWith('.json'));
         const jsonActionFiles = actionFiles.filter(file => file.name.endsWith('.json'));
+        const jsonMergedActionFiles = mergedActionFiles.filter(file => file.name.endsWith('.json'));
 
         console.log(`Found bill JSON files:`, jsonBillFiles.map(file => file.name));
         console.log(`Found action JSON files:`, jsonActionFiles.map(file => file.name));
+        console.log(`Found merged action JSON files:`, jsonMergedActionFiles.map(file => file.name));
 
         for (const bill of billList) {
             const billIdentifier = `${bill.billType}-${bill.billNumber}`;
@@ -87,9 +94,33 @@ const main = async () => {
             } else {
                 console.warn(`Action file not found for: ${billIdentifier}`);
             }
+
+            // might need this later?
+            // Commented out fetching of matched actions
+            // const matchedActionFileName = `${billIdentifier}-matched-actions.json`;
+            // const matchedActionFileExists = jsonMatchedActionFiles.some(file => file.name === matchedActionFileName);
+
+            // if (matchedActionFileExists) {
+            //     const matchedActionFileUrl = `${RAW_URL_BASE_MATCHED_ACTIONS}${matchedActionFileName}`;
+            //     await createFolderIfNotExists(MATCHED_ACTIONS_DIR);
+            //     await downloadFile(matchedActionFileUrl, matchedActionFileName, MATCHED_ACTIONS_DIR);
+            // } else {
+            //     console.warn(`Matched action file not found for: ${billIdentifier}`);
+            // }
         }
 
-        console.log('### All bill and action JSON files fetched successfully!');
+        // might need this later?
+        // await createFolderIfNotExists(DATA_DIR);
+        // await downloadFile(RAW_URL_BILL_LIST, 'bills-list.json', DATA_DIR);
+
+        // Fetch and save merged action files
+        await createFolderIfNotExists(DATA_DIR);
+        for (const file of jsonMergedActionFiles) {
+            const fileUrl = `${RAW_URL_BASE_MERGED_ACTIONS}${file.name}`;
+            await downloadFile(fileUrl, file.name, DATA_DIR);
+        }
+
+        console.log('### All bill, action, and merged action JSON files fetched successfully!');
     } catch (error) {
         console.error('Error:', error.message);
     }
