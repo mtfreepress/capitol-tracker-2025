@@ -15,7 +15,7 @@ import headerBackground from "../../public/cap-tracker-background.png";
 
 const title = '2025 Capitol Tracker';
 const subtitle = 'The lawmakers, bills and votes of the 69th Montana Legislature'; 
-const headerDonateLink = "https://checkout.fundjournalism.org/memberform?org_id=montanafreepress&campaign=7014o000000JNaKAAW";
+const headerDonateLink = "https://montanafreepress.org/donate?utm_source=website&utm_medium=capitoltracker&utm_campaign=2025-CapitolTracker-donate-header";
 
 const headerStyle = css`
   background-color: var(--tan7);
