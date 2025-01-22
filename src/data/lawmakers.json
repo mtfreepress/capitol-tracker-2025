@@ -4208,10 +4208,10 @@
                 "title": "Require voted levies to be in dollars rather than mills",
                 "chamber": "house",
                 "status": {
-                    "key": "Probably Dead",
-                    "label": "",
-                    "step": "Failed",
-                    "status": "stalled",
+                    "key": "In First House--Through 2nd Reading",
+                    "step": "First chamber",
+                    "label": "Passed second reading vote",
+                    "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -4230,8 +4230,8 @@
                     {
                         "step": "first chamber",
                         "status": "current",
-                        "statusLabel": "Pending",
-                        "statusDate": null
+                        "statusLabel": "Passed preliminary floor vote",
+                        "statusDate": "01/22/2025"
                     },
                     {
                         "step": "second chamber",
@@ -7242,10 +7242,10 @@
                 "title": "Provide for the licensure of residential treatment centers",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Introduced",
-                    "step": "First chamber",
-                    "label": "Introduced",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -19707,9 +19707,9 @@
                 "title": "Allow water right holders to consent to waive adverse effects analysis in permit or change applications",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Introduced",
+                    "key": "In First House Committee--Nontabled",
                     "step": "First chamber",
-                    "label": "Introduced",
+                    "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -23261,11 +23261,11 @@
                 "title": "Feed bill to fund 69th legislative session and prepare for 2027",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Through 3rd Reading",
-                    "step": "First chamber",
-                    "label": "Passed chamber",
+                    "key": "Passed By Legislature--Enrolling and Final Preparation Process",
+                    "step": "Through Legislature",
+                    "label": "Passed both chambers",
                     "status": "live",
-                    "statusAtSessionEnd": "failed"
+                    "statusAtSessionEnd": "pending, passed legislature"
                 },
                 "progress": [
                     {
@@ -36779,9 +36779,9 @@
                 "title": "Revising solar energy policy laws",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Introduced",
+                    "key": "In First House Committee--Nontabled",
                     "step": "First chamber",
-                    "label": "Introduced",
+                    "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -41248,6 +41248,67 @@
                     "locale": "Helena",
                     "district": "SD 40"
                 }
+            },
+            {
+                "key": "sb-202",
+                "identifier": "SB 202",
+                "title": "Revise laws regarding receipt of workers' compensation benefits on behalf of others",
+                "chamber": "senate",
+                "status": {
+                    "key": "In First House--Introduced",
+                    "step": "First chamber",
+                    "label": "Introduced",
+                    "status": "live",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "01/22/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2784?open_tab=bill",
+                "fiscalNoteUrl": "https://bills.legmt.gov/#/bill/2/LC2784?open_tab=fiscal",
+                "legalNoteUrl": "undefined",
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Laura Smith",
+                    "party": "D",
+                    "locale": "Helena",
+                    "district": "SD 40"
+                }
             }
         ],
         "votingSummary": {
@@ -44830,9 +44891,9 @@
                 "title": "Generally revise professional occupation laws related to private security",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Introduced",
+                    "key": "In First House Committee--Nontabled",
                     "step": "First chamber",
-                    "label": "Introduced",
+                    "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -44891,9 +44952,9 @@
                 "title": "Generally revise bail bonds and insurance laws",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Introduced",
+                    "key": "In First House Committee--Nontabled",
                     "step": "First chamber",
-                    "label": "Introduced",
+                    "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -44952,9 +45013,9 @@
                 "title": "Revise DUI laws regarding actual physical control",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Introduced",
+                    "key": "In First House Committee--Nontabled",
                     "step": "First chamber",
-                    "label": "Introduced",
+                    "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -45013,9 +45074,9 @@
                 "title": "Generally revise laws related to alcohol and minors",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Introduced",
+                    "key": "In First House Committee--Nontabled",
                     "step": "First chamber",
-                    "label": "Introduced",
+                    "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -45074,10 +45135,10 @@
                 "title": "Eliminate the board of public assistance",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Introduced",
-                    "step": "First chamber",
-                    "label": "Introduced",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -45135,9 +45196,9 @@
                 "title": "Provide that members of the attorneys' examining board are appointed by the governor",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Introduced",
+                    "key": "In First House Committee--Nontabled",
                     "step": "First chamber",
-                    "label": "Introduced",
+                    "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -45196,10 +45257,10 @@
                 "title": "Provide for digital advertising tax",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Introduced",
-                    "step": "First chamber",
-                    "label": "Introduced",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -46265,10 +46326,10 @@
                 "title": "Provide for expedited processing in district courts of water cases arising under final decrees",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Introduced",
-                    "step": "First chamber",
-                    "label": "Introduced",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -48574,9 +48635,9 @@
                 "title": "Generally revise medicaid laws",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Introduced",
+                    "key": "In First House Committee--Nontabled",
                     "step": "First chamber",
-                    "label": "Introduced",
+                    "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
