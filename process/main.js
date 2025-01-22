@@ -171,13 +171,14 @@ const actionsOutput = bills.map(b => ({
 
 writeJson('./src/data/bills.json', billsOutput)
 
+// TODO: Remove this once we are sure it is no longer needed
 // Breaking this into chunks to avoid too-large-for-github-files
-const chunkSize = 200
-let index = 1
-for (let start = 0; start < actionsOutput.length; start += chunkSize) {
-    writeJson(`./src/data/bill-actions-${index}.json`, actionsOutput.slice(start, start + chunkSize))
-    index += 1
-}
+// const chunkSize = 200
+// let index = 1
+// for (let start = 0; start < actionsOutput.length; start += chunkSize) {
+//     writeJson(`./src/data/bill-actions-${index}.json`, actionsOutput.slice(start, start + chunkSize))
+//     index += 1
+// }
 
 const lawmakerOutput = lawmakers.map(l => l.exportMerged())
 writeJson('./src/data/lawmakers.json', lawmakerOutput)
