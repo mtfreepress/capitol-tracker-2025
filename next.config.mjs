@@ -7,9 +7,9 @@ const currentBasePath = '/capitol-tracker-2025'
 const nextConfig = {
     output: 'export',
     distDir: 'build',
-    // assetPrefix: isProd ? 'http://projects.montanafreepress.org/capitol-tracker-2025' : undefined,
+    assetPrefix: isProd ? 'http://projects.montanafreepress.org/capitol-tracker-2025' : undefined,
     // assetPrefix: 'http://projjects.montanafreepress.org/capitol-tracker-2025',
-    assetPrefix: 'http://localhost:3000/capitol-tracker-2025',
+    // assetPrefix: 'http://localhost:3000/capitol-tracker-2025',
     basePath: currentBasePath,
     env: {
         BASE_PATH: currentBasePath,
