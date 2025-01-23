@@ -208,10 +208,10 @@
         "lcIdentifier": "LC0653",
         "type": "joint resolution",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
+            "key": "In First House Committee--Nontabled",
+            "step": "First chamber",
+            "label": "In committee",
+            "status": "live",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -223,14 +223,14 @@
             },
             {
                 "step": "first committee",
-                "status": "current",
-                "statusLabel": "Pending",
-                "statusDate": null
+                "status": "passed",
+                "statusLabel": "Advanced",
+                "statusDate": "01/21/2025"
             },
             {
                 "step": "first chamber",
-                "status": "future",
-                "statusLabel": null,
+                "status": "current",
+                "statusLabel": "Pending",
                 "statusDate": null
             },
             {
@@ -1318,11 +1318,11 @@
         "lcIdentifier": "LC0044",
         "type": "senate bill",
         "status": {
-            "key": "Passed By Legislature--Enrolling and Final Preparation Process",
-            "step": "Through Legislature",
-            "label": "Passed both chambers",
+            "key": "In First House--Through 2nd Reading",
+            "step": "First chamber",
+            "label": "Passed second reading vote",
             "status": "live",
-            "statusAtSessionEnd": "pending, passed legislature"
+            "statusAtSessionEnd": "failed"
         },
         "progress": [
             {
@@ -4874,11 +4874,11 @@
         "lcIdentifier": "LC0249",
         "type": "senate bill",
         "status": {
-            "key": "Passed By Legislature--Enrolling and Final Preparation Process",
-            "step": "Through Legislature",
-            "label": "Passed both chambers",
+            "key": "In First House--Through 2nd Reading",
+            "step": "First chamber",
+            "label": "Passed second reading vote",
             "status": "live",
-            "statusAtSessionEnd": "pending, passed legislature"
+            "statusAtSessionEnd": "failed"
         },
         "progress": [
             {
@@ -7460,11 +7460,11 @@
         "lcIdentifier": "LC0245",
         "type": "senate bill",
         "status": {
-            "key": "Passed By Legislature--Enrolling and Final Preparation Process",
-            "step": "Through Legislature",
-            "label": "Passed both chambers",
+            "key": "In First House--Through 2nd Reading",
+            "step": "First chamber",
+            "label": "Passed second reading vote",
             "status": "live",
-            "statusAtSessionEnd": "pending, passed legislature"
+            "statusAtSessionEnd": "failed"
         },
         "progress": [
             {
@@ -14629,11 +14629,11 @@
         "lcIdentifier": "LC1433",
         "type": "senate bill",
         "status": {
-            "key": "Passed By Legislature--Enrolling and Final Preparation Process",
-            "step": "Through Legislature",
-            "label": "Passed both chambers",
+            "key": "In First House--Through 2nd Reading",
+            "step": "First chamber",
+            "label": "Passed second reading vote",
             "status": "live",
-            "statusAtSessionEnd": "pending, passed legislature"
+            "statusAtSessionEnd": "failed"
         },
         "progress": [
             {
@@ -15115,11 +15115,11 @@
         "lcIdentifier": "LC2712",
         "type": "senate bill",
         "status": {
-            "key": "Passed By Legislature--Enrolling and Final Preparation Process",
-            "step": "Through Legislature",
-            "label": "Passed both chambers",
+            "key": "In First House--Through 2nd Reading",
+            "step": "First chamber",
+            "label": "Passed second reading vote",
             "status": "live",
-            "statusAtSessionEnd": "pending, passed legislature"
+            "statusAtSessionEnd": "failed"
         },
         "progress": [
             {
@@ -17143,11 +17143,11 @@
         "lcIdentifier": "LC0962",
         "type": "senate bill",
         "status": {
-            "key": "Passed By Legislature--Enrolling and Final Preparation Process",
-            "step": "Through Legislature",
-            "label": "Passed both chambers",
+            "key": "In First House--Through 2nd Reading",
+            "step": "First chamber",
+            "label": "Passed second reading vote",
             "status": "live",
-            "statusAtSessionEnd": "pending, passed legislature"
+            "statusAtSessionEnd": "failed"
         },
         "progress": [
             {
@@ -19441,11 +19441,11 @@
         "lcIdentifier": "LC0259",
         "type": "house bill",
         "status": {
-            "key": "Passed By Legislature--Enrolling and Final Preparation Process",
-            "step": "Through Legislature",
-            "label": "Passed both chambers",
+            "key": "In First House--Through 2nd Reading",
+            "step": "First chamber",
+            "label": "Passed second reading vote",
             "status": "live",
-            "statusAtSessionEnd": "pending, passed legislature"
+            "statusAtSessionEnd": "failed"
         },
         "progress": [
             {
@@ -24086,6 +24086,88 @@
         "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0546?open_tab=bill",
         "fiscalNoteUrl": "https://bills.legmt.gov/#/bill/2/LC0546?open_tab=fiscal",
         "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0546?open_tab=amend",
+        "legalNoteUrl": "undefined",
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0,
+        "isOnCalendar": false
+    },
+    {
+        "key": "hb-306",
+        "identifier": "HB 306",
+        "chamber": "house",
+        "title": "Provide tax credit to landlords that rent for below market rate",
+        "session": "2",
+        "lcIdentifier": "LC3243",
+        "type": "house bill",
+        "status": {
+            "key": "In First House--Introduced",
+            "step": "First chamber",
+            "label": "Introduced",
+            "status": "live",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "passed",
+                "statusLabel": "Introduced",
+                "statusDate": "01/23/2025"
+            },
+            {
+                "step": "first committee",
+                "status": "current",
+                "statusLabel": "Pending",
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Denise Baum",
+            "party": "D",
+            "locale": "Billings",
+            "district": "HD 45"
+        },
+        "requestor": "Jonathan Karlen",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "SIMPLE",
+        "subjects": [
+            "Landlord and Tenant",
+            "Taxation (Generally)",
+            "Taxation--Individual Income",
+            "Revenue, State"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3243?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3243?open_tab=bill",
+        "fiscalNoteUrl": "https://bills.legmt.gov/#/bill/2/LC3243?open_tab=fiscal",
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3243?open_tab=amend",
         "legalNoteUrl": "undefined",
         "vetoMemoUrl": null,
         "articles": [],
@@ -39962,11 +40044,11 @@
         "lcIdentifier": "LC0950",
         "type": "house bill",
         "status": {
-            "key": "Passed By Legislature--Enrolling and Final Preparation Process",
-            "step": "Through Legislature",
-            "label": "Passed both chambers",
+            "key": "In First House--Through 2nd Reading",
+            "step": "First chamber",
+            "label": "Passed second reading vote",
             "status": "live",
-            "statusAtSessionEnd": "pending, passed legislature"
+            "statusAtSessionEnd": "failed"
         },
         "progress": [
             {
@@ -40771,11 +40853,11 @@
         "lcIdentifier": "LC1352",
         "type": "house bill",
         "status": {
-            "key": "Passed By Legislature--Enrolling and Final Preparation Process",
-            "step": "Through Legislature",
-            "label": "Passed both chambers",
+            "key": "In First House--Through 2nd Reading",
+            "step": "First chamber",
+            "label": "Passed second reading vote",
             "status": "live",
-            "statusAtSessionEnd": "pending, passed legislature"
+            "statusAtSessionEnd": "failed"
         },
         "progress": [
             {
