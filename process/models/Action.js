@@ -19,6 +19,7 @@ export default class Action {
             hasVote,
             committee,
             recordings,
+            posession,
             transcriptUrl, // From third-party council data project integration
         } = action
 
@@ -34,7 +35,8 @@ export default class Action {
             bill,
             date: standardizeDate(date),
             description,
-            posession: this.determinePosession(action, description),
+            // posession: this.determinePosession(action, description),
+            posession,
             committee: committeeName,
             // committeeTime: getCommitteeTime(committeeName),
             // committeeType: getCommitteeType(committeeName),
@@ -47,25 +49,25 @@ export default class Action {
         // leave vote out of this.data, merge in at export step
     }
 
-    determinePosession = (action, description) => {
-        const posessionSearch = action.description.match(/(?<=\()(C|LC|H|S)(?=\))/)
-        const posessionKey = posessionSearch && posessionSearch[0] || 'O'
-        const posession = {
-            'C': 'staff',
-            'LC': 'staff',
-            'H': 'house',
-            'S': 'senate',
-            'O': 'other'
-        }[posessionKey]
+    // determinePosession = (action, description) => {
+    //     const posessionSearch = action.description.match(/(?<=\()(C|LC|H|S)(?=\))/)
+    //     const posessionKey = posessionSearch && posessionSearch[0] || 'O'
+    //     const posession = {
+    //         'C': 'staff',
+    //         'LC': 'staff',
+    //         'H': 'house',
+    //         'S': 'senate',
+    //         'O': 'other'
+    //     }[posessionKey]
 
-        const flags = this.getActionFlags(description)
-        if (flags.governorAction) {
-            // overrides encoding on the action description
-            return 'governor'
-        }
-        return posession
+    //     const flags = this.getActionFlags(description)
+    //     if (flags.governorAction) {
+    //         // overrides encoding on the action description
+    //         return 'governor'
+    //     }
+    //     return posession
 
-    }
+    // }
 
 
     // determineChamber = (organization_id) => {
