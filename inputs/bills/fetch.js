@@ -61,11 +61,11 @@ const main = async () => {
 
         const jsonBillFiles = billFiles.filter(file => file.name.endsWith('.json'));
         const jsonActionFiles = actionFiles.filter(file => file.name.endsWith('.json'));
-        const jsonMergedActionFiles = mergedActionFiles.filter(file => file.name.endsWith('.json'));
+        // const jsonMergedActionFiles = mergedActionFiles.filter(file => file.name.endsWith('.json'));
 
         console.log(`Found bill JSON files:`, jsonBillFiles.map(file => file.name));
         console.log(`Found action JSON files:`, jsonActionFiles.map(file => file.name));
-        console.log(`Found merged action JSON files:`, jsonMergedActionFiles.map(file => file.name));
+        // console.log(`Found merged action JSON files:`, jsonMergedActionFiles.map(file => file.name));
 
         for (const bill of billList) {
             const billIdentifier = `${bill.billType}-${bill.billNumber}`;
@@ -120,7 +120,8 @@ const main = async () => {
         //     await downloadFile(fileUrl, file.name, DATA_DIR);
         // }
 
-        console.log('### All bill, action, and merged action JSON files fetched successfully!');
+        // console.log('### All bill, action, and merged action JSON files fetched successfully!');
+        console.log('### All bill and action JSON files fetched successfully!');
     } catch (error) {
         console.error('Error:', error.message);
     }
