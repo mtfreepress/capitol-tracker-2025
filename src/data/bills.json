@@ -20812,11 +20812,11 @@
         "lcIdentifier": "LC0619",
         "type": "house bill",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
-            "statusAtSessionEnd": "failed"
+            "key": "Passed By Legislature--Enrolling and Final Preparation Process",
+            "step": "Through Legislature",
+            "label": "Passed both chambers",
+            "status": "live",
+            "statusAtSessionEnd": "pending, passed legislature"
         },
         "progress": [
             {
@@ -20834,8 +20834,8 @@
             {
                 "step": "first chamber",
                 "status": "current",
-                "statusLabel": "Pending",
-                "statusDate": null
+                "statusLabel": "Passed preliminary floor vote",
+                "statusDate": "01/23/2025"
             },
             {
                 "step": "second chamber",
@@ -23227,10 +23227,10 @@
         "lcIdentifier": "LC0235",
         "type": "house bill",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
+            "key": "In First House--Through 2nd Reading",
+            "step": "First chamber",
+            "label": "Passed second reading vote",
+            "status": "live",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -23249,8 +23249,8 @@
             {
                 "step": "first chamber",
                 "status": "current",
-                "statusLabel": "Pending",
-                "statusDate": null
+                "statusLabel": "Passed preliminary floor vote",
+                "statusDate": "01/23/2025"
             },
             {
                 "step": "second chamber",
