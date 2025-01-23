@@ -8,11 +8,11 @@ import { writeJson } from '../../process/utils.js';
 
 const BILL_LIST_URL = 'https://raw.githubusercontent.com/mtfreepress/legislative-interface/refs/heads/main/list-bills-2.json';
 const GITHUB_API_URL_BILLS = 'https://api.github.com/repos/mtfreepress/legislative-interface/contents/process/cleaned/bills-2';
-const GITHUB_API_URL_ACTIONS = 'https://api.github.com/repos/mtfreepress/legislative-interface/contents/process/cleaned/actions-2';
-const GITHUB_API_URL_MERGED_ACTIONS = 'https://api.github.com/repos/mtfreepress/legislative-interface/contents/process/cleaned/merged-actions-2';
 const RAW_URL_BASE_BILLS = 'https://raw.githubusercontent.com/mtfreepress/legislative-interface/main/process/cleaned/bills-2/';
+const GITHUB_API_URL_ACTIONS = 'https://api.github.com/repos/mtfreepress/legislative-interface/contents/process/cleaned/actions-2';
 const RAW_URL_BASE_ACTIONS = 'https://raw.githubusercontent.com/mtfreepress/legislative-interface/main/process/cleaned/actions-2/';
-const RAW_URL_BASE_MERGED_ACTIONS = 'https://raw.githubusercontent.com/mtfreepress/legislative-interface/main/process/cleaned/merged-actions-2/';
+// const GITHUB_API_URL_MERGED_ACTIONS = 'https://api.github.com/repos/mtfreepress/legislative-interface/contents/process/cleaned/merged-actions-2';
+// const RAW_URL_BASE_MERGED_ACTIONS = 'https://raw.githubusercontent.com/mtfreepress/legislative-interface/main/process/cleaned/merged-actions-2/';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const OUT_DIR = __dirname;
@@ -56,8 +56,8 @@ const main = async () => {
         console.log(`Fetching action file list from ${GITHUB_API_URL_ACTIONS}`);
         const actionFiles = await fetchJson(GITHUB_API_URL_ACTIONS);
 
-        console.log(`Fetching merged action file list from ${GITHUB_API_URL_MERGED_ACTIONS}`);
-        const mergedActionFiles = await fetchJson(GITHUB_API_URL_MERGED_ACTIONS);
+        // console.log(`Fetching merged action file list from ${GITHUB_API_URL_MERGED_ACTIONS}`);
+        // const mergedActionFiles = await fetchJson(GITHUB_API_URL_MERGED_ACTIONS);
 
         const jsonBillFiles = billFiles.filter(file => file.name.endsWith('.json'));
         const jsonActionFiles = actionFiles.filter(file => file.name.endsWith('.json'));
@@ -97,28 +97,28 @@ const main = async () => {
 
             // might need this later?
             // Commented out fetching of matched actions
-            // const matchedActionFileName = `${billIdentifier}-matched-actions.json`;
-            // const matchedActionFileExists = jsonMatchedActionFiles.some(file => file.name === matchedActionFileName);
+            const matchedActionFileName = `${billIdentifier}-matched-actions.json`;
+            const matchedActionFileExists = jsonMatchedActionFiles.some(file => file.name === matchedActionFileName);
 
-            // if (matchedActionFileExists) {
-            //     const matchedActionFileUrl = `${RAW_URL_BASE_MATCHED_ACTIONS}${matchedActionFileName}`;
-            //     await createFolderIfNotExists(MATCHED_ACTIONS_DIR);
-            //     await downloadFile(matchedActionFileUrl, matchedActionFileName, MATCHED_ACTIONS_DIR);
-            // } else {
-            //     console.warn(`Matched action file not found for: ${billIdentifier}`);
-            // }
+            if (matchedActionFileExists) {
+                const matchedActionFileUrl = `${RAW_URL_BASE_MATCHED_ACTIONS}${matchedActionFileName}`;
+                await createFolderIfNotExists(MATCHED_ACTIONS_DIR);
+                await downloadFile(matchedActionFileUrl, matchedActionFileName, MATCHED_ACTIONS_DIR);
+            } else {
+                console.warn(`Matched action file not found for: ${billIdentifier}`);
+            }
         }
 
         // might need this later?
-        // await createFolderIfNotExists(DATA_DIR);
-        // await downloadFile(RAW_URL_BILL_LIST, 'bills-list.json', DATA_DIR);
+        await createFolderIfNotExists(DATA_DIR);
+        await downloadFile(RAW_URL_BILL_LIST, 'bills-list.json', DATA_DIR);
 
         // Fetch and save merged action files
-        await createFolderIfNotExists(DATA_DIR);
-        for (const file of jsonMergedActionFiles) {
-            const fileUrl = `${RAW_URL_BASE_MERGED_ACTIONS}${file.name}`;
-            await downloadFile(fileUrl, file.name, DATA_DIR);
-        }
+        // await createFolderIfNotExists(DATA_DIR);
+        // for (const file of jsonMergedActionFiles) {
+        //     const fileUrl = `${RAW_URL_BASE_MERGED_ACTIONS}${file.name}`;
+        //     await downloadFile(fileUrl, file.name, DATA_DIR);
+        // }
 
         console.log('### All bill, action, and merged action JSON files fetched successfully!');
     } catch (error) {
