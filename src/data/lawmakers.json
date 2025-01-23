@@ -4391,10 +4391,10 @@
                 "title": "Require voted levies to be in dollars rather than mills",
                 "chamber": "house",
                 "status": {
-                    "key": "Probably Dead",
-                    "label": "",
-                    "step": "Failed",
-                    "status": "stalled",
+                    "key": "In First House--Through 3rd Reading",
+                    "step": "First chamber",
+                    "label": "Passed chamber",
+                    "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -4412,14 +4412,14 @@
                     },
                     {
                         "step": "first chamber",
-                        "status": "current",
-                        "statusLabel": "Passed preliminary floor vote",
-                        "statusDate": "01/22/2025"
+                        "status": "passed",
+                        "statusLabel": "Passed House",
+                        "statusDate": "01/23/2025"
                     },
                     {
                         "step": "second chamber",
-                        "status": "future",
-                        "statusLabel": null,
+                        "status": "current",
+                        "statusLabel": "Pending",
                         "statusDate": null
                     },
                     {
@@ -6557,11 +6557,11 @@
                 "title": "Exempt small projects from fire hazard reduction agreements",
                 "chamber": "house",
                 "status": {
-                    "key": "Probably Dead",
-                    "label": "",
-                    "step": "Failed",
-                    "status": "stalled",
-                    "statusAtSessionEnd": "failed"
+                    "key": "Passed By Legislature--Enrolling and Final Preparation Process",
+                    "step": "Through Legislature",
+                    "label": "Passed both chambers",
+                    "status": "live",
+                    "statusAtSessionEnd": "pending, passed legislature"
                 },
                 "progress": [
                     {
@@ -6579,8 +6579,8 @@
                     {
                         "step": "first chamber",
                         "status": "current",
-                        "statusLabel": "Pending",
-                        "statusDate": null
+                        "statusLabel": "Passed preliminary floor vote",
+                        "statusDate": "01/23/2025"
                     },
                     {
                         "step": "second chamber",
@@ -7425,10 +7425,10 @@
                 "title": "Provide for the licensure of residential treatment centers",
                 "chamber": "senate",
                 "status": {
-                    "key": "Probably Dead",
-                    "label": "",
-                    "step": "Failed",
-                    "status": "stalled",
+                    "key": "In First House Committee--Nontabled",
+                    "step": "First chamber",
+                    "label": "In committee",
+                    "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -7760,9 +7760,9 @@
                 "title": "Provide for legislative intent regarding streamflow information",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Through 3rd Reading",
-                    "step": "First chamber",
-                    "label": "Passed chamber",
+                    "key": "Transmitted to Second House",
+                    "step": "Second chamber",
+                    "label": "Transmitted",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -16081,11 +16081,11 @@
                 "title": "Revise legislative services requirements to provide certain printed session information",
                 "chamber": "house",
                 "status": {
-                    "key": "Probably Dead",
-                    "label": "",
-                    "step": "Failed",
-                    "status": "stalled",
-                    "statusAtSessionEnd": "failed"
+                    "key": "Passed By Legislature--Enrolling and Final Preparation Process",
+                    "step": "Through Legislature",
+                    "label": "Passed both chambers",
+                    "status": "live",
+                    "statusAtSessionEnd": "pending, passed legislature"
                 },
                 "progress": [
                     {
@@ -16103,8 +16103,8 @@
                     {
                         "step": "first chamber",
                         "status": "current",
-                        "statusLabel": "Pending",
-                        "statusDate": null
+                        "statusLabel": "Passed preliminary floor vote",
+                        "statusDate": "01/23/2025"
                     },
                     {
                         "step": "second chamber",
@@ -30044,10 +30044,10 @@
                 "title": "Generally revise laws related to synthetic cannabinoids",
                 "chamber": "house",
                 "status": {
-                    "key": "Probably Dead",
-                    "label": "",
-                    "step": "Failed",
-                    "status": "stalled",
+                    "key": "In First House--Through 3rd Reading",
+                    "step": "First chamber",
+                    "label": "Passed chamber",
+                    "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -30065,14 +30065,14 @@
                     },
                     {
                         "step": "first chamber",
-                        "status": "current",
-                        "statusLabel": "Passed preliminary floor vote",
-                        "statusDate": "01/22/2025"
+                        "status": "passed",
+                        "statusLabel": "Passed House",
+                        "statusDate": "01/23/2025"
                     },
                     {
                         "step": "second chamber",
-                        "status": "future",
-                        "statusLabel": null,
+                        "status": "current",
+                        "statusLabel": "Pending",
                         "statusDate": null
                     },
                     {
@@ -32490,11 +32490,11 @@
                 "title": "Revise judicial conduct laws",
                 "chamber": "house",
                 "status": {
-                    "key": "Probably Dead",
-                    "label": "",
-                    "step": "Failed",
-                    "status": "stalled",
-                    "statusAtSessionEnd": "failed"
+                    "key": "Passed By Legislature--Enrolling and Final Preparation Process",
+                    "step": "Through Legislature",
+                    "label": "Passed both chambers",
+                    "status": "live",
+                    "statusAtSessionEnd": "pending, passed legislature"
                 },
                 "progress": [
                     {
@@ -32512,8 +32512,8 @@
                     {
                         "step": "first chamber",
                         "status": "current",
-                        "statusLabel": "Pending",
-                        "statusDate": null
+                        "statusLabel": "Passed preliminary floor vote",
+                        "statusDate": "01/23/2025"
                     },
                     {
                         "step": "second chamber",
@@ -41706,6 +41706,128 @@
                 }
             },
             {
+                "key": "hb-301",
+                "identifier": "HB 301",
+                "title": "Generally revise statutes of limitations laws relating to real property",
+                "chamber": "house",
+                "status": {
+                    "key": "In First House--Introduced",
+                    "step": "First chamber",
+                    "label": "Introduced",
+                    "status": "live",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "01/23/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2130?open_tab=bill",
+                "fiscalNoteUrl": "https://bills.legmt.gov/#/bill/2/LC2130?open_tab=fiscal",
+                "legalNoteUrl": "undefined",
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Kerri Seekins-Crowe",
+                    "party": "R",
+                    "locale": "Billings",
+                    "district": "HD 39"
+                }
+            },
+            {
+                "key": "hb-300",
+                "identifier": "HB 300",
+                "title": "Generally revise laws related to discrimination in education",
+                "chamber": "house",
+                "status": {
+                    "key": "In First House--Introduced",
+                    "step": "First chamber",
+                    "label": "Introduced",
+                    "status": "live",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "01/23/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2053?open_tab=bill",
+                "fiscalNoteUrl": "https://bills.legmt.gov/#/bill/2/LC2053?open_tab=fiscal",
+                "legalNoteUrl": "undefined",
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Kerri Seekins-Crowe",
+                    "party": "R",
+                    "locale": "Billings",
+                    "district": "HD 39"
+                }
+            },
+            {
                 "key": "hb-200",
                 "identifier": "HB 200",
                 "title": "Provide for increase in total MEDIA act film tax credits",
@@ -42338,6 +42460,67 @@
                 ],
                 "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0240?open_tab=bill",
                 "fiscalNoteUrl": "https://bills.legmt.gov/#/bill/2/LC0240?open_tab=fiscal",
+                "legalNoteUrl": "undefined",
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Laura Smith",
+                    "party": "D",
+                    "locale": "Helena",
+                    "district": "SD 40"
+                }
+            },
+            {
+                "key": "sb-208",
+                "identifier": "SB 208",
+                "title": "Revise definition of \"dependent child\" in highway patrol, police, and firefighter retirement systems",
+                "chamber": "senate",
+                "status": {
+                    "key": "In First House--Introduced",
+                    "step": "First chamber",
+                    "label": "Introduced",
+                    "status": "live",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "01/23/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1064?open_tab=bill",
+                "fiscalNoteUrl": "https://bills.legmt.gov/#/bill/2/LC1064?open_tab=fiscal",
                 "legalNoteUrl": "undefined",
                 "numArticles": 0,
                 "sponsor": {
@@ -46172,9 +46355,9 @@
                 "title": "Revise the Medicaid expansion program",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Introduced",
+                    "key": "In First House Committee--Nontabled",
                     "step": "First chamber",
-                    "label": "Introduced",
+                    "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -46477,10 +46660,10 @@
                 "title": "Eliminate the board of public assistance",
                 "chamber": "senate",
                 "status": {
-                    "key": "Probably Dead",
-                    "label": "",
-                    "step": "Failed",
-                    "status": "stalled",
+                    "key": "In First House Committee--Nontabled",
+                    "step": "First chamber",
+                    "label": "In committee",
+                    "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -50160,10 +50343,10 @@
                 "title": "Eliminate termination date of community health aide program",
                 "chamber": "senate",
                 "status": {
-                    "key": "Probably Dead",
-                    "label": "",
-                    "step": "Failed",
-                    "status": "stalled",
+                    "key": "In First House Committee--Nontabled",
+                    "step": "First chamber",
+                    "label": "In committee",
+                    "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -52049,11 +52232,11 @@
                 "title": "Creating a railroad track inspection program",
                 "chamber": "house",
                 "status": {
-                    "key": "Passed By Legislature--Enrolling and Final Preparation Process",
-                    "step": "Through Legislature",
-                    "label": "Passed both chambers",
+                    "key": "In First House Committee--Nontabled",
+                    "step": "First chamber",
+                    "label": "In committee",
                     "status": "live",
-                    "statusAtSessionEnd": "pending, passed legislature"
+                    "statusAtSessionEnd": "failed"
                 },
                 "progress": [
                     {
