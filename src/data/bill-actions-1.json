@@ -1165,7 +1165,7 @@
             {
                 "id": "SJ5-0011",
                 "bill": "SJ 5",
-                "date": "01/07/2025",
+                "date": "01/16/2025",
                 "description": "Referred to Committee",
                 "posession": "senate",
                 "committee": null,
@@ -1180,7 +1180,7 @@
             {
                 "id": "SJ5-0012",
                 "bill": "SJ 5",
-                "date": "01/13/2025",
+                "date": "01/16/2025",
                 "description": "Hearing",
                 "posession": "senate",
                 "committee": null,
@@ -1190,6 +1190,19 @@
                 "key": "Hearing",
                 "isMajor": true,
                 "hearing": true,
+                "vote": null
+            },
+            {
+                "id": "SJ5-0013",
+                "bill": "SJ 5",
+                "date": "01/16/2025",
+                "description": "Hearing Canceled",
+                "posession": "senate",
+                "committee": null,
+                "actionUrl": null,
+                "recordings": [],
+                "transcriptUrl": null,
+                "key": "Hearing Canceled",
                 "vote": null
             }
         ]
@@ -2742,21 +2755,6 @@
                 "id": "SB97-0017",
                 "bill": "SB 97",
                 "date": "01/16/2025",
-                "description": "Hearing",
-                "posession": "senate",
-                "committee": null,
-                "actionUrl": null,
-                "recordings": [],
-                "transcriptUrl": null,
-                "key": "Hearing",
-                "isMajor": true,
-                "hearing": true,
-                "vote": null
-            },
-            {
-                "id": "SB97-0018",
-                "bill": "SB 97",
-                "date": "01/16/2025",
                 "description": "Committee Executive Action--Bill Passed",
                 "posession": "senate",
                 "committee": null,
@@ -2771,22 +2769,7 @@
                 "vote": null
             },
             {
-                "id": "SB97-0019",
-                "bill": "SB 97",
-                "date": "01/16/2025",
-                "description": "Hearing",
-                "posession": "senate",
-                "committee": null,
-                "actionUrl": null,
-                "recordings": [],
-                "transcriptUrl": null,
-                "key": "Hearing",
-                "isMajor": true,
-                "hearing": true,
-                "vote": null
-            },
-            {
-                "id": "SB97-0020",
+                "id": "SB97-0018",
                 "bill": "SB 97",
                 "date": "01/16/2025",
                 "description": "Committee Report--Bill Passed",
@@ -2799,7 +2782,7 @@
                 "vote": null
             },
             {
-                "id": "SB97-0021",
+                "id": "SB97-0019",
                 "bill": "SB 97",
                 "date": "01/23/2025",
                 "description": "Scheduled for 2nd Reading",
@@ -3167,6 +3150,21 @@
                 "id": "SB95-0014",
                 "bill": "SB 95",
                 "date": "01/27/2025",
+                "description": "Hearing",
+                "posession": "senate",
+                "committee": null,
+                "actionUrl": null,
+                "recordings": [],
+                "transcriptUrl": null,
+                "key": "Hearing",
+                "isMajor": true,
+                "hearing": true,
+                "vote": null
+            },
+            {
+                "id": "SB95-0015",
+                "bill": "SB 95",
+                "date": "01/27/2025",
                 "description": "Hearing Canceled",
                 "posession": "senate",
                 "committee": null,
@@ -3177,7 +3175,7 @@
                 "vote": null
             },
             {
-                "id": "SB95-0015",
+                "id": "SB95-0016",
                 "bill": "SB 95",
                 "date": "01/27/2025",
                 "description": "Hearing",
@@ -3955,6 +3953,32 @@
                 "transcriptUrl": null,
                 "key": "Scheduled for 2nd Reading",
                 "scheduledForFloorDebate": true,
+                "vote": null
+            },
+            {
+                "id": "SB92-0017",
+                "bill": "SB 92",
+                "date": "01/23/2025",
+                "description": "Sent to Enrolling",
+                "posession": "senate",
+                "committee": null,
+                "actionUrl": null,
+                "recordings": [],
+                "transcriptUrl": null,
+                "key": "Sent to Enrolling",
+                "vote": null
+            },
+            {
+                "id": "SB92-0018",
+                "bill": "SB 92",
+                "date": "01/23/2025",
+                "description": "Sent to Enrolling",
+                "posession": "senate",
+                "committee": null,
+                "actionUrl": null,
+                "recordings": [],
+                "transcriptUrl": null,
+                "key": "Sent to Enrolling",
                 "vote": null
             }
         ]
@@ -9412,6 +9436,23 @@
                 "committeeAction": true,
                 "failed": true,
                 "vote": null
+            },
+            {
+                "id": "SB7-0018",
+                "bill": "SB 7",
+                "date": "01/15/2025",
+                "description": "Committee Executive Action--Bill Not Passed",
+                "posession": "senate",
+                "committee": null,
+                "actionUrl": null,
+                "recordings": [],
+                "transcriptUrl": null,
+                "key": "Committee Executive Action--Bill Not Passed",
+                "isMajor": true,
+                "isHighlight": true,
+                "committeeAction": true,
+                "failed": true,
+                "vote": null
             }
         ]
     },
@@ -14086,6 +14127,19 @@
                 "key": "Scheduled for 2nd Reading",
                 "scheduledForFloorDebate": true,
                 "vote": null
+            },
+            {
+                "id": "SB51-0020",
+                "bill": "SB 51",
+                "date": "01/23/2025",
+                "description": "Sent to Enrolling",
+                "posession": "senate",
+                "committee": null,
+                "actionUrl": null,
+                "recordings": [],
+                "transcriptUrl": null,
+                "key": "Sent to Enrolling",
+                "vote": null
             }
         ]
     },
@@ -14559,6 +14613,19 @@
                 "isHighlight": true,
                 "committeeAction": true,
                 "advanced": true,
+                "vote": null
+            },
+            {
+                "id": "SB5-0018",
+                "bill": "SB 5",
+                "date": "01/13/2025",
+                "description": "Committee Report--Bill Passed",
+                "posession": "senate",
+                "committee": null,
+                "actionUrl": null,
+                "recordings": [],
+                "transcriptUrl": null,
+                "key": "Committee Report--Bill Passed",
                 "vote": null
             }
         ]
@@ -22080,6 +22147,21 @@
                 "isHighlight": true,
                 "introduction": true,
                 "vote": null
+            },
+            {
+                "id": "SB203-0010",
+                "bill": "SB 203",
+                "date": "01/23/2025",
+                "description": "First Reading",
+                "posession": "senate",
+                "committee": null,
+                "actionUrl": null,
+                "recordings": [],
+                "transcriptUrl": null,
+                "key": "First Reading",
+                "isMajor": true,
+                "introduction": true,
+                "vote": null
             }
         ]
     },
@@ -22203,6 +22285,21 @@
                 "key": "Introduced",
                 "isMajor": true,
                 "isHighlight": true,
+                "introduction": true,
+                "vote": null
+            },
+            {
+                "id": "SB202-0010",
+                "bill": "SB 202",
+                "date": "01/23/2025",
+                "description": "First Reading",
+                "posession": "senate",
+                "committee": null,
+                "actionUrl": null,
+                "recordings": [],
+                "transcriptUrl": null,
+                "key": "First Reading",
+                "isMajor": true,
                 "introduction": true,
                 "vote": null
             }
@@ -22330,6 +22427,21 @@
                 "isHighlight": true,
                 "introduction": true,
                 "vote": null
+            },
+            {
+                "id": "SB201-0010",
+                "bill": "SB 201",
+                "date": "01/23/2025",
+                "description": "First Reading",
+                "posession": "senate",
+                "committee": null,
+                "actionUrl": null,
+                "recordings": [],
+                "transcriptUrl": null,
+                "key": "First Reading",
+                "isMajor": true,
+                "introduction": true,
+                "vote": null
             }
         ]
     },
@@ -22453,6 +22565,21 @@
                 "key": "Introduced",
                 "isMajor": true,
                 "isHighlight": true,
+                "introduction": true,
+                "vote": null
+            },
+            {
+                "id": "SB200-0010",
+                "bill": "SB 200",
+                "date": "01/23/2025",
+                "description": "First Reading",
+                "posession": "senate",
+                "committee": null,
+                "actionUrl": null,
+                "recordings": [],
+                "transcriptUrl": null,
+                "key": "First Reading",
+                "isMajor": true,
                 "introduction": true,
                 "vote": null
             }
@@ -37260,6 +37387,19 @@
                 "key": "Scheduled for 2nd Reading",
                 "scheduledForFloorDebate": true,
                 "vote": null
+            },
+            {
+                "id": "SB13-0017",
+                "bill": "SB 13",
+                "date": "01/23/2025",
+                "description": "Sent to Enrolling",
+                "posession": "senate",
+                "committee": null,
+                "actionUrl": null,
+                "recordings": [],
+                "transcriptUrl": null,
+                "key": "Sent to Enrolling",
+                "vote": null
             }
         ]
     },
@@ -38453,6 +38593,19 @@
                 "transcriptUrl": null,
                 "key": "Scheduled for 2nd Reading",
                 "scheduledForFloorDebate": true,
+                "vote": null
+            },
+            {
+                "id": "SB124-0018",
+                "bill": "SB 124",
+                "date": "01/23/2025",
+                "description": "Sent to Enrolling",
+                "posession": "senate",
+                "committee": null,
+                "actionUrl": null,
+                "recordings": [],
+                "transcriptUrl": null,
+                "key": "Sent to Enrolling",
                 "vote": null
             }
         ]
