@@ -61,8 +61,10 @@ const House = ({ representatives, committees }) => {
         </TruncatedContainer>
 
         <NewsletterSignup />
+        
+      {/* TODO: Fix committees and renable this */}
 
-        <h3 id="committees">House Committees</h3>
+        {/* <h3 id="committees">House Committees</h3>
         {committees.map(committee => (
           <div key={committee.name} css={committeeItemStyle}>
             <h4>
@@ -71,7 +73,7 @@ const House = ({ representatives, committees }) => {
             </h4>
             <CommitteeSummary {...committee} billCount={committee.bills.length} />
           </div>
-        ))}
+        ))} */}
 
         <ContactUs />
       </Layout>

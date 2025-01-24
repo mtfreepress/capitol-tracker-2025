@@ -57,8 +57,10 @@ const Senate = ({ senators, committees }) => {
       </TruncatedContainer>
 
       <NewsletterSignup />
+  
+    {/* TODO: Fix committees and renable this */}
 
-      <h3 id="committees">Senate Committees</h3>
+      {/* <h3 id="committees">Senate Committees</h3>
       {committees.map((committee) => {
         const { name, key, members } = committee;
         return (
@@ -69,7 +71,7 @@ const Senate = ({ senators, committees }) => {
             <CommitteeSummary {...committee} billCount={committee.bills.length} />
           </div>
         );
-      })}
+      })} */}
 
       <ContactUs />
     </Layout>
