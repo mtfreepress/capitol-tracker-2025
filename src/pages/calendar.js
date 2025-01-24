@@ -75,19 +75,26 @@ const Calendar = ({ onCalendarBills, committees }) => {
                 {/* display committee hearings */}
                 {hearings.length > 0 && (
                     <>
-                        <h3>Committee Hearings</h3>
+
+                {/* TODO: Fix committees and renable this */}
+                        {/* <h3>Committee Hearings</h3>
                         <div className="note">
                             Bill hearings allow the sponsor to explain a bill and enable public testimony.
-                        </div>
+                        </div> */}
 
                         {/* iterate over committee categories */}
                         {Object.entries(categories).map(([key, committees]) => {
                             if (committees.length > 0) {
                                 const title = {
-                                    amPolicyCommittees: "Morning Policy Committees",
-                                    pmPolicyCommittees: "Afternoon Policy Committees",
-                                    appropsCommittees: "Budget Committees",
-                                    otherCommittees: "Other Committees",
+                                    //  TODO: Revert this once committees is fixed
+                                    // amPolicyCommittees: "Morning Policy Committees",
+                                    // pmPolicyCommittees: "Afternoon Policy Committees",
+                                    // appropsCommittees: "Budget Committees",
+                                    // otherCommittees: "Other Committees",
+                                    amPolicyCommittees: "",
+                                    pmPolicyCommittees: "",
+                                    appropsCommittees: "",
+                                    otherCommittees: "",
                                 }[key];
                                 return (
                                     <div key={key}>

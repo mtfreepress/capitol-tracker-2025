@@ -55,7 +55,7 @@ const BillInfo = ({ bill }) => {
         <div>
             <div css={sponsorCss}>
                 Sponsor: <LawmakerInline lawmaker={sponsor} />
-                {requestor && <span>| Requestor: {requestor}</span>}
+                {/* {requestor && <span>| Requestor: {requestor}</span>} */}
             </div>
 
             <div css={infoRowCss}>
