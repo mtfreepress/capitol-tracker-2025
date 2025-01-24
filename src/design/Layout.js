@@ -78,6 +78,9 @@ const Layout = ({
         <meta name="twitter:image" content={featureImage} />
         <meta name="twitter:description" content={socialDescription || pageDescription} />
 
+        <link rel="preload" href="https://use.typekit.net/fsd6htq.css" as="style" />
+        <link rel="stylesheet" href="https://use.typekit.net/fsd6htq.css" />
+
       </Head>
       {/* Google Analytics */}
       <Script async src="https://www.googletagmanager.com/gtag/js?id=G-S068DPGXET"></Script>
