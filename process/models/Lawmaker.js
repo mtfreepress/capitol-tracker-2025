@@ -1,185 +1,190 @@
-import { getCsv } from '../utils.js'
-
-import {
-    LAWMAKER_REPLACEMENTS,
-} from '../config/overrides.js'
-
-import {
-    // COMMITTEES,
-    EXCLUDE_COMMITTEES,
-} from '../config/committees.js'
 
 
-import {
-    // filterToFloorVotes,
-    // lawmakerLastName,
-    lawmakerKey,
-    billKey,
-    standardizeLawmakerName,
-    getLawmakerSummary,
-    getLawmakerLastName,
-    getLawmakerLocale,
-    standardizeCommiteeNames,
-    isLawmakerActive,
-} from '../functions.js'
 
-export default class Lawmaker {
-    constructor({
-        lawmaker,
-        district,
-        annotation,
-        articles,
-        committeeOrder,
-    }) {
+// Leaving in Just in Case™  
 
-        const {
-            name,
-            party,
-            phone,
-            email,
-            committees,
-            image_path,
-            sessions,
-            locale,
-        } = lawmaker
+// import { getCsv } from '../utils.js'
 
-        const {
-            // displayName could in theory be used to assign custom lawmaker names from annotation file -- unimplemented though
-            // Currently this is being handled by the config list acccessed by standardizeLawmakerName
-            // displayName, 
-            leadershipRole,
-            lawmakerPageText
-        } = annotation
+// import {
+//     LAWMAKER_REPLACEMENTS,
+// } from '../config/overrides.js'
 
-        const standardName = standardizeLawmakerName(name) 
-        this.name = standardName
-        this.summary = getLawmakerSummary(standardName)
-
-        const committeesCleaned = committees
-            .map(d => {
-                return {
-                    committee: standardizeCommiteeNames(d.committee),
-                    role: d.role,
-                }
-            })
-            .sort((a, b) => committeeOrder.indexOf(a.committee) - committeeOrder.indexOf(b.committee))
-            .filter(d => !EXCLUDE_COMMITTEES.includes(d.committee))
-
-        this.data = {
-            key: lawmakerKey(standardName),
-            name: standardName,
-            lastName: getLawmakerLastName(standardName),
-            locale: getLawmakerLocale(standardName),
-            isActive: isLawmakerActive(standardName),
-            district: district.key,
-            districtElexHistory: {
-                last_election: district.last_election,
-                pri_elex: district.pri_elex,
-                gen_elex: district.gen_elex,
-                replacementNote: this.lookForReplacementNote(district.key)
-            },
-            districtNum: +district.key.replace('HD ', '').replace('SD ', ''),
-            districtLocale: district.locale,
-
-            chamber: district.key[0] === 'S' ? 'senate' : 'house',
-            title: district.key[0] === 'S' ? 'Sen.' : 'Rep.',
-            fullTitle: district.key[0] === 'S' ? 'Senator' : 'Representative',
-            party,
-            phone,
-            email,
-            committees: committeesCleaned,
-            leadershipTitle: leadershipRole,
-
-            legislativeHistory: sessions.map(({ year, chamber }) => ({ year, chamber })),
-
-            articles,
-
-            lawmakerPageText: lawmakerPageText,
-
-            imageSlug: image_path.replace('portraits/', '').toLowerCase(),
-
-        }
-    }
+// import {
+//     // COMMITTEES,
+//     EXCLUDE_COMMITTEES,
+// } from '../config/committees.js'
 
 
-    lookForReplacementNote = (districtKey) => {
-        const replacement = LAWMAKER_REPLACEMENTS.find(d => d.district === districtKey)
-        return replacement && replacement.note || null
-    }
+// import {
+//     // filterToFloorVotes,
+//     // lawmakerLastName,
+//     lawmakerKey,
+//     billKey,
+//     standardizeLawmakerName,
+//     getLawmakerSummary,
+//     getLawmakerLastName,
+//     getLawmakerLocale,
+//     standardizeCommiteeNames,
+//     isLawmakerActive,
+// } from '../functions.js'
 
-    addSponsoredBills = ({ sponsoredBills }) => {
-        this.sponsoredBills = sponsoredBills.map(bill => {
-            const {
-                key,
-                identifier,
-                title,
-                chamber,
-                status,
-                progress,
-                label,
-                textUrl,
-                fiscalNoteUrl,
-                legalNoteUrl,
-            } = bill.data
+// export default class Lawmaker {
+//     constructor({
+//         lawmaker,
+//         district,
+//         annotation,
+//         articles,
+//         committeeOrder,
+//     }) {
 
-            return {
-                key,
-                identifier,
-                title,
-                chamber,
-                status, // object
-                progress, // 
-                label,
-                textUrl,
-                fiscalNoteUrl,
-                legalNoteUrl,
-                numArticles: bill.data.articles.length,
-                sponsor: this.summary, // object
-            }
-        })
-    }
+//         const {
+//             name,
+//             party,
+//             phone,
+//             email,
+//             committees,
+//             image_path,
+//             sessions,
+//             locale,
+//         } = lawmaker
 
-    addKeyBillVotes = ({ name, keyBills }) => {
-        const keyBillVotes = keyBills
-            .map(bill => {
-                return {
-                    identifier: bill.data.identifier,
-                    key: bill.data.key,
-                    title: bill.data.title,
-                    explanation: bill.data.explanation,
-                    lawmakerLastVote: bill.getLastVoteInvolvingLawmaker(name)
-                }
-            })
-            .filter(bill => bill.lawmakerLastVote !== null)
-            .map(bill => {
-                return {
-                    identifier: bill.identifier,
-                    key: bill.key,
-                    title: bill.title,
-                    explanation: bill.explanation,
-                    lawmakerVote: bill.lawmakerLastVote.votes.find(d => d.name === name).option,
-                    voteData: bill.lawmakerLastVote.data,
-                }
-            })
-        this.keyBillVotes = keyBillVotes
+//         const {
+//             // displayName could in theory be used to assign custom lawmaker names from annotation file -- unimplemented though
+//             // Currently this is being handled by the config list acccessed by standardizeLawmakerName
+//             // displayName, 
+//             leadershipRole,
+//             lawmakerPageText
+//         } = annotation
 
-    }
+//         const standardName = standardizeLawmakerName(name) 
+//         this.name = standardName
+//         this.summary = getLawmakerSummary(standardName)
 
-    getVotes = (lawmaker, votes) => {
-        const lawmakerVotes = votes.filter(vote => {
-            const voters = vote.votes.map(d => d.name)
-            return voters.includes(lawmaker.name)
-        })
-        return lawmakerVotes
-    }
+//         const committeesCleaned = committees
+//             .map(d => {
+//                 return {
+//                     committee: standardizeCommiteeNames(d.committee),
+//                     role: d.role,
+//                 }
+//             })
+//             .sort((a, b) => committeeOrder.indexOf(a.committee) - committeeOrder.indexOf(b.committee))
+//             .filter(d => !EXCLUDE_COMMITTEES.includes(d.committee))
 
-    exportMerged = () => {
-        return {
-            ...this.data,
-            sponsoredBills: this.sponsoredBills || [],
-            votingSummary: this.votingSummary,
-            keyBillVotes: this.keyBillVotes || [],
-        }
-    }
+//         this.data = {
+//             key: lawmakerKey(standardName),
+//             name: standardName,
+//             lastName: getLawmakerLastName(standardName),
+//             locale: getLawmakerLocale(standardName),
+//             isActive: isLawmakerActive(standardName),
+//             district: district.key,
+//             districtElexHistory: {
+//                 last_election: district.last_election,
+//                 pri_elex: district.pri_elex,
+//                 gen_elex: district.gen_elex,
+//                 replacementNote: this.lookForReplacementNote(district.key)
+//             },
+//             districtNum: +district.key.replace('HD ', '').replace('SD ', ''),
+//             districtLocale: district.locale,
 
-}
+//             chamber: district.key[0] === 'S' ? 'senate' : 'house',
+//             title: district.key[0] === 'S' ? 'Sen.' : 'Rep.',
+//             fullTitle: district.key[0] === 'S' ? 'Senator' : 'Representative',
+//             party,
+//             phone,
+//             email,
+//             committees: committeesCleaned,
+//             leadershipTitle: leadershipRole,
+
+//             legislativeHistory: sessions.map(({ year, chamber }) => ({ year, chamber })),
+
+//             articles,
+
+//             lawmakerPageText: lawmakerPageText,
+
+//             imageSlug: image_path.replace('portraits/', '').toLowerCase(),
+
+//         }
+//     }
+
+
+//     lookForReplacementNote = (districtKey) => {
+//         const replacement = LAWMAKER_REPLACEMENTS.find(d => d.district === districtKey)
+//         return replacement && replacement.note || null
+//     }
+
+//     addSponsoredBills = ({ sponsoredBills }) => {
+//         this.sponsoredBills = sponsoredBills.map(bill => {
+//             const {
+//                 key,
+//                 identifier,
+//                 title,
+//                 chamber,
+//                 status,
+//                 progress,
+//                 label,
+//                 textUrl,
+//                 fiscalNoteUrl,
+//                 legalNoteUrl,
+//             } = bill.data
+
+//             return {
+//                 key,
+//                 identifier,
+//                 title,
+//                 chamber,
+//                 status, // object
+//                 progress, // 
+//                 label,
+//                 textUrl,
+//                 fiscalNoteUrl,
+//                 legalNoteUrl,
+//                 numArticles: bill.data.articles.length,
+//                 sponsor: this.summary, // object
+//             }
+//         })
+//     }
+
+//     addKeyBillVotes = ({ name, keyBills }) => {
+//         const keyBillVotes = keyBills
+//             .map(bill => {
+//                 return {
+//                     identifier: bill.data.identifier,
+//                     key: bill.data.key,
+//                     title: bill.data.title,
+//                     explanation: bill.data.explanation,
+//                     lawmakerLastVote: bill.getLastVoteInvolvingLawmaker(name)
+//                 }
+//             })
+//             .filter(bill => bill.lawmakerLastVote !== null)
+//             .map(bill => {
+//                 return {
+//                     identifier: bill.identifier,
+//                     key: bill.key,
+//                     title: bill.title,
+//                     explanation: bill.explanation,
+//                     lawmakerVote: bill.lawmakerLastVote.votes.find(d => d.name === name).option,
+//                     voteData: bill.lawmakerLastVote.data,
+//                 }
+//             })
+//         this.keyBillVotes = keyBillVotes
+
+//     }
+
+//     getVotes = (lawmaker, votes) => {
+//         const lawmakerVotes = votes.filter(vote => {
+//             const voters = vote.votes.map(d => d.name)
+//             return voters.includes(lawmaker.name)
+//         })
+//         return lawmakerVotes
+//     }
+
+//     exportMerged = () => {
+//         return {
+//             ...this.data,
+//             sponsoredBills: this.sponsoredBills || [],
+//             votingSummary: this.votingSummary,
+//             keyBillVotes: this.keyBillVotes || [],
+//         }
+//     }
+
+// }
