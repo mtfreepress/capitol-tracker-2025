@@ -1,12 +1,12 @@
-import { getCsv } from '../utils.js'
+import { getCsv, getJson } from '../utils.js'
 
 import {
     LAWMAKER_REPLACEMENTS,
 } from '../config/overrides.js'
 
 import {
-    COMMITEE_NAME_CLEANING,
     EXCLUDE_COMMITTEES,
+    COMMITEE_NAME_CLEANING
 } from '../config/committees.js'
 
 import {
@@ -16,9 +16,27 @@ import {
     getLawmakerSummary,
     getLawmakerLastName,
     getLawmakerLocale,
-    standardizeCommiteeNames,
     isLawmakerActive,
 } from '../functions.js'
+
+// Load committees.json and create a mapping of committee titles to their normalized names
+const committeesJson = getJson('inputs/committees/committees.json');
+
+// Create mapping from slug to official name
+const committeeNameMapping = committeesJson.reduce((acc, committee) => {
+    // Create slug from title (e.g. "(H) Judiciary" -> "house-judiciary")
+    const slug = committee.title
+        .toLowerCase()
+        .replace(/^\((h|s)\)\s+/i, (match, chamber) => 
+            chamber.toLowerCase() === 'h' ? 'house-' : 'senate-'
+        )
+        .replace(/\s+/g, '-')
+        .replace(/[^a-z0-9-]/g, '');
+
+    // Map slug to cleaned name from COMMITEE_NAME_CLEANING
+    acc[slug] = COMMITEE_NAME_CLEANING[committee.title] || committee.title;
+    return acc;
+}, {});
 
 export default class Lawmaker {
     constructor({
@@ -51,14 +69,17 @@ export default class Lawmaker {
 
         const committeesCleaned = committees
             .map(d => {
-                const committeeName = COMMITEE_NAME_CLEANING[d.committee] || d.committee;
+                const committeeName = committeeNameMapping[d.committee] || 
+                                   COMMITEE_NAME_CLEANING[d.committee] || 
+                                   d.committee;
+                
                 return {
                     committee: committeeName,
-                    role: d.role,
+                    role: d.role.charAt(0).toUpperCase() + d.role.slice(1)
                 }
             })
             .sort((a, b) => committeeOrder.indexOf(a.committee) - committeeOrder.indexOf(b.committee))
-            .filter(d => !EXCLUDE_COMMITTEES.includes(d.committee))
+            .filter(d => !EXCLUDE_COMMITTEES.includes(d.committee));
 
         this.data = {
             key: lawmakerKey(standardName),
@@ -102,7 +123,7 @@ export default class Lawmaker {
     }
 
     addSponsoredBills = ({ sponsoredBills }) => {
-        this.sponsoredBills = sponsoredBills.map(bill => {
+        this.sponsoredBills = sponsoredBills.map(billData => {
             const {
                 key,
                 identifier,
@@ -114,7 +135,8 @@ export default class Lawmaker {
                 textUrl,
                 fiscalNoteUrl,
                 legalNoteUrl,
-            } = bill.data
+                articles,
+            } = billData.data
 
             return {
                 key,
@@ -127,7 +149,7 @@ export default class Lawmaker {
                 textUrl,
                 fiscalNoteUrl,
                 legalNoteUrl,
-                numArticles: bill.data.articles.length,
+                numArticles: articles.length,
                 sponsor: this.summary, // object
             }
         })
