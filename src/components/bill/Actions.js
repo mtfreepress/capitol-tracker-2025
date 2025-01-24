@@ -151,7 +151,7 @@ const BillActions = ({ actions, lawsUrl, vetoMemoUrl }) => {
       </div>
       <div className="note">
         This table may omit bill actions recorded since this guide&#39;s last update. See the{' '}
-        <a href={lawsUrl}>bill page in LAWS</a> for an official reference.
+        <a href={lawsUrl}>bill page at legmt.gov</a> for an official reference.
       </div>
     </div>
   );
@@ -176,9 +176,10 @@ const Action = (action, showVotes, annotations) => {
             <div>
               {committee && (
                 <>
-                  👥 <em>
+                {/* TODO: This is broken restore when we fix committees */}
+                  {/* 👥 <em>
                     <Link href={`/committees/${committeeUrl(committee)}`}>{committee}</Link>
-                  </em>
+                  </em> */}
                 </>
               )}
             </div>

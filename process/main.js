@@ -22,11 +22,12 @@ Approach here — each of these input buckets has a fetch script that needs to 
 
 // Inputs from official bill tracking system
 const billsRaw = collectJsons('./inputs/bills/*/*-data.json')
+const votesRaw = collectJsons('./inputs/bills/*/*-votes.json')
 const actionsRaw = collectJsons('./inputs/bills/*/*-actions.json')
 const actionsFlat = Array.isArray(actionsRaw) && actionsRaw.some(Array.isArray) ? actionsRaw.flat() : actionsRaw;
-const votesRaw = collectJsons('./inputs/bills/*/*-votes.json')
+// sort actionsFlat by bill identifier alphabetically
+actionsFlat.sort((a, b) => a.bill.localeCompare(b.bill));
 
-// Session-specific data -- mostly static; updated manually as necessary
 const districtsRaw = getJson('./inputs/districts/districts-2025.json')
 const lawmakersRaw = getJson('./inputs/lawmakers/legislator-roster-2025.json')
 const committeesRaw = await getCsv('./inputs/committees/committees.csv')
@@ -54,6 +55,7 @@ const contactUsComponentText = getText('./inputs/annotations/components/about.md
 // config stuff
 const committeeOrder = committeesRaw.map(d => d.name)
 
+console.log(actionsFlat[35].vote)
 
 const articles = articlesRaw.map(article => new Article({ article }).export())
 
@@ -65,7 +67,7 @@ const lawmakers = lawmakersRaw.map(lawmaker => new Lawmaker({
     articles: articles.filter(d => d.lawmakerTags.includes(lawmaker.name)),
     // leave sponsoredBills until after bills objects are created
     // same with keyVotes
-    committeeOrder, // controls what order committee assignments are displayed on lawmaker pages
+    committeeOrder,
 }))
 
 const bills = billsRaw.map(bill => new Bill({
@@ -76,7 +78,6 @@ const bills = billsRaw.map(bill => new Bill({
     articles: articles.filter(d => d.billTags.includes(bill.key)),
 }))
 
-const actions = bills.map(bill => bill.exportActionData()).flat()
 const votes = bills.map(bill => bill.exportVoteData()).flat()
 
 const houseFloorVotes = votes.filter(v => v.type === 'floor' && v.voteChamber === 'house')
@@ -115,9 +116,9 @@ lawmakers.forEach(lawmaker => {
     }
 })
 
-const calendarOutput = new CalendarPage({ actions, bills, updateTime }).export()
+const calendarOutput = new CalendarPage({ actions: actionsFlat, bills, updateTime }).export()
 bills.forEach(bill => bill.data.isOnCalendar = calendarOutput.billsOnCalendar.includes(bill.data.identifier))
-const recapOutput = new RecapPage({ actions, bills, updateTime }).export()
+const recapOutput = new RecapPage({ actions: actionsFlat, bills, updateTime }).export()
 
 const keyBillCategoryKeys = Array.from(new Set(billAnnotations.map(d => d.category))).filter(d => d !== null).filter(d => d !== undefined)
 const keyBillCategoryList = keyBillCategoryKeys.map(category => {
@@ -163,15 +164,22 @@ console.log('\n### Bundling tracker data')
 /*
 Exporting bill actions separately here so they can be kept outside of Gatsby graphql scope
 */
-const billsOutput = bills.map(b => b.exportBillDataOnly())
-const actionsOutput = bills.map(b => ({
-    bill: b.data.identifier,
-    actions: b.exportActionDataWithVotes()
-}))
 
-writeJson('./src/data/bills.json', billsOutput)
+// Group actions by bill
+const groupedActions = actionsFlat.reduce((acc, action) => {
+    if (!acc[action.bill]) {
+        acc[action.bill] = [];
+    }
+    acc[action.bill].push(action);
+    return acc;
+}, {});
 
-// TODO: Remove this once we are sure it is no longer needed
+// Convert grouped actions to the desired format
+const actionsOutput = Object.keys(groupedActions).map(bill => ({
+    bill,
+    actions: groupedActions[bill]
+}));
+
 // Breaking this into chunks to avoid too-large-for-github-files
 const chunkSize = 200
 let index = 1
@@ -179,6 +187,9 @@ for (let start = 0; start < actionsOutput.length; start += chunkSize) {
     writeJson(`./src/data/bill-actions-${index}.json`, actionsOutput.slice(start, start + chunkSize))
     index += 1
 }
+
+const billsOutput = bills.map(b => b.exportBillDataOnly())
+writeJson('./src/data/bills.json', billsOutput)
 
 const lawmakerOutput = lawmakers.map(l => l.exportMerged())
 writeJson('./src/data/lawmakers.json', lawmakerOutput)
