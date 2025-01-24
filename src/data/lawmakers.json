@@ -10123,6 +10123,55 @@
         "imageSlug": "2025/becky-edwards.jpg",
         "sponsoredBills": [
             {
+                "key": "hj-8",
+                "identifier": "HJ 8",
+                "title": "Study resolution on EV taxation and fees",
+                "chamber": "house",
+                "status": {
+                    "key": "In First House--Introduced",
+                    "step": "First chamber",
+                    "label": "Introduced",
+                    "status": "live",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "01/24/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0645?open_tab=bill",
+                "fiscalNoteUrl": "https://bills.legmt.gov/#/bill/2/LC0645?open_tab=fiscal",
+                "legalNoteUrl": "undefined",
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Becky Edwards",
+                    "party": "D",
+                    "locale": "Bozeman",
+                    "district": "HD 61"
+                }
+            },
+            {
                 "key": "hb-26",
                 "identifier": "HB 26",
                 "title": "Repeal mercury thermostat collection act",
