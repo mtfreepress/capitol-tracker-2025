@@ -519,20 +519,6 @@
         "id": "HB65-0024",
         "bill": "HB 65",
         "date": "01/23/2025",
-        "description": "Scheduled for 2nd Reading",
-        "posession": "house",
-        "committee": null,
-        "actionUrl": null,
-        "recordings": [],
-        "transcriptUrl": null,
-        "key": "Scheduled for 2nd Reading",
-        "committeeHearingTime": null,
-        "vote": null
-    },
-    {
-        "id": "HB65-0025",
-        "bill": "HB 65",
-        "date": "01/23/2025",
         "description": "2nd Reading Passed",
         "posession": "house",
         "committee": null,
@@ -542,7 +528,7 @@
         "key": "2nd Reading Passed",
         "committeeHearingTime": null,
         "vote": {
-            "action": "HB65-0025",
+            "action": "HB65-0024",
             "bill": "HB 65",
             "date": "01/23/2025",
             "type": "floor",
@@ -1378,7 +1364,7 @@
         }
     },
     {
-        "id": "HB65-0026",
+        "id": "HB65-0025",
         "bill": "HB 65",
         "date": "01/24/2025",
         "description": "Scheduled for 3rd Reading",
@@ -1392,7 +1378,7 @@
         "vote": null
     },
     {
-        "id": "HB65-0027",
+        "id": "HB65-0026",
         "bill": "HB 65",
         "date": "01/24/2025",
         "description": "Reconsidered Previous Action; Placed on 2nd Reading",
@@ -1404,7 +1390,7 @@
         "key": "Reconsidered Previous Action; Placed on 2nd Reading",
         "committeeHearingTime": null,
         "vote": {
-            "action": "HB65-0027",
+            "action": "HB65-0026",
             "bill": "HB 65",
             "date": "01/24/2025",
             "type": "floor",
@@ -2238,5 +2224,19 @@
                 }
             ]
         }
+    },
+    {
+        "id": "HB65-0027",
+        "bill": "HB 65",
+        "date": "01/27/2025",
+        "description": "Scheduled for 2nd Reading",
+        "posession": "house",
+        "committee": null,
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Scheduled for 2nd Reading",
+        "committeeHearingTime": null,
+        "vote": null
     }
 ]
