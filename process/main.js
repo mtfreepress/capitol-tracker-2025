@@ -55,8 +55,6 @@ const contactUsComponentText = getText('./inputs/annotations/components/about.md
 // config stuff
 const committeeOrder = committeesRaw.map(d => d.name)
 
-console.log(actionsFlat[35].vote)
-
 const articles = articlesRaw.map(article => new Article({ article }).export())
 
 /// do lawmakers first, then bills
