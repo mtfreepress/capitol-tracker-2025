@@ -179,8 +179,6 @@ for d in districts:
             else  parse_legislative_votes(lege_general_2022, districtKey),
     }
 
-    if (districtKey == 'SD 4'): print(parse_legislative_votes(lege_general_2022, districtKey))
-
     output.append({
         "key": districtKey,
         "topology": {
@@ -204,7 +202,7 @@ for d in districts:
         "pop_2010": None,
         "ai_pop_2010": None,
 
-        "last_election": '2024' if (in_cycle_2024 == 'yes') else '2022',
+        "last_election": '2024' if (in_cycle_2024) else '2022',
         "pri_elex": last_primary_elex_results,
         "gen_elex": last_general_elex_results,
         
