@@ -52,28 +52,25 @@ const contactUsComponentText = getText('./inputs/annotations/components/about.md
 ### DATA BUNDLING + WRANGLING
 */
 
-// config stuff
-const committeeDisplayOrder = committeesRaw.map(d => d.key)
-
-
 // POPULTE DATA MODELS
 const articles = articlesRaw.map(article => new Article({ article }).export())
 
 /// do lawmakers first, then bills
+// Do we still need things in this order? If we do bills first, we can avoid doubling back to lawmakers later
 const lawmakers = lawmakersRaw.map(lawmaker => new Lawmaker({
     lawmaker,
     district: districtsRaw.find(d => d.key === lawmaker.district),
     annotation: lawmakerAnnotations.find(d => d.slug === lawmaker.name.replace(/\s/g, '-').toLowerCase()) || {},
     articles: articles.filter(d => d.lawmakerTags.includes(lawmaker.name)),
-    // leave sponsoredBills until after bills objects are created
-    // same with keyVotes
-    committeeDisplayOrder,
+    // leave sponsoredBills until after bills objects are created // necessary?
+    // same with keyVotes // necessary?
 }))
 
 const bills = billsRaw.map(bill => new Bill({
+    // Action models are attached to bills, Vote models are attached to objects
     bill,
     actions: actionsFlat.filter(d => d.bill === bill.key),
-    votes: votesRaw.filter(d => d.bill === bill.key),
+    votes: votesRaw.filter(d => d.bill === bill.key), // These are now being attached to actions; needs to be cleaned up
     annotation: billAnnotations.find(d => d.Identifier === bill.key) || {},
     articles: articles.filter(d => d.billTags.includes(bill.key)),
 }))
@@ -108,7 +105,6 @@ lawmakers.forEach(lawmaker => {
         name: lawmaker.name,
         keyBills: bills.filter(bill => bill.data.isMajorBill)
     })
-    // TODO - Add last vote on key bills
     if (lawmaker.data.chamber === 'house') {
         lawmaker.votingSummary = houseFloorVoteAnalysis.getLawmakerStats(lawmaker.name)
     } else if (lawmaker.data.chamber === 'senate') {
