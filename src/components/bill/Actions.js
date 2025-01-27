@@ -12,10 +12,6 @@ import {
   committeeUrl,
 } from '../../config/utils';
 
-// import {
-//   tableStyle
-// } from '../../config/styles.js.old';
-
 import {
   partyColors,
   positionColors
@@ -350,46 +346,51 @@ const partyVotes = css`
 `
 
 const VoteListing = ({ votes, voteUrl, defaultOpen = false }) => {
-  const [isOpen, setIsOpen] = useState(defaultOpen)
-  console.log(votes)
-  const gopVotes = votes.filter(d => d.party === 'R').sort((a, b) => a.lastName.localeCompare(b.lastName))
-  const demVotes = votes.filter(d => d.party === 'D').sort((a, b) => a.lastName.localeCompare(b.lastName))
-  return <div>
-    <button css={[inlineButtonCss]} onClick={() => setIsOpen(!isOpen)}>
-      {isOpen ? <span>&#x25BE; Hide full vote breakdown</span> : <span>&#x25B8; Show full vote breakdown</span>}
-    </button>
-    {/* <span>  <a href={voteUrl}>Official vote page.</a></span> */}
-    {
-      isOpen ?
-        <div css={voteListing}>
-          <div css={col}>
-            <div css={partyLabel}>Republicans</div>
-            <div css={partyVotes}>
-              {
-                gopVotes.map(VoteItem)
-              }
-            </div>
-          </div>
-          <div css={col}>
-            <div css={partyLabel}>Democrats</div>
-            <div css={partyVotes}>
-              {
-                demVotes.map(VoteItem)
-              }
-            </div>
-          </div>
-          {voteUrl && <div className="note"><a href={voteUrl} target="_blank" rel="noopener noreferrer">Official vote page</a></div>}
-        </div> : null
-    }
-    {
-      isOpen ?
-        <button className='inlineButton' onClick={() => setIsOpen(false)}>
-          Hide full vote breakdown
-        </button> : null
-    }
+  const [isOpen, setIsOpen] = useState(defaultOpen);
 
-  </div>
-}
+  // Debugging: Log the votes array
+  console.log('votes:', votes);
+
+  const gopVotes = votes.filter(d => d.party === 'R').sort((a, b) => a.lastName.localeCompare(b.lastName));
+  const demVotes = votes.filter(d => d.party === 'D').sort((a, b) => a.lastName.localeCompare(b.lastName));
+
+  return (
+    <div>
+      <button css={[inlineButtonCss]} onClick={() => setIsOpen(!isOpen)}>
+        {isOpen ? <span>&#x25BE; Hide full vote breakdown</span> : <span>&#x25B8; Show full vote breakdown</span>}
+      </button>
+      {/* <span>  <a href={voteUrl}>Official vote page.</a></span> */}
+      {
+        isOpen ?
+          <div css={voteListing}>
+            <div css={col}>
+              <div css={partyLabel}>Republicans</div>
+              <div css={partyVotes}>
+                {
+                  gopVotes.map(VoteItem)
+                }
+              </div>
+            </div>
+            <div css={col}>
+              <div css={partyLabel}>Democrats</div>
+              <div css={partyVotes}>
+                {
+                  demVotes.map(VoteItem)
+                }
+              </div>
+            </div>
+            {voteUrl && <div className="note"><a href={voteUrl} target="_blank" rel="noopener noreferrer">Official vote page</a></div>}
+          </div> : null
+      }
+      {
+        isOpen ?
+          <button className='inlineButton' onClick={() => setIsOpen(false)}>
+            Hide full vote breakdown
+          </button> : null
+      }
+    </div>
+  );
+};
 
 const voteItemCss = css`
   display: flex;
