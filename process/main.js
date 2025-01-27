@@ -71,12 +71,16 @@ const lawmakers = lawmakersRaw.map(lawmaker => new Lawmaker({
 const bills = billsRaw.map(bill => new Bill({
     bill,
     actions: actionsFlat.filter(d => d.bill === bill.key),
-    votes: votesRaw.filter(d => d.bill === bill.key),
+    votes: actionsFlat.filter(d => d.vote && d.vote.bill === bill.key),
     annotation: billAnnotations.find(d => d.Identifier === bill.key) || {},
     articles: articles.filter(d => d.billTags.includes(bill.key)),
 }))
 
 const votes = bills.map(bill => bill.exportVoteData()).flat()
+
+console.log(votes[0])
+
+
 
 const houseFloorVotes = votes.filter(v => v.type === 'floor' && v.voteChamber === 'house')
 const senateFloorVotes = votes.filter(v => v.type === 'floor' && v.voteChamber === 'senate')
