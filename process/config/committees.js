@@ -1,8 +1,4 @@
 
-// export const COMMITTEE_NAME_CLEANING = {
-// TODO - switch over to model analogous to lawmakers to capture variation in committe names from different places in LAWS
-// }
-
 export const COMMITEE_NAME_CLEANING = {
     // standardizeCommiteeNames in functions.js accounts for '(H) (H)' and '(S) (S)' quirk
     '(H) Appropriations': 'House Appropriations',
@@ -64,14 +60,21 @@ export const COMMITEE_NAME_CLEANING = {
     "(J) (H) Joint Natural Resources": 'Joint Natural Resources',
 }
 
+// Committees that may occur in data that we shouldn't use for pages or list on lawmaker pages
 export const EXCLUDE_COMMITTEES = [
+    
+    // Entire chambers
     'Senate Committee of the Whole',
     'House Committee of the Whole',
+    
+    // Joint committees
     'Joint Education',
     'Joint State Admin',
     'Joint Fish, Wildlife & Parks',
     'Joint Appropriations',
     'Joint Natural Resources',
+    
+    // One-off 2023 committees
     'Select Committee on Judicial Transparency and Accountability',
     'Joint Select Committee on Redistricting',
 ]
