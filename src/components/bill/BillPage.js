@@ -12,7 +12,7 @@ import BillActions from '../bill/Actions';
 
 const BillPage = ({ bill }) => {
   const {
-    key, identifier, title, status, progress, chamber,
+    key, identifier, identifierLong, title, status, progress, chamber,
     lawsUrl, vetoMemoUrl, articles, actions,
     explanation, type,
     billPageText
@@ -22,12 +22,12 @@ const BillPage = ({ bill }) => {
     <div>
       <Layout
         relativePath={`/${key}`}
-        pageTitle={`${identifier}: ${title} | 2025 MTFP Capitol Tracker`}
-        pageDescription={"Bill text, details and status."}
-        socialTitle={`${identifier} | 2025 MTFP Capitol Tracker`}
-        socialDescription={`${title}`}
+        pageTitle={`${identifierLong}: ${title} | 2025 MTFP Capitol Tracker`}
+        pageDescription={"Bill text, sponsor, details and status."}
+        socialTitle={`${identifierLong} | 2025 MTFP Capitol Tracker`}
+        socialDescription={`Official short title: ${title}.`}
       >
-        <h1>{identifier}: {title}</h1>
+        <h1>{identifierLong}: {title}</h1>
         <div>{explanation}</div>
 
         <BillStatus
