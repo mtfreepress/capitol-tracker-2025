@@ -52,10 +52,6 @@ const contactUsComponentText = getText('./inputs/annotations/components/about.md
 ### DATA BUNDLING + WRANGLING
 */
 
-// config stuff
-const committeeDisplayOrder = committeesRaw.map(d => d.key)
-
-
 // POPULTE DATA MODELS
 const articles = articlesRaw.map(article => new Article({ article }).export())
 
@@ -67,7 +63,6 @@ const lawmakers = lawmakersRaw.map(lawmaker => new Lawmaker({
     articles: articles.filter(d => d.lawmakerTags.includes(lawmaker.name)),
     // leave sponsoredBills until after bills objects are created
     // same with keyVotes
-    committeeDisplayOrder,
 }))
 
 const bills = billsRaw.map(bill => new Bill({
