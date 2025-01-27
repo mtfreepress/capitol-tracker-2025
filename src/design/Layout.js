@@ -14,7 +14,7 @@ import { metaData } from "@/config";
 // filler stuff until we can get metadata pipeline worked out
 const pageTitle = 'TK'
 const pageUrl = 'TK'
-const featureImage = null
+const defaultFeatureImage = null
 
 const bodyStyle = css`
     position: relative;
@@ -48,11 +48,13 @@ const Layout = ({
   children, 
   location 
 }) => {
+  
   const {
     baseUrl,
   } = metaData
-  const pageUrl = relativePath === '/' ? `${baseUrl}/` : `${baseUrl}/${relativePath}/`
-  const featureImage = pageFeatureImage || null
+
+  const pageUrl = relativePath === '/' ? `${baseUrl}/` : `${baseUrl}${relativePath}/`
+  const featureImage = pageFeatureImage ?  `${baseUrl}/${pageFeatureImage}` : `${baseUrl}/2025-capitol-tracker-feature-image.jpg`
   return (
     <div>
       <Head>
