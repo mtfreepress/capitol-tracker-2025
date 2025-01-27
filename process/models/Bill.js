@@ -124,9 +124,9 @@ export default class Bill {
         // matching with votes for actions that have them
         // actions should come from scraper in order
         return actions.map(action => {
-            const rawVote = votes.find(v => v.action_id === action.id)
-            const vote = rawVote && new Vote({
-                vote: rawVote,
+            // const rawVote = votes.find(v => v.action_id === action.id)
+            const vote = action.vote && new Vote({
+                vote: action.vote,
                 billVoteMajorityRequired: voteMajorityRequired,
                 billStartingChamber: chamber,
             }) || null

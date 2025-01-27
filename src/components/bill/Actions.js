@@ -351,7 +351,7 @@ const partyVotes = css`
 
 const VoteListing = ({ votes, voteUrl, defaultOpen = false }) => {
   const [isOpen, setIsOpen] = useState(defaultOpen)
-
+  console.log(votes)
   const gopVotes = votes.filter(d => d.party === 'R').sort((a, b) => a.lastName.localeCompare(b.lastName))
   const demVotes = votes.filter(d => d.party === 'D').sort((a, b) => a.lastName.localeCompare(b.lastName))
   return <div>
