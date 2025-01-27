@@ -16,7 +16,7 @@ export default class Vote {
             seq_number,
             date,
             description,
-            totals,
+            count,
             votes,
             error,
         } = vote
@@ -50,11 +50,11 @@ export default class Vote {
 
             thresholdRequired,
 
-            count: totals, // reformatting
+            count, // reformatting
             gopCount,
             demCount,
 
-            motionPassed: this.didMotionPass(totals, thresholdRequired, billStartingChamber, voteChamber),
+            motionPassed: this.didMotionPass(count, thresholdRequired, billStartingChamber, voteChamber),
             gopSupported: this.didMotionPass(gopCount, thresholdRequired, billStartingChamber, voteChamber),
             demSupported: this.didMotionPass(demCount, thresholdRequired, billStartingChamber, voteChamber),
 

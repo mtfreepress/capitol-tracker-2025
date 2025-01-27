@@ -55,8 +55,6 @@ const contactUsComponentText = getText('./inputs/annotations/components/about.md
 // config stuff
 const committeeOrder = committeesRaw.map(d => d.name)
 
-console.log(actionsFlat[35].vote)
-
 const articles = articlesRaw.map(article => new Article({ article }).export())
 
 /// do lawmakers first, then bills
@@ -166,19 +164,25 @@ Exporting bill actions separately here so they can be kept outside of Gatsby gra
 */
 
 // Group actions by bill
-const groupedActions = actionsFlat.reduce((acc, action) => {
-    if (!acc[action.bill]) {
-        acc[action.bill] = [];
-    }
-    acc[action.bill].push(action);
-    return acc;
-}, {});
+// const groupedActions = actionsFlat.reduce((acc, action) => {
+//     if (!acc[action.bill]) {
+//         acc[action.bill] = [];
+//     }
+//     acc[action.bill].push(action);
+//     return acc;
+// }, {});
 
-// Convert grouped actions to the desired format
-const actionsOutput = Object.keys(groupedActions).map(bill => ({
-    bill,
-    actions: groupedActions[bill]
-}));
+// // Convert grouped actions to the desired format
+// const actionsOutput = Object.keys(groupedActions).map(bill => ({
+//     bill,
+//     actions: groupedActions[bill]
+// }));
+
+const billsOutput = bills.map(b => b.exportBillDataOnly())
+const actionsOutput = bills.map(b => ({
+    bill: b.data.identifier,
+    actions: b.exportActionDataWithVotes()
+}))
 
 // Breaking this into chunks to avoid too-large-for-github-files
 const chunkSize = 200
@@ -188,7 +192,7 @@ for (let start = 0; start < actionsOutput.length; start += chunkSize) {
     index += 1
 }
 
-const billsOutput = bills.map(b => b.exportBillDataOnly())
+// const billsOutput = bills.map(b => b.exportBillDataOnly())
 writeJson('./src/data/bills.json', billsOutput)
 
 const lawmakerOutput = lawmakers.map(l => l.exportMerged())

@@ -8,7 +8,7 @@ import {
 import { ACTIONS } from '../config/procedure.js'
 
 export default class Action {
-    constructor({ action, vote }) {
+constructor({ action, vote }) {
 
         const {
             id,
