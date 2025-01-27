@@ -11,7 +11,7 @@ import CommitteeSummary from '../components/committee/Summary';
 import ContactUs from '../components/ContactUs';
 import NewsletterSignup from '../components/NewsletterSignup';
 
-import senateData from '../data/senate.json';
+import senateData from '../data/house.json';
 import committeesData from '../data/committees.json';
 import lawmakers from '../data/lawmakers.json'; 
 
@@ -32,20 +32,20 @@ const committeeItemStyle = css`
 `;
 
 // Page Component
-const Senate = ({ senators, committees }) => {
+const House = ({ representatives, committees }) => {
   const { text, leadership } = senateData
 
   return (
     <Layout
-      relativePath='/senate'
-      pageTitle={"Montana Senate | 2025 MTFP Capitol Tracker"}
-      pageDescription={"The senators and committees of the 2025 Montana Senate."}
-      socialTitle={"Montana Senate: 2025 MTFP Capitol Tracker"}
-      socialDescription={"The lawmakers and committees of the 2025 Montana Senate."}
+      relativePath='/house'
+      pageTitle={"Montana House | 2025 MTFP Capitol Tracker"}
+      pageDescription={"The representatives and committees of the 2025 Montana House."}
+      socialTitle={"Montana House: 2025 MTFP Capitol Tracker"}
+      socialDescription={"The lawmakers and committees of the 2025 Montana House."}
     >
       
-      <h1>The Montana Senate</h1>
-      <Link href="/senate#members">Senators ({senators.length})</Link> • <Link href="/senate#committees">Committees ({committees.length})</Link>
+      <h1>The Montana House</h1>
+      <Link href="/house#members">Representatives ({representatives.length})</Link> • <Link href="/house#committees">Committees ({committees.length})</Link>
       <ReactMarkdown>{text}</ReactMarkdown>
 
       <h3>Leadership</h3>
@@ -53,14 +53,14 @@ const Senate = ({ senators, committees }) => {
 
       <h3 id="members">Membership</h3>
       <TruncatedContainer height={600} closedText="See full roster" openedText="See less">
-        <Roster chamberLabel="Senate" lawmakers={senators} />
+        <Roster chamberLabel="House" lawmakers={representatives} />
       </TruncatedContainer>
 
       <NewsletterSignup />
   
     {/* TODO: Fix committees and renable this */}
 
-      {/* <h3 id="committees">Senate Committees</h3>
+      {/* <h3 id="committees">House Committees</h3>
       {committees.map((committee) => {
         const { name, key, members } = committee;
         return (
@@ -78,16 +78,16 @@ const Senate = ({ senators, committees }) => {
   );
 };
 
-export default Senate;
+export default House;
 
 export const getStaticProps = async () => {
-    const senators = lawmakers.filter(lawmaker => lawmaker.chamber === 'senate' && lawmaker.isActive);
+    const representatives = lawmakers.filter(lawmaker => lawmaker.chamber === 'house' && lawmaker.isActive);
     
-    const committees = committeesData.filter(committee => committee.chamber === 'senate');
+    const committees = committeesData.filter(committee => committee.chamber === 'house');
 
   return {
     props: {
-      senators,
+      representatives,
       committees,
     },
   };
