@@ -9407,10 +9407,10 @@
         "lcIdentifier": "LC1887",
         "type": "senate bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
-            "step": "First chamber",
-            "label": "In committee",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -24568,6 +24568,87 @@
         "isOnCalendar": false
     },
     {
+        "key": "hb-317",
+        "identifier": "HB 317",
+        "chamber": "house",
+        "title": "Revise laws regarding Idaho college of osteopathic medicine program",
+        "session": "2",
+        "lcIdentifier": "LC3261",
+        "type": "house bill",
+        "status": {
+            "key": "In First House--Introduced",
+            "step": "First chamber",
+            "label": "Introduced",
+            "status": "live",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "passed",
+                "statusLabel": "Introduced",
+                "statusDate": "01/27/2025"
+            },
+            {
+                "step": "first committee",
+                "status": "current",
+                "statusLabel": "Pending",
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "David Bedey",
+            "party": "R",
+            "locale": "Hamilton",
+            "district": "HD 86"
+        },
+        "requestor": "David Bedey",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "SIMPLE",
+        "subjects": [
+            "Colleges  (see also: University System)",
+            "Schools and Education",
+            "University System (see also:  Colleges)"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3261?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3261?open_tab=bill",
+        "fiscalNoteUrl": "https://bills.legmt.gov/#/bill/2/LC3261?open_tab=fiscal",
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3261?open_tab=amend",
+        "legalNoteUrl": "undefined",
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0,
+        "isOnCalendar": false
+    },
+    {
         "key": "hb-316",
         "identifier": "HB 316",
         "chamber": "house",
@@ -32955,7 +33036,7 @@
         "key": "hb-222",
         "identifier": "HB 222",
         "chamber": "house",
-        "title": "Creating open wolf hunting season until the population is 600 or fewer",
+        "title": "Creating open wolf hunting season until the population is at or below a certain number",
         "session": "2",
         "lcIdentifier": "LC1743",
         "type": "house bill",
@@ -36276,10 +36357,10 @@
         "lcIdentifier": "LC1382",
         "type": "house bill",
         "status": {
-            "key": "In First House--Out of Committee",
-            "step": "First chamber",
-            "label": "Out of committee",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -37094,10 +37175,10 @@
         "lcIdentifier": "LC2548",
         "type": "house bill",
         "status": {
-            "key": "In First House--Out of Committee",
-            "step": "First chamber",
-            "label": "Out of committee",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
