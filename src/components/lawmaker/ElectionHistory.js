@@ -57,10 +57,11 @@ const LawmakerElectionHistory = ({ lawmaker }) => {
                 <Election candidates={legPriElex} />
             </div>
             <div>
-                <h4>Governor vote in district, 2020</h4>
+                <h4>Governor vote in district, 2024</h4>
                 <Election candidates={govGenElex} />
             </div>
         </div>
+        <div className="note">{last_election === '2022' ? 'Senators elected in 2022 were assigned new districts during the 2023 redistricting cycle.' : null}</div>
 
     </div>
 }
