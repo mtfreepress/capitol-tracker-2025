@@ -53,10 +53,10 @@ const contactUsComponentText = getText('./inputs/annotations/components/about.md
 */
 
 // config stuff
-const committeeOrder = committeesRaw.map(d => d.name)
+const committeeDisplayOrder = committeesRaw.map(d => d.key)
 
-console.log(actionsFlat[35].vote)
 
+// POPULTE DATA MODELS
 const articles = articlesRaw.map(article => new Article({ article }).export())
 
 /// do lawmakers first, then bills
@@ -67,7 +67,7 @@ const lawmakers = lawmakersRaw.map(lawmaker => new Lawmaker({
     articles: articles.filter(d => d.lawmakerTags.includes(lawmaker.name)),
     // leave sponsoredBills until after bills objects are created
     // same with keyVotes
-    committeeOrder,
+    committeeDisplayOrder,
 }))
 
 const bills = billsRaw.map(bill => new Bill({
