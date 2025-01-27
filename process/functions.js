@@ -11,16 +11,18 @@ import {
     // EXCLUDE_COMMITTEES,
 } from './config/committees.js'
 
-import { getJson } from './utils.js'
+import { getJson, getCsv } from './utils.js'
 
-// const roster = getJson('./process/config/lawmaker-roster-2023.json')
 const roster = getJson('./inputs/lawmakers/legislator-roster-2025.json')
+const committees = await getCsv('./inputs/committees/committees.csv')
 
 export const billKey = (identifier) => identifier.substring(0, 2).toLowerCase() + '-' + identifier.substring(3,)
 export const lawmakerKey = (name) => name.replace(/\s/g, '-')
 
 // Should be replaced by manual config
 // export const commiteeKey = (name) => name.replace(/,/g, '').replace(/\s/g, '-').toLowerCase()
+
+// ## Data cleaning formatting helpers
 
 export const capitalize = string => string[0].toUpperCase() + string.slice(1).toLowerCase()
 
@@ -30,6 +32,9 @@ export const standardizeDate = date => {
     if (!date) return null
     return dateFormat(new Date(date))
 }
+
+// ## Committee utility functions
+// Stored here in case they're needed by multiple data models, so we can avoid redunduncy/consistency issues
 
 export const standardCommiteeNames = Array.from(new Set(Object.values(COMMITEE_NAME_CLEANING)))
 export const standardizeCommiteeNames = name => {
@@ -42,19 +47,25 @@ export const standardizeCommiteeNames = name => {
     if (!clean) console.error(`COMMITEE_NAME_CLEANING missing "${preClean}"`)
     return clean
 }
-export const getCommittee = name => {
-    const match = COMMITTEES.find(d.name === name)
-    if (!match) console.error(`COMMITTEES missing ${name}`)
+export const getCommitteeDataByKey = key => {
+    const match = committees.find(d => d.committeeKey === key)
+    if (!match) console.error(`/inputs/committees/committees.csv missing key "${key}"`)
     return match
 }
+export const getCommitteeDisplayOrder = () => committees.map(d => d.committeeKey)
+
 export const getCommitteeTime = name => {
+    // Needs updating if it's still used
     const match = getCommittee(name) || {}
     return match.type || null
 }
 export const getCommitteeType = name => {
+    // Needs updating if it's still used
     const match = getCommittee(name) || {}
     return match.type || null
 }
+
+// ## Lawmaker utility functions
 
 export const standardLawmakerNames = Array.from(new Set(Object.values(LAWMAKER_NAME_CLEANING)))
 export const standardizeLawmakerName = name => {
@@ -81,8 +92,8 @@ export const isLawmakerActive = standardName => {
 }
 
 export const getLawmakerSummary = standardName => {
-    // Pulls basic lawmaker info from pre-packaged roster file
-    // Avoids circular data merge issues
+    // Pulls basic lawmaker info from roster file
+    // Avoids circular data merge issues (in theory?)
     const match = roster.find(d => d.name === standardName) || {}
     if (!match.name) console.error(`Roster missing name ${standardName}`)
     // This is used for bill sponsor summaries, vote analyses, etc.
@@ -93,12 +104,6 @@ export const getLawmakerSummary = standardName => {
         locale: match.locale,
         district: match.district,
     }
-}
-
-export const cleanCommitteeName = rawCommitteeName => {
-    const match = COMMITTEES.find(d => d.key === rawCommitteeName)
-    if (!match) console.error(`Committee list missing`, rawCommitteeName)
-    return match.name
 }
 
 export const getLegislativeLeaderDetails = (lawmakers, title) => {

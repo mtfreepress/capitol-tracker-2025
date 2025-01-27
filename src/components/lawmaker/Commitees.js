@@ -18,14 +18,13 @@ const lawmakerCommitteesStyle = css`
 `;
 
 const LawmakerCommittees = ({ committees }) => {
-  console.log({committees})
   return (
     <div css={lawmakerCommitteesStyle}>
       {committees.map(c => (
-        <div key={c.committee} className="committee">
-          <strong>{c.committee}</strong>
-          {/* <Link href={`/committees/${committeeUrl(c.committee)}`}>
-            <strong>{c.committee}</strong>
+        <div key={c.key} className="committee">
+          <strong>{c.displayName}</strong>
+          {/* <Link href={`/committees/${committeeUrl(c.key)}`}>
+            <strong>{c.displayName}</strong>
           </Link> */}
           {c.role !== 'Member' ? ` - ${c.role} ${c.role === 'Chair' ? '🪑' : ''}` : null}
         </div>
