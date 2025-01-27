@@ -49,6 +49,8 @@ export default class Lawmaker {
         this.name = standardName
         this.summary = getLawmakerSummary(standardName)
 
+        if (district.key === 'SD 2') console.log('X', district.last_election)
+
         this.data = {
             key: lawmakerKey(standardName),
             name: standardName,
