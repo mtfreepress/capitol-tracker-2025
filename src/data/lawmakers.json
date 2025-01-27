@@ -114,11 +114,13 @@
         "email": "Eric.Albus@legmt.gov",
         "committees": [
             {
-                "committee": "House Appropriations",
+                "key": "house-appropriations",
+                "displayName": "House Appropriations",
                 "role": "Member"
             },
             {
-                "committee": "joint-appropriations-section-c",
+                "key": "joint-appropriations-section-c",
+                "displayName": "Joint Appropriations Section C — Natural Resources and Transportation",
                 "role": "Member"
             }
         ],
@@ -563,15 +565,18 @@
         "email": "Brad.Barker@legmt.gov",
         "committees": [
             {
-                "committee": "House Appropriations",
+                "key": "house-appropriations",
+                "displayName": "House Appropriations",
                 "role": "Member"
             },
             {
-                "committee": "House Rules",
+                "key": "house-rules",
+                "displayName": "House Rules",
                 "role": "Member"
             },
             {
-                "committee": "joint-appropriations-section-e",
+                "key": "joint-appropriations-section-e",
+                "displayName": "Joint Appropriations Section E — Education",
                 "role": "Member"
             }
         ],
@@ -825,15 +830,18 @@
         "email": "Denise.Baum@legmt.gov",
         "committees": [
             {
-                "committee": "House Judiciary",
+                "key": "house-judiciary",
+                "displayName": "House Judiciary",
                 "role": "Member"
             },
             {
-                "committee": "House Transportation",
+                "key": "house-transportation",
+                "displayName": "House Transportation",
                 "role": "Vice-chair"
             },
             {
-                "committee": "House Agriculture",
+                "key": "house-agriculture",
+                "displayName": "House Agriculture",
                 "role": "Member"
             }
         ],
@@ -1343,15 +1351,18 @@
         "email": "Becky.Beard@legmt.gov",
         "committees": [
             {
-                "committee": "Senate Taxation",
+                "key": "senate-taxation",
+                "displayName": "Senate Taxation",
                 "role": "Vice-chair"
             },
             {
-                "committee": "Senate Education and Cultural Resources",
+                "key": "senate-education-and-cultural-resources",
+                "displayName": "Senate Education and Cultural Resources",
                 "role": "Member"
             },
             {
-                "committee": "Senate Local Government",
+                "key": "senate-local-government",
+                "displayName": "Senate Local Government",
                 "role": "Vice-chair"
             }
         ],
@@ -2111,15 +2122,18 @@
         "email": "David.Bedey@legmt.gov",
         "committees": [
             {
-                "committee": "House Appropriations",
+                "key": "house-appropriations",
+                "displayName": "House Appropriations",
                 "role": "Vice-chair"
             },
             {
-                "committee": "House Rules",
+                "key": "house-rules",
+                "displayName": "House Rules",
                 "role": "Member"
             },
             {
-                "committee": "joint-appropriations-section-e",
+                "key": "joint-appropriations-section-e",
+                "displayName": "Joint Appropriations Section E — Education",
                 "role": "Chair"
             }
         ],
@@ -2146,7 +2160,7 @@
                 "title": "Teacher pay, school funding and math skills top on Montana lawmakers’ priority list",
                 "category": "Education",
                 "subtitle": "",
-                "date": "2025-01-14T14:53:22.000Z",
+                "date": "2025-01-14T21:53:22.000Z",
                 "link": "https://montanafreepress.org/2025/01/14/teacher-pay-school-funding-and-math-skills-top-on-montana-lawmakers-priority-list/",
                 "author": "Alex Sakariassen",
                 "imageUrl": "https://montanafreepress.org/1-6-senate-house-4/",
@@ -2160,7 +2174,7 @@
                 "title": "Legislature proposes 2025 session rules",
                 "category": "2025 Legislature",
                 "subtitle": "",
-                "date": "2024-12-03T17:26:50.000Z",
+                "date": "2024-12-04T00:26:50.000Z",
                 "link": "https://montanafreepress.org/2024/12/03/legislature-proposes-2025-session-rules/",
                 "author": "Tom Lutey",
                 "imageUrl": "https://montanafreepress.org/montana-state-capitol-15/",
@@ -2961,11 +2975,13 @@
         "email": "Lyn.Bennett@legmt.gov",
         "committees": [
             {
-                "committee": "House State Administration",
+                "key": "house-state-administration",
+                "displayName": "House State Administration",
                 "role": "Member"
             },
             {
-                "committee": "House Human Services",
+                "key": "house-human-services",
+                "displayName": "House Human Services",
                 "role": "Member"
             }
         ],
@@ -3215,15 +3231,18 @@
         "email": "Marta.Bertoglio@legmt.gov",
         "committees": [
             {
-                "committee": "House State Administration",
+                "key": "house-state-administration",
+                "displayName": "House State Administration",
                 "role": "Vice-chair"
             },
             {
-                "committee": "House Education",
+                "key": "house-education",
+                "displayName": "House Education",
                 "role": "Member"
             },
             {
-                "committee": "House Local Government",
+                "key": "house-local-government",
+                "displayName": "House Local Government",
                 "role": "Member"
             }
         ],
@@ -3699,19 +3718,23 @@
         "email": "kenneth.bogner@legmt.gov",
         "committees": [
             {
-                "committee": "joint-appropriations-section-c",
+                "key": "senate-finance-and-claims",
+                "displayName": "Senate Finance and Claims",
                 "role": "Member"
             },
             {
-                "committee": "Senate Finance and Claims",
+                "key": "senate-local-government",
+                "displayName": "Senate Local Government",
                 "role": "Member"
             },
             {
-                "committee": "Senate Local Government",
+                "key": "senate-energy-and-telecommunications",
+                "displayName": "Senate Energy and Telecommunications",
                 "role": "Member"
             },
             {
-                "committee": "senate-energy-and-telecommunications",
+                "key": "joint-appropriations-section-c",
+                "displayName": "Joint Appropriations Section C — Natural Resources and Transportation",
                 "role": "Member"
             }
         ],
@@ -4164,23 +4187,28 @@
         "email": "Ellie.Boldman@legmt.gov",
         "committees": [
             {
-                "committee": "joint-appropriations-section-f",
+                "key": "senate-finance-and-claims",
+                "displayName": "Senate Finance and Claims",
                 "role": "Member"
             },
             {
-                "committee": "Senate Finance and Claims",
+                "key": "senate-local-government",
+                "displayName": "Senate Local Government",
                 "role": "Member"
             },
             {
-                "committee": "Senate Local Government",
-                "role": "Member"
-            },
-            {
-                "committee": "Senate Agriculture, Livestock and Irrigation",
+                "key": "senate-agriculture-livestock-and-irrigation",
+                "displayName": "Senate Agriculture, Livestock and Irrigation",
                 "role": "Vice-chair"
             },
             {
-                "committee": "Senate Rules",
+                "key": "senate-rules",
+                "displayName": "Senate Rules",
+                "role": "Member"
+            },
+            {
+                "key": "joint-appropriations-section-f",
+                "displayName": "Joint Appropriations Section F — Long-Range Planning",
                 "role": "Member"
             }
         ],
@@ -4331,19 +4359,23 @@
         "email": "Larry.Brewster@legmt.gov",
         "committees": [
             {
-                "committee": "House Taxation",
+                "key": "house-taxation",
+                "displayName": "House Taxation",
                 "role": "Member"
             },
             {
-                "committee": "House Energy, Technology and Federal Relations",
+                "key": "house-energy-technology-and-federal-relations",
+                "displayName": "House Energy, Technology and Federal Relations",
                 "role": "Member"
             },
             {
-                "committee": "House Local Government",
+                "key": "house-local-government",
+                "displayName": "House Local Government",
                 "role": "Chair"
             },
             {
-                "committee": "House Rules",
+                "key": "house-rules",
+                "displayName": "House Rules",
                 "role": "Member"
             }
         ],
@@ -4904,15 +4936,18 @@
         "email": "Ed.Buttrey@legmt.gov",
         "committees": [
             {
-                "committee": "House Business and Labor",
+                "key": "house-business-and-labor",
+                "displayName": "House Business and Labor",
                 "role": "Chair"
             },
             {
-                "committee": "House Human Services",
+                "key": "house-human-services",
+                "displayName": "House Human Services",
                 "role": "Member"
             },
             {
-                "committee": "House Rules",
+                "key": "house-rules",
+                "displayName": "House Rules",
                 "role": "Member"
             }
         ],
@@ -5623,15 +5658,18 @@
         "email": "Ed.Byrne@legmt.gov",
         "committees": [
             {
-                "committee": "House State Administration",
+                "key": "house-state-administration",
+                "displayName": "House State Administration",
                 "role": "Member"
             },
             {
-                "committee": "House Transportation",
+                "key": "house-transportation",
+                "displayName": "House Transportation",
                 "role": "Member"
             },
             {
-                "committee": "House Fish, Wildlife and Parks",
+                "key": "house-fish-wildlife-and-parks",
+                "displayName": "House Fish, Wildlife and Parks",
                 "role": "Member"
             }
         ],
@@ -5881,15 +5919,18 @@
         "email": "Mary.Caferro@legmt.gov",
         "committees": [
             {
-                "committee": "House Appropriations",
+                "key": "house-appropriations",
+                "displayName": "House Appropriations",
                 "role": "Member"
             },
             {
-                "committee": "House Transportation",
+                "key": "house-transportation",
+                "displayName": "House Transportation",
                 "role": "Member"
             },
             {
-                "committee": "joint-appropriations-section-b",
+                "key": "joint-appropriations-section-b",
+                "displayName": "Joint Appropriations Section B — Health and Human Services",
                 "role": "Member"
             }
         ],
@@ -6179,15 +6220,18 @@
         "email": "Bob.Carter@legmt.gov",
         "committees": [
             {
-                "committee": "House Business and Labor",
+                "key": "house-business-and-labor",
+                "displayName": "House Business and Labor",
                 "role": "Member"
             },
             {
-                "committee": "House Energy, Technology and Federal Relations",
+                "key": "house-energy-technology-and-federal-relations",
+                "displayName": "House Energy, Technology and Federal Relations",
                 "role": "Member"
             },
             {
-                "committee": "House Agriculture",
+                "key": "house-agriculture",
+                "displayName": "House Agriculture",
                 "role": "Vice-chair"
             }
         ],
@@ -6447,11 +6491,13 @@
         "email": "Brian.Close@legmt.gov",
         "committees": [
             {
-                "committee": "House Taxation",
+                "key": "house-taxation",
+                "displayName": "House Taxation",
                 "role": "Member"
             },
             {
-                "committee": "House Human Services",
+                "key": "house-human-services",
+                "displayName": "House Human Services",
                 "role": "Member"
             }
         ],
@@ -6701,15 +6747,18 @@
         "email": "Curtis.Cochran@legmt.gov",
         "committees": [
             {
-                "committee": "House State Administration",
+                "key": "house-state-administration",
+                "displayName": "House State Administration",
                 "role": "Member"
             },
             {
-                "committee": "House Transportation",
+                "key": "house-transportation",
+                "displayName": "House Transportation",
                 "role": "Member"
             },
             {
-                "committee": "House Local Government",
+                "key": "house-local-government",
+                "displayName": "House Local Government",
                 "role": "Member"
             }
         ],
@@ -7026,15 +7075,18 @@
         "email": "Jill.Cohenour@legmt.gov",
         "committees": [
             {
-                "committee": "House Taxation",
+                "key": "house-taxation",
+                "displayName": "House Taxation",
                 "role": "Member"
             },
             {
-                "committee": "House Natural Resources",
+                "key": "house-natural-resources",
+                "displayName": "House Natural Resources",
                 "role": "Member"
             },
             {
-                "committee": "House Fish, Wildlife and Parks",
+                "key": "house-fish-wildlife-and-parks",
+                "displayName": "House Fish, Wildlife and Parks",
                 "role": "Vice-chair"
             }
         ],
@@ -7197,11 +7249,13 @@
         "email": "Thedis.Crowe@legmt.gov",
         "committees": [
             {
-                "committee": "House Appropriations",
+                "key": "house-appropriations",
+                "displayName": "House Appropriations",
                 "role": "Member"
             },
             {
-                "committee": "joint-appropriations-section-d",
+                "key": "joint-appropriations-section-d",
+                "displayName": "Joint Appropriations Section D — Judicial Branch, Law Enforcement, and Justice",
                 "role": "Member"
             }
         ],
@@ -7302,20 +7356,24 @@
         "email": "mike.cuffe@legmt.gov",
         "committees": [
             {
-                "committee": "joint-appropriations-section-c",
+                "key": "senate-finance-and-claims",
+                "displayName": "Senate Finance and Claims",
                 "role": "Member"
             },
             {
-                "committee": "Senate Finance and Claims",
+                "key": "senate-natural-resources",
+                "displayName": "Senate Natural Resources",
                 "role": "Member"
             },
             {
-                "committee": "Senate Natural Resources",
+                "key": "senate-energy-and-telecommunications",
+                "displayName": "Senate Energy and Telecommunications",
                 "role": "Member"
             },
             {
-                "committee": "senate-energy-and-telecommunications",
-                "role": "Member"
+                "key": "joint-appropriations-section-c",
+                "displayName": "Joint Appropriations Section C — Natural Resources and Transportation",
+                "role": "Vice-chair"
             }
         ],
         "legislativeHistory": [
@@ -7793,11 +7851,13 @@
         "email": "Melody.Cunningham@legmt.gov",
         "committees": [
             {
-                "committee": "House Judiciary",
+                "key": "house-judiciary",
+                "displayName": "House Judiciary",
                 "role": "Member"
             },
             {
-                "committee": "House Human Services",
+                "key": "house-human-services",
+                "displayName": "House Human Services",
                 "role": "Member"
             }
         ],
@@ -7898,15 +7958,18 @@
         "email": "willis.curdy@legmt.gov",
         "committees": [
             {
-                "committee": "Senate Business, Labor, and Economic Affairs",
+                "key": "senate-business-labor-and-economic-affairs",
+                "displayName": "Senate Business, Labor, and Economic Affairs",
                 "role": "Vice-chair"
             },
             {
-                "committee": "Senate Natural Resources",
+                "key": "senate-natural-resources",
+                "displayName": "Senate Natural Resources",
                 "role": "Member"
             },
             {
-                "committee": "Senate Agriculture, Livestock and Irrigation",
+                "key": "senate-agriculture-livestock-and-irrigation",
+                "displayName": "Senate Agriculture, Livestock and Irrigation",
                 "role": "Member"
             }
         ],
@@ -8127,15 +8190,18 @@
         "email": "Julie.Darling@legmt.gov",
         "committees": [
             {
-                "committee": "House State Administration",
+                "key": "house-state-administration",
+                "displayName": "House State Administration",
                 "role": "Chair"
             },
             {
-                "committee": "House Transportation",
+                "key": "house-transportation",
+                "displayName": "House Transportation",
                 "role": "Member"
             },
             {
-                "committee": "House Agriculture",
+                "key": "house-agriculture",
+                "displayName": "House Agriculture",
                 "role": "Member"
             }
         ],
@@ -8763,11 +8829,13 @@
         "email": "Scott.DeMarois@legmt.gov",
         "committees": [
             {
-                "committee": "House Business and Labor",
+                "key": "house-business-and-labor",
+                "displayName": "House Business and Labor",
                 "role": "Member"
             },
             {
-                "committee": "House Human Services",
+                "key": "house-human-services",
+                "displayName": "House Human Services",
                 "role": "Member"
             }
         ],
@@ -8882,19 +8950,23 @@
         "email": "Lee.Deming@legmt.gov",
         "committees": [
             {
-                "committee": "House Judiciary",
+                "key": "house-judiciary",
+                "displayName": "House Judiciary",
                 "role": "Vice-chair"
             },
             {
-                "committee": "House Education",
+                "key": "house-education",
+                "displayName": "House Education",
                 "role": "Member"
             },
             {
-                "committee": "House Fish, Wildlife and Parks",
+                "key": "house-fish-wildlife-and-parks",
+                "displayName": "House Fish, Wildlife and Parks",
                 "role": "Member"
             },
             {
-                "committee": "House Legislative Administration",
+                "key": "house-legislative-administration",
+                "displayName": "House Legislative Administration",
                 "role": "Member"
             }
         ],
@@ -9183,19 +9255,23 @@
         "email": "maryann.dunwell@legmt.gov",
         "committees": [
             {
-                "committee": "Senate Taxation",
+                "key": "senate-taxation",
+                "displayName": "Senate Taxation",
                 "role": "Member"
             },
             {
-                "committee": "Senate Local Government",
+                "key": "senate-agriculture-livestock-and-irrigation",
+                "displayName": "Senate Agriculture, Livestock and Irrigation",
+                "role": "Member"
+            },
+            {
+                "key": "senate-highways-and-transportation",
+                "displayName": "Senate Highways and Transportation",
                 "role": "Vice-chair"
             },
             {
-                "committee": "Senate Highways and Transportation",
-                "role": "Vice-chair"
-            },
-            {
-                "committee": "Senate Legislative Administration",
+                "key": "senate-legislative-administration",
+                "displayName": "Senate Legislative Administration",
                 "role": "Member"
             }
         ],
@@ -9648,15 +9724,18 @@
         "email": "Neil.Duram@legmt.gov",
         "committees": [
             {
-                "committee": "House Taxation",
+                "key": "house-taxation",
+                "displayName": "House Taxation",
                 "role": "Member"
             },
             {
-                "committee": "House Transportation",
+                "key": "house-transportation",
+                "displayName": "House Transportation",
                 "role": "Chair"
             },
             {
-                "committee": "House Fish, Wildlife and Parks",
+                "key": "house-fish-wildlife-and-parks",
+                "displayName": "House Fish, Wildlife and Parks",
                 "role": "Member"
             }
         ],
@@ -10101,15 +10180,18 @@
         "email": "Becky.Edwards@legmt.gov",
         "committees": [
             {
-                "committee": "House State Administration",
+                "key": "house-state-administration",
+                "displayName": "House State Administration",
                 "role": "Member"
             },
             {
-                "committee": "House Natural Resources",
+                "key": "house-natural-resources",
+                "displayName": "House Natural Resources",
                 "role": "Member"
             },
             {
-                "committee": "House Legislative Administration",
+                "key": "house-legislative-administration",
+                "displayName": "House Legislative Administration",
                 "role": "Member"
             }
         ],
@@ -10321,23 +10403,28 @@
         "email": "janet.ellis@legmt.gov",
         "committees": [
             {
-                "committee": "joint-appropriations-section-c",
-                "role": "Member"
-            },
-            {
-                "committee": "Senate Finance and Claims",
+                "key": "senate-finance-and-claims",
+                "displayName": "Senate Finance and Claims",
                 "role": "Vice-chair"
             },
             {
-                "committee": "Senate State Administration",
+                "key": "senate-state-administration",
+                "displayName": "Senate State Administration",
                 "role": "Member"
             },
             {
-                "committee": "senate-energy-and-telecommunications",
+                "key": "senate-energy-and-telecommunications",
+                "displayName": "Senate Energy and Telecommunications",
                 "role": "Member"
             },
             {
-                "committee": "Senate Rules",
+                "key": "senate-rules",
+                "displayName": "Senate Rules",
+                "role": "Member"
+            },
+            {
+                "key": "joint-appropriations-section-c",
+                "displayName": "Joint Appropriations Section C — Natural Resources and Transportation",
                 "role": "Member"
             }
         ],
@@ -10520,19 +10607,33 @@
         "email": "jason.ellsworth@legmt.gov",
         "committees": [
             {
-                "committee": "Senate Local Government",
+                "key": "senate-finance-and-claims",
+                "displayName": "Senate Finance and Claims",
                 "role": "Member"
             },
             {
-                "committee": "Senate Fish and Game",
+                "key": "senate-local-government",
+                "displayName": "Senate Local Government",
                 "role": "Member"
             },
             {
-                "committee": "senate-executive-review-committee",
+                "key": "senate-fish-and-game",
+                "displayName": "Senate Fish and Game",
+                "role": "Member"
+            },
+            {
+                "key": "senate-executive-review-committee",
+                "displayName": "Senate Executive Review Committee",
                 "role": "Chair"
             },
             {
-                "committee": "Senate Rules",
+                "key": "senate-rules",
+                "displayName": "Senate Rules",
+                "role": "Member"
+            },
+            {
+                "key": "joint-appropriations-section-a",
+                "displayName": "Joint Appropriations Section A — General Government",
                 "role": "Member"
             }
         ],
@@ -10559,7 +10660,7 @@
                 "title": "Montana House hears trans bathroom bill as Senate stalls out",
                 "category": "2025 Legislature",
                 "subtitle": "",
-                "date": "2025-01-10T17:43:22.000Z",
+                "date": "2025-01-11T00:43:22.000Z",
                 "link": "https://montanafreepress.org/2025/01/10/montana-house-hears-trans-bathroom-bill-as-senate-stalls-out/",
                 "author": "Tom Lutey",
                 "imageUrl": "https://montanafreepress.org/1-6-senate-house/",
@@ -10756,15 +10857,18 @@
         "email": "Pete.Elverum@legmt.gov",
         "committees": [
             {
-                "committee": "House Taxation",
+                "key": "house-taxation",
+                "displayName": "House Taxation",
                 "role": "Member"
             },
             {
-                "committee": "House Education",
+                "key": "house-education",
+                "displayName": "House Education",
                 "role": "Member"
             },
             {
-                "committee": "House Local Government",
+                "key": "house-local-government",
+                "displayName": "House Local Government",
                 "role": "Member"
             }
         ],
@@ -10927,23 +11031,28 @@
         "email": "daniel.emrich@legmt.gov",
         "committees": [
             {
-                "committee": "Senate Judiciary",
+                "key": "senate-judiciary",
+                "displayName": "Senate Judiciary",
                 "role": "Member"
             },
             {
-                "committee": "Senate Education and Cultural Resources",
+                "key": "senate-education-and-cultural-resources",
+                "displayName": "Senate Education and Cultural Resources",
                 "role": "Member"
             },
             {
-                "committee": "Senate Public Health, Welfare and Safety",
+                "key": "senate-public-health-welfare-and-safety",
+                "displayName": "Senate Public Health, Welfare and Safety",
                 "role": "Member"
             },
             {
-                "committee": "Senate Rules",
+                "key": "senate-rules",
+                "displayName": "Senate Rules",
                 "role": "Member"
             },
             {
-                "committee": "Senate Legislative Administration",
+                "key": "senate-legislative-administration",
+                "displayName": "Senate Legislative Administration",
                 "role": "Vice-chair"
             }
         ],
@@ -12086,24 +12195,29 @@
         "email": "john.esp@legmt.gov",
         "committees": [
             {
-                "committee": "joint-appropriations-section-f",
+                "key": "senate-finance-and-claims",
+                "displayName": "Senate Finance and Claims",
                 "role": "Vice-chair"
             },
             {
-                "committee": "Senate Finance and Claims",
+                "key": "senate-education-and-cultural-resources",
+                "displayName": "Senate Education and Cultural Resources",
+                "role": "Member"
+            },
+            {
+                "key": "senate-highways-and-transportation",
+                "displayName": "Senate Highways and Transportation",
+                "role": "Member"
+            },
+            {
+                "key": "senate-rules",
+                "displayName": "Senate Rules",
+                "role": "Member"
+            },
+            {
+                "key": "joint-appropriations-section-f",
+                "displayName": "Joint Appropriations Section F — Long-Range Planning",
                 "role": "Vice-chair"
-            },
-            {
-                "committee": "Senate Education and Cultural Resources",
-                "role": "Member"
-            },
-            {
-                "committee": "Senate Highways and Transportation",
-                "role": "Member"
-            },
-            {
-                "committee": "Senate Rules",
-                "role": "Member"
             }
         ],
         "legislativeHistory": [
@@ -12388,15 +12502,18 @@
         "email": "Sherry.Essmann@legmt.gov",
         "committees": [
             {
-                "committee": "House Taxation",
+                "key": "house-taxation",
+                "displayName": "House Taxation",
                 "role": "Vice-chair"
             },
             {
-                "committee": "House Education",
+                "key": "house-education",
+                "displayName": "House Education",
                 "role": "Member"
             },
             {
-                "committee": "House Local Government",
+                "key": "house-local-government",
+                "displayName": "House Local Government",
                 "role": "Member"
             }
         ],
@@ -12827,11 +12944,13 @@
         "email": "Jodee.Etchart@legmt.gov",
         "committees": [
             {
-                "committee": "House Judiciary",
+                "key": "house-judiciary",
+                "displayName": "House Judiciary",
                 "role": "Member"
             },
             {
-                "committee": "House Human Services",
+                "key": "house-human-services",
+                "displayName": "House Human Services",
                 "role": "Vice-chair"
             }
         ],
@@ -13512,15 +13631,18 @@
         "email": "Terry.Falk@legmt.gov",
         "committees": [
             {
-                "committee": "House Appropriations",
+                "key": "house-appropriations",
+                "displayName": "House Appropriations",
                 "role": "Member"
             },
             {
-                "committee": "House Legislative Administration",
+                "key": "house-legislative-administration",
+                "displayName": "House Legislative Administration",
                 "role": "Member"
             },
             {
-                "committee": "joint-appropriations-section-a",
+                "key": "joint-appropriations-section-a",
+                "displayName": "Joint Appropriations Section A — General Government",
                 "role": "Chair"
             }
         ],
@@ -13774,15 +13896,18 @@
         "email": "Dave.Fern@legmt.gov",
         "committees": [
             {
-                "committee": "Senate Taxation",
+                "key": "senate-taxation",
+                "displayName": "Senate Taxation",
                 "role": "Vice-chair"
             },
             {
-                "committee": "Senate Local Government",
+                "key": "senate-local-government",
+                "displayName": "Senate Local Government",
                 "role": "Member"
             },
             {
-                "committee": "Senate Highways and Transportation",
+                "key": "senate-highways-and-transportation",
+                "displayName": "Senate Highways and Transportation",
                 "role": "Member"
             }
         ],
@@ -14219,19 +14344,23 @@
         "email": "Paul.Fielder@legmt.gov",
         "committees": [
             {
-                "committee": "House Taxation",
+                "key": "house-taxation",
+                "displayName": "House Taxation",
                 "role": "Chair"
             },
             {
-                "committee": "House Energy, Technology and Federal Relations",
+                "key": "house-energy-technology-and-federal-relations",
+                "displayName": "House Energy, Technology and Federal Relations",
                 "role": "Member"
             },
             {
-                "committee": "House Fish, Wildlife and Parks",
+                "key": "house-fish-wildlife-and-parks",
+                "displayName": "House Fish, Wildlife and Parks",
                 "role": "Member"
             },
             {
-                "committee": "House Rules",
+                "key": "house-rules",
+                "displayName": "House Rules",
                 "role": "Member"
             }
         ],
@@ -14733,11 +14862,13 @@
         "email": "John.Fitzpatrick@legmt.gov",
         "committees": [
             {
-                "committee": "House Appropriations",
+                "key": "house-appropriations",
+                "displayName": "House Appropriations",
                 "role": "Member"
             },
             {
-                "committee": "joint-appropriations-section-f",
+                "key": "joint-appropriations-section-f",
+                "displayName": "Joint Appropriations Section F — Long-Range Planning",
                 "role": "Chair"
             }
         ],
@@ -15601,15 +15732,18 @@
         "email": "Sidney.Fitzpatrick@legmt.gov",
         "committees": [
             {
-                "committee": "House Business and Labor",
+                "key": "house-business-and-labor",
+                "displayName": "House Business and Labor",
                 "role": "Member"
             },
             {
-                "committee": "House Transportation",
+                "key": "house-transportation",
+                "displayName": "House Transportation",
                 "role": "Member"
             },
             {
-                "committee": "House Fish, Wildlife and Parks",
+                "key": "house-fish-wildlife-and-parks",
+                "displayName": "House Fish, Wildlife and Parks",
                 "role": "Member"
             }
         ],
@@ -15724,23 +15858,28 @@
         "email": "Steve.Fitzpatrick@legmt.gov",
         "committees": [
             {
-                "committee": "House Business and Labor",
+                "key": "house-business-and-labor",
+                "displayName": "House Business and Labor",
                 "role": "Member"
             },
             {
-                "committee": "House Taxation",
+                "key": "house-taxation",
+                "displayName": "House Taxation",
                 "role": "Member"
             },
             {
-                "committee": "House Natural Resources",
+                "key": "house-natural-resources",
+                "displayName": "House Natural Resources",
                 "role": "Member"
             },
             {
-                "committee": "House Local Government",
+                "key": "house-local-government",
+                "displayName": "House Local Government",
                 "role": "Member"
             },
             {
-                "committee": "House Rules",
+                "key": "house-rules",
+                "displayName": "House Rules",
                 "role": "Chair"
             }
         ],
@@ -16647,31 +16786,38 @@
         "email": "pat.flowers@legmt.gov",
         "committees": [
             {
-                "committee": "Senate Taxation",
+                "key": "senate-finance-and-claims",
+                "displayName": "Senate Finance and Claims",
                 "role": "Member"
             },
             {
-                "committee": "Senate Natural Resources",
+                "key": "senate-taxation",
+                "displayName": "Senate Taxation",
                 "role": "Member"
             },
             {
-                "committee": "Senate Public Health, Welfare and Safety",
+                "key": "senate-natural-resources",
+                "displayName": "Senate Natural Resources",
                 "role": "Member"
             },
             {
-                "committee": "senate-energy-and-telecommunications",
+                "key": "senate-fish-and-game",
+                "displayName": "Senate Fish and Game",
                 "role": "Member"
             },
             {
-                "committee": "Senate Fish and Game",
+                "key": "senate-executive-review-committee",
+                "displayName": "Senate Executive Review Committee",
                 "role": "Member"
             },
             {
-                "committee": "senate-executive-review-committee",
+                "key": "senate-rules",
+                "displayName": "Senate Rules",
                 "role": "Member"
             },
             {
-                "committee": "Senate Rules",
+                "key": "joint-appropriations-section-a",
+                "displayName": "Joint Appropriations Section A — General Government",
                 "role": "Member"
             }
         ],
@@ -16699,7 +16845,7 @@
                 "title": "Montana House hears trans bathroom bill as Senate stalls out",
                 "category": "2025 Legislature",
                 "subtitle": "",
-                "date": "2025-01-10T17:43:22.000Z",
+                "date": "2025-01-11T00:43:22.000Z",
                 "link": "https://montanafreepress.org/2025/01/10/montana-house-hears-trans-bathroom-bill-as-senate-stalls-out/",
                 "author": "Tom Lutey",
                 "imageUrl": "https://montanafreepress.org/1-6-senate-house/",
@@ -16952,11 +17098,13 @@
         "email": "Michael.Fox@legmt.gov",
         "committees": [
             {
-                "committee": "House Appropriations",
+                "key": "house-appropriations",
+                "displayName": "House Appropriations",
                 "role": "Member"
             },
             {
-                "committee": "joint-appropriations-section-b",
+                "key": "joint-appropriations-section-b",
+                "displayName": "Joint Appropriations Section B — Health and Human Services",
                 "role": "Member"
             }
         ],
@@ -17091,15 +17239,18 @@
         "email": "Tom.France@legmt.gov",
         "committees": [
             {
-                "committee": "House Judiciary",
+                "key": "house-judiciary",
+                "displayName": "House Judiciary",
                 "role": "Vice-chair"
             },
             {
-                "committee": "House Natural Resources",
+                "key": "house-natural-resources",
+                "displayName": "House Natural Resources",
                 "role": "Member"
             },
             {
-                "committee": "House Fish, Wildlife and Parks",
+                "key": "house-fish-wildlife-and-parks",
+                "displayName": "House Fish, Wildlife and Parks",
                 "role": "Member"
             }
         ],
@@ -17208,24 +17359,29 @@
         "email": "john.fuller@legmt.gov",
         "committees": [
             {
-                "committee": "joint-appropriations-section-e",
-                "role": "Vice-chair"
-            },
-            {
-                "committee": "Senate Finance and Claims",
+                "key": "senate-finance-and-claims",
+                "displayName": "Senate Finance and Claims",
                 "role": "Member"
             },
             {
-                "committee": "Senate Education and Cultural Resources",
+                "key": "senate-education-and-cultural-resources",
+                "displayName": "Senate Education and Cultural Resources",
                 "role": "Chair"
             },
             {
-                "committee": "Senate Public Health, Welfare and Safety",
+                "key": "senate-public-health-welfare-and-safety",
+                "displayName": "Senate Public Health, Welfare and Safety",
                 "role": "Member"
             },
             {
-                "committee": "Senate Legislative Administration",
+                "key": "senate-legislative-administration",
+                "displayName": "Senate Legislative Administration",
                 "role": "Member"
+            },
+            {
+                "key": "joint-appropriations-section-e",
+                "displayName": "Joint Appropriations Section E — Education",
+                "role": "Vice-chair"
             }
         ],
         "legislativeHistory": [
@@ -17840,19 +17996,23 @@
         "email": "Shelly.Fyant@legmt.gov",
         "committees": [
             {
-                "committee": "House State Administration",
+                "key": "house-state-administration",
+                "displayName": "House State Administration",
                 "role": "Member"
             },
             {
-                "committee": "House Energy, Technology and Federal Relations",
+                "key": "house-energy-technology-and-federal-relations",
+                "displayName": "House Energy, Technology and Federal Relations",
                 "role": "Member"
             },
             {
-                "committee": "House Local Government",
+                "key": "house-local-government",
+                "displayName": "House Local Government",
                 "role": "Member"
             },
             {
-                "committee": "House Legislative Administration",
+                "key": "house-legislative-administration",
+                "displayName": "House Legislative Administration",
                 "role": "Member"
             }
         ],
@@ -17979,19 +18139,23 @@
         "email": "Wylie.Galt@legmt.gov",
         "committees": [
             {
-                "committee": "Senate Taxation",
+                "key": "senate-taxation",
+                "displayName": "Senate Taxation",
                 "role": "Member"
             },
             {
-                "committee": "Senate Natural Resources",
+                "key": "senate-natural-resources",
+                "displayName": "Senate Natural Resources",
                 "role": "Member"
             },
             {
-                "committee": "senate-energy-and-telecommunications",
+                "key": "senate-energy-and-telecommunications",
+                "displayName": "Senate Energy and Telecommunications",
                 "role": "Member"
             },
             {
-                "committee": "Senate Rules",
+                "key": "senate-rules",
+                "displayName": "Senate Rules",
                 "role": "Member"
             }
         ],
@@ -18616,11 +18780,13 @@
         "email": "Jane.Gillette@legmt.gov",
         "committees": [
             {
-                "committee": "House Appropriations",
+                "key": "house-appropriations",
+                "displayName": "House Appropriations",
                 "role": "Member"
             },
             {
-                "committee": "joint-appropriations-section-b",
+                "key": "joint-appropriations-section-b",
+                "displayName": "Joint Appropriations Section B — Health and Human Services",
                 "role": "Chair"
             }
         ],
@@ -18755,11 +18921,13 @@
         "email": "Steven.Gist@legmt.gov",
         "committees": [
             {
-                "committee": "House Business and Labor",
+                "key": "house-business-and-labor",
+                "displayName": "House Business and Labor",
                 "role": "Member"
             },
             {
-                "committee": "House Natural Resources",
+                "key": "house-natural-resources",
+                "displayName": "House Natural Resources",
                 "role": "Chair"
             }
         ],
@@ -19310,27 +19478,33 @@
         "email": "Carl.Glimm@legmt.gov",
         "committees": [
             {
-                "committee": "joint-appropriations-section-b",
-                "role": "Member"
-            },
-            {
-                "committee": "Senate Finance and Claims",
+                "key": "senate-finance-and-claims",
+                "displayName": "Senate Finance and Claims",
                 "role": "Chair"
             },
             {
-                "committee": "Senate Public Health, Welfare and Safety",
+                "key": "senate-public-health-welfare-and-safety",
+                "displayName": "Senate Public Health, Welfare and Safety",
                 "role": "Member"
             },
             {
-                "committee": "Senate Agriculture, Livestock and Irrigation",
+                "key": "senate-agriculture-livestock-and-irrigation",
+                "displayName": "Senate Agriculture, Livestock and Irrigation",
                 "role": "Member"
             },
             {
-                "committee": "Senate Committee on Committees",
+                "key": "senate-committee-on-committees",
+                "displayName": "Senate Committee on Committees",
                 "role": "Member"
             },
             {
-                "committee": "Senate Rules",
+                "key": "senate-rules",
+                "displayName": "Senate Rules",
+                "role": "Member"
+            },
+            {
+                "key": "joint-appropriations-section-b",
+                "displayName": "Joint Appropriations Section B — Health and Human Services",
                 "role": "Member"
             }
         ],
@@ -19369,7 +19543,7 @@
                 "title": "Bed-tax-to-property-tax-relief proposal slammed by tourism advocates",
                 "category": "2025 Legislature",
                 "subtitle": "",
-                "date": "2025-01-20T19:26:42.000Z",
+                "date": "2025-01-21T02:26:42.000Z",
                 "link": "https://montanafreepress.org/2025/01/20/bed-tax-to-property-tax-relief-proposal-slammed-by-tourism-advocates/",
                 "author": "Eric Dietrich",
                 "imageUrl": "https://montanafreepress.org/2025/01/20/bed-tax-to-property-tax-relief-proposal-slammed-by-tourism-advocates/glimm-for-post-untitled-design/",
@@ -19749,15 +19923,18 @@
         "email": "Randyn.Gregg@legmt.gov",
         "committees": [
             {
-                "committee": "House Taxation",
+                "key": "house-taxation",
+                "displayName": "House Taxation",
                 "role": "Member"
             },
             {
-                "committee": "House Education",
+                "key": "house-education",
+                "displayName": "House Education",
                 "role": "Vice-chair"
             },
             {
-                "committee": "House Fish, Wildlife and Parks",
+                "key": "house-fish-wildlife-and-parks",
+                "displayName": "House Fish, Wildlife and Parks",
                 "role": "Member"
             }
         ],
@@ -20050,19 +20227,23 @@
         "email": "Alanah.Griffith@legmt.gov",
         "committees": [
             {
-                "committee": "House Judiciary",
+                "key": "house-judiciary",
+                "displayName": "House Judiciary",
                 "role": "Member"
             },
             {
-                "committee": "House Energy, Technology and Federal Relations",
+                "key": "house-energy-technology-and-federal-relations",
+                "displayName": "House Energy, Technology and Federal Relations",
                 "role": "Member"
             },
             {
-                "committee": "House Agriculture",
+                "key": "house-agriculture",
+                "displayName": "House Agriculture",
                 "role": "Member"
             },
             {
-                "committee": "House Rules",
+                "key": "house-rules",
+                "displayName": "House Rules",
                 "role": "Member"
             }
         ],
@@ -20312,23 +20493,28 @@
         "email": "Derek.Harvey@legmt.gov",
         "committees": [
             {
-                "committee": "joint-appropriations-section-a",
+                "key": "senate-finance-and-claims",
+                "displayName": "Senate Finance and Claims",
                 "role": "Member"
             },
             {
-                "committee": "Senate Finance and Claims",
+                "key": "senate-natural-resources",
+                "displayName": "Senate Natural Resources",
                 "role": "Member"
             },
             {
-                "committee": "Senate Natural Resources",
+                "key": "senate-energy-and-telecommunications",
+                "displayName": "Senate Energy and Telecommunications",
                 "role": "Member"
             },
             {
-                "committee": "senate-energy-and-telecommunications",
+                "key": "senate-rules",
+                "displayName": "Senate Rules",
                 "role": "Member"
             },
             {
-                "committee": "Senate Rules",
+                "key": "joint-appropriations-section-a",
+                "displayName": "Joint Appropriations Section A — General Government",
                 "role": "Member"
             }
         ],
@@ -20651,19 +20837,23 @@
         "email": "Donavon.Hawk@legmt.gov",
         "committees": [
             {
-                "committee": "House Appropriations",
+                "key": "house-appropriations",
+                "displayName": "House Appropriations",
                 "role": "Member"
             },
             {
-                "committee": "House Rules",
+                "key": "house-rules",
+                "displayName": "House Rules",
                 "role": "Member"
             },
             {
-                "committee": "House Ethics",
+                "key": "house-ethics",
+                "displayName": "House Ethics",
                 "role": "Vice-chair"
             },
             {
-                "committee": "joint-appropriations-section-d",
+                "key": "joint-appropriations-section-d",
+                "displayName": "Joint Appropriations Section D — Judicial Branch, Law Enforcement, and Justice",
                 "role": "Member"
             }
         ],
@@ -20772,19 +20962,28 @@
         "email": "denise.hayman@legmt.gov",
         "committees": [
             {
-                "committee": "Senate State Administration",
+                "key": "senate-taxation",
+                "displayName": "Senate Taxation",
+                "role": "Member"
+            },
+            {
+                "key": "senate-state-administration",
+                "displayName": "Senate State Administration",
                 "role": "Vice-chair"
             },
             {
-                "committee": "senate-energy-and-telecommunications",
+                "key": "senate-energy-and-telecommunications",
+                "displayName": "Senate Energy and Telecommunications",
                 "role": "Member"
             },
             {
-                "committee": "senate-executive-review-committee",
+                "key": "senate-executive-review-committee",
+                "displayName": "Senate Executive Review Committee",
                 "role": "Member"
             },
             {
-                "committee": "Senate Legislative Administration",
+                "key": "senate-legislative-administration",
+                "displayName": "Senate Legislative Administration",
                 "role": "Vice-chair"
             }
         ],
@@ -20931,19 +21130,23 @@
         "email": "Greg.Hertz@legmt.gov",
         "committees": [
             {
-                "committee": "Senate Taxation",
+                "key": "senate-taxation",
+                "displayName": "Senate Taxation",
                 "role": "Chair"
             },
             {
-                "committee": "Senate Local Government",
+                "key": "senate-local-government",
+                "displayName": "Senate Local Government",
                 "role": "Member"
             },
             {
-                "committee": "Senate Fish and Game",
+                "key": "senate-fish-and-game",
+                "displayName": "Senate Fish and Game",
                 "role": "Member"
             },
             {
-                "committee": "Senate Rules",
+                "key": "senate-rules",
+                "displayName": "Senate Rules",
                 "role": "Member"
             }
         ],
@@ -22437,15 +22640,18 @@
         "email": "Caleb.Hinkle@legmt.gov",
         "committees": [
             {
-                "committee": "House Judiciary",
+                "key": "house-judiciary",
+                "displayName": "House Judiciary",
                 "role": "Member"
             },
             {
-                "committee": "House Transportation",
+                "key": "house-transportation",
+                "displayName": "House Transportation",
                 "role": "Member"
             },
             {
-                "committee": "House Fish, Wildlife and Parks",
+                "key": "house-fish-wildlife-and-parks",
+                "displayName": "House Fish, Wildlife and Parks",
                 "role": "Vice-chair"
             }
         ],
@@ -22813,19 +23019,23 @@
         "email": "Jedediah.Hinkle@legmt.gov",
         "committees": [
             {
-                "committee": "House Judiciary",
+                "key": "house-judiciary",
+                "displayName": "House Judiciary",
                 "role": "Member"
             },
             {
-                "committee": "House Natural Resources",
+                "key": "house-natural-resources",
+                "displayName": "House Natural Resources",
                 "role": "Member"
             },
             {
-                "committee": "House Fish, Wildlife and Parks",
+                "key": "house-fish-wildlife-and-parks",
+                "displayName": "House Fish, Wildlife and Parks",
                 "role": "Chair"
             },
             {
-                "committee": "House Rules",
+                "key": "house-rules",
+                "displayName": "House Rules",
                 "role": "Member"
             }
         ],
@@ -23219,15 +23429,18 @@
         "email": "SJ.Howell@legmt.gov",
         "committees": [
             {
-                "committee": "House Judiciary",
+                "key": "house-judiciary",
+                "displayName": "House Judiciary",
                 "role": "Member"
             },
             {
-                "committee": "House Human Services",
+                "key": "house-human-services",
+                "displayName": "House Human Services",
                 "role": "Vice-chair"
             },
             {
-                "committee": "House Rules",
+                "key": "house-rules",
+                "displayName": "House Rules",
                 "role": "Member"
             }
         ],
@@ -23536,15 +23749,18 @@
         "email": "Gregg.Hunter@legmt.gov",
         "committees": [
             {
-                "committee": "senate-energy-and-telecommunications",
+                "key": "senate-energy-and-telecommunications",
+                "displayName": "Senate Energy and Telecommunications",
                 "role": "Member"
             },
             {
-                "committee": "Senate Highways and Transportation",
+                "key": "senate-highways-and-transportation",
+                "displayName": "Senate Highways and Transportation",
                 "role": "Member"
             },
             {
-                "committee": "senate-executive-review-committee",
+                "key": "senate-executive-review-committee",
+                "displayName": "Senate Executive Review Committee",
                 "role": "Member"
             }
         ],
@@ -23677,15 +23893,18 @@
         "email": "Jamie.Isaly@legmt.gov",
         "committees": [
             {
-                "committee": "House Business and Labor",
+                "key": "house-business-and-labor",
+                "displayName": "House Business and Labor",
                 "role": "Member"
             },
             {
-                "committee": "House Education",
+                "key": "house-education",
+                "displayName": "House Education",
                 "role": "Member"
             },
             {
-                "committee": "House Fish, Wildlife and Parks",
+                "key": "house-fish-wildlife-and-parks",
+                "displayName": "House Fish, Wildlife and Parks",
                 "role": "Member"
             }
         ],
@@ -23941,11 +24160,13 @@
         "email": "Llew.Jones@legmt.gov",
         "committees": [
             {
-                "committee": "House Appropriations",
+                "key": "house-appropriations",
+                "displayName": "House Appropriations",
                 "role": "Chair"
             },
             {
-                "committee": "joint-appropriations-section-e",
+                "key": "joint-appropriations-section-e",
+                "displayName": "Joint Appropriations Section E — Education",
                 "role": "Member"
             }
         ],
@@ -24784,27 +25005,33 @@
         "email": "Jonathan.Karlen@legmt.gov",
         "committees": [
             {
-                "committee": "House Business and Labor",
+                "key": "house-business-and-labor",
+                "displayName": "House Business and Labor",
                 "role": "Member"
             },
             {
-                "committee": "House Taxation",
+                "key": "house-taxation",
+                "displayName": "House Taxation",
                 "role": "Member"
             },
             {
-                "committee": "House Natural Resources",
+                "key": "house-natural-resources",
+                "displayName": "House Natural Resources",
                 "role": "Member"
             },
             {
-                "committee": "House Fish, Wildlife and Parks",
+                "key": "house-fish-wildlife-and-parks",
+                "displayName": "House Fish, Wildlife and Parks",
                 "role": "Member"
             },
             {
-                "committee": "House Legislative Administration",
+                "key": "house-legislative-administration",
+                "displayName": "House Legislative Administration",
                 "role": "Member"
             },
             {
-                "committee": "House Rules",
+                "key": "house-rules",
+                "displayName": "House Rules",
                 "role": "Vice-chair"
             }
         ],
@@ -24823,7 +25050,7 @@
                 "title": "Democrats pitch property tax relief via income tax credit",
                 "category": "2025 Legislature",
                 "subtitle": "",
-                "date": "2025-01-21T16:08:54.000Z",
+                "date": "2025-01-21T23:08:54.000Z",
                 "link": "https://montanafreepress.org/2025/01/21/democrats-montana-legislature-pitch-property-tax-relief-via-income-tax-credit/",
                 "author": "Eric Dietrich",
                 "imageUrl": "https://montanafreepress.org/1-13-25_johnstember_51864/",
@@ -25253,16 +25480,29 @@
         "email": "Josh.Kassmier@legmt.gov",
         "committees": [
             {
-                "committee": "Senate Agriculture, Livestock and Irrigation",
-                "role": "Vice-chair"
-            },
-            {
-                "committee": "Senate Highways and Transportation",
+                "key": "senate-finance-and-claims",
+                "displayName": "Senate Finance and Claims",
                 "role": "Member"
             },
             {
-                "committee": "senate-executive-review-committee",
+                "key": "senate-agriculture-livestock-and-irrigation",
+                "displayName": "Senate Agriculture, Livestock and Irrigation",
                 "role": "Vice-chair"
+            },
+            {
+                "key": "senate-highways-and-transportation",
+                "displayName": "Senate Highways and Transportation",
+                "role": "Member"
+            },
+            {
+                "key": "senate-executive-review-committee",
+                "displayName": "Senate Executive Review Committee",
+                "role": "Vice-chair"
+            },
+            {
+                "key": "joint-appropriations-section-f",
+                "displayName": "Joint Appropriations Section F — Long-Range Planning",
+                "role": "Member"
             }
         ],
         "legislativeHistory": [
@@ -25822,11 +26062,13 @@
         "email": "Steven.Kelly@legmt.gov",
         "committees": [
             {
-                "committee": "House Judiciary",
+                "key": "house-judiciary",
+                "displayName": "House Judiciary",
                 "role": "Member"
             },
             {
-                "committee": "House Human Services",
+                "key": "house-human-services",
+                "displayName": "House Human Services",
                 "role": "Member"
             }
         ],
@@ -25953,11 +26195,13 @@
         "email": "Connie.Keogh@legmt.gov",
         "committees": [
             {
-                "committee": "House Appropriations",
+                "key": "house-appropriations",
+                "displayName": "House Appropriations",
                 "role": "Member"
             },
             {
-                "committee": "joint-appropriations-section-e",
+                "key": "joint-appropriations-section-e",
+                "displayName": "Joint Appropriations Section E — Education",
                 "role": "Member"
             }
         ],
@@ -26193,15 +26437,33 @@
         "email": "Emma.KC@legmt.gov",
         "committees": [
             {
-                "committee": "House State Administration",
+                "key": "house-state-administration",
+                "displayName": "House State Administration",
                 "role": "Member"
             },
             {
-                "committee": "House Energy, Technology and Federal Relations",
+                "key": "house-energy-technology-and-federal-relations",
+                "displayName": "House Energy, Technology and Federal Relations",
                 "role": "Member"
             },
             {
-                "committee": "House Agriculture",
+                "key": "house-agriculture",
+                "displayName": "House Agriculture",
+                "role": "Member"
+            },
+            {
+                "key": "senate-finance-and-claims",
+                "displayName": "Senate Finance and Claims",
+                "role": "Member"
+            },
+            {
+                "key": "senate-public-health-welfare-and-safety",
+                "displayName": "Senate Public Health, Welfare and Safety",
+                "role": "Member"
+            },
+            {
+                "key": "joint-appropriations-section-b",
+                "displayName": "Joint Appropriations Section B — Health and Human Services",
                 "role": "Member"
             }
         ],
@@ -26402,15 +26664,18 @@
         "email": "Shane.Klakken@legmt.gov",
         "committees": [
             {
-                "committee": "House Judiciary",
+                "key": "house-judiciary",
+                "displayName": "House Judiciary",
                 "role": "Member"
             },
             {
-                "committee": "House Transportation",
+                "key": "house-transportation",
+                "displayName": "House Transportation",
                 "role": "Member"
             },
             {
-                "committee": "House Agriculture",
+                "key": "house-agriculture",
+                "displayName": "House Agriculture",
                 "role": "Member"
             }
         ],
@@ -26648,19 +26913,23 @@
         "email": "Greg.Kmetz@legmt.gov",
         "committees": [
             {
-                "committee": "House Judiciary",
+                "key": "house-judiciary",
+                "displayName": "House Judiciary",
                 "role": "Member"
             },
             {
-                "committee": "House Energy, Technology and Federal Relations",
+                "key": "house-energy-technology-and-federal-relations",
+                "displayName": "House Energy, Technology and Federal Relations",
                 "role": "Vice-chair"
             },
             {
-                "committee": "House Agriculture",
+                "key": "house-agriculture",
+                "displayName": "House Agriculture",
                 "role": "Member"
             },
             {
-                "committee": "House Legislative Administration",
+                "key": "house-legislative-administration",
+                "displayName": "House Legislative Administration",
                 "role": "Member"
             }
         ],
@@ -26853,15 +27122,18 @@
         "email": "Kelly.Kortum@legmt.gov",
         "committees": [
             {
-                "committee": "House State Administration",
+                "key": "house-state-administration",
+                "displayName": "House State Administration",
                 "role": "Vice-chair"
             },
             {
-                "committee": "House Energy, Technology and Federal Relations",
+                "key": "house-energy-technology-and-federal-relations",
+                "displayName": "House Energy, Technology and Federal Relations",
                 "role": "Vice-chair"
             },
             {
-                "committee": "House Local Government",
+                "key": "house-local-government",
+                "displayName": "House Local Government",
                 "role": "Member"
             }
         ],
@@ -27186,15 +27458,18 @@
         "email": "Gayle.Lammers@legmt.gov",
         "committees": [
             {
-                "committee": "Senate Judiciary",
+                "key": "senate-judiciary",
+                "displayName": "Senate Judiciary",
                 "role": "Member"
             },
             {
-                "committee": "Senate Local Government",
+                "key": "senate-local-government",
+                "displayName": "Senate Local Government",
                 "role": "Member"
             },
             {
-                "committee": "senate-energy-and-telecommunications",
+                "key": "senate-energy-and-telecommunications",
+                "displayName": "Senate Energy and Telecommunications",
                 "role": "Vice-chair"
             }
         ],
@@ -27566,11 +27841,13 @@
         "email": "Marc.Lee@legmt.gov",
         "committees": [
             {
-                "committee": "House State Administration",
+                "key": "house-state-administration",
+                "displayName": "House State Administration",
                 "role": "Member"
             },
             {
-                "committee": "House Energy, Technology and Federal Relations",
+                "key": "house-energy-technology-and-federal-relations",
+                "displayName": "House Energy, Technology and Federal Relations",
                 "role": "Member"
             }
         ],
@@ -27671,28 +27948,34 @@
         "email": "dennis.lenz@legmt.gov",
         "committees": [
             {
-                "committee": "joint-appropriations-section-b",
-                "role": "Vice-chair"
-            },
-            {
-                "committee": "Senate Finance and Claims",
+                "key": "senate-finance-and-claims",
+                "displayName": "Senate Finance and Claims",
                 "role": "Member"
             },
             {
-                "committee": "Senate Public Health, Welfare and Safety",
+                "key": "senate-public-health-welfare-and-safety",
+                "displayName": "Senate Public Health, Welfare and Safety",
                 "role": "Chair"
             },
             {
-                "committee": "Senate Agriculture, Livestock and Irrigation",
+                "key": "senate-agriculture-livestock-and-irrigation",
+                "displayName": "Senate Agriculture, Livestock and Irrigation",
                 "role": "Member"
             },
             {
-                "committee": "Senate Committee on Committees",
+                "key": "senate-committee-on-committees",
+                "displayName": "Senate Committee on Committees",
                 "role": "Member"
             },
             {
-                "committee": "Senate Rules",
+                "key": "senate-rules",
+                "displayName": "Senate Rules",
                 "role": "Member"
+            },
+            {
+                "key": "joint-appropriations-section-b",
+                "displayName": "Joint Appropriations Section B — Health and Human Services",
+                "role": "Vice-chair"
             }
         ],
         "legislativeHistory": [
@@ -28077,19 +28360,23 @@
         "email": "Brandon.Ler@legmt.gov",
         "committees": [
             {
-                "committee": "House Business and Labor",
+                "key": "house-business-and-labor",
+                "displayName": "House Business and Labor",
                 "role": "Member"
             },
             {
-                "committee": "House Taxation",
+                "key": "house-taxation",
+                "displayName": "House Taxation",
                 "role": "Member"
             },
             {
-                "committee": "House Human Services",
+                "key": "house-human-services",
+                "displayName": "House Human Services",
                 "role": "Member"
             },
             {
-                "committee": "House Ethics",
+                "key": "house-ethics",
+                "displayName": "House Ethics",
                 "role": "Vice-chair"
             }
         ],
@@ -28361,15 +28648,23 @@
         "email": "Denley.Loge@legmt.gov",
         "committees": [
             {
-                "committee": "Senate Fish and Game",
+                "key": "senate-business-labor-and-economic-affairs",
+                "displayName": "Senate Business, Labor, and Economic Affairs",
                 "role": "Member"
             },
             {
-                "committee": "Senate Highways and Transportation",
+                "key": "senate-fish-and-game",
+                "displayName": "Senate Fish and Game",
+                "role": "Member"
+            },
+            {
+                "key": "senate-highways-and-transportation",
+                "displayName": "Senate Highways and Transportation",
                 "role": "Vice-chair"
             },
             {
-                "committee": "senate-executive-review-committee",
+                "key": "senate-executive-review-committee",
+                "displayName": "Senate Executive Review Committee",
                 "role": "Member"
             }
         ],
@@ -28885,11 +29180,13 @@
         "email": "Kathy.Love@legmt.gov",
         "committees": [
             {
-                "committee": "House State Administration",
+                "key": "house-state-administration",
+                "displayName": "House State Administration",
                 "role": "Member"
             },
             {
-                "committee": "House Human Services",
+                "key": "house-human-services",
+                "displayName": "House Human Services",
                 "role": "Member"
             }
         ],
@@ -29139,15 +29436,18 @@
         "email": "Jennifer.Lynch@legmt.gov",
         "committees": [
             {
-                "committee": "House Business and Labor",
+                "key": "house-business-and-labor",
+                "displayName": "House Business and Labor",
                 "role": "Vice-chair"
             },
             {
-                "committee": "House Education",
+                "key": "house-education",
+                "displayName": "House Education",
                 "role": "Member"
             },
             {
-                "committee": "House Agriculture",
+                "key": "house-agriculture",
+                "displayName": "House Agriculture",
                 "role": "Member"
             }
         ],
@@ -29252,23 +29552,28 @@
         "email": "forrest.mandeville@legmt.gov",
         "committees": [
             {
-                "committee": "joint-appropriations-section-a",
-                "role": "Vice-chair"
-            },
-            {
-                "committee": "Senate Finance and Claims",
+                "key": "senate-finance-and-claims",
+                "displayName": "Senate Finance and Claims",
                 "role": "Member"
             },
             {
-                "committee": "Senate Education and Cultural Resources",
+                "key": "senate-education-and-cultural-resources",
+                "displayName": "Senate Education and Cultural Resources",
                 "role": "Member"
             },
             {
-                "committee": "Senate Local Government",
+                "key": "senate-local-government",
+                "displayName": "Senate Local Government",
                 "role": "Chair"
             },
             {
-                "committee": "Senate Rules",
+                "key": "senate-rules",
+                "displayName": "Senate Rules",
+                "role": "Vice-chair"
+            },
+            {
+                "key": "joint-appropriations-section-a",
+                "displayName": "Joint Appropriations Section A — General Government",
                 "role": "Vice-chair"
             }
         ],
@@ -30010,15 +30315,18 @@
         "email": "Shannon.Maness@legmt.gov",
         "committees": [
             {
-                "committee": "House Business and Labor",
+                "key": "house-business-and-labor",
+                "displayName": "House Business and Labor",
                 "role": "Member"
             },
             {
-                "committee": "House Natural Resources",
+                "key": "house-natural-resources",
+                "displayName": "House Natural Resources",
                 "role": "Member"
             },
             {
-                "committee": "House Fish, Wildlife and Parks",
+                "key": "house-fish-wildlife-and-parks",
+                "displayName": "House Fish, Wildlife and Parks",
                 "role": "Member"
             }
         ],
@@ -30402,15 +30710,18 @@
         "email": "Theresa.Manzella@legmt.gov",
         "committees": [
             {
-                "committee": "Senate Judiciary",
+                "key": "senate-judiciary",
+                "displayName": "Senate Judiciary",
                 "role": "Member"
             },
             {
-                "committee": "Senate Education and Cultural Resources",
+                "key": "senate-education-and-cultural-resources",
+                "displayName": "Senate Education and Cultural Resources",
                 "role": "Member"
             },
             {
-                "committee": "Senate State Administration",
+                "key": "senate-state-administration",
+                "displayName": "Senate State Administration",
                 "role": "Chair"
             }
         ],
@@ -30729,19 +31040,23 @@
         "email": "Marilyn.Marler@legmt.gov",
         "committees": [
             {
-                "committee": "House Taxation",
+                "key": "house-taxation",
+                "displayName": "House Taxation",
                 "role": "Member"
             },
             {
-                "committee": "House Natural Resources",
+                "key": "house-natural-resources",
+                "displayName": "House Natural Resources",
                 "role": "Vice-chair"
             },
             {
-                "committee": "House Fish, Wildlife and Parks",
+                "key": "house-fish-wildlife-and-parks",
+                "displayName": "House Fish, Wildlife and Parks",
                 "role": "Member"
             },
             {
-                "committee": "House Legislative Administration",
+                "key": "house-legislative-administration",
+                "displayName": "House Legislative Administration",
                 "role": "Member"
             }
         ],
@@ -30880,15 +31195,18 @@
         "email": "Ron.Marshall@legmt.gov",
         "committees": [
             {
-                "committee": "House Business and Labor",
+                "key": "house-business-and-labor",
+                "displayName": "House Business and Labor",
                 "role": "Member"
             },
             {
-                "committee": "House Human Services",
+                "key": "house-human-services",
+                "displayName": "House Human Services",
                 "role": "Chair"
             },
             {
-                "committee": "House Rules",
+                "key": "house-rules",
+                "displayName": "House Rules",
                 "role": "Member"
             }
         ],
@@ -31329,15 +31647,18 @@
         "email": "Eric.Matthews@legmt.gov",
         "committees": [
             {
-                "committee": "House Appropriations",
+                "key": "house-appropriations",
+                "displayName": "House Appropriations",
                 "role": "Member"
             },
             {
-                "committee": "House Rules",
+                "key": "house-rules",
+                "displayName": "House Rules",
                 "role": "Member"
             },
             {
-                "committee": "joint-appropriations-section-e",
+                "key": "joint-appropriations-section-e",
+                "displayName": "Joint Appropriations Section E — Education",
                 "role": "Member"
             }
         ],
@@ -31530,28 +31851,34 @@
         "email": "Tom.McGillvray@legmt.gov",
         "committees": [
             {
-                "committee": "joint-appropriations-section-d",
+                "key": "senate-finance-and-claims",
+                "displayName": "Senate Finance and Claims",
                 "role": "Member"
             },
             {
-                "committee": "Senate Finance and Claims",
+                "key": "senate-public-health-welfare-and-safety",
+                "displayName": "Senate Public Health, Welfare and Safety",
                 "role": "Member"
             },
             {
-                "committee": "Senate Public Health, Welfare and Safety",
+                "key": "senate-fish-and-game",
+                "displayName": "Senate Fish and Game",
                 "role": "Member"
             },
             {
-                "committee": "Senate Fish and Game",
-                "role": "Member"
-            },
-            {
-                "committee": "Senate Ethics",
+                "key": "senate-ethics",
+                "displayName": "Senate Ethics",
                 "role": "Vice-chair"
             },
             {
-                "committee": "Senate Rules",
+                "key": "senate-rules",
+                "displayName": "Senate Rules",
                 "role": "Chair"
+            },
+            {
+                "key": "joint-appropriations-section-d",
+                "displayName": "Joint Appropriations Section D — Judicial Branch, Law Enforcement, and Justice",
+                "role": "Member"
             }
         ],
         "leadershipTitle": "Senate Majority Leader",
@@ -32185,19 +32512,23 @@
         "email": "wendy.mckamey@legmt.gov",
         "committees": [
             {
-                "committee": "Senate Taxation",
+                "key": "senate-taxation",
+                "displayName": "Senate Taxation",
                 "role": "Member"
             },
             {
-                "committee": "Senate State Administration",
+                "key": "senate-state-administration",
+                "displayName": "Senate State Administration",
                 "role": "Vice-chair"
             },
             {
-                "committee": "Senate Agriculture, Livestock and Irrigation",
+                "key": "senate-agriculture-livestock-and-irrigation",
+                "displayName": "Senate Agriculture, Livestock and Irrigation",
                 "role": "Member"
             },
             {
-                "committee": "Senate Rules",
+                "key": "senate-rules",
+                "displayName": "Senate Rules",
                 "role": "Member"
             }
         ],
@@ -32711,11 +33042,13 @@
         "email": "Bill.Mercer@legmt.gov",
         "committees": [
             {
-                "committee": "House Appropriations",
+                "key": "house-appropriations",
+                "displayName": "House Appropriations",
                 "role": "Member"
             },
             {
-                "committee": "joint-appropriations-section-b",
+                "key": "joint-appropriations-section-b",
+                "displayName": "Joint Appropriations Section B — Health and Human Services",
                 "role": "Vice-chair"
             }
         ],
@@ -33105,19 +33438,23 @@
         "email": "Tom.Millett@legmt.gov",
         "committees": [
             {
-                "committee": "House Judiciary",
+                "key": "house-judiciary",
+                "displayName": "House Judiciary",
                 "role": "Member"
             },
             {
-                "committee": "House Energy, Technology and Federal Relations",
+                "key": "house-energy-technology-and-federal-relations",
+                "displayName": "House Energy, Technology and Federal Relations",
                 "role": "Member"
             },
             {
-                "committee": "House Fish, Wildlife and Parks",
+                "key": "house-fish-wildlife-and-parks",
+                "displayName": "House Fish, Wildlife and Parks",
                 "role": "Member"
             },
             {
-                "committee": "House Rules",
+                "key": "house-rules",
+                "displayName": "House Rules",
                 "role": "Member"
             }
         ],
@@ -33605,11 +33942,13 @@
         "email": "Russel.Miner@legmt.gov",
         "committees": [
             {
-                "committee": "House Taxation",
+                "key": "house-taxation",
+                "displayName": "House Taxation",
                 "role": "Member"
             },
             {
-                "committee": "House Agriculture",
+                "key": "house-agriculture",
+                "displayName": "House Agriculture",
                 "role": "Vice-chair"
             }
         ],
@@ -33802,19 +34141,23 @@
         "email": "Braxton.Mitchell@legmt.gov",
         "committees": [
             {
-                "committee": "House Judiciary",
+                "key": "house-judiciary",
+                "displayName": "House Judiciary",
                 "role": "Member"
             },
             {
-                "committee": "House Energy, Technology and Federal Relations",
+                "key": "house-energy-technology-and-federal-relations",
+                "displayName": "House Energy, Technology and Federal Relations",
                 "role": "Member"
             },
             {
-                "committee": "House Agriculture",
+                "key": "house-agriculture",
+                "displayName": "House Agriculture",
                 "role": "Chair"
             },
             {
-                "committee": "House Rules",
+                "key": "house-rules",
+                "displayName": "House Rules",
                 "role": "Member"
             }
         ],
@@ -34481,11 +34824,13 @@
         "email": "Valerie.Moore@legmt.gov",
         "committees": [
             {
-                "committee": "House Taxation",
+                "key": "house-taxation",
+                "displayName": "House Taxation",
                 "role": "Member"
             },
             {
-                "committee": "House Human Services",
+                "key": "house-human-services",
+                "displayName": "House Human Services",
                 "role": "Member"
             }
         ],
@@ -34741,15 +35086,18 @@
         "email": "Jacinda.Morigeau@legmt.gov",
         "committees": [
             {
-                "committee": "Senate Business, Labor, and Economic Affairs",
+                "key": "senate-business-labor-and-economic-affairs",
+                "displayName": "Senate Business, Labor, and Economic Affairs",
                 "role": "Member"
             },
             {
-                "committee": "Senate Education and Cultural Resources",
+                "key": "senate-education-and-cultural-resources",
+                "displayName": "Senate Education and Cultural Resources",
                 "role": "Member"
             },
             {
-                "committee": "Senate State Administration",
+                "key": "senate-state-administration",
+                "displayName": "Senate State Administration",
                 "role": "Member"
             }
         ],
@@ -34850,23 +35198,28 @@
         "email": "shane.morigeau@legmt.gov",
         "committees": [
             {
-                "committee": "joint-appropriations-section-d",
+                "key": "senate-finance-and-claims",
+                "displayName": "Senate Finance and Claims",
                 "role": "Member"
             },
             {
-                "committee": "Senate Finance and Claims",
+                "key": "senate-natural-resources",
+                "displayName": "Senate Natural Resources",
                 "role": "Member"
             },
             {
-                "committee": "Senate Natural Resources",
+                "key": "senate-fish-and-game",
+                "displayName": "Senate Fish and Game",
                 "role": "Member"
             },
             {
-                "committee": "Senate Fish and Game",
+                "key": "senate-rules",
+                "displayName": "Senate Rules",
                 "role": "Member"
             },
             {
-                "committee": "Senate Rules",
+                "key": "joint-appropriations-section-d",
+                "displayName": "Joint Appropriations Section D — Judicial Branch, Law Enforcement, and Justice",
                 "role": "Member"
             }
         ],
@@ -35031,15 +35384,18 @@
         "email": "Luke.Muszkiewicz@legmt.gov",
         "committees": [
             {
-                "committee": "House Appropriations",
+                "key": "house-appropriations",
+                "displayName": "House Appropriations",
                 "role": "Member"
             },
             {
-                "committee": "House Ethics",
+                "key": "house-ethics",
+                "displayName": "House Ethics",
                 "role": "Member"
             },
             {
-                "committee": "joint-appropriations-section-a",
+                "key": "joint-appropriations-section-a",
+                "displayName": "Joint Appropriations Section A — General Government",
                 "role": "Member"
             }
         ],
@@ -35338,11 +35694,13 @@
         "email": "Fiona.Nave@legmt.gov",
         "committees": [
             {
-                "committee": "House Appropriations",
+                "key": "house-appropriations",
+                "displayName": "House Appropriations",
                 "role": "Member"
             },
             {
-                "committee": "joint-appropriations-section-d",
+                "key": "joint-appropriations-section-d",
+                "displayName": "Joint Appropriations Section D — Judicial Branch, Law Enforcement, and Justice",
                 "role": "Chair"
             }
         ],
@@ -35600,15 +35958,18 @@
         "email": "Cora.Neumann@legmt.gov",
         "committees": [
             {
-                "committee": "Senate Judiciary",
+                "key": "senate-judiciary",
+                "displayName": "Senate Judiciary",
                 "role": "Member"
             },
             {
-                "committee": "Senate Public Health, Welfare and Safety",
+                "key": "senate-public-health-welfare-and-safety",
+                "displayName": "Senate Public Health, Welfare and Safety",
                 "role": "Member"
             },
             {
-                "committee": "Senate Agriculture, Livestock and Irrigation",
+                "key": "senate-agriculture-livestock-and-irrigation",
+                "displayName": "Senate Agriculture, Livestock and Irrigation",
                 "role": "Member"
             }
         ],
@@ -35797,11 +36158,13 @@
         "email": "Anthony.Nicastro@legmt.gov",
         "committees": [
             {
-                "committee": "House Appropriations",
+                "key": "house-appropriations",
+                "displayName": "House Appropriations",
                 "role": "Member"
             },
             {
-                "committee": "joint-appropriations-section-d",
+                "key": "joint-appropriations-section-d",
+                "displayName": "Joint Appropriations Section D — Judicial Branch, Law Enforcement, and Justice",
                 "role": "Member"
             }
         ],
@@ -36118,11 +36481,13 @@
         "email": "Nelly.Nicol@legmt.gov",
         "committees": [
             {
-                "committee": "House Business and Labor",
+                "key": "house-business-and-labor",
+                "displayName": "House Business and Labor",
                 "role": "Member"
             },
             {
-                "committee": "House Human Services",
+                "key": "house-human-services",
+                "displayName": "House Human Services",
                 "role": "Member"
             }
         ],
@@ -36321,15 +36686,18 @@
         "email": "George.Nikolakakos@legmt.gov",
         "committees": [
             {
-                "committee": "House Taxation",
+                "key": "house-taxation",
+                "displayName": "House Taxation",
                 "role": "Member"
             },
             {
-                "committee": "House Human Services",
+                "key": "house-human-services",
+                "displayName": "House Human Services",
                 "role": "Member"
             },
             {
-                "committee": "House Legislative Administration",
+                "key": "house-legislative-administration",
+                "displayName": "House Legislative Administration",
                 "role": "Chair"
             }
         ],
@@ -36348,7 +36716,7 @@
                 "title": "Democrats pitch property tax relief via income tax credit",
                 "category": "2025 Legislature",
                 "subtitle": "",
-                "date": "2025-01-21T16:08:54.000Z",
+                "date": "2025-01-21T23:08:54.000Z",
                 "link": "https://montanafreepress.org/2025/01/21/democrats-montana-legislature-pitch-property-tax-relief-via-income-tax-credit/",
                 "author": "Eric Dietrich",
                 "imageUrl": "https://montanafreepress.org/1-13-25_johnstember_51864/",
@@ -36546,15 +36914,18 @@
         "email": "Melissa.Nikolakakos@legmt.gov",
         "committees": [
             {
-                "committee": "House Taxation",
+                "key": "house-taxation",
+                "displayName": "House Taxation",
                 "role": "Member"
             },
             {
-                "committee": "House Education",
+                "key": "house-education",
+                "displayName": "House Education",
                 "role": "Member"
             },
             {
-                "committee": "House Agriculture",
+                "key": "house-agriculture",
+                "displayName": "House Agriculture",
                 "role": "Member"
             }
         ],
@@ -36839,19 +37210,23 @@
         "email": "mark.noland@legmt.gov",
         "committees": [
             {
-                "committee": "Senate Business, Labor, and Economic Affairs",
+                "key": "senate-business-labor-and-economic-affairs",
+                "displayName": "Senate Business, Labor, and Economic Affairs",
                 "role": "Chair"
             },
             {
-                "committee": "Senate Natural Resources",
+                "key": "senate-natural-resources",
+                "displayName": "Senate Natural Resources",
                 "role": "Member"
             },
             {
-                "committee": "Senate Fish and Game",
+                "key": "senate-fish-and-game",
+                "displayName": "Senate Fish and Game",
                 "role": "Member"
             },
             {
-                "committee": "Senate Committee on Committees",
+                "key": "senate-committee-on-committees",
+                "displayName": "Senate Committee on Committees",
                 "role": "Member"
             }
         ],
@@ -37237,15 +37612,18 @@
         "email": "Sara.Novak@legmt.gov",
         "committees": [
             {
-                "committee": "Senate Business, Labor, and Economic Affairs",
+                "key": "senate-business-labor-and-economic-affairs",
+                "displayName": "Senate Business, Labor, and Economic Affairs",
                 "role": "Member"
             },
             {
-                "committee": "Senate Education and Cultural Resources",
+                "key": "senate-education-and-cultural-resources",
+                "displayName": "Senate Education and Cultural Resources",
                 "role": "Vice-chair"
             },
             {
-                "committee": "Senate Fish and Game",
+                "key": "senate-fish-and-game",
+                "displayName": "Senate Fish and Game",
                 "role": "Member"
             }
         ],
@@ -37370,15 +37748,18 @@
         "email": "Greg.Oblander@legmt.gov",
         "committees": [
             {
-                "committee": "House Business and Labor",
+                "key": "house-business-and-labor",
+                "displayName": "House Business and Labor",
                 "role": "Member"
             },
             {
-                "committee": "House Natural Resources",
+                "key": "house-natural-resources",
+                "displayName": "House Natural Resources",
                 "role": "Vice-chair"
             },
             {
-                "committee": "House Agriculture",
+                "key": "house-agriculture",
+                "displayName": "House Agriculture",
                 "role": "Member"
             }
         ],
@@ -37667,15 +38048,18 @@
         "email": "andrea.olsen@legmt.gov",
         "committees": [
             {
-                "committee": "Senate Judiciary",
+                "key": "senate-judiciary",
+                "displayName": "Senate Judiciary",
                 "role": "Member"
             },
             {
-                "committee": "Senate Education and Cultural Resources",
+                "key": "senate-education-and-cultural-resources",
+                "displayName": "Senate Education and Cultural Resources",
                 "role": "Member"
             },
             {
-                "committee": "Senate Highways and Transportation",
+                "key": "senate-highways-and-transportation",
+                "displayName": "Senate Highways and Transportation",
                 "role": "Member"
             }
         ],
@@ -37828,15 +38212,18 @@
         "email": "Greg.Overstreet@legmt.gov",
         "committees": [
             {
-                "committee": "House Judiciary",
+                "key": "house-judiciary",
+                "displayName": "House Judiciary",
                 "role": "Member"
             },
             {
-                "committee": "House Education",
+                "key": "house-education",
+                "displayName": "House Education",
                 "role": "Member"
             },
             {
-                "committee": "House Local Government",
+                "key": "house-local-government",
+                "displayName": "House Local Government",
                 "role": "Member"
             }
         ],
@@ -38208,19 +38595,23 @@
         "email": "Gary.Parry@legmt.gov",
         "committees": [
             {
-                "committee": "House State Administration",
+                "key": "house-state-administration",
+                "displayName": "House State Administration",
                 "role": "Member"
             },
             {
-                "committee": "House Energy, Technology and Federal Relations",
+                "key": "house-energy-technology-and-federal-relations",
+                "displayName": "House Energy, Technology and Federal Relations",
                 "role": "Chair"
             },
             {
-                "committee": "House Fish, Wildlife and Parks",
+                "key": "house-fish-wildlife-and-parks",
+                "displayName": "House Fish, Wildlife and Parks",
                 "role": "Member"
             },
             {
-                "committee": "House Legislative Administration",
+                "key": "house-legislative-administration",
+                "displayName": "House Legislative Administration",
                 "role": "Member"
             }
         ],
@@ -38761,15 +39152,18 @@
         "email": "Bobby.Phalen@legmt.gov",
         "committees": [
             {
-                "committee": "Senate Business, Labor, and Economic Affairs",
+                "key": "senate-business-labor-and-economic-affairs",
+                "displayName": "Senate Business, Labor, and Economic Affairs",
                 "role": "Member"
             },
             {
-                "committee": "Senate State Administration",
+                "key": "senate-state-administration",
+                "displayName": "Senate State Administration",
                 "role": "Member"
             },
             {
-                "committee": "Senate Fish and Game",
+                "key": "senate-fish-and-game",
+                "displayName": "Senate Fish and Game",
                 "role": "Member"
             }
         ],
@@ -39233,11 +39627,13 @@
         "email": "Debo.Powers@legmt.gov",
         "committees": [
             {
-                "committee": "House Appropriations",
+                "key": "house-appropriations",
+                "displayName": "House Appropriations",
                 "role": "Member"
             },
             {
-                "committee": "joint-appropriations-section-c",
+                "key": "joint-appropriations-section-c",
+                "displayName": "Joint Appropriations Section C — Natural Resources and Transportation",
                 "role": "Member"
             }
         ],
@@ -39436,15 +39832,18 @@
         "email": "James.Reavis@legmt.gov",
         "committees": [
             {
-                "committee": "House Taxation",
+                "key": "house-taxation",
+                "displayName": "House Taxation",
                 "role": "Member"
             },
             {
-                "committee": "House Human Services",
+                "key": "house-human-services",
+                "displayName": "House Human Services",
                 "role": "Member"
             },
             {
-                "committee": "House Rules",
+                "key": "house-rules",
+                "displayName": "House Rules",
                 "role": "Member"
             }
         ],
@@ -39761,15 +40160,23 @@
         "email": "Matt.Regier@legmt.gov",
         "committees": [
             {
-                "committee": "Senate Finance and Claims",
+                "key": "senate-finance-and-claims",
+                "displayName": "Senate Finance and Claims",
                 "role": "Member"
             },
             {
-                "committee": "Senate State Administration",
+                "key": "senate-state-administration",
+                "displayName": "Senate State Administration",
                 "role": "Member"
             },
             {
-                "committee": "senate-energy-and-telecommunications",
+                "key": "senate-energy-and-telecommunications",
+                "displayName": "Senate Energy and Telecommunications",
+                "role": "Member"
+            },
+            {
+                "key": "joint-appropriations-section-e",
+                "displayName": "Joint Appropriations Section E — Education",
                 "role": "Member"
             }
         ],
@@ -39801,7 +40208,7 @@
                 "title": "Montana House hears trans bathroom bill as Senate stalls out",
                 "category": "2025 Legislature",
                 "subtitle": "",
-                "date": "2025-01-10T17:43:22.000Z",
+                "date": "2025-01-11T00:43:22.000Z",
                 "link": "https://montanafreepress.org/2025/01/10/montana-house-hears-trans-bathroom-bill-as-senate-stalls-out/",
                 "author": "Tom Lutey",
                 "imageUrl": "https://montanafreepress.org/1-6-senate-house/",
@@ -39993,19 +40400,23 @@
         "email": "Amy.Regier@legmt.gov",
         "committees": [
             {
-                "committee": "House Judiciary",
+                "key": "house-judiciary",
+                "displayName": "House Judiciary",
                 "role": "Chair"
             },
             {
-                "committee": "House Human Services",
+                "key": "house-human-services",
+                "displayName": "House Human Services",
                 "role": "Member"
             },
             {
-                "committee": "House Legislative Administration",
+                "key": "house-legislative-administration",
+                "displayName": "House Legislative Administration",
                 "role": "Member"
             },
             {
-                "committee": "House Rules",
+                "key": "house-rules",
+                "displayName": "House Rules",
                 "role": "Member"
             }
         ],
@@ -40385,15 +40796,18 @@
         "email": "Linda.Reksten@legmt.gov",
         "committees": [
             {
-                "committee": "House State Administration",
+                "key": "house-state-administration",
+                "displayName": "House State Administration",
                 "role": "Member"
             },
             {
-                "committee": "House Education",
+                "key": "house-education",
+                "displayName": "House Education",
                 "role": "Chair"
             },
             {
-                "committee": "House Local Government",
+                "key": "house-local-government",
+                "displayName": "House Local Government",
                 "role": "Member"
             }
         ],
@@ -40596,23 +41010,28 @@
         "email": "Vince.Ricci@legmt.gov",
         "committees": [
             {
-                "committee": "Senate Judiciary",
+                "key": "senate-judiciary",
+                "displayName": "Senate Judiciary",
                 "role": "Member"
             },
             {
-                "committee": "Senate Public Health, Welfare and Safety",
+                "key": "senate-public-health-welfare-and-safety",
+                "displayName": "Senate Public Health, Welfare and Safety",
                 "role": "Vice-chair"
             },
             {
-                "committee": "Senate Fish and Game",
+                "key": "senate-fish-and-game",
+                "displayName": "Senate Fish and Game",
                 "role": "Member"
             },
             {
-                "committee": "Senate Committee on Committees",
+                "key": "senate-committee-on-committees",
+                "displayName": "Senate Committee on Committees",
                 "role": "Member"
             },
             {
-                "committee": "Senate Legislative Administration",
+                "key": "senate-legislative-administration",
+                "displayName": "Senate Legislative Administration",
                 "role": "Chair"
             }
         ],
@@ -40817,19 +41236,23 @@
         "email": "Melissa.Romano@legmt.gov",
         "committees": [
             {
-                "committee": "House Taxation",
+                "key": "house-taxation",
+                "displayName": "House Taxation",
                 "role": "Member"
             },
             {
-                "committee": "House Education",
+                "key": "house-education",
+                "displayName": "House Education",
                 "role": "Vice-chair"
             },
             {
-                "committee": "House Agriculture",
+                "key": "house-agriculture",
+                "displayName": "House Agriculture",
                 "role": "Member"
             },
             {
-                "committee": "House Legislative Administration",
+                "key": "house-legislative-administration",
+                "displayName": "House Legislative Administration",
                 "role": "Member"
             }
         ],
@@ -41144,11 +41567,13 @@
         "email": "Scott.Rosenzweig@legmt.gov",
         "committees": [
             {
-                "committee": "House Appropriations",
+                "key": "house-appropriations",
+                "displayName": "House Appropriations",
                 "role": "Member"
             },
             {
-                "committee": "joint-appropriations-section-f",
+                "key": "joint-appropriations-section-f",
+                "displayName": "Joint Appropriations Section F — Long-Range Planning",
                 "role": "Member"
             }
         ],
@@ -41281,15 +41706,18 @@
         "email": "Tyson.RunningWolf@legmt.gov",
         "committees": [
             {
-                "committee": "House State Administration",
+                "key": "house-state-administration",
+                "displayName": "House State Administration",
                 "role": "Member"
             },
             {
-                "committee": "House Fish, Wildlife and Parks",
+                "key": "house-fish-wildlife-and-parks",
+                "displayName": "House Fish, Wildlife and Parks",
                 "role": "Member"
             },
             {
-                "committee": "House Rules",
+                "key": "house-rules",
+                "displayName": "House Rules",
                 "role": "Member"
             }
         ],
@@ -41649,16 +42077,19 @@
         "email": "Jerry.Schillinger@legmt.gov",
         "committees": [
             {
-                "committee": "House Appropriations",
+                "key": "house-appropriations",
+                "displayName": "House Appropriations",
                 "role": "Member"
             },
             {
-                "committee": "House Rules",
+                "key": "house-rules",
+                "displayName": "House Rules",
                 "role": "Vice-chair"
             },
             {
-                "committee": "joint-appropriations-section-c",
-                "role": "Member"
+                "key": "joint-appropriations-section-c",
+                "displayName": "Joint Appropriations Section C — Natural Resources and Transportation",
+                "role": "Chair"
             }
         ],
         "legislativeHistory": [
@@ -41680,7 +42111,7 @@
                 "title": "Legislature proposes 2025 session rules",
                 "category": "2025 Legislature",
                 "subtitle": "",
-                "date": "2024-12-03T17:26:50.000Z",
+                "date": "2024-12-04T00:26:50.000Z",
                 "link": "https://montanafreepress.org/2024/12/03/legislature-proposes-2025-session-rules/",
                 "author": "Tom Lutey",
                 "imageUrl": "https://montanafreepress.org/montana-state-capitol-15/",
@@ -41993,11 +42424,13 @@
         "email": "Curtis.Schomer@legmt.gov",
         "committees": [
             {
-                "committee": "House Business and Labor",
+                "key": "house-business-and-labor",
+                "displayName": "House Business and Labor",
                 "role": "Member"
             },
             {
-                "committee": "House Human Services",
+                "key": "house-human-services",
+                "displayName": "House Human Services",
                 "role": "Member"
             }
         ],
@@ -42436,19 +42869,23 @@
         "email": "Lukas.Schubert@legmt.gov",
         "committees": [
             {
-                "committee": "House State Administration",
+                "key": "house-state-administration",
+                "displayName": "House State Administration",
                 "role": "Member"
             },
             {
-                "committee": "House Natural Resources",
+                "key": "house-natural-resources",
+                "displayName": "House Natural Resources",
                 "role": "Member"
             },
             {
-                "committee": "House Fish, Wildlife and Parks",
+                "key": "house-fish-wildlife-and-parks",
+                "displayName": "House Fish, Wildlife and Parks",
                 "role": "Member"
             },
             {
-                "committee": "House Legislative Administration",
+                "key": "house-legislative-administration",
+                "displayName": "House Legislative Administration",
                 "role": "Member"
             }
         ],
@@ -42826,15 +43263,18 @@
         "email": "Joshua.Seckinger@legmt.gov",
         "committees": [
             {
-                "committee": "House Business and Labor",
+                "key": "house-business-and-labor",
+                "displayName": "House Business and Labor",
                 "role": "Member"
             },
             {
-                "committee": "House Natural Resources",
+                "key": "house-natural-resources",
+                "displayName": "House Natural Resources",
                 "role": "Member"
             },
             {
-                "committee": "House Fish, Wildlife and Parks",
+                "key": "house-fish-wildlife-and-parks",
+                "displayName": "House Fish, Wildlife and Parks",
                 "role": "Member"
             }
         ],
@@ -42961,15 +43401,18 @@
         "email": "Kerri.Seekins-Crowe@legmt.gov",
         "committees": [
             {
-                "committee": "House Business and Labor",
+                "key": "house-business-and-labor",
+                "displayName": "House Business and Labor",
                 "role": "Vice-chair"
             },
             {
-                "committee": "House Education",
+                "key": "house-education",
+                "displayName": "House Education",
                 "role": "Member"
             },
             {
-                "committee": "House Local Government",
+                "key": "house-local-government",
+                "displayName": "House Local Government",
                 "role": "Member"
             }
         ],
@@ -43471,15 +43914,18 @@
         "email": "Tracy.Sharp@legmt.gov",
         "committees": [
             {
-                "committee": "House Judiciary",
+                "key": "house-judiciary",
+                "displayName": "House Judiciary",
                 "role": "Member"
             },
             {
-                "committee": "House Energy, Technology and Federal Relations",
+                "key": "house-energy-technology-and-federal-relations",
+                "displayName": "House Energy, Technology and Federal Relations",
                 "role": "Member"
             },
             {
-                "committee": "House Fish, Wildlife and Parks",
+                "key": "house-fish-wildlife-and-parks",
+                "displayName": "House Fish, Wildlife and Parks",
                 "role": "Member"
             }
         ],
@@ -43668,23 +44114,28 @@
         "email": "Laura.Smith@legmt.gov",
         "committees": [
             {
-                "committee": "Senate Judiciary",
+                "key": "senate-judiciary",
+                "displayName": "Senate Judiciary",
                 "role": "Member"
             },
             {
-                "committee": "Senate Public Health, Welfare and Safety",
+                "key": "senate-public-health-welfare-and-safety",
+                "displayName": "Senate Public Health, Welfare and Safety",
                 "role": "Vice-chair"
             },
             {
-                "committee": "Senate Fish and Game",
+                "key": "senate-fish-and-game",
+                "displayName": "Senate Fish and Game",
                 "role": "Member"
             },
             {
-                "committee": "Senate Ethics",
+                "key": "senate-ethics",
+                "displayName": "Senate Ethics",
                 "role": "Member"
             },
             {
-                "committee": "Senate Rules",
+                "key": "senate-rules",
+                "displayName": "Senate Rules",
                 "role": "Member"
             }
         ],
@@ -44066,11 +44517,13 @@
         "email": "Frank.Smith@legmt.gov",
         "committees": [
             {
-                "committee": "House State Administration",
+                "key": "house-state-administration",
+                "displayName": "House State Administration",
                 "role": "Member"
             },
             {
-                "committee": "House Transportation",
+                "key": "house-transportation",
+                "displayName": "House Transportation",
                 "role": "Member"
             }
         ],
@@ -44299,11 +44752,13 @@
         "email": "Jade.Sooktis@legmt.gov",
         "committees": [
             {
-                "committee": "House State Administration",
+                "key": "house-state-administration",
+                "displayName": "House State Administration",
                 "role": "Member"
             },
             {
-                "committee": "House Human Services",
+                "key": "house-human-services",
+                "displayName": "House Human Services",
                 "role": "Member"
             }
         ],
@@ -44498,19 +44953,23 @@
         "email": "Courtenay.Sprunger@legmt.gov",
         "committees": [
             {
-                "committee": "House Business and Labor",
+                "key": "house-business-and-labor",
+                "displayName": "House Business and Labor",
                 "role": "Member"
             },
             {
-                "committee": "House Transportation",
+                "key": "house-transportation",
+                "displayName": "House Transportation",
                 "role": "Member"
             },
             {
-                "committee": "House Local Government",
+                "key": "house-local-government",
+                "displayName": "House Local Government",
                 "role": "Vice-chair"
             },
             {
-                "committee": "House Rules",
+                "key": "house-rules",
+                "displayName": "House Rules",
                 "role": "Member"
             }
         ],
@@ -44947,15 +45406,18 @@
         "email": "Ed.Stafman@legmt.gov",
         "committees": [
             {
-                "committee": "House Judiciary",
+                "key": "house-judiciary",
+                "displayName": "House Judiciary",
                 "role": "Member"
             },
             {
-                "committee": "House Transportation",
+                "key": "house-transportation",
+                "displayName": "House Transportation",
                 "role": "Member"
             },
             {
-                "committee": "House Local Government",
+                "key": "house-local-government",
+                "displayName": "House Local Government",
                 "role": "Vice-chair"
             }
         ],
@@ -45713,15 +46175,18 @@
         "email": "Peter.Strand@legmt.gov",
         "committees": [
             {
-                "committee": "House Judiciary",
+                "key": "house-judiciary",
+                "displayName": "House Judiciary",
                 "role": "Member"
             },
             {
-                "committee": "House Education",
+                "key": "house-education",
+                "displayName": "House Education",
                 "role": "Member"
             },
             {
-                "committee": "House Local Government",
+                "key": "house-local-government",
+                "displayName": "House Local Government",
                 "role": "Member"
             }
         ],
@@ -45848,19 +46313,23 @@
         "email": "Katie.Sullivan@legmt.gov",
         "committees": [
             {
-                "committee": "House Business and Labor",
+                "key": "house-business-and-labor",
+                "displayName": "House Business and Labor",
                 "role": "Member"
             },
             {
-                "committee": "House Human Services",
+                "key": "house-human-services",
+                "displayName": "House Human Services",
                 "role": "Member"
             },
             {
-                "committee": "House Transportation",
+                "key": "house-transportation",
+                "displayName": "House Transportation",
                 "role": "Member"
             },
             {
-                "committee": "House Rules",
+                "key": "house-rules",
+                "displayName": "House Rules",
                 "role": "Member"
             }
         ],
@@ -46037,15 +46506,28 @@
         "email": "russ.tempel@legmt.gov",
         "committees": [
             {
-                "committee": "Senate Education and Cultural Resources",
+                "key": "senate-finance-and-claims",
+                "displayName": "Senate Finance and Claims",
+                "role": "Member"
+            },
+            {
+                "key": "senate-education-and-cultural-resources",
+                "displayName": "Senate Education and Cultural Resources",
                 "role": "Vice-chair"
             },
             {
-                "committee": "Senate Highways and Transportation",
+                "key": "senate-highways-and-transportation",
+                "displayName": "Senate Highways and Transportation",
                 "role": "Chair"
             },
             {
-                "committee": "senate-executive-review-committee",
+                "key": "senate-executive-review-committee",
+                "displayName": "Senate Executive Review Committee",
+                "role": "Member"
+            },
+            {
+                "key": "joint-appropriations-section-b",
+                "displayName": "Joint Appropriations Section B — Health and Human Services",
                 "role": "Member"
             }
         ],
@@ -46311,15 +46793,18 @@
         "email": "Tony.Tezak@legmt.gov",
         "committees": [
             {
-                "committee": "joint-appropriations-section-a",
+                "key": "senate-finance-and-claims",
+                "displayName": "Senate Finance and Claims",
                 "role": "Member"
             },
             {
-                "committee": "Senate Finance and Claims",
+                "key": "senate-state-administration",
+                "displayName": "Senate State Administration",
                 "role": "Member"
             },
             {
-                "committee": "Senate State Administration",
+                "key": "joint-appropriations-section-a",
+                "displayName": "Joint Appropriations Section A — General Government",
                 "role": "Member"
             }
         ],
@@ -46569,19 +47054,23 @@
         "email": "Mark.Thane@legmt.gov",
         "committees": [
             {
-                "committee": "House Taxation",
+                "key": "house-taxation",
+                "displayName": "House Taxation",
                 "role": "Vice-chair"
             },
             {
-                "committee": "House Education",
+                "key": "house-education",
+                "displayName": "House Education",
                 "role": "Member"
             },
             {
-                "committee": "House Local Government",
+                "key": "house-local-government",
+                "displayName": "House Local Government",
                 "role": "Member"
             },
             {
-                "committee": "House Rules",
+                "key": "house-rules",
+                "displayName": "House Rules",
                 "role": "Member"
             }
         ],
@@ -46949,15 +47438,18 @@
         "email": "Morgan.Thiel@legmt.gov",
         "committees": [
             {
-                "committee": "House Business and Labor",
+                "key": "house-business-and-labor",
+                "displayName": "House Business and Labor",
                 "role": "Member"
             },
             {
-                "committee": "House Natural Resources",
+                "key": "house-natural-resources",
+                "displayName": "House Natural Resources",
                 "role": "Member"
             },
             {
-                "committee": "House Agriculture",
+                "key": "house-agriculture",
+                "displayName": "House Agriculture",
                 "role": "Member"
             }
         ],
@@ -47170,15 +47662,18 @@
         "email": "Eric.Tilleman@legmt.gov",
         "committees": [
             {
-                "committee": "House State Administration",
+                "key": "house-state-administration",
+                "displayName": "House State Administration",
                 "role": "Member"
             },
             {
-                "committee": "House Education",
+                "key": "house-education",
+                "displayName": "House Education",
                 "role": "Member"
             },
             {
-                "committee": "House Agriculture",
+                "key": "house-agriculture",
+                "displayName": "House Agriculture",
                 "role": "Member"
             }
         ],
@@ -47646,15 +48141,18 @@
         "email": "jeremy.trebas@legmt.gov",
         "committees": [
             {
-                "committee": "Senate Business, Labor, and Economic Affairs",
+                "key": "senate-business-labor-and-economic-affairs",
+                "displayName": "Senate Business, Labor, and Economic Affairs",
                 "role": "Vice-chair"
             },
             {
-                "committee": "Senate Education and Cultural Resources",
+                "key": "senate-education-and-cultural-resources",
+                "displayName": "Senate Education and Cultural Resources",
                 "role": "Member"
             },
             {
-                "committee": "Senate Local Government",
+                "key": "senate-local-government",
+                "displayName": "Senate Local Government",
                 "role": "Member"
             }
         ],
@@ -48709,15 +49207,18 @@
         "email": "Paul.Tuss@legmt.gov",
         "committees": [
             {
-                "committee": "House Appropriations",
+                "key": "house-appropriations",
+                "displayName": "House Appropriations",
                 "role": "Member"
             },
             {
-                "committee": "House Legislative Administration",
+                "key": "house-legislative-administration",
+                "displayName": "House Legislative Administration",
                 "role": "Vice-chair"
             },
             {
-                "committee": "joint-appropriations-section-f",
+                "key": "joint-appropriations-section-f",
+                "displayName": "Joint Appropriations Section F — Long-Range Planning",
                 "role": "Member"
             }
         ],
@@ -48945,19 +49446,23 @@
         "email": "barry.usher@legmt.gov",
         "committees": [
             {
-                "committee": "Senate Judiciary",
+                "key": "senate-judiciary",
+                "displayName": "Senate Judiciary",
                 "role": "Member"
             },
             {
-                "committee": "Senate Natural Resources",
+                "key": "senate-natural-resources",
+                "displayName": "Senate Natural Resources",
                 "role": "Member"
             },
             {
-                "committee": "senate-energy-and-telecommunications",
+                "key": "senate-energy-and-telecommunications",
+                "displayName": "Senate Energy and Telecommunications",
                 "role": "Member"
             },
             {
-                "committee": "Senate Rules",
+                "key": "senate-rules",
+                "displayName": "Senate Rules",
                 "role": "Member"
             }
         ],
@@ -49698,20 +50203,24 @@
         "email": "shelley.vance@legmt.gov",
         "committees": [
             {
-                "committee": "joint-appropriations-section-d",
+                "key": "senate-finance-and-claims",
+                "displayName": "Senate Finance and Claims",
+                "role": "Member"
+            },
+            {
+                "key": "senate-state-administration",
+                "displayName": "Senate State Administration",
+                "role": "Member"
+            },
+            {
+                "key": "senate-fish-and-game",
+                "displayName": "Senate Fish and Game",
+                "role": "Member"
+            },
+            {
+                "key": "joint-appropriations-section-d",
+                "displayName": "Joint Appropriations Section D — Judicial Branch, Law Enforcement, and Justice",
                 "role": "Vice-chair"
-            },
-            {
-                "committee": "Senate Finance and Claims",
-                "role": "Member"
-            },
-            {
-                "committee": "Senate State Administration",
-                "role": "Member"
-            },
-            {
-                "committee": "Senate Fish and Game",
-                "role": "Member"
             }
         ],
         "legislativeHistory": [
@@ -49903,19 +50412,23 @@
         "email": "Sue.Vinton@legmt.gov",
         "committees": [
             {
-                "committee": "Senate Judiciary",
+                "key": "senate-judiciary",
+                "displayName": "Senate Judiciary",
                 "role": "Member"
             },
             {
-                "committee": "Senate Education and Cultural Resources",
+                "key": "senate-education-and-cultural-resources",
+                "displayName": "Senate Education and Cultural Resources",
                 "role": "Member"
             },
             {
-                "committee": "Senate Natural Resources",
+                "key": "senate-natural-resources",
+                "displayName": "Senate Natural Resources",
                 "role": "Member"
             },
             {
-                "committee": "Senate Ethics",
+                "key": "senate-ethics",
+                "displayName": "Senate Ethics",
                 "role": "Chair"
             }
         ],
@@ -50358,11 +50871,13 @@
         "email": "Mike.Vinton@legmt.gov",
         "committees": [
             {
-                "committee": "House Appropriations",
+                "key": "house-appropriations",
+                "displayName": "House Appropriations",
                 "role": "Member"
             },
             {
-                "committee": "joint-appropriations-section-f",
+                "key": "joint-appropriations-section-f",
+                "displayName": "Joint Appropriations Section F — Long-Range Planning",
                 "role": "Member"
             }
         ],
@@ -50600,15 +51115,18 @@
         "email": "Kenneth.Walsh@legmt.gov",
         "committees": [
             {
-                "committee": "House Appropriations",
+                "key": "house-appropriations",
+                "displayName": "House Appropriations",
                 "role": "Member"
             },
             {
-                "committee": "House Legislative Administration",
+                "key": "house-legislative-administration",
+                "displayName": "House Legislative Administration",
                 "role": "Vice-chair"
             },
             {
-                "committee": "joint-appropriations-section-a",
+                "key": "joint-appropriations-section-a",
+                "displayName": "Joint Appropriations Section A — General Government",
                 "role": "Member"
             }
         ],
@@ -51206,15 +51724,23 @@
         "email": "susan.webber@legmt.gov",
         "committees": [
             {
-                "committee": "Senate Education and Cultural Resources",
+                "key": "senate-business-labor-and-economic-affairs",
+                "displayName": "Senate Business, Labor, and Economic Affairs",
                 "role": "Member"
             },
             {
-                "committee": "Senate Agriculture, Livestock and Irrigation",
+                "key": "senate-education-and-cultural-resources",
+                "displayName": "Senate Education and Cultural Resources",
                 "role": "Member"
             },
             {
-                "committee": "senate-executive-review-committee",
+                "key": "senate-local-government",
+                "displayName": "Senate Local Government",
+                "role": "Vice-chair"
+            },
+            {
+                "key": "senate-executive-review-committee",
+                "displayName": "Senate Executive Review Committee",
                 "role": "Vice-chair"
             }
         ],
@@ -51490,11 +52016,13 @@
         "email": "Jane.Weber@legmt.gov",
         "committees": [
             {
-                "committee": "House Taxation",
+                "key": "house-taxation",
+                "displayName": "House Taxation",
                 "role": "Member"
             },
             {
-                "committee": "House Human Services",
+                "key": "house-human-services",
+                "displayName": "House Human Services",
                 "role": "Member"
             }
         ],
@@ -51627,19 +52155,23 @@
         "email": "Jonathan.WindyBoy@legmt.gov",
         "committees": [
             {
-                "committee": "joint-appropriations-section-e",
+                "key": "senate-finance-and-claims",
+                "displayName": "Senate Finance and Claims",
                 "role": "Member"
             },
             {
-                "committee": "Senate Finance and Claims",
+                "key": "senate-education-and-cultural-resources",
+                "displayName": "Senate Education and Cultural Resources",
                 "role": "Member"
             },
             {
-                "committee": "Senate Education and Cultural Resources",
+                "key": "senate-public-health-welfare-and-safety",
+                "displayName": "Senate Public Health, Welfare and Safety",
                 "role": "Member"
             },
             {
-                "committee": "Senate Public Health, Welfare and Safety",
+                "key": "joint-appropriations-section-e",
+                "displayName": "Joint Appropriations Section E — Education",
                 "role": "Member"
             }
         ],
@@ -52177,15 +52709,18 @@
         "email": "Zack.Wirth@legmt.gov",
         "committees": [
             {
-                "committee": "House State Administration",
+                "key": "house-state-administration",
+                "displayName": "House State Administration",
                 "role": "Member"
             },
             {
-                "committee": "House Transportation",
+                "key": "house-transportation",
+                "displayName": "House Transportation",
                 "role": "Vice-chair"
             },
             {
-                "committee": "House Agriculture",
+                "key": "house-agriculture",
+                "displayName": "House Agriculture",
                 "role": "Member"
             }
         ],
@@ -52488,15 +53023,18 @@
         "email": "Mike.Yakawich@legmt.gov",
         "committees": [
             {
-                "committee": "Senate Taxation",
+                "key": "senate-taxation",
+                "displayName": "Senate Taxation",
                 "role": "Member"
             },
             {
-                "committee": "Senate Public Health, Welfare and Safety",
+                "key": "senate-public-health-welfare-and-safety",
+                "displayName": "Senate Public Health, Welfare and Safety",
                 "role": "Member"
             },
             {
-                "committee": "Senate Agriculture, Livestock and Irrigation",
+                "key": "senate-agriculture-livestock-and-irrigation",
+                "displayName": "Senate Agriculture, Livestock and Irrigation",
                 "role": "Member"
             }
         ],
@@ -53238,11 +53776,13 @@
         "email": "Zooey.Zephyr@legmt.gov",
         "committees": [
             {
-                "committee": "House Judiciary",
+                "key": "house-judiciary",
+                "displayName": "House Judiciary",
                 "role": "Member"
             },
             {
-                "committee": "House Human Services",
+                "key": "house-human-services",
+                "displayName": "House Human Services",
                 "role": "Member"
             }
         ],
@@ -53261,7 +53801,7 @@
                 "title": "Legislature proposes 2025 session rules",
                 "category": "2025 Legislature",
                 "subtitle": "",
-                "date": "2024-12-03T17:26:50.000Z",
+                "date": "2024-12-04T00:26:50.000Z",
                 "link": "https://montanafreepress.org/2024/12/03/legislature-proposes-2025-session-rules/",
                 "author": "Tom Lutey",
                 "imageUrl": "https://montanafreepress.org/montana-state-capitol-15/",
@@ -53378,15 +53918,18 @@
         "email": "Katie.Zolnikov@legmt.gov",
         "committees": [
             {
-                "committee": "House Taxation",
+                "key": "house-taxation",
+                "displayName": "House Taxation",
                 "role": "Member"
             },
             {
-                "committee": "House Energy, Technology and Federal Relations",
+                "key": "house-energy-technology-and-federal-relations",
+                "displayName": "House Energy, Technology and Federal Relations",
                 "role": "Member"
             },
             {
-                "committee": "House Ethics",
+                "key": "house-ethics",
+                "displayName": "House Ethics",
                 "role": "Chair"
             }
         ],
@@ -53929,23 +54472,28 @@
         "email": "daniel.zolnikov@legmt.gov",
         "committees": [
             {
-                "committee": "Senate Business, Labor, and Economic Affairs",
+                "key": "senate-business-labor-and-economic-affairs",
+                "displayName": "Senate Business, Labor, and Economic Affairs",
                 "role": "Member"
             },
             {
-                "committee": "Senate Natural Resources",
+                "key": "senate-natural-resources",
+                "displayName": "Senate Natural Resources",
                 "role": "Member"
             },
             {
-                "committee": "senate-energy-and-telecommunications",
+                "key": "senate-energy-and-telecommunications",
+                "displayName": "Senate Energy and Telecommunications",
                 "role": "Chair"
             },
             {
-                "committee": "Senate Committee on Committees",
+                "key": "senate-committee-on-committees",
+                "displayName": "Senate Committee on Committees",
                 "role": "Member"
             },
             {
-                "committee": "Senate Legislative Administration",
+                "key": "senate-legislative-administration",
+                "displayName": "Senate Legislative Administration",
                 "role": "Member"
             }
         ],
