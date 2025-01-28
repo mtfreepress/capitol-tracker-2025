@@ -191,8 +191,8 @@
             "motion": "Committee Executive Action--Bill Passed",
             "thresholdRequired": "simple",
             "count": {
-                "Y": 11,
-                "N": 0
+                "Y": 9,
+                "N": 2
             },
             "gopCount": {
                 "Y": 7,
@@ -202,15 +202,15 @@
                 "O": 0
             },
             "demCount": {
-                "Y": 4,
-                "N": 0,
+                "Y": 2,
+                "N": 2,
                 "A": 0,
                 "E": 0,
                 "O": 0
             },
             "motionPassed": true,
             "gopSupported": true,
-            "demSupported": true,
+            "demSupported": false,
             "votes": [
                 {
                     "option": "Y",
@@ -222,27 +222,11 @@
                 },
                 {
                     "option": "Y",
-                    "name": "Susan Webber",
-                    "lastName": "Webber",
-                    "party": "D",
-                    "locale": "Browning",
-                    "district": "SD 8"
-                },
-                {
-                    "option": "Y",
                     "name": "Jeremy Trebas",
                     "lastName": "Trebas",
                     "party": "R",
                     "locale": "Great Falls",
                     "district": "SD 10"
-                },
-                {
-                    "option": "Y",
-                    "name": "Christopher Pope",
-                    "lastName": "Pope",
-                    "party": "D",
-                    "locale": "Unknown",
-                    "district": "SD 33"
                 },
                 {
                     "option": "Y",
@@ -299,6 +283,22 @@
                     "party": "R",
                     "locale": "Columbus",
                     "district": "SD 28"
+                },
+                {
+                    "option": "N",
+                    "name": "Susan Webber",
+                    "lastName": "Webber",
+                    "party": "D",
+                    "locale": "Browning",
+                    "district": "SD 8"
+                },
+                {
+                    "option": "N",
+                    "name": "Christopher Pope",
+                    "lastName": "Pope",
+                    "party": "D",
+                    "locale": "Unknown",
+                    "district": "SD 33"
                 }
             ]
         }
