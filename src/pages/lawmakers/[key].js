@@ -83,6 +83,9 @@ const LawmakerPage = ({ lawmaker }) => {
   return (
     <Layout
       relativePath={`/${key}`}
+      // pageFeatureImage={`/images/portraits/2025/${key}.jpg`} // TODO when we have time to troubleshoot
+      // pageFeatureImageWidth // optional?
+      // pageFeatureImageHeight // optional?
       pageTitle={`${title} ${name}, ${party}-${locale} | 2025 MTFP Capitol Tracker`}
       pageDescription={`Election history, sponsored bills, committee assignments and more for ${title} ${name}, ${party}-${locale}.`}
       socialTitle={`${title} ${name}, ${party}-${locale} | 2025 MTFP Capitol Tracker`}

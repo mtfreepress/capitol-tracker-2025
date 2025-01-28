@@ -11,11 +11,6 @@ import Footer from './Footer'
 
 import { metaData } from "@/config";
 
-// filler stuff until we can get metadata pipeline worked out
-const pageTitle = 'TK'
-const pageUrl = 'TK'
-const featureImage = null
-
 const bodyStyle = css`
     position: relative;
 `
@@ -42,17 +37,21 @@ const Layout = ({
   pageTitle,
   pageDescription,
   pageFeatureImage,
+  pageFeatureImageWidth,
+  pageFeatureImageHeight,
   relativePath,
   socialTitle,
   socialDescription,
   children, 
   location 
 }) => {
+  
   const {
     baseUrl,
   } = metaData
-  const pageUrl = relativePath === '/' ? `${baseUrl}/` : `${baseUrl}/${relativePath}/`
-  const featureImage = pageFeatureImage || null
+
+  const pageUrl = relativePath === '/' ? `${baseUrl}/` : `${baseUrl}${relativePath}/`
+  const featureImage = pageFeatureImage ?  `${baseUrl}/${pageFeatureImage}` : `${baseUrl}/2025-capitol-tracker-feature-image.jpg`
   return (
     <div>
       <Head>
@@ -65,11 +64,11 @@ const Layout = ({
         {/* OpenGraph / FB */}
         <meta property="og:url" content={pageUrl} />
         <meta property="og:locale" content="en_US" />
-        <meta property="og:site_name" content="Montana Free Press" />
+        <meta property="og:site_name" content="2025 Capitol Tracker | Montana Free Press" />
         <meta property="og:title" content={socialTitle || pageTitle } />
         <meta property="og:image" content={featureImage} />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
+        <meta property="og:image:width" content={pageFeatureImageWidth || "1920"} />
+        <meta property="og:image:height" content={pageFeatureImageHeight || "1080"} />
         <meta property="og:type" content="website" />
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />

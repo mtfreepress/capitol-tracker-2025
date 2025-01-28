@@ -39,9 +39,9 @@ const Senate = ({ senators, committees }) => {
     <Layout
       relativePath='/senate'
       pageTitle={"Montana Senate | 2025 MTFP Capitol Tracker"}
-      pageDescription={"The senators and committees of the 2025 Montana Senate."}
-      socialTitle={"Montana Senate: 2025 MTFP Capitol Tracker"}
-      socialDescription={"The lawmakers and committees of the 2025 Montana Senate."}
+      pageDescription={"The lawmakers of the 2025 Montana Senate."}
+      socialTitle={"Montana Senate | 2025 MTFP Capitol Tracker"}
+      socialDescription={"The lawmakers of the 2025 Montana Senate."}
     >
       
       <h1>The Montana Senate</h1>

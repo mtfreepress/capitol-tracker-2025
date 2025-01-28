@@ -4,13 +4,6 @@
 // TODO: Update this
 export const metaData = {
     baseUrl: 'https://projects.montanafreepress.org/capitol-tracker-2025',
-    // On-page display
-    // webTitle: '2024 Election Guide', // Replacing with custom design in Header
-    webSubtitle: 'Montana\'s candidates for state and federal office.',
-
-    // SEO
-    siteSeoTitle: '2024 Montana Free Press Election Guide'
-
 }
 
 // TODO - update this link to a to a new one
