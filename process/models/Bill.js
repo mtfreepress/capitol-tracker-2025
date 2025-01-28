@@ -25,6 +25,7 @@ export default class Bill {
     }) {
         const {
             key,
+            identifierLong,
             session,
             billPageUrl,
             // billTextUrl,
@@ -76,6 +77,7 @@ export default class Bill {
         this.data = {
             key: billKey(key),  // url-friendly
             identifier: key,
+            identifierLong,
             chamber: this.chamber,
             title,
             session,
@@ -193,8 +195,6 @@ export default class Bill {
 
         const committeeActionsInFirstChamber = actionsWithFlag(firstChamberActions, 'committeeAction')
         // remove approps subcommittees so HB 2 process doesn't get confused
-        
-        
         const firstChamberCommittees = Array.from(new Set(committeeActionsInFirstChamber.map(d => d.committee)))
             .filter(d => ![
                 'Joint Appropriations Section A — General Government',

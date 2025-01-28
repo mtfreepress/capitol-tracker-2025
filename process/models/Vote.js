@@ -70,7 +70,6 @@ export default class Vote {
 
     cleanVotes = (rawVotes) => {
         return rawVotes.map(ballot => {
-            // console.log("BALLOT", ballot)
             const standardName = standardizeLawmakerName(ballot.name)
             const lawmakerSummary = getLawmakerSummary(standardName)
             const cleanedVote = {
@@ -78,7 +77,6 @@ export default class Vote {
                 ...lawmakerSummary,
                 lastName: ballot.lastName,
             }
-            console.log('cleanedVote:', cleanedVote)
             return cleanedVote
         })
     }
