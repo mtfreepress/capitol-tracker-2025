@@ -4274,7 +4274,7 @@
                     "session": "2",
                     "thresholdRequired": "simple",
                     "count": {
-                        "Y": 11,
+                        "Y": 7,
                         "N": 4
                     },
                     "gopCount": {
@@ -4285,7 +4285,7 @@
                         "O": 0
                     },
                     "demCount": {
-                        "Y": 4,
+                        "Y": 0,
                         "N": 4,
                         "A": 0,
                         "E": 0,
@@ -4304,7 +4304,7 @@
                             "district": "SD 38"
                         },
                         {
-                            "option": "Y",
+                            "option": "N",
                             "name": "Susan Webber",
                             "lastName": "Webber",
                             "party": "D",
@@ -4320,7 +4320,7 @@
                             "district": "SD 10"
                         },
                         {
-                            "option": "Y",
+                            "option": "N",
                             "name": "Chris Pope",
                             "lastName": "Pope",
                             "party": "D",
@@ -4344,7 +4344,7 @@
                             "district": "SD 7"
                         },
                         {
-                            "option": "Y",
+                            "option": "N",
                             "name": "Dave Fern",
                             "lastName": "Fern",
                             "party": "D",
@@ -4368,7 +4368,7 @@
                             "district": "SD 18"
                         },
                         {
-                            "option": "Y",
+                            "option": "N",
                             "name": "Ellie Boldman",
                             "lastName": "Boldman",
                             "party": "D",
@@ -4382,38 +4382,6 @@
                             "party": "R",
                             "locale": "Columbus",
                             "district": "SD 28"
-                        },
-                        {
-                            "option": "N",
-                            "name": "Susan Webber",
-                            "lastName": "Webber",
-                            "party": "D",
-                            "locale": "Browning",
-                            "district": "SD 8"
-                        },
-                        {
-                            "option": "N",
-                            "name": "Chris Pope",
-                            "lastName": "Pope",
-                            "party": "D",
-                            "locale": "Bozeman",
-                            "district": "SD 33"
-                        },
-                        {
-                            "option": "N",
-                            "name": "Dave Fern",
-                            "lastName": "Fern",
-                            "party": "D",
-                            "locale": "Whitefish",
-                            "district": "SD 2"
-                        },
-                        {
-                            "option": "N",
-                            "name": "Ellie Boldman",
-                            "lastName": "Boldman",
-                            "party": "D",
-                            "locale": "Missoula",
-                            "district": "SD 47"
                         }
                     ]
                 }
@@ -4434,6 +4402,19 @@
                 "committeeAction": true,
                 "advanced": true,
                 "amended": true,
+                "vote": null
+            },
+            {
+                "id": "SB99-0022",
+                "bill": "SB 99",
+                "date": "01/28/2025",
+                "description": "Committee Report--Bill Passed as Amended",
+                "posession": "senate",
+                "committee": null,
+                "actionUrl": null,
+                "recordings": [],
+                "transcriptUrl": null,
+                "key": "Committee Report--Bill Passed as Amended",
                 "vote": null
             }
         ]
@@ -5232,8 +5213,8 @@
                     "session": "2",
                     "thresholdRequired": "simple",
                     "count": {
-                        "Y": 11,
-                        "N": 0
+                        "Y": 8,
+                        "N": 3
                     },
                     "gopCount": {
                         "Y": 7,
@@ -5243,15 +5224,15 @@
                         "O": 0
                     },
                     "demCount": {
-                        "Y": 4,
-                        "N": 0,
+                        "Y": 1,
+                        "N": 3,
                         "A": 0,
                         "E": 0,
                         "O": 0
                     },
                     "motionPassed": true,
                     "gopSupported": true,
-                    "demSupported": true,
+                    "demSupported": false,
                     "votes": [
                         {
                             "option": "Y",
@@ -5263,27 +5244,11 @@
                         },
                         {
                             "option": "Y",
-                            "name": "Susan Webber",
-                            "lastName": "Webber",
-                            "party": "D",
-                            "locale": "Browning",
-                            "district": "SD 8"
-                        },
-                        {
-                            "option": "Y",
                             "name": "Jeremy Trebas",
                             "lastName": "Trebas",
                             "party": "R",
                             "locale": "Great Falls",
                             "district": "SD 10"
-                        },
-                        {
-                            "option": "Y",
-                            "name": "Chris Pope",
-                            "lastName": "Pope",
-                            "party": "D",
-                            "locale": "Bozeman",
-                            "district": "SD 33"
                         },
                         {
                             "option": "Y",
@@ -5300,14 +5265,6 @@
                             "party": "R",
                             "locale": "Polson",
                             "district": "SD 7"
-                        },
-                        {
-                            "option": "Y",
-                            "name": "Dave Fern",
-                            "lastName": "Fern",
-                            "party": "D",
-                            "locale": "Whitefish",
-                            "district": "SD 2"
                         },
                         {
                             "option": "Y",
@@ -5340,6 +5297,30 @@
                             "party": "R",
                             "locale": "Columbus",
                             "district": "SD 28"
+                        },
+                        {
+                            "option": "N",
+                            "name": "Susan Webber",
+                            "lastName": "Webber",
+                            "party": "D",
+                            "locale": "Browning",
+                            "district": "SD 8"
+                        },
+                        {
+                            "option": "N",
+                            "name": "Chris Pope",
+                            "lastName": "Pope",
+                            "party": "D",
+                            "locale": "Bozeman",
+                            "district": "SD 33"
+                        },
+                        {
+                            "option": "N",
+                            "name": "Dave Fern",
+                            "lastName": "Fern",
+                            "party": "D",
+                            "locale": "Whitefish",
+                            "district": "SD 2"
                         }
                     ]
                 }
@@ -5359,6 +5340,19 @@
                 "isHighlight": true,
                 "committeeAction": true,
                 "advanced": true,
+                "vote": null
+            },
+            {
+                "id": "SB96-0015",
+                "bill": "SB 96",
+                "date": "01/28/2025",
+                "description": "Committee Report--Bill Passed",
+                "posession": "senate",
+                "committee": null,
+                "actionUrl": null,
+                "recordings": [],
+                "transcriptUrl": null,
+                "key": "Committee Report--Bill Passed",
                 "vote": null
             }
         ]
@@ -8106,18 +8100,18 @@
                     "session": "2",
                     "thresholdRequired": "simple",
                     "count": {
-                        "Y": 11,
+                        "Y": 7,
                         "N": 4
                     },
                     "gopCount": {
-                        "Y": 7,
+                        "Y": 5,
                         "N": 2,
                         "A": 0,
                         "E": 0,
                         "O": 0
                     },
                     "demCount": {
-                        "Y": 4,
+                        "Y": 2,
                         "N": 2,
                         "A": 0,
                         "E": 0,
@@ -8125,7 +8119,7 @@
                     },
                     "motionPassed": true,
                     "gopSupported": true,
-                    "demSupported": true,
+                    "demSupported": false,
                     "votes": [
                         {
                             "option": "Y",
@@ -8134,38 +8128,6 @@
                             "party": "R",
                             "locale": "Elliston",
                             "district": "SD 38"
-                        },
-                        {
-                            "option": "Y",
-                            "name": "Susan Webber",
-                            "lastName": "Webber",
-                            "party": "D",
-                            "locale": "Browning",
-                            "district": "SD 8"
-                        },
-                        {
-                            "option": "Y",
-                            "name": "Jeremy Trebas",
-                            "lastName": "Trebas",
-                            "party": "R",
-                            "locale": "Great Falls",
-                            "district": "SD 10"
-                        },
-                        {
-                            "option": "Y",
-                            "name": "Chris Pope",
-                            "lastName": "Pope",
-                            "party": "D",
-                            "locale": "Bozeman",
-                            "district": "SD 33"
-                        },
-                        {
-                            "option": "Y",
-                            "name": "Jason Ellsworth",
-                            "lastName": "Ellsworth",
-                            "party": "R",
-                            "locale": "Hamilton",
-                            "district": "SD 43"
                         },
                         {
                             "option": "Y",
@@ -8182,14 +8144,6 @@
                             "party": "D",
                             "locale": "Whitefish",
                             "district": "SD 2"
-                        },
-                        {
-                            "option": "Y",
-                            "name": "Gayle Lammers",
-                            "lastName": "Lammers",
-                            "party": "R",
-                            "locale": "Hardin",
-                            "district": "SD 21"
                         },
                         {
                             "option": "Y",
@@ -8246,6 +8200,14 @@
                             "party": "R",
                             "locale": "Hamilton",
                             "district": "SD 43"
+                        },
+                        {
+                            "option": "Y",
+                            "name": "Gayle Lammers",
+                            "lastName": "Lammers",
+                            "party": "R",
+                            "locale": "Hardin",
+                            "district": "SD 21"
                         }
                     ]
                 }
@@ -8261,6 +8223,19 @@
                 "recordings": [],
                 "transcriptUrl": null,
                 "key": "Revised Fiscal Note Requested",
+                "vote": null
+            },
+            {
+                "id": "SB90-0021",
+                "bill": "SB 90",
+                "date": "01/28/2025",
+                "description": "Committee Report--Bill Passed as Amended",
+                "posession": "senate",
+                "committee": null,
+                "actionUrl": null,
+                "recordings": [],
+                "transcriptUrl": null,
+                "key": "Committee Report--Bill Passed as Amended",
                 "vote": null
             }
         ]
@@ -18155,11 +18130,11 @@
                     "session": "2",
                     "thresholdRequired": "simple",
                     "count": {
-                        "Y": 12,
+                        "Y": 8,
                         "N": 4
                     },
                     "gopCount": {
-                        "Y": 8,
+                        "Y": 4,
                         "N": 4,
                         "A": 0,
                         "E": 0,
@@ -18173,11 +18148,11 @@
                         "O": 0
                     },
                     "motionPassed": true,
-                    "gopSupported": true,
+                    "gopSupported": false,
                     "demSupported": true,
                     "votes": [
                         {
-                            "option": "Y",
+                            "option": "N",
                             "name": "Jason Ellsworth",
                             "lastName": "Ellsworth",
                             "party": "R",
@@ -18217,7 +18192,7 @@
                             "district": "SD 50"
                         },
                         {
-                            "option": "Y",
+                            "option": "N",
                             "name": "Mark Noland",
                             "lastName": "Noland",
                             "party": "R",
@@ -18233,7 +18208,7 @@
                             "district": "SD 36"
                         },
                         {
-                            "option": "Y",
+                            "option": "N",
                             "name": "Bob Phalen",
                             "lastName": "Phalen",
                             "party": "R",
@@ -18241,7 +18216,7 @@
                             "district": "SD 17"
                         },
                         {
-                            "option": "Y",
+                            "option": "N",
                             "name": "Vince Ricci",
                             "lastName": "Ricci",
                             "party": "R",
@@ -18263,38 +18238,6 @@
                             "party": "R",
                             "locale": "Belgrade",
                             "district": "SD 34"
-                        },
-                        {
-                            "option": "N",
-                            "name": "Jason Ellsworth",
-                            "lastName": "Ellsworth",
-                            "party": "R",
-                            "locale": "Hamilton",
-                            "district": "SD 43"
-                        },
-                        {
-                            "option": "N",
-                            "name": "Mark Noland",
-                            "lastName": "Noland",
-                            "party": "R",
-                            "locale": "Bigfork",
-                            "district": "SD 6"
-                        },
-                        {
-                            "option": "N",
-                            "name": "Bob Phalen",
-                            "lastName": "Phalen",
-                            "party": "R",
-                            "locale": "Glendive",
-                            "district": "SD 17"
-                        },
-                        {
-                            "option": "N",
-                            "name": "Vince Ricci",
-                            "lastName": "Ricci",
-                            "party": "R",
-                            "locale": "Billings",
-                            "district": "SD 27"
                         },
                         {
                             "option": "Y",
@@ -30461,6 +30404,19 @@
                         }
                     ]
                 }
+            },
+            {
+                "id": "SB47-0014",
+                "bill": "SB 47",
+                "date": "01/28/2025",
+                "description": "Committee Report--Bill Passed",
+                "posession": "senate",
+                "committee": null,
+                "actionUrl": null,
+                "recordings": [],
+                "transcriptUrl": null,
+                "key": "Committee Report--Bill Passed",
+                "vote": null
             }
         ]
     },
@@ -44524,6 +44480,21 @@
                 "isHighlight": true,
                 "introduction": true,
                 "vote": null
+            },
+            {
+                "id": "SB223-0011",
+                "bill": "SB 223",
+                "date": "01/28/2025",
+                "description": "First Reading",
+                "posession": "senate",
+                "committee": null,
+                "actionUrl": null,
+                "recordings": [],
+                "transcriptUrl": null,
+                "key": "First Reading",
+                "isMajor": true,
+                "introduction": true,
+                "vote": null
             }
         ]
     },
@@ -44652,6 +44623,21 @@
             },
             {
                 "id": "SB222-0010",
+                "bill": "SB 222",
+                "date": "01/28/2025",
+                "description": "First Reading",
+                "posession": "senate",
+                "committee": null,
+                "actionUrl": null,
+                "recordings": [],
+                "transcriptUrl": null,
+                "key": "First Reading",
+                "isMajor": true,
+                "introduction": true,
+                "vote": null
+            },
+            {
+                "id": "SB222-0011",
                 "bill": "SB 222",
                 "date": "01/28/2025",
                 "description": "Referred to Committee",
@@ -44794,6 +44780,21 @@
                 "id": "SB221-0010",
                 "bill": "SB 221",
                 "date": "01/28/2025",
+                "description": "First Reading",
+                "posession": "senate",
+                "committee": null,
+                "actionUrl": null,
+                "recordings": [],
+                "transcriptUrl": null,
+                "key": "First Reading",
+                "isMajor": true,
+                "introduction": true,
+                "vote": null
+            },
+            {
+                "id": "SB221-0011",
+                "bill": "SB 221",
+                "date": "01/28/2025",
                 "description": "Referred to Committee",
                 "posession": "senate",
                 "committee": null,
@@ -44932,6 +44933,21 @@
             },
             {
                 "id": "SB220-0010",
+                "bill": "SB 220",
+                "date": "01/28/2025",
+                "description": "First Reading",
+                "posession": "senate",
+                "committee": null,
+                "actionUrl": null,
+                "recordings": [],
+                "transcriptUrl": null,
+                "key": "First Reading",
+                "isMajor": true,
+                "introduction": true,
+                "vote": null
+            },
+            {
+                "id": "SB220-0011",
                 "bill": "SB 220",
                 "date": "01/28/2025",
                 "description": "Referred to Committee",
@@ -46318,6 +46334,21 @@
             },
             {
                 "id": "SB219-0016",
+                "bill": "SB 219",
+                "date": "01/28/2025",
+                "description": "First Reading",
+                "posession": "senate",
+                "committee": null,
+                "actionUrl": null,
+                "recordings": [],
+                "transcriptUrl": null,
+                "key": "First Reading",
+                "isMajor": true,
+                "introduction": true,
+                "vote": null
+            },
+            {
+                "id": "SB219-0017",
                 "bill": "SB 219",
                 "date": "01/28/2025",
                 "description": "Referred to Committee",
