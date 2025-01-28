@@ -39,9 +39,9 @@ const House = ({ representatives, committees }) => {
     <Layout
       relativePath='/house'
       pageTitle={"Montana House | 2025 MTFP Capitol Tracker"}
-      pageDescription={"The representatives and committees of the 2025 Montana House."}
-      socialTitle={"Montana House: 2025 MTFP Capitol Tracker"}
-      socialDescription={"The lawmakers and committees of the 2025 Montana House."}
+      pageDescription={"The lawmakers of the 2025 Montana House."}
+      socialTitle={"Montana House | 2025 MTFP Capitol Tracker"}
+      socialDescription={"The lawmakers of the 2025 Montana House."}
     >
       
       <h1>The Montana House</h1>
