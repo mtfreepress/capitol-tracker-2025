@@ -34,10 +34,16 @@
             "subject": "Rule Making",
             "fiscalCode": "",
             "voteReq": "SIMPLE"
+        },
+        {
+            "subject": "Constitutional Amendment Proposals",
+            "fiscalCode": "",
+            "voteReq": "TWO_THIRDS_LEGISLATURE"
         }
     ],
     "voteRequirements": [
-        "SIMPLE"
+        "SIMPLE",
+        "TWO_THIRDS_LEGISLATURE"
     ],
     "deadlineCategory": "undefined",
     "transmittalDeadline": "undefined",
