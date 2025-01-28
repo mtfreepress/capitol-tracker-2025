@@ -12,7 +12,7 @@ import { numberFormat, dateFormat } from '../config/utils';
 
 const plural = (value) => (value !== 1 ? 's' : '');
 
-const Governor = ({ bills }) => {
+const Governor = ({ billsTransmittedToGovernor }) => {
   const { text, articles } = governorData;
 
   // filter functions
@@ -24,51 +24,40 @@ const Governor = ({ bills }) => {
 
 
   // Filter bills based on status v2
-  const awaitingActionBills = bills.filter(b => {
+  const awaitingActionBills = billsTransmittedToGovernor.filter(b => {
     const governorProgress = b.progress.find(d => d.step === 'governor');
     return governorProgress && governorProgress.statusLabel === 'Pending';
   });
 
-  const vetoedBills = bills.filter(b => {
+  const vetoedBills = billsTransmittedToGovernor.filter(b => {
     const governorProgress = b.progress.find(d => d.step === 'governor');
     return governorProgress && governorProgress.statusLabel === 'Vetoed';
   });
 
-  const amendmentSuggestedBills = bills.filter(b => {
+  const amendmentSuggestedBills = billsTransmittedToGovernor.filter(b => {
     const governorProgress = b.progress.find(d => d.step === 'governor');
     return governorProgress && governorProgress.statusLabel === 'Amendment suggested';
   });
 
-  const vetoOverrideAttempts = bills.filter(b => {
+  const vetoOverrideAttempts = billsTransmittedToGovernor.filter(b => {
     const governorProgress = b.progress.find(d => d.step === 'governor');
     return governorProgress && governorProgress.statusLabel === 'Veto Override Pending';
   });
 
-  const successfulVetoOverrides = bills.filter(b => {
+  const successfulVetoOverrides = billsTransmittedToGovernor.filter(b => {
     const governorProgress = b.progress.find(d => d.step === 'governor');
     return governorProgress && governorProgress.statusLabel === 'Veto Overridden';
   });
 
-  const signedBills = bills.filter(b => {
+  const signedBills = billsTransmittedToGovernor.filter(b => {
     const governorProgress = b.progress.find(d => d.step === 'governor');
     return governorProgress && governorProgress.statusLabel === 'Signed';
   });
 
-  const letBecomeLawBills = bills.filter(b => {
+  const letBecomeLawBills = billsTransmittedToGovernor.filter(b => {
     const governorProgress = b.progress.find(d => d.step === 'governor');
     return governorProgress && governorProgress.statusLabel === 'Became law unsigned';
   });
-
-
-  // console.log({
-  //   bills,
-  //   awaitingActionBills,
-  //   vetoedBills,
-  //   amendmentSuggestedBills,
-  //   vetoOverrideAttempts,
-  //   successfulVetoOverrides,
-  //   signedBills
-  // })
 
   return (
     <div>
@@ -84,7 +73,7 @@ const Governor = ({ bills }) => {
         <ReactMarkdown>{text}</ReactMarkdown>
 
         <div>
-          <strong style={{ fontSize: '1.8em' }}>{numberFormat(bills.length)}</strong> 2023 bill{plural(bills.length)} have been transmitted to Gov. Gianforte for his signature.
+          <strong style={{ fontSize: '1.8em' }}>{numberFormat(billsTransmittedToGovernor.length)}</strong> 2025 bill{plural(billsTransmittedToGovernor.length)} have been transmitted to Gov. Gianforte for his signature.
         </div>
 
         <h4>Awaiting action ({numberFormat(awaitingActionBills.length)})</h4>
@@ -140,11 +129,12 @@ const Governor = ({ bills }) => {
 
 // Fetch data at build time
 export async function getStaticProps() {
-  const bills = await import('../data/bills.json');
+  const bills = await import('../data/bills.json')
+  const billsTransmittedToGovernor = bills.default.filter(bill => bill.hasBeenSentToGovernor)
 
   return {
     props: {
-      bills: bills.default || [],
+      billsTransmittedToGovernor,
     },
   };
 }
