@@ -7465,9 +7465,9 @@
         "lcIdentifier": "LC0247",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Introduced",
+            "key": "In First House Committee--Nontabled",
             "step": "First chamber",
-            "label": "Introduced",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -7480,20 +7480,20 @@
             },
             {
                 "step": "first committee",
-                "status": "passed",
-                "statusLabel": "Advanced",
-                "statusDate": "01/22/2025"
+                "status": "blocked",
+                "statusLabel": "Voted down",
+                "statusDate": "01/28/2025"
             },
             {
                 "step": "first chamber",
-                "status": "passed",
-                "statusLabel": "Passed Senate",
-                "statusDate": "01/24/2025"
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
             },
             {
                 "step": "second chamber",
-                "status": "current",
-                "statusLabel": "Pending",
+                "status": "future",
+                "statusLabel": null,
                 "statusDate": null
             },
             {
@@ -7538,6 +7538,88 @@
         "isOnCalendar": false
     },
     {
+        "key": "sb-223",
+        "identifier": "SB 223",
+        "identifierLong": "Senate Bill 223",
+        "chamber": "senate",
+        "title": "Allow interest earned on workforce housing appropriations to be retained",
+        "session": "2",
+        "lcIdentifier": "LC1908",
+        "type": "senate bill",
+        "status": {
+            "key": "In First House--Introduced",
+            "step": "First chamber",
+            "label": "Introduced",
+            "status": "live",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "passed",
+                "statusLabel": "Introduced",
+                "statusDate": "01/28/2025"
+            },
+            {
+                "step": "first committee",
+                "status": "current",
+                "statusLabel": "Pending",
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "John Esp",
+            "party": "R",
+            "locale": "Big Timber",
+            "district": "SD 29"
+        },
+        "requestor": "Josh Kassmier",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "SIMPLE",
+        "subjects": [
+            "Labor and Employment  (see also: Unemployment Insurance; Workers' Comp)",
+            "State Finance  (see also: Appropriations; Taxation Subjects)",
+            "Housing"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1908?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1908?open_tab=bill",
+        "fiscalNoteUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1908?open_tab=fiscal",
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1908?open_tab=amend",
+        "legalNoteUrl": "undefined",
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0,
+        "isOnCalendar": false
+    },
+    {
         "key": "sb-222",
         "identifier": "SB 222",
         "identifierLong": "Senate Bill 222",
@@ -7547,9 +7629,9 @@
         "lcIdentifier": "LC1702",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Introduced",
+            "key": "In First House Committee--Nontabled",
             "step": "First chamber",
-            "label": "Introduced",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -7628,9 +7710,9 @@
         "lcIdentifier": "LC4171",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Introduced",
+            "key": "In First House Committee--Nontabled",
             "step": "First chamber",
-            "label": "Introduced",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -7708,9 +7790,9 @@
         "lcIdentifier": "LC1349",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Introduced",
+            "key": "In First House Committee--Nontabled",
             "step": "First chamber",
-            "label": "Introduced",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -7870,9 +7952,9 @@
         "lcIdentifier": "LC0525",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Introduced",
+            "key": "In First House Committee--Nontabled",
             "step": "First chamber",
-            "label": "Introduced",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -7951,9 +8033,9 @@
         "lcIdentifier": "LC1818",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Introduced",
+            "key": "In First House Committee--Nontabled",
             "step": "First chamber",
-            "label": "Introduced",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -8035,9 +8117,9 @@
         "lcIdentifier": "LC0305",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Introduced",
+            "key": "In First House Committee--Nontabled",
             "step": "First chamber",
-            "label": "Introduced",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -8115,9 +8197,9 @@
         "lcIdentifier": "LC0467",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Introduced",
+            "key": "In First House Committee--Nontabled",
             "step": "First chamber",
-            "label": "Introduced",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -8197,9 +8279,9 @@
         "lcIdentifier": "LC0964",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Introduced",
+            "key": "In First House Committee--Nontabled",
             "step": "First chamber",
-            "label": "Introduced",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -25498,6 +25580,94 @@
         "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0507?open_tab=bill",
         "fiscalNoteUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0507?open_tab=fiscal",
         "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0507?open_tab=amend",
+        "legalNoteUrl": "undefined",
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0,
+        "isOnCalendar": false
+    },
+    {
+        "key": "hb-326",
+        "identifier": "HB 326",
+        "identifierLong": "House Bill 326",
+        "chamber": "house",
+        "title": "Establish a  tax on electrical energy not produced by coal to match coal severance tax rate",
+        "session": "2",
+        "lcIdentifier": "LC1485",
+        "type": "house bill",
+        "status": {
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "passed",
+                "statusLabel": "Introduced",
+                "statusDate": "01/28/2025"
+            },
+            {
+                "step": "first committee",
+                "status": "current",
+                "statusLabel": "Pending",
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Gary Parry",
+            "party": "R",
+            "locale": "Colstrip",
+            "district": "HD 35"
+        },
+        "requestor": "Gary Parry",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "SIMPLE",
+        "subjects": [
+            "Energy",
+            "Taxation (Generally)",
+            "Counties  (see also: Local Government)",
+            "Taxation--Minerals",
+            "Revenue, State",
+            "State Finance  (see also: Appropriations; Taxation Subjects)",
+            "Taxation--Coal  (see also: Appropriations, Coal Tax Fund Principal)",
+            "Taxation--Sales",
+            "Rule Making"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1485?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1485?open_tab=bill",
+        "fiscalNoteUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1485?open_tab=fiscal",
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1485?open_tab=amend",
         "legalNoteUrl": "undefined",
         "vetoMemoUrl": null,
         "articles": [],
