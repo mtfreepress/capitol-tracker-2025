@@ -11,11 +11,6 @@ import Footer from './Footer'
 
 import { metaData } from "@/config";
 
-// filler stuff until we can get metadata pipeline worked out
-const pageTitle = 'TK'
-const pageUrl = 'TK'
-const defaultFeatureImage = null
-
 const bodyStyle = css`
     position: relative;
 `
