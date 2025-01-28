@@ -22,7 +22,6 @@ Approach here — each of these input buckets has a fetch script that needs to 
 
 // Inputs from official bill tracking system
 const billsRaw = collectJsons('./inputs/bills/*/*-data.json')
-const votesRaw = collectJsons('./inputs/bills/*/*-votes.json')
 const actionsRaw = collectJsons('./inputs/bills/*/*-actions.json')
 const actionsFlat = Array.isArray(actionsRaw) && actionsRaw.some(Array.isArray) ? actionsRaw.flat() : actionsRaw;
 // sort actionsFlat by bill identifier alphabetically
@@ -52,30 +51,33 @@ const contactUsComponentText = getText('./inputs/annotations/components/about.md
 ### DATA BUNDLING + WRANGLING
 */
 
-// POPULTE DATA MODELS
+// config stuff
+const committeeOrder = committeesRaw.map(d => d.name)
+
 const articles = articlesRaw.map(article => new Article({ article }).export())
 
 /// do lawmakers first, then bills
-// Do we still need things in this order? If we do bills first, we can avoid doubling back to lawmakers later
 const lawmakers = lawmakersRaw.map(lawmaker => new Lawmaker({
     lawmaker,
     district: districtsRaw.find(d => d.key === lawmaker.district),
     annotation: lawmakerAnnotations.find(d => d.slug === lawmaker.name.replace(/\s/g, '-').toLowerCase()) || {},
     articles: articles.filter(d => d.lawmakerTags.includes(lawmaker.name)),
-    // leave sponsoredBills until after bills objects are created // necessary?
-    // same with keyVotes // necessary?
+    // leave sponsoredBills until after bills objects are created
+    // same with keyVotes
+    committeeOrder,
 }))
 
 const bills = billsRaw.map(bill => new Bill({
-    // Action models are attached to bills, Vote models are attached to objects
     bill,
     actions: actionsFlat.filter(d => d.bill === bill.key),
-    votes: votesRaw.filter(d => d.bill === bill.key), // These are now being attached to actions; needs to be cleaned up
+    votes: actionsFlat.filter(d => d.vote && d.vote.bill === bill.key).map(d => d.vote),
     annotation: billAnnotations.find(d => d.Identifier === bill.key) || {},
     articles: articles.filter(d => d.billTags.includes(bill.key)),
 }))
 
 const votes = bills.map(bill => bill.exportVoteData()).flat()
+
+console.log(votes[0])
 
 const houseFloorVotes = votes.filter(v => v.type === 'floor' && v.voteChamber === 'house')
 const senateFloorVotes = votes.filter(v => v.type === 'floor' && v.voteChamber === 'senate')
@@ -105,6 +107,7 @@ lawmakers.forEach(lawmaker => {
         name: lawmaker.name,
         keyBills: bills.filter(bill => bill.data.isMajorBill)
     })
+    // TODO - Add last vote on key bills
     if (lawmaker.data.chamber === 'house') {
         lawmaker.votingSummary = houseFloorVoteAnalysis.getLawmakerStats(lawmaker.name)
     } else if (lawmaker.data.chamber === 'senate') {
@@ -162,19 +165,25 @@ Exporting bill actions separately here so they can be kept outside of Gatsby gra
 */
 
 // Group actions by bill
-const groupedActions = actionsFlat.reduce((acc, action) => {
-    if (!acc[action.bill]) {
-        acc[action.bill] = [];
-    }
-    acc[action.bill].push(action);
-    return acc;
-}, {});
+// const groupedActions = actionsFlat.reduce((acc, action) => {
+//     if (!acc[action.bill]) {
+//         acc[action.bill] = [];
+//     }
+//     acc[action.bill].push(action);
+//     return acc;
+// }, {});
 
-// Convert grouped actions to the desired format
-const actionsOutput = Object.keys(groupedActions).map(bill => ({
-    bill,
-    actions: groupedActions[bill]
-}));
+// // Convert grouped actions to the desired format
+// const actionsOutput = Object.keys(groupedActions).map(bill => ({
+//     bill,
+//     actions: groupedActions[bill]
+// }));
+
+const billsOutput = bills.map(b => b.exportBillDataOnly())
+const actionsOutput = bills.map(b => ({
+    bill: b.data.identifier,
+    actions: b.exportActionDataWithVotes()
+}))
 
 // Breaking this into chunks to avoid too-large-for-github-files
 const chunkSize = 200
@@ -184,7 +193,7 @@ for (let start = 0; start < actionsOutput.length; start += chunkSize) {
     index += 1
 }
 
-const billsOutput = bills.map(b => b.exportBillDataOnly())
+// const billsOutput = bills.map(b => b.exportBillDataOnly())
 writeJson('./src/data/bills.json', billsOutput)
 
 const lawmakerOutput = lawmakers.map(l => l.exportMerged())

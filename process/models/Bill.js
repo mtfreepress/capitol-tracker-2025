@@ -25,6 +25,7 @@ export default class Bill {
     }) {
         const {
             key,
+            identifierLong,
             session,
             billPageUrl,
             // billTextUrl,
@@ -59,10 +60,10 @@ export default class Bill {
             vetoMemoUrl,
         } = annotation
 
-        this.identifer = key
+        this.identifier = key
         this.chamber = this.getChamber(key)
         this.type = this.getType(bill)
-        this.sponsor = standardizeLawmakerName(sponsor) // TODO clean name here
+        this.sponsor = standardizeLawmakerName(sponsor)
         this.voteMajorityRequired = this.getVoteMajorityRequired(subjects)
         this.actions = this.buildActionList(actions, votes, this.voteMajorityRequired, this.getChamber(key))
         this.committees = Array.from(new Set(this.actions.map(a => a.data.committee))).filter(d => d !== null)
@@ -74,8 +75,9 @@ export default class Bill {
         })
 
         this.data = {
-            key: billKey(key), // url-friendly
+            key: billKey(key),  // url-friendly
             identifier: key,
+            identifierLong,
             chamber: this.chamber,
             title,
             session,
@@ -124,9 +126,8 @@ export default class Bill {
         // matching with votes for actions that have them
         // actions should come from scraper in order
         return actions.map(action => {
-            const rawVote = votes.find(v => v.action_id === action.id)
-            const vote = rawVote && new Vote({
-                vote: rawVote,
+            const vote = action.vote && new Vote({
+                vote: action.vote,
                 billVoteMajorityRequired: voteMajorityRequired,
                 billStartingChamber: chamber,
             }) || null
@@ -144,11 +145,11 @@ export default class Bill {
         return billType.key
     }
 
-    getChamber = (identifer) => {
+    getChamber = (identifier) => {
         return {
             'H': 'house',
             'S': 'senate',
-        }[identifer[0]]
+        }[identifier[0]]
     }
 
     getStatus = (identifier, status) => {
@@ -168,10 +169,12 @@ export default class Bill {
         }
         return match
     }
+
     hasBeenSentToGovernor = () => {
         const actions = this.actions.map(a => a.data)
         return actions.map(d => d.transmittedToGovernor).includes(true)
     }
+
     getProgress = ({ identifier, billType, firstChamber, actions }) => {
         // Get bill progression as calculated from actions
         // bill is rawBill data
@@ -191,9 +194,9 @@ export default class Bill {
         const secondChamberActions = actions.filter(a => a.posession === secondChamber)
 
         const committeeActionsInFirstChamber = actionsWithFlag(firstChamberActions, 'committeeAction')
+        // remove approps subcommittees so HB 2 process doesn't get confused
         const firstChamberCommittees = Array.from(new Set(committeeActionsInFirstChamber.map(d => d.committee)))
             .filter(d => ![
-                // remove approps subcommittees so HB 2 process doesn't get confused
                 'Joint Appropriations Section A — General Government',
                 'Joint Appropriations Section B — Health and Human Services',
                 'Joint Appropriations Section E — Education',
@@ -234,9 +237,8 @@ export default class Bill {
                     statusLabel = 'Pending'
                 }
 
-
                 if (committeeActionsInFirstChamber.length === 0) {
-                    return { step, status, statusLabel, statusDate } // nulls
+                    return { step, status, statusLabel, statusDate }
                 } else {
                     // This should catch first committee to act when multiple committees consider bill sequentially
                     const lastCommitteeAction = committeeActionsInFirstCommittee.slice(-1)[0]
@@ -262,8 +264,9 @@ export default class Bill {
                 const floorActionsInFirstChamber = actionsWithFlag(firstChamberActions, 'firstChamberFloorAction')
                 if (floorActionsInFirstChamber.length === 0) {
                     if (committeeActionsInSubsequentCommittees.length === 0) {
-                        return { step, status, statusLabel, statusDate } // nulls
+                        return { step, status, statusLabel, statusDate }
                     } else {
+                        // unlabled actions default to 'Pending'
                         const lastCommitteeAction = committeeActionsInSubsequentCommittees.slice(-1)[0]
                         if (lastCommitteeAction.failed) { status = 'blocked'; statusLabel = 'Voted down' }
                         if (lastCommitteeAction.missedDeadline) { status = 'blocked'; statusLabel = 'Missed deadline' }
@@ -271,7 +274,6 @@ export default class Bill {
                         if (lastCommitteeAction.withdrawn) { status = 'blocked'; statusLabel = 'Withdrawn' }
                         if (lastCommitteeAction.advanced) { status = 'passed'; statusLabel = 'Advanced'; hasPassedACommittee = true }
                         if (lastCommitteeAction.blasted) { status = 'passed'; statusLabel = 'Blasted to floor'; hasPassedACommittee = true }
-                        // unlabled actions default to 'Pending'
                         statusDate = lastCommitteeAction.date
                         return { step, status, statusLabel, statusDate }
                     }
@@ -287,15 +289,14 @@ export default class Bill {
             } else if (step === 'second chamber') {
                 let status = 'future', statusLabel = null, statusDate = null
                 if (!hasPassedFirstChamber) {
-                    return { step, status, statusLabel, statusDate }
+                    return { step, status, statusLabel, statusDate } //nulls
                 } else {
                     status = 'current'
                     statusLabel = 'Pending'
                 }
-                // looking at both committee/floor actions in second chamber together
                 const actionsInSecondChamber = actionsWithFlag(secondChamberActions, 'secondChamberAction')
                 if (actionsInSecondChamber.length === 0) {
-                    return { step, status, statusLabel, statusDate } // nulls
+                    return { step, status, statusLabel, statusDate }
                 } else {
                     const lastFloorAction = actionsInSecondChamber.slice(-1)[0]
                     if (lastFloorAction.failed) { status = 'blocked'; statusLabel = 'Voted down' }
@@ -338,7 +339,6 @@ export default class Bill {
                 if ((governorActions.length) === 0 && !becameLaw) {
                     return { step, status, statusLabel, statusDate }
                 } else if ((governorActions.length === 0) && becameLaw) {
-                    // Bills governor has let become law without his signature
                     status = 'passed'; statusLabel = 'Became law unsigned', hasPassedGovernor = true
                     return { step, status, statusLabel, statusDate }
                 } else {
@@ -361,7 +361,6 @@ export default class Bill {
             }
         })
         return progressionSteps
-
     }
 
     getVoteMajorityRequired = (subjects) => {
@@ -372,7 +371,6 @@ export default class Bill {
         if (!(thisBillThresholds.every(d => VOTE_THRESHOLDS.includes(d)))) {
             throw `${this.identifier} has vote threshold missing from VOTE_THRESHOLDS`
         }
-        // get highest-ranked threshold
         const controllingThreshold = thisBillThresholds
             .sort((a, b) => VOTE_THRESHOLDS.indexOf(a) - VOTE_THRESHOLDS.indexOf(b))[0]
 
@@ -380,8 +378,6 @@ export default class Bill {
     }
 
     getLastVoteInvolvingLawmaker = (name) => {
-        // returns bill's most recent vote object 
-        // assumes actions are sorted least to most recent 
         const billVotes = this.actions.filter(a => a.vote).map(a => a.vote)
         const votesWithLawmakerInvolved = billVotes.filter(v => v.votes.map(d => d.name).includes(name))
         if (votesWithLawmakerInvolved.length == 0) return null
@@ -395,7 +391,6 @@ export default class Bill {
     exportVoteData = () => this.actions.filter(a => a.vote !== null).map(a => a.exportVote())
 
     exportMerged = () => {
-        // exports bill data merged with actions and votes
         return {
             ...this.data,
             actions: this.actions.map(a => a.export()),
