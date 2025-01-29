@@ -4943,8 +4943,8 @@
                 "title": "Require public hearing before certain tax increment financing bonding",
                 "chamber": "house",
                 "status": {
-                    "key": "In Second House Committee--Nontabled",
-                    "step": "Second chamber",
+                    "key": "In First House Committee--Nontabled",
+                    "step": "First chamber",
                     "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
@@ -4960,7 +4960,7 @@
                         "step": "first committee",
                         "status": "passed",
                         "statusLabel": "Advanced",
-                        "statusDate": "01/14/2025"
+                        "statusDate": "01/29/2025"
                     },
                     {
                         "step": "first chamber",
@@ -13792,8 +13792,8 @@
                 "title": "Revise administration of property tax exemptions",
                 "chamber": "house",
                 "status": {
-                    "key": "In Second House Committee--Nontabled",
-                    "step": "Second chamber",
+                    "key": "In First House Committee--Nontabled",
+                    "step": "First chamber",
                     "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
@@ -13809,7 +13809,7 @@
                         "step": "first committee",
                         "status": "passed",
                         "statusLabel": "Advanced",
-                        "statusDate": "01/14/2025"
+                        "statusDate": "01/29/2025"
                     },
                     {
                         "step": "first chamber",
@@ -15152,9 +15152,9 @@
                     },
                     {
                         "step": "first committee",
-                        "status": "current",
-                        "statusLabel": "Pending",
-                        "statusDate": null
+                        "status": "blocked",
+                        "statusLabel": "Tabled",
+                        "statusDate": "01/29/2025"
                     },
                     {
                         "step": "first chamber",
@@ -19007,14 +19007,14 @@
                     },
                     {
                         "step": "first committee",
-                        "status": "current",
-                        "statusLabel": "Pending",
-                        "statusDate": null
+                        "status": "passed",
+                        "statusLabel": "Advanced",
+                        "statusDate": "01/29/2025"
                     },
                     {
                         "step": "first chamber",
-                        "status": "future",
-                        "statusLabel": null,
+                        "status": "current",
+                        "statusLabel": "Pending",
                         "statusDate": null
                     },
                     {
@@ -41945,7 +41945,7 @@
                 ],
                 "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0046?open_tab=bill",
                 "fiscalNoteUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0046?open_tab=fiscal",
-                "legalNoteUrl": "/bills/sb-114/legal",
+                "legalNoteUrl": "/bills/legal-note/sb-114",
                 "numArticles": 0,
                 "sponsor": {
                     "name": "Bob Phalen",
@@ -43979,15 +43979,76 @@
         "imageSlug": "2025/melissa-romano.jpg",
         "sponsoredBills": [
             {
-                "key": "hb-339",
-                "identifier": "HB 339",
-                "title": "Fund 6th graders in middle school at high school ANB rates along with 7th and 8th graders",
+                "key": "hb-340",
+                "identifier": "HB 340",
+                "title": "Establish Montana's BEST program to bolster educator support and training",
                 "chamber": "house",
                 "status": {
                     "key": "In First House--Introduced",
                     "step": "First chamber",
                     "label": "Introduced",
                     "status": "live",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "01/29/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1778?open_tab=bill",
+                "fiscalNoteUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1778?open_tab=fiscal",
+                "legalNoteUrl": null,
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Melissa Romano",
+                    "party": "D",
+                    "locale": "Helena",
+                    "district": "HD 80"
+                }
+            },
+            {
+                "key": "hb-339",
+                "identifier": "HB 339",
+                "title": "Fund 6th graders in middle school at high school ANB rates along with 7th and 8th graders",
+                "chamber": "house",
+                "status": {
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -44045,10 +44106,10 @@
                 "title": "Revise laws regarding targeted early numeracy intervention",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Introduced",
-                    "step": "First chamber",
-                    "label": "Introduced",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -50265,8 +50326,8 @@
                 "title": "Deposit non-levy revenue in school equalization and property tax relief account",
                 "chamber": "house",
                 "status": {
-                    "key": "In Second House Committee--Nontabled",
-                    "step": "Second chamber",
+                    "key": "In First House Committee--Nontabled",
+                    "step": "First chamber",
                     "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
@@ -50282,7 +50343,7 @@
                         "step": "first committee",
                         "status": "passed",
                         "statusLabel": "Advanced",
-                        "statusDate": "01/14/2025"
+                        "statusDate": "01/29/2025"
                     },
                     {
                         "step": "first chamber",
@@ -51366,14 +51427,14 @@
                     },
                     {
                         "step": "first committee",
-                        "status": "current",
-                        "statusLabel": "Pending",
-                        "statusDate": null
+                        "status": "passed",
+                        "statusLabel": "Advanced",
+                        "statusDate": "01/29/2025"
                     },
                     {
                         "step": "first chamber",
-                        "status": "future",
-                        "statusLabel": null,
+                        "status": "current",
+                        "statusLabel": "Pending",
                         "statusDate": null
                     },
                     {
@@ -51824,7 +51885,7 @@
                 ],
                 "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0562?open_tab=bill",
                 "fiscalNoteUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0562?open_tab=fiscal",
-                "legalNoteUrl": "/bills/sb-193/legal",
+                "legalNoteUrl": "/bills/legal-note/sb-193",
                 "numArticles": 0,
                 "sponsor": {
                     "name": "Jeremy Trebas",
@@ -52811,7 +52872,7 @@
                 ],
                 "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1436?open_tab=bill",
                 "fiscalNoteUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1436?open_tab=fiscal",
-                "legalNoteUrl": "/bills/sb-49/legal",
+                "legalNoteUrl": "/bills/legal-note/sb-49",
                 "numArticles": 0,
                 "sponsor": {
                     "name": "Barry Usher",
@@ -52933,7 +52994,7 @@
                 ],
                 "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0618?open_tab=bill",
                 "fiscalNoteUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0618?open_tab=fiscal",
-                "legalNoteUrl": "/bills/sb-21/legal",
+                "legalNoteUrl": "/bills/legal-note/sb-21",
                 "numArticles": 0,
                 "sponsor": {
                     "name": "Barry Usher",
