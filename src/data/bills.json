@@ -22623,10 +22623,10 @@
         "lcIdentifier": "LC0227",
         "type": "house bill",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
+            "key": "In First House Committee--Nontabled",
+            "step": "First chamber",
+            "label": "In committee",
+            "status": "live",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -22640,7 +22640,7 @@
                 "step": "first committee",
                 "status": "passed",
                 "statusLabel": "Advanced",
-                "statusDate": "01/17/2025"
+                "statusDate": "01/29/2025"
             },
             {
                 "step": "first chamber",
@@ -28071,10 +28071,10 @@
         "lcIdentifier": "LC0282",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
+            "key": "In First House Committee--Tabled",
             "step": "First chamber",
-            "label": "In committee",
-            "status": "live",
+            "label": "Tabled in committee",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -28086,15 +28086,15 @@
             },
             {
                 "step": "first committee",
-                "status": "passed",
-                "statusLabel": "Advanced",
-                "statusDate": "01/15/2025"
+                "status": "blocked",
+                "statusLabel": "Tabled",
+                "statusDate": "01/29/2025"
             },
             {
                 "step": "first chamber",
-                "status": "current",
-                "statusLabel": "Passed preliminary floor vote",
-                "statusDate": "01/17/2025"
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
             },
             {
                 "step": "second chamber",
@@ -39831,10 +39831,10 @@
         "lcIdentifier": "LC0243",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
+            "key": "In First House Committee--Tabled",
             "step": "First chamber",
-            "label": "In committee",
-            "status": "live",
+            "label": "Tabled in committee",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -39846,15 +39846,15 @@
             },
             {
                 "step": "first committee",
-                "status": "passed",
-                "statusLabel": "Advanced",
-                "statusDate": "01/14/2025"
+                "status": "blocked",
+                "statusLabel": "Tabled",
+                "statusDate": "01/29/2025"
             },
             {
                 "step": "first chamber",
-                "status": "current",
-                "statusLabel": "Passed preliminary floor vote",
-                "statusDate": "01/16/2025"
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
             },
             {
                 "step": "second chamber",
@@ -48144,7 +48144,7 @@
                 "step": "first committee",
                 "status": "passed",
                 "statusLabel": "Advanced",
-                "statusDate": "01/16/2025"
+                "statusDate": "01/29/2025"
             },
             {
                 "step": "first chamber",
