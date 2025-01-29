@@ -56,11 +56,11 @@ const Index = ({ keyBills, billIndex, lawmakerIndex }) => {
               );
             })
         }
-        <NewsletterSignup />
         <h2 id="find-bill">Find a bill</h2>
         <BillLookup bills={billIndex} />
         <h2 id="find-lawmaker">Find a lawmaker</h2>
         <LawmakerLookup lawmakers={lawmakerIndex} />
+        <NewsletterSignup />
         <h2 id="find-district">Find your district</h2>
         <DistrictLookup lawmakers={lawmakerIndex} />
         <ContactUs />

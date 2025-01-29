@@ -89,14 +89,15 @@ const activeStyle = css`
 `;
 
 const PAGE_LINKS = [
-    { path: '/#key-bill-status', label: '📑 Key bills' },
+// TODO: come back to these and add back in once fixed
+    // { path: '/#key-bill-status', label: '📑 Key bills' },
     { path: '/all-bills/', label: '🗂 All bills' },
     { path: '/#find-bill', label: '🔎 Find a bill' },
     { path: '/#find-lawmaker', label: '🔎 Find a lawmaker' },
     { path: '/#find-district', label: '🏡 Your district' },
-    { path: '/calendar/', label: '🗓 Calendar' },
-    { path: '/recap/', label: '📝 What\'s happened' },
-    { path: '/participation/', label: '🙋 How to participate' },
+    // { path: '/calendar/', label: '🗓 Calendar' },
+    // { path: '/recap/', label: '📝 What\'s happened' },
+    // { path: '/participation/', label: '🙋 How to participate' },
 ];
 
 function getChamberControl(chamber) {
