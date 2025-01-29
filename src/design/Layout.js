@@ -55,7 +55,6 @@ const Layout = ({
   return (
     <div>
       <Head>
-        {/* TODO: Populate SEO stuff here -- adapt from elex guide */}
         <meta charSet="utf-8" />
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />

@@ -149,13 +149,13 @@ const LawmakerCard = ({ lawmaker, portrait }) => {
       </div>
       <div className="bottom-section">
         <div className="session">2025 Legislature – {ordinalize(legislativeHistory.length)} session</div>
-        <div className="item">
+        {/* <div className="item">
           {committees.length > 0 ? (
             <>👥 {mainCommittee.role} {mainCommittee.committee} and <strong>{otherCommittees.length}</strong> <Link href={`${BASE_URL}/lawmakers/${key}#committees`} passHref>other committee assignments</Link></>
           ) : (
             <>👥 <strong>0</strong> committee assignments</>
           )}
-        </div>
+        </div> */}
         <div className="item"><Link href={`${BASE_URL}/lawmakers/${key}#bills-sponsored`} passHref>📋 <strong>{sponsoredBills.length}</strong> bill(s) introduced</Link></div>
         <div className="promo"><Link href={`${BASE_URL}/`} passHref>See more</Link> on MTFP&#39;s 2025 Capitol Tracker.</div>
       </div>
