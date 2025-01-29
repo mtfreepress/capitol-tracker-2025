@@ -17,7 +17,7 @@ const nextConfig = {
     publicRuntimeConfig: {
         basePath: currentBasePath,
     },
-    trailingSlash: false,
+    trailingSlash: true,
     compiler: {
         emotion: true,
     },
