@@ -1,5 +1,6 @@
 import React from "react";
 import { css } from '@emotion/react';
+import Link from "next/link";
 
 import "../../styles/base.css";
 import { embedInputContainerStyle } from '../../config/styles';
@@ -170,9 +171,14 @@ const BillCard = ({ bill }) => {
                             <a href={fiscalNoteUrl} target="_blank" rel="noopener noreferrer">💵 Fiscal note</a> :
                             <span className="info-absent">💵 No fiscal note</span>}
                         </div>
-                        <div className="info-legal">{legalNoteUrl ?
-                            <a href={legalNoteUrl} target="_blank" rel="noopener noreferrer">🏛 Legal note</a> :
-                            <span className="info-absent">🏛 No legal note</span>}
+                        <div className="info-legal">
+                            {legalNoteUrl ? (
+                                <Link href={legalNoteUrl}>
+                                    <span>🏛 Legal note</span>
+                                </Link>
+                            ) : (
+                                <span className="info-absent">🏛 No legal note</span>
+                            )}
                         </div>
                     </div>
                     <div className="progression">

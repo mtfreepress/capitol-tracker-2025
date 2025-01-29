@@ -174,7 +174,11 @@ const Bill = ({ title, identifier, chamber, status, explanation, textUrl, fiscal
           )}
           {textUrl && <a css={billLinkCss} href={textUrl} target="_blank" rel="noopener noreferrer">📃 Bill text</a>}
           {fiscalNoteUrl && <a css={billLinkCss} href={fiscalNoteUrl} target="_blank" rel="noopener noreferrer">💵 Fiscal note</a>}
-          {legalNoteUrl && <a css={billLinkCss} href={legalNoteUrl} target="_blank" rel="noopener noreferrer">🏛 Legal note</a>}
+          {legalNoteUrl && (
+            <Link href={legalNoteUrl} passHref>
+              <span css={billLinkCss}>🏛 Legal note</span>
+            </Link>
+          )}
           {amendmentsUrl && <a css={billLinkCss} href={amendmentsUrl} target="_blank" rel="noopener noreferrer">🖍 Proposed amendments</a>}
           {vetoMemoUrl && <a css={billLinkCss} href={vetoMemoUrl} target="_blank" rel="noopener noreferrer">🚫 Veto memo</a>}
           {(numArticles > 0) && (
@@ -189,6 +193,6 @@ const Bill = ({ title, identifier, chamber, status, explanation, textUrl, fiscal
       </td>
     </tr>
   );
-};
+}
 
 export default BillTable;

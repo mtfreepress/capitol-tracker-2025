@@ -15,5 +15,8 @@
 # Check laws-interface repo for bill/vote info pulled from official legislative system
 node inputs/bills/fetch.js
 
+# Grab bill legal and fiscal notes
+node inputs/bill-notes/fetch-bill-notes.js
+
 # Run data process
 node  process/main.js

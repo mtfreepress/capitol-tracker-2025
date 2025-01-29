@@ -1,5 +1,6 @@
 import React from 'react';
 import { css } from '@emotion/react';
+import Link from 'next/link';
 
 import LawmakerInline from '../LawmakerInline';
 
@@ -50,12 +51,12 @@ const BillInfo = ({ bill }) => {
         voteMajorityRequired, vetoMemoUrl,
         sponsor, requestor
     } = bill;
-    
+
     return (
         <div>
             <div css={sponsorCss}>
                 Sponsor: <LawmakerInline lawmaker={sponsor} />
-        {/* TODO: Put back when requestor logic is fixed */}
+                {/* TODO: Put back when requestor logic is fixed */}
                 {/* {requestor && <span>| Requestor: {requestor}</span>} */}
             </div>
 
@@ -97,7 +98,9 @@ const BillInfo = ({ bill }) => {
                     <div css={infoColContentCss}>
                         {legalNoteUrl ? (
                             <span>
-                                <a href={legalNoteUrl} target="_blank" rel="noopener noreferrer">Available here</a>
+                                <Link href={legalNoteUrl}>
+                                    <span>Available here</span>
+                                </Link>
                             </span>
                         ) : (
                             <em>None on file</em>
