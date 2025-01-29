@@ -37,7 +37,6 @@ export default class Lawmaker {
             committees,
             image_path,
             sessions,
-            locale,
         } = lawmaker
 
         const {
@@ -63,7 +62,7 @@ export default class Lawmaker {
                 replacementNote: this.lookForReplacementNote(district.key)
             },
             districtNum: +district.key.replace('HD ', '').replace('SD ', ''),
-            districtLocale: district.locale,
+            districtLocale: district.locale_description,
 
             chamber: district.key[0] === 'S' ? 'senate' : 'house',
             title: district.key[0] === 'S' ? 'Sen.' : 'Rep.',
