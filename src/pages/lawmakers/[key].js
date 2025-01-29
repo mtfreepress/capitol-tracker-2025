@@ -130,8 +130,8 @@ const LawmakerPage = ({ lawmaker }) => {
 
       <NewsletterSignup />
 
-      <h3 id="key-votes">Key bill votes</h3>
-      <LawmakerKeyVotes lastName={name} party={party} keyBillVotes={keyBillVotes} />
+      {/* <h3 id="key-votes">Key bill votes</h3>
+      <LawmakerKeyVotes lastName={name} party={party} keyBillVotes={keyBillVotes} /> */}
 
       <h3 id="floor-statistics">Floor vote statistics</h3>
       <LawmakerVotingSummary lawmaker={lawmaker} votingSummary={votingSummary} />

@@ -51,11 +51,10 @@ const Layout = ({
   } = metaData
 
   const pageUrl = relativePath === '/' ? `${baseUrl}/` : `${baseUrl}${relativePath}/`
-  const featureImage = pageFeatureImage ?  `${baseUrl}/${pageFeatureImage}` : `${baseUrl}/2025-capitol-tracker-feature-image.jpg`
+  const featureImage = pageFeatureImage ?  `${baseUrl}/${pageFeatureImage}` : `${baseUrl}/2025-capitol-tracker-feature-image.png`
   return (
     <div>
       <Head>
-        {/* TODO: Populate SEO stuff here -- adapt from elex guide */}
         <meta charSet="utf-8" />
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />

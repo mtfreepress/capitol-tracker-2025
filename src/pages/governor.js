@@ -118,7 +118,7 @@ const Governor = ({ billsTransmittedToGovernor }) => {
         <NewsletterSignup />
 
         <h3>Montana Free Press coverage</h3>
-        <div>2023 legislative stories involving the Governor&#39;s Office.</div>
+        <div>2025 legislative stories involving the Governor&#39;s Office.</div>
         <LinksList articles={articles} />
 
         <ContactUs />
