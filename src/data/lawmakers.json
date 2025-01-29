@@ -4943,9 +4943,9 @@
                 "title": "Require public hearing before certain tax increment financing bonding",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House Committee--Nontabled",
-                    "step": "First chamber",
-                    "label": "In committee",
+                    "key": "In Second House--Out of Committee",
+                    "step": "Second chamber",
+                    "label": "On floor",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -13914,9 +13914,9 @@
                 "title": "Revise administration of property tax exemptions",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House Committee--Nontabled",
-                    "step": "First chamber",
-                    "label": "In committee",
+                    "key": "In Second House--Out of Committee",
+                    "step": "Second chamber",
+                    "label": "On floor",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -19175,9 +19175,9 @@
                 "title": "Revise income taxes related to retired military members",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House Committee--Nontabled",
+                    "key": "In First House--Out of Committee",
                     "step": "First chamber",
-                    "label": "In committee",
+                    "label": "Out of committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -20205,6 +20205,55 @@
         "articles": [],
         "imageSlug": "2025/bruce-gillespie.jpg",
         "sponsoredBills": [
+            {
+                "key": "sj-11",
+                "identifier": "SJ 11",
+                "title": "Interim study on farmer's markets and food systems",
+                "chamber": "senate",
+                "status": {
+                    "key": "In First House--Introduced",
+                    "step": "First chamber",
+                    "label": "Introduced",
+                    "status": "live",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "01/29/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3215?open_tab=bill",
+                "fiscalNoteUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3215?open_tab=fiscal",
+                "legalNoteUrl": null,
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Bruce Gillespie",
+                    "party": "R",
+                    "locale": "Ethridge",
+                    "district": "SD 9"
+                }
+            },
             {
                 "key": "sb-61",
                 "identifier": "SB 61",
@@ -23042,10 +23091,10 @@
                 "title": "Generally revise automatic external defibrillator (AED) program laws",
                 "chamber": "senate",
                 "status": {
-                    "key": "Probably Dead",
-                    "label": "",
-                    "step": "Failed",
-                    "status": "stalled",
+                    "key": "In First House--Through 2nd Reading",
+                    "step": "First chamber",
+                    "label": "Passed second reading vote",
+                    "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -23064,8 +23113,8 @@
                     {
                         "step": "first chamber",
                         "status": "current",
-                        "statusLabel": "Pending",
-                        "statusDate": null
+                        "statusLabel": "Passed preliminary floor vote",
+                        "statusDate": "01/29/2025"
                     },
                     {
                         "step": "second chamber",
@@ -25039,6 +25088,67 @@
         "articles": [],
         "imageSlug": "2025/jedediah-hinkle.jpg",
         "sponsoredBills": [
+            {
+                "key": "hb-350",
+                "identifier": "HB 350",
+                "title": "Prohibit enforcement of policies issued by certain intergovernmental entities",
+                "chamber": "house",
+                "status": {
+                    "key": "In First House--Introduced",
+                    "step": "First chamber",
+                    "label": "Introduced",
+                    "status": "live",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "01/29/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1269?open_tab=bill",
+                "fiscalNoteUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1269?open_tab=fiscal",
+                "legalNoteUrl": null,
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Jedediah Hinkle",
+                    "party": "R",
+                    "locale": "Belgrade",
+                    "district": "HD 67"
+                }
+            },
             {
                 "key": "hb-330",
                 "identifier": "HB 330",
@@ -27108,9 +27218,9 @@
                 "title": "Revise laws related to professional licensing board appointments and reporting requirements",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Introduced",
+                    "key": "In First House Committee--Nontabled",
                     "step": "First chamber",
-                    "label": "Introduced",
+                    "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -30279,10 +30389,10 @@
                 "title": "Revise the definition of child abuse or neglect",
                 "chamber": "senate",
                 "status": {
-                    "key": "Probably Dead",
-                    "label": "",
-                    "step": "Failed",
-                    "status": "stalled",
+                    "key": "In First House--Through 2nd Reading",
+                    "step": "First chamber",
+                    "label": "Passed second reading vote",
+                    "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -30301,8 +30411,8 @@
                     {
                         "step": "first chamber",
                         "status": "current",
-                        "statusLabel": "Pending",
-                        "statusDate": null
+                        "statusLabel": "Passed preliminary floor vote",
+                        "statusDate": "01/29/2025"
                     },
                     {
                         "step": "second chamber",
@@ -30340,10 +30450,10 @@
                 "title": "Revise laws related to hearings after the emergency removal and protective placement of a child",
                 "chamber": "senate",
                 "status": {
-                    "key": "Probably Dead",
-                    "label": "",
-                    "step": "Failed",
-                    "status": "stalled",
+                    "key": "In First House--Through 2nd Reading",
+                    "step": "First chamber",
+                    "label": "Passed second reading vote",
+                    "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -30362,8 +30472,8 @@
                     {
                         "step": "first chamber",
                         "status": "current",
-                        "statusLabel": "Pending",
-                        "statusDate": null
+                        "statusLabel": "Passed preliminary floor vote",
+                        "statusDate": "01/29/2025"
                     },
                     {
                         "step": "second chamber",
@@ -31270,10 +31380,10 @@
                 "title": "Revising laws related to green lights on snow removal equipment",
                 "chamber": "senate",
                 "status": {
-                    "key": "Probably Dead",
-                    "label": "",
-                    "step": "Failed",
-                    "status": "stalled",
+                    "key": "In First House--Through 2nd Reading",
+                    "step": "First chamber",
+                    "label": "Passed second reading vote",
+                    "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -31292,8 +31402,8 @@
                     {
                         "step": "first chamber",
                         "status": "current",
-                        "statusLabel": "Pending",
-                        "statusDate": null
+                        "statusLabel": "Passed preliminary floor vote",
+                        "statusDate": "01/29/2025"
                     },
                     {
                         "step": "second chamber",
@@ -31917,6 +32027,67 @@
         "articles": [],
         "imageSlug": "2025/forrest-mandeville.jpg",
         "sponsoredBills": [
+            {
+                "key": "sb-239",
+                "identifier": "SB 239",
+                "title": "Requiring judges to invite amicus briefing and allow intervention in certain civil cases",
+                "chamber": "senate",
+                "status": {
+                    "key": "In First House--Introduced",
+                    "step": "First chamber",
+                    "label": "Introduced",
+                    "status": "live",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "01/29/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0019?open_tab=bill",
+                "fiscalNoteUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0019?open_tab=fiscal",
+                "legalNoteUrl": null,
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Forrest Mandeville",
+                    "party": "R",
+                    "locale": "Columbus",
+                    "district": "SD 28"
+                }
+            },
             {
                 "key": "sb-179",
                 "identifier": "SB 179",
@@ -45997,9 +46168,9 @@
                 "title": "Provide for apprenticeship programs for certain license types",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Introduced",
+                    "key": "In First House Committee--Nontabled",
                     "step": "First chamber",
-                    "label": "Introduced",
+                    "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -47158,9 +47329,9 @@
                 "title": "Generally revise laws relating to marijuana advertising",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Introduced",
+                    "key": "In First House Committee--Nontabled",
                     "step": "First chamber",
-                    "label": "Introduced",
+                    "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -51019,9 +51190,9 @@
                 "title": "Deposit non-levy revenue in school equalization and property tax relief account",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House Committee--Nontabled",
-                    "step": "First chamber",
-                    "label": "In committee",
+                    "key": "In Second House--Out of Committee",
+                    "step": "Second chamber",
+                    "label": "On floor",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -52105,9 +52276,9 @@
                 "title": "Require advisory committee for districts that use tax increment financing",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House Committee--Nontabled",
+                    "key": "In First House--Out of Committee",
                     "step": "First chamber",
-                    "label": "In committee",
+                    "label": "Out of committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -57417,10 +57588,10 @@
                 "title": "Generally revise laws relating to protective care",
                 "chamber": "senate",
                 "status": {
-                    "key": "Probably Dead",
-                    "label": "",
-                    "step": "Failed",
-                    "status": "stalled",
+                    "key": "In First House--Through 2nd Reading",
+                    "step": "First chamber",
+                    "label": "Passed second reading vote",
+                    "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -57439,8 +57610,8 @@
                     {
                         "step": "first chamber",
                         "status": "current",
-                        "statusLabel": "Pending",
-                        "statusDate": null
+                        "statusLabel": "Passed preliminary floor vote",
+                        "statusDate": "01/29/2025"
                     },
                     {
                         "step": "second chamber",
