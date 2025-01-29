@@ -4923,10 +4923,10 @@
         "lcIdentifier": "LC1440",
         "type": "senate bill",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
+            "key": "In First House Committee--Nontabled",
+            "step": "First chamber",
+            "label": "In committee",
+            "status": "live",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -7595,6 +7595,170 @@
         "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0247?open_tab=bill",
         "fiscalNoteUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0247?open_tab=fiscal",
         "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0247?open_tab=amend",
+        "legalNoteUrl": null,
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0,
+        "isOnCalendar": false
+    },
+    {
+        "key": "sb-228",
+        "identifier": "SB 228",
+        "identifierLong": "Senate Bill 228",
+        "chamber": "senate",
+        "title": "Revise laws related to public charging stations for electric vehicles",
+        "session": "2",
+        "lcIdentifier": "LC1513",
+        "type": "senate bill",
+        "status": {
+            "key": "In First House--Introduced",
+            "step": "First chamber",
+            "label": "Introduced",
+            "status": "live",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "passed",
+                "statusLabel": "Introduced",
+                "statusDate": "01/28/2025"
+            },
+            {
+                "step": "first committee",
+                "status": "current",
+                "statusLabel": "Pending",
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Denley Loge",
+            "party": "R",
+            "locale": "St Regis",
+            "district": "SD 45"
+        },
+        "requestor": "Josh Kassmier",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "SIMPLE",
+        "subjects": [
+            "Taxation (Generally)",
+            "Motor Vehicles (see also: Taxation--Trans; Traffic Regulations; Transportation)",
+            "Taxation--Transportation and Vehicles",
+            "Utilities"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1513?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1513?open_tab=bill",
+        "fiscalNoteUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1513?open_tab=fiscal",
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1513?open_tab=amend",
+        "legalNoteUrl": null,
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0,
+        "isOnCalendar": false
+    },
+    {
+        "key": "sb-227",
+        "identifier": "SB 227",
+        "identifierLong": "Senate Bill 227",
+        "chamber": "senate",
+        "title": "Revise laws related to board seals and responsibilities",
+        "session": "2",
+        "lcIdentifier": "LC0419",
+        "type": "senate bill",
+        "status": {
+            "key": "In First House--Introduced",
+            "step": "First chamber",
+            "label": "Introduced",
+            "status": "live",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "passed",
+                "statusLabel": "Introduced",
+                "statusDate": "01/28/2025"
+            },
+            {
+                "step": "first committee",
+                "status": "current",
+                "statusLabel": "Pending",
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Wendy McKamey",
+            "party": "R",
+            "locale": "Great Falls",
+            "district": "SD 12"
+        },
+        "requestor": "Wendy McKamey",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "SIMPLE",
+        "subjects": [
+            "Labor and Employment  (see also: Unemployment Insurance; Workers' Comp)",
+            "State Government"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0419?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0419?open_tab=bill",
+        "fiscalNoteUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0419?open_tab=fiscal",
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0419?open_tab=amend",
         "legalNoteUrl": null,
         "vetoMemoUrl": null,
         "articles": [],
@@ -18394,10 +18558,10 @@
         "lcIdentifier": "LC0291",
         "type": "senate bill",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
+            "key": "In First House--Through 2nd Reading",
+            "step": "First chamber",
+            "label": "Passed second reading vote",
+            "status": "live",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -18416,8 +18580,8 @@
             {
                 "step": "first chamber",
                 "status": "current",
-                "statusLabel": "Pending",
-                "statusDate": null
+                "statusLabel": "Passed preliminary floor vote",
+                "statusDate": "01/28/2025"
             },
             {
                 "step": "second chamber",
