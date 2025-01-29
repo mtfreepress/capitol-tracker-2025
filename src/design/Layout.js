@@ -51,7 +51,7 @@ const Layout = ({
   } = metaData
 
   const pageUrl = relativePath === '/' ? `${baseUrl}/` : `${baseUrl}${relativePath}/`
-  const featureImage = pageFeatureImage ?  `${baseUrl}/${pageFeatureImage}` : `${baseUrl}/2025-capitol-tracker-feature-image.jpg`
+  const featureImage = pageFeatureImage ?  `${baseUrl}/${pageFeatureImage}` : `${baseUrl}/2025-capitol-tracker-feature-image.png`
   return (
     <div>
       <Head>
