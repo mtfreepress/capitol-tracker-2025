@@ -3,7 +3,7 @@ import { css } from '@emotion/react';
 import Link from 'next/link';
 import { billStatusSymbols, billProgressStepLabels, statusColors, partyColors } from '../config/config';
 import { billUrl, lawmakerUrl } from '../config/utils';
-import { tableStyle, noteStyle, bottomFadeCss, inlineButtonCss } from '../config/styles';
+import { noteStyle, inlineButtonCss } from '../config/styles';
 
 const DEFAULT_DISPLAY_LIMIT = 10;
 const DEFAULT_SORT = (a, b) => +a.identifier.substring(3) - +b.identifier.substring(3);
@@ -50,12 +50,12 @@ const BillTable = ({ bills, suppressCount, sortFunction = DEFAULT_SORT, displayL
 const tableRowCss = css`
   border-bottom: 2px solid #fff !important;
   td {
-    padding: 0;
+    padding: 0.2em 0.2em 0.5em 0.5em;
   }
 `;
 
 const tableBillCell = css`
-  padding: 0;
+  color: red;
 `;
 
 const statusColCss = css`
@@ -157,6 +157,7 @@ const Bill = ({ title, identifier, chamber, status, explanation, textUrl, fiscal
 
   return (
     <tr css={tableRowCss} key={identifier}>
+      
       <td css={tableBillCell}>
         <Link href={`/bills/${billUrl(identifier)}`} passHref>
           <span css={billCss}>
@@ -184,6 +185,7 @@ const Bill = ({ title, identifier, chamber, status, explanation, textUrl, fiscal
           )}
         </div>
       </td>
+
       <td css={[statusColCss, css`border-left: 3px solid ${statusColor}`]}>
         <div>{progression}</div>
       </td>
