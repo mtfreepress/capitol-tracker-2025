@@ -1332,14 +1332,14 @@
             },
             {
                 "step": "first committee",
-                "status": "current",
-                "statusLabel": "Pending",
-                "statusDate": null
+                "status": "passed",
+                "statusLabel": "Advanced",
+                "statusDate": "01/29/2025"
             },
             {
                 "step": "first chamber",
-                "status": "future",
-                "statusLabel": null,
+                "status": "current",
+                "statusLabel": "Pending",
                 "statusDate": null
             },
             {
@@ -5315,7 +5315,7 @@
         "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1436?open_tab=bill",
         "fiscalNoteUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1436?open_tab=fiscal",
         "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1436?open_tab=amend",
-        "legalNoteUrl": "/bills/sb-49/legal",
+        "legalNoteUrl": "/bills/legal-note/sb-49",
         "vetoMemoUrl": null,
         "articles": [],
         "numArticles": 0,
@@ -6973,14 +6973,14 @@
             },
             {
                 "step": "first committee",
-                "status": "current",
-                "statusLabel": "Pending",
-                "statusDate": null
+                "status": "passed",
+                "statusLabel": "Advanced",
+                "statusDate": "01/29/2025"
             },
             {
                 "step": "first chamber",
-                "status": "future",
-                "statusLabel": null,
+                "status": "current",
+                "statusLabel": "Pending",
                 "statusDate": null
             },
             {
@@ -9883,7 +9883,7 @@
         "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0618?open_tab=bill",
         "fiscalNoteUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0618?open_tab=fiscal",
         "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0618?open_tab=amend",
-        "legalNoteUrl": "/bills/sb-21/legal",
+        "legalNoteUrl": "/bills/legal-note/sb-21",
         "vetoMemoUrl": null,
         "articles": [],
         "numArticles": 0,
@@ -11442,7 +11442,7 @@
         "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0562?open_tab=bill",
         "fiscalNoteUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0562?open_tab=fiscal",
         "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0562?open_tab=amend",
-        "legalNoteUrl": "/bills/sb-193/legal",
+        "legalNoteUrl": "/bills/legal-note/sb-193",
         "vetoMemoUrl": null,
         "articles": [],
         "numArticles": 0,
@@ -13165,9 +13165,9 @@
             },
             {
                 "step": "first committee",
-                "status": "current",
-                "statusLabel": "Pending",
-                "statusDate": null
+                "status": "blocked",
+                "statusLabel": "Tabled",
+                "statusDate": "01/29/2025"
             },
             {
                 "step": "first chamber",
@@ -18542,7 +18542,7 @@
         "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0046?open_tab=bill",
         "fiscalNoteUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0046?open_tab=fiscal",
         "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0046?open_tab=amend",
-        "legalNoteUrl": "/bills/sb-114/legal",
+        "legalNoteUrl": "/bills/legal-note/sb-114",
         "vetoMemoUrl": null,
         "articles": [],
         "numArticles": 0,
@@ -26470,6 +26470,87 @@
         "isOnCalendar": false
     },
     {
+        "key": "hb-340",
+        "identifier": "HB 340",
+        "identifierLong": "House Bill 340",
+        "chamber": "house",
+        "title": "Establish Montana's BEST program to bolster educator support and training",
+        "session": "2",
+        "lcIdentifier": "LC1778",
+        "type": "house bill",
+        "status": {
+            "key": "In First House--Introduced",
+            "step": "First chamber",
+            "label": "Introduced",
+            "status": "live",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "passed",
+                "statusLabel": "Introduced",
+                "statusDate": "01/29/2025"
+            },
+            {
+                "step": "first committee",
+                "status": "current",
+                "statusLabel": "Pending",
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Melissa Romano",
+            "party": "D",
+            "locale": "Helena",
+            "district": "HD 80"
+        },
+        "requestor": "Melissa Romano",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "SIMPLE",
+        "subjects": [
+            "Schools and Education",
+            "Appropriations  (see also: State Finance)"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1778?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1778?open_tab=bill",
+        "fiscalNoteUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1778?open_tab=fiscal",
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1778?open_tab=amend",
+        "legalNoteUrl": null,
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0,
+        "isOnCalendar": false
+    },
+    {
         "key": "hb-34",
         "identifier": "HB 34",
         "identifierLong": "House Bill 34",
@@ -26561,10 +26642,10 @@
         "lcIdentifier": "LC1777",
         "type": "house bill",
         "status": {
-            "key": "In First House--Introduced",
-            "step": "First chamber",
-            "label": "Introduced",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -26642,10 +26723,10 @@
         "lcIdentifier": "LC1779",
         "type": "house bill",
         "status": {
-            "key": "In First House--Introduced",
-            "step": "First chamber",
-            "label": "Introduced",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -31041,8 +31122,8 @@
         "lcIdentifier": "LC0078",
         "type": "house bill",
         "status": {
-            "key": "In Second House Committee--Nontabled",
-            "step": "Second chamber",
+            "key": "In First House Committee--Nontabled",
+            "step": "First chamber",
             "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
@@ -31058,7 +31139,7 @@
                 "step": "first committee",
                 "status": "passed",
                 "statusLabel": "Advanced",
-                "statusDate": "01/14/2025"
+                "statusDate": "01/29/2025"
             },
             {
                 "step": "first chamber",
@@ -40037,8 +40118,8 @@
         "lcIdentifier": "LC0084",
         "type": "house bill",
         "status": {
-            "key": "In Second House Committee--Nontabled",
-            "step": "Second chamber",
+            "key": "In First House Committee--Nontabled",
+            "step": "First chamber",
             "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
@@ -40054,7 +40135,7 @@
                 "step": "first committee",
                 "status": "passed",
                 "statusLabel": "Advanced",
-                "statusDate": "01/14/2025"
+                "statusDate": "01/29/2025"
             },
             {
                 "step": "first chamber",
@@ -40951,8 +41032,8 @@
         "lcIdentifier": "LC0080",
         "type": "house bill",
         "status": {
-            "key": "In Second House Committee--Nontabled",
-            "step": "Second chamber",
+            "key": "In First House Committee--Nontabled",
+            "step": "First chamber",
             "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
@@ -40968,7 +41049,7 @@
                 "step": "first committee",
                 "status": "passed",
                 "statusLabel": "Advanced",
-                "statusDate": "01/14/2025"
+                "statusDate": "01/29/2025"
             },
             {
                 "step": "first chamber",
