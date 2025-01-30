@@ -14,7 +14,6 @@ import {
     billKey,
     standardizeLawmakerName,
     getLawmakerSummary,
-    getLawmakerLastName,
     getLawmakerLocale,
     isLawmakerActive,
     capitalize,
@@ -31,13 +30,13 @@ export default class Lawmaker {
 
         const {
             name,
+            last_name,
             party,
             phone,
             email,
             committees,
             image_path,
             sessions,
-            locale,
         } = lawmaker
 
         const {
@@ -49,12 +48,10 @@ export default class Lawmaker {
         this.name = standardName
         this.summary = getLawmakerSummary(standardName)
 
-        if (district.key === 'SD 2') console.log('X', district.last_election)
-
         this.data = {
             key: lawmakerKey(standardName),
             name: standardName,
-            lastName: getLawmakerLastName(standardName),
+            lastName: last_name,
             locale: getLawmakerLocale(standardName),
             isActive: isLawmakerActive(standardName),
             district: district.key,
@@ -65,7 +62,7 @@ export default class Lawmaker {
                 replacementNote: this.lookForReplacementNote(district.key)
             },
             districtNum: +district.key.replace('HD ', '').replace('SD ', ''),
-            districtLocale: district.locale,
+            districtLocale: district.locale_description,
 
             chamber: district.key[0] === 'S' ? 'senate' : 'house',
             title: district.key[0] === 'S' ? 'Sen.' : 'Rep.',

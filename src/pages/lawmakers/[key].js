@@ -62,6 +62,7 @@ const LawmakerPage = ({ lawmaker }) => {
     key,
     title,
     name,
+    lastName,
     party,
     chamber,
     district,
@@ -175,7 +176,7 @@ const History = ({ name, history }) => {
 export async function getStaticProps({ params }) {
   const lawmaker = await fetchLawmakerData(params.key);
   const portrait = await fetchPortraitImage(lawmaker.portrait);
-  console.log('Fetched portrait:', portrait); // Debug log
+  // console.log('Fetched portrait:', portrait); // Debug log
   return {
     props: {
       lawmaker: {

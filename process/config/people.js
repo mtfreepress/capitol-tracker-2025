@@ -377,6 +377,7 @@ export const LAWMAKER_NAME_CLEANING = {
     'Becky Edwards': 'Becky Edwards',
     'Pete Elverum': 'Pete Elverum',
     'Sidney Fitzpatrick': 'Sidney Fitzpatrick',
+    'Chip Fitzpatrick': 'Sidney Fitzpatrick',
     'Shelly Fyant': 'Shelly Fyant',
     'Bruce "Butch" Gillespie': 'Bruce Gillespie',
     'Bruce Gillespie': 'Bruce Gillespie',

@@ -77,7 +77,6 @@ const bills = billsRaw.map(bill => new Bill({
 
 const votes = bills.map(bill => bill.exportVoteData()).flat()
 
-console.log(votes[0])
 
 const houseFloorVotes = votes.filter(v => v.type === 'floor' && v.voteChamber === 'house')
 const senateFloorVotes = votes.filter(v => v.type === 'floor' && v.voteChamber === 'senate')

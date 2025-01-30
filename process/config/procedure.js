@@ -338,6 +338,7 @@ export const ACTIONS = [
     { key: 'First Reading', isMajor, introduction },
     { key: 'Bill Not Heard at Sponsor\'s Request', isMajor, committeeAction, withdrawn },
     { key: 'Bill Withdrawn per House Rule H30-50(3)(b)', isMajor, isHighlight, committeeAction, withdrawn },
+    { key: 'Bill Withdrawn', isMajor, isHighlight, committeeAction, withdrawn },
     { key: 'Taken from 3rd Reading; Placed on 2nd Reading', isMajor, },
     { key: 'Returned to House', isMajor, },
     { key: 'Returned to Senate', isMajor, },

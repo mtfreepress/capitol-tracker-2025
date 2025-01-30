@@ -12,7 +12,7 @@ export default class Vote {
             action_id,
             session,
             type,
-            seq_number,
+            seqNumber,
             date,
             description,
             count,
@@ -25,7 +25,7 @@ export default class Vote {
 
         // TODO -- work out how to classify vote threshold
         // May need to flow the required threshold in from bill data
-        const voteChamber = this.getVoteChamber(seq_number)
+        const voteChamber = this.getVoteChamber(seqNumber)
         const thresholdRequired = this.classifyMotionThreshold({
             voteType: type,
             motion: description,
@@ -41,7 +41,7 @@ export default class Vote {
             bill,
             date: standardizeDate(date),
             type,
-            seqNumber: seq_number,
+            seqNumber,
             voteChamber,
             voteUrl: url,
             session,
