@@ -5,7 +5,12 @@ import {
 } from '../functions.js'
 
 export default class Vote {
-    constructor({ vote, billVoteMajorityRequired, billStartingChamber }) {
+    constructor({ 
+        vote,
+        voteLocation,
+        billVoteMajorityRequired,
+        billStartingChamber
+    }) {
         const {
             url,
             bill, // identifier
@@ -40,7 +45,8 @@ export default class Vote {
             action: action_id,
             bill,
             date: standardizeDate(date),
-            type,
+            type, // Note this seems to be defaulting to "floor" for everything in input data
+            voteLocation, // "committee" or "floor"
             seqNumber,
             voteChamber,
             voteUrl: url,

@@ -1,5 +1,4 @@
 import Action from './Action.js'
-import Vote from './Vote.js'
 
 import { MANUAL_SIGNINGS, MANUAL_VETOS } from '../config/overrides.js'
 import { BILL_TYPES, VOTE_THRESHOLDS, BILL_STATUSES } from '../config/procedure.js'
@@ -125,15 +124,13 @@ export default class Bill {
         // Build list of actions associated with the bill
         // matching with votes for actions that have them
         // actions should come from scraper in order
+        // Vote models for actions with votes are now created within the Action constructor
+        // so the Vote can access information about the action
         return actions.map(action => {
-            const vote = action.vote && new Vote({
-                vote: action.vote,
-                billVoteMajorityRequired: voteMajorityRequired,
-                billStartingChamber: chamber,
-            }) || null
             return new Action({
                 action,
-                vote,
+                billVoteMajorityRequired: voteMajorityRequired,
+                billStartingChamber: chamber,
             })
         })
         // NB: sorting by date here screws with order b/c of same-day actions

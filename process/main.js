@@ -78,8 +78,8 @@ const bills = billsRaw.map(bill => new Bill({
 const votes = bills.map(bill => bill.exportVoteData()).flat()
 
 
-const houseFloorVotes = votes.filter(v => v.type === 'floor' && v.voteChamber === 'house')
-const senateFloorVotes = votes.filter(v => v.type === 'floor' && v.voteChamber === 'senate')
+const houseFloorVotes = votes.filter(v => v.voteLocation === 'floor' && v.voteChamber === 'house')
+const senateFloorVotes = votes.filter(v => v.voteLocation === 'floor' && v.voteChamber === 'senate')
 const houseFloorVoteAnalysis = new VotingAnalysis({ votes: houseFloorVotes })
 const senateFloorVoteAnalysis = new VotingAnalysis({ votes: senateFloorVotes })
 
