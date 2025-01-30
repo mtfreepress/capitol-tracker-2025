@@ -31,6 +31,7 @@ export default class Committee {
         committeeBills.forEach(bill => {
             const billActions = bill.actions.map(a => a.export())
             const billActionsInCommittee = billActions.filter(a => a.committee === commiteeKey)
+            console.log(billActionsInCommittee)
             const lastCommitteeActionIndex = billActions.findIndex(a => a.id === billActionsInCommittee.slice(-1)[0].id)
             const postCommitteeActions = billActions
                 .slice(lastCommitteeActionIndex + 1,)

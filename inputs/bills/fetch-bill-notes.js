@@ -20,7 +20,7 @@ const fetchJson = async url => {
 const createFolderIfNotExists = async folderPath => {
     try {
         await fs.mkdir(folderPath, { recursive: true });
-        console.log(`Created folder: ${folderPath}`);
+        // console.log(`Created folder: ${folderPath}`);
     } catch (error) {
         if (error.code !== 'EEXIST') {
             throw error;
@@ -37,12 +37,12 @@ const downloadFile = async (url, fileName, folderPath) => {
     const data = await response.buffer();
     const outputPath = path.join(folderPath, fileName);
     await fs.writeFile(outputPath, data);
-    console.log(`Saved ${fileName} to ${outputPath}`);
+    // console.log(`Saved ${fileName} to ${outputPath}`);
 };
 
 const main = async () => {
     try {
-        console.log(`Fetching directory list from ${GITHUB_API_URL}`);
+        // console.log(`Fetching directory list from ${GITHUB_API_URL}`);
         const directories = await fetchJson(GITHUB_API_URL);
 
         for (const dir of directories) {
