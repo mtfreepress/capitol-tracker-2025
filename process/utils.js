@@ -34,3 +34,19 @@ export const writeJson = (path, data) => {
         console.log('    JSON written to', path);
     });
 }
+
+export const writeCsv = (path, array) => {
+    const headers = Object.keys(array[0])
+    const output = [headers.join(',')] // first row
+    array.forEach(row => {
+        const values = headers.map(header => {
+            const value = row[header] || ""
+            return `"${String(value).replace(/"/g, '""')}"`
+        }) 
+        output.push(values.join(','))
+    })
+    fs.writeFile(path, output.join('\n'), function (err) {
+        if (err) throw err;
+        console.log('    CSV written to', path);
+    });
+}
