@@ -18,6 +18,7 @@ export const fetchLawmakerData = (key) => {
         key: lawmaker.key,
         title: lawmaker.title,
         name: lawmaker.name,
+        lastName: lawmaker.lastName,
         party: lawmaker.party,
         chamber: lawmaker.chamber,
         district: lawmaker.district,
