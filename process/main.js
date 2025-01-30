@@ -1,39 +1,42 @@
-import { getJson, collectJsons, writeJson, getYaml, collectYamls, getText, getCsv } from './utils.js'
+import { getJson, collectJsons, writeJson, getYaml, collectYamls, getText, getCsv } from './utils.js';
 
-import Lawmaker from './models/Lawmaker.js'
-import Bill from './models/Bill.js'
-import Committee from './models/Committee.js'
+import Lawmaker from './models/Lawmaker.js';
+import Bill from './models/Bill.js';
+import Committee from './models/Committee.js';
 
-import Article from './models/MTFPArticle.js'
-import VotingAnalysis from './models/VotingAnalysis.js'
+import Article from './models/MTFPArticle.js';
+import VotingAnalysis from './models/VotingAnalysis.js';
 
-import CalendarPage from './models/CalendarPage.js'
-import RecapPage from './models/RecapPage.js'
-import HousePage from './models/HousePage.js'
-import SenatePage from './models/SenatePage.js'
-import GovernorPage from './models/GovernorPage.js'
+import CalendarPage from './models/CalendarPage.js';
+import RecapPage from './models/RecapPage.js';
+import HousePage from './models/HousePage.js';
+import SenatePage from './models/SenatePage.js';
+import GovernorPage from './models/GovernorPage.js';
 
-const updateTime = new Date()
+const updateTime = new Date();
 
 // Load a single bill file
-const billRaw = getJson('./inputs/bills/HB-1/HB-1-data.json')
-const actionsRaw = getJson('./inputs/bills/HB-1/HB-1-actions.json')
-const actionsFlat = Array.isArray(actionsRaw) && actionsRaw.some(Array.isArray) ? actionsRaw.flat() : actionsRaw
+const billRaw = getJson('./inputs/bills/HB-1/HB-1-data.json');
+const actionsRaw = getJson('./inputs/bills/HB-1/HB-1-actions.json');
+const actionsFlat = Array.isArray(actionsRaw) && actionsRaw.some(Array.isArray) ? actionsRaw.flat() : actionsRaw;
 
 // Sort actionsFlat by bill identifier alphabetically
-actionsFlat.sort((a, b) => a.bill.localeCompare(b.bill))
+actionsFlat.sort((a, b) => a.bill.localeCompare(b.bill));
+
+// Log actions for debugging
+console.log('Actions:', actionsFlat);
 
 // Load other necessary data
-const districtsRaw = getJson('./inputs/districts/districts-2025.json')
-const lawmakersRaw = getJson('./inputs/lawmakers/legislator-roster-2025.json')
-const committeesRaw = await getCsv('./inputs/committees/committees.csv')
-const articlesRaw = getJson('./inputs/coverage/articles.json')
-const billAnnotations = collectYamls('./inputs/annotations/bills/*.yml')
+const districtsRaw = getJson('./inputs/districts/districts-2025.json');
+const lawmakersRaw = getJson('./inputs/lawmakers/legislator-roster-2025.json');
+const committeesRaw = await getCsv('./inputs/committees/committees.csv');
+const articlesRaw = getJson('./inputs/coverage/articles.json');
+const billAnnotations = collectYamls('./inputs/annotations/bills/*.yml');
 
 // Check if articlesRaw is undefined
 if (!articlesRaw) {
-    console.error('Failed to load articles data.')
-    process.exit(1)
+    console.error('Failed to load articles data.');
+    process.exit(1);
 }
 
 // Process the single bill
@@ -44,20 +47,19 @@ const bill = new Bill({
     annotation: billAnnotations.find(d => d.Identifier === billRaw.key) || {},
     articles: [],
     // articles: articlesRaw.filter(d => d.billTags.includes(billRaw.key)),
-})
+});
 
 // Log the progress for debugging
-// console.log('Bill Progress:', bill.getProgress({
-//     identifier: billRaw.key,
-//     billType: bill.type,
-//     firstChamber: bill.chamber,
-//     actions: bill.actions.map(a => a.data),
-// }))
+console.log('Bill Progress:', bill.getProgress({
+    identifier: billRaw.key,
+    billType: bill.type,
+    firstChamber: bill.chamber,
+    actions: bill.actions.map(a => a.data),
+}));
 
 // Export the bill data for further inspection
-const exportedBill = bill.exportMerged()
-// console.log('Exported Bill:', exportedBill)
-
+const exportedBill = bill.exportMerged();
+console.log('Exported Bill:', exportedBill);
 
 // import { getJson, collectJsons, writeJson, getYaml, collectYamls, getText, getCsv } from './utils.js'
 

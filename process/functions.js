@@ -44,7 +44,7 @@ export const standardizeCommiteeNames = name => {
     if (preClean.includes('Free Conference Committee')) return 'Free Conference Committee'
     if (preClean.includes('Conference Committee')) return 'Conference Committee'
     const clean = COMMITEE_NAME_CLEANING[preClean]
-    if (!clean) console.error(`COMMITEE_NAME_CLEANING missing "${preClean}"`)
+    // if (!clean) console.error(`COMMITEE_NAME_CLEANING missing "${preClean}"`)
     return clean
 }
 export const getCommitteeDataByKey = key => {
