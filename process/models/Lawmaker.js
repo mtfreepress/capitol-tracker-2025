@@ -14,7 +14,6 @@ import {
     billKey,
     standardizeLawmakerName,
     getLawmakerSummary,
-    getLawmakerLastName,
     getLawmakerLocale,
     isLawmakerActive,
     capitalize,
@@ -31,6 +30,7 @@ export default class Lawmaker {
 
         const {
             name,
+            last_name,
             party,
             phone,
             email,
@@ -51,7 +51,7 @@ export default class Lawmaker {
         this.data = {
             key: lawmakerKey(standardName),
             name: standardName,
-            lastName: getLawmakerLastName(standardName),
+            lastName: last_name,
             locale: getLawmakerLocale(standardName),
             isActive: isLawmakerActive(standardName),
             district: district.key,
