@@ -21,7 +21,8 @@ Approach here — each of these input buckets has a fetch script that needs to 
 */
 
 // Inputs from official bill tracking system
-const billsRaw = collectJsons('./inputs/bills/*/*-data.json')
+// const billsRaw = collectJsons('./inputs/bills/*/*-data.json')
+const billsRaw = getJson('./inputs/bills/HB-1/HB-1-data.json')
 const actionsRaw = collectJsons('./inputs/bills/*/*-actions.json')
 const actionsFlat = Array.isArray(actionsRaw) && actionsRaw.some(Array.isArray) ? actionsRaw.flat() : actionsRaw;
 // sort actionsFlat by bill identifier alphabetically
