@@ -175,11 +175,195 @@ export default class Bill {
         return actions.map(d => d.transmittedToGovernor).includes(true)
     }
 
+    // getProgress = ({ identifier, billType, firstChamber, actions }) => {
+    //     // Get bill progression as calculated from actions
+    //     // bill is rawBill data
+    //     // actions are data only, should be sorted first to last
+    //     // actions should be in order
+    //     const progressFlagInActions = (actions, flag) => actions.map(d => d[flag]).includes(true)
+    //     const actionsWithFlag = (actions, flag) => actions.filter(a => a[flag])
+    //     const firstActionWithFlag = (actions, flag) => actions.find(a => a[flag]) || null
+    //     const lastActionWithFlag = (actions, flag) => {
+    //         const all = actions.filter(d => d[flag])
+    //         if (all.length === 0) return null
+    //         return all.slice(-1)[0]
+    //     }
+
+    //     const firstChamberActions = actions.filter(a => a.posession === firstChamber)
+    //     const secondChamber = (firstChamber === 'house') ? 'senate' : 'house'
+    //     const secondChamberActions = actions.filter(a => a.posession === secondChamber)
+
+    //     const committeeActionsInFirstChamber = actionsWithFlag(firstChamberActions, 'committeeAction')
+    //     // remove approps subcommittees so HB 2 process doesn't get confused
+    //     const firstChamberCommittees = Array.from(new Set(committeeActionsInFirstChamber.map(d => d.committee)))
+    //         .filter(d => ![
+    //             'Joint Appropriations Section A — General Government',
+    //             'Joint Appropriations Section B — Health and Human Services',
+    //             'Joint Appropriations Section E — Education',
+    //             'Joint Appropriations Section C — Natural Resources and Transportation',
+    //             'Joint Appropriations Section D — Judicial Branch, Law Enforcement, and Justice'
+    //         ].includes(d))
+    //     const committeeActionsInFirstCommittee = committeeActionsInFirstChamber.filter(d => d.committee === firstChamberCommittees[0])
+    //     const committeeActionsInSubsequentCommittees = committeeActionsInFirstChamber.filter(d => firstChamberCommittees.slice(1,).includes(d.committee))
+
+    //     const typeConfig = BILL_TYPES.find(type => type.key === billType)
+    //     if (!typeConfig) throw `Unhandled bill type "${billType}"`
+
+    //     let hasBeenIntroduced = false
+    //     let hasPassedACommittee = false
+    //     let hasPassedFirstChamber = false
+    //     let hasPassedSecondChamber = false
+    //     let reconciliationNecessary = false
+    //     let reconciliationComplete = false
+    //     let hasPassedGovernor = false
+
+    //     // status for each step is one of 'current','future','passed','blocked', 'skipped'
+    //     const progressionSteps = typeConfig.steps.map(step => {
+    //         if (step === 'introduced') {
+    //             const introducedStep = firstActionWithFlag(actions, 'introduction')
+    //             hasBeenIntroduced = (introducedStep !== null)
+    //             return {
+    //                 step,
+    //                 status: hasBeenIntroduced ? 'passed' : 'future',
+    //                 statusLabel: hasBeenIntroduced ? 'Introduced' : 'Not introduced',
+    //                 statusDate: hasBeenIntroduced ? introducedStep.date : null,
+    //             }
+    //         } else if (step === 'first committee') {
+    //             let status = 'future', statusLabel = null, statusDate = null
+    //             if (!hasBeenIntroduced) {
+    //                 return { step, status, statusLabel, statusDate }
+    //             } else {
+    //                 status = 'current'
+    //                 statusLabel = 'Pending'
+    //             }
+
+    //             if (committeeActionsInFirstChamber.length === 0) {
+    //                 return { step, status, statusLabel, statusDate }
+    //             } else {
+    //                 // This should catch first committee to act when multiple committees consider bill sequentially
+    //                 const lastCommitteeAction = committeeActionsInFirstCommittee.slice(-1)[0]
+    //                 if (lastCommitteeAction.failed) { status = 'blocked'; statusLabel = 'Voted down' }
+    //                 if (lastCommitteeAction.missedDeadline) { status = 'blocked'; statusLabel = 'Missed deadline' }
+    //                 if (lastCommitteeAction.tabled) { status = 'blocked'; statusLabel = 'Tabled' }
+    //                 if (lastCommitteeAction.withdrawn) { status = 'blocked'; statusLabel = 'Withdrawn' }
+    //                 if (lastCommitteeAction.advanced) { status = 'passed'; statusLabel = 'Advanced'; hasPassedACommittee = true }
+    //                 if (lastCommitteeAction.blasted) { status = 'passed'; statusLabel = 'Blasted to floor'; hasPassedACommittee = true }
+    //                 // unlabled actions default to 'Pending'
+    //                 statusDate = lastCommitteeAction.date
+    //                 return { step, status, statusLabel, statusDate }
+    //             }
+
+    //         } else if (step === 'first chamber') {
+    //             let status = 'future', statusLabel = null, statusDate = null
+    //             if (!hasPassedACommittee) {
+    //                 return { step, status, statusLabel, statusDate }
+    //             } else {
+    //                 status = 'current'
+    //                 statusLabel = 'Pending'
+    //             }
+    //             const floorActionsInFirstChamber = actionsWithFlag(firstChamberActions, 'firstChamberFloorAction')
+    //             if (floorActionsInFirstChamber.length === 0) {
+    //                 if (committeeActionsInSubsequentCommittees.length === 0) {
+    //                     return { step, status, statusLabel, statusDate }
+    //                 } else {
+    //                     // unlabled actions default to 'Pending'
+    //                     const lastCommitteeAction = committeeActionsInSubsequentCommittees.slice(-1)[0]
+    //                     if (lastCommitteeAction.failed) { status = 'blocked'; statusLabel = 'Voted down' }
+    //                     if (lastCommitteeAction.missedDeadline) { status = 'blocked'; statusLabel = 'Missed deadline' }
+    //                     if (lastCommitteeAction.tabled) { status = 'blocked'; statusLabel = 'Tabled' }
+    //                     if (lastCommitteeAction.withdrawn) { status = 'blocked'; statusLabel = 'Withdrawn' }
+    //                     if (lastCommitteeAction.advanced) { status = 'passed'; statusLabel = 'Advanced'; hasPassedACommittee = true }
+    //                     if (lastCommitteeAction.blasted) { status = 'passed'; statusLabel = 'Blasted to floor'; hasPassedACommittee = true }
+    //                     statusDate = lastCommitteeAction.date
+    //                     return { step, status, statusLabel, statusDate }
+    //                 }
+    //             } else {
+    //                 const lastFloorAction = floorActionsInFirstChamber.slice(-1)[0]
+    //                 if (lastFloorAction.failed) { status = 'blocked'; statusLabel = 'Voted down' }
+    //                 if (lastFloorAction.preliminaryPassage) { status = 'current'; statusLabel = 'Passed preliminary floor vote' }
+    //                 if (lastFloorAction.finalPassage) { status = 'passed'; statusLabel = `Passed ${capitalize(firstChamber)}`, hasPassedFirstChamber = true }
+    //                 statusDate = lastFloorAction.date
+    //                 return { step, status, statusLabel, statusDate }
+    //             }
+
+    //         } else if (step === 'second chamber') {
+    //             let status = 'future', statusLabel = null, statusDate = null
+    //             if (!hasPassedFirstChamber) {
+    //                 return { step, status, statusLabel, statusDate } //nulls
+    //             } else {
+    //                 status = 'current'
+    //                 statusLabel = 'Pending'
+    //             }
+    //             const actionsInSecondChamber = actionsWithFlag(secondChamberActions, 'secondChamberAction')
+    //             if (actionsInSecondChamber.length === 0) {
+    //                 return { step, status, statusLabel, statusDate }
+    //             } else {
+    //                 const lastFloorAction = actionsInSecondChamber.slice(-1)[0]
+    //                 if (lastFloorAction.failed) { status = 'blocked'; statusLabel = 'Voted down' }
+    //                 if (lastFloorAction.preliminaryPassage) { status = 'current'; statusLabel = 'Passed preliminary vote' }
+    //                 if (lastFloorAction.finalPassage) { status = 'passed'; statusLabel = `Passed ${capitalize(secondChamber)}`, hasPassedSecondChamber = true }
+    //                 if (lastFloorAction.finalPassage && progressFlagInActions(secondChamberActions, 'amended')) {
+    //                     reconciliationNecessary = true
+    //                 }
+    //                 statusDate = lastFloorAction.date
+    //                 return { step, status, statusLabel, statusDate }
+    //             }
+
+    //         } else if (step === 'reconciliation') {
+    //             let status = 'skipped', statusLabel = null, statusDate = null
+    //             if (!reconciliationNecessary) {
+    //                 return { step, status, statusLabel, statusDate }
+    //             } else {
+    //                 status = 'current'
+    //                 statusLabel = 'Pending'
+    //             }
+    //             const reconciliationActions = actionsWithFlag(actions, 'reconciliationAction')
+    //             if (reconciliationActions.length === 0) {
+    //                 return { step, status, statusLabel, statusDate }
+    //             } else {
+    //                 const lastReconciliationAction = reconciliationActions.slice(-1)[0]
+    //                 if (lastReconciliationAction.advanced) { status = 'passed'; statusLabel = 'Reconciled', reconciliationComplete = true }
+    //                 statusDate = lastReconciliationAction.date
+    //                 return { step, status, statusLabel, statusDate }
+    //             }
+    //         } else if (step === 'governor') {
+    //             let status = 'future', statusLabel = null, statusDate = null
+    //             if (!hasPassedSecondChamber || (reconciliationNecessary && !reconciliationComplete)) {
+    //                 return { step, status, statusLabel, statusDate }
+    //             } else {
+    //                 status = 'current'
+    //                 statusLabel = 'Pending'
+    //             }
+    //             const governorActions = actionsWithFlag(actions, 'governorAction')
+    //             const becameLaw = progressFlagInActions(actions, 'ultimatelyPassed')
+    //             if ((governorActions.length) === 0 && !becameLaw) {
+    //                 return { step, status, statusLabel, statusDate }
+    //             } else if ((governorActions.length === 0) && becameLaw) {
+    //                 status = 'passed'; statusLabel = 'Became law unsigned', hasPassedGovernor = true
+    //                 return { step, status, statusLabel, statusDate }
+    //             } else {
+    //                 const lastGovernorAction = governorActions.slice(-1)[0]
+    //                 const houseHasOverridenVeto = progressFlagInActions(governorActions, 'vetoOverriddenHouse')
+    //                 const senateHasOverridenVeto = progressFlagInActions(governorActions, 'vetoOverriddenSenate')
+    //                 const legislatureHasOverridenVeto = progressFlagInActions(governorActions, 'vetoOverridden')
+    //                 if (lastGovernorAction.signed) { status = 'passed'; statusLabel = 'Signed', hasPassedGovernor = true }
+    //                 if (lastGovernorAction.vetoed) { status = 'blocked'; statusLabel = 'Vetoed' }
+    //                 if (lastGovernorAction.amendmentSuggested) { statusLabel = 'Amendment suggested' }
+    //                 if (lastGovernorAction.vetoOverridePending
+    //                     || (houseHasOverridenVeto || senateHasOverridenVeto) && !lastGovernorAction.vetoOverrideFailed
+    //                 ) { status = 'blocked'; statusLabel = 'Veto Override Pending' }
+    //                 if (legislatureHasOverridenVeto || lastGovernorAction.vetoOverridden || (houseHasOverridenVeto && senateHasOverridenVeto)) {
+    //                     status = 'passed'; statusLabel = 'Veto Overriden'; hasPassedGovernor = true
+    //                 }
+    //                 statusDate = lastGovernorAction.date
+    //                 return { step, status, statusLabel, statusDate }
+    //             }
+    //         }
+    //     })
+    //     return progressionSteps
+    // }
+
     getProgress = ({ identifier, billType, firstChamber, actions }) => {
-        // Get bill progression as calculated from actions
-        // bill is rawBill data
-        // actions are data only, should be sorted first to last
-        // actions should be in order
         const progressFlagInActions = (actions, flag) => actions.map(d => d[flag]).includes(true)
         const actionsWithFlag = (actions, flag) => actions.filter(a => a[flag])
         const firstActionWithFlag = (actions, flag) => actions.find(a => a[flag]) || null
@@ -194,7 +378,6 @@ export default class Bill {
         const secondChamberActions = actions.filter(a => a.posession === secondChamber)
 
         const committeeActionsInFirstChamber = actionsWithFlag(firstChamberActions, 'committeeAction')
-        // remove approps subcommittees so HB 2 process doesn't get confused
         const firstChamberCommittees = Array.from(new Set(committeeActionsInFirstChamber.map(d => d.committee)))
             .filter(d => ![
                 'Joint Appropriations Section A — General Government',
@@ -219,6 +402,7 @@ export default class Bill {
 
         // status for each step is one of 'current','future','passed','blocked', 'skipped'
         const progressionSteps = typeConfig.steps.map(step => {
+            // console.log(`Processing step: ${step}`) // Debug log
             if (step === 'introduced') {
                 const introducedStep = firstActionWithFlag(actions, 'introduction')
                 hasBeenIntroduced = (introducedStep !== null)
@@ -240,15 +424,14 @@ export default class Bill {
                 if (committeeActionsInFirstChamber.length === 0) {
                     return { step, status, statusLabel, statusDate }
                 } else {
-                    // This should catch first committee to act when multiple committees consider bill sequentially
                     const lastCommitteeAction = committeeActionsInFirstCommittee.slice(-1)[0]
+                    console.log(`Last committee action: ${lastCommitteeAction}`) // Debug log
                     if (lastCommitteeAction.failed) { status = 'blocked'; statusLabel = 'Voted down' }
                     if (lastCommitteeAction.missedDeadline) { status = 'blocked'; statusLabel = 'Missed deadline' }
                     if (lastCommitteeAction.tabled) { status = 'blocked'; statusLabel = 'Tabled' }
                     if (lastCommitteeAction.withdrawn) { status = 'blocked'; statusLabel = 'Withdrawn' }
                     if (lastCommitteeAction.advanced) { status = 'passed'; statusLabel = 'Advanced'; hasPassedACommittee = true }
                     if (lastCommitteeAction.blasted) { status = 'passed'; statusLabel = 'Blasted to floor'; hasPassedACommittee = true }
-                    // unlabled actions default to 'Pending'
                     statusDate = lastCommitteeAction.date
                     return { step, status, statusLabel, statusDate }
                 }
@@ -266,8 +449,8 @@ export default class Bill {
                     if (committeeActionsInSubsequentCommittees.length === 0) {
                         return { step, status, statusLabel, statusDate }
                     } else {
-                        // unlabled actions default to 'Pending'
                         const lastCommitteeAction = committeeActionsInSubsequentCommittees.slice(-1)[0]
+                        console.log(`Last committee action in subsequent committees: ${lastCommitteeAction}`) // Debug log
                         if (lastCommitteeAction.failed) { status = 'blocked'; statusLabel = 'Voted down' }
                         if (lastCommitteeAction.missedDeadline) { status = 'blocked'; statusLabel = 'Missed deadline' }
                         if (lastCommitteeAction.tabled) { status = 'blocked'; statusLabel = 'Tabled' }
@@ -279,6 +462,7 @@ export default class Bill {
                     }
                 } else {
                     const lastFloorAction = floorActionsInFirstChamber.slice(-1)[0]
+                    console.log(`Last floor action in first chamber: ${lastFloorAction}`) // Debug log
                     if (lastFloorAction.failed) { status = 'blocked'; statusLabel = 'Voted down' }
                     if (lastFloorAction.preliminaryPassage) { status = 'current'; statusLabel = 'Passed preliminary floor vote' }
                     if (lastFloorAction.finalPassage) { status = 'passed'; statusLabel = `Passed ${capitalize(firstChamber)}`, hasPassedFirstChamber = true }
@@ -289,7 +473,7 @@ export default class Bill {
             } else if (step === 'second chamber') {
                 let status = 'future', statusLabel = null, statusDate = null
                 if (!hasPassedFirstChamber) {
-                    return { step, status, statusLabel, statusDate } //nulls
+                    return { step, status, statusLabel, statusDate }
                 } else {
                     status = 'current'
                     statusLabel = 'Pending'
@@ -299,6 +483,7 @@ export default class Bill {
                     return { step, status, statusLabel, statusDate }
                 } else {
                     const lastFloorAction = actionsInSecondChamber.slice(-1)[0]
+                    console.log(`Last floor action in second chamber: ${lastFloorAction}`) // Debug log
                     if (lastFloorAction.failed) { status = 'blocked'; statusLabel = 'Voted down' }
                     if (lastFloorAction.preliminaryPassage) { status = 'current'; statusLabel = 'Passed preliminary vote' }
                     if (lastFloorAction.finalPassage) { status = 'passed'; statusLabel = `Passed ${capitalize(secondChamber)}`, hasPassedSecondChamber = true }
@@ -322,10 +507,11 @@ export default class Bill {
                     return { step, status, statusLabel, statusDate }
                 } else {
                     const lastReconciliationAction = reconciliationActions.slice(-1)[0]
+                    console.log(`Last reconciliation action: ${lastReconciliationAction}`) // Debug log
                     if (lastReconciliationAction.advanced) { status = 'passed'; statusLabel = 'Reconciled', reconciliationComplete = true }
                     statusDate = lastReconciliationAction.date
                     return { step, status, statusLabel, statusDate }
-                }
+                } 
             } else if (step === 'governor') {
                 let status = 'future', statusLabel = null, statusDate = null
                 if (!hasPassedSecondChamber || (reconciliationNecessary && !reconciliationComplete)) {
@@ -336,6 +522,7 @@ export default class Bill {
                 }
                 const governorActions = actionsWithFlag(actions, 'governorAction')
                 const becameLaw = progressFlagInActions(actions, 'ultimatelyPassed')
+                console.log(becameLaw)
                 if ((governorActions.length) === 0 && !becameLaw) {
                     return { step, status, statusLabel, statusDate }
                 } else if ((governorActions.length === 0) && becameLaw) {
@@ -343,6 +530,7 @@ export default class Bill {
                     return { step, status, statusLabel, statusDate }
                 } else {
                     const lastGovernorAction = governorActions.slice(-1)[0]
+                    console.log(`Last governor action: ${lastGovernorAction}`) // Debug log
                     const houseHasOverridenVeto = progressFlagInActions(governorActions, 'vetoOverriddenHouse')
                     const senateHasOverridenVeto = progressFlagInActions(governorActions, 'vetoOverriddenSenate')
                     const legislatureHasOverridenVeto = progressFlagInActions(governorActions, 'vetoOverridden')
@@ -362,6 +550,7 @@ export default class Bill {
         })
         return progressionSteps
     }
+
 
     getVoteMajorityRequired = (subjects) => {
         const thisBillThresholds = subjects.map(d => d.voteReq)
