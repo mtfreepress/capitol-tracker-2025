@@ -372,8 +372,10 @@ export default class Bill {
             if (all.length === 0) return null
             return all.slice(-1)[0]
         }
-
+        console.log("FIRST CHAMBER'S THE DEEPEST", firstChamber)
+        console.log(actions[0])
         const firstChamberActions = actions.filter(a => a.posession === firstChamber)
+        console.log("FIRST CHAMBER ACKTUNG",firstChamberActions)
         const secondChamber = (firstChamber === 'house') ? 'senate' : 'house'
         const secondChamberActions = actions.filter(a => a.posession === secondChamber)
 
@@ -420,7 +422,6 @@ export default class Bill {
                     status = 'current'
                     statusLabel = 'Pending'
                 }
-
                 if (committeeActionsInFirstChamber.length === 0) {
                     return { step, status, statusLabel, statusDate }
                 } else {
@@ -548,7 +549,9 @@ export default class Bill {
                 }
             }
         })
-        return progressionSteps
+        const returnValue = progressionSteps
+        console.log("progress", returnValue)
+        return returnValue
     }
 
 
