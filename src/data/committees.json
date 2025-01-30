@@ -59,8 +59,19 @@
             "HB 119",
             "HB 1"
         ],
-        "billsScheduled": [],
-        "billsScheduledByDay": [],
+        "billsScheduled": [
+            "HB 5",
+            "HB 10"
+        ],
+        "billsScheduledByDay": [
+            {
+                "day": "01/30/2025",
+                "bills": [
+                    "HB 5",
+                    "HB 10"
+                ]
+            }
+        ],
         "billsAwaitingVote": [
             "HB 9",
             "HB 8",
