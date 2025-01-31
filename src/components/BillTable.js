@@ -155,43 +155,41 @@ const Bill = ({ title, identifier, chamber, status, explanation, textUrl, fiscal
       );
     });
 
-    console.log(fiscalNoteUrl)
-
   return (
     <tr css={tableRowCss} key={identifier}>
-
+      
       <td css={tableBillCell}>
         <Link href={`/bills/${billUrl(identifier)}`} passHref>
-          <a css={billCss}>
+          <span css={billCss}>
             <span>📋</span> <span css={identifierCss}>{identifier}:</span> {title}
-          </a>
+          </span>
         </Link>
         <div css={billLabelCss}>{explanation}</div>
         <div css={billInfoLineCss}>
           {sponsor && (
             <Link href={`/lawmakers/${lawmakerUrl(sponsor.name)}`} passHref>
-              <a css={billLinkCss}>
+              <span css={billLinkCss}>
                 {sponsor.name} <span css={css`color: ${partyColors(sponsor.party)}; opacity: 0.8;`}>({sponsor.party})</span>
-              </a>
+              </span>
             </Link>
           )}
           {textUrl && <a css={billLinkCss} href={textUrl} target="_blank" rel="noopener noreferrer">📃 Bill text</a>}
-          {/* {fiscalNoteUrl && (
-            <Link href={`/bills/fiscal-note/${identifier}`} passHref>
-              <a css={billLinkCss} target="_blank" rel="noopener noreferrer">💵 Fiscal note</a>
+          {/* {fiscalNoteUrl && <a css={billLinkCss} href={fiscalNoteUrl} target="_blank" rel="noopener noreferrer">💵 Fiscal note</a>} */}
+          {fiscalNoteUrl && (
+            <Link href={fiscalNoteUrl} passHref>
+              <span css={billLinkCss}>💵 Fiscal note</span>
             </Link>
-          )} */}
-           {fiscalNoteUrl && <a css={billLinkCss} href={fiscalNoteUrl} target="_blank" rel="noopener noreferrer">💵 Fiscal note</a>}
+          )}
           {legalNoteUrl && (
             <Link href={legalNoteUrl} passHref>
-              <a css={billLinkCss} target="_blank" rel="noopener noreferrer">🏛 Legal note</a>
+              <span css={billLinkCss}>🏛 Legal note</span>
             </Link>
           )}
           {amendmentsUrl && <a css={billLinkCss} href={amendmentsUrl} target="_blank" rel="noopener noreferrer">🖍 Proposed amendments</a>}
           {vetoMemoUrl && <a css={billLinkCss} href={vetoMemoUrl} target="_blank" rel="noopener noreferrer">🚫 Veto memo</a>}
           {(numArticles > 0) && (
             <Link href={`/bills/${billUrl(identifier)}`} passHref>
-              <a css={billLinkCss}>📰 <strong>{numArticles}</strong> MTFP {pluralStory(numArticles)}</a>
+              <span css={billLinkCss}>📰 <strong>{numArticles}</strong> MTFP {pluralStory(numArticles)}</span>
             </Link>
           )}
         </div>

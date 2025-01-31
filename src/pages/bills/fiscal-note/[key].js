@@ -18,10 +18,9 @@ export async function getStaticProps({ params }) {
     const fiscalNotesPath = path.join(process.cwd(), 'public', 'fiscal-notes', billDir);
     const files = await fs.readdir(fiscalNotesPath);
     
-    // Assuming there's only one PDF file per directory
     const fileName = files.find(file => file.endsWith('.pdf'));
-    const filePath = path.join(process.env.BASE_PATH || '', 'fiscal-notes', billDir, fileName);
-    console.log({filePath})
+    const encodedFileName = encodeURIComponent(fileName);
+    const filePath = path.join(process.env.BASE_PATH || '', 'fiscal-notes', billDir, encodedFileName);
     
     return {
         props: {
