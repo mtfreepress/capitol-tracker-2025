@@ -67,7 +67,7 @@ const lawmakers = lawmakersRaw.map(lawmaker => new Lawmaker({
     committeeOrder,
 }))
 
-const bills = billsRaw.map(bill => new Bill({
+const bills = billsRaw.filter(d => d.key === 'HB 1').map(bill => new Bill({
     bill,
     actions: actionsFlat.filter(d => d.bill === bill.key),
     votes: actionsFlat.filter(d => d.vote && d.vote.bill === bill.key).map(d => d.vote),
@@ -114,9 +114,9 @@ lawmakers.forEach(lawmaker => {
     }
 })
 
-const calendarOutput = new CalendarPage({ actions: actionsFlat, bills, updateTime }).export()
-bills.forEach(bill => bill.data.isOnCalendar = calendarOutput.billsOnCalendar.includes(bill.data.identifier))
-const recapOutput = new RecapPage({ actions: actionsFlat, bills, updateTime }).export()
+// const calendarOutput = new CalendarPage({ actions: actionsFlat, bills, updateTime }).export()
+// bills.forEach(bill => bill.data.isOnCalendar = calendarOutput.billsOnCalendar.includes(bill.data.identifier))
+// const recapOutput = new RecapPage({ actions: actionsFlat, bills, updateTime }).export()
 
 const keyBillCategoryKeys = Array.from(new Set(billAnnotations.map(d => d.category))).filter(d => d !== null).filter(d => d !== undefined)
 const keyBillCategoryList = keyBillCategoryKeys.map(category => {
@@ -192,7 +192,6 @@ for (let start = 0; start < actionsOutput.length; start += chunkSize) {
     index += 1
 }
 
-// const billsOutput = bills.map(b => b.exportBillDataOnly())
 writeJson('./src/data/bills.json', billsOutput)
 
 const lawmakerOutput = lawmakers.map(l => l.exportMerged())
@@ -204,9 +203,9 @@ writeJson('./src/data/header.json', headerOutput)
 writeJson('./src/data/articles.json', articles)
 writeJson('./src/data/process-annotations.json', processNotes)
 writeJson('./src/data/bill-categories.json', keyBillCategoryList)
-writeJson('./src/data/calendar.json', calendarOutput)
-writeJson('./src/data/recap.json', recapOutput)
-writeJson('./src/data/participation.json', participationPageOutput)
+// writeJson('./src/data/calendar.json', calendarOutput)
+// writeJson('./src/data/recap.json', recapOutput)
+// writeJson('./src/data/participation.json', participationPageOutput)
 writeJson('./src/data/contact.json', contactComponentOutput)
 writeJson('./src/data/house.json', housePageOutput)
 writeJson('./src/data/senate.json', senatePageOutput)
