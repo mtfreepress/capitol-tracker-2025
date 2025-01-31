@@ -1,3 +1,5 @@
+import Vote from './Vote.js'
+
 import {
     standardizeDate,
     standardizeCommiteeNames,
@@ -8,7 +10,11 @@ import {
 import { ACTIONS } from '../config/procedure.js'
 
 export default class Action {
-    constructor({ action, vote }) {
+    constructor({ 
+        action, 
+        billVoteMajorityRequired, 
+        billStartingChamber 
+    }) {
 
         const {
             id,
@@ -16,17 +22,23 @@ export default class Action {
             session,
             actionUrl,
             date,
-            hasVote,
             committee,
             recordings,
             posession,
             transcriptUrl, // From third-party council data project integration
+            vote,
         } = action
 
         const description = action.description.replace(/\((C|LC|H|S)\) /, '').replace(/\&nbsp/g, '')
 
+        const actionFlags = this.getActionFlags(description)
 
-        this.vote = vote
+        this.vote = vote && new Vote({
+            vote,
+            voteLocation: actionFlags.committeeAction ? 'committee': 'floor',
+            billVoteMajorityRequired, // for determining whether vote passes
+            billStartingChamber, // for determining whether vote passes (because some votes require 100 votes between both chambers)
+        }) || null
 
         const committeeName = standardizeCommiteeNames(committee)
 
@@ -44,7 +56,7 @@ export default class Action {
             recordings,
             transcriptUrl: transcriptUrl || null,
             // Flags
-            ...this.getActionFlags(description)
+            ...actionFlags,
         }
         // leave vote out of this.data, merge in at export step
     }
