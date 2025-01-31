@@ -20,6 +20,7 @@ export async function getStaticProps({ params }) {
     
     const fileName = files.find(file => file.endsWith('.pdf'));
     const encodedFileName = encodeURIComponent(fileName);
+    
     const filePath = path.join(process.env.BASE_PATH || '', 'fiscal-notes', billDir, encodedFileName);
     
     return {

@@ -167,13 +167,18 @@ const BillCard = ({ bill }) => {
                             <a href={textUrl} target="_blank" rel="noopener noreferrer">📃 Bill text</a> :
                             <span className="info-absent">📃 No bill text</span>}
                         </div>
-                        <div className="info-fiscal">{fiscalNoteUrl ?
-                            <a href={fiscalNoteUrl} target="_blank" rel="noopener noreferrer">💵 Fiscal note</a> :
-                            <span className="info-absent">💵 No fiscal note</span>}
+                        <div className="info-fiscal">
+                            {fiscalNoteUrl ? (
+                            <Link href={fiscalNoteUrl}  target="_blank">
+                                <span>💵 Fiscal note</span>
+                            </Link>
+                            ) : (
+                                <span className="info-absent">💵 No fiscal note</span>
+                            )}
                         </div>
                         <div className="info-legal">
                             {legalNoteUrl ? (
-                                <Link href={legalNoteUrl}>
+                                <Link href={legalNoteUrl}  target="_blank">
                                     <span>🏛 Legal note</span>
                                 </Link>
                             ) : (
