@@ -19,19 +19,20 @@ export default class Action {
         const {
             id,
             bill,
-            session,
-            actionUrl,
             date,
+            // actionUrl, // all null in source data currently
             committee,
             recordings,
-            posession,
             transcriptUrl, // From third-party council data project integration
             vote,
         } = action
 
-        const description = action.description.replace(/\((C|LC|H|S)\) /, '').replace(/\&nbsp/g, '')
+        const cleanedDescription = action.description.replace(/\((C|LC|H|S)\) /, '').replace(/\&nbsp/g, '')
+        const actionFlags = this.getActionFlags(cleanedDescription)
+        const billHolder = this.determineBillHolder(id, action.possession, cleanedDescription, actionFlags)
 
-        const actionFlags = this.getActionFlags(description)
+        // console.log(possession, '  ----  ', description)
+        // console.log({id, actionFlags})
 
         this.vote = vote && new Vote({
             vote,
@@ -46,13 +47,13 @@ export default class Action {
             id,
             bill,
             date: standardizeDate(date),
-            description,
-            // posession: this.determinePosession(action, description),
-            posession,
+            description: cleanedDescription,
+            // possession // old variable name changed to billHolder because Eric can't reliably spell it
+            billHolder,
             committee: committeeName,
             // committeeTime: getCommitteeTime(committeeName),
             // committeeType: getCommitteeType(committeeName),
-            actionUrl,
+            // actionUrl,
             recordings,
             transcriptUrl: transcriptUrl || null,
             // Flags
@@ -61,25 +62,29 @@ export default class Action {
         // leave vote out of this.data, merge in at export step
     }
 
-    // determinePosession = (action, description) => {
-    //     const posessionSearch = action.description.match(/(?<=\()(C|LC|H|S)(?=\))/)
-    //     const posessionKey = posessionSearch && posessionSearch[0] || 'O'
-    //     const posession = {
-    //         'C': 'staff',
-    //         'LC': 'staff',
-    //         'H': 'house',
-    //         'S': 'senate',
-    //         'O': 'other'
-    //     }[posessionKey]
+    determineBillHolder = (id, rawPossession, cleanedDescription, actionFlags) => {
+        // translates possession from the raw data provided from our legislative interfact to the terms
+        // the getProgress logic in Bill.js needs to fire properly
+        // we may be able to clean this up more down the road
+        let billHolder = null
+       
+        if (actionFlags.inDrafting) billHolder = 'drafter'
+        if (actionFlags.draftToSponsor) billHolder = 'sponsor'
+        if (rawPossession === 'House') billHolder = 'house' // note use of lowercase for internal logic
+        if (rawPossession === 'Senate') billHolder = 'senate' // also lowercase
+        if (cleanedDescription === 'Returned to House') billHolder = 'house'
+        if (cleanedDescription === 'Returned to Senate') billHolder = 'senate'
+        // May need to figure out who "owns" the bill during enrolling -- assuming it's the chamber of origin
+        if (actionFlags.transmittedToGovernor || actionFlags.governorAction) billHolder = 'governor'
+        if (actionFlags.secretaryOfStateAction) billHolder = 'sos'
 
-    //     const flags = this.getActionFlags(description)
-    //     if (flags.governorAction) {
-    //         // overrides encoding on the action description
-    //         return 'governor'
-    //     }
-    //     return posession
-
-    // }
+        // warn if billHolder remains null despite above logic
+        // if this happens it's probably a situation we haven't anticipated
+        if (billHolder === null) console.warn(`Warning for action ${id}: unspecified billHolder situation` )
+        
+        // console.log(billHolder, '  ----  ', cleanedDescription) // generate output to verify actions map in sane way
+        return billHolder
+    }
 
 
     // determineChamber = (organization_id) => {

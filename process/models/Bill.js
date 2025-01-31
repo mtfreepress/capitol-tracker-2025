@@ -177,6 +177,8 @@ export default class Bill {
         // bill is rawBill data
         // actions are data only, should be sorted first to last
         // actions should be in order
+
+        // helper functions to interface with actionFlags assigned in Action.getActionFlags
         const progressFlagInActions = (actions, flag) => actions.map(d => d[flag]).includes(true)
         const actionsWithFlag = (actions, flag) => actions.filter(a => a[flag])
         const firstActionWithFlag = (actions, flag) => actions.find(a => a[flag]) || null
@@ -186,11 +188,14 @@ export default class Bill {
             return all.slice(-1)[0]
         }
 
-        const firstChamberActions = actions.filter(a => a.posession === firstChamber)
+        const firstChamberActions = actions.filter(a => a.billHolder === firstChamber)
         const secondChamber = (firstChamber === 'house') ? 'senate' : 'house'
-        const secondChamberActions = actions.filter(a => a.posession === secondChamber)
-
+        const secondChamberActions = actions.filter(a => a.billHolder === secondChamber)
+        const hasReachedGovernor = actionsWithFlag(actions, 'transmittedToGovernor').length > 0
+       
         const committeeActionsInFirstChamber = actionsWithFlag(firstChamberActions, 'committeeAction')
+        
+        // ID committees the bill has passed through in its first chamber -- sometimes there's more than one
         // remove approps subcommittees so HB 2 process doesn't get confused
         const firstChamberCommittees = Array.from(new Set(committeeActionsInFirstChamber.map(d => d.committee)))
             .filter(d => ![
@@ -200,17 +205,25 @@ export default class Bill {
                 'Joint Appropriations Section C — Natural Resources and Transportation',
                 'Joint Appropriations Section D — Judicial Branch, Law Enforcement, and Justice'
             ].includes(d))
-        const committeeActionsInFirstCommittee = committeeActionsInFirstChamber.filter(d => d.committee === firstChamberCommittees[0])
-        const committeeActionsInSubsequentCommittees = committeeActionsInFirstChamber.filter(d => firstChamberCommittees.slice(1,).includes(d.committee))
 
+        // ID first committee, since first committee passage is a key milestone
+        const committeeActionsInFirstCommittee = committeeActionsInFirstChamber
+            .filter(d => d.committee === firstChamberCommittees[0])
+        
+        
+        const committeeActionsInSubsequentCommittees = committeeActionsInFirstChamber.filter(d => firstChamberCommittees.slice(1,).includes(d.committee))
+        
+        // different bill types have different procedural steps (e.g. House Resolutions don't go to the Senate)
         const typeConfig = BILL_TYPES.find(type => type.key === billType)
         if (!typeConfig) throw `Unhandled bill type "${billType}"`
 
+        // conditions that determine which progession steps are added to the progression data
+        // everything starts false, then checks are performed as the logic walks through the actions
         let hasBeenIntroduced = false
         let hasPassedACommittee = false
         let hasPassedFirstChamber = false
         let hasPassedSecondChamber = false
-        let reconciliationNecessary = false
+        let reconciliationNecessary = false // if house/senate pass different versions of bill
         let reconciliationComplete = false
         let hasPassedGovernor = false
 
@@ -325,7 +338,10 @@ export default class Bill {
                 }
             } else if (step === 'governor') {
                 let status = 'future', statusLabel = null, statusDate = null
-                if (!hasPassedSecondChamber || (reconciliationNecessary && !reconciliationComplete)) {
+                if (
+                    !hasReachedGovernor // fallback for messiness earlier in process
+                    && (!hasPassedSecondChamber || (reconciliationNecessary && !reconciliationComplete))
+                ) {
                     return { step, status, statusLabel, statusDate }
                 } else {
                     status = 'current'
