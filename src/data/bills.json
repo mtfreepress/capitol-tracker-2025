@@ -7332,6 +7332,89 @@
         "numArticles": 0
     },
     {
+        "key": "sb-252",
+        "identifier": "SB 252",
+        "identifierLong": "Senate Bill 252",
+        "chamber": "senate",
+        "title": "Revise land use laws related to manufactured and factory built homes",
+        "session": "2",
+        "lcIdentifier": "LC1861",
+        "type": "senate bill",
+        "status": {
+            "key": "In First House--Introduced",
+            "step": "First chamber",
+            "label": "Introduced",
+            "status": "live",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "passed",
+                "statusLabel": "Introduced",
+                "statusDate": "01/31/2025"
+            },
+            {
+                "step": "first committee",
+                "status": "current",
+                "statusLabel": "Pending",
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Dave Fern",
+            "party": "D",
+            "locale": "Whitefish",
+            "district": "SD 2"
+        },
+        "requestor": "Dave Fern",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "SIMPLE",
+        "subjects": [
+            "Housing",
+            "Planning and Development",
+            "Cities and Towns  (see also: Local Government)",
+            "Local Government  (see also: City Subjects; County Subjects)",
+            "State Lands"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1861?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1861?open_tab=bill",
+        "fiscalNoteUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1861?open_tab=fiscal",
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1861?open_tab=amend",
+        "legalNoteUrl": null,
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0
+    },
+    {
         "key": "sb-251",
         "identifier": "SB 251",
         "identifierLong": "Senate Bill 251",
@@ -11222,9 +11305,9 @@
         "lcIdentifier": "LC1064",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Introduced",
+            "key": "In First House Committee--Nontabled",
             "step": "First chamber",
-            "label": "Introduced",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
