@@ -880,10 +880,10 @@
         "lcIdentifier": "LC0963",
         "type": "senate bill",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
+            "key": "In First House--Through 3rd Reading",
+            "step": "First chamber",
+            "label": "Passed chamber",
+            "status": "live",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -901,14 +901,14 @@
             },
             {
                 "step": "first chamber",
-                "status": "current",
-                "statusLabel": "Passed preliminary floor vote",
-                "statusDate": "01/30/2025"
+                "status": "passed",
+                "statusLabel": "Passed Senate",
+                "statusDate": "01/31/2025"
             },
             {
                 "step": "second chamber",
-                "status": "future",
-                "statusLabel": null,
+                "status": "current",
+                "statusLabel": "Pending",
                 "statusDate": null
             },
             {
@@ -1043,10 +1043,10 @@
         "lcIdentifier": "LC0045",
         "type": "senate bill",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
+            "key": "In First House--Through 3rd Reading",
+            "step": "First chamber",
+            "label": "Passed chamber",
+            "status": "live",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -1064,14 +1064,14 @@
             },
             {
                 "step": "first chamber",
-                "status": "current",
-                "statusLabel": "Passed preliminary floor vote",
-                "statusDate": "01/30/2025"
+                "status": "passed",
+                "statusLabel": "Passed Senate",
+                "statusDate": "01/31/2025"
             },
             {
                 "step": "second chamber",
-                "status": "future",
-                "statusLabel": null,
+                "status": "current",
+                "statusLabel": "Pending",
                 "statusDate": null
             },
             {
@@ -1126,10 +1126,10 @@
         "lcIdentifier": "LC0569",
         "type": "senate bill",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
+            "key": "In First House--Through 3rd Reading",
+            "step": "First chamber",
+            "label": "Passed chamber",
+            "status": "live",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -1147,14 +1147,14 @@
             },
             {
                 "step": "first chamber",
-                "status": "current",
-                "statusLabel": "Passed preliminary floor vote",
-                "statusDate": "01/30/2025"
+                "status": "passed",
+                "statusLabel": "Passed Senate",
+                "statusDate": "01/31/2025"
             },
             {
                 "step": "second chamber",
-                "status": "future",
-                "statusLabel": null,
+                "status": "current",
+                "statusLabel": "Pending",
                 "statusDate": null
             },
             {
@@ -1714,10 +1714,10 @@
         "lcIdentifier": "LC0274",
         "type": "senate bill",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
+            "key": "In First House--Through 3rd Reading",
+            "step": "First chamber",
+            "label": "Passed chamber",
+            "status": "live",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -1735,14 +1735,14 @@
             },
             {
                 "step": "first chamber",
-                "status": "current",
-                "statusLabel": "Passed preliminary floor vote",
-                "statusDate": "01/30/2025"
+                "status": "passed",
+                "statusLabel": "Passed Senate",
+                "statusDate": "01/31/2025"
             },
             {
                 "step": "second chamber",
-                "status": "future",
-                "statusLabel": null,
+                "status": "current",
+                "statusLabel": "Pending",
                 "statusDate": null
             },
             {
@@ -2105,87 +2105,6 @@
         "numArticles": 0
     },
     {
-        "key": "sb-85",
-        "identifier": "SB 85",
-        "chamber": "senate",
-        "title": "Establish a vending machine account in the special revenue fund",
-        "session": "2",
-        "lcIdentifier": "LC0442",
-        "type": "senate bill",
-        "status": {
-            "key": "In Drafting Process",
-            "step": "Drafting",
-            "label": "In drafting",
-            "status": "not introduced",
-            "statusAtSessionEnd": "not introduced"
-        },
-        "progress": [
-            {
-                "step": "introduced",
-                "status": "future",
-                "statusLabel": "Not introduced",
-                "statusDate": null
-            },
-            {
-                "step": "first committee",
-                "status": "future",
-                "statusLabel": null,
-                "statusDate": null
-            },
-            {
-                "step": "first chamber",
-                "status": "future",
-                "statusLabel": null,
-                "statusDate": null
-            },
-            {
-                "step": "second chamber",
-                "status": "future",
-                "statusLabel": null,
-                "statusDate": null
-            },
-            {
-                "step": "reconciliation",
-                "status": "skipped",
-                "statusLabel": null,
-                "statusDate": null
-            },
-            {
-                "step": "governor",
-                "status": "future",
-                "statusLabel": null,
-                "statusDate": null
-            }
-        ],
-        "hasBeenSentToGovernor": false,
-        "sponsor": {
-            "name": "Mike Yakawich",
-            "party": "R",
-            "locale": "Billings",
-            "district": "SD 24"
-        },
-        "requestor": "Theresa Manzella",
-        "deadlineCategory": "undefined",
-        "transmittalDeadline": "undefined",
-        "secondHouseReturnIfAmendedDeadline": "undefined",
-        "voteMajorityRequired": "SIMPLE",
-        "subjects": [
-            "Health Care Services (see also: Health)",
-            "Social Services",
-            "Revenue, State",
-            "Appropriations  (see also: State Finance)"
-        ],
-        "tags": [],
-        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0442?open_tab=sum",
-        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0442?open_tab=bill",
-        "fiscalNoteUrl": "https://bills.legmt.gov/#/bill/2/LC0442?open_tab=fiscal",
-        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0442?open_tab=amend",
-        "legalNoteUrl": "undefined",
-        "vetoMemoUrl": null,
-        "articles": [],
-        "numArticles": 0
-    },
-    {
         "key": "sb-84",
         "identifier": "SB 84",
         "identifierLong": "Senate Bill 84",
@@ -2275,9 +2194,9 @@
         "lcIdentifier": "LC0509",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Introduced",
+            "key": "In First House Committee--Nontabled",
             "step": "First chamber",
-            "label": "Introduced",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -3481,10 +3400,10 @@
         "lcIdentifier": "LC0226",
         "type": "senate bill",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
+            "key": "In First House--Through 3rd Reading",
+            "step": "First chamber",
+            "label": "Passed chamber",
+            "status": "live",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -3502,14 +3421,14 @@
             },
             {
                 "step": "first chamber",
-                "status": "current",
-                "statusLabel": "Passed preliminary floor vote",
-                "statusDate": "01/30/2025"
+                "status": "passed",
+                "statusLabel": "Passed Senate",
+                "statusDate": "01/31/2025"
             },
             {
                 "step": "second chamber",
-                "status": "future",
-                "statusLabel": null,
+                "status": "current",
+                "statusLabel": "Pending",
                 "statusDate": null
             },
             {
@@ -3880,10 +3799,10 @@
         "lcIdentifier": "LC0298",
         "type": "senate bill",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
+            "key": "In First House Committee--Nontabled",
+            "step": "First chamber",
+            "label": "In committee",
+            "status": "live",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -3902,8 +3821,8 @@
             {
                 "step": "first chamber",
                 "status": "current",
-                "statusLabel": "Pending",
-                "statusDate": null
+                "statusLabel": "Passed preliminary floor vote",
+                "statusDate": "01/31/2025"
             },
             {
                 "step": "second chamber",
@@ -5412,10 +5331,10 @@
         "lcIdentifier": "LC0615",
         "type": "senate bill",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
+            "key": "In First House--Through 2nd Reading",
+            "step": "First chamber",
+            "label": "Passed second reading vote",
+            "status": "live",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -5434,8 +5353,8 @@
             {
                 "step": "first chamber",
                 "status": "current",
-                "statusLabel": "Pending",
-                "statusDate": null
+                "statusLabel": "Passed preliminary floor vote",
+                "statusDate": "01/31/2025"
             },
             {
                 "step": "second chamber",
@@ -5890,9 +5809,9 @@
         "lcIdentifier": "LC1435",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Introduced",
+            "key": "In First House Committee--Nontabled",
             "step": "First chamber",
-            "label": "Introduced",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -12036,9 +11955,9 @@
         "lcIdentifier": "LC0616",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Out of Committee",
+            "key": "In First House Committee--Nontabled",
             "step": "First chamber",
-            "label": "Out of committee",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -16699,10 +16618,10 @@
         "lcIdentifier": "LC1994",
         "type": "senate bill",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
+            "key": "In First House--Through 3rd Reading",
+            "step": "First chamber",
+            "label": "Passed chamber",
+            "status": "live",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -16720,14 +16639,14 @@
             },
             {
                 "step": "first chamber",
-                "status": "current",
-                "statusLabel": "Passed preliminary floor vote",
-                "statusDate": "01/30/2025"
+                "status": "passed",
+                "statusLabel": "Passed Senate",
+                "statusDate": "01/31/2025"
             },
             {
                 "step": "second chamber",
-                "status": "future",
-                "statusLabel": null,
+                "status": "current",
+                "statusLabel": "Pending",
                 "statusDate": null
             },
             {
@@ -18393,10 +18312,10 @@
         "lcIdentifier": "LC0256",
         "type": "senate bill",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
+            "key": "In First House--Through 3rd Reading",
+            "step": "First chamber",
+            "label": "Passed chamber",
+            "status": "live",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -18414,14 +18333,14 @@
             },
             {
                 "step": "first chamber",
-                "status": "current",
-                "statusLabel": "Passed preliminary floor vote",
-                "statusDate": "01/30/2025"
+                "status": "passed",
+                "statusLabel": "Passed Senate",
+                "statusDate": "01/31/2025"
             },
             {
                 "step": "second chamber",
-                "status": "future",
-                "statusLabel": null,
+                "status": "current",
+                "statusLabel": "Pending",
                 "statusDate": null
             },
             {
@@ -18472,10 +18391,10 @@
         "lcIdentifier": "LC0255",
         "type": "senate bill",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
+            "key": "In First House--Through 3rd Reading",
+            "step": "First chamber",
+            "label": "Passed chamber",
+            "status": "live",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -18493,14 +18412,14 @@
             },
             {
                 "step": "first chamber",
-                "status": "current",
-                "statusLabel": "Passed preliminary floor vote",
-                "statusDate": "01/30/2025"
+                "status": "passed",
+                "statusLabel": "Passed Senate",
+                "statusDate": "01/31/2025"
             },
             {
                 "step": "second chamber",
-                "status": "future",
-                "statusLabel": null,
+                "status": "current",
+                "statusLabel": "Pending",
                 "statusDate": null
             },
             {
@@ -20098,10 +20017,10 @@
         "lcIdentifier": "LC0230",
         "type": "senate bill",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
+            "key": "In First House--Through 3rd Reading",
+            "step": "First chamber",
+            "label": "Passed chamber",
+            "status": "live",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -20119,14 +20038,14 @@
             },
             {
                 "step": "first chamber",
-                "status": "current",
-                "statusLabel": "Passed preliminary floor vote",
-                "statusDate": "01/30/2025"
+                "status": "passed",
+                "statusLabel": "Passed Senate",
+                "statusDate": "01/31/2025"
             },
             {
                 "step": "second chamber",
-                "status": "future",
-                "statusLabel": null,
+                "status": "current",
+                "statusLabel": "Pending",
                 "statusDate": null
             },
             {
@@ -20663,10 +20582,10 @@
         "lcIdentifier": "LC0939",
         "type": "senate bill",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
+            "key": "In First House--Through 3rd Reading",
+            "step": "First chamber",
+            "label": "Passed chamber",
+            "status": "live",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -20684,14 +20603,14 @@
             },
             {
                 "step": "first chamber",
-                "status": "current",
-                "statusLabel": "Passed preliminary floor vote",
-                "statusDate": "01/30/2025"
+                "status": "passed",
+                "statusLabel": "Passed Senate",
+                "statusDate": "01/31/2025"
             },
             {
                 "step": "second chamber",
-                "status": "future",
-                "statusLabel": null,
+                "status": "current",
+                "statusLabel": "Pending",
                 "statusDate": null
             },
             {
@@ -40721,9 +40640,9 @@
         "lcIdentifier": "LC1733",
         "type": "house bill",
         "status": {
-            "key": "In First House--Out of Committee",
+            "key": "In First House Committee--Nontabled",
             "step": "First chamber",
-            "label": "Out of committee",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -43715,10 +43634,10 @@
         "lcIdentifier": "LC2999",
         "type": "house bill",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
+            "key": "In First House--Through 2nd Reading",
+            "step": "First chamber",
+            "label": "Passed second reading vote",
+            "status": "live",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -43737,8 +43656,8 @@
             {
                 "step": "first chamber",
                 "status": "current",
-                "statusLabel": "Pending",
-                "statusDate": null
+                "statusLabel": "Passed preliminary floor vote",
+                "statusDate": "01/31/2025"
             },
             {
                 "step": "second chamber",
@@ -44850,15 +44769,15 @@
         "identifier": "HB 176",
         "identifierLong": "House Bill 176",
         "chamber": "house",
-        "title": "Require unlimited wolf hunting quota when population is at or above 450 wolves",
+        "title": "Allow unlimited wolf hunting quota when population is at or above 450 wolves",
         "session": "2",
         "lcIdentifier": "LC2548",
         "type": "house bill",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
+            "key": "In First House--Through 2nd Reading",
+            "step": "First chamber",
+            "label": "Passed second reading vote",
+            "status": "live",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -44877,8 +44796,8 @@
             {
                 "step": "first chamber",
                 "status": "current",
-                "statusLabel": "Pending",
-                "statusDate": null
+                "statusLabel": "Passed preliminary floor vote",
+                "statusDate": "01/31/2025"
             },
             {
                 "step": "second chamber",
