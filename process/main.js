@@ -51,9 +51,6 @@ const contactUsComponentText = getText('./inputs/annotations/components/about.md
 ### DATA BUNDLING + WRANGLING
 */
 
-// config stuff
-const committeeOrder = committeesRaw.map(d => d.name)
-
 const articles = articlesRaw.map(article => new Article({ article }).export())
 
 /// do lawmakers first, then bills
@@ -64,7 +61,6 @@ const lawmakers = lawmakersRaw.map(lawmaker => new Lawmaker({
     articles: articles.filter(d => d.lawmakerTags.includes(lawmaker.name)),
     // leave sponsoredBills until after bills objects are created
     // same with keyVotes
-    committeeOrder,
 }))
 
 const bills = billsRaw.filter(d => d.key === 'HB 1').map(bill => new Bill({
@@ -83,19 +79,19 @@ const senateFloorVotes = votes.filter(v => v.voteLocation === 'floor' && v.voteC
 const houseFloorVoteAnalysis = new VotingAnalysis({ votes: houseFloorVotes })
 const senateFloorVoteAnalysis = new VotingAnalysis({ votes: senateFloorVotes })
 
-const committees = committeesRaw
-    .filter(d => ![
-        'conference',
-        'select',
-        'procedural',
-        // 'fiscal-sub'
-    ].includes(d.type))
-    .map(schema => new Committee({
-        schema,
-        committeeBills: bills.filter(b => b.committees.includes(schema.displayName)),
-        lawmakers: lawmakers.filter(l => l.data.committees.map(d => d.committee).includes(schema.name)), // Cleaner to do this backwards -- assign lawmakers based on committee data?
-        updateTime
-    }))
+// const committees = committeesRaw
+//     .filter(d => ![
+//         'conference',
+//         'select',
+//         'procedural',
+//         // 'fiscal-sub'
+//     ].includes(d.type))
+//     .map(schema => new Committee({
+//         schema,
+//         committeeBills: bills.filter(b => b.committees.includes(schema.displayName)),
+//         lawmakers: lawmakers.filter(l => l.data.committees.map(d => d.committee).includes(schema.name)), // Cleaner to do this backwards -- assign lawmakers based on committee data?
+//         updateTime
+//     }))
 
 // Calculations that need both lawmakers and bills populated
 lawmakers.forEach(lawmaker => {
@@ -159,24 +155,6 @@ const contactComponentOutput = {
 ### OUTPUTS 
 */
 console.log('\n### Bundling tracker data')
-/*
-Exporting bill actions separately here so they can be kept outside of Gatsby graphql scope
-*/
-
-// Group actions by bill
-// const groupedActions = actionsFlat.reduce((acc, action) => {
-//     if (!acc[action.bill]) {
-//         acc[action.bill] = [];
-//     }
-//     acc[action.bill].push(action);
-//     return acc;
-// }, {});
-
-// // Convert grouped actions to the desired format
-// const actionsOutput = Object.keys(groupedActions).map(bill => ({
-//     bill,
-//     actions: groupedActions[bill]
-// }));
 
 const billsOutput = bills.map(b => b.exportBillDataOnly())
 const actionsOutput = bills.map(b => ({
@@ -196,8 +174,8 @@ writeJson('./src/data/bills.json', billsOutput)
 
 const lawmakerOutput = lawmakers.map(l => l.exportMerged())
 writeJson('./src/data/lawmakers.json', lawmakerOutput)
-const committeeOutput = committees.map(l => l.export())
-writeJson('./src/data/committees.json', committeeOutput)
+// const committeeOutput = committees.map(l => l.export())
+// writeJson('./src/data/committees.json', committeeOutput)
 
 writeJson('./src/data/header.json', headerOutput)
 writeJson('./src/data/articles.json', articles)
