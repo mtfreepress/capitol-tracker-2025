@@ -38,6 +38,7 @@ export const standardizeDate = date => {
 
 export const standardCommiteeNames = Array.from(new Set(Object.values(COMMITEE_NAME_CLEANING)))
 export const standardizeCommiteeNames = name => {
+    if (name === "undefined") return null
     if (standardCommiteeNames.includes(name)) return name
     if ([null, '', ' ', '  ', '   ', '    '].includes(name)) return null
     const preClean = name.replace('(H) (H)', '(H)').replace('(S) (S)', '(S)')
