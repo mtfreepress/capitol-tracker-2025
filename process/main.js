@@ -63,7 +63,7 @@ const lawmakers = lawmakersRaw.map(lawmaker => new Lawmaker({
     // same with keyVotes
 }))
 
-const bills = billsRaw.filter(d => d.key === 'HB 1').map(bill => new Bill({
+const bills = billsRaw.map(bill => new Bill({
     bill,
     actions: actionsFlat.filter(d => d.bill === bill.key),
     votes: actionsFlat.filter(d => d.vote && d.vote.bill === bill.key).map(d => d.vote),

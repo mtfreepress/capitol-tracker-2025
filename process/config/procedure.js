@@ -128,8 +128,10 @@ const isMajor = true
 const isHighlight = true
 
 // Bill progression flags
+const inDrafting = true
 const draftRequest = true
 const draftReady = true
+const draftToSponsor = true
 const introduction = true
 
 const hearing = true
@@ -172,6 +174,8 @@ const ultimatelyPassed = true
 
 const committeeReferral = true
 const committeeSubsequentReferral = true
+
+const secretaryOfStateAction = true
 
 
 export const ACTIONS = [
@@ -364,7 +368,7 @@ export const ACTIONS = [
     // Ultimate outcomes
     { key: 'Died in Standing Committee', isMajor, ultimatelyFailed },
     { key: 'Died in Process', isMajor, firstChamberFloorAction, ultimatelyFailed }, // resolutions?
-    { key: 'Chapter Number Assigned', isMajor, ultimatelyPassed },
+    { key: 'Chapter Number Assigned', isMajor, ultimatelyPassed, secretaryOfStateAction },
     { key: 'Filed with Secretary of State', isMajor, ultimatelyPassed },
 
     // conference committees
@@ -376,28 +380,30 @@ export const ACTIONS = [
 
 
     // Minor actions (exclude from default bill table view)
-    { key: 'Drafter Assigned' },
-    { key: 'Draft Request Received', draftRequest },
-    { key: 'Bill Draft Text Available Electronically', draftReady },
-    { key: 'Draft Delivered to Requester' },
-    { key: 'Draft Back for Redo', },
-    { key: 'Draft Back for Requester Changes', },
-    { key: 'Draft On Hold', },
-    { key: 'Draft Ready for Delivery', },
-    { key: 'Draft Taken Off Hold', },
-    { key: 'Draft Taken by Drafter', },
-    { key: 'Draft in Assembly', },
-    { key: 'Draft in Edit', },
-    { key: 'Draft in Final Drafter Review', },
-    { key: 'Draft in Input/Proofing', },
-    { key: 'Draft in Legal Review', },
-    { key: 'Draft to Drafter - Edit Review', },
-    { key: 'Draft to Drafter - Edit Review [CMD]', },
-    { key: 'Draft to Drafter - Edit Review [KWK]', },
-    { key: 'Draft to Drafter - Edit Review [SMH]', },
-    { key: 'Draft to Requester for Review', },
-    { key: 'Executive Director Final Review', },
-    { key: 'Executive Director Review', },
+    { key: 'Drafter Assigned', inDrafting },
+    { key: 'Draft Request Received', inDrafting, draftRequest },
+    { key: 'Bill Draft Text Available Electronically', inDrafting, draftReady },
+    { key: 'Draft Back for Redo', inDrafting},
+    { key: 'Draft Back for Requester Changes', inDrafting},
+    { key: 'Draft On Hold', inDrafting},
+    { key: 'Draft Ready for Delivery', inDrafting},
+    { key: 'Draft Taken Off Hold', inDrafting},
+    { key: 'Draft Taken by Drafter', inDrafting},
+    { key: 'Draft in Assembly', inDrafting},
+    { key: 'Draft in Edit', inDrafting},
+    { key: 'Draft in Final Drafter Review', inDrafting},
+    { key: 'Draft in Input/Proofing', inDrafting},
+    { key: 'Draft in Legal Review', inDrafting},
+    { key: 'Draft to Drafter - Edit Review', inDrafting},
+    { key: 'Draft to Drafter - Edit Review [CMD]', inDrafting},
+    { key: 'Draft to Drafter - Edit Review [KWK]', inDrafting},
+    { key: 'Draft to Drafter - Edit Review [SMH]', inDrafting},
+    { key: 'Draft to Requester for Review', inDrafting},
+    { key: 'Executive Director Final Review', inDrafting},
+    { key: 'Executive Director Review', inDrafting},
+
+    { key: 'Draft Delivered to Requester', draftToSponsor},
+
     { key: 'Fiscal Note Printed', },
     { key: 'Fiscal Note Probable', },
     { key: 'Fiscal Note Received', },
