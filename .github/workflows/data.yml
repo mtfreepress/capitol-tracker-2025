@@ -11,6 +11,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest 
+    env:
+      GITHUB_TOKEN: ${{ secrets.CLASSIC_TOKEN }}
 
     steps:
     # Checkout the repository

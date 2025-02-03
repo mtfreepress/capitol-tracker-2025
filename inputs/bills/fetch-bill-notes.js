@@ -19,19 +19,16 @@ const OUT_DIRS = {
 };
 
 const fetchJson = async (url) => {
-    const apiUrl = new URL(url);
-    apiUrl.searchParams.set('ref', 'main');
+    const headers = process.env.GITHUB_TOKEN ? {
+        'Authorization': `token ${process.env.GITHUB_TOKEN}`,
+        'Accept': 'application/vnd.github.v3+json'
+    } : {};
 
-    const response = await fetch(apiUrl.toString(), {
-        headers: {
-            'Accept': 'application/vnd.github.v3+json'
-        }
-    });
-
+    const response = await fetch(url, { headers });
     if (!response.ok) {
         throw new Error(`Failed to fetch JSON from ${url}, status: ${response.status}`);
     }
-    return response.json();
+    return await response.json();
 };
 
 const createFolderIfNotExists = async folderPath => {
@@ -45,55 +42,36 @@ const createFolderIfNotExists = async folderPath => {
     }
 };
 
-const downloadFile = async (url, fileName, folderPath, retries = 3) => {
-    for (let attempt = 1; attempt <= retries; attempt++) {
-        try {
-            const response = await fetch(url);
-            if (response.status === 403) {
-                console.warn(`Rate limit hit for ${fileName}, waiting before retry...`);
-                await new Promise(resolve => setTimeout(resolve, Math.pow(2, attempt) * 1000));
-                continue;
-            }
-            if (!response.ok) {
-                throw new Error(`Failed to fetch URL: ${url}, status: ${response.status}`);
-            }
-            const data = await response.buffer();
-            const outputPath = path.join(folderPath, fileName);
-            await fs.writeFile(outputPath, data);
-            console.log(`Saved ${fileName} to ${outputPath}`);
-            return;
-        } catch (error) {
-            if (attempt === retries) {
-                console.error(`Failed to download ${fileName} after ${retries} attempts: ${error.message}`);
-                // Continue with next file instead of throwing
-                return;
-            }
-        }
+const downloadFile = async (url, fileName, folderPath) => {
+    console.log(`Fetching ${url}`);
+    const response = await fetch(url);
+    if (!response.ok) {
+        throw new Error(`Failed to fetch URL: ${url}, status: ${response.status}`);
     }
+    const data = await response.buffer();
+    const outputPath = path.join(folderPath, fileName);
+    await fs.writeFile(outputPath, data);
+    console.log(`Saved ${fileName} to ${outputPath}`);
 };
 
 const processDirectory = async (apiUrl, rawUrlBase, outDir) => {
     console.log(`Fetching directory list from ${apiUrl}`);
-    try {
-        const directories = await fetchJson(apiUrl);
-        for (const dir of directories) {
-            if (dir.type === 'dir') {
-                const folderName = dir.name;
-                const folderPath = path.join(outDir, folderName);
-                await createFolderIfNotExists(folderPath);
+    const directories = await fetchJson(apiUrl);
 
-                const files = await fetchJson(dir.url);
-                for (const file of files) {
-                    if (file.name.endsWith('.pdf')) {
-                        const fileUrl = `${rawUrlBase}${folderName}/${file.name}`;
-                        await downloadFile(fileUrl, file.name, folderPath);
-                    }
+    for (const dir of directories) {
+        if (dir.type === 'dir') {
+            const folderName = dir.name;
+            const folderPath = path.join(outDir, folderName);
+            await createFolderIfNotExists(folderPath);
+
+            const files = await fetchJson(dir.url);
+            for (const file of files) {
+                if (file.name.endsWith('.pdf')) {
+                    const fileUrl = `${rawUrlBase}${folderName}/${file.name}`;
+                    await downloadFile(fileUrl, file.name, folderPath);
                 }
             }
         }
-    } catch (error) {
-        console.error(`Error processing directory ${apiUrl}: ${error.message}`);
-        // Continue with next directory instead of failing completely
     }
 };
 

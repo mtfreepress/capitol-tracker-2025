@@ -16,10 +16,15 @@ const __dirname = path.dirname(__filename);
 const OUT_DIR = __dirname;
 
 
-const fetchJson = async url => {
-    const response = await fetch(url);
+const fetchJson = async (url) => {
+    const headers = process.env.GITHUB_TOKEN ? {
+        'Authorization': `token ${process.env.GITHUB_TOKEN}`,
+        'Accept': 'application/vnd.github.v3+json'
+    } : {};
+
+    const response = await fetch(url, { headers });
     if (!response.ok) {
-        throw new Error(`Failed to fetch URL: ${url}, status: ${response.status}`);
+        throw new Error(`Failed to fetch JSON from ${url}, status: ${response.status}`);
     }
     return await response.json();
 };
