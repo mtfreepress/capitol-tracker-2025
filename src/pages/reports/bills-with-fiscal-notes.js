@@ -8,7 +8,7 @@ const FiscalNoteBills = ({ bills }) => {
   return (
     <div>
       <Layout>
-        <h1>2023 bills with fiscal notes</h1>
+        <h1>2025 bills with fiscal notes</h1>
         <BillTable bills={bills} displayLimit={1200} />
         <ContactUs />
       </Layout>

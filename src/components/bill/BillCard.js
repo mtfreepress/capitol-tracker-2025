@@ -139,7 +139,7 @@ const BillCard = ({ bill }) => {
         .filter(d => ['first committee', 'first chamber', 'second chamber', 'governor'].includes(d.step))
         .map(d => {
             const symbol = billStatusSymbols[d.status];
-            return <div key={d.step} css={progressStepStyle}>
+            return <div key={d.step} css={progressStepStyle}>   
                 <span className="icon" style={{ color: symbol.color }}>{symbol.icon}</span>
                 <span className="label">{stepLabels[d.step]}</span>
             </div>;
@@ -167,13 +167,19 @@ const BillCard = ({ bill }) => {
                             <a href={textUrl} target="_blank" rel="noopener noreferrer">📃 Bill text</a> :
                             <span className="info-absent">📃 No bill text</span>}
                         </div>
-                        <div className="info-fiscal">{fiscalNoteUrl ?
-                            <a href={fiscalNoteUrl} target="_blank" rel="noopener noreferrer">💵 Fiscal note</a> :
-                            <span className="info-absent">💵 No fiscal note</span>}
+                        <div className="info-fiscal">
+                            {fiscalNoteUrl ? (
+                                // <Link href={fiscalNoteUrl}  target="_blank">
+                                <Link href={fiscalNoteUrl} target="_blank" rel="noopener noreferrer">
+                                    <span>💵 Fiscal note</span>
+                                </Link>
+                            ) : (
+                                <span className="info-absent">💵 No fiscal note</span>
+                            )}
                         </div>
                         <div className="info-legal">
                             {legalNoteUrl ? (
-                                <Link href={legalNoteUrl}>
+                                <Link href={legalNoteUrl} target="_blank" rel="noopener noreferrer">
                                     <span>🏛 Legal note</span>
                                 </Link>
                             ) : (

@@ -82,9 +82,9 @@ const BillInfo = ({ bill }) => {
                     </div>
                     <div css={infoColContentCss}>
                         {fiscalNoteUrl ? (
-                            <span>
-                                <a href={fiscalNoteUrl} target="_blank" rel="noopener noreferrer">Available here</a>
-                            </span>
+                            <Link href={fiscalNoteUrl} target="_blank" rel="noopener noreferrer">
+                                <span>Available here</span>
+                            </Link>
                         ) : (
                             <em>None on file</em>
                         )}
@@ -98,7 +98,7 @@ const BillInfo = ({ bill }) => {
                     <div css={infoColContentCss}>
                         {legalNoteUrl ? (
                             <span>
-                                <Link href={legalNoteUrl}>
+                                <Link href={legalNoteUrl} target="_blank" rel="noopener noreferrer">
                                     <span>Available here</span>
                                 </Link>
                             </span>

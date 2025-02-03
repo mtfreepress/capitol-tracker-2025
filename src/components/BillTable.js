@@ -174,9 +174,13 @@ const Bill = ({ title, identifier, chamber, status, explanation, textUrl, fiscal
             </Link>
           )}
           {textUrl && <a css={billLinkCss} href={textUrl} target="_blank" rel="noopener noreferrer">📃 Bill text</a>}
-          {fiscalNoteUrl && <a css={billLinkCss} href={fiscalNoteUrl} target="_blank" rel="noopener noreferrer">💵 Fiscal note</a>}
+          {fiscalNoteUrl && (
+            <Link href={fiscalNoteUrl} target="_blank" rel="noopener noreferrer">
+              <span css={billLinkCss}>💵 Fiscal note</span>
+            </Link>
+          )}
           {legalNoteUrl && (
-            <Link href={legalNoteUrl} passHref>
+            <Link href={legalNoteUrl} target="_blank" rel="noopener noreferrer">
               <span css={billLinkCss}>🏛 Legal note</span>
             </Link>
           )}

@@ -15,10 +15,13 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
     const { key } = params;
     const billDir = key.toUpperCase();
-    const billType = billDir.slice(0, 2);
-    const billNumber = billDir.slice(3).padStart(4, '0');
-    const fileName = `${billType}${billNumber}.pdf`;
-    const filePath = path.join(process.env.BASE_PATH || '', 'fiscal-notes', billDir, fileName);
+    const fiscalNotesPath = path.join(process.cwd(), 'public', 'fiscal-notes', billDir);
+    const files = await fs.readdir(fiscalNotesPath);
+    
+    const fileName = files.find(file => file.endsWith('.pdf'));
+    const encodedFileName = encodeURIComponent(fileName);
+    
+    const filePath = path.join(process.env.BASE_PATH || '', 'fiscal-notes', billDir, encodedFileName);
     
     return {
         props: {
