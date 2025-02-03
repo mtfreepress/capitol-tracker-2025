@@ -1,7 +1,7 @@
 import Action from './Action.js'
 
 import { MANUAL_SIGNINGS, MANUAL_VETOS } from '../config/overrides.js'
-import { BILL_TYPES, VOTE_THRESHOLDS, BILL_STATUSES } from '../config/procedure.js'
+import { BILL_TYPES, VOTE_THRESHOLDS, VOTE_THRESHOLD_MAPPING, BILL_STATUSES } from '../config/procedure.js'
 import { capitalize } from '../functions.js'
 
 import {
@@ -32,6 +32,7 @@ export default class Bill {
             lc,
             title,
             sponsor,
+            voteRequirements,
             // sponsorParty,
             // sponsorDistrict,
             // statusDate,
@@ -63,7 +64,7 @@ export default class Bill {
         this.chamber = this.getChamber(key)
         this.type = this.getType(bill)
         this.sponsor = standardizeLawmakerName(sponsor)
-        this.voteMajorityRequired = this.getVoteMajorityRequired(subjects)
+        this.voteMajorityRequired = this.getVoteMajorityRequired(voteRequirements)
         this.actions = this.buildActionList(actions, votes, this.voteMajorityRequired, this.getChamber(key))
         this.committees = Array.from(new Set(this.actions.map(a => a.data.committee))).filter(d => d !== null)
         this.progress = this.getProgress({
@@ -82,7 +83,6 @@ export default class Bill {
             session,
             lcIdentifier: lc,
             type: this.type, // bill, resolution etc.
-
             status: this.getStatus(key, billStatus),
             progress: this.progress,
             hasBeenSentToGovernor: this.hasBeenSentToGovernor(),
@@ -96,6 +96,7 @@ export default class Bill {
             secondHouseReturnIfAmendedDeadline: amendedReturnDeadline,
             // fiscalNoteExpected: this.getFiscalNoteExpected(bill),
             voteMajorityRequired: this.voteMajorityRequired,
+            voteRequirements: voteRequirements || [],
 
             subjects: subjects.map(d => d.subject), // TODO: Add cleaning
             tags: tags && tags.map(d => d.name) || [],
@@ -192,9 +193,9 @@ export default class Bill {
         const secondChamber = (firstChamber === 'house') ? 'senate' : 'house'
         const secondChamberActions = actions.filter(a => a.billHolder === secondChamber)
         const hasReachedGovernor = actionsWithFlag(actions, 'transmittedToGovernor').length > 0
-       
+
         const committeeActionsInFirstChamber = actionsWithFlag(firstChamberActions, 'committeeAction')
-        
+
         // ID committees the bill has passed through in its first chamber -- sometimes there's more than one
         // remove approps subcommittees so HB 2 process doesn't get confused
         const firstChamberCommittees = Array.from(new Set(committeeActionsInFirstChamber.map(d => d.committee)))
@@ -209,10 +210,10 @@ export default class Bill {
         // ID first committee, since first committee passage is a key milestone
         const committeeActionsInFirstCommittee = committeeActionsInFirstChamber
             .filter(d => d.committee === firstChamberCommittees[0])
-        
-        
+
+
         const committeeActionsInSubsequentCommittees = committeeActionsInFirstChamber.filter(d => firstChamberCommittees.slice(1,).includes(d.committee))
-        
+
         // different bill types have different procedural steps (e.g. House Resolutions don't go to the Senate)
         const typeConfig = BILL_TYPES.find(type => type.key === billType)
         if (!typeConfig) throw `Unhandled bill type "${billType}"`
@@ -376,21 +377,21 @@ export default class Bill {
         return progressionSteps
     }
 
-    getVoteMajorityRequired = (subjects) => {
-        const thisBillThresholds = this.data.voteRequirements.map(req => 
+    getVoteMajorityRequired = (voteRequirements) => {
+        const thisBillThresholds = voteRequirements.map(req =>
             VOTE_THRESHOLD_MAPPING[req] || req
         );
-    
+
         if (thisBillThresholds.length === 0) {
             throw `${this.identifier} has no vote requirements`;
         }
+
         if (!(thisBillThresholds.every(d => VOTE_THRESHOLDS.includes(d)))) {
             throw `${this.identifier} has vote threshold missing from VOTE_THRESHOLDS`;
         }
-        
         const controllingThreshold = thisBillThresholds
             .sort((a, b) => VOTE_THRESHOLDS.indexOf(a) - VOTE_THRESHOLDS.indexOf(b))[0];
-    
+
         return controllingThreshold;
     }
 
