@@ -1424,9 +1424,9 @@
         "lcIdentifier": "LC0570",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Through 3rd Reading",
-            "step": "First chamber",
-            "label": "Passed chamber",
+            "key": "Transmitted to Second House",
+            "step": "Second chamber",
+            "label": "Transmitted",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -1595,9 +1595,9 @@
         "lcIdentifier": "LC0319",
         "type": "senate bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
+            "key": "In First House--Out of Committee",
             "step": "First chamber",
-            "label": "In committee",
+            "label": "Out of committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -3966,9 +3966,9 @@
         "lcIdentifier": "LC0298",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Through 3rd Reading",
-            "step": "First chamber",
-            "label": "Passed chamber",
+            "key": "Transmitted to Second House",
+            "step": "Second chamber",
+            "label": "Transmitted",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -6411,9 +6411,9 @@
         "lcIdentifier": "LC0612",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Through 3rd Reading",
-            "step": "First chamber",
-            "label": "Passed chamber",
+            "key": "Transmitted to Second House",
+            "step": "Second chamber",
+            "label": "Transmitted",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -7161,9 +7161,9 @@
         "lcIdentifier": "LC0083",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Through 3rd Reading",
-            "step": "First chamber",
-            "label": "Passed chamber",
+            "key": "Transmitted to Second House",
+            "step": "Second chamber",
+            "label": "Transmitted",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -7248,9 +7248,9 @@
         "lcIdentifier": "LC0269",
         "type": "senate bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
+            "key": "In First House--Out of Committee",
             "step": "First chamber",
-            "label": "In committee",
+            "label": "Out of committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -7481,6 +7481,93 @@
         "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0208?open_tab=bill",
         "fiscalNoteUrl": "/bills/fiscal-note/sb-27",
         "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0208?open_tab=amend",
+        "legalNoteUrl": null,
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0
+    },
+    {
+        "key": "sb-260",
+        "identifier": "SB 260",
+        "identifierLong": "Senate Bill 260",
+        "chamber": "senate",
+        "title": "Provide for alteration of service district boundaries",
+        "session": "2",
+        "lcIdentifier": "LC3227",
+        "type": "senate bill",
+        "status": {
+            "key": "In First House--Introduced",
+            "step": "First chamber",
+            "label": "Introduced",
+            "status": "live",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "passed",
+                "statusLabel": "Introduced",
+                "statusDate": "02/03/2025"
+            },
+            {
+                "step": "first committee",
+                "status": "current",
+                "statusLabel": "Pending",
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Greg Hertz",
+            "party": "R",
+            "locale": "Polson",
+            "district": "SD 7"
+        },
+        "requestor": "Cora Neumann",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "Simple",
+        "voteRequirements": [
+            "SIMPLE"
+        ],
+        "subjects": [
+            "Taxation (Generally)",
+            "Health Care Services (see also: Health)",
+            "Local Finance  (see also: City Finance; County Finance)",
+            "Local Government  (see also: City Subjects; County Subjects)",
+            "School Finance",
+            "Schools and Education"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3227?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3227?open_tab=bill",
+        "fiscalNoteUrl": null,
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3227?open_tab=amend",
         "legalNoteUrl": null,
         "vetoMemoUrl": null,
         "articles": [],
@@ -10859,10 +10946,10 @@
         "lcIdentifier": "LC1908",
         "type": "senate bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
-            "step": "First chamber",
-            "label": "In committee",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -16966,8 +17053,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "3/4 of Each House",
         "voteRequirements": [
-            "THREE_FOURTHS",
-            "SIMPLE"
+            "SIMPLE",
+            "THREE_FOURTHS"
         ],
         "subjects": [
             "Appropriations, Coal Tax Fund Principal",
@@ -17828,9 +17915,9 @@
         "lcIdentifier": "LC2003",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Through 3rd Reading",
-            "step": "First chamber",
-            "label": "Passed chamber",
+            "key": "Transmitted to Second House",
+            "step": "Second chamber",
+            "label": "Transmitted",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -20231,8 +20318,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "3/4 of Each House",
         "voteRequirements": [
-            "THREE_FOURTHS",
-            "SIMPLE"
+            "SIMPLE",
+            "THREE_FOURTHS"
         ],
         "subjects": [
             "Buildings and Building Regulations",
@@ -25328,9 +25415,9 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "3/4 of Each House",
         "voteRequirements": [
-            "THREE_FOURTHS",
+            "SIMPLE",
             "TWO_THIRDS",
-            "SIMPLE"
+            "THREE_FOURTHS"
         ],
         "subjects": [
             "Appropriations, Coal Tax Fund Principal",
@@ -29795,9 +29882,9 @@
         "lcIdentifier": "LC2533",
         "type": "house bill",
         "status": {
-            "key": "In First House--Introduced",
+            "key": "In First House Committee--Nontabled",
             "step": "First chamber",
-            "label": "Introduced",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -29877,9 +29964,9 @@
         "lcIdentifier": "LC1346",
         "type": "house bill",
         "status": {
-            "key": "In First House--Introduced",
+            "key": "In First House Committee--Nontabled",
             "step": "First chamber",
-            "label": "Introduced",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -30463,9 +30550,9 @@
         "lcIdentifier": "LC1353",
         "type": "house bill",
         "status": {
-            "key": "In First House--Introduced",
+            "key": "In First House Committee--Nontabled",
             "step": "First chamber",
-            "label": "Introduced",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -46907,10 +46994,10 @@
         "lcIdentifier": "LC0039",
         "type": "house bill",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
+            "key": "In First House Committee--Nontabled",
+            "step": "First chamber",
+            "label": "In committee",
+            "status": "live",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
