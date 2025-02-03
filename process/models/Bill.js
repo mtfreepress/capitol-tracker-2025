@@ -377,17 +377,21 @@ export default class Bill {
     }
 
     getVoteMajorityRequired = (subjects) => {
-        const thisBillThresholds = subjects.map(d => d.voteReq)
+        const thisBillThresholds = subjects.map(d => {
+            return VOTE_THRESHOLD_MAPPING[d.voteReq] || d.voteReq;
+        });
+    
         if (thisBillThresholds.length === 0) {
-            throw `${this.identifier} has no subjects, causes error in getVoteMajorityRequired`
+            throw `${this.identifier} has no subjects, causes error in getVoteMajorityRequired`;
         }
         if (!(thisBillThresholds.every(d => VOTE_THRESHOLDS.includes(d)))) {
-            throw `${this.identifier} has vote threshold missing from VOTE_THRESHOLDS`
+            throw `${this.identifier} has vote threshold missing from VOTE_THRESHOLDS`;
         }
+        
         const controllingThreshold = thisBillThresholds
-            .sort((a, b) => VOTE_THRESHOLDS.indexOf(a) - VOTE_THRESHOLDS.indexOf(b))[0]
-
-        return controllingThreshold
+            .sort((a, b) => VOTE_THRESHOLDS.indexOf(a) - VOTE_THRESHOLDS.indexOf(b))[0];
+    
+        return controllingThreshold;
     }
 
     getLastVoteInvolvingLawmaker = (name) => {
