@@ -99,7 +99,8 @@ const BillStatus = (props) => {
     return (
         <div>
             <div css={statusCss}>
-                <span css={iconCss}></span>{status.key.replace('--', ' — ')}
+        {/* TODO: Once we fix the "probably dead" issue, add this back in */}
+                {/* <span css={iconCss}></span>{status.key.replace('--', ' — ')} */}
             </div>
             {/* <div>PROGRESS</div> */}
             <div css={progressionBinsStyle}>
