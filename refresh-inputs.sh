@@ -3,11 +3,8 @@
 
 # inputs/lawmakers/ (roster, district info etc.) should be static
 
-# Check standalone Strapi CMS for manual bill/lawmaker annotations
-# node inputs/annotations/fetch.js
-
 # Check MTFP website CMS for stories associated with particular bills/lawmakers
-# node inputs/coverage/fetch.js
+node inputs/coverage/fetch.js
 
 # Check Open Montana's Legislative Council Data Project instance for bill hearing transcripts
 # node inputs/hearing-transcripts/fetch.js

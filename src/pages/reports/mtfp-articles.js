@@ -10,7 +10,7 @@ const Articles = () => {
     return (
         <div>
             <Layout>
-                <h1>MTFP articles about the 2023 Legislature</h1>
+                <h1>MTFP articles about the 2025 Legislature</h1>
                 <div>
                     {articles.map(article => {
                         return (
