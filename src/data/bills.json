@@ -6056,10 +6056,10 @@
         "lcIdentifier": "LC0613",
         "type": "senate bill",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
+            "key": "In First House--Introduced",
+            "step": "First chamber",
+            "label": "Introduced",
+            "status": "live",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -6073,18 +6073,18 @@
                 "step": "first committee",
                 "status": "passed",
                 "statusLabel": "Advanced",
-                "statusDate": "01/27/2025"
+                "statusDate": "01/24/2025"
             },
             {
                 "step": "first chamber",
-                "status": "current",
-                "statusLabel": "Pending",
-                "statusDate": null
+                "status": "passed",
+                "statusLabel": "Passed Senate",
+                "statusDate": "01/30/2025"
             },
             {
                 "step": "second chamber",
-                "status": "future",
-                "statusLabel": null,
+                "status": "current",
+                "statusLabel": "Pending",
                 "statusDate": null
             },
             {
@@ -27630,6 +27630,89 @@
         "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0235?open_tab=bill",
         "fiscalNoteUrl": null,
         "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0235?open_tab=amend",
+        "legalNoteUrl": null,
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0
+    },
+    {
+        "key": "hb-378",
+        "identifier": "HB 378",
+        "identifierLong": "House Bill 378",
+        "chamber": "house",
+        "title": "Remove the restriction on inclusionary zoning",
+        "session": "2",
+        "lcIdentifier": "LC3842",
+        "type": "house bill",
+        "status": {
+            "key": "In First House--Introduced",
+            "step": "First chamber",
+            "label": "Introduced",
+            "status": "live",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "passed",
+                "statusLabel": "Introduced",
+                "statusDate": "02/03/2025"
+            },
+            {
+                "step": "first committee",
+                "status": "current",
+                "statusLabel": "Pending",
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Debo Powers",
+            "party": "D",
+            "locale": "Whitefish",
+            "district": "HD 3"
+        },
+        "requestor": "Debo Powers",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "SIMPLE",
+        "subjects": [
+            "Housing",
+            "Local Government  (see also: City Subjects; County Subjects)",
+            "Planning and Development",
+            "Cities and Towns  (see also: Local Government)",
+            "Counties  (see also: Local Government)"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3842?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3842?open_tab=bill",
+        "fiscalNoteUrl": null,
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3842?open_tab=amend",
         "legalNoteUrl": null,
         "vetoMemoUrl": null,
         "articles": [],
