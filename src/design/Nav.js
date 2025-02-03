@@ -1,9 +1,13 @@
 import React from 'react';
-import { css } from '@emotion/react';
+import { css, Global } from '@emotion/react';
 import Link from 'next/link';
 import lawmakers from '../data/lawmakers.json'
 
 const navStyle = css`
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: white;
     border-bottom: 1px solid #444;
     margin-bottom: 0.5em;
     margin-left: -2px;
@@ -89,7 +93,7 @@ const activeStyle = css`
 `;
 
 const PAGE_LINKS = [
-// TODO: come back to these and add back in once fixed
+    // TODO: come back to these and add back in once fixed
     // { path: '/#key-bill-status', label: '📑 Key bills' },
     { path: '/all-bills/', label: '🗂 All bills' },
     { path: '/#find-bill', label: '🔎 Find a bill' },
@@ -127,32 +131,42 @@ const Nav = ({ location }) => {
     ));
 
     return (
-        <div css={navStyle}>
-            <div css={[navRowStyle, navRowSecondary]}>
-                {links}
-            </div>
+        <>
+        {/* TODO: Come back and figure out if there is a better way to handle this floating navbar issue later */}
+            <Global
+                styles={css`
+                    html {
+                        scroll-padding-top: 120px;
+                    }
+                `}
+            />
+            <div css={navStyle}>
+                <div css={[navRowStyle, navRowSecondary]}>
+                    {links}
+                </div>
 
-            <div css={[navRowStyle, navRowPrimary]}>
-                <Link href='/house' passHref legacyBehavior>
-                    <a css={[navItemStyle, navPrimaryStyle]}>
-                        <div css={navPrimaryTitle}>🏛 House</div>
-                        <div css={navPrimaryInfo}>{houseControl}-held {houseSplit}</div>
-                    </a>
-                </Link>
-                <Link href='/senate' passHref legacyBehavior>
-                    <a css={[navItemStyle, navPrimaryStyle]}>
-                        <div css={navPrimaryTitle}>🏛 Senate</div>
-                        <div css={navPrimaryInfo}>{senateControl}-held {senateSplit}</div>
-                    </a>
-                </Link>
-                <Link href='/governor' passHref legacyBehavior>
-                    <a css={[navItemStyle, navPrimaryStyle]}>
-                        <div css={navPrimaryTitle}>🖋 Governor</div>
-                        <div css={navPrimaryInfo}>Greg Gianforte (R)</div>
-                    </a>
-                </Link>
+                <div css={[navRowStyle, navRowPrimary]}>
+                    <Link href='/house' passHref legacyBehavior>
+                        <a css={[navItemStyle, navPrimaryStyle]}>
+                            <div css={navPrimaryTitle}>🏛 House</div>
+                            <div css={navPrimaryInfo}>{houseControl}-held {houseSplit}</div>
+                        </a>
+                    </Link>
+                    <Link href='/senate' passHref legacyBehavior>
+                        <a css={[navItemStyle, navPrimaryStyle]}>
+                            <div css={navPrimaryTitle}>🏛 Senate</div>
+                            <div css={navPrimaryInfo}>{senateControl}-held {senateSplit}</div>
+                        </a>
+                    </Link>
+                    <Link href='/governor' passHref legacyBehavior>
+                        <a css={[navItemStyle, navPrimaryStyle]}>
+                            <div css={navPrimaryTitle}>🖋 Governor</div>
+                            <div css={navPrimaryInfo}>Greg Gianforte (R)</div>
+                        </a>
+                    </Link>
+                </div>
             </div>
-        </div>
+        </>
     );
 };
 

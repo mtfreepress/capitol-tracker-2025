@@ -1,18 +1,16 @@
+export const VOTE_THRESHOLD_MAPPING = {
+    'TWO_THIRDS_LEGISLATURE': '2/3 of Entire Legislature',
+    'THREE_FOURTHS': '3/4 of Each House',
+    'TWO_THIRDS': '2/3 of Each House',
+    'SIMPLE': 'Simple'
+};
+
 export const VOTE_THRESHOLDS = [
-    // 2023 lables
-    // ranked most to least stringent
-    '2/3 of Entire Legislature', // constitutional amendments - these are weird
+    '2/3 of Entire Legislature',
     '3/4 of Each House',
     '2/3 of Each House',
     'Simple',
-
-    // 2025 labels, which are of course different
-    // Will need to add reader-frindly label logic here
-    'TWO_THIRDS_LEGISLATURE',
-    'THREE_FOURTHS',
-    'TWO_THIRDS',
-    'SIMPLE',
-]
+];
 
 export const BILL_TYPES = [
     // bill is rawBill data here so bill.key should be un-urlized bill number, e.g. HB 205
