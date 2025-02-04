@@ -247,26 +247,26 @@
             "motion": "Tabled in Committee",
             "thresholdRequired": "simple",
             "count": {
-                "Y": 20,
-                "N": 20
+                "Y": 8,
+                "N": 12
             },
             "gopCount": {
-                "Y": 12,
-                "N": 0,
+                "Y": 0,
+                "N": 12,
                 "A": 0,
                 "E": 0,
                 "O": 0
             },
             "demCount": {
-                "Y": 0,
-                "N": 8,
+                "Y": 8,
+                "N": 0,
                 "A": 0,
                 "E": 0,
                 "O": 0
             },
             "motionPassed": false,
-            "gopSupported": true,
-            "demSupported": false,
+            "gopSupported": false,
+            "demSupported": true,
             "votes": [
                 {
                     "option": "N",
@@ -427,7 +427,55 @@
                     "party": "R",
                     "locale": "Belgrade",
                     "district": "HD 67"
-                },
+                }
+            ]
+        }
+    },
+    {
+        "id": "HB101-0018",
+        "bill": "HB 101",
+        "date": "01/30/2025",
+        "description": "Tabled in Committee",
+        "possession": "House",
+        "committee": "(H) Fish, Wildlife and Parks",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Tabled in Committee",
+        "committeeHearingTime": "01/21/2025",
+        "vote": {
+            "action": "HB101-0018",
+            "bill": "HB 101",
+            "date": "01/30/2025",
+            "type": "committee",
+            "seqNumber": "H4",
+            "voteChamber": "house",
+            "voteUrl": null,
+            "session": "2",
+            "motion": "Tabled in Committee",
+            "thresholdRequired": "simple",
+            "count": {
+                "Y": 12,
+                "N": 8
+            },
+            "gopCount": {
+                "Y": 12,
+                "N": 0,
+                "A": 0,
+                "E": 0,
+                "O": 0
+            },
+            "demCount": {
+                "Y": 0,
+                "N": 8,
+                "A": 0,
+                "E": 0,
+                "O": 0
+            },
+            "motionPassed": true,
+            "gopSupported": true,
+            "demSupported": false,
+            "votes": [
                 {
                     "option": "Y",
                     "name": "Caleb Hinkle",
@@ -590,20 +638,6 @@
                 }
             ]
         }
-    },
-    {
-        "id": "HB101-0018",
-        "bill": "HB 101",
-        "date": "01/30/2025",
-        "description": "Tabled in Committee",
-        "possession": "House",
-        "committee": "(H) Fish, Wildlife and Parks",
-        "actionUrl": null,
-        "recordings": [],
-        "transcriptUrl": null,
-        "key": "Tabled in Committee",
-        "committeeHearingTime": "01/21/2025",
-        "vote": null
     },
     {
         "id": "HB101-0019",
