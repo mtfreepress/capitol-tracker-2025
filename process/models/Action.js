@@ -20,6 +20,7 @@ export default class Action {
             id,
             bill,
             date,
+            committeeHearingTime, 
             // actionUrl, // all null in source data currently
             committee,
             recordings,
@@ -47,6 +48,7 @@ export default class Action {
             id,
             bill,
             date: standardizeDate(date),
+            committeeHearingTime: committeeHearingTime ? standardizeDate(committeeHearingTime) : null,
             description: cleanedDescription,
             // possession // old variable name changed to billHolder because Eric can't reliably spell it
             billHolder,
