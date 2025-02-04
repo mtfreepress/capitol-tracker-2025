@@ -15022,8 +15022,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "SIMPLE",
-            "TWO_THIRDS_LEGISLATURE"
+            "TWO_THIRDS_LEGISLATURE",
+            "SIMPLE"
         ],
         "subjects": [
             "Constitutional Amendment Proposals",
@@ -18069,8 +18069,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "SIMPLE",
-            "TWO_THIRDS_LEGISLATURE"
+            "TWO_THIRDS_LEGISLATURE",
+            "SIMPLE"
         ],
         "subjects": [
             "Constitutional Amendment Proposals",
@@ -25923,8 +25923,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "3/4 of Each House",
         "voteRequirements": [
-            "THREE_FOURTHS",
             "TWO_THIRDS",
+            "THREE_FOURTHS",
             "SIMPLE"
         ],
         "subjects": [
@@ -29708,6 +29708,88 @@
             }
         ],
         "numArticles": 1
+    },
+    {
+        "key": "hb-384",
+        "identifier": "HB 384",
+        "identifierLong": "House Bill 384",
+        "chamber": "house",
+        "title": "Change dates to apply for speech language assistant licensure",
+        "session": "2",
+        "lcIdentifier": "LC3881",
+        "type": "house bill",
+        "status": {
+            "key": "In First House--Introduced",
+            "step": "First chamber",
+            "label": "Introduced",
+            "status": "live",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "passed",
+                "statusLabel": "Introduced",
+                "statusDate": "02/04/2025"
+            },
+            {
+                "step": "first committee",
+                "status": "current",
+                "statusLabel": "Pending",
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Jennifer Lynch",
+            "party": "D",
+            "locale": "Butte",
+            "district": "HD 73"
+        },
+        "requestor": "Jennifer Lynch",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "Simple",
+        "voteRequirements": [
+            "SIMPLE"
+        ],
+        "subjects": [
+            "Professions and Occupations  Generally"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3881?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3881?open_tab=bill",
+        "fiscalNoteUrl": null,
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3881?open_tab=amend",
+        "legalNoteUrl": null,
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0
     },
     {
         "key": "hb-383",
@@ -35586,7 +35668,7 @@
         "tags": [],
         "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2582?open_tab=sum",
         "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2582?open_tab=bill",
-        "fiscalNoteUrl": "/bills/fiscal-note/hb-320",
+        "fiscalNoteUrl": null,
         "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2582?open_tab=amend",
         "legalNoteUrl": null,
         "vetoMemoUrl": null,
@@ -39433,10 +39515,10 @@
         "lcIdentifier": "LC1647",
         "type": "house bill",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
+            "key": "In First House--Through 2nd Reading",
+            "step": "First chamber",
+            "label": "Passed second reading vote",
+            "status": "live",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -39455,8 +39537,8 @@
             {
                 "step": "first chamber",
                 "status": "current",
-                "statusLabel": "Pending",
-                "statusDate": null
+                "statusLabel": "Passed preliminary floor vote",
+                "statusDate": "02/04/2025"
             },
             {
                 "step": "second chamber",
@@ -39685,10 +39767,10 @@
         "lcIdentifier": "LC0215",
         "type": "house bill",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
+            "key": "In First House--Through 3rd Reading",
+            "step": "First chamber",
+            "label": "Passed chamber",
+            "status": "live",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -39706,14 +39788,14 @@
             },
             {
                 "step": "first chamber",
-                "status": "current",
-                "statusLabel": "Passed preliminary floor vote",
-                "statusDate": "02/03/2025"
+                "status": "passed",
+                "statusLabel": "Passed House",
+                "statusDate": "02/04/2025"
             },
             {
                 "step": "second chamber",
-                "status": "future",
-                "statusLabel": null,
+                "status": "current",
+                "statusLabel": "Pending",
                 "statusDate": null
             },
             {
@@ -42446,10 +42528,10 @@
         "lcIdentifier": "LC0218",
         "type": "house bill",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
+            "key": "In First House--Through 3rd Reading",
+            "step": "First chamber",
+            "label": "Passed chamber",
+            "status": "live",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -42467,14 +42549,14 @@
             },
             {
                 "step": "first chamber",
-                "status": "current",
-                "statusLabel": "Passed preliminary floor vote",
-                "statusDate": "02/03/2025"
+                "status": "passed",
+                "statusLabel": "Passed House",
+                "statusDate": "02/04/2025"
             },
             {
                 "step": "second chamber",
-                "status": "future",
-                "statusLabel": null,
+                "status": "current",
+                "statusLabel": "Pending",
                 "statusDate": null
             },
             {
@@ -44359,10 +44441,10 @@
         "lcIdentifier": "LC1663",
         "type": "house bill",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
+            "key": "In First House--Through 3rd Reading",
+            "step": "First chamber",
+            "label": "Passed chamber",
+            "status": "live",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -44380,14 +44462,14 @@
             },
             {
                 "step": "first chamber",
-                "status": "current",
-                "statusLabel": "Passed preliminary floor vote",
-                "statusDate": "02/03/2025"
+                "status": "passed",
+                "statusLabel": "Passed House",
+                "statusDate": "02/04/2025"
             },
             {
                 "step": "second chamber",
-                "status": "future",
-                "statusLabel": null,
+                "status": "current",
+                "statusLabel": "Pending",
                 "statusDate": null
             },
             {
@@ -46641,10 +46723,10 @@
         "lcIdentifier": "LC2926",
         "type": "house bill",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
+            "key": "In First House--Through 3rd Reading",
+            "step": "First chamber",
+            "label": "Passed chamber",
+            "status": "live",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -46662,14 +46744,14 @@
             },
             {
                 "step": "first chamber",
-                "status": "current",
-                "statusLabel": "Passed preliminary floor vote",
-                "statusDate": "02/03/2025"
+                "status": "passed",
+                "statusLabel": "Passed House",
+                "statusDate": "02/04/2025"
             },
             {
                 "step": "second chamber",
-                "status": "future",
-                "statusLabel": null,
+                "status": "current",
+                "statusLabel": "Pending",
                 "statusDate": null
             },
             {
@@ -47503,10 +47585,10 @@
         "lcIdentifier": "LC3193",
         "type": "house bill",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
+            "key": "In First House--Through 3rd Reading",
+            "step": "First chamber",
+            "label": "Passed chamber",
+            "status": "live",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -47524,14 +47606,14 @@
             },
             {
                 "step": "first chamber",
-                "status": "current",
-                "statusLabel": "Passed preliminary floor vote",
-                "statusDate": "02/03/2025"
+                "status": "passed",
+                "statusLabel": "Passed House",
+                "statusDate": "02/04/2025"
             },
             {
                 "step": "second chamber",
-                "status": "future",
-                "statusLabel": null,
+                "status": "current",
+                "statusLabel": "Pending",
                 "statusDate": null
             },
             {
@@ -47585,10 +47667,10 @@
         "lcIdentifier": "LC1448",
         "type": "house bill",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
+            "key": "In First House--Through 3rd Reading",
+            "step": "First chamber",
+            "label": "Passed chamber",
+            "status": "live",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -47606,14 +47688,14 @@
             },
             {
                 "step": "first chamber",
-                "status": "current",
-                "statusLabel": "Passed preliminary floor vote",
-                "statusDate": "02/03/2025"
+                "status": "passed",
+                "statusLabel": "Passed House",
+                "statusDate": "02/04/2025"
             },
             {
                 "step": "second chamber",
-                "status": "future",
-                "statusLabel": null,
+                "status": "current",
+                "statusLabel": "Pending",
                 "statusDate": null
             },
             {
@@ -48857,10 +48939,10 @@
         "lcIdentifier": "LC2326",
         "type": "house bill",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
+            "key": "In First House--Through 3rd Reading",
+            "step": "First chamber",
+            "label": "Passed chamber",
+            "status": "live",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -48878,14 +48960,14 @@
             },
             {
                 "step": "first chamber",
-                "status": "current",
-                "statusLabel": "Passed preliminary floor vote",
-                "statusDate": "02/03/2025"
+                "status": "passed",
+                "statusLabel": "Passed House",
+                "statusDate": "02/04/2025"
             },
             {
                 "step": "second chamber",
-                "status": "future",
-                "statusLabel": null,
+                "status": "current",
+                "statusLabel": "Pending",
                 "statusDate": null
             },
             {
@@ -49105,10 +49187,10 @@
         "lcIdentifier": "LC2548",
         "type": "house bill",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
+            "key": "In First House--Through 3rd Reading",
+            "step": "First chamber",
+            "label": "Passed chamber",
+            "status": "live",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -49126,14 +49208,14 @@
             },
             {
                 "step": "first chamber",
-                "status": "current",
-                "statusLabel": "Passed preliminary floor vote",
-                "statusDate": "01/31/2025"
+                "status": "passed",
+                "statusLabel": "Passed House",
+                "statusDate": "02/04/2025"
             },
             {
                 "step": "second chamber",
-                "status": "future",
-                "statusLabel": null,
+                "status": "current",
+                "statusLabel": "Pending",
                 "statusDate": null
             },
             {
@@ -50950,10 +51032,10 @@
         "lcIdentifier": "LC1204",
         "type": "house bill",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
+            "key": "In First House--Through 3rd Reading",
+            "step": "First chamber",
+            "label": "Passed chamber",
+            "status": "live",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -50971,14 +51053,14 @@
             },
             {
                 "step": "first chamber",
-                "status": "current",
-                "statusLabel": "Passed preliminary floor vote",
-                "statusDate": "02/03/2025"
+                "status": "passed",
+                "statusLabel": "Passed House",
+                "statusDate": "02/04/2025"
             },
             {
                 "step": "second chamber",
-                "status": "future",
-                "statusLabel": null,
+                "status": "current",
+                "statusLabel": "Pending",
                 "statusDate": null
             },
             {
