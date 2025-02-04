@@ -1391,11 +1391,11 @@
             "motion": "Committee Executive Action--Bill Passed",
             "thresholdRequired": "simple",
             "count": {
-                "Y": 9,
-                "N": 9
+                "Y": 13,
+                "N": 10
             },
             "gopCount": {
-                "Y": 9,
+                "Y": 13,
                 "N": 0,
                 "A": 0,
                 "E": 0,
@@ -1403,12 +1403,12 @@
             },
             "demCount": {
                 "Y": 0,
-                "N": 9,
+                "N": 10,
                 "A": 0,
                 "E": 0,
                 "O": 0
             },
-            "motionPassed": false,
+            "motionPassed": true,
             "gopSupported": true,
             "demSupported": false,
             "votes": [
@@ -1555,6 +1555,46 @@
                     "party": "D",
                     "locale": "Bozeman",
                     "district": "HD 57"
+                },
+                {
+                    "option": "Y",
+                    "name": "Jerry Schillinger",
+                    "lastName": "Schillinger",
+                    "party": "R",
+                    "locale": "Circle",
+                    "district": "HD 34"
+                },
+                {
+                    "option": "N",
+                    "name": "Paul Tuss",
+                    "lastName": "Tuss",
+                    "party": "D",
+                    "locale": "Havre",
+                    "district": "HD 27"
+                },
+                {
+                    "option": "Y",
+                    "name": "Mike Vinton",
+                    "lastName": "Vinton",
+                    "party": "R",
+                    "locale": "Billings",
+                    "district": "HD 40"
+                },
+                {
+                    "option": "Y",
+                    "name": "Ken Walsh",
+                    "lastName": "Walsh",
+                    "party": "R",
+                    "locale": "Twin Bridges",
+                    "district": "HD 69"
+                },
+                {
+                    "option": "Y",
+                    "name": "Llew Jones",
+                    "lastName": "Jones",
+                    "party": "R",
+                    "locale": "Conrad",
+                    "district": "HD 18"
                 }
             ]
         }
