@@ -2615,10 +2615,10 @@
                 "title": "Generally revise laws related to public charter schools",
                 "chamber": "house",
                 "status": {
-                    "key": "Probably Dead",
-                    "label": "",
-                    "step": "Failed",
-                    "status": "stalled",
+                    "key": "In First House Committee--Nontabled",
+                    "step": "First chamber",
+                    "label": "In committee",
+                    "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -2630,14 +2630,14 @@
                     },
                     {
                         "step": "first committee",
-                        "status": "current",
-                        "statusLabel": "Pending",
-                        "statusDate": null
+                        "status": "passed",
+                        "statusLabel": "Advanced",
+                        "statusDate": "02/03/2025"
                     },
                     {
                         "step": "first chamber",
-                        "status": "future",
-                        "statusLabel": null,
+                        "status": "current",
+                        "statusLabel": "Pending",
                         "statusDate": null
                     },
                     {
@@ -2691,14 +2691,14 @@
                     },
                     {
                         "step": "first committee",
-                        "status": "current",
-                        "statusLabel": "Pending",
-                        "statusDate": null
+                        "status": "passed",
+                        "statusLabel": "Advanced",
+                        "statusDate": "02/03/2025"
                     },
                     {
                         "step": "first chamber",
-                        "status": "future",
-                        "statusLabel": null,
+                        "status": "current",
+                        "statusLabel": "Pending",
                         "statusDate": null
                     },
                     {
@@ -2798,10 +2798,10 @@
                 "title": "Revise laws related to the school funding interim commission.",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House Committee--Tabled",
+                    "key": "In First House Committee--Nontabled",
                     "step": "First chamber",
-                    "label": "Tabled in committee",
-                    "status": "stalled",
+                    "label": "In committee",
+                    "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -2813,14 +2813,14 @@
                     },
                     {
                         "step": "first committee",
-                        "status": "blocked",
-                        "statusLabel": "Tabled",
-                        "statusDate": "01/27/2025"
+                        "status": "passed",
+                        "statusLabel": "Advanced",
+                        "statusDate": "02/03/2025"
                     },
                     {
                         "step": "first chamber",
-                        "status": "future",
-                        "statusLabel": null,
+                        "status": "current",
+                        "statusLabel": "Pending",
                         "statusDate": null
                     },
                     {
@@ -7215,14 +7215,14 @@
                     },
                     {
                         "step": "first committee",
-                        "status": "current",
-                        "statusLabel": "Pending",
-                        "statusDate": null
+                        "status": "passed",
+                        "statusLabel": "Advanced",
+                        "statusDate": "02/03/2025"
                     },
                     {
                         "step": "first chamber",
-                        "status": "future",
-                        "statusLabel": null,
+                        "status": "current",
+                        "statusLabel": "Pending",
                         "statusDate": null
                     },
                     {
@@ -20595,7 +20595,25 @@
                 "chamber": "senate"
             }
         ],
-        "articles": [],
+        "articles": [
+            {
+                "title": "Felony bill for adults who procure, provide treatment for trans minors advances",
+                "category": "Health Care",
+                "subtitle": "",
+                "date": "2025-02-03T17:22:05.000Z",
+                "link": "https://montanafreepress.org/2025/02/03/felony-bill-for-adults-who-procure-provide-treatment-for-trans-minors-advances/",
+                "author": "Mara Silvers",
+                "imageUrl": "https://montanafreepress.org/1-6-senate-house/",
+                "billTags": [
+                    "SB 164"
+                ],
+                "lawmakerTags": [
+                    "John Fuller",
+                    "Wendy McKamey"
+                ],
+                "governorTags": []
+            }
+        ],
         "imageSlug": "2025/john-fuller.jpg",
         "sponsoredBills": [
             {
@@ -21127,7 +21145,7 @@
                 "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0608?open_tab=bill",
                 "fiscalNoteUrl": null,
                 "legalNoteUrl": null,
-                "numArticles": 1,
+                "numArticles": 2,
                 "sponsor": {
                     "name": "John Fuller",
                     "party": "R",
@@ -25531,6 +25549,67 @@
                 ],
                 "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0270?open_tab=bill",
                 "fiscalNoteUrl": "/bills/fiscal-note/sb-33",
+                "legalNoteUrl": null,
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Greg Hertz",
+                    "party": "R",
+                    "locale": "Polson",
+                    "district": "SD 7"
+                }
+            },
+            {
+                "key": "sb-261",
+                "identifier": "SB 261",
+                "title": "Generally revise endangering the welfare of children",
+                "chamber": "senate",
+                "status": {
+                    "key": "In First House--Introduced",
+                    "step": "First chamber",
+                    "label": "Introduced",
+                    "status": "live",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "02/03/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2975?open_tab=bill",
+                "fiscalNoteUrl": null,
                 "legalNoteUrl": null,
                 "numArticles": 0,
                 "sponsor": {
@@ -38728,6 +38807,23 @@
         ],
         "articles": [
             {
+                "title": "Felony bill for adults who procure, provide treatment for trans minors advances",
+                "category": "Health Care",
+                "subtitle": "",
+                "date": "2025-02-03T17:22:05.000Z",
+                "link": "https://montanafreepress.org/2025/02/03/felony-bill-for-adults-who-procure-provide-treatment-for-trans-minors-advances/",
+                "author": "Mara Silvers",
+                "imageUrl": "https://montanafreepress.org/1-6-senate-house/",
+                "billTags": [
+                    "SB 164"
+                ],
+                "lawmakerTags": [
+                    "John Fuller",
+                    "Wendy McKamey"
+                ],
+                "governorTags": []
+            },
+            {
                 "title": "What we found in the Legislature’s ‘junque’ drawer",
                 "category": "2025 Legislature",
                 "subtitle": "",
@@ -42403,10 +42499,10 @@
                 "title": "Revise teacher stipends for national board certification",
                 "chamber": "house",
                 "status": {
-                    "key": "Probably Dead",
-                    "label": "",
-                    "step": "Failed",
-                    "status": "stalled",
+                    "key": "In First House Committee--Nontabled",
+                    "step": "First chamber",
+                    "label": "In committee",
+                    "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -42418,14 +42514,14 @@
                     },
                     {
                         "step": "first committee",
-                        "status": "current",
-                        "statusLabel": "Pending",
-                        "statusDate": null
+                        "status": "passed",
+                        "statusLabel": "Advanced",
+                        "statusDate": "02/03/2025"
                     },
                     {
                         "step": "first chamber",
-                        "status": "future",
-                        "statusLabel": null,
+                        "status": "current",
+                        "statusLabel": "Pending",
                         "statusDate": null
                     },
                     {
