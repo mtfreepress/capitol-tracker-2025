@@ -5941,9 +5941,9 @@
                 "title": "Provide for educational credit for students volunteering in long term care, nursing home, home care, and child care settings",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House Committee--Nontabled",
+                    "key": "In First House--Introduced",
                     "step": "First chamber",
-                    "label": "In committee",
+                    "label": "Introduced",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -7947,9 +7947,9 @@
                     },
                     {
                         "step": "first committee",
-                        "status": "current",
-                        "statusLabel": "Pending",
-                        "statusDate": null
+                        "status": "blocked",
+                        "statusLabel": "Withdrawn",
+                        "statusDate": "02/04/2025"
                     },
                     {
                         "step": "first chamber",
@@ -10787,7 +10787,7 @@
                     }
                 ],
                 "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2582?open_tab=bill",
-                "fiscalNoteUrl": null,
+                "fiscalNoteUrl": "/bills/fiscal-note/hb-320",
                 "legalNoteUrl": null,
                 "numArticles": 0,
                 "sponsor": {
@@ -15114,10 +15114,10 @@
                 "title": "Maintain the county distribution level of metal mines license tax",
                 "chamber": "house",
                 "status": {
-                    "key": "Probably Dead",
-                    "label": "",
-                    "step": "Failed",
-                    "status": "stalled",
+                    "key": "In First House--Out of Committee",
+                    "step": "First chamber",
+                    "label": "Out of committee",
+                    "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -27593,10 +27593,10 @@
                 "title": "Create auction or lottery licenses for antelope and swans",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House Committee--Nontabled",
-                    "step": "First chamber",
-                    "label": "In committee",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -27638,7 +27638,7 @@
                     }
                 ],
                 "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1302?open_tab=bill",
-                "fiscalNoteUrl": null,
+                "fiscalNoteUrl": "/bills/fiscal-note/hb-330",
                 "legalNoteUrl": null,
                 "numArticles": 0,
                 "sponsor": {
@@ -40228,9 +40228,9 @@
                 "title": "Establish the specie legal tender act",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House Committee--Nontabled",
+                    "key": "In First House--Introduced",
                     "step": "First chamber",
-                    "label": "In committee",
+                    "label": "Introduced",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -46937,7 +46937,7 @@
                     }
                 ],
                 "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1485?open_tab=bill",
-                "fiscalNoteUrl": null,
+                "fiscalNoteUrl": "/bills/fiscal-note/hb-326",
                 "legalNoteUrl": null,
                 "numArticles": 0,
                 "sponsor": {
@@ -51866,6 +51866,67 @@
         ],
         "imageSlug": "2025/lukas-schubert.jpg",
         "sponsoredBills": [
+            {
+                "key": "hb-383",
+                "identifier": "HB 383",
+                "title": "Generally revise campaign finance laws to increase transparency",
+                "chamber": "house",
+                "status": {
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "02/04/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1731?open_tab=bill",
+                "fiscalNoteUrl": null,
+                "legalNoteUrl": null,
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Lukas Schubert",
+                    "party": "R",
+                    "locale": "Kalispell",
+                    "district": "HD 8"
+                }
+            },
             {
                 "key": "hb-375",
                 "identifier": "HB 375",
@@ -57340,9 +57401,9 @@
                 "title": "Revise meeting date for presidential electors to align with federal law",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House Committee--Nontabled",
+                    "key": "In First House--Introduced",
                     "step": "First chamber",
-                    "label": "In committee",
+                    "label": "Introduced",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
