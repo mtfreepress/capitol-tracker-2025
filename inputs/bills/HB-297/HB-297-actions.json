@@ -261,7 +261,7 @@
             "motion": "Tabled in Committee",
             "thresholdRequired": "simple",
             "count": {
-                "Y": 40,
+                "Y": 20,
                 "N": 0
             },
             "gopCount": {
@@ -441,7 +441,69 @@
                     "party": "R",
                     "locale": "Great Falls",
                     "district": "HD 21"
-                },
+                }
+            ]
+        }
+    },
+    {
+        "id": "HB297-0019",
+        "bill": "HB 297",
+        "date": "02/05/2025",
+        "description": "Committee Executive Action--Bill Not Passed",
+        "possession": "House",
+        "committee": "(H) Business and Labor",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Committee Executive Action--Bill Not Passed",
+        "committeeHearingTime": null,
+        "vote": null
+    },
+    {
+        "id": "HB297-0020",
+        "bill": "HB 297",
+        "date": "02/05/2025",
+        "description": "Tabled in Committee",
+        "possession": "House",
+        "committee": "(H) Business and Labor",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Tabled in Committee",
+        "committeeHearingTime": null,
+        "vote": {
+            "action": "HB297-0020",
+            "bill": "HB 297",
+            "date": "02/05/2025",
+            "type": "committee",
+            "seqNumber": "H4",
+            "voteChamber": "house",
+            "voteUrl": null,
+            "session": "2",
+            "motion": "Tabled in Committee",
+            "thresholdRequired": "simple",
+            "count": {
+                "Y": 20,
+                "N": 0
+            },
+            "gopCount": {
+                "Y": 12,
+                "N": 0,
+                "A": 0,
+                "E": 0,
+                "O": 0
+            },
+            "demCount": {
+                "Y": 8,
+                "N": 0,
+                "A": 0,
+                "E": 0,
+                "O": 0
+            },
+            "motionPassed": true,
+            "gopSupported": true,
+            "demSupported": true,
+            "votes": [
                 {
                     "option": "Y",
                     "name": "Kerri Seekins-Crowe",
