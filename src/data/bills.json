@@ -5790,8 +5790,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "SIMPLE",
-            "TWO_THIRDS_LEGISLATURE"
+            "TWO_THIRDS_LEGISLATURE",
+            "SIMPLE"
         ],
         "subjects": [
             "Courts  (see also: Judges and Justices; Juries and Jurors)",
@@ -7405,6 +7405,90 @@
         "numArticles": 0
     },
     {
+        "key": "sb-275",
+        "identifier": "SB 275",
+        "identifierLong": "Senate Bill 275",
+        "chamber": "senate",
+        "title": "Allow revocation of agricultural covenant on lands annexed into municipality",
+        "session": "2",
+        "lcIdentifier": "LC0914",
+        "type": "senate bill",
+        "status": {
+            "key": "In First House--Introduced",
+            "step": "First chamber",
+            "label": "Introduced",
+            "status": "live",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "passed",
+                "statusLabel": "Introduced",
+                "statusDate": "02/06/2025"
+            },
+            {
+                "step": "first committee",
+                "status": "current",
+                "statusLabel": "Pending",
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Forrest Mandeville",
+            "party": "R",
+            "locale": "Columbus",
+            "district": "SD 28"
+        },
+        "requestor": "Forrest Mandeville",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "Simple",
+        "voteRequirements": [
+            "SIMPLE"
+        ],
+        "subjects": [
+            "Planning and Development",
+            "Local Government  (see also: City Subjects; County Subjects)",
+            "Agriculture  (see also: Livestock; Taxation--Agriculture/Livestock)"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0914?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0914?open_tab=bill",
+        "fiscalNoteUrl": null,
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0914?open_tab=amend",
+        "legalNoteUrl": null,
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0
+    },
+    {
         "key": "sb-274",
         "identifier": "SB 274",
         "identifierLong": "Senate Bill 274",
@@ -8416,9 +8500,9 @@
         "lcIdentifier": "LC0970",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Introduced",
+            "key": "In First House Committee--Nontabled",
             "step": "First chamber",
-            "label": "Introduced",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -15369,8 +15453,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "SIMPLE",
-            "TWO_THIRDS_LEGISLATURE"
+            "TWO_THIRDS_LEGISLATURE",
+            "SIMPLE"
         ],
         "subjects": [
             "Crimes",
@@ -15777,8 +15861,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "SIMPLE",
-            "TWO_THIRDS_LEGISLATURE"
+            "TWO_THIRDS_LEGISLATURE",
+            "SIMPLE"
         ],
         "subjects": [
             "Constitutional Amendment Proposals",
@@ -18242,8 +18326,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "3/4 of Each House",
         "voteRequirements": [
-            "SIMPLE",
-            "THREE_FOURTHS"
+            "THREE_FOURTHS",
+            "SIMPLE"
         ],
         "subjects": [
             "Appropriations, Coal Tax Fund Principal",
@@ -18824,8 +18908,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "SIMPLE",
-            "TWO_THIRDS_LEGISLATURE"
+            "TWO_THIRDS_LEGISLATURE",
+            "SIMPLE"
         ],
         "subjects": [
             "Constitutional Amendment Proposals",
@@ -21507,8 +21591,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "3/4 of Each House",
         "voteRequirements": [
-            "SIMPLE",
-            "THREE_FOURTHS"
+            "THREE_FOURTHS",
+            "SIMPLE"
         ],
         "subjects": [
             "Buildings and Building Regulations",
@@ -24557,8 +24641,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "SIMPLE",
-            "TWO_THIRDS_LEGISLATURE"
+            "TWO_THIRDS_LEGISLATURE",
+            "SIMPLE"
         ],
         "subjects": [
             "Legislature",
@@ -26678,9 +26762,9 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "3/4 of Each House",
         "voteRequirements": [
-            "SIMPLE",
             "TWO_THIRDS",
-            "THREE_FOURTHS"
+            "THREE_FOURTHS",
+            "SIMPLE"
         ],
         "subjects": [
             "Appropriations, Coal Tax Fund Principal",
@@ -38658,8 +38742,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "SIMPLE",
-            "TWO_THIRDS_LEGISLATURE"
+            "TWO_THIRDS_LEGISLATURE",
+            "SIMPLE"
         ],
         "subjects": [
             "Abortion",

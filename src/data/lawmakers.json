@@ -1926,9 +1926,9 @@
                 "title": "Revise state ownership of water rights on state lands",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Introduced",
+                    "key": "In First House Committee--Nontabled",
                     "step": "First chamber",
-                    "label": "Introduced",
+                    "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -36634,6 +36634,67 @@
         "articles": [],
         "imageSlug": "2025/forrest-mandeville.jpg",
         "sponsoredBills": [
+            {
+                "key": "sb-275",
+                "identifier": "SB 275",
+                "title": "Allow revocation of agricultural covenant on lands annexed into municipality",
+                "chamber": "senate",
+                "status": {
+                    "key": "In First House--Introduced",
+                    "step": "First chamber",
+                    "label": "Introduced",
+                    "status": "live",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "02/06/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0914?open_tab=bill",
+                "fiscalNoteUrl": null,
+                "legalNoteUrl": null,
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Forrest Mandeville",
+                    "party": "R",
+                    "locale": "Columbus",
+                    "district": "SD 28"
+                }
+            },
             {
                 "key": "sb-262",
                 "identifier": "SB 262",
