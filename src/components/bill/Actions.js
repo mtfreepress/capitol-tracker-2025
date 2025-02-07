@@ -12,10 +12,6 @@ import {
   committeeUrl,
 } from '../../config/utils';
 
-// import {
-//   tableStyle
-// } from '../../config/styles.js.old';
-
 import {
   partyColors,
   positionColors
@@ -77,25 +73,6 @@ const highlightRow = css`
   background-color: #cebc9f;
 `;
 
-const inlineButtonCss = css`
-  display: inline-block;
-  border: none;
-  padding: 0.2em 0.5em;
-  border: 1px solid var(--tan6);
-  color: var(--tan6);
-  background-color: rgba(256, 256, 256, 0);
-  text-align: left;
-  font-size: 1em;
-  font-weight: normal;
-
-  :hover {
-    background-color: rgba(256, 256, 256, 0);
-    border: 1px solid #ce5a00;
-    color: #ce5a00;
-    text-decoration: none;
-  }
-`;
-
 const BillActions = ({ actions, lawsUrl, vetoMemoUrl }) => {
   const [showMinorActions, setShowMinorActions] = useState(false);
   const [showVotes, setShowVotes] = useState(true);
@@ -130,7 +107,7 @@ const BillActions = ({ actions, lawsUrl, vetoMemoUrl }) => {
       <InfoPopup label="How bills move through the Legislature" content={howBillsMove} />
       <div className="note">
         {showMinorActions ? 'Showing all recorded bill actions. ' : 'Showing major bill actions only. '}
-        <button className='inlineButton' onClick={toggleShowMinorActions}>
+        <button className='inline-button' onClick={toggleShowMinorActions}>
           {showMinorActions ? 'See fewer' : 'See all.'}
         </button>
       </div>
@@ -145,7 +122,7 @@ const BillActions = ({ actions, lawsUrl, vetoMemoUrl }) => {
       </table>
       <div className="note">
         {showMinorActions ? 'Showing all recorded bill actions. ' : 'Showing major bill actions only. '}
-        <button className='inlineButton' onClick={toggleShowMinorActions}>
+        <button className='inline-button' onClick={toggleShowMinorActions}>
           {showMinorActions ? 'See fewer' : 'See all.'}
         </button>
       </div>
@@ -176,7 +153,7 @@ const Action = (action, showVotes, annotations) => {
             <div>
               {committee && (
                 <>
-                {/* TODO: This is broken restore when we fix committees */}
+                  {/* TODO: This is broken restore when we fix committees */}
                   {/* 👥 <em>
                     <Link href={`/committees/${committeeUrl(committee)}`}>{committee}</Link>
                   </em> */}
@@ -354,7 +331,7 @@ const VoteListing = ({ votes, voteUrl, defaultOpen = false }) => {
   const gopVotes = votes.filter(d => d.party === 'R').sort((a, b) => a.lastName.localeCompare(b.lastName))
   const demVotes = votes.filter(d => d.party === 'D').sort((a, b) => a.lastName.localeCompare(b.lastName))
   return <div>
-    <button css={[inlineButtonCss]} onClick={() => setIsOpen(!isOpen)}>
+    <button class='inline-button' onClick={() => setIsOpen(!isOpen)}>
       {isOpen ? <span>&#x25BE; Hide full vote breakdown</span> : <span>&#x25B8; Show full vote breakdown</span>}
     </button>
     {/* <span>  <a href={voteUrl}>Official vote page.</a></span> */}

@@ -78,7 +78,11 @@ const LinksList = ({ articles }) => {
                 {
                     articles
                         .sort((a, b) => new Date(b.date) - new Date(a.date))
-                        .map((article, i) => <Link key={String(i)} href={article.link} passHref><LinkItem {...article} /></Link>)
+                        .map((article, i) => (
+                            <Link css={linkStyle} key={String(i)} href={article.link} passHref>
+                                    <LinkItem {...article} />
+                            </Link>
+                        ))
                 }
             </div>
         </div>
@@ -95,7 +99,7 @@ const LinkItem = (props) => {
     const displayAuthor = ['Stephanie Farmer'].includes(author) ? '' : author;
 
     return (
-        <div css={linkStyle}>
+        <div>
             <div className='dek'>📰 {category}</div>
             <div className='title'>{title}</div>
             <div className='detail'>{presentDate(date)} • {displayAuthor}</div>
