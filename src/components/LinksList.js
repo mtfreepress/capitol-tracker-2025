@@ -63,7 +63,7 @@ const presentDate = date => date ? dateFormatWithYear(new Date(date)) : null;
 const LinksList = ({ articles }) => {
     if (articles.length === 0) return (
         <div className="container">
-            <div css={noteStyle}>No stories currently in our database.</div>
+            <div className='note'>No stories currently in our database.</div>
         </div>
     );
 

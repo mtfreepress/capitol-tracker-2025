@@ -16,7 +16,7 @@ const BillTable = ({ bills, suppressCount, sortFunction = DEFAULT_SORT, displayL
   };
 
   if (bills.length === 0) {
-    return <div css={noteStyle}>None at present</div>;
+    return <div className='note'>None at present</div>;
   }
 
   const sorted = bills.sort(sortFunction);
