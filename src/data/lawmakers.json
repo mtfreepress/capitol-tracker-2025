@@ -1865,10 +1865,10 @@
                 "title": "Extend vehicle titling grace period to 60 days",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Out of Committee",
-                    "step": "First chamber",
-                    "label": "Out of committee",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -9055,10 +9055,10 @@
                 "title": "Revise county canvassing processes",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Out of Committee",
-                    "step": "First chamber",
-                    "label": "Out of committee",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -14279,6 +14279,67 @@
                 }
             },
             {
+                "key": "sb-282",
+                "identifier": "SB 282",
+                "title": "Limit state government use of personal electronic data",
+                "chamber": "senate",
+                "status": {
+                    "key": "In First House--Introduced",
+                    "step": "First chamber",
+                    "label": "Introduced",
+                    "status": "live",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "02/06/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0061?open_tab=bill",
+                "fiscalNoteUrl": null,
+                "legalNoteUrl": null,
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Daniel Emrich",
+                    "party": "R",
+                    "locale": "Great Falls",
+                    "district": "SD 11"
+                }
+            },
+            {
                 "key": "sb-273",
                 "identifier": "SB 273",
                 "title": "Revise laws related to charges of assault",
@@ -15385,10 +15446,10 @@
                 "title": "Allow interest earned on workforce housing appropriations to be retained",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Out of Committee",
-                    "step": "First chamber",
-                    "label": "Out of committee",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -15400,14 +15461,14 @@
                     },
                     {
                         "step": "first committee",
-                        "status": "current",
-                        "statusLabel": "Pending",
-                        "statusDate": null
+                        "status": "passed",
+                        "statusLabel": "Advanced",
+                        "statusDate": "02/04/2025"
                     },
                     {
                         "step": "first chamber",
-                        "status": "future",
-                        "statusLabel": null,
+                        "status": "current",
+                        "statusLabel": "Pending",
                         "statusDate": null
                     },
                     {
@@ -24482,10 +24543,10 @@
                 "title": "Prohibit consent as a defense for physician assisted suicide",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Through 2nd Reading",
-                    "step": "First chamber",
-                    "label": "Passed second reading vote",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -25539,10 +25600,10 @@
                 "title": "Modify holidays for certain employees and create an annual floating holiday",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Through 2nd Reading",
-                    "step": "First chamber",
-                    "label": "Passed second reading vote",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -27579,10 +27640,10 @@
                 "title": "Generally revise civil liability laws relating to statutes of limitations for certain actions",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Through 2nd Reading",
-                    "step": "First chamber",
-                    "label": "Passed second reading vote",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -27701,10 +27762,10 @@
                 "title": "Revise impact fee laws",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Through 2nd Reading",
-                    "step": "First chamber",
-                    "label": "Passed second reading vote",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -27823,10 +27884,10 @@
                 "title": "Require levies or bonds for judgments, settlements, or protested taxes to be submitted to voters",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Out of Committee",
-                    "step": "First chamber",
-                    "label": "Out of committee",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -31861,10 +31922,10 @@
                 "title": "Resolution for support of federal SAFER banking act",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Through 2nd Reading",
-                    "step": "First chamber",
-                    "label": "Passed second reading vote",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -32032,10 +32093,10 @@
                 "title": "Repeal laws related to inspection of animals in feedlots",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Out of Committee",
-                    "step": "First chamber",
-                    "label": "Out of committee",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -34199,10 +34260,10 @@
                 "title": "Require conservation districts to comply with state procurement laws",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Out of Committee",
-                    "step": "First chamber",
-                    "label": "Out of committee",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -37556,10 +37617,10 @@
                 "title": "Allowing for streamlined public hearing notice process when revising zoning",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Through 2nd Reading",
-                    "step": "First chamber",
-                    "label": "Passed second reading vote",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -40116,10 +40177,10 @@
                 "title": "Joint resolution on the economic dangers of federal debt and deficits",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Through 2nd Reading",
-                    "step": "First chamber",
-                    "label": "Passed second reading vote",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -40446,10 +40507,10 @@
                 "title": "Generally revise minor in possession laws",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Through 2nd Reading",
-                    "step": "First chamber",
-                    "label": "Passed second reading vote",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -41294,10 +41355,10 @@
                 "title": "Revise laws relating to amusement rides and safety",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Out of Committee",
-                    "step": "First chamber",
-                    "label": "Out of committee",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -47164,10 +47225,10 @@
                 "title": "Revise insurance premium taxes for certain captive insurers",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Out of Committee",
-                    "step": "First chamber",
-                    "label": "Out of committee",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -64194,10 +64255,10 @@
                 "title": "Revise amendment process for legislation that is subject to a sunset",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Through 2nd Reading",
-                    "step": "First chamber",
-                    "label": "Passed second reading vote",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
