@@ -240,20 +240,6 @@
     {
         "id": "SB60-0018",
         "bill": "SB 60",
-        "date": "01/24/2025",
-        "description": "Hearing",
-        "possession": "Senate",
-        "committee": "(S) Finance and Claims",
-        "actionUrl": null,
-        "recordings": [],
-        "transcriptUrl": null,
-        "key": "Hearing",
-        "committeeHearingTime": null,
-        "vote": null
-    },
-    {
-        "id": "SB60-0019",
-        "bill": "SB 60",
         "date": "02/05/2025",
         "description": "Committee Executive Action--Bill Passed",
         "possession": "Senate",
@@ -264,7 +250,7 @@
         "key": "Committee Executive Action--Bill Passed",
         "committeeHearingTime": null,
         "vote": {
-            "action": "SB60-0019",
+            "action": "SB60-0018",
             "bill": "SB 60",
             "date": "02/05/2025",
             "type": "committee",
@@ -388,7 +374,7 @@
         }
     },
     {
-        "id": "SB60-0020",
+        "id": "SB60-0019",
         "bill": "SB 60",
         "date": "02/05/2025",
         "description": "Committee Report--Bill Passed",
@@ -402,7 +388,7 @@
         "vote": null
     },
     {
-        "id": "SB60-0021",
+        "id": "SB60-0020",
         "bill": "SB 60",
         "date": "02/07/2025",
         "description": "Scheduled for 2nd Reading",
@@ -416,7 +402,7 @@
         "vote": null
     },
     {
-        "id": "SB60-0022",
+        "id": "SB60-0021",
         "bill": "SB 60",
         "date": "02/07/2025",
         "description": "2nd Reading Passed",
@@ -428,7 +414,7 @@
         "key": "2nd Reading Passed",
         "committeeHearingTime": null,
         "vote": {
-            "action": "SB60-0022",
+            "action": "SB60-0021",
             "bill": "SB 60",
             "date": "02/07/2025",
             "type": "committee",
@@ -864,7 +850,7 @@
         }
     },
     {
-        "id": "SB60-0023",
+        "id": "SB60-0022",
         "bill": "SB 60",
         "date": "02/07/2025",
         "description": "Rereferred to Committee",
@@ -874,6 +860,20 @@
         "recordings": [],
         "transcriptUrl": null,
         "key": "Rereferred to Committee",
+        "committeeHearingTime": "02/11/2025",
+        "vote": null
+    },
+    {
+        "id": "SB60-0023",
+        "bill": "SB 60",
+        "date": "02/07/2025",
+        "description": "Hearing",
+        "possession": "Senate",
+        "committee": "(S) Finance and Claims",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Hearing",
         "committeeHearingTime": "02/11/2025",
         "vote": null
     }
