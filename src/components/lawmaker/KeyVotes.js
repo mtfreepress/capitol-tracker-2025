@@ -11,10 +11,6 @@ import {
     partyColors
 } from '../../config/config';
 
-import {
-    tableStyle,
-} from '../../config/styles.js';
-
 const keyVotesStyle = css`
   tr.vote-row {
     padding: 0.5em;
@@ -53,7 +49,7 @@ const LawmakerKeyVotes = ({ lastName, party, keyBillVotes }) => {
 
     return (
         <div css={keyVotesStyle}>
-            <table css={tableStyle}>
+            <table className='table'>
                 <thead>
                     <tr>
                         <th className="description-col">Motion / Bill</th>

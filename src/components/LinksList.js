@@ -6,11 +6,6 @@ import {
     dateFormatWithYear
 } from '../config/utils';
 
-import {
-    containerStyle,
-    noteStyle
-} from '../config/styles.js';
-
 const linkContainerStyle = css`
     display: flex;
     flex-wrap: wrap;
@@ -67,13 +62,13 @@ const presentDate = date => date ? dateFormatWithYear(new Date(date)) : null;
 
 const LinksList = ({ articles }) => {
     if (articles.length === 0) return (
-        <div css={containerStyle}>
+        <div className="container">
             <div css={noteStyle}>No stories currently in our database.</div>
         </div>
     );
 
     return (
-        <div css={containerStyle}>
+        <div className="container">
             <div css={linkContainerStyle}>
                 {
                     articles
