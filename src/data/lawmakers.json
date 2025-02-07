@@ -4547,8 +4547,8 @@
                     {
                         "step": "first committee",
                         "status": "blocked",
-                        "statusLabel": "Tabled",
-                        "statusDate": "01/27/2025"
+                        "statusLabel": "Withdrawn",
+                        "statusDate": "01/15/2025"
                     },
                     {
                         "step": "first chamber",
@@ -20058,9 +20058,9 @@
                 "title": "Revise property insurance laws relating to preventative measures to reduce damage",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House Committee--Nontabled",
-                    "step": "First chamber",
-                    "label": "In committee",
+                    "key": "In Second House--Out of Committee",
+                    "step": "Second chamber",
+                    "label": "On floor",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -20075,7 +20075,7 @@
                         "step": "first committee",
                         "status": "passed",
                         "statusLabel": "Advanced",
-                        "statusDate": "01/21/2025"
+                        "statusDate": "01/17/2025"
                     },
                     {
                         "step": "first chamber",
@@ -21921,10 +21921,10 @@
                 "title": "Revising the disabled veteran property tax assistance program",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House Committee--Nontabled",
-                    "step": "First chamber",
-                    "label": "In committee",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -21936,9 +21936,9 @@
                     },
                     {
                         "step": "first committee",
-                        "status": "current",
-                        "statusLabel": "Pending",
-                        "statusDate": null
+                        "status": "blocked",
+                        "statusLabel": "Withdrawn",
+                        "statusDate": "02/07/2025"
                     },
                     {
                         "step": "first chamber",
@@ -41280,7 +41280,7 @@
                         "step": "first committee",
                         "status": "blocked",
                         "statusLabel": "Voted down",
-                        "statusDate": "01/22/2025"
+                        "statusDate": "02/07/2025"
                     },
                     {
                         "step": "first chamber",
@@ -68854,6 +68854,67 @@
                     }
                 ],
                 "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0246?open_tab=bill",
+                "fiscalNoteUrl": null,
+                "legalNoteUrl": null,
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Katie Zolnikov",
+                    "party": "R",
+                    "locale": "Billings",
+                    "district": "HD 44"
+                }
+            },
+            {
+                "key": "hb-427",
+                "identifier": "HB 427",
+                "title": "Require government to provide certain building code text or citation causing delay or stop",
+                "chamber": "house",
+                "status": {
+                    "key": "In First House--Introduced",
+                    "step": "First chamber",
+                    "label": "Introduced",
+                    "status": "live",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "02/07/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0877?open_tab=bill",
                 "fiscalNoteUrl": null,
                 "legalNoteUrl": null,
                 "numArticles": 0,

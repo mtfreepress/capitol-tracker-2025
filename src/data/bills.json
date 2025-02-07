@@ -2717,7 +2717,7 @@
                 "step": "first committee",
                 "status": "blocked",
                 "statusLabel": "Voted down",
-                "statusDate": "01/22/2025"
+                "statusDate": "02/07/2025"
             },
             {
                 "step": "first chamber",
@@ -8480,10 +8480,10 @@
         "lcIdentifier": "LC1933",
         "type": "senate bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
-            "step": "First chamber",
-            "label": "In committee",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -8495,9 +8495,9 @@
             },
             {
                 "step": "first committee",
-                "status": "current",
-                "statusLabel": "Pending",
-                "statusDate": null
+                "status": "blocked",
+                "statusLabel": "Withdrawn",
+                "statusDate": "02/07/2025"
             },
             {
                 "step": "first chamber",
@@ -19308,8 +19308,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "3/4 of Each House",
         "voteRequirements": [
-            "SIMPLE",
-            "THREE_FOURTHS"
+            "THREE_FOURTHS",
+            "SIMPLE"
         ],
         "subjects": [
             "Appropriations, Coal Tax Fund Principal",
@@ -21779,8 +21779,8 @@
             {
                 "step": "first committee",
                 "status": "blocked",
-                "statusLabel": "Tabled",
-                "statusDate": "01/27/2025"
+                "statusLabel": "Withdrawn",
+                "statusDate": "01/15/2025"
             },
             {
                 "step": "first chamber",
@@ -22573,8 +22573,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "3/4 of Each House",
         "voteRequirements": [
-            "SIMPLE",
-            "THREE_FOURTHS"
+            "THREE_FOURTHS",
+            "SIMPLE"
         ],
         "subjects": [
             "Buildings and Building Regulations",
@@ -27744,9 +27744,9 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "3/4 of Each House",
         "voteRequirements": [
-            "SIMPLE",
             "TWO_THIRDS",
-            "THREE_FOURTHS"
+            "THREE_FOURTHS",
+            "SIMPLE"
         ],
         "subjects": [
             "Appropriations, Coal Tax Fund Principal",
@@ -31086,6 +31086,90 @@
         "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0171?open_tab=bill",
         "fiscalNoteUrl": null,
         "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0171?open_tab=amend",
+        "legalNoteUrl": null,
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0
+    },
+    {
+        "key": "hb-427",
+        "identifier": "HB 427",
+        "identifierLong": "House Bill 427",
+        "chamber": "house",
+        "title": "Require government to provide certain building code text or citation causing delay or stop",
+        "session": "2",
+        "lcIdentifier": "LC0877",
+        "type": "house bill",
+        "status": {
+            "key": "In First House--Introduced",
+            "step": "First chamber",
+            "label": "Introduced",
+            "status": "live",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "passed",
+                "statusLabel": "Introduced",
+                "statusDate": "02/07/2025"
+            },
+            {
+                "step": "first committee",
+                "status": "current",
+                "statusLabel": "Pending",
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Katie Zolnikov",
+            "party": "R",
+            "locale": "Billings",
+            "district": "HD 44"
+        },
+        "requestor": "Daniel Zolnikov",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "Simple",
+        "voteRequirements": [
+            "SIMPLE"
+        ],
+        "subjects": [
+            "Buildings and Building Regulations",
+            "Courts  (see also: Judges and Justices; Juries and Jurors)",
+            "Local Government  (see also: City Subjects; County Subjects)"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0877?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0877?open_tab=bill",
+        "fiscalNoteUrl": null,
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0877?open_tab=amend",
         "legalNoteUrl": null,
         "vetoMemoUrl": null,
         "articles": [],
@@ -58195,9 +58279,9 @@
         "lcIdentifier": "LC0197",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
-            "step": "First chamber",
-            "label": "In committee",
+            "key": "In Second House--Out of Committee",
+            "step": "Second chamber",
+            "label": "On floor",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -58212,7 +58296,7 @@
                 "step": "first committee",
                 "status": "passed",
                 "statusLabel": "Advanced",
-                "statusDate": "01/21/2025"
+                "statusDate": "01/17/2025"
             },
             {
                 "step": "first chamber",
