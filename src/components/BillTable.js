@@ -3,7 +3,7 @@ import { css } from '@emotion/react';
 import Link from 'next/link';
 import { billStatusSymbols, billProgressStepLabels, statusColors, partyColors } from '../config/config';
 import { billUrl, lawmakerUrl } from '../config/utils';
-import { noteStyle, inlineButtonCss } from '../config/styles';
+
 
 const DEFAULT_DISPLAY_LIMIT = 10;
 const DEFAULT_SORT = (a, b) => +a.identifier.substring(3) - +b.identifier.substring(3);
@@ -32,12 +32,12 @@ const BillTable = ({ bills, suppressCount, sortFunction = DEFAULT_SORT, displayL
       <table className={isFadeApplied ? 'table bottomFadeCss' : 'table'}>
         <tbody>{rows}</tbody>
       </table>
-      <div css={noteStyle}>
+      <div className='note'>
         {!suppressCount && <span>Showing {rendered.length} of {bills.length}</span>}
         {(bills.length > displayLimit) && (
           <span>
             <span>. </span>
-            <button css={inlineButtonCss} onClick={toggleDisplayLimit}>
+            <button className='inline-button' onClick={toggleDisplayLimit}>
               {isTruncated ? 'See all' : 'See fewer'}
             </button>
           </span>
