@@ -37525,10 +37525,10 @@
                 "title": "Exempt subdivision, water/sewer plans from environmental review",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House Committee--Nontabled",
-                    "step": "First chamber",
-                    "label": "In committee",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -37570,7 +37570,7 @@
                     }
                 ],
                 "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0587?open_tab=bill",
-                "fiscalNoteUrl": null,
+                "fiscalNoteUrl": "/bills/fiscal-note/sb-262",
                 "legalNoteUrl": null,
                 "numArticles": 0,
                 "sponsor": {
@@ -49801,6 +49801,67 @@
         "articles": [],
         "imageSlug": "2025/bob-phalen.jpg",
         "sponsoredBills": [
+            {
+                "key": "sb-283",
+                "identifier": "SB 283",
+                "title": "Generally revise laws relating to wind generation facilities",
+                "chamber": "senate",
+                "status": {
+                    "key": "In First House--Introduced",
+                    "step": "First chamber",
+                    "label": "Introduced",
+                    "status": "live",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "02/07/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3516?open_tab=bill",
+                "fiscalNoteUrl": null,
+                "legalNoteUrl": null,
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Bob Phalen",
+                    "party": "R",
+                    "locale": "Glendive",
+                    "district": "SD 17"
+                }
+            },
             {
                 "key": "sb-160",
                 "identifier": "SB 160",
