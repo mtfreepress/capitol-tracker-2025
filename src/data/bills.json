@@ -5854,8 +5854,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "TWO_THIRDS_LEGISLATURE",
-            "SIMPLE"
+            "SIMPLE",
+            "TWO_THIRDS_LEGISLATURE"
         ],
         "subjects": [
             "Courts  (see also: Judges and Justices; Juries and Jurors)",
@@ -16520,8 +16520,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "TWO_THIRDS_LEGISLATURE",
-            "SIMPLE"
+            "SIMPLE",
+            "TWO_THIRDS_LEGISLATURE"
         ],
         "subjects": [
             "Crimes",
@@ -19393,8 +19393,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "3/4 of Each House",
         "voteRequirements": [
-            "THREE_FOURTHS",
-            "SIMPLE"
+            "SIMPLE",
+            "THREE_FOURTHS"
         ],
         "subjects": [
             "Appropriations, Coal Tax Fund Principal",
@@ -22658,8 +22658,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "3/4 of Each House",
         "voteRequirements": [
-            "THREE_FOURTHS",
-            "SIMPLE"
+            "SIMPLE",
+            "THREE_FOURTHS"
         ],
         "subjects": [
             "Buildings and Building Regulations",
@@ -25779,8 +25779,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "TWO_THIRDS_LEGISLATURE",
-            "SIMPLE"
+            "SIMPLE",
+            "TWO_THIRDS_LEGISLATURE"
         ],
         "subjects": [
             "Legislature",
@@ -27900,9 +27900,9 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "3/4 of Each House",
         "voteRequirements": [
-            "TWO_THIRDS",
+            "SIMPLE",
             "THREE_FOURTHS",
-            "SIMPLE"
+            "TWO_THIRDS"
         ],
         "subjects": [
             "Appropriations, Coal Tax Fund Principal",
@@ -34358,9 +34358,9 @@
         "lcIdentifier": "LC2285",
         "type": "house bill",
         "status": {
-            "key": "In First House--Introduced",
+            "key": "In First House Committee--Nontabled",
             "step": "First chamber",
-            "label": "Introduced",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -40570,10 +40570,10 @@
         "lcIdentifier": "LC1777",
         "type": "house bill",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
+            "key": "In First House Committee--Nontabled",
+            "step": "First chamber",
+            "label": "In committee",
+            "status": "live",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -42731,8 +42731,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "TWO_THIRDS_LEGISLATURE",
-            "SIMPLE"
+            "SIMPLE",
+            "TWO_THIRDS_LEGISLATURE"
         ],
         "subjects": [
             "Abortion",
@@ -49350,6 +49350,25 @@
         "vetoMemoUrl": null,
         "articles": [
             {
+                "title": "Medicaid expansion bill passes major House vote",
+                "category": "Health Care",
+                "subtitle": "",
+                "date": "2025-02-07T16:54:03.000Z",
+                "link": "https://montanafreepress.org/2025/02/07/medicaid-expansion-bill-passes-major-house-vote/",
+                "author": "Mara Silvers",
+                "imageUrl": "https://montanafreepress.org/img_1169/",
+                "billTags": [
+                    "HB 245"
+                ],
+                "lawmakerTags": [
+                    "Bill Mercer",
+                    "Donavon Hawk",
+                    "Ed Buttrey",
+                    "Jane Gillette"
+                ],
+                "governorTags": []
+            },
+            {
                 "title": "Medicaid expansion bills spur hours of testimony in first hearings",
                 "category": "2025 Legislature",
                 "subtitle": "",
@@ -49370,7 +49389,7 @@
                 "governorTags": []
             }
         ],
-        "numArticles": 1
+        "numArticles": 2
     },
     {
         "key": "hb-244",
