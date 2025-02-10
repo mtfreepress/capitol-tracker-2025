@@ -34204,6 +34204,55 @@
         "imageSlug": "2025/greg-kmetz.jpg",
         "sponsoredBills": [
             {
+                "key": "hj-15",
+                "identifier": "HJ 15",
+                "title": "Resolution supporting increased transmission capacity in Montana",
+                "chamber": "house",
+                "status": {
+                    "key": "In First House--Introduced",
+                    "step": "First chamber",
+                    "label": "Introduced",
+                    "status": "live",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "02/10/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0643?open_tab=bill",
+                "fiscalNoteUrl": null,
+                "legalNoteUrl": null,
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Greg Kmetz",
+                    "party": "R",
+                    "locale": "Miles City",
+                    "district": "HD 36"
+                }
+            },
+            {
                 "key": "hb-418",
                 "identifier": "HB 418",
                 "title": "Ban mRNA vaccines in Montana for animals",
