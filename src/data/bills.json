@@ -13540,14 +13540,14 @@
             },
             {
                 "step": "first committee",
-                "status": "current",
-                "statusLabel": "Pending",
-                "statusDate": null
+                "status": "passed",
+                "statusLabel": "Advanced",
+                "statusDate": "02/10/2025"
             },
             {
                 "step": "first chamber",
-                "status": "future",
-                "statusLabel": null,
+                "status": "current",
+                "statusLabel": "Pending",
                 "statusDate": null
             },
             {
@@ -16497,14 +16497,14 @@
             },
             {
                 "step": "first committee",
-                "status": "current",
-                "statusLabel": "Pending",
-                "statusDate": null
+                "status": "passed",
+                "statusLabel": "Advanced",
+                "statusDate": "02/10/2025"
             },
             {
                 "step": "first chamber",
-                "status": "future",
-                "statusLabel": null,
+                "status": "current",
+                "statusLabel": "Pending",
                 "statusDate": null
             },
             {
@@ -17627,10 +17627,10 @@
         "lcIdentifier": "LC0431",
         "type": "senate bill",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
+            "key": "In First House Committee--Nontabled",
+            "step": "First chamber",
+            "label": "In committee",
+            "status": "live",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -17642,14 +17642,14 @@
             },
             {
                 "step": "first committee",
-                "status": "current",
-                "statusLabel": "Pending",
-                "statusDate": null
+                "status": "passed",
+                "statusLabel": "Advanced",
+                "statusDate": "02/10/2025"
             },
             {
                 "step": "first chamber",
-                "status": "future",
-                "statusLabel": null,
+                "status": "current",
+                "statusLabel": "Pending",
                 "statusDate": null
             },
             {
@@ -22690,10 +22690,10 @@
         "lcIdentifier": "LC0001",
         "type": "senate bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
+            "key": "In First House Committee--Tabled",
             "step": "First chamber",
-            "label": "In committee",
-            "status": "live",
+            "label": "Tabled in committee",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -22705,9 +22705,9 @@
             },
             {
                 "step": "first committee",
-                "status": "current",
-                "statusLabel": "Pending",
-                "statusDate": null
+                "status": "blocked",
+                "statusLabel": "Tabled",
+                "statusDate": "02/10/2025"
             },
             {
                 "step": "first chamber",
@@ -28061,8 +28061,8 @@
         "voteMajorityRequired": "3/4 of Each House",
         "voteRequirements": [
             "THREE_FOURTHS",
-            "SIMPLE",
-            "TWO_THIRDS"
+            "TWO_THIRDS",
+            "SIMPLE"
         ],
         "subjects": [
             "Appropriations, Coal Tax Fund Principal",
@@ -28091,8 +28091,8 @@
         "lcIdentifier": "LC0535",
         "type": "house bill",
         "status": {
-            "key": "In Second House Committee--Nontabled",
-            "step": "Second chamber",
+            "key": "In First House Committee--Nontabled",
+            "step": "First chamber",
             "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
@@ -29416,8 +29416,8 @@
         "lcIdentifier": "LC0545",
         "type": "house bill",
         "status": {
-            "key": "In Second House Committee--Nontabled",
-            "step": "Second chamber",
+            "key": "In First House Committee--Nontabled",
+            "step": "First chamber",
             "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
@@ -47951,10 +47951,10 @@
         "lcIdentifier": "LC1340",
         "type": "house bill",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
+            "key": "In First House Committee--Nontabled",
+            "step": "First chamber",
+            "label": "In committee",
+            "status": "live",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -61045,8 +61045,8 @@
         "lcIdentifier": "LC0950",
         "type": "house bill",
         "status": {
-            "key": "In Second House Committee--Nontabled",
-            "step": "Second chamber",
+            "key": "In First House Committee--Nontabled",
+            "step": "First chamber",
             "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
