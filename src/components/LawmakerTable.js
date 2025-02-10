@@ -126,8 +126,9 @@ const Row = ({ name, party, district, locale, portrait, lawmakers }) => {
             <td>
                 {imageUrl && (
                     <a href={imageUrl} target="_blank" rel="noopener noreferrer">
-                        {/* TODO: Adjust sizing on the photo */}
-                        <img src={imageUrl} alt={`Portrait of ${name}`} css={{ width: '80px', height: 'auto' }} />
+                        <div css={{ width: '80px', height: '80px', overflow: 'hidden', position: 'relative' }}>
+                            <img src={imageUrl} alt={`Portrait of ${name}`} css={{ width: '100%', height: 'auto', position: 'absolute', top: '0' }} />
+                        </div>
                     </a>
                 )}
             </td>
