@@ -1,3 +1,6 @@
+import withPlugins from 'next-compose-plugins';
+// import { withSitemap } from 'next-sitemap';
+
 const isProd = process.env.NODE_ENV === 'production'
 const currentBasePath = '/capitol-tracker-2025'
 
@@ -34,4 +37,4 @@ const nextConfig = {
     },
 };
 
-export default nextConfig;
+export default withPlugins([], nextConfig);
