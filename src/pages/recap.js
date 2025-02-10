@@ -60,7 +60,7 @@ const Actions = () => {
 
           {houseActionTypes.length > 0 && (
             <div>
-              <h3>🏛️ HOUSE</h3>
+              <h3>🏠 HOUSE</h3>
               {houseActionTypes.map(description => {
                 const actionsOfType = houseActions.filter(d => d.description === description);
                 return (

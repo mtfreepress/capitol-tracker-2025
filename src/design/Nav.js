@@ -148,7 +148,7 @@ const Nav = ({ location }) => {
                 <div css={[navRowStyle, navRowPrimary]}>
                     <Link href='/house' passHref legacyBehavior>
                         <a css={[navItemStyle, navPrimaryStyle]}>
-                            <div css={navPrimaryTitle}>🏛 House</div>
+                            <div css={navPrimaryTitle}>🏠 House</div>
                             <div css={navPrimaryInfo}>{houseControl}-held {houseSplit}</div>
                         </a>
                     </Link>
