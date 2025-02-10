@@ -13,8 +13,8 @@ const contentCss = css`
     margin-bottom: 0.5em;
 `;
 
-const TruncatedContainer = ({ children, height = 500, openedText = 'See less', closedText = 'See all' }) => {
-    const [isClosed, setClosedState] = useState(true);
+const TruncatedContainer = ({ children, height = 500, openedText = 'See less', closedText = 'See all', defaultOpen = false }) => {
+    const [isClosed, setClosedState] = useState(!defaultOpen);
     const toggleClosedState = () => setClosedState(prev => !prev);
 
     const truncateCss = css`
@@ -39,6 +39,7 @@ TruncatedContainer.propTypes = {
     height: PropTypes.number,
     openedText: PropTypes.string,
     closedText: PropTypes.string,
+    defaultOpen: PropTypes.bool,
 };
 
 export default TruncatedContainer;

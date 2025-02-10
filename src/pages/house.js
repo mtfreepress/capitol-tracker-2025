@@ -52,7 +52,7 @@ const House = ({ representatives, committees }) => {
       <ChamberLeadership leadership={leadership} />
 
       <h3 id="members">Membership</h3>
-      <TruncatedContainer height={600} closedText="See full roster" openedText="See less">
+      <TruncatedContainer height={600} closedText="See full roster" openedText="See less" defaultOpen={true}>
         <Roster chamberLabel="House" lawmakers={representatives} />
       </TruncatedContainer>
 
