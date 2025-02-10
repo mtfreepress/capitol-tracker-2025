@@ -203,9 +203,9 @@
         "lcIdentifier": "LC2799",
         "type": "joint resolution",
         "status": {
-            "key": "Transmitted to Second House",
+            "key": "In Second House Committee--Nontabled",
             "step": "Second chamber",
-            "label": "Transmitted",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -489,9 +489,9 @@
         "lcIdentifier": "LC0206",
         "type": "joint resolution",
         "status": {
-            "key": "Transmitted to Second House",
+            "key": "In Second House Committee--Nontabled",
             "step": "Second chamber",
-            "label": "Transmitted",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -2187,9 +2187,9 @@
         "lcIdentifier": "LC0112",
         "type": "senate bill",
         "status": {
-            "key": "Transmitted to Second House",
+            "key": "In Second House Committee--Nontabled",
             "step": "Second chamber",
-            "label": "Transmitted",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -3186,9 +3186,9 @@
         "lcIdentifier": "LC0109",
         "type": "senate bill",
         "status": {
-            "key": "Transmitted to Second House",
+            "key": "In Second House Committee--Nontabled",
             "step": "Second chamber",
-            "label": "Transmitted",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -8149,9 +8149,9 @@
         "lcIdentifier": "LC0961",
         "type": "senate bill",
         "status": {
-            "key": "Transmitted to Second House",
+            "key": "In Second House Committee--Nontabled",
             "step": "Second chamber",
-            "label": "Transmitted",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -17878,9 +17878,9 @@
         "lcIdentifier": "LC0014",
         "type": "senate bill",
         "status": {
-            "key": "Transmitted to Second House",
+            "key": "In Second House Committee--Nontabled",
             "step": "Second chamber",
-            "label": "Transmitted",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -20846,9 +20846,9 @@
         "lcIdentifier": "LC2447",
         "type": "senate bill",
         "status": {
-            "key": "Transmitted to Second House",
+            "key": "In Second House Committee--Nontabled",
             "step": "Second chamber",
-            "label": "Transmitted",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -21516,9 +21516,9 @@
         "lcIdentifier": "LC4194",
         "type": "senate bill",
         "status": {
-            "key": "Transmitted to Second House",
+            "key": "In Second House Committee--Nontabled",
             "step": "Second chamber",
-            "label": "Transmitted",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -21767,9 +21767,9 @@
         "lcIdentifier": "LC1030",
         "type": "senate bill",
         "status": {
-            "key": "Transmitted to Second House",
+            "key": "In Second House Committee--Nontabled",
             "step": "Second chamber",
-            "label": "Transmitted",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -21853,9 +21853,9 @@
         "lcIdentifier": "LC2796",
         "type": "senate bill",
         "status": {
-            "key": "Transmitted to Second House",
+            "key": "In Second House Committee--Nontabled",
             "step": "Second chamber",
-            "label": "Transmitted",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -25050,11 +25050,11 @@
         "lcIdentifier": "LC2559",
         "type": "house resolution",
         "status": {
-            "key": "Passed By Legislature--Enrolling and Final Preparation Process",
-            "step": "Through Legislature",
-            "label": "Passed both chambers",
-            "status": "live",
-            "statusAtSessionEnd": "pending, passed legislature"
+            "key": "Became Law",
+            "label": "",
+            "step": "Passed",
+            "status": "became-law",
+            "statusAtSessionEnd": "became law"
         },
         "progress": [
             {
@@ -25752,9 +25752,9 @@
         "lcIdentifier": "LC0895",
         "type": "joint resolution",
         "status": {
-            "key": "In First House--Introduced",
+            "key": "In First House Committee--Nontabled",
             "step": "First chamber",
-            "label": "Introduced",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -27989,9 +27989,9 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "3/4 of Each House",
         "voteRequirements": [
-            "TWO_THIRDS",
             "THREE_FOURTHS",
-            "SIMPLE"
+            "SIMPLE",
+            "TWO_THIRDS"
         ],
         "subjects": [
             "Appropriations, Coal Tax Fund Principal",
@@ -57484,10 +57484,10 @@
         "lcIdentifier": "LC1972",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
+            "key": "In First House Committee--Tabled",
             "step": "First chamber",
-            "label": "In committee",
-            "status": "live",
+            "label": "Tabled in committee",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -57499,14 +57499,14 @@
             },
             {
                 "step": "first committee",
-                "status": "passed",
-                "statusLabel": "Advanced",
-                "statusDate": "02/07/2025"
+                "status": "blocked",
+                "statusLabel": "Tabled",
+                "statusDate": "01/23/2025"
             },
             {
                 "step": "first chamber",
-                "status": "current",
-                "statusLabel": "Pending",
+                "status": "future",
+                "statusLabel": null,
                 "statusDate": null
             },
             {
