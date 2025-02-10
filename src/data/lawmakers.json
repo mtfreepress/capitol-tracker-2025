@@ -30291,7 +30291,57 @@
             }
         ],
         "imageSlug": "2025/gregg-hunter.jpg",
-        "sponsoredBills": [],
+        "sponsoredBills": [
+            {
+                "key": "sj-12",
+                "identifier": "SJ 12",
+                "title": "Interim study on energy transmission",
+                "chamber": "senate",
+                "status": {
+                    "key": "In First House--Introduced",
+                    "step": "First chamber",
+                    "label": "Introduced",
+                    "status": "live",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "02/10/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3362?open_tab=bill",
+                "fiscalNoteUrl": null,
+                "legalNoteUrl": null,
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Gregg Hunter",
+                    "party": "R",
+                    "locale": "Glasgow",
+                    "district": "SD 15"
+                }
+            }
+        ],
         "votingSummary": {
             "name": "Gregg Hunter",
             "party": "R",
