@@ -123,7 +123,11 @@ const LawmakerPage = ({ lawmaker }) => {
       <ReactMarkdown>{lawmakerPageText}</ReactMarkdown>
 
       <History name={name} history={legislativeHistory} />
+      <h3 id="mtfp-coverage">Montana Free Press coverage</h3>
+      {articles.length > 0 ? <LinksList articles={articles} /> : <div>Nothing currently tagged in our archive.</div>}
+
       <h3 id="committees">Committee assignments</h3>
+
       <LawmakerCommittees committees={committees} />
 
       <h3 id="bills-sponsored">Bills sponsored</h3>
@@ -140,8 +144,6 @@ const LawmakerPage = ({ lawmaker }) => {
       <h3 id="election-history">{`${district} election results`}</h3>
       <LawmakerElectionHistory lawmaker={lawmaker} />
 
-      <h3 id="mtfp-coverage">Montana Free Press coverage</h3>
-      {articles.length > 0 ? <LinksList articles={articles} /> : <div>Nothing currently tagged in our archive.</div>}
 
       <ContactUs />
     </Layout>
