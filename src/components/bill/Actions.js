@@ -359,7 +359,7 @@ const VoteListing = ({ votes, voteUrl, defaultOpen = false }) => {
     }
     {
       isOpen ?
-        <button className='inlineButton' onClick={() => setIsOpen(false)}>
+        <button className='inline-button' onClick={() => setIsOpen(false)}>
           Hide full vote breakdown
         </button> : null
     }
