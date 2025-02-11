@@ -136,6 +136,67 @@
         "imageSlug": "2025/eric-albus.jpg",
         "sponsoredBills": [
             {
+                "key": "hb-450",
+                "identifier": "HB 450",
+                "title": "Generally revise bird dog training licensing laws",
+                "chamber": "house",
+                "status": {
+                    "key": "In First House--Introduced",
+                    "step": "First chamber",
+                    "label": "Introduced",
+                    "status": "live",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "02/11/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC4148?open_tab=bill",
+                "fiscalNoteUrl": null,
+                "legalNoteUrl": null,
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Eric Albus",
+                    "party": "R",
+                    "locale": "Glasgow",
+                    "district": "HD 28"
+                }
+            },
+            {
                 "key": "hb-124",
                 "identifier": "HB 124",
                 "title": "Require bicycles to go opposite the flow of traffic",
@@ -11310,9 +11371,9 @@
                 "title": "Resolution on Marbury v. Madison",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Introduced",
+                    "key": "In First House Committee--Nontabled",
                     "step": "First chamber",
-                    "label": "Introduced",
+                    "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -11481,9 +11542,9 @@
                 "title": "Creating sheriffs' first initiative for cooperation and communication",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Introduced",
+                    "key": "In First House Committee--Nontabled",
                     "step": "First chamber",
-                    "label": "Introduced",
+                    "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -15849,9 +15910,9 @@
                 "title": "Increase registration fee for underground petroleum tanks",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Introduced",
+                    "key": "In First House Committee--Nontabled",
                     "step": "First chamber",
-                    "label": "Introduced",
+                    "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -24356,9 +24417,9 @@
                 "title": "Revise public safety officer certification standards",
                 "chamber": "house",
                 "status": {
-                    "key": "Transmitted to Second House",
+                    "key": "In Second House Committee--Nontabled",
                     "step": "Second chamber",
-                    "label": "Transmitted",
+                    "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -32197,10 +32258,10 @@
                 "title": "Generally revise insurance laws related to prior authorization of chronic conditions",
                 "chamber": "house",
                 "status": {
-                    "key": "Probably Dead",
-                    "label": "",
-                    "step": "Failed",
-                    "status": "stalled",
+                    "key": "In First House Committee--Nontabled",
+                    "step": "First chamber",
+                    "label": "In committee",
+                    "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -34185,9 +34246,9 @@
                 "title": "Provide deadline to file for property tax relief from a disaster",
                 "chamber": "house",
                 "status": {
-                    "key": "Transmitted to Second House",
+                    "key": "In Second House Committee--Nontabled",
                     "step": "Second chamber",
-                    "label": "Transmitted",
+                    "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -51072,9 +51133,9 @@
                 "title": "Revising public utility resource planning laws",
                 "chamber": "house",
                 "status": {
-                    "key": "Transmitted to Second House",
+                    "key": "In Second House Committee--Nontabled",
                     "step": "Second chamber",
-                    "label": "Transmitted",
+                    "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -53547,9 +53608,9 @@
                 "title": "Revise laws to protect children from obscene content through electronic devices",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Introduced",
+                    "key": "In First House Committee--Nontabled",
                     "step": "First chamber",
-                    "label": "Introduced",
+                    "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -71037,9 +71098,9 @@
                 "title": "Generally revising telecommunications regulation laws",
                 "chamber": "house",
                 "status": {
-                    "key": "Transmitted to Second House",
+                    "key": "In Second House Committee--Nontabled",
                     "step": "Second chamber",
-                    "label": "Transmitted",
+                    "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -71768,8 +71829,8 @@
                 "title": "Revising telecommunications provider registration laws",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House Committee--Nontabled",
-                    "step": "First chamber",
+                    "key": "In Second House Committee--Nontabled",
+                    "step": "Second chamber",
                     "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
@@ -71813,6 +71874,67 @@
                     }
                 ],
                 "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0249?open_tab=bill",
+                "fiscalNoteUrl": null,
+                "legalNoteUrl": null,
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Daniel Zolnikov",
+                    "party": "R",
+                    "locale": "Billings",
+                    "district": "SD 22"
+                }
+            },
+            {
+                "key": "sb-297",
+                "identifier": "SB 297",
+                "title": "Generally revise privacy laws",
+                "chamber": "senate",
+                "status": {
+                    "key": "In First House--Introduced",
+                    "step": "First chamber",
+                    "label": "Introduced",
+                    "status": "live",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "02/11/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0372?open_tab=bill",
                 "fiscalNoteUrl": null,
                 "legalNoteUrl": null,
                 "numArticles": 0,
@@ -71951,9 +72073,9 @@
                 "title": "Increase thresholds for railroad accident reporting requirements",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Introduced",
-                    "step": "First chamber",
-                    "label": "Introduced",
+                    "key": "In Second House Committee--Nontabled",
+                    "step": "Second chamber",
+                    "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -72012,9 +72134,9 @@
                 "title": "Revise class d motor carrier deadline adjustment laws",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Introduced",
-                    "step": "First chamber",
-                    "label": "Introduced",
+                    "key": "In Second House Committee--Nontabled",
+                    "step": "Second chamber",
+                    "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
