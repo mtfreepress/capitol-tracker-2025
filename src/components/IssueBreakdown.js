@@ -7,8 +7,12 @@ import { css } from '@emotion/react'
 const keyIssuesStyle = css`
   .topic-title {
     text-transform: uppercase;
+    padding-bottom: 0.2em;
+    border-bottom: 1px solid var(--gray5);
+  }
+  .issue-title {
     background-color: var(--tan6);
-    padding: 0.2em 0.5em;
+    padding: 0.5em 0.75em;
     color: white;
   }
   .issue-description {
@@ -42,7 +46,7 @@ const IssueBreakdown = ({ topics, bills }) => {
                   {topic.issues.map((issue, i) => {
                     const issueBills = bills.filter(d => issue.bills.includes(d.identifier))
                     return  <div key={issue.title}>
-                      <h4>Issue: {issue.title}</h4>
+                      <h4 className="issue-title">Issue: {issue.title}</h4>
                       <div className="issue-description">{issue.description}</div>
                       <BillTable  bills={issueBills} displayLimit={15} suppressCount={true} />
                     </div>
