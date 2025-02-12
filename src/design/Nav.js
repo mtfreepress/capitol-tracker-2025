@@ -94,7 +94,7 @@ const activeStyle = css`
 
 const PAGE_LINKS = [
     // TODO: come back to these and add back in once fixed
-    // { path: '/#key-bill-status', label: '📑 Key bills' },
+    { path: '/#key-issues', label: '📌 Key issues' },
     { path: '/all-bills/', label: '🗂 All bills' },
     { path: '/#find-bill', label: '🔎 Find a bill' },
     { path: '/#find-lawmaker', label: '🔎 Find a lawmaker' },
