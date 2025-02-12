@@ -7572,10 +7572,10 @@
         "lcIdentifier": "LC2794",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Introduced",
-            "step": "First chamber",
-            "label": "Introduced",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -7658,9 +7658,9 @@
         "lcIdentifier": "LC0786",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Introduced",
+            "key": "In First House Committee--Nontabled",
             "step": "First chamber",
-            "label": "Introduced",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -7742,9 +7742,9 @@
         "lcIdentifier": "LC0194",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Introduced",
+            "key": "In First House Committee--Nontabled",
             "step": "First chamber",
-            "label": "Introduced",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -30167,8 +30167,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "3/4 of Each House",
         "voteRequirements": [
-            "TWO_THIRDS",
             "SIMPLE",
+            "TWO_THIRDS",
             "THREE_FOURTHS"
         ],
         "subjects": [
@@ -33011,6 +33011,176 @@
         "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0209?open_tab=bill",
         "fiscalNoteUrl": null,
         "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0209?open_tab=amend",
+        "legalNoteUrl": null,
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0
+    },
+    {
+        "key": "hb-483",
+        "identifier": "HB 483",
+        "identifierLong": "House Bill 483",
+        "chamber": "house",
+        "title": "Revise laws to reduce property taxes while preserving the current 95 school equalization mills",
+        "session": "2",
+        "lcIdentifier": "LC3189",
+        "type": "house bill",
+        "status": {
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "passed",
+                "statusLabel": "Introduced",
+                "statusDate": "02/12/2025"
+            },
+            {
+                "step": "first committee",
+                "status": "current",
+                "statusLabel": "Pending",
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Courtenay Sprunger",
+            "party": "R",
+            "locale": "Kalispell",
+            "district": "HD 7"
+        },
+        "requestor": "Courtenay Sprunger",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "Simple",
+        "voteRequirements": [
+            "SIMPLE"
+        ],
+        "subjects": [
+            "Schools and Education",
+            "Taxation--Property",
+            "Revenue, State",
+            "School Finance",
+            "State Finance  (see also: Appropriations; Taxation Subjects)",
+            "Counties  (see also: Local Government)"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3189?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3189?open_tab=bill",
+        "fiscalNoteUrl": null,
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3189?open_tab=amend",
+        "legalNoteUrl": null,
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0
+    },
+    {
+        "key": "hb-482",
+        "identifier": "HB 482",
+        "identifierLong": "House Bill 482",
+        "chamber": "house",
+        "title": "Provide that local government elections be partisan",
+        "session": "2",
+        "lcIdentifier": "LC1735",
+        "type": "house bill",
+        "status": {
+            "key": "In First House--Introduced",
+            "step": "First chamber",
+            "label": "Introduced",
+            "status": "live",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "passed",
+                "statusLabel": "Introduced",
+                "statusDate": "02/12/2025"
+            },
+            {
+                "step": "first committee",
+                "status": "current",
+                "statusLabel": "Pending",
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Lukas Schubert",
+            "party": "R",
+            "locale": "Kalispell",
+            "district": "HD 8"
+        },
+        "requestor": "Lukas Schubert",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "Simple",
+        "voteRequirements": [
+            "SIMPLE"
+        ],
+        "subjects": [
+            "Elections  (see also: Ballot Issues)",
+            "Local Government  (see also: City Subjects; County Subjects)"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1735?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1735?open_tab=bill",
+        "fiscalNoteUrl": null,
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1735?open_tab=amend",
         "legalNoteUrl": null,
         "vetoMemoUrl": null,
         "articles": [],
@@ -66664,8 +66834,25 @@
         "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2129?open_tab=amend",
         "legalNoteUrl": null,
         "vetoMemoUrl": null,
-        "articles": [],
-        "numArticles": 0
+        "articles": [
+            {
+                "title": "Bathroom bill clears GOP-led Legislature, poised to become law",
+                "category": "2025 Legislature",
+                "subtitle": "",
+                "date": "2025-02-11T17:33:19.000Z",
+                "link": "https://montanafreepress.org/2025/02/11/bathroom-bill-clears-gop-led-legislature-poised-to-become-law/",
+                "author": "Mara Silvers",
+                "imageUrl": "https://montanafreepress.org/2025/02/11/bathroom-bill-clears-gop-led-legislature-poised-to-become-law/img_5641-scaled/",
+                "billTags": [
+                    "HB 121"
+                ],
+                "lawmakerTags": [
+                    "Cora Neumann"
+                ],
+                "governorTags": []
+            }
+        ],
+        "numArticles": 1
     },
     {
         "key": "hb-120",

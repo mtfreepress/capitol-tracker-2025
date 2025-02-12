@@ -4531,9 +4531,9 @@
                 "title": "Prohibit sale of tax deed to foreign entity",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Introduced",
+                    "key": "In First House Committee--Nontabled",
                     "step": "First chamber",
-                    "label": "Introduced",
+                    "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -9684,9 +9684,9 @@
                 "title": "Revise funeral trust laws",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Introduced",
+                    "key": "In First House Committee--Nontabled",
                     "step": "First chamber",
-                    "label": "Introduced",
+                    "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -43484,10 +43484,10 @@
                 "title": "Reallocate Montana marijuana tax revenue",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Introduced",
-                    "step": "First chamber",
-                    "label": "Introduced",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -48866,7 +48866,24 @@
                 "chamber": "senate"
             }
         ],
-        "articles": [],
+        "articles": [
+            {
+                "title": "Bathroom bill clears GOP-led Legislature, poised to become law",
+                "category": "2025 Legislature",
+                "subtitle": "",
+                "date": "2025-02-11T17:33:19.000Z",
+                "link": "https://montanafreepress.org/2025/02/11/bathroom-bill-clears-gop-led-legislature-poised-to-become-law/",
+                "author": "Mara Silvers",
+                "imageUrl": "https://montanafreepress.org/2025/02/11/bathroom-bill-clears-gop-led-legislature-poised-to-become-law/img_5641-scaled/",
+                "billTags": [
+                    "HB 121"
+                ],
+                "lawmakerTags": [
+                    "Cora Neumann"
+                ],
+                "governorTags": []
+            }
+        ],
         "imageSlug": "2025/cora-neumann.jpg",
         "sponsoredBills": [
             {
@@ -59188,6 +59205,67 @@
         "imageSlug": "2025/lukas-schubert.jpg",
         "sponsoredBills": [
             {
+                "key": "hb-482",
+                "identifier": "HB 482",
+                "title": "Provide that local government elections be partisan",
+                "chamber": "house",
+                "status": {
+                    "key": "In First House--Introduced",
+                    "step": "First chamber",
+                    "label": "Introduced",
+                    "status": "live",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "02/12/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1735?open_tab=bill",
+                "fiscalNoteUrl": null,
+                "legalNoteUrl": null,
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Lukas Schubert",
+                    "party": "R",
+                    "locale": "Kalispell",
+                    "district": "HD 8"
+                }
+            },
+            {
                 "key": "hb-479",
                 "identifier": "HB 479",
                 "title": "Require candidates for office to disclose foreign citizenship",
@@ -60643,7 +60721,7 @@
                 "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2129?open_tab=bill",
                 "fiscalNoteUrl": "/bills/fiscal-note/hb-121",
                 "legalNoteUrl": null,
-                "numArticles": 0,
+                "numArticles": 1,
                 "sponsor": {
                     "name": "Kerri Seekins-Crowe",
                     "party": "R",
@@ -62208,6 +62286,67 @@
         "articles": [],
         "imageSlug": "2025/courtenay-sprunger.jpg",
         "sponsoredBills": [
+            {
+                "key": "hb-483",
+                "identifier": "HB 483",
+                "title": "Revise laws to reduce property taxes while preserving the current 95 school equalization mills",
+                "chamber": "house",
+                "status": {
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "02/12/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3189?open_tab=bill",
+                "fiscalNoteUrl": null,
+                "legalNoteUrl": null,
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Courtenay Sprunger",
+                    "party": "R",
+                    "locale": "Kalispell",
+                    "district": "HD 7"
+                }
+            },
             {
                 "key": "hb-417",
                 "identifier": "HB 417",
