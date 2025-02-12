@@ -68,7 +68,7 @@ const bills = billsRaw.map(bill => new Bill({
     bill,
     actions: actionsFlat.filter(d => d.bill === bill.key),
     votes: actionsFlat.filter(d => d.vote && d.vote.bill === bill.key).map(d => d.vote),
-    annotation: billAnnotations.find(d => d.Identifier === bill.key) || {},
+    annotation: billAnnotations.find(d => d.identifier === bill.key) || {},
     articles: articles.filter(d => d.billTags.includes(bill.key)),
 }))
 

@@ -53,12 +53,13 @@ export default class Bill {
         const {
             isKeyBill,
             category,
-            Explanation,
-            BillPageText,
+            explanation,
+            billPageText,
             // legalNoteLink, // Replaced by legal notes direct from LAWS system
             tags,
             vetoMemoUrl,
         } = annotation
+        // console.log(key, explanation, billPageText)
 
         this.identifier = key
         this.chamber = this.getChamber(key)
@@ -111,8 +112,8 @@ export default class Bill {
             // annotations
             isMajorBill: isKeyBill,
             majorBillCategory: category,
-            explanation: Explanation,
-            billPageText: BillPageText,
+            explanation,
+            billPageText,
 
             articles,
             numArticles: articles.length // for bill table summaries

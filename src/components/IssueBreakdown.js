@@ -38,12 +38,12 @@ const IssueBreakdown = ({ topics, bills }) => {
       { topics.map(topic => {
               return (
                 <div key={topic.topicTitle} id={urlize(topic.topicTitle)}>
-                  <h3 class="topic-title">{topic.topicTitle}</h3>
+                  <h3 className="topic-title">{topic.topicTitle}</h3>
                   {topic.issues.map((issue, i) => {
                     const issueBills = bills.filter(d => issue.bills.includes(d.identifier))
                     return  <div key={issue.title}>
                       <h4>Issue: {issue.title}</h4>
-                      <div class="issue-description">{issue.description}</div>
+                      <div className="issue-description">{issue.description}</div>
                       <BillTable  bills={issueBills} displayLimit={15} suppressCount={true} />
                     </div>
                   })}

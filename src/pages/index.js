@@ -20,8 +20,6 @@ const Index = ({ keyBills, billIndex, lawmakerIndex }) => {
   const howBillsMoveObj = processAnnotations.find(item => item.key === "howBillsMove");
   const howBillsMove = howBillsMoveObj ? howBillsMoveObj.content : null;
 
-  console.log(keyTopics)
-
   return (
     <div>
       <Layout home
