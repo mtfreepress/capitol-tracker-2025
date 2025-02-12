@@ -1075,8 +1075,8 @@
                 "title": "Revise laws related to motor vehicle laws for clarity and consistency",
                 "chamber": "house",
                 "status": {
-                    "key": "In Second House Committee--Nontabled",
-                    "step": "Second chamber",
+                    "key": "In First House Committee--Nontabled",
+                    "step": "First chamber",
                     "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
@@ -6983,7 +6983,7 @@
                 "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0953?open_tab=bill",
                 "fiscalNoteUrl": "/bills/fiscal-note/hb-245",
                 "legalNoteUrl": null,
-                "numArticles": 2,
+                "numArticles": 3,
                 "sponsor": {
                     "name": "Ed Buttrey",
                     "party": "R",
@@ -11786,10 +11786,10 @@
                 "title": "Generally revising administrative procedure laws relating to agency deference",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House Committee--Nontabled",
-                    "step": "First chamber",
-                    "label": "In committee",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -11803,7 +11803,7 @@
                         "step": "first committee",
                         "status": "passed",
                         "statusLabel": "Advanced",
-                        "statusDate": "02/12/2025"
+                        "statusDate": "01/29/2025"
                     },
                     {
                         "step": "first chamber",
@@ -26102,6 +26102,25 @@
         ],
         "articles": [
             {
+                "title": "Lawmakers in GOP-held Senate signal openness to continuing Medicaid expansion",
+                "category": "Health Care",
+                "subtitle": "",
+                "date": "2025-02-12T15:48:35.000Z",
+                "link": "https://montanafreepress.org/2025/02/12/lawmakers-in-gop-held-senate-signal-openness-to-continuing-medicaid-expansion/",
+                "author": "Mara Silvers",
+                "imageUrl": "https://montanafreepress.org/2025/02/12/lawmakers-in-gop-held-senate-signal-openness-to-continuing-medicaid-expansion/untitled-design-13-3/",
+                "billTags": [
+                    "HB 245",
+                    "SB 199",
+                    "SB 62"
+                ],
+                "lawmakerTags": [
+                    "Carl Glimm",
+                    "Jeremy Trebas"
+                ],
+                "governorTags": []
+            },
+            {
                 "title": "Medicaid expansion bills spur hours of testimony in first hearings",
                 "category": "2025 Legislature",
                 "subtitle": "",
@@ -26254,7 +26273,7 @@
                 "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0624?open_tab=bill",
                 "fiscalNoteUrl": "/bills/fiscal-note/sb-62",
                 "legalNoteUrl": null,
-                "numArticles": 1,
+                "numArticles": 2,
                 "sponsor": {
                     "name": "Carl Glimm",
                     "party": "R",
@@ -32463,6 +32482,21 @@
         ],
         "articles": [
             {
+                "title": "Slew of bills offering tax benefits and employment protection to dwindling number of volunteer firefighters en route to Senate ",
+                "category": "2025 Legislature",
+                "subtitle": "",
+                "date": "2025-02-11T14:54:36.000Z",
+                "link": "https://montanafreepress.org/2025/02/11/slew-of-bills-that-could-impact-montanas-dwindling-number-of-volunteer-firefighters-en-route-to-senate/",
+                "author": "Zeke Lloyd",
+                "imageUrl": "https://montanafreepress.org/2025/02/11/slew-of-bills-that-could-impact-montanas-dwindling-number-of-volunteer-firefighters-en-route-to-senate/burned_tree-2/",
+                "billTags": [],
+                "lawmakerTags": [
+                    "Curtis Schomer",
+                    "Llew Jones"
+                ],
+                "governorTags": []
+            },
+            {
                 "title": "Lawmakers debut policy draft to increase starting teacher pay",
                 "category": "2025 Legislature",
                 "subtitle": "",
@@ -38372,6 +38406,67 @@
         "lawmakerPageText": "",
         "imageSlug": "2025/brandon-ler.jpg",
         "sponsoredBills": [
+            {
+                "key": "hb-480",
+                "identifier": "HB 480",
+                "title": "Revise when a party in a proceeding is entitled to jury trial",
+                "chamber": "house",
+                "status": {
+                    "key": "In First House--Introduced",
+                    "step": "First chamber",
+                    "label": "Introduced",
+                    "status": "live",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "02/12/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2936?open_tab=bill",
+                "fiscalNoteUrl": null,
+                "legalNoteUrl": null,
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Brandon Ler",
+                    "party": "R",
+                    "locale": "Savage",
+                    "district": "HD 33"
+                }
+            },
             {
                 "key": "hb-389",
                 "identifier": "HB 389",
@@ -58345,7 +58440,23 @@
                 "chamber": "house"
             }
         ],
-        "articles": [],
+        "articles": [
+            {
+                "title": "Slew of bills offering tax benefits and employment protection to dwindling number of volunteer firefighters en route to Senate ",
+                "category": "2025 Legislature",
+                "subtitle": "",
+                "date": "2025-02-11T14:54:36.000Z",
+                "link": "https://montanafreepress.org/2025/02/11/slew-of-bills-that-could-impact-montanas-dwindling-number-of-volunteer-firefighters-en-route-to-senate/",
+                "author": "Zeke Lloyd",
+                "imageUrl": "https://montanafreepress.org/2025/02/11/slew-of-bills-that-could-impact-montanas-dwindling-number-of-volunteer-firefighters-en-route-to-senate/burned_tree-2/",
+                "billTags": [],
+                "lawmakerTags": [
+                    "Curtis Schomer",
+                    "Llew Jones"
+                ],
+                "governorTags": []
+            }
+        ],
         "imageSlug": "2025/curtis-schomer.jpg",
         "sponsoredBills": [
             {
@@ -59076,6 +59187,67 @@
         ],
         "imageSlug": "2025/lukas-schubert.jpg",
         "sponsoredBills": [
+            {
+                "key": "hb-479",
+                "identifier": "HB 479",
+                "title": "Require candidates for office to disclose foreign citizenship",
+                "chamber": "house",
+                "status": {
+                    "key": "In First House--Introduced",
+                    "step": "First chamber",
+                    "label": "Introduced",
+                    "status": "live",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "02/12/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3058?open_tab=bill",
+                "fiscalNoteUrl": null,
+                "legalNoteUrl": null,
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Lukas Schubert",
+                    "party": "R",
+                    "locale": "Kalispell",
+                    "district": "HD 8"
+                }
+            },
             {
                 "key": "hb-410",
                 "identifier": "HB 410",
@@ -59982,6 +60154,67 @@
                 ],
                 "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0318?open_tab=bill",
                 "fiscalNoteUrl": "/bills/fiscal-note/hb-93",
+                "legalNoteUrl": null,
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Kerri Seekins-Crowe",
+                    "party": "R",
+                    "locale": "Billings",
+                    "district": "HD 39"
+                }
+            },
+            {
+                "key": "hb-481",
+                "identifier": "HB 481",
+                "title": "Require posting of EPA guidance documents",
+                "chamber": "house",
+                "status": {
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "02/12/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0788?open_tab=bill",
+                "fiscalNoteUrl": null,
                 "legalNoteUrl": null,
                 "numArticles": 0,
                 "sponsor": {
@@ -64047,14 +64280,14 @@
                     },
                     {
                         "step": "first committee",
-                        "status": "current",
-                        "statusLabel": "Pending",
-                        "statusDate": null
+                        "status": "passed",
+                        "statusLabel": "Advanced",
+                        "statusDate": "02/12/2025"
                     },
                     {
                         "step": "first chamber",
-                        "status": "future",
-                        "statusLabel": null,
+                        "status": "current",
+                        "statusLabel": "Pending",
                         "statusDate": null
                     },
                     {
@@ -66197,7 +66430,27 @@
                 "chamber": "senate"
             }
         ],
-        "articles": [],
+        "articles": [
+            {
+                "title": "Lawmakers in GOP-held Senate signal openness to continuing Medicaid expansion",
+                "category": "Health Care",
+                "subtitle": "",
+                "date": "2025-02-12T15:48:35.000Z",
+                "link": "https://montanafreepress.org/2025/02/12/lawmakers-in-gop-held-senate-signal-openness-to-continuing-medicaid-expansion/",
+                "author": "Mara Silvers",
+                "imageUrl": "https://montanafreepress.org/2025/02/12/lawmakers-in-gop-held-senate-signal-openness-to-continuing-medicaid-expansion/untitled-design-13-3/",
+                "billTags": [
+                    "HB 245",
+                    "SB 199",
+                    "SB 62"
+                ],
+                "lawmakerTags": [
+                    "Carl Glimm",
+                    "Jeremy Trebas"
+                ],
+                "governorTags": []
+            }
+        ],
         "imageSlug": "2025/jeremy-trebas.jpg",
         "sponsoredBills": [
             {
@@ -66497,7 +66750,7 @@
                 "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0584?open_tab=bill",
                 "fiscalNoteUrl": "/bills/fiscal-note/sb-199",
                 "legalNoteUrl": null,
-                "numArticles": 0,
+                "numArticles": 1,
                 "sponsor": {
                     "name": "Jeremy Trebas",
                     "party": "R",
