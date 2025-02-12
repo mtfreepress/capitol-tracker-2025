@@ -763,6 +763,80 @@
         "numArticles": 0
     },
     {
+        "key": "sj-13",
+        "identifier": "SJ 13",
+        "identifierLong": "Senate Joint Resolution 13",
+        "chamber": "senate",
+        "title": "Study resolution for emergency medical services",
+        "session": "2",
+        "lcIdentifier": "LC0761",
+        "type": "study resolution",
+        "status": {
+            "key": "In First House--Introduced",
+            "step": "First chamber",
+            "label": "Introduced",
+            "status": "live",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "passed",
+                "statusLabel": "Introduced",
+                "statusDate": "02/12/2025"
+            },
+            {
+                "step": "first committee",
+                "status": "current",
+                "statusLabel": "Pending",
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "John Fuller",
+            "party": "R",
+            "locale": "Kalispell",
+            "district": "SD 4"
+        },
+        "requestor": "Kenneth Bogner",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "Simple",
+        "voteRequirements": [
+            "SIMPLE"
+        ],
+        "subjects": [
+            "Emergency and Disaster Services",
+            "Military Affairs",
+            "Counties  (see also: Local Government)",
+            "Health (see also: Health Care Services; Safety)",
+            "Legislature, Interim Studies"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0761?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0761?open_tab=bill",
+        "fiscalNoteUrl": null,
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0761?open_tab=amend",
+        "legalNoteUrl": null,
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0
+    },
+    {
         "key": "sj-12",
         "identifier": "SJ 12",
         "identifierLong": "Senate Joint Resolution 12",
@@ -29637,8 +29711,8 @@
         "voteMajorityRequired": "3/4 of Each House",
         "voteRequirements": [
             "SIMPLE",
-            "THREE_FOURTHS",
-            "TWO_THIRDS"
+            "TWO_THIRDS",
+            "THREE_FOURTHS"
         ],
         "subjects": [
             "Appropriations, Coal Tax Fund Principal",
