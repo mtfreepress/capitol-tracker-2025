@@ -8,15 +8,19 @@ import ContactUs from '../components/ContactUs';
 import BillLookup from '../components/input/BillLookup';
 import LawmakerLookup from '../components/input/LawmakerLookup';
 import DistrictLookup from '../components/input/DistrictLookup';
-import { urlize } from '../config/utils';
+import IssueBreakdown from '../components/IssueBreakdown';
+
+
 import processAnnotations from '../data/process-annotations.json';
-import keyBillCategories from '../data/bill-categories.json';
+import keyTopics from '../data/key-topics.json'
 import bills from '../data/bills.json'
 import lawmakers from '../data/lawmakers.json'
 
 const Index = ({ keyBills, billIndex, lawmakerIndex }) => {
   const howBillsMoveObj = processAnnotations.find(item => item.key === "howBillsMove");
   const howBillsMove = howBillsMoveObj ? howBillsMoveObj.content : null;
+
+  console.log(keyTopics)
 
   return (
     <div>
@@ -27,42 +31,25 @@ const Index = ({ keyBills, billIndex, lawmakerIndex }) => {
           socialTitle={"2025 Montana Free Press Capitol Tracker"}
           socialDescription={"The lawmakers, bills and votes making Montana's laws at the 2025 Legislature."}
         >
-        {/* TODO: Rework "Key Bills" */}
-        {/* <h2 id="key-bill-status">Key bill progress</h2>
-        <div>
-          {keyBillCategories.sort((a, b) => a.order - b.order).map((c, i) => (
-            <span key={c.category}>
-              {i !== 0 ? ' • ' : ''}
-              <Link href={`/#${urlize(c.category)}`}>{c.category}</Link>
-            </span>
-          ))}
-        </div>
-        <div className="note">
-          Major legislation identified by MTFP reporters. Where ambiguous, official bill titles are annotated with plain language summaries.
-        </div> */}
+
         <InfoPopup label="How bills move through the Legislature" content={howBillsMove} />
-        {
-          keyBillCategories
-            .filter(d => d.show)
-            .sort((a, b) => a.order - b.order)
-            .map(c => {
-              const billsInCat = keyBills.filter(d => d.majorBillCategory === c.category);
-              return (
-                <div key={c.category} id={urlize(c.category)}>
-                  <h4>{c.category}</h4>
-                  <div className="note">{c.description}</div>
-                  <BillTable bills={billsInCat} displayLimit={15} suppressCount={true} />
-                </div>
-              );
-            })
-        }
+
+        <h2 id="key-issues">Key 2025 issues</h2>
+        <IssueBreakdown topics={keyTopics} bills={bills}/>
+        
+        <hr />
+
         <h2 id="find-bill">Find a bill</h2>
         <BillLookup bills={billIndex} />
+
         <h2 id="find-lawmaker">Find a lawmaker</h2>
         <LawmakerLookup lawmakers={lawmakerIndex} />
+
         <NewsletterSignup />
+
         <h2 id="find-district">Find your district</h2>
         <DistrictLookup lawmakers={lawmakerIndex} />
+
         <ContactUs />
       </Layout>
     </div>

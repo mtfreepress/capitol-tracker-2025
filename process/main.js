@@ -38,6 +38,7 @@ const articlesRaw = getJson('./inputs/coverage/articles.json')
 const billAnnotations = collectYamls('./inputs/annotations/bills/*.yml')
 const lawmakerAnnotations = collectYamls('./inputs/annotations/lawmakers/*.yml')
 const processNotes = getYaml('./inputs/annotations/process-notes.yml')
+const keyTopicBreakdown = getYaml('./inputs/annotations/key-issues.yml')
 
 // Text content
 const homePageTopper = getText('./inputs/annotations/pages/home.md')
@@ -114,16 +115,6 @@ lawmakers.forEach(lawmaker => {
 // bills.forEach(bill => bill.data.isOnCalendar = calendarOutput.billsOnCalendar.includes(bill.data.identifier))
 // const recapOutput = new RecapPage({ actions: actionsFlat, bills, updateTime }).export()
 
-const keyBillCategoryKeys = Array.from(new Set(billAnnotations.map(d => d.category))).filter(d => d !== null).filter(d => d !== undefined)
-const keyBillCategoryList = keyBillCategoryKeys.map(category => {
-    const match = billAnnotations.find(d => d.category === category)
-    return {
-        category,
-        description: match.categoryDescription,
-        order: match.categoryOrder,
-        show: match.showCategory,
-    }
-})
 const headerOutput = { updateTime }
 
 const overviewPageOutput = {
@@ -180,7 +171,7 @@ writeJson('./src/data/lawmakers.json', lawmakerOutput)
 writeJson('./src/data/header.json', headerOutput)
 writeJson('./src/data/articles.json', articles)
 writeJson('./src/data/process-annotations.json', processNotes)
-writeJson('./src/data/bill-categories.json', keyBillCategoryList)
+writeJson('./src/data/key-topics.json', keyTopicBreakdown)
 // writeJson('./src/data/calendar.json', calendarOutput)
 // writeJson('./src/data/recap.json', recapOutput)
 // writeJson('./src/data/participation.json', participationPageOutput)
