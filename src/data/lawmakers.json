@@ -37236,9 +37236,9 @@
                 "title": "Generally revise laws related to supervision on probation",
                 "chamber": "senate",
                 "status": {
-                    "key": "Transmitted to Second House",
+                    "key": "In Second House Committee--Nontabled",
                     "step": "Second chamber",
-                    "label": "Transmitted",
+                    "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -48221,6 +48221,67 @@
         ],
         "imageSlug": "2025/shane-morigeau.jpg",
         "sponsoredBills": [
+            {
+                "key": "sb-312",
+                "identifier": "SB 312",
+                "title": "Generally revise laws for crime victims",
+                "chamber": "senate",
+                "status": {
+                    "key": "In First House--Introduced",
+                    "step": "First chamber",
+                    "label": "Introduced",
+                    "status": "live",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "02/13/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0131?open_tab=bill",
+                "fiscalNoteUrl": null,
+                "legalNoteUrl": null,
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Shane Morigeau",
+                    "party": "D",
+                    "locale": "Missoula",
+                    "district": "SD 50"
+                }
+            },
             {
                 "key": "sb-311",
                 "identifier": "SB 311",
