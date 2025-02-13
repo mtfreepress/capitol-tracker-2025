@@ -29,17 +29,20 @@ const urlizeDay = (day) => day.replaceAll(",", "").replaceAll(" ", "-");
 // Calendar Component
 const Calendar = ({ onCalendarBills, committees }) => {
     const { scheduledHearings, datesOnCalendar } = calendar;
-
+    console.log({onCalendarBills})
+    console.log({datesOnCalendar})
     // map dates into readable format
     const days = datesOnCalendar.map((d) => getDay(d));
+    console.log({days})
 
     const schedule = days.map((day, i) => {
-        const hearings = scheduledHearings.filter((d) => getDay(d.date) === day);
+        const hearings = scheduledHearings.filter((d) => getDay(d.data.date) === day);
 
         // group committee data by their hearing times
-        const committeesWithHearings = Array.from(new Set(hearings.map((a) => a.committee))).map(
+        const committeesWithHearings = Array.from(new Set(hearings.map((a) => a.data.committee))).map(
             (name) => {
                 const match = committees.find((d) => d.name === name) || {};
+            
                 if (!match.key) console.log("No committee match", name); // log unmatched committees
                 return {
                     name,
@@ -48,7 +51,7 @@ const Calendar = ({ onCalendarBills, committees }) => {
                 };
             }
         );
-
+        // console.log({committeesWithHearings})
         // sort committees into categories
         const categories = {
             amPolicyCommittees: committeesWithHearings.filter((d) => d.cat === "morning-policy"),
@@ -60,6 +63,7 @@ const Calendar = ({ onCalendarBills, committees }) => {
                 (d) => !["morning-policy", "afternoon-policy", "morning-fiscal-sub", "varies-fiscal"].includes(d.cat)
             ),
         };
+        // console.log({categories})
 
         return (
             <div key={day} id={urlizeDay(day)} css={scheduleDayStyle}>
@@ -77,20 +81,20 @@ const Calendar = ({ onCalendarBills, committees }) => {
                     <>
 
                 {/* TODO: Fix committees and renable this */}
-                        {/* <h3>Committee Hearings</h3>
+                        <h3>Committee Hearings</h3>
                         <div className="note">
                             Bill hearings allow the sponsor to explain a bill and enable public testimony.
-                        </div> */}
+                        </div>
 
                         {/* iterate over committee categories */}
                         {Object.entries(categories).map(([key, committees]) => {
                             if (committees.length > 0) {
                                 const title = {
                                     //  TODO: Revert this once committees is fixed
-                                    // amPolicyCommittees: "Morning Policy Committees",
-                                    // pmPolicyCommittees: "Afternoon Policy Committees",
-                                    // appropsCommittees: "Budget Committees",
-                                    // otherCommittees: "Other Committees",
+                                    amPolicyCommittees: "Morning Policy Committees",
+                                    pmPolicyCommittees: "Afternoon Policy Committees",
+                                    appropsCommittees: "Budget Committees",
+                                    otherCommittees: "Other Committees",
                                     amPolicyCommittees: "",
                                     pmPolicyCommittees: "",
                                     appropsCommittees: "",

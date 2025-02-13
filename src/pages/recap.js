@@ -29,11 +29,11 @@ const Actions = () => {
     const committeesWithActions = Array.from(new Set(day.actions.map(a => a.committee)));
     if (committeesWithActions.length === 0) return null;
 
-    const displayCommittees = committeesWithActions.filter(d => d !== null).sort((a, b) => a - b);
-    const nonCommitteeActions = day.actions.filter(d => d.committee === null);
-    const governorActions = nonCommitteeActions.filter(d => d.posession === 'governor');
-    const houseActions = nonCommitteeActions.filter(d => d.posession === 'house');
-    const senateActions = nonCommitteeActions.filter(d => d.posession === 'senate');
+    const displayCommittees = committeesWithActions.filter(d => d !== null && d !== 'undefined').sort((a, b) => a - b);
+    const nonCommitteeActions = day.actions.filter(d => d.committee === 'undefined');
+    const governorActions = nonCommitteeActions.filter(d => d.possession.toLowerCase() === 'governor');
+    const houseActions = nonCommitteeActions.filter(d => d.possession.toLowerCase() === 'house');
+    const senateActions = nonCommitteeActions.filter(d => d.possession.toLowerCase() === 'senate');
 
     const governorActionTypes = Array.from(new Set(governorActions.map(d => d.description))).sort();
     const houseActionTypes = Array.from(new Set(houseActions.map(d => d.description))).sort();
@@ -60,7 +60,7 @@ const Actions = () => {
 
           {houseActionTypes.length > 0 && (
             <div>
-              <h3>🏠 HOUSE</h3>
+              <h3>🏠 HOUSE FLOOR</h3>
               {houseActionTypes.map(description => {
                 const actionsOfType = houseActions.filter(d => d.description === description);
                 return (
@@ -75,7 +75,7 @@ const Actions = () => {
 
           {senateActionTypes.length > 0 && (
             <div>
-              <h3>🏛️ SENATE</h3>
+              <h3>🏛️ SENATE FLOOR</h3>
               {senateActionTypes.map(description => {
                 const actionsOfType = senateActions.filter(d => d.description === description);
                 return (
@@ -122,7 +122,7 @@ const Actions = () => {
       socialDescription={"The lawmakers, bills and votes making Montana's laws at the 2025 Legislature."}
     >
       <h1>What lawmakers have done so far</h1>
-      <p>Procedural action on bills under consideration by the 2023 Legislature.</p>
+      <p>Procedural action on bills under consideration by the 2025 Legislature.</p>
 
       {actions}
 
