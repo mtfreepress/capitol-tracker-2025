@@ -1277,20 +1277,6 @@
         "id": "SB1-0023",
         "bill": "SB 1",
         "date": "02/12/2025",
-        "description": "Committee Report--Bill Concurred",
-        "possession": "House",
-        "committee": "(H) Taxation",
-        "actionUrl": null,
-        "recordings": [],
-        "transcriptUrl": null,
-        "key": "Committee Report--Bill Concurred",
-        "committeeHearingTime": null,
-        "vote": null
-    },
-    {
-        "id": "SB1-0024",
-        "bill": "SB 1",
-        "date": "02/13/2025",
         "description": "Committee Executive Action--Bill Concurred",
         "possession": "House",
         "committee": "(H) Taxation",
@@ -1300,9 +1286,9 @@
         "key": "Committee Executive Action--Bill Concurred",
         "committeeHearingTime": null,
         "vote": {
-            "action": "SB1-0024",
+            "action": "SB1-0023",
             "bill": "SB 1",
-            "date": "02/13/2025",
+            "date": "02/12/2025",
             "type": "committee",
             "seqNumber": "H11",
             "voteChamber": "house",
@@ -1502,5 +1488,19 @@
                 }
             ]
         }
+    },
+    {
+        "id": "SB1-0024",
+        "bill": "SB 1",
+        "date": "02/12/2025",
+        "description": "Committee Report--Bill Concurred",
+        "possession": "House",
+        "committee": "(H) Taxation",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Committee Report--Bill Concurred",
+        "committeeHearingTime": null,
+        "vote": null
     }
 ]
