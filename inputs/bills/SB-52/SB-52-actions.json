@@ -310,20 +310,6 @@
     {
         "id": "SB52-0023",
         "bill": "SB 52",
-        "date": "02/07/2025",
-        "description": "Hearing",
-        "possession": "Senate",
-        "committee": "(S) Judiciary",
-        "actionUrl": null,
-        "recordings": [],
-        "transcriptUrl": null,
-        "key": "Hearing",
-        "committeeHearingTime": "02/13/2025",
-        "vote": null
-    },
-    {
-        "id": "SB52-0024",
-        "bill": "SB 52",
         "date": "02/11/2025",
         "description": "Bill Withdrawn",
         "possession": "Senate",
@@ -336,7 +322,7 @@
         "vote": null
     },
     {
-        "id": "SB52-0025",
+        "id": "SB52-0024",
         "bill": "SB 52",
         "date": "02/12/2025",
         "description": "Tabled in Committee",
@@ -348,7 +334,7 @@
         "key": "Tabled in Committee",
         "committeeHearingTime": null,
         "vote": {
-            "action": "SB52-0025",
+            "action": "SB52-0024",
             "bill": "SB 52",
             "date": "02/12/2025",
             "type": "committee",
@@ -454,5 +440,19 @@
                 }
             ]
         }
+    },
+    {
+        "id": "SB52-0025",
+        "bill": "SB 52",
+        "date": "02/13/2025",
+        "description": "Hearing Canceled",
+        "possession": "Senate",
+        "committee": "(S) Judiciary",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Hearing Canceled",
+        "committeeHearingTime": null,
+        "vote": null
     }
 ]
