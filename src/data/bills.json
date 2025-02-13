@@ -18647,9 +18647,9 @@
             },
             {
                 "step": "first chamber",
-                "status": "current",
-                "statusLabel": "Pending",
-                "statusDate": null
+                "status": "blocked",
+                "statusLabel": "Voted down",
+                "statusDate": "02/13/2025"
             },
             {
                 "step": "second chamber",
@@ -20189,10 +20189,10 @@
         "lcIdentifier": "LC0431",
         "type": "senate bill",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
+            "key": "In First House--Through 2nd Reading",
+            "step": "First chamber",
+            "label": "Passed second reading vote",
+            "status": "live",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -20211,8 +20211,8 @@
             {
                 "step": "first chamber",
                 "status": "current",
-                "statusLabel": "Pending",
-                "statusDate": null
+                "statusLabel": "Passed preliminary floor vote",
+                "statusDate": "02/13/2025"
             },
             {
                 "step": "second chamber",
@@ -25309,8 +25309,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "3/4 of Each House",
         "voteRequirements": [
-            "SIMPLE",
-            "THREE_FOURTHS"
+            "THREE_FOURTHS",
+            "SIMPLE"
         ],
         "subjects": [
             "Buildings and Building Regulations",
@@ -27811,9 +27811,9 @@
         "lcIdentifier": "LC0645",
         "type": "study resolution",
         "status": {
-            "key": "In First House Committee--Nontabled",
+            "key": "In First House--Out of Committee",
             "step": "First chamber",
-            "label": "In committee",
+            "label": "Out of committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -27826,14 +27826,14 @@
             },
             {
                 "step": "first committee",
-                "status": "current",
-                "statusLabel": "Pending",
-                "statusDate": null
+                "status": "passed",
+                "statusLabel": "Advanced",
+                "statusDate": "02/12/2025"
             },
             {
                 "step": "first chamber",
-                "status": "future",
-                "statusLabel": null,
+                "status": "current",
+                "statusLabel": "Pending",
                 "statusDate": null
             },
             {
@@ -39212,7 +39212,7 @@
         "tags": [],
         "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0453?open_tab=sum",
         "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0453?open_tab=bill",
-        "fiscalNoteUrl": null,
+        "fiscalNoteUrl": "/bills/fiscal-note/hb-435",
         "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0453?open_tab=amend",
         "legalNoteUrl": null,
         "vetoMemoUrl": null,
@@ -39790,7 +39790,7 @@
         "tags": [],
         "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2663?open_tab=sum",
         "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2663?open_tab=bill",
-        "fiscalNoteUrl": null,
+        "fiscalNoteUrl": "/bills/fiscal-note/hb-429",
         "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2663?open_tab=amend",
         "legalNoteUrl": null,
         "vetoMemoUrl": null,
@@ -40544,7 +40544,7 @@
         "tags": [],
         "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2128?open_tab=sum",
         "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2128?open_tab=bill",
-        "fiscalNoteUrl": null,
+        "fiscalNoteUrl": "/bills/fiscal-note/hb-420",
         "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2128?open_tab=amend",
         "legalNoteUrl": null,
         "vetoMemoUrl": null,
@@ -41383,7 +41383,7 @@
         "tags": [],
         "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1754?open_tab=sum",
         "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1754?open_tab=bill",
-        "fiscalNoteUrl": null,
+        "fiscalNoteUrl": "/bills/fiscal-note/hb-411",
         "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1754?open_tab=amend",
         "legalNoteUrl": null,
         "vetoMemoUrl": null,
@@ -50169,10 +50169,10 @@
         "lcIdentifier": "LC3261",
         "type": "house bill",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
+            "key": "In First House--Through 2nd Reading",
+            "step": "First chamber",
+            "label": "Passed second reading vote",
+            "status": "live",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -50191,8 +50191,8 @@
             {
                 "step": "first chamber",
                 "status": "current",
-                "statusLabel": "Pending",
-                "statusDate": null
+                "statusLabel": "Passed preliminary floor vote",
+                "statusDate": "02/13/2025"
             },
             {
                 "step": "second chamber",
@@ -50494,10 +50494,10 @@
         "lcIdentifier": "LC1551",
         "type": "house bill",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
+            "key": "In First House--Through 2nd Reading",
+            "step": "First chamber",
+            "label": "Passed second reading vote",
+            "status": "live",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -50516,8 +50516,8 @@
             {
                 "step": "first chamber",
                 "status": "current",
-                "statusLabel": "Pending",
-                "statusDate": null
+                "statusLabel": "Passed preliminary floor vote",
+                "statusDate": "02/13/2025"
             },
             {
                 "step": "second chamber",
@@ -51752,9 +51752,9 @@
         "lcIdentifier": "LC0617",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
-            "step": "First chamber",
-            "label": "In committee",
+            "key": "In Second House--Out of Committee",
+            "step": "Second chamber",
+            "label": "On floor",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -52420,10 +52420,10 @@
         "lcIdentifier": "LC2029",
         "type": "house bill",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
+            "key": "In First House--Through 2nd Reading",
+            "step": "First chamber",
+            "label": "Passed second reading vote",
+            "status": "live",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -52442,8 +52442,8 @@
             {
                 "step": "first chamber",
                 "status": "current",
-                "statusLabel": "Pending",
-                "statusDate": null
+                "statusLabel": "Passed preliminary floor vote",
+                "statusDate": "02/13/2025"
             },
             {
                 "step": "second chamber",
@@ -61251,9 +61251,9 @@
         "lcIdentifier": "LC0088",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
-            "step": "First chamber",
-            "label": "In committee",
+            "key": "In Second House--Out of Committee",
+            "step": "Second chamber",
+            "label": "On floor",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -70150,9 +70150,9 @@
         "lcIdentifier": "LC0176",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
-            "step": "First chamber",
-            "label": "In committee",
+            "key": "In Second House--Out of Committee",
+            "step": "Second chamber",
+            "label": "On floor",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
