@@ -785,9 +785,9 @@
                 "title": "Constitutional amendment revising selection of supreme court justices",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Introduced",
+                    "key": "In First House Committee--Nontabled",
                     "step": "First chamber",
-                    "label": "Introduced",
+                    "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -1234,9 +1234,9 @@
                 "title": "Generally revise traffic laws regarding evading or fleeing a peace officer",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Introduced",
+                    "key": "In First House Committee--Nontabled",
                     "step": "First chamber",
-                    "label": "Introduced",
+                    "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -3018,9 +3018,9 @@
                 "title": "Revise laws regarding Idaho college of osteopathic medicine program",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Through 3rd Reading",
-                    "step": "First chamber",
-                    "label": "Passed chamber",
+                    "key": "Transmitted to Second House",
+                    "step": "Second chamber",
+                    "label": "Transmitted",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -3445,9 +3445,9 @@
                 "title": "Revise laws related to the school funding interim commission.",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Through 3rd Reading",
-                    "step": "First chamber",
-                    "label": "Passed chamber",
+                    "key": "Transmitted to Second House",
+                    "step": "Second chamber",
+                    "label": "Transmitted",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -3897,9 +3897,9 @@
                 "title": "Repeal interagency coordinating council for state prevention programs",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Through 3rd Reading",
-                    "step": "First chamber",
-                    "label": "Passed chamber",
+                    "key": "Transmitted to Second House",
+                    "step": "Second chamber",
+                    "label": "Transmitted",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -5893,9 +5893,9 @@
                 "title": "Require appeal process for certain local government health requirements",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Through 3rd Reading",
-                    "step": "First chamber",
-                    "label": "Passed chamber",
+                    "key": "Transmitted to Second House",
+                    "step": "Second chamber",
+                    "label": "Transmitted",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -6076,11 +6076,11 @@
                 "title": "Require public hearing before certain tax increment financing bonding",
                 "chamber": "house",
                 "status": {
-                    "key": "Probably Dead",
-                    "label": "",
-                    "step": "Failed",
-                    "status": "stalled",
-                    "statusAtSessionEnd": "failed"
+                    "key": "Passed By Legislature--Enrolling and Final Preparation Process",
+                    "step": "Through Legislature",
+                    "label": "Passed both chambers",
+                    "status": "live",
+                    "statusAtSessionEnd": "pending, passed legislature"
                 },
                 "progress": [
                     {
@@ -6103,9 +6103,9 @@
                     },
                     {
                         "step": "second chamber",
-                        "status": "current",
-                        "statusLabel": "Passed preliminary vote",
-                        "statusDate": "02/13/2025"
+                        "status": "passed",
+                        "statusLabel": "Passed Senate",
+                        "statusDate": "02/14/2025"
                     },
                     {
                         "step": "reconciliation",
@@ -6115,8 +6115,8 @@
                     },
                     {
                         "step": "governor",
-                        "status": "future",
-                        "statusLabel": null,
+                        "status": "current",
+                        "statusLabel": "Pending",
                         "statusDate": null
                     }
                 ],
@@ -9231,6 +9231,128 @@
         "imageSlug": "2025/jill-cohenour.jpg",
         "sponsoredBills": [
             {
+                "key": "hb-513",
+                "identifier": "HB 513",
+                "title": "Revise laws related to use of name, voice, and likeness of individuals and penalties for unauthorized use",
+                "chamber": "house",
+                "status": {
+                    "key": "In First House--Introduced",
+                    "step": "First chamber",
+                    "label": "Introduced",
+                    "status": "live",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "02/14/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3983?open_tab=bill",
+                "fiscalNoteUrl": null,
+                "legalNoteUrl": null,
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Jill Cohenour",
+                    "party": "D",
+                    "locale": "East Helena",
+                    "district": "HD 83"
+                }
+            },
+            {
+                "key": "hb-512",
+                "identifier": "HB 512",
+                "title": "Require seat belts on newly purchased school buses",
+                "chamber": "house",
+                "status": {
+                    "key": "In First House--Introduced",
+                    "step": "First chamber",
+                    "label": "Introduced",
+                    "status": "live",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "02/14/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2284?open_tab=bill",
+                "fiscalNoteUrl": null,
+                "legalNoteUrl": null,
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Jill Cohenour",
+                    "party": "D",
+                    "locale": "East Helena",
+                    "district": "HD 83"
+                }
+            },
+            {
                 "key": "hb-354",
                 "identifier": "HB 354",
                 "title": "Revise penalties for criminal trespass while fishing, trapping, hunting, or collecting antlers/sheds/horns",
@@ -11131,10 +11253,10 @@
                 "title": "Repeal small business compliance assistance council",
                 "chamber": "house",
                 "status": {
-                    "key": "Probably Dead",
-                    "label": "",
-                    "step": "Failed",
-                    "status": "stalled",
+                    "key": "In Second House--Through 2nd Reading",
+                    "step": "Second chamber",
+                    "label": "Passed 2nd reading vote",
+                    "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -11159,8 +11281,8 @@
                     {
                         "step": "second chamber",
                         "status": "current",
-                        "statusLabel": "Pending",
-                        "statusDate": null
+                        "statusLabel": "Passed preliminary vote",
+                        "statusDate": "02/14/2025"
                     },
                     {
                         "step": "reconciliation",
@@ -12003,7 +12125,69 @@
         ],
         "articles": [],
         "imageSlug": "2025/scott-demarois.jpg",
-        "sponsoredBills": [],
+        "sponsoredBills": [
+            {
+                "key": "hb-511",
+                "identifier": "HB 511",
+                "title": "Provide grant funding for firefighting training facilities",
+                "chamber": "house",
+                "status": {
+                    "key": "In First House--Introduced",
+                    "step": "First chamber",
+                    "label": "Introduced",
+                    "status": "live",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "02/14/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC4344?open_tab=bill",
+                "fiscalNoteUrl": null,
+                "legalNoteUrl": null,
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Scott DeMarois",
+                    "party": "D",
+                    "locale": "Anaconda",
+                    "district": "HD 71"
+                }
+            }
+        ],
         "votingSummary": {
             "name": "Scott DeMarois",
             "party": "D",
@@ -12390,10 +12574,10 @@
                 "title": "Require official action to release Montana national guard to active duty combat",
                 "chamber": "house",
                 "status": {
-                    "key": "Probably Dead",
-                    "label": "",
-                    "step": "Failed",
-                    "status": "stalled",
+                    "key": "In First House Committee--Nontabled",
+                    "step": "First chamber",
+                    "label": "In committee",
+                    "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -17642,10 +17826,10 @@
                 "title": "Increasing the number of physician assistants on the board of medical examiners",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Introduced",
-                    "step": "First chamber",
-                    "label": "Introduced",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -17657,9 +17841,9 @@
                     },
                     {
                         "step": "first committee",
-                        "status": "current",
-                        "statusLabel": "Pending",
-                        "statusDate": null
+                        "status": "blocked",
+                        "statusLabel": "Withdrawn",
+                        "statusDate": "02/14/2025"
                     },
                     {
                         "step": "first chamber",
@@ -21816,9 +22000,9 @@
                 "title": "Revise voluntary payment laws to include all claims",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Through 3rd Reading",
-                    "step": "First chamber",
-                    "label": "Passed chamber",
+                    "key": "Transmitted to Second House",
+                    "step": "Second chamber",
+                    "label": "Transmitted",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -34969,9 +35153,9 @@
                 "title": "Generally revise wildlife location data subject to public information requests",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Through 3rd Reading",
-                    "step": "First chamber",
-                    "label": "Passed chamber",
+                    "key": "Transmitted to Second House",
+                    "step": "Second chamber",
+                    "label": "Transmitted",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -36154,9 +36338,9 @@
                 "title": "Establish the crime of possession of stolen firearm or ammunition",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Introduced",
+                    "key": "In First House Committee--Nontabled",
                     "step": "First chamber",
-                    "label": "Introduced",
+                    "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -47251,9 +47435,9 @@
                 "title": "Revise election administrator laws",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Through 3rd Reading",
-                    "step": "First chamber",
-                    "label": "Passed chamber",
+                    "key": "Transmitted to Second House",
+                    "step": "Second chamber",
+                    "label": "Transmitted",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -48037,9 +48221,9 @@
                 "title": "Repeal federal mandates act",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Introduced",
+                    "key": "In First House Committee--Nontabled",
                     "step": "First chamber",
-                    "label": "Introduced",
+                    "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -52165,9 +52349,9 @@
                 "title": "Resolution on renewable energy",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Introduced",
+                    "key": "In First House Committee--Nontabled",
                     "step": "First chamber",
-                    "label": "Introduced",
+                    "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -53688,9 +53872,9 @@
                 "title": "Create a limited remedy to remove unauthorized persons from residential property",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Introduced",
+                    "key": "In First House Committee--Nontabled",
                     "step": "First chamber",
-                    "label": "Introduced",
+                    "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -55198,9 +55382,9 @@
                 "title": "Providing authority for municipalities to control unauthorized occupancy of municipal property",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Through 3rd Reading",
-                    "step": "First chamber",
-                    "label": "Passed chamber",
+                    "key": "Transmitted to Second House",
+                    "step": "Second chamber",
+                    "label": "Transmitted",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -55259,8 +55443,8 @@
                 "title": "Establish American rodeo the official state sport of Montana",
                 "chamber": "house",
                 "status": {
-                    "key": "In Second House Committee--Nontabled",
-                    "step": "Second chamber",
+                    "key": "In First House Committee--Nontabled",
+                    "step": "First chamber",
                     "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
@@ -58936,9 +59120,9 @@
                 "title": "Establish state policy on evidence-based reading instruction",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Through 3rd Reading",
-                    "step": "First chamber",
-                    "label": "Passed chamber",
+                    "key": "Transmitted to Second House",
+                    "step": "Second chamber",
+                    "label": "Transmitted",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
