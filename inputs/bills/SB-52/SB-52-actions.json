@@ -310,20 +310,6 @@
     {
         "id": "SB52-0023",
         "bill": "SB 52",
-        "date": "02/07/2025",
-        "description": "Hearing",
-        "possession": "Senate",
-        "committee": "(S) Judiciary",
-        "actionUrl": null,
-        "recordings": [],
-        "transcriptUrl": null,
-        "key": "Hearing",
-        "committeeHearingTime": "02/13/2025",
-        "vote": null
-    },
-    {
-        "id": "SB52-0024",
-        "bill": "SB 52",
         "date": "02/11/2025",
         "description": "Bill Withdrawn",
         "possession": "Senate",
@@ -332,6 +318,140 @@
         "recordings": [],
         "transcriptUrl": null,
         "key": "Bill Withdrawn",
+        "committeeHearingTime": null,
+        "vote": null
+    },
+    {
+        "id": "SB52-0024",
+        "bill": "SB 52",
+        "date": "02/12/2025",
+        "description": "Tabled in Committee",
+        "possession": "Senate",
+        "committee": "(S) Judiciary",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Tabled in Committee",
+        "committeeHearingTime": null,
+        "vote": {
+            "action": "SB52-0024",
+            "bill": "SB 52",
+            "date": "02/12/2025",
+            "type": "committee",
+            "seqNumber": "S4",
+            "voteChamber": "senate",
+            "voteUrl": null,
+            "session": "2",
+            "motion": "Tabled in Committee",
+            "thresholdRequired": "simple",
+            "count": {
+                "Y": 6,
+                "N": 0
+            },
+            "gopCount": {
+                "Y": 6,
+                "N": 0,
+                "A": 0,
+                "E": 0,
+                "O": 0
+            },
+            "demCount": {
+                "Y": 0,
+                "N": 0,
+                "A": 3,
+                "E": 0,
+                "O": 0
+            },
+            "motionPassed": true,
+            "gopSupported": true,
+            "demSupported": false,
+            "votes": [
+                {
+                    "option": "Y",
+                    "name": "Vince Ricci",
+                    "lastName": "Ricci",
+                    "party": "R",
+                    "locale": "Billings",
+                    "district": "SD 27"
+                },
+                {
+                    "option": "A",
+                    "name": "Andrea Olsen",
+                    "lastName": "Olsen",
+                    "party": "D",
+                    "locale": "Missoula",
+                    "district": "SD 48"
+                },
+                {
+                    "option": "Y",
+                    "name": "Daniel Emrich",
+                    "lastName": "Emrich",
+                    "party": "R",
+                    "locale": "Great Falls",
+                    "district": "SD 11"
+                },
+                {
+                    "option": "Y",
+                    "name": "Gayle  Lammers",
+                    "lastName": "Lammers",
+                    "party": "R",
+                    "locale": "Unknown",
+                    "district": "SD 21"
+                },
+                {
+                    "option": "Y",
+                    "name": "Theresa Manzella",
+                    "lastName": "Manzella",
+                    "party": "R",
+                    "locale": "Hamilton",
+                    "district": "SD 44"
+                },
+                {
+                    "option": "A",
+                    "name": "Cora Neumann",
+                    "lastName": "Neumann",
+                    "party": "D",
+                    "locale": "Helena",
+                    "district": "SD 30"
+                },
+                {
+                    "option": "A",
+                    "name": "Laura Smith",
+                    "lastName": "Smith",
+                    "party": "D",
+                    "locale": "Helena",
+                    "district": "SD 40"
+                },
+                {
+                    "option": "Y",
+                    "name": "Sue Vinton",
+                    "lastName": "Vinton",
+                    "party": "R",
+                    "locale": "Billings",
+                    "district": "SD 20"
+                },
+                {
+                    "option": "Y",
+                    "name": "Barry Usher",
+                    "lastName": "Usher",
+                    "party": "R",
+                    "locale": "Laurel",
+                    "district": "SD 19"
+                }
+            ]
+        }
+    },
+    {
+        "id": "SB52-0025",
+        "bill": "SB 52",
+        "date": "02/13/2025",
+        "description": "Hearing Canceled",
+        "possession": "Senate",
+        "committee": "(S) Judiciary",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Hearing Canceled",
         "committeeHearingTime": null,
         "vote": null
     }

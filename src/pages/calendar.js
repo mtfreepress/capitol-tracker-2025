@@ -36,7 +36,7 @@ const Calendar = ({ onCalendarBills, committees }) => {
     console.log({days})
 
     const schedule = days.map((day, i) => {
-        const hearings = scheduledHearings.filter((d) => getDay(d.data.date) === day);
+        const hearings = scheduledHearings.filter((d) => getDay(d.data.committeeHearingTime) === day);
 
         // group committee data by their hearing times
         const committeesWithHearings = Array.from(new Set(hearings.map((a) => a.data.committee))).map(
@@ -63,7 +63,7 @@ const Calendar = ({ onCalendarBills, committees }) => {
                 (d) => !["morning-policy", "afternoon-policy", "morning-fiscal-sub", "varies-fiscal"].includes(d.cat)
             ),
         };
-        // console.log({categories})
+        console.log({categories})
 
         return (
             <div key={day} id={urlizeDay(day)} css={scheduleDayStyle}>
@@ -176,15 +176,26 @@ const Calendar = ({ onCalendarBills, committees }) => {
 
 // Committee component renders a single committee and its hearings
 const Committee = ({ committee, onCalendarBills, hearings }) => {
-    const committeeHearingBills = hearings.filter((d) => d.committee === committee.name).map((d) => d.bill);
-    const bills = onCalendarBills.filter((d) => committeeHearingBills.includes(d.identifier));
+    // Fix: access committee through d.data.committee
+    const committeeHearingBills = hearings
+        .filter((d) => d.data.committee === committee.name)
+        .map((d) => d.data.bill);
+
+    // Fix: match bill identifiers exactly
+    const bills = onCalendarBills
+        .filter((d) => committeeHearingBills.includes(d.identifier));
+
+    console.log({
+        committeeName: committee.name,
+        committeeHearingBills,
+        matchedBills: bills
+    });
 
     return (
         <div>
             <h4>
                 👥 <Link href={`/committees/${committee.key}`}>{committee.name}</Link>
             </h4>
-            {/* display bill table */}
             <BillTable bills={bills} displayLimit={10} suppressCount={true} />
         </div>
     );
