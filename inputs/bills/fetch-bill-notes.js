@@ -7,10 +7,17 @@ const GITHUB_API_URLS = {
     legalNotes: 'https://api.github.com/repos/mtfreepress/legislative-interface/contents/interface/downloads/legal-note-pdfs-2',
     fiscalNotes: 'https://api.github.com/repos/mtfreepress/legislative-interface/contents/interface/downloads/fiscal-note-pdfs-2'
 };
+
+const UPDATE_URLS = {
+    legalNotes: 'https://raw.githubusercontent.com/mtfreepress/legislative-interface/refs/heads/main/interface/legal-note-updates.json',
+    fiscalNotes: 'https://raw.githubusercontent.com/mtfreepress/legislative-interface/refs/heads/main/interface/fiscal-note-updates.json'
+};
+
 const RAW_URL_BASES = {
     legalNotes: 'https://raw.githubusercontent.com/mtfreepress/legislative-interface/main/interface/downloads/legal-note-pdfs-2/',
     fiscalNotes: 'https://raw.githubusercontent.com/mtfreepress/legislative-interface/main/interface/downloads/fiscal-note-pdfs-2/'
 };
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const OUT_DIRS = {
@@ -42,45 +49,59 @@ const createFolderIfNotExists = async folderPath => {
     }
 };
 
+const clearDirectory = async (dirPath) => {
+    try {
+        const files = await fs.readdir(dirPath);
+        for (const file of files) {
+            await fs.unlink(path.join(dirPath, file));
+            console.log(`Deleted old file: ${file}`);
+        }
+    } catch (error) {
+        if (error.code !== 'ENOENT') {
+            throw error;
+        }
+    }
+};
+
 const downloadFile = async (url, fileName, folderPath) => {
     console.log(`Fetching ${url}`);
     const response = await fetch(url);
     if (!response.ok) {
         throw new Error(`Failed to fetch URL: ${url}, status: ${response.status}`);
     }
+    
+    // Clear any existing files before downloading new one
+    await clearDirectory(folderPath);
+    
     const data = await response.buffer();
     const outputPath = path.join(folderPath, fileName);
     await fs.writeFile(outputPath, data);
     console.log(`Saved ${fileName} to ${outputPath}`);
 };
 
-const processDirectory = async (apiUrl, rawUrlBase, outDir) => {
-    console.log(`Fetching directory list from ${apiUrl}`);
-    const directories = await fetchJson(apiUrl);
+const processUpdates = async (type) => {
+    console.log(`Processing ${type} updates...`);
+    
+    // Fetch the updates list
+    const updates = await fetchJson(UPDATE_URLS[type]);
+    
+    for (const update of updates) {
+        const billFolder = `${update.billType}-${update.billNumber}`;
+        const folderPath = path.join(OUT_DIRS[type], billFolder);
+        await createFolderIfNotExists(folderPath);
 
-    for (const dir of directories) {
-        if (dir.type === 'dir') {
-            const folderName = dir.name;
-            const folderPath = path.join(outDir, folderName);
-            await createFolderIfNotExists(folderPath);
-
-            const files = await fetchJson(dir.url);
-            for (const file of files) {
-                if (file.name.endsWith('.pdf')) {
-                    const fileUrl = `${rawUrlBase}${folderName}/${file.name}`;
-                    await downloadFile(fileUrl, file.name, folderPath);
-                }
-            }
-        }
+        const fileUrl = `${RAW_URL_BASES[type]}${billFolder}/${update.fileName}`;
+        await downloadFile(fileUrl, update.fileName, folderPath);
     }
 };
 
 const main = async () => {
     try {
-        await processDirectory(GITHUB_API_URLS.legalNotes, RAW_URL_BASES.legalNotes, OUT_DIRS.legalNotes);
-        await processDirectory(GITHUB_API_URLS.fiscalNotes, RAW_URL_BASES.fiscalNotes, OUT_DIRS.fiscalNotes);
+        await processUpdates('legalNotes');
+        await processUpdates('fiscalNotes');
     } catch (error) {
         console.error(`Error: ${error.message}`);
+        process.exit(1);
     }
 };
 
