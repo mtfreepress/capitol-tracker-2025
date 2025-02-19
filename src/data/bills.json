@@ -7563,6 +7563,88 @@
         "numArticles": 0
     },
     {
+        "key": "sb-360",
+        "identifier": "SB 360",
+        "identifierLong": "Senate Bill 360",
+        "chamber": "senate",
+        "title": "Revise election laws related to definitions",
+        "session": "2",
+        "lcIdentifier": "LC1964",
+        "type": "senate bill",
+        "status": {
+            "key": "In First House--Introduced",
+            "step": "First chamber",
+            "label": "Introduced",
+            "status": "live",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "passed",
+                "statusLabel": "Introduced",
+                "statusDate": "02/19/2025"
+            },
+            {
+                "step": "first committee",
+                "status": "current",
+                "statusLabel": "Pending",
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Shelley Vance",
+            "party": "R",
+            "locale": "Belgrade",
+            "district": "SD 34"
+        },
+        "requestor": "Shelley Vance",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "Simple",
+        "voteRequirements": [
+            "SIMPLE"
+        ],
+        "subjects": [
+            "Elections  (see also: Ballot Issues)"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1964?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1964?open_tab=bill",
+        "fiscalNoteUrl": null,
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1964?open_tab=amend",
+        "legalNoteUrl": null,
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0
+    },
+    {
         "key": "sb-36",
         "identifier": "SB 36",
         "identifierLong": "Senate Bill 36",
@@ -8301,8 +8383,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Each House",
         "voteRequirements": [
-            "TWO_THIRDS",
-            "SIMPLE"
+            "SIMPLE",
+            "TWO_THIRDS"
         ],
         "subjects": [
             "State/Other Government Levels, Immunity From Suit",
@@ -11684,7 +11766,7 @@
         "tags": [],
         "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0383?open_tab=sum",
         "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0383?open_tab=bill",
-        "fiscalNoteUrl": null,
+        "fiscalNoteUrl": "/bills/fiscal-note/sb-316",
         "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0383?open_tab=amend",
         "legalNoteUrl": null,
         "vetoMemoUrl": null,
@@ -15192,7 +15274,7 @@
         "tags": [],
         "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1890?open_tab=sum",
         "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1890?open_tab=bill",
-        "fiscalNoteUrl": null,
+        "fiscalNoteUrl": "/bills/fiscal-note/sb-279",
         "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1890?open_tab=amend",
         "legalNoteUrl": null,
         "vetoMemoUrl": null,
@@ -15278,7 +15360,7 @@
         "tags": [],
         "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3223?open_tab=sum",
         "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3223?open_tab=bill",
-        "fiscalNoteUrl": null,
+        "fiscalNoteUrl": "/bills/fiscal-note/sb-278",
         "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3223?open_tab=amend",
         "legalNoteUrl": null,
         "vetoMemoUrl": null,
@@ -16550,9 +16632,9 @@
         "lcIdentifier": "LC0970",
         "type": "senate bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
+            "key": "In First House--Out of Committee",
             "step": "First chamber",
-            "label": "In committee",
+            "label": "Out of committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -35138,8 +35220,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "3/4 of Each House",
         "voteRequirements": [
-            "THREE_FOURTHS",
             "TWO_THIRDS",
+            "THREE_FOURTHS",
             "SIMPLE"
         ],
         "subjects": [
@@ -37161,10 +37243,10 @@
         "lcIdentifier": "LC1524",
         "type": "house bill",
         "status": {
-            "key": "In First House--Introduced",
-            "step": "First chamber",
-            "label": "Introduced",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -37244,10 +37326,10 @@
         "lcIdentifier": "LC2470",
         "type": "house bill",
         "status": {
-            "key": "In First House--Introduced",
-            "step": "First chamber",
-            "label": "Introduced",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -37572,10 +37654,10 @@
         "lcIdentifier": "LC4145",
         "type": "house bill",
         "status": {
-            "key": "In First House--Introduced",
-            "step": "First chamber",
-            "label": "Introduced",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -37656,10 +37738,10 @@
         "lcIdentifier": "LC1323",
         "type": "house bill",
         "status": {
-            "key": "In First House--Introduced",
-            "step": "First chamber",
-            "label": "Introduced",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -37904,10 +37986,10 @@
         "lcIdentifier": "LC1388",
         "type": "house bill",
         "status": {
-            "key": "In First House--Introduced",
-            "step": "First chamber",
-            "label": "Introduced",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -37987,10 +38069,10 @@
         "lcIdentifier": "LC1970",
         "type": "house bill",
         "status": {
-            "key": "In First House--Introduced",
-            "step": "First chamber",
-            "label": "Introduced",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -47497,7 +47579,7 @@
         "tags": [],
         "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3017?open_tab=sum",
         "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3017?open_tab=bill",
-        "fiscalNoteUrl": null,
+        "fiscalNoteUrl": "/bills/fiscal-note/hb-462",
         "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3017?open_tab=amend",
         "legalNoteUrl": null,
         "vetoMemoUrl": null,
@@ -48747,7 +48829,7 @@
         "tags": [],
         "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2078?open_tab=sum",
         "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2078?open_tab=bill",
-        "fiscalNoteUrl": null,
+        "fiscalNoteUrl": "/bills/fiscal-note/hb-449",
         "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2078?open_tab=amend",
         "legalNoteUrl": null,
         "vetoMemoUrl": null,
