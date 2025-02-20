@@ -45,7 +45,7 @@ const downloadFile = async (url, fileName, folderPath) => {
     const data = await fetchJson(url);
     const outputPath = path.join(folderPath, fileName);
     await writeJson(outputPath, data);
-    console.log(`Saved ${fileName} to ${outputPath}`);
+    // console.log(`Saved ${fileName} to ${outputPath}`);
 };
 
 const main = async () => {

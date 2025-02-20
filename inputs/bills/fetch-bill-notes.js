@@ -76,7 +76,7 @@ const downloadFile = async (url, fileName, folderPath) => {
     const data = await response.buffer();
     const outputPath = path.join(folderPath, fileName);
     await fs.writeFile(outputPath, data);
-    console.log(`Saved ${fileName} to ${outputPath}`);
+    // console.log(`Saved ${fileName} to ${outputPath}`);
 };
 
 const processUpdates = async (type) => {
