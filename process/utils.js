@@ -31,7 +31,8 @@ export const getCsv = async (path) => {
 export const writeJson = (path, data) => {
     fs.writeFile(path, JSON.stringify(data, null, 4), function (err) {
         if (err) throw err;
-        console.log('    JSON written to', path);
+    // Too verbose for prod. Ends up spitting out thousands of lines in GHA
+        // console.log('    JSON written to', path);
     });
 }
 
@@ -47,6 +48,6 @@ export const writeCsv = (path, array) => {
     })
     fs.writeFile(path, output.join('\n'), function (err) {
         if (err) throw err;
-        console.log('    CSV written to', path);
+        // console.log('    CSV written to', path);
     });
 }
