@@ -1,0 +1,66 @@
+name: Refresh all PDFs nightly
+
+on:
+    schedule:
+    # Change these out when DST happens in March and November
+      # Run once per day at 8am UTC (1am Mountain Standard Time GMT-7)
+      - cron: '0 8 * * *'
+      # Run once per day at 7am UTC (1am Mountain Daylight Time GMT-6)
+    #   - cron: '0 7 * * *'
+    workflow_dispatch:
+
+jobs:
+  full-download:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+      
+    # Restore dependencies if needed 
+    - name: Restore Node.js dependencies cache
+      uses: actions/cache@v4
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-npm-cache-${{ hashFiles('package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-npm-cache-
+
+    # Set up Node.js
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '23'
+        cache: 'npm'
+
+    # Install dependencies
+    - name: Install dependencies
+      run: npm install
+
+    # Ensure the nightly-pdf-refresh.sh script is executable
+    - name: Make nightly-pdf-refresh.sh executable
+      run: chmod +x ./nightly-pdf-refresh.sh
+
+    # Run the nightly-pdf-refresh.sh script
+    - name: Run the nightly-pdf-refresh.sh script
+      run: ./nightly-pdf-refresh.sh
+
+    # Save Node.js dependencies cache
+    - name: Save Node.js dependencies cache
+      if: always()
+      uses: actions/cache@v4
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-npm-cache-${{ hashFiles('package-lock.json') }}
+
+    # Commit and push if changed
+    - name: Commit and push if changed
+      run: |-
+        git config user.name "Automated"
+        git config user.email "actions@users.noreply.github.com"
+        git add -A
+        timestamp=$(date -u)
+        git commit -m "Latest data: ${timestamp}" || exit 0
+        git push
