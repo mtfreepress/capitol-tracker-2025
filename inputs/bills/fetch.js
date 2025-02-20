@@ -32,7 +32,7 @@ const fetchJson = async (url) => {
 const createFolderIfNotExists = async folderPath => {
     try {
         await fs.mkdir(folderPath, { recursive: true });
-        console.log(`Created folder: ${folderPath}`);
+        // console.log(`Created folder: ${folderPath}`);
     } catch (error) {
         if (error.code !== 'EEXIST') {
             throw error;
@@ -41,7 +41,7 @@ const createFolderIfNotExists = async folderPath => {
 };
 
 const downloadFile = async (url, fileName, folderPath) => {
-    console.log(`Fetching ${url}`);
+    // console.log(`Fetching ${url}`);
     const data = await fetchJson(url);
     const outputPath = path.join(folderPath, fileName);
     await writeJson(outputPath, data);
@@ -50,20 +50,20 @@ const downloadFile = async (url, fileName, folderPath) => {
 
 const main = async () => {
     try {
-        console.log(`Fetching bill list from ${BILL_LIST_URL}`);
+        // console.log(`Fetching bill list from ${BILL_LIST_URL}`);
         const billList = await fetchJson(BILL_LIST_URL);
 
-        console.log(`Fetching bill file list from ${GITHUB_API_URL_BILLS}`);
+        // console.log(`Fetching bill file list from ${GITHUB_API_URL_BILLS}`);
         const billFiles = await fetchJson(GITHUB_API_URL_BILLS);
 
-        console.log(`Fetching action file list from ${GITHUB_API_URL_ACTIONS}`);
+        // console.log(`Fetching action file list from ${GITHUB_API_URL_ACTIONS}`);
         const actionFiles = await fetchJson(GITHUB_API_URL_ACTIONS);
 
         const jsonBillFiles = billFiles.filter(file => file.name.endsWith('.json'));
         const jsonActionFiles = actionFiles.filter(file => file.name.endsWith('.json'));
 
-        console.log(`Found bill JSON files:`, jsonBillFiles.map(file => file.name));
-        console.log(`Found action JSON files:`, jsonActionFiles.map(file => file.name));
+        // console.log(`Found bill JSON files:`, jsonBillFiles.map(file => file.name));
+        // console.log(`Found action JSON files:`, jsonActionFiles.map(file => file.name));
 
         for (const bill of billList) {
             const billIdentifier = `${bill.billType}-${bill.billNumber}`;
