@@ -6958,8 +6958,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "TWO_THIRDS_LEGISLATURE",
-            "SIMPLE"
+            "SIMPLE",
+            "TWO_THIRDS_LEGISLATURE"
         ],
         "subjects": [
             "Courts  (see also: Judges and Justices; Juries and Jurors)",
@@ -7521,6 +7521,89 @@
             }
         ],
         "numArticles": 1
+    },
+    {
+        "key": "sb-390",
+        "identifier": "SB 390",
+        "identifierLong": "Senate Bill 390",
+        "chamber": "senate",
+        "title": "Revise definitions in Clean Indoor Air Act",
+        "session": "2",
+        "lcIdentifier": "LC3855",
+        "type": "senate bill",
+        "status": {
+            "key": "In First House--Introduced",
+            "step": "First chamber",
+            "label": "Introduced",
+            "status": "live",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "passed",
+                "statusLabel": "Introduced",
+                "statusDate": "02/20/2025"
+            },
+            {
+                "step": "first committee",
+                "status": "current",
+                "statusLabel": "Pending",
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Willis Curdy",
+            "party": "D",
+            "locale": "Missoula",
+            "district": "SD 49"
+        },
+        "requestor": "Jonathan Windy Boy",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "Simple",
+        "voteRequirements": [
+            "SIMPLE"
+        ],
+        "subjects": [
+            "Health (see also: Health Care Services; Safety)",
+            "Buildings and Building Regulations"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3855?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3855?open_tab=bill",
+        "fiscalNoteUrl": null,
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3855?open_tab=amend",
+        "legalNoteUrl": null,
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0
     },
     {
         "key": "sb-39",
@@ -26263,8 +26346,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "TWO_THIRDS_LEGISLATURE",
-            "SIMPLE"
+            "SIMPLE",
+            "TWO_THIRDS_LEGISLATURE"
         ],
         "subjects": [
             "Crimes",
@@ -26671,8 +26754,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "TWO_THIRDS_LEGISLATURE",
-            "SIMPLE"
+            "SIMPLE",
+            "TWO_THIRDS_LEGISLATURE"
         ],
         "subjects": [
             "Constitutional Amendment Proposals",
@@ -29136,8 +29219,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "3/4 of Each House",
         "voteRequirements": [
-            "THREE_FOURTHS",
-            "SIMPLE"
+            "SIMPLE",
+            "THREE_FOURTHS"
         ],
         "subjects": [
             "Appropriations, Coal Tax Fund Principal",
@@ -29718,8 +29801,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "TWO_THIRDS_LEGISLATURE",
-            "SIMPLE"
+            "SIMPLE",
+            "TWO_THIRDS_LEGISLATURE"
         ],
         "subjects": [
             "Constitutional Amendment Proposals",
@@ -32418,8 +32501,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "3/4 of Each House",
         "voteRequirements": [
-            "THREE_FOURTHS",
-            "SIMPLE"
+            "SIMPLE",
+            "THREE_FOURTHS"
         ],
         "subjects": [
             "Buildings and Building Regulations",
@@ -35886,8 +35969,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "TWO_THIRDS_LEGISLATURE",
-            "SIMPLE"
+            "SIMPLE",
+            "TWO_THIRDS_LEGISLATURE"
         ],
         "subjects": [
             "Legislature",
@@ -38007,9 +38090,9 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "3/4 of Each House",
         "voteRequirements": [
-            "THREE_FOURTHS",
+            "SIMPLE",
             "TWO_THIRDS",
-            "SIMPLE"
+            "THREE_FOURTHS"
         ],
         "subjects": [
             "Appropriations, Coal Tax Fund Principal",
@@ -39602,6 +39685,92 @@
         "numArticles": 0
     },
     {
+        "key": "hb-615",
+        "identifier": "HB 615",
+        "identifierLong": "House Bill 615",
+        "chamber": "house",
+        "title": "Revise allocations of coal trust revenue",
+        "session": "2",
+        "lcIdentifier": "LC4211",
+        "type": "house bill",
+        "status": {
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "passed",
+                "statusLabel": "Introduced",
+                "statusDate": "02/20/2025"
+            },
+            {
+                "step": "first committee",
+                "status": "current",
+                "statusLabel": "Pending",
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Jerry Schillinger",
+            "party": "R",
+            "locale": "Circle",
+            "district": "HD 34"
+        },
+        "requestor": "Matt Regier",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "Simple",
+        "voteRequirements": [
+            "SIMPLE"
+        ],
+        "subjects": [
+            "State Finance  (see also: Appropriations; Taxation Subjects)",
+            "Highways and Roads",
+            "Law Enforcement  (see also: Criminal Procedure)",
+            "Taxation--Coal  (see also: Appropriations, Coal Tax Fund Principal)",
+            "Appropriations  (see also: State Finance)"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC4211?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC4211?open_tab=bill",
+        "fiscalNoteUrl": null,
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC4211?open_tab=amend",
+        "legalNoteUrl": null,
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0
+    },
+    {
         "key": "hb-614",
         "identifier": "HB 614",
         "identifierLong": "House Bill 614",
@@ -39779,9 +39948,9 @@
         "lcIdentifier": "LC3230",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
+            "key": "In First House--Introduced",
             "step": "First chamber",
-            "label": "In committee",
+            "label": "Introduced",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -39861,9 +40030,9 @@
         "lcIdentifier": "LC4260",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
+            "key": "In First House--Introduced",
             "step": "First chamber",
-            "label": "In committee",
+            "label": "Introduced",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -39944,9 +40113,9 @@
         "lcIdentifier": "LC4187",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
+            "key": "In First House--Introduced",
             "step": "First chamber",
-            "label": "In committee",
+            "label": "Introduced",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -40112,9 +40281,9 @@
         "lcIdentifier": "LC3410",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
+            "key": "In First House--Introduced",
             "step": "First chamber",
-            "label": "In committee",
+            "label": "Introduced",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -40197,9 +40366,9 @@
         "lcIdentifier": "LC4367",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
+            "key": "In First House--Introduced",
             "step": "First chamber",
-            "label": "In committee",
+            "label": "Introduced",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -40280,9 +40449,9 @@
         "lcIdentifier": "LC2218",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
+            "key": "In First House--Introduced",
             "step": "First chamber",
-            "label": "In committee",
+            "label": "Introduced",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -40363,9 +40532,9 @@
         "lcIdentifier": "LC3683",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
+            "key": "In First House--Introduced",
             "step": "First chamber",
-            "label": "In committee",
+            "label": "Introduced",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -40447,9 +40616,9 @@
         "lcIdentifier": "LC3019",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
+            "key": "In First House--Introduced",
             "step": "First chamber",
-            "label": "In committee",
+            "label": "Introduced",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -40530,9 +40699,9 @@
         "lcIdentifier": "LC1796",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
+            "key": "In First House--Introduced",
             "step": "First chamber",
-            "label": "In committee",
+            "label": "Introduced",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -40613,9 +40782,9 @@
         "lcIdentifier": "LC1885",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
+            "key": "In First House--Introduced",
             "step": "First chamber",
-            "label": "In committee",
+            "label": "Introduced",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -40695,9 +40864,9 @@
         "lcIdentifier": "LC2027",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
+            "key": "In First House--Introduced",
             "step": "First chamber",
-            "label": "In committee",
+            "label": "Introduced",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -40777,9 +40946,9 @@
         "lcIdentifier": "LC2536",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
+            "key": "In First House--Introduced",
             "step": "First chamber",
-            "label": "In committee",
+            "label": "Introduced",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -40860,9 +41029,9 @@
         "lcIdentifier": "LC2896",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
+            "key": "In First House--Introduced",
             "step": "First chamber",
-            "label": "In committee",
+            "label": "Introduced",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -41112,9 +41281,9 @@
         "lcIdentifier": "LC3016",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
+            "key": "In First House--Introduced",
             "step": "First chamber",
-            "label": "In committee",
+            "label": "Introduced",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -41197,9 +41366,9 @@
         "lcIdentifier": "LC1636",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
+            "key": "In First House--Introduced",
             "step": "First chamber",
-            "label": "In committee",
+            "label": "Introduced",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -41280,9 +41449,9 @@
         "lcIdentifier": "LC2652",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
+            "key": "In First House--Introduced",
             "step": "First chamber",
-            "label": "In committee",
+            "label": "Introduced",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -41363,9 +41532,9 @@
         "lcIdentifier": "LC0858",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
+            "key": "In First House--Introduced",
             "step": "First chamber",
-            "label": "In committee",
+            "label": "Introduced",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -41446,9 +41615,9 @@
         "lcIdentifier": "LC0856",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
+            "key": "In First House--Introduced",
             "step": "First chamber",
-            "label": "In committee",
+            "label": "Introduced",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -41529,9 +41698,9 @@
         "lcIdentifier": "LC3401",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
+            "key": "In First House--Introduced",
             "step": "First chamber",
-            "label": "In committee",
+            "label": "Introduced",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -41613,9 +41782,9 @@
         "lcIdentifier": "LC3423",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
+            "key": "In First House--Introduced",
             "step": "First chamber",
-            "label": "In committee",
+            "label": "Introduced",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -41697,9 +41866,9 @@
         "lcIdentifier": "LC3348",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
+            "key": "In First House--Introduced",
             "step": "First chamber",
-            "label": "In committee",
+            "label": "Introduced",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -41781,9 +41950,9 @@
         "lcIdentifier": "LC1253",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
+            "key": "In First House--Introduced",
             "step": "First chamber",
-            "label": "In committee",
+            "label": "Introduced",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -41863,9 +42032,9 @@
         "lcIdentifier": "LC2942",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
+            "key": "In First House--Introduced",
             "step": "First chamber",
-            "label": "In committee",
+            "label": "Introduced",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -42031,9 +42200,9 @@
         "lcIdentifier": "LC4071",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
+            "key": "In First House--Introduced",
             "step": "First chamber",
-            "label": "In committee",
+            "label": "Introduced",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -42115,9 +42284,9 @@
         "lcIdentifier": "LC3371",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
+            "key": "In First House--Introduced",
             "step": "First chamber",
-            "label": "In committee",
+            "label": "Introduced",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -42197,9 +42366,9 @@
         "lcIdentifier": "LC1509",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
+            "key": "In First House--Introduced",
             "step": "First chamber",
-            "label": "In committee",
+            "label": "Introduced",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -42281,9 +42450,9 @@
         "lcIdentifier": "LC4324",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
+            "key": "In First House--Introduced",
             "step": "First chamber",
-            "label": "In committee",
+            "label": "Introduced",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -42365,9 +42534,9 @@
         "lcIdentifier": "LC1850",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
+            "key": "In First House--Introduced",
             "step": "First chamber",
-            "label": "In committee",
+            "label": "Introduced",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -42449,9 +42618,9 @@
         "lcIdentifier": "LC0452",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
+            "key": "In First House--Introduced",
             "step": "First chamber",
-            "label": "In committee",
+            "label": "Introduced",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -42534,9 +42703,9 @@
         "lcIdentifier": "LC4203",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
+            "key": "In First House--Introduced",
             "step": "First chamber",
-            "label": "In committee",
+            "label": "Introduced",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -42616,9 +42785,9 @@
         "lcIdentifier": "LC3451",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
+            "key": "In First House--Introduced",
             "step": "First chamber",
-            "label": "In committee",
+            "label": "Introduced",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -42699,9 +42868,9 @@
         "lcIdentifier": "LC4280",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
+            "key": "In First House--Introduced",
             "step": "First chamber",
-            "label": "In committee",
+            "label": "Introduced",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -42782,9 +42951,9 @@
         "lcIdentifier": "LC2567",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
+            "key": "In First House--Introduced",
             "step": "First chamber",
-            "label": "In committee",
+            "label": "Introduced",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -42950,9 +43119,9 @@
         "lcIdentifier": "LC2594",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
+            "key": "In First House--Introduced",
             "step": "First chamber",
-            "label": "In committee",
+            "label": "Introduced",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -45950,9 +46119,9 @@
         "lcIdentifier": "LC3463",
         "type": "house bill",
         "status": {
-            "key": "In First House--Introduced",
+            "key": "In First House Committee--Nontabled",
             "step": "First chamber",
-            "label": "Introduced",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -47663,8 +47832,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "TWO_THIRDS_LEGISLATURE",
-            "SIMPLE"
+            "SIMPLE",
+            "TWO_THIRDS_LEGISLATURE"
         ],
         "subjects": [
             "Taxation--Individual Income",
@@ -49100,8 +49269,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Each House",
         "voteRequirements": [
-            "TWO_THIRDS",
-            "SIMPLE"
+            "SIMPLE",
+            "TWO_THIRDS"
         ],
         "subjects": [
             "Schools and Education",
@@ -49593,8 +49762,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "TWO_THIRDS_LEGISLATURE",
-            "SIMPLE"
+            "SIMPLE",
+            "TWO_THIRDS_LEGISLATURE"
         ],
         "subjects": [
             "Constitutional Amendment Proposals",
@@ -49669,8 +49838,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "TWO_THIRDS_LEGISLATURE",
-            "SIMPLE"
+            "SIMPLE",
+            "TWO_THIRDS_LEGISLATURE"
         ],
         "subjects": [
             "Constitutional Amendment Proposals",
@@ -53939,8 +54108,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "TWO_THIRDS_LEGISLATURE",
-            "SIMPLE"
+            "SIMPLE",
+            "TWO_THIRDS_LEGISLATURE"
         ],
         "subjects": [
             "Constitutional Amendment Proposals",
@@ -67374,8 +67543,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "TWO_THIRDS_LEGISLATURE",
-            "SIMPLE"
+            "SIMPLE",
+            "TWO_THIRDS_LEGISLATURE"
         ],
         "subjects": [
             "Abortion",
