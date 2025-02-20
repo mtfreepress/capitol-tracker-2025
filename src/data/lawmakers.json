@@ -4324,9 +4324,9 @@
                 "title": "Revise districts for certain appointments",
                 "chamber": "house",
                 "status": {
-                    "key": "Transmitted to Second House",
+                    "key": "In Second House Committee--Nontabled",
                     "step": "Second chamber",
-                    "label": "Transmitted",
+                    "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -23045,9 +23045,9 @@
                 "title": "Transfer the state building energy conservation program to the Dept. of Administration A&E division",
                 "chamber": "house",
                 "status": {
-                    "key": "Transmitted to Second House",
+                    "key": "In Second House Committee--Nontabled",
                     "step": "Second chamber",
-                    "label": "Transmitted",
+                    "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -24566,9 +24566,9 @@
                 "title": "Revise laws relating to unemployment insurance program collection rates and uses",
                 "chamber": "house",
                 "status": {
-                    "key": "Transmitted to Second House",
+                    "key": "In Second House Committee--Nontabled",
                     "step": "Second chamber",
-                    "label": "Transmitted",
+                    "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -37798,9 +37798,9 @@
                 "title": "Provide income tax benefit to support emergency response volunteers",
                 "chamber": "house",
                 "status": {
-                    "key": "Transmitted to Second House",
+                    "key": "In Second House Committee--Nontabled",
                     "step": "Second chamber",
-                    "label": "Transmitted",
+                    "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -40755,8 +40755,8 @@
                 "title": "Modify language in the MCA that may diminish the dignity of individuals who are deaf or hard of hearing",
                 "chamber": "house",
                 "status": {
-                    "key": "In Second House Committee--Nontabled",
-                    "step": "Second chamber",
+                    "key": "In First House Committee--Nontabled",
+                    "step": "First chamber",
                     "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
@@ -50038,6 +50038,67 @@
                 }
             },
             {
+                "key": "sb-385",
+                "identifier": "SB 385",
+                "title": "Create a general claims court",
+                "chamber": "senate",
+                "status": {
+                    "key": "In First House--Introduced",
+                    "step": "First chamber",
+                    "label": "Introduced",
+                    "status": "live",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "02/20/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC4358?open_tab=bill",
+                "fiscalNoteUrl": null,
+                "legalNoteUrl": null,
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Tom McGillvray",
+                    "party": "R",
+                    "locale": "Billings",
+                    "district": "SD 26"
+                }
+            },
+            {
                 "key": "sb-307",
                 "identifier": "SB 307",
                 "title": "Reallocate Montana marijuana tax revenue",
@@ -53959,9 +54020,9 @@
                 "title": "Eliminate damages for injuries and death arising from dueling",
                 "chamber": "house",
                 "status": {
-                    "key": "Transmitted to Second House",
+                    "key": "In Second House Committee--Nontabled",
                     "step": "Second chamber",
-                    "label": "Transmitted",
+                    "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -58648,9 +58709,9 @@
                 "title": "Eliminate fingerprint background check requirements for professional employer organization",
                 "chamber": "house",
                 "status": {
-                    "key": "Transmitted to Second House",
+                    "key": "In Second House Committee--Nontabled",
                     "step": "Second chamber",
-                    "label": "Transmitted",
+                    "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -59645,9 +59706,9 @@
                 "title": "Resolution requesting an interim study on hunter satisfaction",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Introduced",
+                    "key": "In First House Committee--Nontabled",
                     "step": "First chamber",
-                    "label": "Introduced",
+                    "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -60914,9 +60975,9 @@
                 "title": "Resolution to include Montana in the radiation exposure compensation act",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Introduced",
+                    "key": "In First House Committee--Nontabled",
                     "step": "First chamber",
-                    "label": "Introduced",
+                    "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -61542,10 +61603,10 @@
                 "title": "Generally revise criminal procedure laws",
                 "chamber": "house",
                 "status": {
-                    "key": "Probably Dead",
-                    "label": "",
-                    "step": "Failed",
-                    "status": "stalled",
+                    "key": "In First House Committee--Nontabled",
+                    "step": "First chamber",
+                    "label": "In committee",
+                    "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -64896,6 +64957,55 @@
         "lawmakerPageText": "",
         "imageSlug": "2025/matt-regier.jpg",
         "sponsoredBills": [
+            {
+                "key": "sj-18",
+                "identifier": "SJ 18",
+                "title": "Resolution supporting recreation uses on Flathead Lake",
+                "chamber": "senate",
+                "status": {
+                    "key": "In First House--Introduced",
+                    "step": "First chamber",
+                    "label": "Introduced",
+                    "status": "live",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "02/20/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2278?open_tab=bill",
+                "fiscalNoteUrl": null,
+                "legalNoteUrl": null,
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Matt Regier",
+                    "party": "R",
+                    "locale": "Kalispell",
+                    "district": "SD 5"
+                }
+            },
             {
                 "key": "sb-366",
                 "identifier": "SB 366",
