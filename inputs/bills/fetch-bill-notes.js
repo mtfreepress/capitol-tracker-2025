@@ -41,7 +41,7 @@ const fetchJson = async (url) => {
 const createFolderIfNotExists = async folderPath => {
     try {
         await fs.mkdir(folderPath, { recursive: true });
-        console.log(`Created folder: ${folderPath}`);
+        // console.log(`Created folder: ${folderPath}`);
     } catch (error) {
         if (error.code !== 'EEXIST') {
             throw error;
@@ -54,7 +54,7 @@ const clearDirectory = async (dirPath) => {
         const files = await fs.readdir(dirPath);
         for (const file of files) {
             await fs.unlink(path.join(dirPath, file));
-            console.log(`Deleted old file: ${file}`);
+            // console.log(`Deleted old file: ${file}`);
         }
     } catch (error) {
         if (error.code !== 'ENOENT') {
@@ -64,7 +64,7 @@ const clearDirectory = async (dirPath) => {
 };
 
 const downloadFile = async (url, fileName, folderPath) => {
-    console.log(`Fetching ${url}`);
+    // console.log(`Fetching ${url}`);
     const response = await fetch(url);
     if (!response.ok) {
         throw new Error(`Failed to fetch URL: ${url}, status: ${response.status}`);
