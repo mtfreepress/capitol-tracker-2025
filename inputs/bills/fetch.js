@@ -41,29 +41,28 @@ const createFolderIfNotExists = async folderPath => {
 };
 
 const downloadFile = async (url, fileName, folderPath) => {
-    // console.log(`Fetching ${url}`);
-    const data = await fetchJson(url);
-    const outputPath = path.join(folderPath, fileName);
-    await writeJson(outputPath, data);
-    // console.log(`Saved ${fileName} to ${outputPath}`);
+    try {
+        const response = await fetch(url);
+        if (response.status === 404) {
+            console.warn(`File not found at ${url}`);
+            return false;
+        }
+        if (!response.ok) {
+            throw new Error(`Failed to fetch URL: ${url}, status: ${response.status}`);
+        }
+        const data = await response.json();
+        const outputPath = path.join(folderPath, fileName);
+        await writeJson(outputPath, data);
+        return true;
+    } catch (error) {
+        console.error(`Error downloading ${fileName}:`, error.message);
+        return false;
+    }
 };
 
 const main = async () => {
     try {
-        // console.log(`Fetching bill list from ${BILL_LIST_URL}`);
         const billList = await fetchJson(BILL_LIST_URL);
-
-        // console.log(`Fetching bill file list from ${GITHUB_API_URL_BILLS}`);
-        const billFiles = await fetchJson(GITHUB_API_URL_BILLS);
-
-        // console.log(`Fetching action file list from ${GITHUB_API_URL_ACTIONS}`);
-        const actionFiles = await fetchJson(GITHUB_API_URL_ACTIONS);
-
-        const jsonBillFiles = billFiles.filter(file => file.name.endsWith('.json'));
-        const jsonActionFiles = actionFiles.filter(file => file.name.endsWith('.json'));
-
-        // console.log(`Found bill JSON files:`, jsonBillFiles.map(file => file.name));
-        // console.log(`Found action JSON files:`, jsonActionFiles.map(file => file.name));
 
         for (const bill of billList) {
             const billIdentifier = `${bill.billType}-${bill.billNumber}`;
@@ -71,32 +70,24 @@ const main = async () => {
 
             await createFolderIfNotExists(folderPath);
 
-            // Handle Bill Data
+            // Try direct downloads instead of checking API first
             const billFileName = `${billIdentifier}-data.json`;
-            const billFileExists = jsonBillFiles.some(file => file.name === billFileName);
-
-            if (billFileExists) {
-                const billFileUrl = `${RAW_URL_BASE_BILLS}${billFileName}`;
-                await downloadFile(billFileUrl, billFileName, folderPath);
-            } else {
-                console.warn(`Bill file not found for: ${billIdentifier}`);
-            }
-
-            // Handle Action Data
             const actionFileName = `${billIdentifier}-actions.json`;
-            const actionFileExists = jsonActionFiles.some(file => file.name === actionFileName);
 
-            if (actionFileExists) {
-                const actionFileUrl = `${RAW_URL_BASE_ACTIONS}${actionFileName}`;
-                await downloadFile(actionFileUrl, actionFileName, folderPath);
-            } else {
-                console.warn(`Action file not found for: ${billIdentifier}`);
-            }
+            const billFileUrl = `${RAW_URL_BASE_BILLS}${billFileName}`;
+            const actionFileUrl = `${RAW_URL_BASE_ACTIONS}${actionFileName}`;
+
+            const billDownloaded = await downloadFile(billFileUrl, billFileName, folderPath);
+            const actionDownloaded = await downloadFile(actionFileUrl, actionFileName, folderPath);
+
+            if (!billDownloaded) console.warn(`Bill file not found for: ${billIdentifier}`);
+            if (!actionDownloaded) console.warn(`Action file not found for: ${billIdentifier}`);
         }
 
         console.log('### All bill and action JSON files fetched successfully!');
     } catch (error) {
         console.error('Error:', error.message);
+        process.exit(1);
     }
 };
 
