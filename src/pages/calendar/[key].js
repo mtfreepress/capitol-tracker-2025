@@ -52,8 +52,22 @@ const DateSelector = ({ dates, currentKey }) => {
     );
 };
 
+const capitalizeFirstLetter = string => string.charAt(0).toUpperCase() + string.slice(1);
+
+const groupHearingsByCommittee = hearings => {
+    return hearings.reduce((acc, hearing) => {
+        const committee = hearing.data.committee;
+        if (!acc[committee]) {
+            acc[committee] = [];
+        }
+        acc[committee].push(hearing);
+        return acc;
+    }, {});
+};
+
 export default function CalendarDay({ dateData, onCalendarBills }) {
     const day = shortDateWithWeekday(new Date(dateData.date));
+    const hearingsByCommittee = groupHearingsByCommittee(dateData.hearings);
 
     return (
         <Layout
@@ -76,14 +90,16 @@ export default function CalendarDay({ dateData, onCalendarBills }) {
                 {dateData.hearings.length === 0 ? (
                     <p>No committee hearings scheduled for this date.</p>
                 ) : (
-                    dateData.hearings.map(hearing => (
-                        <div key={hearing.data.id}>
-                            <h4>{hearing.data.committee}</h4>
-                            <div>
-                                <strong>Bill:</strong> {hearing.data.bill}
-                                <br />
-                                <strong>Description:</strong> {hearing.data.description}
-                            </div>
+                    Object.entries(hearingsByCommittee).map(([committee, hearings]) => (
+                        <div key={committee}>
+                            <h4>{committee}</h4>
+                            {hearings.map(hearing => (
+                                <div key={hearing.data.id}>
+                                    <strong>Bill:</strong> {hearing.data.bill}
+                                    <br />
+                                    <strong>Description:</strong> {hearing.data.description}
+                                </div>
+                            ))}
                         </div>
                     ))
                 )}
@@ -98,7 +114,7 @@ export default function CalendarDay({ dateData, onCalendarBills }) {
                         <div key={debate.data.id}>
                             <h4>{debate.data.bill}</h4>
                             <div>
-                                <strong>Chamber:</strong> {debate.data.billHolder}
+                                <strong>Chamber:</strong> {capitalizeFirstLetter(debate.data.billHolder)}
                                 <br />
                                 <strong>Description:</strong> {debate.data.description}
                             </div>
@@ -116,7 +132,7 @@ export default function CalendarDay({ dateData, onCalendarBills }) {
                         <div key={vote.data.id}>
                             <h4>{vote.data.bill}</h4>
                             <div>
-                                <strong>Chamber:</strong> {vote.data.billHolder}
+                                <strong>Chamber:</strong> {capitalizeFirstLetter(vote.data.billHolder)}
                                 <br />
                                 <strong>Description:</strong> {vote.data.description}
                             </div>
