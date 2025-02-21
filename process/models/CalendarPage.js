@@ -16,6 +16,8 @@ export default class CalendarPage {
         // })
 
         // Helper function to convert MM/DD/YYYY to comparable date
+
+        // use committeeActions
         const parseDate = (dateStr) => {
             const [month, day, year] = dateStr.split('/').map(Number);
             return new Date(year, month - 1, day);
@@ -27,7 +29,16 @@ export default class CalendarPage {
         };
 
         const dateMap = actions.reduce((acc, action) => {
-            const date = action.data.committeeHearingTime || action.data.date;
+            // Skip canceled hearings
+            if (action.data.description === "Hearing Canceled") return acc;
+
+            // Use committeeHearingTime if available, otherwise use date for committee actions
+            const date = action.data.committeeHearingTime ||
+                (action.data.isCommitteeAction ? action.data.date : null);
+
+            // Skip if no valid date
+            if (!date) return acc;
+
             const pageKey = date.replace(/\//g, '-');
 
             if (!acc[pageKey]) {
@@ -42,8 +53,8 @@ export default class CalendarPage {
                 };
             }
 
-            // Sort action into appropriate category
-            if (action.data.committeeHearingTime) {
+            // Add to hearings if it's either a scheduled hearing or a committee action
+            if (action.data.committeeHearingTime || action.data.isCommitteeAction) {
                 acc[pageKey].hearings.push(action);
             }
             if (action.data.scheduledForFloorDebate) {

@@ -67,10 +67,49 @@ const groupHearingsByCommittee = hearings => {
     }, {});
 };
 
-export default function CalendarDay({ dateData, committees }) {
-    console.log({dateData})
+const Committee = ({ committee, onCalendarBills, hearings }) => {
+    const committeeHearingBills = hearings
+        .filter((d) => d.data.committee === committee)
+        .map((d) => d.data.bill);
+
+    const bills = onCalendarBills
+        .filter((d) => committeeHearingBills.includes(d.identifier));
+
+    return (
+        <div>
+            <h4>👥 {committee}</h4>
+            <BillTable bills={bills} displayLimit={10} suppressCount={true} />
+        </div>
+    );
+};
+
+export default function CalendarDay({ dateData, onCalendarBills, committees }) {
     const day = shortDateWithWeekday(new Date(dateData.date));
     const hearingsByCommittee = groupHearingsByCommittee(dateData.hearings);
+    console.log(dateData.finalVotes)
+
+    // Group committees by type
+    const committeesWithHearings = Array.from(
+        new Set(dateData.hearings.map((a) => a.data.committee))
+    ).map((name) => {
+        const match = committees.find((d) => d.name === name) || {};
+        return {
+            name,
+            key: match.key || null,
+            cat: match.time && match.type ? `${match.time}-${match.type}` : 'other',
+        };
+    });
+
+    const categories = {
+        amPolicyCommittees: committeesWithHearings.filter((d) => d.cat === "morning-policy"),
+        pmPolicyCommittees: committeesWithHearings.filter((d) => d.cat === "afternoon-policy"),
+        appropsCommittees: committeesWithHearings.filter((d) =>
+            ["morning-fiscal-sub", "varies-fiscal"].includes(d.cat)
+        ),
+        otherCommittees: committeesWithHearings.filter(
+            (d) => !["morning-policy", "afternoon-policy", "morning-fiscal-sub", "varies-fiscal"].includes(d.cat)
+        ),
+    };
 
     return (
         <Layout
@@ -93,19 +132,31 @@ export default function CalendarDay({ dateData, committees }) {
                 {dateData.hearings.length === 0 ? (
                     <p>No committee hearings scheduled for this date.</p>
                 ) : (
-                    Object.entries(hearingsByCommittee).map(([committee, hearings]) => (
-                        <div key={committee}>
-                            <h4>{committee}</h4>
-                            {hearings.map(hearing => (
-                                console.log(hearing),
-                                <div key={hearing.data.id}>
-                                    <strong>Bill:</strong> {hearing.data.bill}
-                                    <br />
-                                    <strong>Description:</strong> {hearing.data.description}
+                    Object.entries(categories).map(([key, categoryCommittees]) => {
+                        if (categoryCommittees.length > 0) {
+                            const title = {
+                                amPolicyCommittees: "Morning Policy Committees",
+                                pmPolicyCommittees: "Afternoon Policy Committees",
+                                appropsCommittees: "Budget Committees",
+                                otherCommittees: "Other Committees",
+                            }[key];
+
+                            return (
+                                <div key={key}>
+                                    <h4>{title}</h4>
+                                    {categoryCommittees.map((committee) => (
+                                        <Committee
+                                            key={`${day}-${committee.name}`}
+                                            committee={committee.name}
+                                            hearings={dateData.hearings}
+                                            onCalendarBills={onCalendarBills}
+                                        />
+                                    ))}
                                 </div>
-                            ))}
-                        </div>
-                    ))
+                            );
+                        }
+                        return null;
+                    })
                 )}
             </section>
 
@@ -114,16 +165,13 @@ export default function CalendarDay({ dateData, committees }) {
                 {dateData.floorDebates.length === 0 ? (
                     <p>No floor debates scheduled for this date.</p>
                 ) : (
-                    dateData.floorDebates.map(debate => (
-                        <div key={debate.data.id}>
-                            <h4>{debate.data.bill}</h4>
-                            <div>
-                                <strong>Chamber:</strong> {capitalizeFirstLetter(debate.data.billHolder)}
-                                <br />
-                                <strong>Description:</strong> {debate.data.description}
-                            </div>
-                        </div>
-                    ))
+                    <BillTable 
+                        bills={onCalendarBills.filter(bill => 
+                            dateData.floorDebates.map(d => d.data.bill).includes(bill.identifier)
+                        )}
+                        displayLimit={10} 
+                        suppressCount={true}
+                    />
                 )}
             </section>
 
@@ -132,16 +180,13 @@ export default function CalendarDay({ dateData, committees }) {
                 {dateData.finalVotes.length === 0 ? (
                     <p>No final votes scheduled for this date.</p>
                 ) : (
-                    dateData.finalVotes.map(vote => (
-                        <div key={vote.data.id}>
-                            <h4>{vote.data.bill}</h4>
-                            <div>
-                                <strong>Chamber:</strong> {capitalizeFirstLetter(vote.data.billHolder)}
-                                <br />
-                                <strong>Description:</strong> {vote.data.description}
-                            </div>
-                        </div>
-                    ))
+                    <BillTable 
+                        bills={onCalendarBills.filter(bill => 
+                            dateData.finalVotes.map(d => d.data.bill).includes(bill.identifier)
+                        )}
+                        displayLimit={10} 
+                        suppressCount={true}
+                    />
                 )}
             </section>
         </Layout>
@@ -166,12 +211,6 @@ export async function getStaticProps({ params }) {
         };
     }
 
-    // Debug logging
-    console.log('Processing date:', params.key, {
-        billsInvolved: dateData.billsInvolved,
-        sampleBill: dateData.billsInvolved[0]
-    });
-
     const onCalendarBills = allBills.filter(bill => 
         dateData.billsInvolved.includes(bill.identifier)
     );
@@ -179,7 +218,8 @@ export async function getStaticProps({ params }) {
     return {
         props: {
             dateData,
-            onCalendarBills
+            onCalendarBills,
+            committees: committees || []
         }
     };
 }
