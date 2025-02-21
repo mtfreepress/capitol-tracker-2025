@@ -1928,10 +1928,10 @@
         "lcIdentifier": "LC0027",
         "type": "joint resolution",
         "status": {
-            "key": "In First House--Out of Committee",
-            "step": "First chamber",
-            "label": "Out of committee",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -4449,10 +4449,10 @@
         "lcIdentifier": "LC0724",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Out of Committee",
-            "step": "First chamber",
-            "label": "Out of committee",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -5906,10 +5906,10 @@
         "lcIdentifier": "LC0225",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Out of Committee",
-            "step": "First chamber",
-            "label": "Out of committee",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -6958,8 +6958,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "TWO_THIRDS_LEGISLATURE",
-            "SIMPLE"
+            "SIMPLE",
+            "TWO_THIRDS_LEGISLATURE"
         ],
         "subjects": [
             "Courts  (see also: Judges and Justices; Juries and Jurors)",
@@ -7148,6 +7148,256 @@
         "numArticles": 0
     },
     {
+        "key": "sb-422",
+        "identifier": "SB 422",
+        "identifierLong": "Senate Bill 422",
+        "chamber": "senate",
+        "title": "Generally revise laws relating to insurance coverage relating to cancer",
+        "session": "2",
+        "lcIdentifier": "LC1934",
+        "type": "senate bill",
+        "status": {
+            "key": "In First House--Introduced",
+            "step": "First chamber",
+            "label": "Introduced",
+            "status": "live",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "passed",
+                "statusLabel": "Introduced",
+                "statusDate": "02/21/2025"
+            },
+            {
+                "step": "first committee",
+                "status": "current",
+                "statusLabel": "Pending",
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Ellie Boldman",
+            "party": "D",
+            "locale": "Missoula",
+            "district": "SD 47"
+        },
+        "requestor": "Ellie Boldman",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "Simple",
+        "voteRequirements": [
+            "SIMPLE"
+        ],
+        "subjects": [
+            "Health Care Services (see also: Health)",
+            "Insurance"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1934?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1934?open_tab=bill",
+        "fiscalNoteUrl": null,
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1934?open_tab=amend",
+        "legalNoteUrl": null,
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0
+    },
+    {
+        "key": "sb-421",
+        "identifier": "SB 421",
+        "identifierLong": "Senate Bill 421",
+        "chamber": "senate",
+        "title": "Require the refund of certain residential lease application fees",
+        "session": "2",
+        "lcIdentifier": "LC1921",
+        "type": "senate bill",
+        "status": {
+            "key": "In First House--Introduced",
+            "step": "First chamber",
+            "label": "Introduced",
+            "status": "live",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "passed",
+                "statusLabel": "Introduced",
+                "statusDate": "02/21/2025"
+            },
+            {
+                "step": "first committee",
+                "status": "current",
+                "statusLabel": "Pending",
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Ellie Boldman",
+            "party": "D",
+            "locale": "Missoula",
+            "district": "SD 47"
+        },
+        "requestor": "Ellie Boldman",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "Simple",
+        "voteRequirements": [
+            "SIMPLE"
+        ],
+        "subjects": [
+            "Landlord and Tenant",
+            "Housing"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1921?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1921?open_tab=bill",
+        "fiscalNoteUrl": null,
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1921?open_tab=amend",
+        "legalNoteUrl": null,
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0
+    },
+    {
+        "key": "sb-420",
+        "identifier": "SB 420",
+        "identifierLong": "Senate Bill 420",
+        "chamber": "senate",
+        "title": "Limit local government fees for children's use of parks",
+        "session": "2",
+        "lcIdentifier": "LC3320",
+        "type": "senate bill",
+        "status": {
+            "key": "In First House--Introduced",
+            "step": "First chamber",
+            "label": "Introduced",
+            "status": "live",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "passed",
+                "statusLabel": "Introduced",
+                "statusDate": "02/21/2025"
+            },
+            {
+                "step": "first committee",
+                "status": "current",
+                "statusLabel": "Pending",
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Ellie Boldman",
+            "party": "D",
+            "locale": "Missoula",
+            "district": "SD 47"
+        },
+        "requestor": "Ellie Boldman",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "Simple",
+        "voteRequirements": [
+            "SIMPLE"
+        ],
+        "subjects": [
+            "Recreation/Parks/Sports",
+            "Schools and Education",
+            "Local Government  (see also: City Subjects; County Subjects)"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3320?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3320?open_tab=bill",
+        "fiscalNoteUrl": null,
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3320?open_tab=amend",
+        "legalNoteUrl": null,
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0
+    },
+    {
         "key": "sb-42",
         "identifier": "SB 42",
         "identifierLong": "Senate Bill 42",
@@ -7247,6 +7497,342 @@
             }
         ],
         "numArticles": 1
+    },
+    {
+        "key": "sb-419",
+        "identifier": "SB 419",
+        "identifierLong": "Senate Bill 419",
+        "chamber": "senate",
+        "title": "Revising pension laws related to service credit for legislative members",
+        "session": "2",
+        "lcIdentifier": "LC3331",
+        "type": "senate bill",
+        "status": {
+            "key": "In First House--Introduced",
+            "step": "First chamber",
+            "label": "Introduced",
+            "status": "live",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "passed",
+                "statusLabel": "Introduced",
+                "statusDate": "02/21/2025"
+            },
+            {
+                "step": "first committee",
+                "status": "current",
+                "statusLabel": "Pending",
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Ellie Boldman",
+            "party": "D",
+            "locale": "Missoula",
+            "district": "SD 47"
+        },
+        "requestor": "Ellie Boldman",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "Simple",
+        "voteRequirements": [
+            "SIMPLE"
+        ],
+        "subjects": [
+            "Public Officers and Employees",
+            "Retirement (see also: Senior Citizens)",
+            "Legislature"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3331?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3331?open_tab=bill",
+        "fiscalNoteUrl": null,
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3331?open_tab=amend",
+        "legalNoteUrl": null,
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0
+    },
+    {
+        "key": "sb-418",
+        "identifier": "SB 418",
+        "identifierLong": "Senate Bill 418",
+        "chamber": "senate",
+        "title": "Generally revise laws relating to home based businesses",
+        "session": "2",
+        "lcIdentifier": "LC1955",
+        "type": "senate bill",
+        "status": {
+            "key": "In First House--Introduced",
+            "step": "First chamber",
+            "label": "Introduced",
+            "status": "live",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "passed",
+                "statusLabel": "Introduced",
+                "statusDate": "02/21/2025"
+            },
+            {
+                "step": "first committee",
+                "status": "current",
+                "statusLabel": "Pending",
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Ellie Boldman",
+            "party": "D",
+            "locale": "Missoula",
+            "district": "SD 47"
+        },
+        "requestor": "Ellie Boldman",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "Simple",
+        "voteRequirements": [
+            "SIMPLE"
+        ],
+        "subjects": [
+            "Economic Development",
+            "Cities and Towns  (see also: Local Government)",
+            "Housing"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1955?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1955?open_tab=bill",
+        "fiscalNoteUrl": null,
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1955?open_tab=amend",
+        "legalNoteUrl": null,
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0
+    },
+    {
+        "key": "sb-417",
+        "identifier": "SB 417",
+        "identifierLong": "Senate Bill 417",
+        "chamber": "senate",
+        "title": "Generally revise laws relating to insurance coverage relating to obesity prevention",
+        "session": "2",
+        "lcIdentifier": "LC1935",
+        "type": "senate bill",
+        "status": {
+            "key": "In First House--Introduced",
+            "step": "First chamber",
+            "label": "Introduced",
+            "status": "live",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "passed",
+                "statusLabel": "Introduced",
+                "statusDate": "02/21/2025"
+            },
+            {
+                "step": "first committee",
+                "status": "current",
+                "statusLabel": "Pending",
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Ellie Boldman",
+            "party": "D",
+            "locale": "Missoula",
+            "district": "SD 47"
+        },
+        "requestor": "Ellie Boldman",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "Simple",
+        "voteRequirements": [
+            "SIMPLE"
+        ],
+        "subjects": [
+            "Health Care Services (see also: Health)",
+            "Insurance"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1935?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1935?open_tab=bill",
+        "fiscalNoteUrl": null,
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1935?open_tab=amend",
+        "legalNoteUrl": null,
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0
+    },
+    {
+        "key": "sb-415",
+        "identifier": "SB 415",
+        "identifierLong": "Senate Bill 415",
+        "chamber": "senate",
+        "title": "Generally revise milk laws",
+        "session": "2",
+        "lcIdentifier": "LC1024",
+        "type": "senate bill",
+        "status": {
+            "key": "In First House--Introduced",
+            "step": "First chamber",
+            "label": "Introduced",
+            "status": "live",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "passed",
+                "statusLabel": "Introduced",
+                "statusDate": "02/21/2025"
+            },
+            {
+                "step": "first committee",
+                "status": "current",
+                "statusLabel": "Pending",
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Greg Hertz",
+            "party": "R",
+            "locale": "Polson",
+            "district": "SD 7"
+        },
+        "requestor": "Greg Hertz",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "Simple",
+        "voteRequirements": [
+            "SIMPLE"
+        ],
+        "subjects": [
+            "Agriculture  (see also: Livestock; Taxation--Agriculture/Livestock)",
+            "Health (see also: Health Care Services; Safety)",
+            "Administrative Rules; Revision or Repeal",
+            "Rule Making"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1024?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1024?open_tab=bill",
+        "fiscalNoteUrl": null,
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1024?open_tab=amend",
+        "legalNoteUrl": null,
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0
     },
     {
         "key": "sb-414",
@@ -8180,9 +8766,9 @@
         "lcIdentifier": "LC4170",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Introduced",
+            "key": "In First House Committee--Nontabled",
             "step": "First chamber",
-            "label": "Introduced",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -8266,9 +8852,9 @@
         "lcIdentifier": "LC3690",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Introduced",
+            "key": "In First House Committee--Nontabled",
             "step": "First chamber",
-            "label": "Introduced",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -8349,9 +8935,9 @@
         "lcIdentifier": "LC0481",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Introduced",
+            "key": "In First House Committee--Nontabled",
             "step": "First chamber",
-            "label": "Introduced",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -8433,9 +9019,9 @@
         "lcIdentifier": "LC0473",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Introduced",
+            "key": "In First House Committee--Nontabled",
             "step": "First chamber",
-            "label": "Introduced",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -8517,9 +9103,9 @@
         "lcIdentifier": "LC0848",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Introduced",
+            "key": "In First House Committee--Nontabled",
             "step": "First chamber",
-            "label": "Introduced",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -8791,9 +9377,9 @@
         "lcIdentifier": "LC0734",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Introduced",
+            "key": "In First House Committee--Nontabled",
             "step": "First chamber",
-            "label": "Introduced",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -8873,9 +9459,9 @@
         "lcIdentifier": "LC2927",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Introduced",
+            "key": "In First House Committee--Nontabled",
             "step": "First chamber",
-            "label": "Introduced",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -8957,9 +9543,9 @@
         "lcIdentifier": "LC1888",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Introduced",
+            "key": "In First House Committee--Nontabled",
             "step": "First chamber",
-            "label": "Introduced",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -9043,9 +9629,9 @@
         "lcIdentifier": "LC0064",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Introduced",
+            "key": "In First House Committee--Nontabled",
             "step": "First chamber",
-            "label": "Introduced",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -9125,9 +9711,9 @@
         "lcIdentifier": "LC4297",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Introduced",
+            "key": "In First House Committee--Nontabled",
             "step": "First chamber",
-            "label": "Introduced",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -9540,7 +10126,7 @@
         "identifier": "SB 390",
         "identifierLong": "Senate Bill 390",
         "chamber": "senate",
-        "title": "Revise definitions in Clean Indoor Air Act",
+        "title": "Revise definitions in clean indoor air act",
         "session": "2",
         "lcIdentifier": "LC3855",
         "type": "senate bill",
@@ -16431,10 +17017,10 @@
         "lcIdentifier": "LC0383",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Through 2nd Reading",
-            "step": "First chamber",
-            "label": "Passed second reading vote",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -17349,10 +17935,10 @@
         "lcIdentifier": "LC0786",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Out of Committee",
-            "step": "First chamber",
-            "label": "Out of committee",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -17683,10 +18269,10 @@
         "lcIdentifier": "LC0704",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Out of Committee",
-            "step": "First chamber",
-            "label": "Out of committee",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -18272,10 +18858,10 @@
         "lcIdentifier": "LC0372",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Through 2nd Reading",
-            "step": "First chamber",
-            "label": "Passed second reading vote",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -19111,10 +19697,10 @@
         "lcIdentifier": "LC4301",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Out of Committee",
-            "step": "First chamber",
-            "label": "Out of committee",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -19279,10 +19865,10 @@
         "lcIdentifier": "LC0057",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Through 2nd Reading",
-            "step": "First chamber",
-            "label": "Passed second reading vote",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -19776,10 +20362,10 @@
         "lcIdentifier": "LC2087",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Through 2nd Reading",
-            "step": "First chamber",
-            "label": "Passed second reading vote",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -20530,10 +21116,10 @@
         "lcIdentifier": "LC0055",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Out of Committee",
-            "step": "First chamber",
-            "label": "Out of committee",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -21449,9 +22035,9 @@
         "lcIdentifier": "LC0587",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Through 3rd Reading",
-            "step": "First chamber",
-            "label": "Passed chamber",
+            "key": "Transmitted to Second House",
+            "step": "Second chamber",
+            "label": "Transmitted",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -22036,9 +22622,9 @@
         "lcIdentifier": "LC0925",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Through 3rd Reading",
-            "step": "First chamber",
-            "label": "Passed chamber",
+            "key": "Transmitted to Second House",
+            "step": "Second chamber",
+            "label": "Transmitted",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -22714,9 +23300,9 @@
         "lcIdentifier": "LC0487",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Through 3rd Reading",
-            "step": "First chamber",
-            "label": "Passed chamber",
+            "key": "Transmitted to Second House",
+            "step": "Second chamber",
+            "label": "Transmitted",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -22799,9 +23385,9 @@
         "lcIdentifier": "LC0471",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Through 3rd Reading",
-            "step": "First chamber",
-            "label": "Passed chamber",
+            "key": "Transmitted to Second House",
+            "step": "Second chamber",
+            "label": "Transmitted",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -23637,10 +24223,10 @@
         "lcIdentifier": "LC0019",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Through 2nd Reading",
-            "step": "First chamber",
-            "label": "Passed second reading vote",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -23976,9 +24562,9 @@
         "lcIdentifier": "LC0749",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Through 3rd Reading",
-            "step": "First chamber",
-            "label": "Passed chamber",
+            "key": "Transmitted to Second House",
+            "step": "Second chamber",
+            "label": "Transmitted",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -24228,9 +24814,9 @@
         "lcIdentifier": "LC4352",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Through 3rd Reading",
-            "step": "First chamber",
-            "label": "Passed chamber",
+            "key": "Transmitted to Second House",
+            "step": "Second chamber",
+            "label": "Transmitted",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -26009,9 +26595,9 @@
         "lcIdentifier": "LC0412",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Through 3rd Reading",
-            "step": "First chamber",
-            "label": "Passed chamber",
+            "key": "Transmitted to Second House",
+            "step": "Second chamber",
+            "label": "Transmitted",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -26677,9 +27263,9 @@
         "lcIdentifier": "LC0476",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Through 3rd Reading",
-            "step": "First chamber",
-            "label": "Passed chamber",
+            "key": "Transmitted to Second House",
+            "step": "Second chamber",
+            "label": "Transmitted",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -27121,9 +27707,9 @@
         "lcIdentifier": "LC2014",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Through 3rd Reading",
-            "step": "First chamber",
-            "label": "Passed chamber",
+            "key": "Transmitted to Second House",
+            "step": "Second chamber",
+            "label": "Transmitted",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -28361,8 +28947,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "TWO_THIRDS_LEGISLATURE",
-            "SIMPLE"
+            "SIMPLE",
+            "TWO_THIRDS_LEGISLATURE"
         ],
         "subjects": [
             "Crimes",
@@ -28769,8 +29355,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "TWO_THIRDS_LEGISLATURE",
-            "SIMPLE"
+            "SIMPLE",
+            "TWO_THIRDS_LEGISLATURE"
         ],
         "subjects": [
             "Constitutional Amendment Proposals",
@@ -29043,10 +29629,10 @@
         "lcIdentifier": "LC1350",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Out of Committee",
-            "step": "First chamber",
-            "label": "Out of committee",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -31816,8 +32402,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "TWO_THIRDS_LEGISLATURE",
-            "SIMPLE"
+            "SIMPLE",
+            "TWO_THIRDS_LEGISLATURE"
         ],
         "subjects": [
             "Constitutional Amendment Proposals",
@@ -32263,10 +32849,10 @@
         "lcIdentifier": "LC1347",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Out of Committee",
-            "step": "First chamber",
-            "label": "Out of committee",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -37228,9 +37814,9 @@
         "lcIdentifier": "LC1645",
         "type": "joint resolution",
         "status": {
-            "key": "In First House--Through 3rd Reading",
-            "step": "First chamber",
-            "label": "Passed chamber",
+            "key": "Transmitted to Second House",
+            "step": "Second chamber",
+            "label": "Transmitted",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -38055,8 +38641,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "TWO_THIRDS_LEGISLATURE",
-            "SIMPLE"
+            "SIMPLE",
+            "TWO_THIRDS_LEGISLATURE"
         ],
         "subjects": [
             "Legislature",
@@ -39701,9 +40287,9 @@
         "lcIdentifier": "LC0534",
         "type": "house bill",
         "status": {
-            "key": "In First House--Through 3rd Reading",
-            "step": "First chamber",
-            "label": "Passed chamber",
+            "key": "Transmitted to Second House",
+            "step": "Second chamber",
+            "label": "Transmitted",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -40541,10 +41127,10 @@
         "lcIdentifier": "LC0233",
         "type": "house bill",
         "status": {
-            "key": "In Second House--Out of Committee",
-            "step": "Second chamber",
-            "label": "On floor",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -41365,10 +41951,10 @@
         "lcIdentifier": "LC0281",
         "type": "house bill",
         "status": {
-            "key": "In Second House--Out of Committee",
-            "step": "Second chamber",
-            "label": "On floor",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -41433,6 +42019,428 @@
         "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0281?open_tab=bill",
         "fiscalNoteUrl": null,
         "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0281?open_tab=amend",
+        "legalNoteUrl": null,
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0
+    },
+    {
+        "key": "hb-654",
+        "identifier": "HB 654",
+        "identifierLong": "House Bill 654",
+        "chamber": "house",
+        "title": "Increase access to early literacy targeted intervention programs",
+        "session": "2",
+        "lcIdentifier": "LC1610",
+        "type": "house bill",
+        "status": {
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "passed",
+                "statusLabel": "Introduced",
+                "statusDate": "02/21/2025"
+            },
+            {
+                "step": "first committee",
+                "status": "current",
+                "statusLabel": "Pending",
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Becky Edwards",
+            "party": "D",
+            "locale": "Bozeman",
+            "district": "HD 61"
+        },
+        "requestor": "Becky Edwards",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "Simple",
+        "voteRequirements": [
+            "SIMPLE"
+        ],
+        "subjects": [
+            "Schools and Education",
+            "Appropriations  (see also: State Finance)",
+            "School Finance"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1610?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1610?open_tab=bill",
+        "fiscalNoteUrl": null,
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1610?open_tab=amend",
+        "legalNoteUrl": null,
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0
+    },
+    {
+        "key": "hb-653",
+        "identifier": "HB 653",
+        "identifierLong": "House Bill 653",
+        "chamber": "house",
+        "title": "Provide for parental right to access child's health care information",
+        "session": "2",
+        "lcIdentifier": "LC3079",
+        "type": "house bill",
+        "status": {
+            "key": "In First House--Introduced",
+            "step": "First chamber",
+            "label": "Introduced",
+            "status": "live",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "passed",
+                "statusLabel": "Introduced",
+                "statusDate": "02/21/2025"
+            },
+            {
+                "step": "first committee",
+                "status": "current",
+                "statusLabel": "Pending",
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Nelly Nicol",
+            "party": "R",
+            "locale": "Billings",
+            "district": "HD 53"
+        },
+        "requestor": "Nelly Nicol",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "Simple",
+        "voteRequirements": [
+            "SIMPLE"
+        ],
+        "subjects": [
+            "Health Care Services (see also: Health)",
+            "Health (see also: Health Care Services; Safety)",
+            "Safety  (see also: Health)",
+            "Minors  (see also: Family Law)",
+            "Privacy"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3079?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3079?open_tab=bill",
+        "fiscalNoteUrl": null,
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3079?open_tab=amend",
+        "legalNoteUrl": null,
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0
+    },
+    {
+        "key": "hb-652",
+        "identifier": "HB 652",
+        "identifierLong": "House Bill 652",
+        "chamber": "house",
+        "title": "Eliminate state taxes on veterans retirement",
+        "session": "2",
+        "lcIdentifier": "LC3073",
+        "type": "house bill",
+        "status": {
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "passed",
+                "statusLabel": "Introduced",
+                "statusDate": "02/21/2025"
+            },
+            {
+                "step": "first committee",
+                "status": "current",
+                "statusLabel": "Pending",
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Nelly Nicol",
+            "party": "R",
+            "locale": "Billings",
+            "district": "HD 53"
+        },
+        "requestor": "Nelly Nicol",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "Simple",
+        "voteRequirements": [
+            "SIMPLE"
+        ],
+        "subjects": [
+            "Military Affairs",
+            "Taxation--Individual Income",
+            "Revenue, State",
+            "Taxation (Generally)"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3073?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3073?open_tab=bill",
+        "fiscalNoteUrl": null,
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3073?open_tab=amend",
+        "legalNoteUrl": null,
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0
+    },
+    {
+        "key": "hb-651",
+        "identifier": "HB 651",
+        "identifierLong": "House Bill 651",
+        "chamber": "house",
+        "title": "Allow for temporary door locks during emergency situations",
+        "session": "2",
+        "lcIdentifier": "LC4026",
+        "type": "house bill",
+        "status": {
+            "key": "In First House--Introduced",
+            "step": "First chamber",
+            "label": "Introduced",
+            "status": "live",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "passed",
+                "statusLabel": "Introduced",
+                "statusDate": "02/21/2025"
+            },
+            {
+                "step": "first committee",
+                "status": "current",
+                "statusLabel": "Pending",
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Amy Regier",
+            "party": "R",
+            "locale": "Kalispell",
+            "district": "HD 6"
+        },
+        "requestor": "Amy Regier",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "Simple",
+        "voteRequirements": [
+            "SIMPLE"
+        ],
+        "subjects": [
+            "Fires and Fire Protection",
+            "Buildings and Building Regulations"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC4026?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC4026?open_tab=bill",
+        "fiscalNoteUrl": null,
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC4026?open_tab=amend",
+        "legalNoteUrl": null,
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0
+    },
+    {
+        "key": "hb-650",
+        "identifier": "HB 650",
+        "identifierLong": "House Bill 650",
+        "chamber": "house",
+        "title": "Revise bonding laws to include broadband projects",
+        "session": "2",
+        "lcIdentifier": "LC4343",
+        "type": "house bill",
+        "status": {
+            "key": "In First House--Introduced",
+            "step": "First chamber",
+            "label": "Introduced",
+            "status": "live",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "passed",
+                "statusLabel": "Introduced",
+                "statusDate": "02/21/2025"
+            },
+            {
+                "step": "first committee",
+                "status": "current",
+                "statusLabel": "Pending",
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Caleb Hinkle",
+            "party": "R",
+            "locale": "Belgrade",
+            "district": "HD 68"
+        },
+        "requestor": "Marta Bertoglio",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "Simple",
+        "voteRequirements": [
+            "SIMPLE"
+        ],
+        "subjects": [
+            "Bond Issues, Public",
+            "Communications  (see also: Information Technology)",
+            "Information Technology  (see also: Communications)"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC4343?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC4343?open_tab=bill",
+        "fiscalNoteUrl": null,
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC4343?open_tab=amend",
         "legalNoteUrl": null,
         "vetoMemoUrl": null,
         "articles": [],
@@ -41517,6 +42525,595 @@
         "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0619?open_tab=bill",
         "fiscalNoteUrl": "/bills/fiscal-note/hb-65",
         "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0619?open_tab=amend",
+        "legalNoteUrl": null,
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0
+    },
+    {
+        "key": "hb-649",
+        "identifier": "HB 649",
+        "identifierLong": "House Bill 649",
+        "chamber": "house",
+        "title": "Establish a farm to food bank program",
+        "session": "2",
+        "lcIdentifier": "LC3735",
+        "type": "house bill",
+        "status": {
+            "key": "In First House--Introduced",
+            "step": "First chamber",
+            "label": "Introduced",
+            "status": "live",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "passed",
+                "statusLabel": "Introduced",
+                "statusDate": "02/21/2025"
+            },
+            {
+                "step": "first committee",
+                "status": "current",
+                "statusLabel": "Pending",
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Shelly Fyant",
+            "party": "D",
+            "locale": "Arlee",
+            "district": "HD 91"
+        },
+        "requestor": "Cora Neumann",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "Simple",
+        "voteRequirements": [
+            "SIMPLE"
+        ],
+        "subjects": [
+            "Agriculture  (see also: Livestock; Taxation--Agriculture/Livestock)",
+            "Appropriations  (see also: State Finance)",
+            "State Finance  (see also: Appropriations; Taxation Subjects)"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3735?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3735?open_tab=bill",
+        "fiscalNoteUrl": null,
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3735?open_tab=amend",
+        "legalNoteUrl": null,
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0
+    },
+    {
+        "key": "hb-648",
+        "identifier": "HB 648",
+        "identifierLong": "House Bill 648",
+        "chamber": "house",
+        "title": "Require FWP notification before the release of large predators",
+        "session": "2",
+        "lcIdentifier": "LC1704",
+        "type": "house bill",
+        "status": {
+            "key": "In First House--Introduced",
+            "step": "First chamber",
+            "label": "Introduced",
+            "status": "live",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "passed",
+                "statusLabel": "Introduced",
+                "statusDate": "02/21/2025"
+            },
+            {
+                "step": "first committee",
+                "status": "current",
+                "statusLabel": "Pending",
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Brandon Ler",
+            "party": "R",
+            "locale": "Savage",
+            "district": "HD 33"
+        },
+        "requestor": "Brandon Ler",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "Simple",
+        "voteRequirements": [
+            "SIMPLE"
+        ],
+        "subjects": [
+            "Fish and Wildlife",
+            "Counties  (see also: Local Government)",
+            "Law Enforcement  (see also: Criminal Procedure)",
+            "Indians"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1704?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1704?open_tab=bill",
+        "fiscalNoteUrl": null,
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1704?open_tab=amend",
+        "legalNoteUrl": null,
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0
+    },
+    {
+        "key": "hb-647",
+        "identifier": "HB 647",
+        "identifierLong": "House Bill 647",
+        "chamber": "house",
+        "title": "Prohibit state land leases to nonprofits",
+        "session": "2",
+        "lcIdentifier": "LC1709",
+        "type": "house bill",
+        "status": {
+            "key": "In First House--Introduced",
+            "step": "First chamber",
+            "label": "Introduced",
+            "status": "live",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "passed",
+                "statusLabel": "Introduced",
+                "statusDate": "02/21/2025"
+            },
+            {
+                "step": "first committee",
+                "status": "current",
+                "statusLabel": "Pending",
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Brandon Ler",
+            "party": "R",
+            "locale": "Savage",
+            "district": "HD 33"
+        },
+        "requestor": "Brandon Ler",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "Simple",
+        "voteRequirements": [
+            "SIMPLE"
+        ],
+        "subjects": [
+            "State Lands",
+            "Property",
+            "Rule Making"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1709?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1709?open_tab=bill",
+        "fiscalNoteUrl": null,
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1709?open_tab=amend",
+        "legalNoteUrl": null,
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0
+    },
+    {
+        "key": "hb-646",
+        "identifier": "HB 646",
+        "identifierLong": "House Bill 646",
+        "chamber": "house",
+        "title": "Elect supreme court by districts",
+        "session": "2",
+        "lcIdentifier": "LC2937",
+        "type": "house bill",
+        "status": {
+            "key": "In First House--Introduced",
+            "step": "First chamber",
+            "label": "Introduced",
+            "status": "live",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "passed",
+                "statusLabel": "Introduced",
+                "statusDate": "02/21/2025"
+            },
+            {
+                "step": "first committee",
+                "status": "current",
+                "statusLabel": "Pending",
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Brandon Ler",
+            "party": "R",
+            "locale": "Savage",
+            "district": "HD 33"
+        },
+        "requestor": "Brandon Ler",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "Simple",
+        "voteRequirements": [
+            "SIMPLE"
+        ],
+        "subjects": [
+            "Courts  (see also: Judges and Justices; Juries and Jurors)",
+            "Judges and Justices  (see also: Courts)",
+            "Elections  (see also: Ballot Issues)"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2937?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2937?open_tab=bill",
+        "fiscalNoteUrl": null,
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2937?open_tab=amend",
+        "legalNoteUrl": null,
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0
+    },
+    {
+        "key": "hb-645",
+        "identifier": "HB 645",
+        "identifierLong": "House Bill 645",
+        "chamber": "house",
+        "title": "Require ballot issue signature gatherers to be Montana citizens and registered voters",
+        "session": "2",
+        "lcIdentifier": "LC1635",
+        "type": "house bill",
+        "status": {
+            "key": "In First House--Introduced",
+            "step": "First chamber",
+            "label": "Introduced",
+            "status": "live",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "passed",
+                "statusLabel": "Introduced",
+                "statusDate": "02/21/2025"
+            },
+            {
+                "step": "first committee",
+                "status": "current",
+                "statusLabel": "Pending",
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Lukas Schubert",
+            "party": "R",
+            "locale": "Kalispell",
+            "district": "HD 8"
+        },
+        "requestor": "Braxton Mitchell",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "Simple",
+        "voteRequirements": [
+            "SIMPLE"
+        ],
+        "subjects": [
+            "Elections  (see also: Ballot Issues)",
+            "Ballot Issues  (see also: Elections)"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1635?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1635?open_tab=bill",
+        "fiscalNoteUrl": null,
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1635?open_tab=amend",
+        "legalNoteUrl": null,
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0
+    },
+    {
+        "key": "hb-644",
+        "identifier": "HB 644",
+        "identifierLong": "House Bill 644",
+        "chamber": "house",
+        "title": "Allow a county to employ a property appraiser for property tax purposes",
+        "session": "2",
+        "lcIdentifier": "LC2233",
+        "type": "house bill",
+        "status": {
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "passed",
+                "statusLabel": "Introduced",
+                "statusDate": "02/21/2025"
+            },
+            {
+                "step": "first committee",
+                "status": "current",
+                "statusLabel": "Pending",
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Tracy Sharp",
+            "party": "R",
+            "locale": "Polson",
+            "district": "HD 12"
+        },
+        "requestor": "Tracy Sharp",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "Simple",
+        "voteRequirements": [
+            "SIMPLE"
+        ],
+        "subjects": [
+            "Counties  (see also: Local Government)",
+            "Taxation (Generally)",
+            "Taxation--Property"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2233?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2233?open_tab=bill",
+        "fiscalNoteUrl": null,
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2233?open_tab=amend",
+        "legalNoteUrl": null,
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0
+    },
+    {
+        "key": "hb-643",
+        "identifier": "HB 643",
+        "identifierLong": "House Bill 643",
+        "chamber": "house",
+        "title": "Revise reimbursement costs to detention centers holding inmates in state custody",
+        "session": "2",
+        "lcIdentifier": "LC2222",
+        "type": "house bill",
+        "status": {
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "passed",
+                "statusLabel": "Introduced",
+                "statusDate": "02/21/2025"
+            },
+            {
+                "step": "first committee",
+                "status": "current",
+                "statusLabel": "Pending",
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Tracy Sharp",
+            "party": "R",
+            "locale": "Polson",
+            "district": "HD 12"
+        },
+        "requestor": "Tracy Sharp",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "Simple",
+        "voteRequirements": [
+            "SIMPLE"
+        ],
+        "subjects": [
+            "Corrections",
+            "Counties  (see also: Local Government)",
+            "Criminal Procedure  (see also: Law Enforcement)",
+            "Health (see also: Health Care Services; Safety)"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2222?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2222?open_tab=bill",
+        "fiscalNoteUrl": null,
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2222?open_tab=amend",
         "legalNoteUrl": null,
         "vetoMemoUrl": null,
         "articles": [],
@@ -41629,10 +43226,10 @@
         "lcIdentifier": "LC0460",
         "type": "house bill",
         "status": {
-            "key": "In First House--Introduced",
-            "step": "First chamber",
-            "label": "Introduced",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -41711,10 +43308,10 @@
         "lcIdentifier": "LC3722",
         "type": "house bill",
         "status": {
-            "key": "In First House--Introduced",
-            "step": "First chamber",
-            "label": "Introduced",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -41877,10 +43474,10 @@
         "lcIdentifier": "LC0888",
         "type": "house bill",
         "status": {
-            "key": "In First House--Introduced",
-            "step": "First chamber",
-            "label": "Introduced",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -42711,10 +44308,10 @@
         "lcIdentifier": "LC0275",
         "type": "house bill",
         "status": {
-            "key": "In Second House--Out of Committee",
-            "step": "Second chamber",
-            "label": "On floor",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -44552,10 +46149,10 @@
         "lcIdentifier": "LC0273",
         "type": "house bill",
         "status": {
-            "key": "In Second House--Out of Committee",
-            "step": "Second chamber",
-            "label": "On floor",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -49217,9 +50814,9 @@
         "lcIdentifier": "LC0205",
         "type": "house bill",
         "status": {
-            "key": "In First House--Through 3rd Reading",
-            "step": "First chamber",
-            "label": "Passed chamber",
+            "key": "Transmitted to Second House",
+            "step": "Second chamber",
+            "label": "Transmitted",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -52186,8 +53783,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "TWO_THIRDS_LEGISLATURE",
-            "SIMPLE"
+            "SIMPLE",
+            "TWO_THIRDS_LEGISLATURE"
         ],
         "subjects": [
             "Taxation--Individual Income",
@@ -54116,8 +55713,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "TWO_THIRDS_LEGISLATURE",
-            "SIMPLE"
+            "SIMPLE",
+            "TWO_THIRDS_LEGISLATURE"
         ],
         "subjects": [
             "Constitutional Amendment Proposals",
@@ -54192,8 +55789,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "TWO_THIRDS_LEGISLATURE",
-            "SIMPLE"
+            "SIMPLE",
+            "TWO_THIRDS_LEGISLATURE"
         ],
         "subjects": [
             "Constitutional Amendment Proposals",
@@ -57751,9 +59348,9 @@
         "lcIdentifier": "LC3358",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
+            "key": "In First House--Out of Committee",
             "step": "First chamber",
-            "label": "In committee",
+            "label": "Out of committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -58463,8 +60060,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "TWO_THIRDS_LEGISLATURE",
-            "SIMPLE"
+            "SIMPLE",
+            "TWO_THIRDS_LEGISLATURE"
         ],
         "subjects": [
             "Constitutional Amendment Proposals",
@@ -60326,10 +61923,10 @@
         "lcIdentifier": "LC0320",
         "type": "house bill",
         "status": {
-            "key": "In Second House--Through 2nd Reading",
-            "step": "Second chamber",
-            "label": "Passed 2nd reading vote",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -61240,10 +62837,10 @@
         "lcIdentifier": "LC0171",
         "type": "house bill",
         "status": {
-            "key": "In Second House--Through 2nd Reading",
-            "step": "Second chamber",
-            "label": "Passed 2nd reading vote",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -61572,9 +63169,9 @@
         "lcIdentifier": "LC1511",
         "type": "house bill",
         "status": {
-            "key": "In First House--Through 3rd Reading",
-            "step": "First chamber",
-            "label": "Passed chamber",
+            "key": "Transmitted to Second House",
+            "step": "Second chamber",
+            "label": "Transmitted",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -62576,9 +64173,9 @@
         "lcIdentifier": "LC2371",
         "type": "house bill",
         "status": {
-            "key": "In First House--Through 3rd Reading",
-            "step": "First chamber",
-            "label": "Passed chamber",
+            "key": "Transmitted to Second House",
+            "step": "Second chamber",
+            "label": "Transmitted",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -63923,9 +65520,9 @@
         "lcIdentifier": "LC1522",
         "type": "house bill",
         "status": {
-            "key": "In First House--Through 3rd Reading",
-            "step": "First chamber",
-            "label": "Passed chamber",
+            "key": "Transmitted to Second House",
+            "step": "Second chamber",
+            "label": "Transmitted",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -64784,9 +66381,9 @@
         "lcIdentifier": "LC0299",
         "type": "house bill",
         "status": {
-            "key": "In First House--Through 3rd Reading",
-            "step": "First chamber",
-            "label": "Passed chamber",
+            "key": "Transmitted to Second House",
+            "step": "Second chamber",
+            "label": "Transmitted",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -65221,9 +66818,9 @@
         "lcIdentifier": "LC2052",
         "type": "house bill",
         "status": {
-            "key": "In First House--Through 3rd Reading",
-            "step": "First chamber",
-            "label": "Passed chamber",
+            "key": "Transmitted to Second House",
+            "step": "Second chamber",
+            "label": "Transmitted",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -65969,10 +67566,10 @@
         "lcIdentifier": "LC0235",
         "type": "house bill",
         "status": {
-            "key": "In Second House Committee--Nontabled",
-            "step": "Second chamber",
-            "label": "In committee",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -67143,9 +68740,9 @@
         "lcIdentifier": "LC1353",
         "type": "house bill",
         "status": {
-            "key": "In First House--Through 3rd Reading",
-            "step": "First chamber",
-            "label": "Passed chamber",
+            "key": "Transmitted to Second House",
+            "step": "Second chamber",
+            "label": "Transmitted",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -68319,9 +69916,9 @@
         "lcIdentifier": "LC3968",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
+            "key": "In First House--Out of Committee",
             "step": "First chamber",
-            "label": "In committee",
+            "label": "Out of committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -71898,8 +73495,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "TWO_THIRDS_LEGISLATURE",
-            "SIMPLE"
+            "SIMPLE",
+            "TWO_THIRDS_LEGISLATURE"
         ],
         "subjects": [
             "Abortion",
@@ -74913,9 +76510,9 @@
         "lcIdentifier": "LC1643",
         "type": "house bill",
         "status": {
-            "key": "In First House--Through 3rd Reading",
-            "step": "First chamber",
-            "label": "Passed chamber",
+            "key": "Transmitted to Second House",
+            "step": "Second chamber",
+            "label": "Transmitted",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -79209,9 +80806,9 @@
         "lcIdentifier": "LC0423",
         "type": "house bill",
         "status": {
-            "key": "In First House--Through 3rd Reading",
-            "step": "First chamber",
-            "label": "Passed chamber",
+            "key": "Transmitted to Second House",
+            "step": "Second chamber",
+            "label": "Transmitted",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -83447,10 +85044,10 @@
         "lcIdentifier": "LC0417",
         "type": "house bill",
         "status": {
-            "key": "In Second House--Through 2nd Reading",
-            "step": "Second chamber",
-            "label": "Passed 2nd reading vote",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [

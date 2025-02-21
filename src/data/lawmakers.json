@@ -1600,10 +1600,10 @@
                 "title": "Revise laws related to tampering with evidence connected to a homicide",
                 "chamber": "house",
                 "status": {
-                    "key": "In Second House--Through 2nd Reading",
-                    "step": "Second chamber",
-                    "label": "Passed 2nd reading vote",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -1661,10 +1661,10 @@
                 "title": "Generally revise motor vehicle traffic regulation laws",
                 "chamber": "house",
                 "status": {
-                    "key": "In Second House--Through 2nd Reading",
-                    "step": "Second chamber",
-                    "label": "Passed 2nd reading vote",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -5117,9 +5117,9 @@
                 "title": "Provide for property owners to vote to add, remove, amend easements and covenants",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Introduced",
+                    "key": "In First House Committee--Nontabled",
                     "step": "First chamber",
-                    "label": "Introduced",
+                    "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -5178,9 +5178,9 @@
                 "title": "Revise times for holding primary elections",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Introduced",
+                    "key": "In First House Committee--Nontabled",
                     "step": "First chamber",
-                    "label": "Introduced",
+                    "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -5361,10 +5361,10 @@
                 "title": "Prohibit sale of tax deed to foreign entity",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Out of Committee",
-                    "step": "First chamber",
-                    "label": "Out of committee",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -5544,9 +5544,9 @@
                 "title": "Revising landowner preference qualifications for elk to require finalized land ownership of 640 acres or more of contiguous land",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Through 3rd Reading",
-                    "step": "First chamber",
-                    "label": "Passed chamber",
+                    "key": "Transmitted to Second House",
+                    "step": "Second chamber",
+                    "label": "Transmitted",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -5974,6 +5974,372 @@
         "articles": [],
         "imageSlug": "2025/ellie-boldman.jpg",
         "sponsoredBills": [
+            {
+                "key": "sb-422",
+                "identifier": "SB 422",
+                "title": "Generally revise laws relating to insurance coverage relating to cancer",
+                "chamber": "senate",
+                "status": {
+                    "key": "In First House--Introduced",
+                    "step": "First chamber",
+                    "label": "Introduced",
+                    "status": "live",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "02/21/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1934?open_tab=bill",
+                "fiscalNoteUrl": null,
+                "legalNoteUrl": null,
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Ellie Boldman",
+                    "party": "D",
+                    "locale": "Missoula",
+                    "district": "SD 47"
+                }
+            },
+            {
+                "key": "sb-421",
+                "identifier": "SB 421",
+                "title": "Require the refund of certain residential lease application fees",
+                "chamber": "senate",
+                "status": {
+                    "key": "In First House--Introduced",
+                    "step": "First chamber",
+                    "label": "Introduced",
+                    "status": "live",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "02/21/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1921?open_tab=bill",
+                "fiscalNoteUrl": null,
+                "legalNoteUrl": null,
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Ellie Boldman",
+                    "party": "D",
+                    "locale": "Missoula",
+                    "district": "SD 47"
+                }
+            },
+            {
+                "key": "sb-420",
+                "identifier": "SB 420",
+                "title": "Limit local government fees for children's use of parks",
+                "chamber": "senate",
+                "status": {
+                    "key": "In First House--Introduced",
+                    "step": "First chamber",
+                    "label": "Introduced",
+                    "status": "live",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "02/21/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3320?open_tab=bill",
+                "fiscalNoteUrl": null,
+                "legalNoteUrl": null,
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Ellie Boldman",
+                    "party": "D",
+                    "locale": "Missoula",
+                    "district": "SD 47"
+                }
+            },
+            {
+                "key": "sb-419",
+                "identifier": "SB 419",
+                "title": "Revising pension laws related to service credit for legislative members",
+                "chamber": "senate",
+                "status": {
+                    "key": "In First House--Introduced",
+                    "step": "First chamber",
+                    "label": "Introduced",
+                    "status": "live",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "02/21/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3331?open_tab=bill",
+                "fiscalNoteUrl": null,
+                "legalNoteUrl": null,
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Ellie Boldman",
+                    "party": "D",
+                    "locale": "Missoula",
+                    "district": "SD 47"
+                }
+            },
+            {
+                "key": "sb-418",
+                "identifier": "SB 418",
+                "title": "Generally revise laws relating to home based businesses",
+                "chamber": "senate",
+                "status": {
+                    "key": "In First House--Introduced",
+                    "step": "First chamber",
+                    "label": "Introduced",
+                    "status": "live",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "02/21/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1955?open_tab=bill",
+                "fiscalNoteUrl": null,
+                "legalNoteUrl": null,
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Ellie Boldman",
+                    "party": "D",
+                    "locale": "Missoula",
+                    "district": "SD 47"
+                }
+            },
+            {
+                "key": "sb-417",
+                "identifier": "SB 417",
+                "title": "Generally revise laws relating to insurance coverage relating to obesity prevention",
+                "chamber": "senate",
+                "status": {
+                    "key": "In First House--Introduced",
+                    "step": "First chamber",
+                    "label": "Introduced",
+                    "status": "live",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "02/21/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1935?open_tab=bill",
+                "fiscalNoteUrl": null,
+                "legalNoteUrl": null,
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Ellie Boldman",
+                    "party": "D",
+                    "locale": "Missoula",
+                    "district": "SD 47"
+                }
+            },
             {
                 "key": "sb-271",
                 "identifier": "SB 271",
@@ -7637,9 +8003,9 @@
                 "title": "Establish ambulance provider assessment fee program",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Through 3rd Reading",
-                    "step": "First chamber",
-                    "label": "Passed chamber",
+                    "key": "Transmitted to Second House",
+                    "step": "Second chamber",
+                    "label": "Transmitted",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -8064,9 +8430,9 @@
                 "title": "Revise workers' compensation laws relating to travel and reimbursement",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Through 3rd Reading",
-                    "step": "First chamber",
-                    "label": "Passed chamber",
+                    "key": "Transmitted to Second House",
+                    "step": "Second chamber",
+                    "label": "Transmitted",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -10713,9 +11079,9 @@
                 "title": "Revise penalties for criminal trespass while fishing, trapping, hunting, or collecting antlers/sheds/horns",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House Committee--Nontabled",
+                    "key": "In First House--Out of Committee",
                     "step": "First chamber",
-                    "label": "In committee",
+                    "label": "Out of committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -11399,10 +11765,10 @@
                 "title": "Supplemental employer contribution for PERS, HPORS, SRS, GWPORS",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Out of Committee",
-                    "step": "First chamber",
-                    "label": "Out of committee",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -12288,7 +12654,7 @@
             {
                 "key": "sb-390",
                 "identifier": "SB 390",
-                "title": "Revise definitions in Clean Indoor Air Act",
+                "title": "Revise definitions in clean indoor air act",
                 "chamber": "senate",
                 "status": {
                     "key": "In First House Committee--Nontabled",
@@ -12974,10 +13340,10 @@
                 "title": "Extend application of bond validating act",
                 "chamber": "house",
                 "status": {
-                    "key": "In Second House--Out of Committee",
-                    "step": "Second chamber",
-                    "label": "On floor",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -16040,6 +16406,67 @@
                 }
             },
             {
+                "key": "hb-654",
+                "identifier": "HB 654",
+                "title": "Increase access to early literacy targeted intervention programs",
+                "chamber": "house",
+                "status": {
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "02/21/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1610?open_tab=bill",
+                "fiscalNoteUrl": null,
+                "legalNoteUrl": null,
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Becky Edwards",
+                    "party": "D",
+                    "locale": "Bozeman",
+                    "district": "HD 61"
+                }
+            },
+            {
                 "key": "hb-26",
                 "identifier": "HB 26",
                 "title": "Repeal mercury thermostat collection act",
@@ -17025,10 +17452,10 @@
                 "title": "Adopt most recent federal military codes and regulations",
                 "chamber": "house",
                 "status": {
-                    "key": "In Second House--Out of Committee",
-                    "step": "Second chamber",
-                    "label": "On floor",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -17598,9 +18025,9 @@
                 "title": "Provide requirements for public library resources containing material of a sexual or graphic sexual nature",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Introduced",
+                    "key": "In First House Committee--Nontabled",
                     "step": "First chamber",
-                    "label": "Introduced",
+                    "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -17659,9 +18086,9 @@
                 "title": "Revise legal requirement of standing to maintain a lawsuit",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Introduced",
+                    "key": "In First House Committee--Nontabled",
                     "step": "First chamber",
-                    "label": "Introduced",
+                    "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -18208,10 +18635,10 @@
                 "title": "Clarify value of caselaw interpreting a statute after subsequent legislative action",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Through 2nd Reading",
-                    "step": "First chamber",
-                    "label": "Passed second reading vote",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -18391,10 +18818,10 @@
                 "title": "Create rules of conduct for child protection specialists",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Out of Committee",
-                    "step": "First chamber",
-                    "label": "Out of committee",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -21721,9 +22148,9 @@
                 "title": "Require reporting of building permits for appraisal information",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Introduced",
+                    "key": "In First House Committee--Nontabled",
                     "step": "First chamber",
-                    "label": "Introduced",
+                    "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -28128,6 +28555,67 @@
         "imageSlug": "2025/shelly-fyant.jpg",
         "sponsoredBills": [
             {
+                "key": "hb-649",
+                "identifier": "HB 649",
+                "title": "Establish a farm to food bank program",
+                "chamber": "house",
+                "status": {
+                    "key": "In First House--Introduced",
+                    "step": "First chamber",
+                    "label": "Introduced",
+                    "status": "live",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "02/21/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3735?open_tab=bill",
+                "fiscalNoteUrl": null,
+                "legalNoteUrl": null,
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Shelly Fyant",
+                    "party": "D",
+                    "locale": "Arlee",
+                    "district": "HD 91"
+                }
+            },
+            {
                 "key": "hb-358",
                 "identifier": "HB 358",
                 "title": "Generally revise pension laws related to the Volunteer Firefighters' Compensation Act",
@@ -28451,9 +28939,9 @@
                 "title": "Grant the fish and wildlife commission authority to set muzzleloader season",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Introduced",
+                    "key": "In First House Committee--Nontabled",
                     "step": "First chamber",
-                    "label": "Introduced",
+                    "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -30192,9 +30680,9 @@
                 "title": "Revise liability, training for prescribed fires",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Through 3rd Reading",
-                    "step": "First chamber",
-                    "label": "Passed chamber",
+                    "key": "Transmitted to Second House",
+                    "step": "Second chamber",
+                    "label": "Transmitted",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -30253,10 +30741,10 @@
                 "title": "Revise public safety officer certification standards",
                 "chamber": "house",
                 "status": {
-                    "key": "In Second House--Out of Committee",
-                    "step": "Second chamber",
-                    "label": "On floor",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -33826,6 +34314,67 @@
                 }
             },
             {
+                "key": "sb-415",
+                "identifier": "SB 415",
+                "title": "Generally revise milk laws",
+                "chamber": "senate",
+                "status": {
+                    "key": "In First House--Introduced",
+                    "step": "First chamber",
+                    "label": "Introduced",
+                    "status": "live",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "02/21/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1024?open_tab=bill",
+                "fiscalNoteUrl": null,
+                "legalNoteUrl": null,
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Greg Hertz",
+                    "party": "R",
+                    "locale": "Polson",
+                    "district": "SD 7"
+                }
+            },
+            {
                 "key": "sb-40",
                 "identifier": "SB 40",
                 "title": "Revise supreme court public records laws by opening deliberations and files to the public",
@@ -36321,9 +36870,9 @@
                 "title": "Joint resolution recognizing the 250th birthday of the United States of America",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Through 3rd Reading",
-                    "step": "First chamber",
-                    "label": "Passed chamber",
+                    "key": "Transmitted to Second House",
+                    "step": "Second chamber",
+                    "label": "Transmitted",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -36354,6 +36903,67 @@
                     }
                 ],
                 "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1645?open_tab=bill",
+                "fiscalNoteUrl": null,
+                "legalNoteUrl": null,
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Caleb Hinkle",
+                    "party": "R",
+                    "locale": "Belgrade",
+                    "district": "HD 68"
+                }
+            },
+            {
+                "key": "hb-650",
+                "identifier": "HB 650",
+                "title": "Revise bonding laws to include broadband projects",
+                "chamber": "house",
+                "status": {
+                    "key": "In First House--Introduced",
+                    "step": "First chamber",
+                    "label": "Introduced",
+                    "status": "live",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "02/21/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC4343?open_tab=bill",
                 "fiscalNoteUrl": null,
                 "legalNoteUrl": null,
                 "numArticles": 0,
@@ -36541,9 +37151,9 @@
                 "title": "Establish an interim committee to investigate civil rights violations and censorship within the MUS",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Through 3rd Reading",
-                    "step": "First chamber",
-                    "label": "Passed chamber",
+                    "key": "Transmitted to Second House",
+                    "step": "Second chamber",
+                    "label": "Transmitted",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -41790,9 +42400,9 @@
                 "title": "Generally revise laws related to watercraft.",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House Committee--Nontabled",
+                    "key": "In First House--Out of Committee",
                     "step": "First chamber",
-                    "label": "In committee",
+                    "label": "Out of committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -44873,9 +45483,9 @@
                 "title": "Provide for case determinations of investigations of reported child abuse or neglect",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Introduced",
+                    "key": "In First House Committee--Nontabled",
                     "step": "First chamber",
-                    "label": "Introduced",
+                    "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -44934,9 +45544,9 @@
                 "title": "Prohibit definitions in administrative rules",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Introduced",
+                    "key": "In First House Committee--Nontabled",
                     "step": "First chamber",
-                    "label": "Introduced",
+                    "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -45361,9 +45971,9 @@
                 "title": "Generally revise child abuse and neglect laws",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Through 3rd Reading",
-                    "step": "First chamber",
-                    "label": "Passed chamber",
+                    "key": "Transmitted to Second House",
+                    "step": "Second chamber",
+                    "label": "Transmitted",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -45544,9 +46154,9 @@
                 "title": "Revise child abuse and neglect laws involving adjudication",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Through 3rd Reading",
-                    "step": "First chamber",
-                    "label": "Passed chamber",
+                    "key": "Transmitted to Second House",
+                    "step": "Second chamber",
+                    "label": "Transmitted",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -45605,9 +46215,9 @@
                 "title": "Provide that legislator access to CPS records includes drug testing results",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Through 3rd Reading",
-                    "step": "First chamber",
-                    "label": "Passed chamber",
+                    "key": "Transmitted to Second House",
+                    "step": "Second chamber",
+                    "label": "Transmitted",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -45727,9 +46337,9 @@
                 "title": "Generally revise laws related to child abuse and neglect proceedings and investigations",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Through 3rd Reading",
-                    "step": "First chamber",
-                    "label": "Passed chamber",
+                    "key": "Transmitted to Second House",
+                    "step": "Second chamber",
+                    "label": "Transmitted",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -46169,6 +46779,189 @@
         "lawmakerPageText": "",
         "imageSlug": "2025/brandon-ler.jpg",
         "sponsoredBills": [
+            {
+                "key": "hb-648",
+                "identifier": "HB 648",
+                "title": "Require FWP notification before the release of large predators",
+                "chamber": "house",
+                "status": {
+                    "key": "In First House--Introduced",
+                    "step": "First chamber",
+                    "label": "Introduced",
+                    "status": "live",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "02/21/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1704?open_tab=bill",
+                "fiscalNoteUrl": null,
+                "legalNoteUrl": null,
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Brandon Ler",
+                    "party": "R",
+                    "locale": "Savage",
+                    "district": "HD 33"
+                }
+            },
+            {
+                "key": "hb-647",
+                "identifier": "HB 647",
+                "title": "Prohibit state land leases to nonprofits",
+                "chamber": "house",
+                "status": {
+                    "key": "In First House--Introduced",
+                    "step": "First chamber",
+                    "label": "Introduced",
+                    "status": "live",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "02/21/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1709?open_tab=bill",
+                "fiscalNoteUrl": null,
+                "legalNoteUrl": null,
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Brandon Ler",
+                    "party": "R",
+                    "locale": "Savage",
+                    "district": "HD 33"
+                }
+            },
+            {
+                "key": "hb-646",
+                "identifier": "HB 646",
+                "title": "Elect supreme court by districts",
+                "chamber": "house",
+                "status": {
+                    "key": "In First House--Introduced",
+                    "step": "First chamber",
+                    "label": "Introduced",
+                    "status": "live",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "02/21/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2937?open_tab=bill",
+                "fiscalNoteUrl": null,
+                "legalNoteUrl": null,
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Brandon Ler",
+                    "party": "R",
+                    "locale": "Savage",
+                    "district": "HD 33"
+                }
+            },
             {
                 "key": "hb-554",
                 "identifier": "HB 554",
@@ -47041,10 +47834,10 @@
                 "title": "Expedite seized property after law investigation",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Out of Committee",
-                    "step": "First chamber",
-                    "label": "Out of committee",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -48344,9 +49137,9 @@
                 "title": "Exempt subdivision, water/sewer plans from environmental review",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Through 3rd Reading",
-                    "step": "First chamber",
-                    "label": "Passed chamber",
+                    "key": "Transmitted to Second House",
+                    "step": "Second chamber",
+                    "label": "Transmitted",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -48466,10 +49259,10 @@
                 "title": "Requiring judges to invite amicus briefing and allow intervention in certain civil cases",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Through 2nd Reading",
-                    "step": "First chamber",
-                    "label": "Passed second reading vote",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -53929,10 +54722,10 @@
                 "title": "Revise noneconomic damages in medical malpractice actions",
                 "chamber": "house",
                 "status": {
-                    "key": "In Second House--Through 2nd Reading",
-                    "step": "Second chamber",
-                    "label": "Passed 2nd reading vote",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -55476,9 +56269,9 @@
                 "title": "Enact the \"Free to Speak Act\"",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Through 3rd Reading",
-                    "step": "First chamber",
-                    "label": "Passed chamber",
+                    "key": "Transmitted to Second House",
+                    "step": "Second chamber",
+                    "label": "Transmitted",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -56349,9 +57142,9 @@
                 "title": "Clarifying laws related to real estate appraisers",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Through 3rd Reading",
-                    "step": "First chamber",
-                    "label": "Passed chamber",
+                    "key": "Transmitted to Second House",
+                    "step": "Second chamber",
+                    "label": "Transmitted",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -59340,6 +60133,128 @@
         "articles": [],
         "imageSlug": "2025/nelly-nicol.jpg",
         "sponsoredBills": [
+            {
+                "key": "hb-653",
+                "identifier": "HB 653",
+                "title": "Provide for parental right to access child's health care information",
+                "chamber": "house",
+                "status": {
+                    "key": "In First House--Introduced",
+                    "step": "First chamber",
+                    "label": "Introduced",
+                    "status": "live",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "02/21/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3079?open_tab=bill",
+                "fiscalNoteUrl": null,
+                "legalNoteUrl": null,
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Nelly Nicol",
+                    "party": "R",
+                    "locale": "Billings",
+                    "district": "HD 53"
+                }
+            },
+            {
+                "key": "hb-652",
+                "identifier": "HB 652",
+                "title": "Eliminate state taxes on veterans retirement",
+                "chamber": "house",
+                "status": {
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "02/21/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3073?open_tab=bill",
+                "fiscalNoteUrl": null,
+                "legalNoteUrl": null,
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Nelly Nicol",
+                    "party": "R",
+                    "locale": "Billings",
+                    "district": "HD 53"
+                }
+            },
             {
                 "key": "hb-577",
                 "identifier": "HB 577",
@@ -62726,10 +63641,10 @@
                 "title": "Revise laws related to disability parking",
                 "chamber": "house",
                 "status": {
-                    "key": "In Second House Committee--Nontabled",
-                    "step": "Second chamber",
-                    "label": "In committee",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -64916,10 +65831,10 @@
                 "title": "Revise inter-entity loan process",
                 "chamber": "house",
                 "status": {
-                    "key": "In Second House--Out of Committee",
-                    "step": "Second chamber",
-                    "label": "On floor",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -68042,9 +68957,9 @@
                 "title": "Revise state procurement laws related to entitles that are exempt from the RFP process.",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Through 3rd Reading",
-                    "step": "First chamber",
-                    "label": "Passed chamber",
+                    "key": "Transmitted to Second House",
+                    "step": "Second chamber",
+                    "label": "Transmitted",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -68324,6 +69239,67 @@
         "imageSlug": "2025/amy-regier.jpg",
         "sponsoredBills": [
             {
+                "key": "hb-651",
+                "identifier": "HB 651",
+                "title": "Allow for temporary door locks during emergency situations",
+                "chamber": "house",
+                "status": {
+                    "key": "In First House--Introduced",
+                    "step": "First chamber",
+                    "label": "Introduced",
+                    "status": "live",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "02/21/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC4026?open_tab=bill",
+                "fiscalNoteUrl": null,
+                "legalNoteUrl": null,
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Amy Regier",
+                    "party": "R",
+                    "locale": "Kalispell",
+                    "district": "HD 6"
+                }
+            },
+            {
                 "key": "hb-526",
                 "identifier": "HB 526",
                 "title": "Adopt the Advanced Practice Registered Nurse license compact",
@@ -68512,9 +69488,9 @@
                 "title": "Revise laws on a judge's ability to provide bail to certain defendants",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Through 3rd Reading",
-                    "step": "First chamber",
-                    "label": "Passed chamber",
+                    "key": "Transmitted to Second House",
+                    "step": "Second chamber",
+                    "label": "Transmitted",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -68634,9 +69610,9 @@
                 "title": "Create pregnancy center autonomy and rights of expression act",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Through 3rd Reading",
-                    "step": "First chamber",
-                    "label": "Passed chamber",
+                    "key": "Transmitted to Second House",
+                    "step": "Second chamber",
+                    "label": "Transmitted",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -69405,9 +70381,9 @@
                 "title": "Revise contaminated property cleanup laws for dangerous drugs",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Through 3rd Reading",
-                    "step": "First chamber",
-                    "label": "Passed chamber",
+                    "key": "Transmitted to Second House",
+                    "step": "Second chamber",
+                    "label": "Transmitted",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -72446,6 +73422,67 @@
         "imageSlug": "2025/lukas-schubert.jpg",
         "sponsoredBills": [
             {
+                "key": "hb-645",
+                "identifier": "HB 645",
+                "title": "Require ballot issue signature gatherers to be Montana citizens and registered voters",
+                "chamber": "house",
+                "status": {
+                    "key": "In First House--Introduced",
+                    "step": "First chamber",
+                    "label": "Introduced",
+                    "status": "live",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "02/21/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1635?open_tab=bill",
+                "fiscalNoteUrl": null,
+                "legalNoteUrl": null,
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Lukas Schubert",
+                    "party": "R",
+                    "locale": "Kalispell",
+                    "district": "HD 8"
+                }
+            },
+            {
                 "key": "hb-537",
                 "identifier": "HB 537",
                 "title": "Provide for a birth day tax credit for the birth of a child",
@@ -74734,6 +75771,128 @@
         "imageSlug": "2025/tracy-sharp.jpg",
         "sponsoredBills": [
             {
+                "key": "hb-644",
+                "identifier": "HB 644",
+                "title": "Allow a county to employ a property appraiser for property tax purposes",
+                "chamber": "house",
+                "status": {
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "02/21/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2233?open_tab=bill",
+                "fiscalNoteUrl": null,
+                "legalNoteUrl": null,
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Tracy Sharp",
+                    "party": "R",
+                    "locale": "Polson",
+                    "district": "HD 12"
+                }
+            },
+            {
+                "key": "hb-643",
+                "identifier": "HB 643",
+                "title": "Revise reimbursement costs to detention centers holding inmates in state custody",
+                "chamber": "house",
+                "status": {
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "02/21/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2222?open_tab=bill",
+                "fiscalNoteUrl": null,
+                "legalNoteUrl": null,
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Tracy Sharp",
+                    "party": "R",
+                    "locale": "Polson",
+                    "district": "HD 12"
+                }
+            },
+            {
                 "key": "hb-469",
                 "identifier": "HB 469",
                 "title": "Revise the exemption for out-of-state driver's licenses",
@@ -76266,10 +77425,10 @@
                 "title": "Repeal Lewis and Clark bicentennial plate program",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Introduced",
-                    "step": "First chamber",
-                    "label": "Introduced",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -79599,10 +80758,10 @@
                 "title": "Revising membership in FURS to include airport authority public safety employees",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Introduced",
-                    "step": "First chamber",
-                    "label": "Introduced",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -80349,9 +81508,9 @@
                 "title": "Revise laws related to construction contractors",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Through 3rd Reading",
-                    "step": "First chamber",
-                    "label": "Passed chamber",
+                    "key": "Transmitted to Second House",
+                    "step": "Second chamber",
+                    "label": "Transmitted",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -81354,9 +82513,9 @@
                 "title": "Revise appraisal process for centrally assessed property",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Introduced",
+                    "key": "In First House Committee--Nontabled",
                     "step": "First chamber",
-                    "label": "Introduced",
+                    "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -83598,10 +84757,10 @@
                 "title": "Joint resolution honoring NCSL's 50th anniversary",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Out of Committee",
-                    "step": "First chamber",
-                    "label": "Out of committee",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -85723,10 +86882,10 @@
                 "title": "Generally revise gambling laws",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Introduced",
-                    "step": "First chamber",
-                    "label": "Introduced",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -88026,10 +89185,10 @@
                 "title": "Generally revise Indian education for all laws",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Out of Committee",
-                    "step": "First chamber",
-                    "label": "Out of committee",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -88148,10 +89307,10 @@
                 "title": "Generally revise Montana Indian child welfare laws",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Out of Committee",
-                    "step": "First chamber",
-                    "label": "Out of committee",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -89119,10 +90278,10 @@
                 "title": "Provide presumptive eligibility for Medicaid coverage of home and community-based services",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Out of Committee",
-                    "step": "First chamber",
-                    "label": "Out of committee",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -89180,9 +90339,9 @@
                 "title": "Revise laws related to collections-related actions in municipal court",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Introduced",
+                    "key": "In First House Committee--Nontabled",
                     "step": "First chamber",
-                    "label": "Introduced",
+                    "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -89546,10 +90705,10 @@
                 "title": "Revise domestic violence intervention grant requirements",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Through 2nd Reading",
-                    "step": "First chamber",
-                    "label": "Passed second reading vote",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -90721,9 +91880,9 @@
                 "title": "Generally revise laws related to creation of profitable family video content featuring minor children",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Through 3rd Reading",
-                    "step": "First chamber",
-                    "label": "Passed chamber",
+                    "key": "Transmitted to Second House",
+                    "step": "Second chamber",
+                    "label": "Transmitted",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -91879,10 +93038,10 @@
                 "title": "Revising disability retirement provisions for MPORS and FURS",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Through 2nd Reading",
-                    "step": "First chamber",
-                    "label": "Passed second reading vote",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -91940,10 +93099,10 @@
                 "title": "Provide informal review of property tax disputes at MTAB",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Out of Committee",
-                    "step": "First chamber",
-                    "label": "Out of committee",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -92062,10 +93221,10 @@
                 "title": "Generally revise privacy laws",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Through 2nd Reading",
-                    "step": "First chamber",
-                    "label": "Passed second reading vote",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -92428,9 +93587,9 @@
                 "title": "Revise the state building code to allow single stairwells in certain buildings",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Through 3rd Reading",
-                    "step": "First chamber",
-                    "label": "Passed chamber",
+                    "key": "Transmitted to Second House",
+                    "step": "Second chamber",
+                    "label": "Transmitted",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
