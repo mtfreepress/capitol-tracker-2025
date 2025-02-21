@@ -5422,10 +5422,10 @@
                 "title": "Revising landowner preference qualifications for elk to require finalized land ownership of 640 acres or more of contiguous land",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Through 2nd Reading",
-                    "step": "First chamber",
-                    "label": "Passed second reading vote",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -9343,10 +9343,10 @@
                 "title": "Require trappers to post notice signs near trails on public lands",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House Committee--Nontabled",
+                    "key": "In First House Committee--Tabled",
                     "step": "First chamber",
-                    "label": "In committee",
-                    "status": "live",
+                    "label": "Tabled in committee",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -9358,9 +9358,9 @@
                     },
                     {
                         "step": "first committee",
-                        "status": "current",
-                        "statusLabel": "Pending",
-                        "statusDate": null
+                        "status": "blocked",
+                        "statusLabel": "Tabled",
+                        "statusDate": "02/20/2025"
                     },
                     {
                         "step": "first chamber",
@@ -10589,14 +10589,14 @@
                     },
                     {
                         "step": "first committee",
-                        "status": "current",
-                        "statusLabel": "Pending",
-                        "statusDate": null
+                        "status": "passed",
+                        "statusLabel": "Advanced",
+                        "statusDate": "02/20/2025"
                     },
                     {
                         "step": "first chamber",
-                        "status": "future",
-                        "statusLabel": null,
+                        "status": "current",
+                        "statusLabel": "Pending",
                         "statusDate": null
                     },
                     {
@@ -11321,10 +11321,10 @@
                 "title": "Create Montana-Ireland trade commission",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Out of Committee",
-                    "step": "First chamber",
-                    "label": "Out of committee",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -17825,10 +17825,10 @@
                 "title": "Clarify value of caselaw interpreting a statute after subsequent legislative action",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Out of Committee",
-                    "step": "First chamber",
-                    "label": "Out of committee",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -26198,10 +26198,10 @@
                 "title": "Revise river usage laws related to commercial fishing, outfitting, and guiding",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Introduced",
-                    "step": "First chamber",
-                    "label": "Introduced",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -26213,9 +26213,9 @@
                     },
                     {
                         "step": "first committee",
-                        "status": "current",
-                        "statusLabel": "Pending",
-                        "statusDate": null
+                        "status": "blocked",
+                        "statusLabel": "Withdrawn",
+                        "statusDate": "02/20/2025"
                     },
                     {
                         "step": "first chamber",
@@ -33067,6 +33067,128 @@
                 ],
                 "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0614?open_tab=bill",
                 "fiscalNoteUrl": "/bills/fiscal-note/sb-40",
+                "legalNoteUrl": null,
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Greg Hertz",
+                    "party": "R",
+                    "locale": "Polson",
+                    "district": "SD 7"
+                }
+            },
+            {
+                "key": "sb-393",
+                "identifier": "SB 393",
+                "title": "Provide funding for enforcement of PL 280",
+                "chamber": "senate",
+                "status": {
+                    "key": "In First House--Introduced",
+                    "step": "First chamber",
+                    "label": "Introduced",
+                    "status": "live",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "02/20/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1015?open_tab=bill",
+                "fiscalNoteUrl": null,
+                "legalNoteUrl": null,
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Greg Hertz",
+                    "party": "R",
+                    "locale": "Polson",
+                    "district": "SD 7"
+                }
+            },
+            {
+                "key": "sb-392",
+                "identifier": "SB 392",
+                "title": "Establish Laverne Parrish memorial highway",
+                "chamber": "senate",
+                "status": {
+                    "key": "In First House--Introduced",
+                    "step": "First chamber",
+                    "label": "Introduced",
+                    "status": "live",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "02/20/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1005?open_tab=bill",
+                "fiscalNoteUrl": null,
                 "legalNoteUrl": null,
                 "numArticles": 0,
                 "sponsor": {
@@ -40855,14 +40977,14 @@
                     },
                     {
                         "step": "first committee",
-                        "status": "current",
-                        "statusLabel": "Pending",
-                        "statusDate": null
+                        "status": "passed",
+                        "statusLabel": "Advanced",
+                        "statusDate": "02/20/2025"
                     },
                     {
                         "step": "first chamber",
-                        "status": "future",
-                        "statusLabel": null,
+                        "status": "current",
+                        "statusLabel": "Pending",
                         "statusDate": null
                     },
                     {
@@ -44271,10 +44393,10 @@
                 "title": "Generally revise child abuse and neglect laws",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Through 2nd Reading",
-                    "step": "First chamber",
-                    "label": "Passed second reading vote",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -44454,10 +44576,10 @@
                 "title": "Revise child abuse and neglect laws involving adjudication",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Through 2nd Reading",
-                    "step": "First chamber",
-                    "label": "Passed second reading vote",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -44515,10 +44637,10 @@
                 "title": "Provide that legislator access to CPS records includes drug testing results",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Through 2nd Reading",
-                    "step": "First chamber",
-                    "label": "Passed second reading vote",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -44576,10 +44698,10 @@
                 "title": "Creating the Montana physicians' workforce investment act",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House Committee--Nontabled",
-                    "step": "First chamber",
-                    "label": "In committee",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -44637,10 +44759,10 @@
                 "title": "Generally revise laws related to child abuse and neglect proceedings and investigations",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Through 2nd Reading",
-                    "step": "First chamber",
-                    "label": "Passed second reading vote",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -46012,10 +46134,10 @@
                 "title": "Revise laws related to antlerless elk licenses",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Through 2nd Reading",
-                    "step": "First chamber",
-                    "label": "Passed second reading vote",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -47254,10 +47376,10 @@
                 "title": "Exempt subdivision, water/sewer plans from environmental review",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Through 2nd Reading",
-                    "step": "First chamber",
-                    "label": "Passed second reading vote",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -47376,10 +47498,10 @@
                 "title": "Requiring judges to invite amicus briefing and allow intervention in certain civil cases",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Out of Committee",
-                    "step": "First chamber",
-                    "label": "Out of committee",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -57093,6 +57215,67 @@
         "imageSlug": "2025/cora-neumann.jpg",
         "sponsoredBills": [
             {
+                "key": "sb-394",
+                "identifier": "SB 394",
+                "title": "Provide for workers' compensation coverage of PTSD for first responders",
+                "chamber": "senate",
+                "status": {
+                    "key": "In First House--Introduced",
+                    "step": "First chamber",
+                    "label": "Introduced",
+                    "status": "live",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "02/20/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3228?open_tab=bill",
+                "fiscalNoteUrl": null,
+                "legalNoteUrl": null,
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Cora Neumann",
+                    "party": "D",
+                    "locale": "Bozeman",
+                    "district": "SD 30"
+                }
+            },
+            {
                 "key": "sb-372",
                 "identifier": "SB 372",
                 "title": "Establish nurse safe staffing standards",
@@ -63704,10 +63887,10 @@
                 "title": "Revise laws related to hunter orange",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House Committee--Nontabled",
+                    "key": "In First House Committee--Tabled",
                     "step": "First chamber",
-                    "label": "In committee",
-                    "status": "live",
+                    "label": "Tabled in committee",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -63719,9 +63902,9 @@
                     },
                     {
                         "step": "first committee",
-                        "status": "current",
-                        "statusLabel": "Pending",
-                        "statusDate": null
+                        "status": "blocked",
+                        "statusLabel": "Tabled",
+                        "statusDate": "02/20/2025"
                     },
                     {
                         "step": "first chamber",
@@ -67644,10 +67827,10 @@
                 "title": "Revise contaminated property cleanup laws for dangerous drugs",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Through 2nd Reading",
-                    "step": "First chamber",
-                    "label": "Passed second reading vote",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -79410,10 +79593,10 @@
                 "title": "Generally revise property taxes",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Out of Committee",
-                    "step": "First chamber",
-                    "label": "Out of committee",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -87175,10 +87358,10 @@
                 "title": "Revise domestic violence intervention grant requirements",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Out of Committee",
-                    "step": "First chamber",
-                    "label": "Out of committee",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -89447,10 +89630,10 @@
                 "title": "Generally revise privacy laws",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Out of Committee",
-                    "step": "First chamber",
-                    "label": "Out of committee",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -89813,10 +89996,10 @@
                 "title": "Revise the state building code to allow single stairwells in certain buildings",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Through 2nd Reading",
-                    "step": "First chamber",
-                    "label": "Passed second reading vote",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
