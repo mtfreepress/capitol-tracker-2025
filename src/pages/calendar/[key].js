@@ -1,7 +1,9 @@
 import React from "react";
+import Link from "next/link";
 import { useRouter } from 'next/router';
 import { css } from "@emotion/react";
 import Layout from "../../design/Layout";
+import BillTable from "../../components/BillTable";
 import { shortDateWithWeekday } from "../../config/utils";
 import calendar from "../../data/calendar.json";
 import allBills from "../../data/bills.json";
@@ -65,7 +67,8 @@ const groupHearingsByCommittee = hearings => {
     }, {});
 };
 
-export default function CalendarDay({ dateData, onCalendarBills }) {
+export default function CalendarDay({ dateData, committees }) {
+    console.log({dateData})
     const day = shortDateWithWeekday(new Date(dateData.date));
     const hearingsByCommittee = groupHearingsByCommittee(dateData.hearings);
 
@@ -94,6 +97,7 @@ export default function CalendarDay({ dateData, onCalendarBills }) {
                         <div key={committee}>
                             <h4>{committee}</h4>
                             {hearings.map(hearing => (
+                                console.log(hearing),
                                 <div key={hearing.data.id}>
                                     <strong>Bill:</strong> {hearing.data.bill}
                                     <br />
