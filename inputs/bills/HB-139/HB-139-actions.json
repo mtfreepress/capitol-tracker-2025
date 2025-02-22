@@ -421,20 +421,6 @@
         "id": "HB139-0017",
         "bill": "HB 139",
         "date": "02/21/2025",
-        "description": "Scheduled for 2nd Reading",
-        "possession": "House",
-        "committee": "undefined",
-        "actionUrl": null,
-        "recordings": [],
-        "transcriptUrl": null,
-        "key": "Scheduled for 2nd Reading",
-        "committeeHearingTime": null,
-        "vote": null
-    },
-    {
-        "id": "HB139-0018",
-        "bill": "HB 139",
-        "date": "02/21/2025",
         "description": "2nd Reading Not Passed",
         "possession": "House",
         "committee": "undefined",
@@ -444,7 +430,7 @@
         "key": "2nd Reading Not Passed",
         "committeeHearingTime": null,
         "vote": {
-            "action": "HB139-0018",
+            "action": "HB139-0017",
             "bill": "HB 139",
             "date": "02/21/2025",
             "type": "committee",
@@ -1280,7 +1266,7 @@
         }
     },
     {
-        "id": "HB139-0019",
+        "id": "HB139-0018",
         "bill": "HB 139",
         "date": "02/22/2025",
         "description": "Reconsidered Previous Action; Placed on 2nd Reading",
@@ -1292,7 +1278,7 @@
         "key": "Reconsidered Previous Action; Placed on 2nd Reading",
         "committeeHearingTime": null,
         "vote": {
-            "action": "HB139-0019",
+            "action": "HB139-0018",
             "bill": "HB 139",
             "date": "02/22/2025",
             "type": "committee",
@@ -2126,5 +2112,19 @@
                 }
             ]
         }
+    },
+    {
+        "id": "HB139-0019",
+        "bill": "HB 139",
+        "date": "02/24/2025",
+        "description": "Scheduled for 2nd Reading",
+        "possession": "House",
+        "committee": "undefined",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Scheduled for 2nd Reading",
+        "committeeHearingTime": null,
+        "vote": null
     }
 ]
