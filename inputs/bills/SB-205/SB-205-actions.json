@@ -179,38 +179,52 @@
         "transcriptUrl": null,
         "key": "Committee Executive Action--Bill Not Passed as Amended",
         "committeeHearingTime": null,
+        "vote": null
+    },
+    {
+        "id": "SB205-0014",
+        "bill": "SB 205",
+        "date": "02/19/2025",
+        "description": "Tabled in Committee",
+        "possession": "Senate",
+        "committee": "(S) Local Government",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Tabled in Committee",
+        "committeeHearingTime": null,
         "vote": {
-            "action": "SB205-0013",
+            "action": "SB205-0014",
             "bill": "SB 205",
             "date": "02/19/2025",
             "type": "committee",
-            "seqNumber": "S5",
+            "seqNumber": "S4",
             "voteChamber": "senate",
             "voteUrl": null,
             "session": "2",
-            "motion": "Committee Executive Action--Bill Not Passed as Amended",
+            "motion": "Tabled in Committee",
             "thresholdRequired": "simple",
             "count": {
-                "Y": 5,
-                "N": 6
+                "Y": 11,
+                "N": 0
             },
             "gopCount": {
-                "Y": 5,
-                "N": 2,
+                "Y": 7,
+                "N": 0,
                 "A": 0,
                 "E": 0,
                 "O": 0
             },
             "demCount": {
-                "Y": 0,
-                "N": 4,
+                "Y": 4,
+                "N": 0,
                 "A": 0,
                 "E": 0,
                 "O": 0
             },
-            "motionPassed": false,
+            "motionPassed": true,
             "gopSupported": true,
-            "demSupported": false,
+            "demSupported": true,
             "votes": [
                 {
                     "option": "Y",
@@ -221,7 +235,7 @@
                     "district": "SD 38"
                 },
                 {
-                    "option": "N",
+                    "option": "Y",
                     "name": "Susan Webber",
                     "lastName": "Webber",
                     "party": "D",
@@ -237,7 +251,7 @@
                     "district": "SD 10"
                 },
                 {
-                    "option": "N",
+                    "option": "Y",
                     "name": "Christopher Pope",
                     "lastName": "Pope",
                     "party": "D",
@@ -245,7 +259,7 @@
                     "district": "SD 33"
                 },
                 {
-                    "option": "N",
+                    "option": "Y",
                     "name": "Jason Ellsworth",
                     "lastName": "Ellsworth",
                     "party": "R",
@@ -261,7 +275,7 @@
                     "district": "SD 7"
                 },
                 {
-                    "option": "N",
+                    "option": "Y",
                     "name": "Dave Fern",
                     "lastName": "Fern",
                     "party": "D",
@@ -269,7 +283,7 @@
                     "district": "SD 2"
                 },
                 {
-                    "option": "N",
+                    "option": "Y",
                     "name": "Gayle  Lammers",
                     "lastName": "Lammers",
                     "party": "R",
@@ -285,7 +299,7 @@
                     "district": "SD 18"
                 },
                 {
-                    "option": "N",
+                    "option": "Y",
                     "name": "Ellie Boldman",
                     "lastName": "Boldman",
                     "party": "D",
