@@ -276,25 +276,25 @@
             "thresholdRequired": "simple",
             "count": {
                 "Y": 19,
-                "N": 0
+                "N": 1
             },
             "gopCount": {
-                "Y": 11,
-                "N": 0,
+                "Y": 0,
+                "N": 1,
                 "A": 0,
                 "E": 0,
                 "O": 0
             },
             "demCount": {
-                "Y": 8,
+                "Y": 0,
                 "N": 0,
                 "A": 0,
                 "E": 0,
                 "O": 0
             },
             "motionPassed": true,
-            "gopSupported": true,
-            "demSupported": true,
+            "gopSupported": false,
+            "demSupported": false,
             "votes": [
                 {
                     "option": "Y",
@@ -447,8 +447,30 @@
                     "party": "R",
                     "locale": "Helena",
                     "district": "HD 84"
+                },
+                {
+                    "option": "N",
+                    "name": "Ed Byrne",
+                    "lastName": "Byrne",
+                    "party": "R",
+                    "locale": "Bigfork",
+                    "district": "HD 11"
                 }
             ]
         }
+    },
+    {
+        "id": "HB376-0020",
+        "bill": "HB 376",
+        "date": "02/24/2025",
+        "description": "Tabled in Committee",
+        "possession": "House",
+        "committee": "(H) State Administration",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Tabled in Committee",
+        "committeeHearingTime": null,
+        "vote": null
     }
 ]

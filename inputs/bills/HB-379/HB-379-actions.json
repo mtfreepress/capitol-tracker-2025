@@ -248,25 +248,25 @@
             "thresholdRequired": "simple",
             "count": {
                 "Y": 19,
-                "N": 0
+                "N": 7
             },
             "gopCount": {
-                "Y": 11,
-                "N": 0,
+                "Y": 0,
+                "N": 7,
                 "A": 0,
                 "E": 0,
                 "O": 0
             },
             "demCount": {
-                "Y": 8,
+                "Y": 0,
                 "N": 0,
                 "A": 0,
                 "E": 0,
                 "O": 0
             },
             "motionPassed": true,
-            "gopSupported": true,
-            "demSupported": true,
+            "gopSupported": false,
+            "demSupported": false,
             "votes": [
                 {
                     "option": "Y",
@@ -419,8 +419,78 @@
                     "party": "R",
                     "locale": "Helena",
                     "district": "HD 84"
+                },
+                {
+                    "option": "N",
+                    "name": "Marta Bertoglio",
+                    "lastName": "Bertoglio",
+                    "party": "R",
+                    "locale": "Clancy",
+                    "district": "HD 75"
+                },
+                {
+                    "option": "N",
+                    "name": "Lyn Bennett",
+                    "lastName": "Bennett",
+                    "party": "R",
+                    "locale": "Columbia Falls",
+                    "district": "HD 4"
+                },
+                {
+                    "option": "N",
+                    "name": "Kathy Love",
+                    "lastName": "Love",
+                    "party": "R",
+                    "locale": "Hamilton",
+                    "district": "HD 85"
+                },
+                {
+                    "option": "N",
+                    "name": "Gary Parry",
+                    "lastName": "Parry",
+                    "party": "R",
+                    "locale": "Colstrip",
+                    "district": "HD 35"
+                },
+                {
+                    "option": "N",
+                    "name": "Eric Tilleman",
+                    "lastName": "Tilleman",
+                    "party": "R",
+                    "locale": "Cascade",
+                    "district": "HD 23"
+                },
+                {
+                    "option": "N",
+                    "name": "Zack Wirth",
+                    "lastName": "Wirth",
+                    "party": "R",
+                    "locale": "Wolf Creek",
+                    "district": "HD 17"
+                },
+                {
+                    "option": "N",
+                    "name": "Julie Darling",
+                    "lastName": "Darling",
+                    "party": "R",
+                    "locale": "Helena",
+                    "district": "HD 84"
                 }
             ]
         }
+    },
+    {
+        "id": "HB379-0018",
+        "bill": "HB 379",
+        "date": "02/24/2025",
+        "description": "Tabled in Committee",
+        "possession": "House",
+        "committee": "(H) State Administration",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Tabled in Committee",
+        "committeeHearingTime": null,
+        "vote": null
     }
 ]

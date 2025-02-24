@@ -248,25 +248,25 @@
             "thresholdRequired": "simple",
             "count": {
                 "Y": 18,
-                "N": 1
+                "N": 4
             },
             "gopCount": {
-                "Y": 10,
-                "N": 1,
+                "Y": 0,
+                "N": 3,
                 "A": 0,
                 "E": 0,
                 "O": 0
             },
             "demCount": {
-                "Y": 8,
+                "Y": 0,
                 "N": 0,
                 "A": 0,
                 "E": 0,
                 "O": 0
             },
             "motionPassed": true,
-            "gopSupported": true,
-            "demSupported": true,
+            "gopSupported": false,
+            "demSupported": false,
             "votes": [
                 {
                     "option": "Y",
@@ -419,8 +419,46 @@
                     "party": "R",
                     "locale": "Helena",
                     "district": "HD 84"
+                },
+                {
+                    "option": "N",
+                    "name": "Ed Byrne",
+                    "lastName": "Byrne",
+                    "party": "R",
+                    "locale": "Bigfork",
+                    "district": "HD 11"
+                },
+                {
+                    "option": "N",
+                    "name": "Curtis Cochran",
+                    "lastName": "Cochran",
+                    "party": "R",
+                    "locale": "St Regis",
+                    "district": "HD 90"
+                },
+                {
+                    "option": "N",
+                    "name": "Kathy Love",
+                    "lastName": "Love",
+                    "party": "R",
+                    "locale": "Hamilton",
+                    "district": "HD 85"
                 }
             ]
         }
+    },
+    {
+        "id": "HB375-0018",
+        "bill": "HB 375",
+        "date": "02/24/2025",
+        "description": "Tabled in Committee",
+        "possession": "House",
+        "committee": "(H) State Administration",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Tabled in Committee",
+        "committeeHearingTime": null,
+        "vote": null
     }
 ]
