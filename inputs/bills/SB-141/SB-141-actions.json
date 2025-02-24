@@ -331,29 +331,29 @@
             "motion": "Committee Executive Action--Bill Not Passed",
             "thresholdRequired": "simple",
             "count": {
-                "Y": 9,
-                "N": 0
+                "Y": 2,
+                "N": 7
             },
             "gopCount": {
-                "Y": 6,
-                "N": 0,
+                "Y": 2,
+                "N": 4,
                 "A": 0,
                 "E": 0,
                 "O": 0
             },
             "demCount": {
-                "Y": 3,
-                "N": 0,
+                "Y": 0,
+                "N": 3,
                 "A": 0,
                 "E": 0,
                 "O": 0
             },
-            "motionPassed": true,
-            "gopSupported": true,
-            "demSupported": true,
+            "motionPassed": false,
+            "gopSupported": false,
+            "demSupported": false,
             "votes": [
                 {
-                    "option": "Y",
+                    "option": "N",
                     "name": "Matt Regier",
                     "lastName": "Regier",
                     "party": "R",
@@ -361,7 +361,7 @@
                     "district": "SD 5"
                 },
                 {
-                    "option": "Y",
+                    "option": "N",
                     "name": "Bob Phalen",
                     "lastName": "Phalen",
                     "party": "R",
@@ -385,7 +385,7 @@
                     "district": "SD 34"
                 },
                 {
-                    "option": "Y",
+                    "option": "N",
                     "name": "Jacinda Morigeau",
                     "lastName": "Morigeau",
                     "party": "D",
@@ -393,7 +393,7 @@
                     "district": "SD 46"
                 },
                 {
-                    "option": "Y",
+                    "option": "N",
                     "name": "Janet Ellis",
                     "lastName": "Ellis",
                     "party": "D",
@@ -401,7 +401,7 @@
                     "district": "SD 41"
                 },
                 {
-                    "option": "Y",
+                    "option": "N",
                     "name": "Denise Hayman",
                     "lastName": "Hayman",
                     "party": "D",
@@ -409,7 +409,7 @@
                     "district": "SD 32"
                 },
                 {
-                    "option": "Y",
+                    "option": "N",
                     "name": "Wendy McKamey",
                     "lastName": "McKamey",
                     "party": "R",
@@ -417,7 +417,7 @@
                     "district": "SD 12"
                 },
                 {
-                    "option": "Y",
+                    "option": "N",
                     "name": "Theresa Manzella",
                     "lastName": "Manzella",
                     "party": "R",
@@ -426,19 +426,5 @@
                 }
             ]
         }
-    },
-    {
-        "id": "SB141-0024",
-        "bill": "SB 141",
-        "date": "02/21/2025",
-        "description": "Committee Executive Action--Bill Passed",
-        "possession": "Senate",
-        "committee": "(S) State Administration",
-        "actionUrl": null,
-        "recordings": [],
-        "transcriptUrl": null,
-        "key": "Committee Executive Action--Bill Passed",
-        "committeeHearingTime": null,
-        "vote": null
     }
 ]
