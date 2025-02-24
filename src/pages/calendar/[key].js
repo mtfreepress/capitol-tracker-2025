@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import { css } from "@emotion/react";
 import Layout from "../../design/Layout";
 import BillTable from "../../components/BillTable";
+import CalendarNavigator from "../../components/CalendarNavigator";
 import { shortDateWithWeekday } from "../../config/utils";
 import calendar from "../../data/calendar.json";
 import allBills from "../../data/bills.json";
@@ -118,10 +119,12 @@ export default function CalendarDay({ dateData, onCalendarBills, committees }) {
         >
             <h1>Legislative Calendar for {day}</h1>
 
-            <DateSelector
+            {/* <DateSelector
                 dates={calendar.dates}
                 currentKey={dateData.key}
-            />
+            /> */}
+
+            <CalendarNavigator dates={calendar.dates} />
 
             <section>
                 <h3>Committee Hearings</h3>
@@ -230,7 +233,7 @@ export async function getStaticProps({ params }) {
         };
     }
 
-    const onCalendarBills = allBills.filter(bill => 
+    const onCalendarBills = allBills.filter(bill =>
         dateData.billsInvolved.includes(bill.identifier)
     );
 
