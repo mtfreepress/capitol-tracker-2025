@@ -7418,9 +7418,9 @@
                 "title": "Require public hearing before certain tax increment financing bonding",
                 "chamber": "house",
                 "status": {
-                    "key": "Passed By Legislature--Enrolling and Final Preparation Process",
-                    "step": "Through Legislature",
-                    "label": "Passed both chambers",
+                    "key": "Transmitted to Governor",
+                    "step": "Governor",
+                    "label": "Before governor",
                     "status": "live",
                     "statusAtSessionEnd": "pending, passed legislature"
                 },
@@ -8141,9 +8141,9 @@
                 "title": "Generally revise state auditor laws",
                 "chamber": "house",
                 "status": {
-                    "key": "Passed By Legislature--Enrolling and Final Preparation Process",
-                    "step": "Through Legislature",
-                    "label": "Passed both chambers",
+                    "key": "Transmitted to Governor",
+                    "step": "Governor",
+                    "label": "Before governor",
                     "status": "live",
                     "statusAtSessionEnd": "pending, passed legislature"
                 },
@@ -12375,7 +12375,7 @@
                     }
                 ],
                 "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC4335?open_tab=bill",
-                "fiscalNoteUrl": null,
+                "fiscalNoteUrl": "/bills/fiscal-note/sb-320",
                 "legalNoteUrl": null,
                 "numArticles": 0,
                 "sponsor": {
@@ -12876,14 +12876,14 @@
                     },
                     {
                         "step": "first committee",
-                        "status": "current",
-                        "statusLabel": "Pending",
+                        "status": "passed",
+                        "statusLabel": "Advanced",
                         "statusDate": "02/21/2025"
                     },
                     {
                         "step": "first chamber",
-                        "status": "future",
-                        "statusLabel": null,
+                        "status": "current",
+                        "statusLabel": "Pending",
                         "statusDate": null
                     },
                     {
@@ -13783,9 +13783,9 @@
                 "title": "Repeal small business compliance assistance council",
                 "chamber": "house",
                 "status": {
-                    "key": "Passed By Legislature--Enrolling and Final Preparation Process",
-                    "step": "Through Legislature",
-                    "label": "Passed both chambers",
+                    "key": "Transmitted to Governor",
+                    "step": "Governor",
+                    "label": "Before governor",
                     "status": "live",
                     "statusAtSessionEnd": "pending, passed legislature"
                 },
@@ -20408,6 +20408,128 @@
                 ],
                 "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0541?open_tab=bill",
                 "fiscalNoteUrl": "/bills/fiscal-note/sb-46",
+                "legalNoteUrl": null,
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "John Esp",
+                    "party": "R",
+                    "locale": "Big Timber",
+                    "district": "SD 29"
+                }
+            },
+            {
+                "key": "sb-430",
+                "identifier": "SB 430",
+                "title": "Generally revise laws related to civil commitment and emergency detention of mentally ill persons",
+                "chamber": "senate",
+                "status": {
+                    "key": "In First House--Introduced",
+                    "step": "First chamber",
+                    "label": "Introduced",
+                    "status": "live",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "02/24/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2822?open_tab=bill",
+                "fiscalNoteUrl": null,
+                "legalNoteUrl": null,
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "John Esp",
+                    "party": "R",
+                    "locale": "Big Timber",
+                    "district": "SD 29"
+                }
+            },
+            {
+                "key": "sb-429",
+                "identifier": "SB 429",
+                "title": "Generally revise laws related to determination and restoration of fitness in criminal proceedings",
+                "chamber": "senate",
+                "status": {
+                    "key": "In First House--Introduced",
+                    "step": "First chamber",
+                    "label": "Introduced",
+                    "status": "live",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "02/24/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2851?open_tab=bill",
+                "fiscalNoteUrl": null,
                 "legalNoteUrl": null,
                 "numArticles": 0,
                 "sponsor": {
@@ -30939,14 +31061,14 @@
                     },
                     {
                         "step": "first committee",
-                        "status": "current",
-                        "statusLabel": "Pending",
-                        "statusDate": null
+                        "status": "passed",
+                        "statusLabel": "Advanced",
+                        "statusDate": "02/21/2025"
                     },
                     {
                         "step": "first chamber",
-                        "status": "future",
-                        "statusLabel": null,
+                        "status": "current",
+                        "statusLabel": "Pending",
                         "statusDate": null
                     },
                     {
@@ -31677,9 +31799,9 @@
                 "title": "Allow municipalities to review certain water and sewer systems",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Introduced",
+                    "key": "In First House Committee--Nontabled",
                     "step": "First chamber",
-                    "label": "Introduced",
+                    "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -31738,9 +31860,9 @@
                 "title": "Allow a local first response entity to establish a peer support program",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Introduced",
+                    "key": "In First House Committee--Nontabled",
                     "step": "First chamber",
-                    "label": "Introduced",
+                    "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -36121,10 +36243,10 @@
                 "title": "Revise motor vehicle registration fees",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House Committee--Nontabled",
-                    "step": "First chamber",
-                    "label": "In committee",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -38455,9 +38577,9 @@
                 "title": "Revise local board of health sanitation powers and rules",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Introduced",
+                    "key": "In First House Committee--Nontabled",
                     "step": "First chamber",
-                    "label": "Introduced",
+                    "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -38516,10 +38638,10 @@
                 "title": "Repeal nonresident landowner preference for big game combo licenses",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House Committee--Nontabled",
-                    "step": "First chamber",
-                    "label": "In committee",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -41487,14 +41609,14 @@
                     },
                     {
                         "step": "first committee",
-                        "status": "current",
-                        "statusLabel": "Pending",
-                        "statusDate": null
+                        "status": "passed",
+                        "statusLabel": "Advanced",
+                        "statusDate": "02/21/2025"
                     },
                     {
                         "step": "first chamber",
-                        "status": "future",
-                        "statusLabel": null,
+                        "status": "current",
+                        "statusLabel": "Pending",
                         "statusDate": null
                     },
                     {
@@ -47041,10 +47163,10 @@
                 "title": "Generally revise child abuse and neglect laws",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House--Introduced",
-                    "step": "First chamber",
-                    "label": "Introduced",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -65077,9 +65199,9 @@
                 "title": "Provide exemption for certain owner-occupied residential property owned by persons 67 or older",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House Committee--Tabled",
-                    "step": "First chamber",
-                    "label": "Tabled in committee",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
                     "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
@@ -66374,9 +66496,9 @@
                 "title": "Allow for the termination of certain county zoning districts",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Introduced",
+                    "key": "In First House Committee--Nontabled",
                     "step": "First chamber",
-                    "label": "Introduced",
+                    "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -71339,9 +71461,9 @@
                 "title": "Allow audio and video recording of public events",
                 "chamber": "house",
                 "status": {
-                    "key": "Passed By Legislature--Enrolling and Final Preparation Process",
-                    "step": "Through Legislature",
-                    "label": "Passed both chambers",
+                    "key": "Transmitted to Governor",
+                    "step": "Governor",
+                    "label": "Before governor",
                     "status": "live",
                     "statusAtSessionEnd": "pending, passed legislature"
                 },
@@ -73246,9 +73368,9 @@
                 "title": "Establish state special revenue account for Montana Missing Indigenous Persons Task Force",
                 "chamber": "house",
                 "status": {
-                    "key": "Passed By Legislature--Enrolling and Final Preparation Process",
-                    "step": "Through Legislature",
-                    "label": "Passed both chambers",
+                    "key": "Transmitted to Governor",
+                    "step": "Governor",
+                    "label": "Before governor",
                     "status": "live",
                     "statusAtSessionEnd": "pending, passed legislature"
                 },
@@ -74489,9 +74611,9 @@
                 "title": "Generally revise dangerous drug schedule",
                 "chamber": "house",
                 "status": {
-                    "key": "Passed By Legislature--Enrolling and Final Preparation Process",
-                    "step": "Through Legislature",
-                    "label": "Passed both chambers",
+                    "key": "Transmitted to Governor",
+                    "step": "Governor",
+                    "label": "Before governor",
                     "status": "live",
                     "statusAtSessionEnd": "pending, passed legislature"
                 },
@@ -74794,9 +74916,9 @@
                 "title": "Establish Montana mining day",
                 "chamber": "house",
                 "status": {
-                    "key": "Passed By Legislature--Enrolling and Final Preparation Process",
-                    "step": "Through Legislature",
-                    "label": "Passed both chambers",
+                    "key": "Transmitted to Governor",
+                    "step": "Governor",
+                    "label": "Before governor",
                     "status": "live",
                     "statusAtSessionEnd": "pending, passed legislature"
                 },
@@ -77566,9 +77688,9 @@
                 "title": "Allow a county to employ a property appraiser for property tax purposes",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Introduced",
+                    "key": "In First House Committee--Nontabled",
                     "step": "First chamber",
-                    "label": "Introduced",
+                    "label": "In committee",
                     "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
@@ -78464,10 +78586,10 @@
                 "title": "Revise laws regarding receipt of workers' compensation benefits on behalf of others",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House Committee--Nontabled",
-                    "step": "First chamber",
-                    "label": "In committee",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -82853,9 +82975,9 @@
                 "title": "Revise terms for forest lands taxation advisory committee",
                 "chamber": "house",
                 "status": {
-                    "key": "Passed By Legislature--Enrolling and Final Preparation Process",
-                    "step": "Through Legislature",
-                    "label": "Passed both chambers",
+                    "key": "Transmitted to Governor",
+                    "step": "Governor",
+                    "label": "Before governor",
                     "status": "live",
                     "statusAtSessionEnd": "pending, passed legislature"
                 },
