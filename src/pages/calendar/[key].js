@@ -24,7 +24,7 @@ const dateSelectStyle = css`
 
 const DateSelector = ({ dates, currentKey }) => {
     const router = useRouter();
-    
+
     const handleDateChange = (event) => {
         const selectedDate = event.target.value;
         if (selectedDate) {
@@ -36,13 +36,13 @@ const DateSelector = ({ dates, currentKey }) => {
         <div css={dateSelectStyle}>
             <label>
                 View schedule for: {" "}
-                <select 
-                    onChange={handleDateChange} 
+                <select
+                    onChange={handleDateChange}
                     value={currentKey}
                 >
                     {dates.map(date => (
-                        <option 
-                            key={date.key} 
+                        <option
+                            key={date.key}
                             value={date.key}
                         >
                             {shortDateWithWeekday(new Date(date.date))}
@@ -86,7 +86,6 @@ const Committee = ({ committee, onCalendarBills, hearings }) => {
 export default function CalendarDay({ dateData, onCalendarBills, committees }) {
     const day = shortDateWithWeekday(new Date(dateData.date));
     const hearingsByCommittee = groupHearingsByCommittee(dateData.hearings);
-    console.log(dateData.finalVotes)
 
     // Group committees by type
     const committeesWithHearings = Array.from(
@@ -119,8 +118,8 @@ export default function CalendarDay({ dateData, onCalendarBills, committees }) {
         >
             <h1>Legislative Calendar for {day}</h1>
 
-            <DateSelector 
-                dates={calendar.dates} 
+            <DateSelector
+                dates={calendar.dates}
                 currentKey={dateData.key}
             />
 
@@ -140,6 +139,12 @@ export default function CalendarDay({ dateData, onCalendarBills, committees }) {
                                 appropsCommittees: "Budget Committees",
                                 otherCommittees: "Other Committees",
                             }[key];
+
+                            // console.log('Debug bill data:', {
+                            //     floorDebates: dateData.floorDebates.map(d => d.data.bill),
+                            //     finalVotes: dateData.finalVotes.map(d => d.data.bill),
+                            //     sampleBill: onCalendarBills[0]?.data?.bill
+                            // });
 
                             return (
                                 <div key={key}>
@@ -162,31 +167,45 @@ export default function CalendarDay({ dateData, onCalendarBills, committees }) {
 
             <section>
                 <h3>Floor Debates</h3>
-                {dateData.floorDebates.length === 0 ? (
+                {!dateData.floorDebates?.length ? (
                     <p>No floor debates scheduled for this date.</p>
                 ) : (
-                    <BillTable 
-                        bills={onCalendarBills.filter(bill => 
-                            dateData.floorDebates.map(d => d.data.bill).includes(bill.identifier)
-                        )}
-                        displayLimit={10} 
-                        suppressCount={true}
-                    />
+                    <>
+                        <div className="note">
+                            Debates are followed by Second Reading votes.
+                        </div>
+                        <BillTable
+                            bills={onCalendarBills.filter(bill =>
+                                dateData.floorDebates
+                                    .map(d => d.data.bill)
+                                    .includes(bill.identifier)
+                            )}
+                            displayLimit={10}
+                            suppressCount={true}
+                        />
+                    </>
                 )}
             </section>
 
             <section>
                 <h3>Final Votes</h3>
-                {dateData.finalVotes.length === 0 ? (
+                {!dateData.finalVotes?.length ? (
                     <p>No final votes scheduled for this date.</p>
                 ) : (
-                    <BillTable 
-                        bills={onCalendarBills.filter(bill => 
-                            dateData.finalVotes.map(d => d.data.bill).includes(bill.identifier)
-                        )}
-                        displayLimit={10} 
-                        suppressCount={true}
-                    />
+                    <>
+                        <div className="note">
+                            Final votes determine if a bill advances to the next chamber or to the governor.
+                        </div>
+                        <BillTable
+                            bills={onCalendarBills.filter(bill =>
+                                dateData.finalVotes
+                                    .map(d => d.data.bill)
+                                    .includes(bill.identifier)
+                            )}
+                            displayLimit={10}
+                            suppressCount={true}
+                        />
+                    </>
                 )}
             </section>
         </Layout>
@@ -204,7 +223,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
     const dateData = calendar.dateMap[params.key];
-    
+
     if (!dateData) {
         return {
             notFound: true

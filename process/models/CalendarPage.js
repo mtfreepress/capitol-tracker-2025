@@ -17,30 +17,44 @@ export default class CalendarPage {
 
         // Helper function to convert MM/DD/YYYY to comparable date
 
-        // use committeeActions
+
         const parseDate = (dateStr) => {
             const [month, day, year] = dateStr.split('/').map(Number);
             return new Date(year, month - 1, day);
         };
 
-        // Sort function for dates
         const compareDates = (a, b) => {
             return parseDate(a) - parseDate(b);
         };
 
         const dateMap = actions.reduce((acc, action) => {
-            // Skip canceled hearings
+            // Debug floor debates and final votes
+            // if (action.data.scheduledForFloorDebate || action.data.scheduledForFinalVote) {
+            //     console.log('Debug Action:', {
+            //         type: action.data.scheduledForFloorDebate ? 'Floor Debate' : 'Final Vote',
+            //         bill: action.data.bill,
+            //         date: action.data.date,
+            //         description: action.data.description
+            //     });
+            // }
+        
             if (action.data.description === "Hearing Canceled") return acc;
-
-            // Use committeeHearingTime if available, otherwise use date for committee actions
-            const date = action.data.committeeHearingTime ||
+        
+            let date = action.data.committeeHearingTime ||
                 (action.data.isCommitteeAction ? action.data.date : null);
-
-            // Skip if no valid date
-            if (!date) return acc;
-
+        
+            
+            if (action.data.scheduledForFloorDebate || action.data.scheduledForFinalVote) {
+                date = action.data.date;
+            }
+        
+            
+            if (!date) {
+                return acc;
+            }
+        
             const pageKey = date.replace(/\//g, '-');
-
+        
             if (!acc[pageKey]) {
                 acc[pageKey] = {
                     key: pageKey,
@@ -52,25 +66,35 @@ export default class CalendarPage {
                     billsInvolved: []
                 };
             }
-
-            // Add to hearings if it's either a scheduled hearing or a committee action
+        
             if (action.data.committeeHearingTime || action.data.isCommitteeAction) {
                 acc[pageKey].hearings.push(action);
             }
+        
             if (action.data.scheduledForFloorDebate) {
                 acc[pageKey].floorDebates.push(action);
             }
+        
             if (action.data.scheduledForFinalVote) {
                 acc[pageKey].finalVotes.push(action);
             }
-
-            // Add bill to billsInvolved if not already present
+        
             if (!acc[pageKey].billsInvolved.includes(action.data.bill)) {
                 acc[pageKey].billsInvolved.push(action.data.bill);
             }
-
+        
             return acc;
         }, {});
+        
+        // Debug the final dateMap
+        // console.log('Final dateMap stats:', {
+        //     totalDates: Object.keys(dateMap).length,
+        //     datesWithFloorDebates: Object.values(dateMap)
+        //         .filter(d => d.floorDebates.length > 0).length,
+        //     datesWithFinalVotes: Object.values(dateMap)
+        //         .filter(d => d.finalVotes.length > 0).length,
+        //     sampleDate: Object.values(dateMap)[0]
+        // });
 
         const sortedDateKeys = Object.keys(dateMap)
             .map(key => dateMap[key].date) // Get original date format (MM/DD/YYYY)
@@ -97,6 +121,6 @@ export default class CalendarPage {
             calendarAnnotations
         };
     }
-
+    
     export = () => ({ ...this.data })
 }

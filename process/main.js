@@ -112,7 +112,6 @@ lawmakers.forEach(lawmaker => {
 
 // So we have the data about the "scheduled floor/final vote"
 const allActions = bills.flatMap(bill => bill.actions);
-console.log({ updateTime })
 const calendarOutput = new CalendarPage({ actions: allActions, bills, updateTime }).export();
 bills.forEach(bill => bill.data.isOnCalendar = calendarOutput.billsOnCalendar.includes(bill.data.identifier))
 const recapOutput = new RecapPage({ actions: actionsFlat, bills, updateTime }).export()
