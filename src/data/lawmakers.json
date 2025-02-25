@@ -14015,10 +14015,10 @@
                 "title": "Require appointment of clerk of supreme court",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House Committee--Nontabled",
+                    "key": "In First House Committee--Tabled",
                     "step": "First chamber",
-                    "label": "In committee",
-                    "status": "live",
+                    "label": "Tabled in committee",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -14030,9 +14030,9 @@
                     },
                     {
                         "step": "first committee",
-                        "status": "current",
-                        "statusLabel": "Pending",
-                        "statusDate": null
+                        "status": "blocked",
+                        "statusLabel": "Tabled",
+                        "statusDate": "02/25/2025"
                     },
                     {
                         "step": "first chamber",
@@ -25123,10 +25123,10 @@
                 "title": "Requiring the extension of wolf hunting season",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Through 2nd Reading",
-                    "step": "First chamber",
-                    "label": "Passed second reading vote",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -45685,10 +45685,10 @@
                 "title": "Establish the crime of possession of stolen firearm or ammunition",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Out of Committee",
-                    "step": "First chamber",
-                    "label": "Out of committee",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -59794,11 +59794,11 @@
                 "title": "Generally revise laws related to restitution",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House Committee--Nontabled",
-                    "step": "First chamber",
-                    "label": "In committee",
-                    "status": "live",
-                    "statusAtSessionEnd": "failed"
+                    "key": "In Drafting Process",
+                    "step": "Drafting",
+                    "label": "In drafting",
+                    "status": "not introduced",
+                    "statusAtSessionEnd": "not introduced"
                 },
                 "progress": [
                     {
@@ -60622,6 +60622,67 @@
         "articles": [],
         "imageSlug": "2025/tom-millett.jpg",
         "sponsoredBills": [
+            {
+                "key": "hb-746",
+                "identifier": "HB 746",
+                "title": "Authorize counties to adopt noise ordinances",
+                "chamber": "house",
+                "status": {
+                    "key": "In Drafting Process",
+                    "step": "Drafting",
+                    "label": "In drafting",
+                    "status": "not introduced",
+                    "statusAtSessionEnd": "not introduced"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "02/25/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2204?open_tab=bill",
+                "fiscalNoteUrl": null,
+                "legalNoteUrl": null,
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Tom Millett",
+                    "party": "R",
+                    "locale": "Marion",
+                    "district": "HD 2"
+                }
+            },
             {
                 "key": "hb-460",
                 "identifier": "HB 460",
@@ -64107,10 +64168,10 @@
                 "title": "Establish education inflation reconciliation process",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House Committee--Nontabled",
-                    "step": "First chamber",
-                    "label": "In committee",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -72863,10 +72924,10 @@
                 "title": "Generally revise water supply requirements for coal-fired generating units",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House Committee--Nontabled",
-                    "step": "First chamber",
-                    "label": "In committee",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -101769,10 +101830,10 @@
                 "title": "Generally revise laws relating to challenges brought under MEPA",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House Committee--Nontabled",
+                    "key": "In First House Committee--Tabled",
                     "step": "First chamber",
-                    "label": "In committee",
-                    "status": "live",
+                    "label": "Tabled in committee",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -101784,9 +101845,9 @@
                     },
                     {
                         "step": "first committee",
-                        "status": "current",
-                        "statusLabel": "Pending",
-                        "statusDate": null
+                        "status": "blocked",
+                        "statusLabel": "Tabled",
+                        "statusDate": "02/25/2025"
                     },
                     {
                         "step": "first chamber",
