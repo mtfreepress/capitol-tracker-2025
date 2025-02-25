@@ -7040,6 +7040,89 @@
         "numArticles": 0
     },
     {
+        "key": "sb-469",
+        "identifier": "SB 469",
+        "identifierLong": "Senate Bill 469",
+        "chamber": "senate",
+        "title": "Generally revise laws related to service area authorities",
+        "session": "2",
+        "lcIdentifier": "LC4153",
+        "type": "senate bill",
+        "status": {
+            "key": "In First House--Introduced",
+            "step": "First chamber",
+            "label": "Introduced",
+            "status": "live",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "passed",
+                "statusLabel": "Introduced",
+                "statusDate": "02/25/2025"
+            },
+            {
+                "step": "first committee",
+                "status": "current",
+                "statusLabel": "Pending",
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Dennis Lenz",
+            "party": "R",
+            "locale": "Billings",
+            "district": "SD 25"
+        },
+        "requestor": "Dennis Lenz",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "Simple",
+        "voteRequirements": [
+            "SIMPLE"
+        ],
+        "subjects": [
+            "Health Care Services (see also: Health)",
+            "Mental Illness or Incapacity  (see also: Institutions)"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC4153?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC4153?open_tab=bill",
+        "fiscalNoteUrl": null,
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC4153?open_tab=amend",
+        "legalNoteUrl": null,
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0
+    },
+    {
         "key": "sb-468",
         "identifier": "SB 468",
         "identifierLong": "Senate Bill 468",
@@ -7049,11 +7132,11 @@
         "lcIdentifier": "LC0493",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Introduced",
-            "step": "First chamber",
-            "label": "Introduced",
-            "status": "live",
-            "statusAtSessionEnd": "failed"
+            "key": "In Drafting Process",
+            "step": "Drafting",
+            "label": "In drafting",
+            "status": "not introduced",
+            "statusAtSessionEnd": "not introduced"
         },
         "progress": [
             {
@@ -7215,11 +7298,11 @@
         "lcIdentifier": "LC0482",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Introduced",
-            "step": "First chamber",
-            "label": "Introduced",
-            "status": "live",
-            "statusAtSessionEnd": "failed"
+            "key": "In Drafting Process",
+            "step": "Drafting",
+            "label": "In drafting",
+            "status": "not introduced",
+            "statusAtSessionEnd": "not introduced"
         },
         "progress": [
             {
@@ -7299,11 +7382,11 @@
         "lcIdentifier": "LC0472",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Introduced",
-            "step": "First chamber",
-            "label": "Introduced",
-            "status": "live",
-            "statusAtSessionEnd": "failed"
+            "key": "In Drafting Process",
+            "step": "Drafting",
+            "label": "In drafting",
+            "status": "not introduced",
+            "statusAtSessionEnd": "not introduced"
         },
         "progress": [
             {
@@ -7383,11 +7466,11 @@
         "lcIdentifier": "LC0477",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Introduced",
-            "step": "First chamber",
-            "label": "Introduced",
-            "status": "live",
-            "statusAtSessionEnd": "failed"
+            "key": "In Drafting Process",
+            "step": "Drafting",
+            "label": "In drafting",
+            "status": "not introduced",
+            "statusAtSessionEnd": "not introduced"
         },
         "progress": [
             {
@@ -7466,11 +7549,11 @@
         "lcIdentifier": "LC0926",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Introduced",
-            "step": "First chamber",
-            "label": "Introduced",
-            "status": "live",
-            "statusAtSessionEnd": "failed"
+            "key": "In Drafting Process",
+            "step": "Drafting",
+            "label": "In drafting",
+            "status": "not introduced",
+            "statusAtSessionEnd": "not introduced"
         },
         "progress": [
             {
@@ -36007,8 +36090,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "3/4 of Each House",
         "voteRequirements": [
-            "THREE_FOURTHS",
-            "SIMPLE"
+            "SIMPLE",
+            "THREE_FOURTHS"
         ],
         "subjects": [
             "Appropriations, Coal Tax Fund Principal",
@@ -37555,10 +37638,10 @@
         "lcIdentifier": "LC0018",
         "type": "senate bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
+            "key": "In First House Committee--Tabled",
             "step": "First chamber",
-            "label": "In committee",
-            "status": "live",
+            "label": "Tabled in committee",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -37571,7 +37654,7 @@
             {
                 "step": "first committee",
                 "status": "blocked",
-                "statusLabel": "Voted down",
+                "statusLabel": "Tabled",
                 "statusDate": "02/21/2025"
             },
             {
@@ -42484,7 +42567,8 @@
         ],
         "subjects": [
             "Health Care Services (see also: Health)",
-            "Health (see also: Health Care Services; Safety)"
+            "Health (see also: Health Care Services; Safety)",
+            "General Joint Resolution"
         ],
         "tags": [],
         "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2562?open_tab=sum",
@@ -42554,7 +42638,8 @@
             "SIMPLE"
         ],
         "subjects": [
-            "Federal Government"
+            "Federal Government",
+            "General Joint Resolution"
         ],
         "tags": [],
         "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC4231?open_tab=sum",
@@ -42625,7 +42710,8 @@
         ],
         "subjects": [
             "Energy",
-            "Legislature"
+            "Legislature",
+            "General Joint Resolution"
         ],
         "tags": [],
         "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3266?open_tab=sum",
@@ -45049,9 +45135,9 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "3/4 of Each House",
         "voteRequirements": [
-            "THREE_FOURTHS",
             "SIMPLE",
-            "TWO_THIRDS"
+            "TWO_THIRDS",
+            "THREE_FOURTHS"
         ],
         "subjects": [
             "Appropriations, Coal Tax Fund Principal",
@@ -45566,6 +45652,338 @@
         "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0550?open_tab=bill",
         "fiscalNoteUrl": "/bills/fiscal-note/hb-74",
         "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0550?open_tab=amend",
+        "legalNoteUrl": null,
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0
+    },
+    {
+        "key": "hb-738",
+        "identifier": "HB 738",
+        "identifierLong": "House Bill 738",
+        "chamber": "house",
+        "title": "Revise procedure laws for county zoning boundary and regulation changes",
+        "session": "2",
+        "lcIdentifier": "LC3503",
+        "type": "house bill",
+        "status": {
+            "key": "In First House--Introduced",
+            "step": "First chamber",
+            "label": "Introduced",
+            "status": "live",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "passed",
+                "statusLabel": "Introduced",
+                "statusDate": "02/25/2025"
+            },
+            {
+                "step": "first committee",
+                "status": "current",
+                "statusLabel": "Pending",
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Kerri Seekins-Crowe",
+            "party": "R",
+            "locale": "Billings",
+            "district": "HD 39"
+        },
+        "requestor": "Daniel Zolnikov",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "Simple",
+        "voteRequirements": [
+            "SIMPLE"
+        ],
+        "subjects": [
+            "Planning and Development",
+            "Counties  (see also: Local Government)"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3503?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3503?open_tab=bill",
+        "fiscalNoteUrl": null,
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3503?open_tab=amend",
+        "legalNoteUrl": null,
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0
+    },
+    {
+        "key": "hb-737",
+        "identifier": "HB 737",
+        "identifierLong": "House Bill 737",
+        "chamber": "house",
+        "title": "Generally revise suicide prevention laws",
+        "session": "2",
+        "lcIdentifier": "LC1399",
+        "type": "house bill",
+        "status": {
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "passed",
+                "statusLabel": "Introduced",
+                "statusDate": "02/25/2025"
+            },
+            {
+                "step": "first committee",
+                "status": "current",
+                "statusLabel": "Pending",
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Ed Stafman",
+            "party": "D",
+            "locale": "Bozeman",
+            "district": "HD 59"
+        },
+        "requestor": "Ed Stafman",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "Simple",
+        "voteRequirements": [
+            "SIMPLE"
+        ],
+        "subjects": [
+            "Guns and Weapons",
+            "Health (see also: Health Care Services; Safety)"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1399?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1399?open_tab=bill",
+        "fiscalNoteUrl": null,
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1399?open_tab=amend",
+        "legalNoteUrl": null,
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0
+    },
+    {
+        "key": "hb-736",
+        "identifier": "HB 736",
+        "identifierLong": "House Bill 736",
+        "chamber": "house",
+        "title": "Provide nutrient pollutant loading offsets",
+        "session": "2",
+        "lcIdentifier": "LC2393",
+        "type": "house bill",
+        "status": {
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "passed",
+                "statusLabel": "Introduced",
+                "statusDate": "02/25/2025"
+            },
+            {
+                "step": "first committee",
+                "status": "current",
+                "statusLabel": "Pending",
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Steve Fitzpatrick",
+            "party": "R",
+            "locale": "Great Falls",
+            "district": "HD 24"
+        },
+        "requestor": "Steve Fitzpatrick",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "Simple",
+        "voteRequirements": [
+            "SIMPLE"
+        ],
+        "subjects": [
+            "Environmental Protection",
+            "Water",
+            "Rule Making"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2393?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2393?open_tab=bill",
+        "fiscalNoteUrl": null,
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2393?open_tab=amend",
+        "legalNoteUrl": null,
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0
+    },
+    {
+        "key": "hb-735",
+        "identifier": "HB 735",
+        "identifierLong": "House Bill 735",
+        "chamber": "house",
+        "title": "Generally revising alcohol laws",
+        "session": "2",
+        "lcIdentifier": "LC0593",
+        "type": "house bill",
+        "status": {
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "passed",
+                "statusLabel": "Introduced",
+                "statusDate": "02/25/2025"
+            },
+            {
+                "step": "first committee",
+                "status": "current",
+                "statusLabel": "Pending",
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Steve Fitzpatrick",
+            "party": "R",
+            "locale": "Great Falls",
+            "district": "HD 24"
+        },
+        "requestor": "Steve Fitzpatrick",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "Simple",
+        "voteRequirements": [
+            "SIMPLE"
+        ],
+        "subjects": [
+            "Alcohol and Drugs"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0593?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0593?open_tab=bill",
+        "fiscalNoteUrl": null,
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0593?open_tab=amend",
         "legalNoteUrl": null,
         "vetoMemoUrl": null,
         "articles": [],
@@ -64680,8 +65098,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "SIMPLE",
-            "TWO_THIRDS_LEGISLATURE"
+            "TWO_THIRDS_LEGISLATURE",
+            "SIMPLE"
         ],
         "subjects": [
             "Taxation--Individual Income",
@@ -66610,8 +67028,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "SIMPLE",
-            "TWO_THIRDS_LEGISLATURE"
+            "TWO_THIRDS_LEGISLATURE",
+            "SIMPLE"
         ],
         "subjects": [
             "Constitutional Amendment Proposals",
@@ -66686,8 +67104,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "SIMPLE",
-            "TWO_THIRDS_LEGISLATURE"
+            "TWO_THIRDS_LEGISLATURE",
+            "SIMPLE"
         ],
         "subjects": [
             "Constitutional Amendment Proposals",
