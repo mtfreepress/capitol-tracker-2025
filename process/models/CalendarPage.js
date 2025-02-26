@@ -37,55 +37,72 @@ export default class CalendarPage {
             //         description: action.data.description
             //     });
             // }
-        
+
             if (action.data.description === "Hearing Canceled") return acc;
-        
-            let date = action.data.committeeHearingTime ||
-                (action.data.isCommitteeAction ? action.data.date : null);
-        
-            
-            if (action.data.scheduledForFloorDebate || action.data.scheduledForFinalVote) {
-                date = action.data.date;
+
+            // Process committee hearing time (future date)
+            if (action.data.committeeHearingTime) {
+                const hearingDate = action.data.committeeHearingTime;
+                const hearingPageKey = hearingDate.replace(/\//g, '-');
+
+                // Initialize or update the entry for the hearing date
+                if (!acc[hearingPageKey]) {
+                    acc[hearingPageKey] = {
+                        key: hearingPageKey,
+                        date: hearingDate,
+                        hearings: [],
+                        floorDebates: [],
+                        finalVotes: [],
+                        annotation: calendarAnnotations?.[hearingDate] || null,
+                        billsInvolved: []
+                    };
+                }
+
+                acc[hearingPageKey].hearings.push(action);
+
+                if (!acc[hearingPageKey].billsInvolved.includes(action.data.bill)) {
+                    acc[hearingPageKey].billsInvolved.push(action.data.bill);
+                }
             }
-        
-            
-            if (!date) {
-                return acc;
+
+            // Also process original bill date (could be in 2024)
+            if (action.data.date) {
+                const billDate = action.data.date;
+                const billPageKey = billDate.replace(/\//g, '-');
+
+                if (!acc[billPageKey]) {
+                    acc[billPageKey] = {
+                        key: billPageKey,
+                        date: billDate,
+                        hearings: [],
+                        floorDebates: [],
+                        finalVotes: [],
+                        annotation: calendarAnnotations?.[billDate] || null,
+                        billsInvolved: []
+                    };
+                }
+
+                // Add to appropriate arrays based on action type
+                if (action.data.isCommitteeAction) {
+                    acc[billPageKey].hearings.push(action);
+                }
+
+                if (action.data.scheduledForFloorDebate) {
+                    acc[billPageKey].floorDebates.push(action);
+                }
+
+                if (action.data.scheduledForFinalVote) {
+                    acc[billPageKey].finalVotes.push(action);
+                }
+
+                if (!acc[billPageKey].billsInvolved.includes(action.data.bill)) {
+                    acc[billPageKey].billsInvolved.push(action.data.bill);
+                }
             }
-        
-            const pageKey = date.replace(/\//g, '-');
-        
-            if (!acc[pageKey]) {
-                acc[pageKey] = {
-                    key: pageKey,
-                    date: date,
-                    hearings: [],
-                    floorDebates: [],
-                    finalVotes: [],
-                    annotation: calendarAnnotations?.[date] || null,
-                    billsInvolved: []
-                };
-            }
-        
-            if (action.data.committeeHearingTime || action.data.isCommitteeAction) {
-                acc[pageKey].hearings.push(action);
-            }
-        
-            if (action.data.scheduledForFloorDebate) {
-                acc[pageKey].floorDebates.push(action);
-            }
-        
-            if (action.data.scheduledForFinalVote) {
-                acc[pageKey].finalVotes.push(action);
-            }
-        
-            if (!acc[pageKey].billsInvolved.includes(action.data.bill)) {
-                acc[pageKey].billsInvolved.push(action.data.bill);
-            }
-        
+
             return acc;
         }, {});
-        
+
         // Debug the final dateMap
         // console.log('Final dateMap stats:', {
         //     totalDates: Object.keys(dateMap).length,
@@ -121,6 +138,6 @@ export default class CalendarPage {
             calendarAnnotations
         };
     }
-    
+
     export = () => ({ ...this.data })
 }

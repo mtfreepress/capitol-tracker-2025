@@ -237,6 +237,8 @@ export async function getStaticProps({ params }) {
         dateData.billsInvolved.includes(bill.identifier)
     );
 
+    console.log(onCalendarBills)
+
     return {
         props: {
             dateData,
