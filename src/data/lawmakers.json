@@ -43691,6 +43691,67 @@
         "imageSlug": "2025/jedediah-hinkle.jpg",
         "sponsoredBills": [
             {
+                "key": "hb-807",
+                "identifier": "HB 807",
+                "title": "Prohibiting vaccines allowed under an emergency use authorization or undergoing safety trials to be required",
+                "chamber": "house",
+                "status": {
+                    "key": "In First House--Introduced",
+                    "step": "First chamber",
+                    "label": "Introduced",
+                    "status": "live",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "02/26/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2455?open_tab=bill",
+                "fiscalNoteUrl": null,
+                "legalNoteUrl": null,
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Jedediah Hinkle",
+                    "party": "R",
+                    "locale": "Belgrade",
+                    "district": "HD 67"
+                }
+            },
+            {
                 "key": "hb-659",
                 "identifier": "HB 659",
                 "title": "Revising marijuana election requirements in certain municipalities",
@@ -55367,7 +55428,7 @@
                     }
                 ],
                 "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1999?open_tab=bill",
-                "fiscalNoteUrl": null,
+                "fiscalNoteUrl": "/bills/fiscal-note/sb-270",
                 "legalNoteUrl": null,
                 "numArticles": 0,
                 "sponsor": {
@@ -109266,10 +109327,10 @@
                 "title": "Generally revise student data laws to enhance privacy",
                 "chamber": "senate",
                 "status": {
-                    "key": "Probably Dead",
-                    "label": "",
-                    "step": "Failed",
-                    "status": "stalled",
+                    "key": "In First House Committee--Nontabled",
+                    "step": "First chamber",
+                    "label": "In committee",
+                    "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
