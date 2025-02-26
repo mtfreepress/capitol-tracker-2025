@@ -124,7 +124,10 @@ export default function CalendarDay({ dateData, onCalendarBills, committees }) {
                 currentKey={dateData.key}
             /> */}
 
-            <CalendarNavigator dates={calendar.dates} />
+            <CalendarNavigator
+                dates={calendar.dates}
+                currentPageDate={dateData.key}
+            />
 
             <section>
                 <h3>Committee Hearings</h3>

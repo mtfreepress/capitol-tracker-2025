@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { css } from '@emotion/react';
 import { shortDateWithWeekday } from '../config/utils';
@@ -9,14 +9,16 @@ const calendarStyle = css`
 
   .calendar-header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     margin-bottom: 1em;
-    position: relative;
     
     .month-selector {
       position: relative;
       cursor: pointer;
+      flex: 1;
+      display: flex;
+      justify-content: center;
       
       h3 {
         display: flex;
@@ -59,23 +61,18 @@ const calendarStyle = css`
         }
       }
     }
-  }
-
-  .calendar-navigation {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 1em;
     
-    button {
-      padding: 0.5em 1em;
+    .navigation-button {
       background: none;
       border: none;
       cursor: pointer;
       font-size: 1.2em;
+      padding: 0.5em;
       
       &:disabled {
         opacity: 0.5;
         cursor: not-allowed;
+        visibility: hidden;
       }
     }
   }
@@ -114,23 +111,84 @@ const calendarStyle = css`
   }
 `;
 
-const CalendarNavigator = ({ dates }) => {
+const CalendarNavigator = ({ dates, currentPageDate }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   
-  // Get available months from dates, including 2024
+  // Get available months from dates
   const availableMonths = [...new Set(dates.map(date => {
-      const d = new Date(date.date);
-      return `${d.getFullYear()}-${d.getMonth()}`;
+    const d = new Date(date.date);
+    return `${d.getFullYear()}-${d.getMonth()}`;
   }))].sort((a, b) => {
-      const [yearA, monthA] = a.split('-').map(Number);
-      const [yearB, monthB] = b.split('-').map(Number);
-      if (yearA !== yearB) return yearA - yearB;
-      return monthA - monthB;
+    const [yearA, monthA] = a.split('-').map(Number);
+    const [yearB, monthB] = b.split('-').map(Number);
+    if (yearA !== yearB) return yearA - yearB;
+    return monthA - monthB;
   });
 
-  // Initialize with first available month
-  const [currentYearMonth, setCurrentYearMonth] = useState(availableMonths[0]);
+  const getInitialMonth = () => {
+    // If we have a current page date, use its month
+    if (currentPageDate) {
+      const pageDate = new Date(currentPageDate.replace(/-/g, '/'));
+      const pageYearMonth = `${pageDate.getFullYear()}-${pageDate.getMonth()}`;
+      
+      if (availableMonths.includes(pageYearMonth)) {
+        return pageYearMonth;
+      }
+    }
+    
+    // Otherwise, find current month or nearest available
+    const now = new Date();
+    const currentYM = `${now.getFullYear()}-${now.getMonth()}`;
+    
+    if (availableMonths.includes(currentYM)) {
+      return currentYM;
+    }
+    
+    // If neither is available, find closest month
+    const currentTimestamp = now.getTime();
+    let closestMonth = availableMonths[0];
+    let smallestDiff = Infinity;
+    
+    availableMonths.forEach(monthStr => {
+      const [y, m] = monthStr.split('-').map(Number);
+      const monthDate = new Date(y, m, 1);
+      const diff = Math.abs(monthDate.getTime() - currentTimestamp);
+      
+      if (diff < smallestDiff) {
+        smallestDiff = diff;
+        closestMonth = monthStr;
+      }
+    });
+    
+    return closestMonth;
+  };
+
+  // Initialize with page date's month if provided, otherwise closest month to current date
+  const [currentYearMonth, setCurrentYearMonth] = useState(() => getInitialMonth());
+  
+  // Update when dates or currentPageDate changes
+  useEffect(() => {
+    setCurrentYearMonth(getInitialMonth());
+  }, [dates, currentPageDate]);
+
   const [year, month] = currentYearMonth.split('-').map(Number);
+
+  const goToPreviousMonth = () => {
+    const currentIndex = availableMonths.indexOf(currentYearMonth);
+    if (currentIndex > 0) {
+      setCurrentYearMonth(availableMonths[currentIndex - 1]);
+    }
+  };
+
+  const goToNextMonth = () => {
+    const currentIndex = availableMonths.indexOf(currentYearMonth);
+    if (currentIndex < availableMonths.length - 1) {
+      setCurrentYearMonth(availableMonths[currentIndex + 1]);
+    }
+  };
+
+  const isFirstMonth = availableMonths.indexOf(currentYearMonth) === 0;
+  const isLastMonth = availableMonths.indexOf(currentYearMonth) === availableMonths.length - 1;
 
   // Calculate weeks needed
   const daysInMonth = new Date(year, month + 1, 0).getDate();
@@ -141,28 +199,28 @@ const CalendarNavigator = ({ dates }) => {
 
   // Create calendar grid with only needed weeks
   const calendarDays = Array(weeksNeeded * 7).fill(null).map((_, index) => {
-      const dayNumber = index - firstDayOfMonth + 1;
-      if (dayNumber < 1 || dayNumber > daysInMonth) return null;
+    const dayNumber = index - firstDayOfMonth + 1;
+    if (dayNumber < 1 || dayNumber > daysInMonth) return null;
 
-      const monthStr = String(month + 1).padStart(2, '0');
-      const dayStr = String(dayNumber).padStart(2, '0');
-      const dateStr = `${monthStr}/${dayStr}/${year}`;
-      const matchingDate = dates.find(d => d.date === dateStr);
+    const monthStr = String(month + 1).padStart(2, '0');
+    const dayStr = String(dayNumber).padStart(2, '0');
+    const dateStr = `${monthStr}/${dayStr}/${year}`;
+    const matchingDate = dates.find(d => d.date === dateStr);
 
-      return {
-          day: dayNumber,
-          key: matchingDate?.key,
-          isActive: !!matchingDate
-      };
+    return {
+      day: dayNumber,
+      key: matchingDate?.key,
+      isActive: !!matchingDate
+    };
   });
 
   // Format month display with correct month index
   const formatMonthYear = (yearMonth) => {
-      const [y, m] = yearMonth.split('-').map(Number);
-      return new Date(y, m).toLocaleString('default', { 
-          month: 'long', 
-          year: 'numeric' 
-      });
+    const [y, m] = yearMonth.split('-').map(Number);
+    return new Date(y, m).toLocaleString('default', {
+      month: 'long',
+      year: 'numeric'
+    });
   };
 
   const gridStyle = css`
@@ -179,8 +237,17 @@ const CalendarNavigator = ({ dates }) => {
   return (
     <div css={calendarStyle}>
       <div className="calendar-header">
+        <button
+          className="navigation-button"
+          onClick={goToPreviousMonth}
+          disabled={isFirstMonth}
+          title="Previous Month"
+        >
+          ◀
+        </button>
+        
         <div className="month-selector">
-          <h3 
+          <h3
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
             className={isDropdownOpen ? 'open' : ''}
           >
@@ -202,7 +269,17 @@ const CalendarNavigator = ({ dates }) => {
             </div>
           )}
         </div>
+        
+        <button
+          className="navigation-button"
+          onClick={goToNextMonth}
+          disabled={isLastMonth}
+          title="Next Month"
+        >
+          ▶
+        </button>
       </div>
+
       <div css={gridStyle}>
         {weekdays.map(day => (
           <div key={day} className="weekday-header">
