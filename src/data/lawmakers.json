@@ -3000,10 +3000,10 @@
                 "title": "Revise funding for assisted living services",
                 "chamber": "senate",
                 "status": {
-                    "key": "Probably Dead",
-                    "label": "",
-                    "step": "Failed",
-                    "status": "stalled",
+                    "key": "In First House Committee--Nontabled",
+                    "step": "First chamber",
+                    "label": "In committee",
+                    "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -53075,10 +53075,10 @@
                 "title": "Renew the dependency and neglect court system task force",
                 "chamber": "senate",
                 "status": {
-                    "key": "In First House Committee--Nontabled",
+                    "key": "In First House Committee--Tabled",
                     "step": "First chamber",
-                    "label": "In committee",
-                    "status": "live",
+                    "label": "Tabled in committee",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -70189,10 +70189,10 @@
                 "title": "Generally revise workers' compensation laws",
                 "chamber": "house",
                 "status": {
-                    "key": "In First House--Introduced",
-                    "step": "First chamber",
-                    "label": "Introduced",
-                    "status": "live",
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -88588,10 +88588,10 @@
                 "title": "Revise preauthorization laws relating to healthcare",
                 "chamber": "house",
                 "status": {
-                    "key": "Probably Dead",
-                    "label": "",
-                    "step": "Failed",
-                    "status": "stalled",
+                    "key": "In First House Committee--Nontabled",
+                    "step": "First chamber",
+                    "label": "In committee",
+                    "status": "live",
                     "statusAtSessionEnd": "failed"
                 },
                 "progress": [
@@ -91420,6 +91420,67 @@
         "articles": [],
         "imageSlug": "2025/courtenay-sprunger.jpg",
         "sponsoredBills": [
+            {
+                "key": "hb-806",
+                "identifier": "HB 806",
+                "title": "Generally revising laws related to dietitians and nutritionists",
+                "chamber": "house",
+                "status": {
+                    "key": "Probably Dead",
+                    "label": "",
+                    "step": "Failed",
+                    "status": "stalled",
+                    "statusAtSessionEnd": "failed"
+                },
+                "progress": [
+                    {
+                        "step": "introduced",
+                        "status": "passed",
+                        "statusLabel": "Introduced",
+                        "statusDate": "02/26/2025"
+                    },
+                    {
+                        "step": "first committee",
+                        "status": "current",
+                        "statusLabel": "Pending",
+                        "statusDate": null
+                    },
+                    {
+                        "step": "first chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "second chamber",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "reconciliation",
+                        "status": "skipped",
+                        "statusLabel": null,
+                        "statusDate": null
+                    },
+                    {
+                        "step": "governor",
+                        "status": "future",
+                        "statusLabel": null,
+                        "statusDate": null
+                    }
+                ],
+                "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2435?open_tab=bill",
+                "fiscalNoteUrl": null,
+                "legalNoteUrl": null,
+                "numArticles": 0,
+                "sponsor": {
+                    "name": "Courtenay Sprunger",
+                    "party": "R",
+                    "locale": "Kalispell",
+                    "district": "HD 7"
+                }
+            },
             {
                 "key": "hb-672",
                 "identifier": "HB 672",
