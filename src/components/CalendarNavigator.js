@@ -207,10 +207,16 @@ const CalendarNavigator = ({ dates, currentPageDate }) => {
     const dateStr = `${monthStr}/${dayStr}/${year}`;
     const matchingDate = dates.find(d => d.date === dateStr);
 
+    const hasLegislativeActions = matchingDate && (
+      matchingDate.hearings.length > 0 ||
+      matchingDate.floorDebates.length > 0 ||
+      matchingDate.finalVotes.length > 0
+    );
+
     return {
       day: dayNumber,
       key: matchingDate?.key,
-      isActive: !!matchingDate
+      isActive: hasLegislativeActions
     };
   });
 

@@ -1,5 +1,4 @@
-import React from "react";
-import Link from "next/link";
+import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { css } from "@emotion/react";
 import Layout from "../../design/Layout";
@@ -9,51 +8,6 @@ import { shortDateWithWeekday } from "../../config/utils";
 import calendar from "../../data/calendar.json";
 import allBills from "../../data/bills.json";
 import committees from "../../data/committees.json";
-
-const dateSelectStyle = css`
-  margin: 1em 0;
-  padding: 1em;
-  background: var(--gray1);
-  border-radius: 4px;
-
-  select {
-    padding: 0.5em;
-    font-size: 1em;
-    margin: 0 0.5em;
-  }
-`;
-
-const DateSelector = ({ dates, currentKey }) => {
-    const router = useRouter();
-
-    const handleDateChange = (event) => {
-        const selectedDate = event.target.value;
-        if (selectedDate) {
-            router.push(`/calendar/${selectedDate}`);
-        }
-    };
-
-    return (
-        <div css={dateSelectStyle}>
-            <label>
-                View schedule for: {" "}
-                <select
-                    onChange={handleDateChange}
-                    value={currentKey}
-                >
-                    {dates.map(date => (
-                        <option
-                            key={date.key}
-                            value={date.key}
-                        >
-                            {shortDateWithWeekday(new Date(date.date))}
-                        </option>
-                    ))}
-                </select>
-            </label>
-        </div>
-    );
-};
 
 const capitalizeFirstLetter = string => string.charAt(0).toUpperCase() + string.slice(1);
 
@@ -84,11 +38,58 @@ const Committee = ({ committee, onCalendarBills, hearings }) => {
     );
 };
 
-export default function CalendarDay({ dateData, onCalendarBills, committees }) {
+export default function CalendarDay({ dateData, onCalendarBills, committees, isInvalidDate, dateStr }) {
+    const router = useRouter();
+
+    // For invalid dates (no legislative activity), show a custom message
+    if (isInvalidDate || (dateData.hearings.length === 0 && dateData.floorDebates.length === 0 && dateData.finalVotes.length === 0)) {
+        // Parse the date for display
+        const [month, day, year] = dateStr.split('-').map(Number);
+        const requestedDate = new Date(year, month - 1, day);
+        const formattedDate = requestedDate.toLocaleDateString('en-US', {
+            month: 'long',
+            day: 'numeric',
+            year: 'numeric'
+        });
+
+        return (
+            <Layout
+                relativePath={`/calendar/${dateStr}`}
+                pageTitle={`Legislative Calendar for ${formattedDate} | MTFP Capitol Tracker`}
+                pageDescription={`Montana legislative calendar for ${formattedDate}`}
+            >
+                <h1>Legislative Calendar</h1>
+                
+                <div css={css`
+                  background: var(--gray2);
+                  padding: 1em;
+                  margin-bottom: 2em;
+                  border-radius: 4px;
+                  text-align: center;
+                `}>
+                    <h2>No Legislative Events on {formattedDate}</h2>
+                    <p>There are no scheduled legislative events for this date. Please select a date from the calendar below.</p>
+                </div>
+                
+                <CalendarNavigator
+                    dates={calendar.dates}
+                    currentPageDate={null}
+                />
+            </Layout>
+        );
+    }
+
+    if (!dateData) {
+        return (
+            <Layout>
+                <h1>Loading...</h1>
+            </Layout>
+        );
+    }
+
     const day = shortDateWithWeekday(new Date(dateData.date));
     const hearingsByCommittee = groupHearingsByCommittee(dateData.hearings);
 
-    // Group committees by type
     const committeesWithHearings = Array.from(
         new Set(dateData.hearings.map((a) => a.data.committee))
     ).map((name) => {
@@ -119,11 +120,6 @@ export default function CalendarDay({ dateData, onCalendarBills, committees }) {
         >
             <h1>Legislative Calendar for {day}</h1>
 
-            {/* <DateSelector
-                dates={calendar.dates}
-                currentKey={dateData.key}
-            /> */}
-
             <CalendarNavigator
                 dates={calendar.dates}
                 currentPageDate={dateData.key}
@@ -145,12 +141,6 @@ export default function CalendarDay({ dateData, onCalendarBills, committees }) {
                                 appropsCommittees: "Budget Committees",
                                 otherCommittees: "Other Committees",
                             }[key];
-
-                            // console.log('Debug bill data:', {
-                            //     floorDebates: dateData.floorDebates.map(d => d.data.bill),
-                            //     finalVotes: dateData.finalVotes.map(d => d.data.bill),
-                            //     sampleBill: onCalendarBills[0]?.data?.bill
-                            // });
 
                             return (
                                 <div key={key}>
@@ -232,7 +222,12 @@ export async function getStaticProps({ params }) {
 
     if (!dateData) {
         return {
-            notFound: true
+            props: {
+                isInvalidDate: true,
+                dateStr: params.key,
+                committees: committees || [],
+                onCalendarBills: []
+            }
         };
     }
 
@@ -240,13 +235,13 @@ export async function getStaticProps({ params }) {
         dateData.billsInvolved.includes(bill.identifier)
     );
 
-    console.log(onCalendarBills)
-
     return {
         props: {
             dateData,
             onCalendarBills,
-            committees: committees || []
+            committees: committees || [],
+            isInvalidDate: false,
+            dateStr: params.key
         }
     };
 }

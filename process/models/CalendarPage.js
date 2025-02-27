@@ -6,7 +6,6 @@ export default class CalendarPage {
         const formattedBeginningOfToday = dateFormat(new Date(beginningOfToday))
         console.log({ formattedBeginningOfToday })
 
-
         // For checking that server is handling dates the same as my local machine
         // console.log({
         //     updateTime,
@@ -39,22 +38,20 @@ export default class CalendarPage {
             // }
         
             if (action.data.description === "Hearing Canceled") return acc;
-        
+
             let date = action.data.committeeHearingTime ||
                 (action.data.isCommitteeAction ? action.data.date : null);
-        
-            
+
             if (action.data.scheduledForFloorDebate || action.data.scheduledForFinalVote) {
                 date = action.data.date;
             }
-        
-            
+
             if (!date) {
                 return acc;
             }
-        
+
             const pageKey = date.replace(/\//g, '-');
-        
+
             if (!acc[pageKey]) {
                 acc[pageKey] = {
                     key: pageKey,
@@ -66,23 +63,23 @@ export default class CalendarPage {
                     billsInvolved: []
                 };
             }
-        
+
             if (action.data.committeeHearingTime || action.data.isCommitteeAction) {
                 acc[pageKey].hearings.push(action);
             }
-        
+
             if (action.data.scheduledForFloorDebate) {
                 acc[pageKey].floorDebates.push(action);
             }
-        
+
             if (action.data.scheduledForFinalVote) {
                 acc[pageKey].finalVotes.push(action);
             }
-        
+
             if (!acc[pageKey].billsInvolved.includes(action.data.bill)) {
                 acc[pageKey].billsInvolved.push(action.data.bill);
             }
-        
+
             return acc;
         }, {});
         
@@ -96,31 +93,51 @@ export default class CalendarPage {
         //     sampleDate: Object.values(dateMap)[0]
         // });
 
-        const sortedDateKeys = Object.keys(dateMap)
-            .map(key => dateMap[key].date) // Get original date format (MM/DD/YYYY)
-            .sort(compareDates)
-            .map(date => date.replace(/\//g, '-')); // Convert back to key format
-
-        const dates = sortedDateKeys.map(key => ({
-            ...dateMap[key],
-            billsInvolved: dateMap[key].billsInvolved.sort()
-        }));
-
-        this.data = {
-            // New structure with chronologically sorted dates
-            dates,
-            dateKeys: sortedDateKeys,
-            dateMap,
-
-            // Backward compatible properties with sorted dates
-            billsOnCalendar: Array.from(new Set(dates.flatMap(d => d.billsInvolved))).sort(),
-            datesOnCalendar: sortedDateKeys.map(key => key.replace(/-/g, '/')),
-            scheduledHearings: actions.filter(d => d.data.committeeHearingTime),
-            scheduledFloorDebates: actions.filter(d => d.data.scheduledForFloorDebate),
-            scheduledFinalVotes: actions.filter(d => d.data.scheduledForFinalVote),
-            calendarAnnotations
-        };
-    }
-    
-    export = () => ({ ...this.data })
-}
+         // Generate endpoints for all days in months with valid legislative days
+         const allDates = new Set(Object.keys(dateMap));
+         Object.keys(dateMap).forEach(key => {
+             const [month, , year] = key.split('-').map(Number);
+             const daysInMonth = new Date(year, month, 0).getDate();
+             for (let day = 1; day <= daysInMonth; day++) {
+                 const dayStr = String(day).padStart(2, '0');
+                 const newKey = `${String(month).padStart(2, '0')}-${dayStr}-${year}`;
+                 if (!allDates.has(newKey)) {
+                     allDates.add(newKey);
+                     dateMap[newKey] = {
+                         key: newKey,
+                         date: `${String(month).padStart(2, '0')}/${dayStr}/${year}`,
+                         hearings: [],
+                         floorDebates: [],
+                         finalVotes: [],
+                         annotation: null,
+                         billsInvolved: []
+                     };
+                 }
+             }
+         });
+ 
+         const sortedDateKeys = Array.from(allDates)
+             .map(key => dateMap[key].date)
+             .sort(compareDates)
+             .map(date => date.replace(/\//g, '-'));
+ 
+         const dates = sortedDateKeys.map(key => ({
+             ...dateMap[key],
+             billsInvolved: dateMap[key].billsInvolved.sort()
+         }));
+ 
+         this.data = {
+             dates,
+             dateKeys: sortedDateKeys,
+             dateMap,
+             billsOnCalendar: Array.from(new Set(dates.flatMap(d => d.billsInvolved))).sort(),
+             datesOnCalendar: sortedDateKeys.map(key => key.replace(/-/g, '/')),
+             scheduledHearings: actions.filter(d => d.data.committeeHearingTime),
+             scheduledFloorDebates: actions.filter(d => d.data.scheduledForFloorDebate),
+             scheduledFinalVotes: actions.filter(d => d.data.scheduledForFinalVote),
+             calendarAnnotations
+         };
+     }
+ 
+     export = () => ({ ...this.data })
+ }
