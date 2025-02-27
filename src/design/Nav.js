@@ -99,7 +99,7 @@ const PAGE_LINKS = [
     { path: '/#find-bill', label: '🔎 Find a bill' },
     { path: '/#find-lawmaker', label: '🔎 Find a lawmaker' },
     { path: '/#find-district', label: '🏡 Your district' },
-    // { path: '/calendar/', label: '🗓 Calendar' },
+    { path: '/calendar/', label: '🗓 Calendar' },
     // { path: '/recap/', label: '📝 What\'s happened' },
     // { path: '/participation/', label: '🙋 How to participate' },
 ];
