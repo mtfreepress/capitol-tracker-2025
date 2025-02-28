@@ -6715,9 +6715,9 @@
         "lcIdentifier": "LC2334",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Introduced",
+            "key": "In First House Committee--Nontabled",
             "step": "First chamber",
-            "label": "Introduced",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -6881,9 +6881,9 @@
         "lcIdentifier": "LC3527",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Introduced",
+            "key": "In First House Committee--Nontabled",
             "step": "First chamber",
-            "label": "Introduced",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -23196,8 +23196,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Each House",
         "voteRequirements": [
-            "SIMPLE",
-            "TWO_THIRDS"
+            "TWO_THIRDS",
+            "SIMPLE"
         ],
         "subjects": [
             "State/Other Government Levels, Immunity From Suit",
@@ -50272,9 +50272,9 @@
         "lcIdentifier": "LC3787",
         "type": "house bill",
         "status": {
-            "key": "In First House--Introduced",
+            "key": "In First House Committee--Nontabled",
             "step": "First chamber",
-            "label": "Introduced",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -51579,9 +51579,9 @@
         "lcIdentifier": "LC4348",
         "type": "house bill",
         "status": {
-            "key": "In First House--Introduced",
+            "key": "In First House Committee--Nontabled",
             "step": "First chamber",
-            "label": "Introduced",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -52971,8 +52971,8 @@
         "voteMajorityRequired": "3/4 of Each House",
         "voteRequirements": [
             "THREE_FOURTHS",
-            "SIMPLE",
-            "TWO_THIRDS"
+            "TWO_THIRDS",
+            "SIMPLE"
         ],
         "subjects": [
             "Appropriations, Coal Tax Fund Principal",
@@ -56260,14 +56260,14 @@
             },
             {
                 "step": "first committee",
-                "status": "current",
-                "statusLabel": "Pending",
-                "statusDate": null
+                "status": "passed",
+                "statusLabel": "Advanced",
+                "statusDate": "02/27/2025"
             },
             {
                 "step": "first chamber",
-                "status": "future",
-                "statusLabel": null,
+                "status": "current",
+                "statusLabel": "Pending",
                 "statusDate": null
             },
             {
@@ -56343,14 +56343,14 @@
             },
             {
                 "step": "first committee",
-                "status": "current",
-                "statusLabel": "Pending",
-                "statusDate": null
+                "status": "passed",
+                "statusLabel": "Advanced",
+                "statusDate": "02/27/2025"
             },
             {
                 "step": "first chamber",
-                "status": "future",
-                "statusLabel": null,
+                "status": "current",
+                "statusLabel": "Pending",
                 "statusDate": null
             },
             {
@@ -65567,10 +65567,10 @@
         "lcIdentifier": "LC4189",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
+            "key": "In First House Committee--Tabled",
             "step": "First chamber",
-            "label": "In committee",
-            "status": "live",
+            "label": "Tabled in committee",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -65582,9 +65582,9 @@
             },
             {
                 "step": "first committee",
-                "status": "current",
-                "statusLabel": "Pending",
-                "statusDate": null
+                "status": "blocked",
+                "statusLabel": "Tabled",
+                "statusDate": "02/27/2025"
             },
             {
                 "step": "first chamber",
@@ -70515,6 +70515,21 @@
         "vetoMemoUrl": null,
         "articles": [
             {
+                "title": "Montana abortion ‘trafficking’ bill gets voted down in Republican-dominated committee",
+                "category": "2025 Legislature",
+                "subtitle": "",
+                "date": "2025-02-27T19:12:43.000Z",
+                "link": "https://montanafreepress.org/2025/02/27/montana-abortion-trafficking-bill-gets-voted-down-in-republican-dominated-committee/",
+                "author": "Mara Silvers",
+                "imageUrl": "https://montanafreepress.org/montana-capitol-15/",
+                "billTags": [
+                    "HB 555",
+                    "HB 609"
+                ],
+                "lawmakerTags": [],
+                "governorTags": []
+            },
+            {
                 "title": "Criminal abortion ‘trafficking’ bill gets hearing before first committee",
                 "category": "Health Care",
                 "subtitle": "",
@@ -70529,7 +70544,7 @@
                 "governorTags": []
             }
         ],
-        "numArticles": 1
+        "numArticles": 2
     },
     {
         "key": "hb-608",
@@ -70624,10 +70639,10 @@
         "lcIdentifier": "LC2218",
         "type": "house bill",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
+            "key": "In First House Committee--Nontabled",
+            "step": "First chamber",
+            "label": "In committee",
+            "status": "live",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -72207,10 +72222,10 @@
         "lcIdentifier": "LC2942",
         "type": "house bill",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
+            "key": "In First House Committee--Nontabled",
+            "step": "First chamber",
+            "label": "In committee",
+            "status": "live",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -74307,14 +74322,14 @@
             },
             {
                 "step": "first committee",
-                "status": "current",
-                "statusLabel": "Pending",
-                "statusDate": null
+                "status": "passed",
+                "statusLabel": "Advanced",
+                "statusDate": "02/27/2025"
             },
             {
                 "step": "first chamber",
-                "status": "future",
-                "statusLabel": null,
+                "status": "current",
+                "statusLabel": "Pending",
                 "statusDate": null
             },
             {
@@ -74623,10 +74638,10 @@
         "lcIdentifier": "LC1970",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
+            "key": "In First House Committee--Tabled",
             "step": "First chamber",
-            "label": "In committee",
-            "status": "live",
+            "label": "Tabled in committee",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -74638,9 +74653,9 @@
             },
             {
                 "step": "first committee",
-                "status": "current",
-                "statusLabel": "Pending",
-                "statusDate": null
+                "status": "blocked",
+                "statusLabel": "Tabled",
+                "statusDate": "02/27/2025"
             },
             {
                 "step": "first chamber",
@@ -75531,8 +75546,24 @@
         "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0981?open_tab=amend",
         "legalNoteUrl": "/bills/legal-note/hb-555",
         "vetoMemoUrl": null,
-        "articles": [],
-        "numArticles": 0
+        "articles": [
+            {
+                "title": "Montana abortion ‘trafficking’ bill gets voted down in Republican-dominated committee",
+                "category": "2025 Legislature",
+                "subtitle": "",
+                "date": "2025-02-27T19:12:43.000Z",
+                "link": "https://montanafreepress.org/2025/02/27/montana-abortion-trafficking-bill-gets-voted-down-in-republican-dominated-committee/",
+                "author": "Mara Silvers",
+                "imageUrl": "https://montanafreepress.org/montana-capitol-15/",
+                "billTags": [
+                    "HB 555",
+                    "HB 609"
+                ],
+                "lawmakerTags": [],
+                "governorTags": []
+            }
+        ],
+        "numArticles": 1
     },
     {
         "key": "hb-554",
@@ -75559,14 +75590,14 @@
             },
             {
                 "step": "first committee",
-                "status": "current",
-                "statusLabel": "Pending",
-                "statusDate": null
+                "status": "passed",
+                "statusLabel": "Advanced",
+                "statusDate": "02/27/2025"
             },
             {
                 "step": "first chamber",
-                "status": "future",
-                "statusLabel": null,
+                "status": "current",
+                "statusLabel": "Pending",
                 "statusDate": null
             },
             {
@@ -79442,8 +79473,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Each House",
         "voteRequirements": [
-            "SIMPLE",
-            "TWO_THIRDS"
+            "TWO_THIRDS",
+            "SIMPLE"
         ],
         "subjects": [
             "Schools and Education",
