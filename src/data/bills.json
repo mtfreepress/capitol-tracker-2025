@@ -3134,9 +3134,9 @@
         "lcIdentifier": "LC0627",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Through 3rd Reading",
-            "step": "First chamber",
-            "label": "Passed chamber",
+            "key": "Transmitted to Second House",
+            "step": "Second chamber",
+            "label": "Transmitted",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -9174,9 +9174,9 @@
         "lcIdentifier": "LC1053",
         "type": "senate bill",
         "status": {
-            "key": "In First House Committee--Tabled",
-            "step": "First chamber",
-            "label": "Tabled in committee",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
             "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
@@ -9258,9 +9258,9 @@
         "lcIdentifier": "LC1073",
         "type": "senate bill",
         "status": {
-            "key": "In First House Committee--Tabled",
-            "step": "First chamber",
-            "label": "Tabled in committee",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
             "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
@@ -9426,9 +9426,9 @@
         "lcIdentifier": "LC0727",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Through 3rd Reading",
-            "step": "First chamber",
-            "label": "Passed chamber",
+            "key": "Transmitted to Second House",
+            "step": "Second chamber",
+            "label": "Transmitted",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -30875,9 +30875,9 @@
         "lcIdentifier": "LC1999",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Through 3rd Reading",
-            "step": "First chamber",
-            "label": "Passed chamber",
+            "key": "Transmitted to Second House",
+            "step": "Second chamber",
+            "label": "Transmitted",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -31542,9 +31542,9 @@
         "lcIdentifier": "LC0970",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Through 3rd Reading",
-            "step": "First chamber",
-            "label": "Passed chamber",
+            "key": "Transmitted to Second House",
+            "step": "Second chamber",
+            "label": "Transmitted",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -38697,9 +38697,9 @@
         "lcIdentifier": "LC2812",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Through 3rd Reading",
-            "step": "First chamber",
-            "label": "Passed chamber",
+            "key": "Transmitted to Second House",
+            "step": "Second chamber",
+            "label": "Transmitted",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -38993,8 +38993,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "SIMPLE",
-            "TWO_THIRDS_LEGISLATURE"
+            "TWO_THIRDS_LEGISLATURE",
+            "SIMPLE"
         ],
         "subjects": [
             "Constitutional Amendment Proposals",
@@ -42058,8 +42058,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "SIMPLE",
-            "TWO_THIRDS_LEGISLATURE"
+            "TWO_THIRDS_LEGISLATURE",
+            "SIMPLE"
         ],
         "subjects": [
             "Constitutional Amendment Proposals",
@@ -46320,9 +46320,9 @@
         "lcIdentifier": "LC0309",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Through 3rd Reading",
-            "step": "First chamber",
-            "label": "Passed chamber",
+            "key": "Transmitted to Second House",
+            "step": "Second chamber",
+            "label": "Transmitted",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -46484,9 +46484,9 @@
         "lcIdentifier": "LC0459",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Through 3rd Reading",
-            "step": "First chamber",
-            "label": "Passed chamber",
+            "key": "Transmitted to Second House",
+            "step": "Second chamber",
+            "label": "Transmitted",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -48470,8 +48470,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "SIMPLE",
-            "TWO_THIRDS_LEGISLATURE"
+            "TWO_THIRDS_LEGISLATURE",
+            "SIMPLE"
         ],
         "subjects": [
             "Legislature",
@@ -50298,6 +50298,92 @@
         "numArticles": 0
     },
     {
+        "key": "hb-829",
+        "identifier": "HB 829",
+        "identifierLong": "House Bill 829",
+        "chamber": "house",
+        "title": "Generally revise laws related to aquatic invasive species.",
+        "session": "2",
+        "lcIdentifier": "LC3822",
+        "type": "house bill",
+        "status": {
+            "key": "In First House--Introduced",
+            "step": "First chamber",
+            "label": "Introduced",
+            "status": "live",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "passed",
+                "statusLabel": "Introduced",
+                "statusDate": "02/28/2025"
+            },
+            {
+                "step": "first committee",
+                "status": "current",
+                "statusLabel": "Pending",
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Neil Duram",
+            "party": "R",
+            "locale": "Eureka",
+            "district": "HD 1"
+        },
+        "requestor": "Mike Cuffe",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "Simple",
+        "voteRequirements": [
+            "SIMPLE"
+        ],
+        "subjects": [
+            "Fish and Wildlife",
+            "Highways and Roads",
+            "Transportation  (see also: Motor Vehicles; Taxation--Transportation)",
+            "Revenue, State",
+            "Rule Making"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3822?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3822?open_tab=bill",
+        "fiscalNoteUrl": null,
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3822?open_tab=amend",
+        "legalNoteUrl": null,
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0
+    },
+    {
         "key": "hb-828",
         "identifier": "HB 828",
         "identifierLong": "House Bill 828",
@@ -50850,8 +50936,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "SIMPLE",
-            "TWO_THIRDS_LEGISLATURE"
+            "TWO_THIRDS_LEGISLATURE",
+            "SIMPLE"
         ],
         "subjects": [
             "Elections  (see also: Ballot Issues)",
@@ -50922,8 +51008,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "SIMPLE",
-            "TWO_THIRDS_LEGISLATURE"
+            "TWO_THIRDS_LEGISLATURE",
+            "SIMPLE"
         ],
         "subjects": [
             "Elections  (see also: Ballot Issues)",
@@ -52948,10 +53034,10 @@
         "lcIdentifier": "LC0713",
         "type": "budget bill",
         "status": {
-            "key": "In First House--Through 2nd Reading",
-            "step": "First chamber",
-            "label": "Passed second reading vote",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -53006,8 +53092,8 @@
         "voteMajorityRequired": "3/4 of Each House",
         "voteRequirements": [
             "SIMPLE",
-            "THREE_FOURTHS",
-            "TWO_THIRDS"
+            "TWO_THIRDS",
+            "THREE_FOURTHS"
         ],
         "subjects": [
             "Appropriations, Coal Tax Fund Principal",
@@ -53169,8 +53255,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "SIMPLE",
-            "TWO_THIRDS_LEGISLATURE"
+            "TWO_THIRDS_LEGISLATURE",
+            "SIMPLE"
         ],
         "subjects": [
             "Family Law  (see also: Minors)",
@@ -59916,10 +60002,10 @@
         "lcIdentifier": "LC1725",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
-            "step": "First chamber",
-            "label": "In committee",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -62165,10 +62251,10 @@
         "lcIdentifier": "LC0712",
         "type": "budget bill",
         "status": {
-            "key": "In First House--Through 2nd Reading",
-            "step": "First chamber",
-            "label": "Passed second reading vote",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -62998,9 +63084,9 @@
         "lcIdentifier": "LC3433",
         "type": "house bill",
         "status": {
-            "key": "In First House--Out of Committee",
+            "key": "In First House Committee--Nontabled",
             "step": "First chamber",
-            "label": "Out of committee",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -67718,10 +67804,10 @@
         "lcIdentifier": "LC0888",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
-            "step": "First chamber",
-            "label": "In committee",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -74260,10 +74346,10 @@
         "lcIdentifier": "LC4145",
         "type": "house bill",
         "status": {
-            "key": "In First House--Through 2nd Reading",
-            "step": "First chamber",
-            "label": "Passed second reading vote",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -76774,10 +76860,10 @@
         "lcIdentifier": "LC2314",
         "type": "house bill",
         "status": {
-            "key": "In First House--Out of Committee",
-            "step": "First chamber",
-            "label": "Out of committee",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -77104,10 +77190,10 @@
         "lcIdentifier": "LC4219",
         "type": "house bill",
         "status": {
-            "key": "In First House--Out of Committee",
-            "step": "First chamber",
-            "label": "Out of committee",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -77611,10 +77697,10 @@
         "lcIdentifier": "LC3437",
         "type": "house bill",
         "status": {
-            "key": "In First House--Out of Committee",
-            "step": "First chamber",
-            "label": "Out of committee",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -78072,8 +78158,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "SIMPLE",
-            "TWO_THIRDS_LEGISLATURE"
+            "TWO_THIRDS_LEGISLATURE",
+            "SIMPLE"
         ],
         "subjects": [
             "Taxation--Individual Income",
@@ -78696,10 +78782,10 @@
         "lcIdentifier": "LC2576",
         "type": "house bill",
         "status": {
-            "key": "In First House--Through 2nd Reading",
-            "step": "First chamber",
-            "label": "Passed second reading vote",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -80002,8 +80088,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "SIMPLE",
-            "TWO_THIRDS_LEGISLATURE"
+            "TWO_THIRDS_LEGISLATURE",
+            "SIMPLE"
         ],
         "subjects": [
             "Constitutional Amendment Proposals",
@@ -80078,8 +80164,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "SIMPLE",
-            "TWO_THIRDS_LEGISLATURE"
+            "TWO_THIRDS_LEGISLATURE",
+            "SIMPLE"
         ],
         "subjects": [
             "Constitutional Amendment Proposals",
@@ -80190,10 +80276,10 @@
         "lcIdentifier": "LC2854",
         "type": "house bill",
         "status": {
-            "key": "In First House--Out of Committee",
-            "step": "First chamber",
-            "label": "Out of committee",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -80952,10 +81038,10 @@
         "lcIdentifier": "LC2674",
         "type": "house bill",
         "status": {
-            "key": "In First House--Out of Committee",
-            "step": "First chamber",
-            "label": "Out of committee",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -81034,10 +81120,10 @@
         "lcIdentifier": "LC2581",
         "type": "house bill",
         "status": {
-            "key": "In First House--Out of Committee",
-            "step": "First chamber",
-            "label": "Out of committee",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -81117,10 +81203,10 @@
         "lcIdentifier": "LC2004",
         "type": "house bill",
         "status": {
-            "key": "In First House--Through 2nd Reading",
-            "step": "First chamber",
-            "label": "Passed second reading vote",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -81366,10 +81452,10 @@
         "lcIdentifier": "LC0886",
         "type": "house bill",
         "status": {
-            "key": "In First House--Out of Committee",
-            "step": "First chamber",
-            "label": "Out of committee",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -83052,10 +83138,10 @@
         "lcIdentifier": "LC1892",
         "type": "house bill",
         "status": {
-            "key": "In First House--Through 2nd Reading",
-            "step": "First chamber",
-            "label": "Passed second reading vote",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -83888,10 +83974,10 @@
         "lcIdentifier": "LC2497",
         "type": "house bill",
         "status": {
-            "key": "In First House--Out of Committee",
-            "step": "First chamber",
-            "label": "Out of committee",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -83970,10 +84056,10 @@
         "lcIdentifier": "LC2361",
         "type": "house bill",
         "status": {
-            "key": "In First House--Through 2nd Reading",
-            "step": "First chamber",
-            "label": "Passed second reading vote",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -84052,10 +84138,10 @@
         "lcIdentifier": "LC2356",
         "type": "house bill",
         "status": {
-            "key": "In First House--Out of Committee",
-            "step": "First chamber",
-            "label": "Out of committee",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -84349,8 +84435,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "SIMPLE",
-            "TWO_THIRDS_LEGISLATURE"
+            "TWO_THIRDS_LEGISLATURE",
+            "SIMPLE"
         ],
         "subjects": [
             "Constitutional Amendment Proposals",
@@ -84899,10 +84985,10 @@
         "lcIdentifier": "LC2069",
         "type": "house bill",
         "status": {
-            "key": "In First House--Through 2nd Reading",
-            "step": "First chamber",
-            "label": "Passed second reading vote",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -85239,10 +85325,10 @@
         "lcIdentifier": "LC4148",
         "type": "house bill",
         "status": {
-            "key": "In First House--Out of Committee",
-            "step": "First chamber",
-            "label": "Out of committee",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -85654,10 +85740,10 @@
         "lcIdentifier": "LC1270",
         "type": "house bill",
         "status": {
-            "key": "In First House--Through 2nd Reading",
-            "step": "First chamber",
-            "label": "Passed second reading vote",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -85818,10 +85904,10 @@
         "lcIdentifier": "LC0880",
         "type": "house bill",
         "status": {
-            "key": "In First House--Through 2nd Reading",
-            "step": "First chamber",
-            "label": "Passed second reading vote",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -85900,10 +85986,10 @@
         "lcIdentifier": "LC2006",
         "type": "house bill",
         "status": {
-            "key": "In First House--Out of Committee",
-            "step": "First chamber",
-            "label": "Out of committee",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -87395,10 +87481,10 @@
         "lcIdentifier": "LC0877",
         "type": "house bill",
         "status": {
-            "key": "In First House--Through 2nd Reading",
-            "step": "First chamber",
-            "label": "Passed second reading vote",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -91730,10 +91816,10 @@
         "lcIdentifier": "LC1354",
         "type": "house bill",
         "status": {
-            "key": "In First House--Through 2nd Reading",
-            "step": "First chamber",
-            "label": "Passed second reading vote",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -92985,10 +93071,10 @@
         "lcIdentifier": "LC3242",
         "type": "house bill",
         "status": {
-            "key": "In First House--Out of Committee",
-            "step": "First chamber",
-            "label": "Out of committee",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -95932,10 +96018,10 @@
         "lcIdentifier": "LC0420",
         "type": "house bill",
         "status": {
-            "key": "In First House--Through 2nd Reading",
-            "step": "First chamber",
-            "label": "Passed second reading vote",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -97824,8 +97910,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "SIMPLE",
-            "TWO_THIRDS_LEGISLATURE"
+            "TWO_THIRDS_LEGISLATURE",
+            "SIMPLE"
         ],
         "subjects": [
             "Abortion",
@@ -102536,10 +102622,10 @@
         "lcIdentifier": "LC2919",
         "type": "house bill",
         "status": {
-            "key": "In First House--Through 2nd Reading",
-            "step": "First chamber",
-            "label": "Passed second reading vote",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -113135,10 +113221,10 @@
         "lcIdentifier": "LC0006",
         "type": "house bill",
         "status": {
-            "key": "Transmitted to Second House",
-            "step": "Second chamber",
-            "label": "Transmitted",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
