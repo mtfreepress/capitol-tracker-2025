@@ -110,9 +110,11 @@ lawmakers.forEach(lawmaker => {
     }
 })
 
-// const calendarOutput = new CalendarPage({ actions: actionsFlat, bills, updateTime }).export()
-// bills.forEach(bill => bill.data.isOnCalendar = calendarOutput.billsOnCalendar.includes(bill.data.identifier))
-// const recapOutput = new RecapPage({ actions: actionsFlat, bills, updateTime }).export()
+// So we have the data about the "scheduled floor/final vote"
+const allActions = bills.flatMap(bill => bill.actions);
+const calendarOutput = new CalendarPage({ actions: allActions, bills, updateTime }).export();
+bills.forEach(bill => bill.data.isOnCalendar = calendarOutput.billsOnCalendar.includes(bill.data.identifier))
+const recapOutput = new RecapPage({ actions: actionsFlat, bills, updateTime }).export()
 
 const keyBillCategoryKeys = Array.from(new Set(billAnnotations.map(d => d.category))).filter(d => d !== null).filter(d => d !== undefined)
 const keyBillCategoryList = keyBillCategoryKeys.map(category => {
@@ -181,8 +183,8 @@ writeJson('./src/data/header.json', headerOutput)
 writeJson('./src/data/articles.json', articles)
 writeJson('./src/data/process-annotations.json', processNotes)
 writeJson('./src/data/bill-categories.json', keyBillCategoryList)
-// writeJson('./src/data/calendar.json', calendarOutput)
-// writeJson('./src/data/recap.json', recapOutput)
+writeJson('./src/data/calendar.json', calendarOutput)
+writeJson('./src/data/recap.json', recapOutput)
 // writeJson('./src/data/participation.json', participationPageOutput)
 writeJson('./src/data/contact.json', contactComponentOutput)
 writeJson('./src/data/house.json', housePageOutput)
