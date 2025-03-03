@@ -290,25 +290,25 @@
             "thresholdRequired": "simple",
             "count": {
                 "Y": 20,
-                "N": 0
+                "N": 4
             },
             "gopCount": {
-                "Y": 12,
-                "N": 0,
+                "Y": 0,
+                "N": 4,
                 "A": 0,
                 "E": 0,
                 "O": 0
             },
             "demCount": {
-                "Y": 8,
+                "Y": 0,
                 "N": 0,
                 "A": 0,
                 "E": 0,
                 "O": 0
             },
             "motionPassed": true,
-            "gopSupported": true,
-            "demSupported": true,
+            "gopSupported": false,
+            "demSupported": false,
             "votes": [
                 {
                     "option": "Y",
@@ -469,8 +469,54 @@
                     "party": "R",
                     "locale": "Kalispell",
                     "district": "HD 6"
+                },
+                {
+                    "option": "N",
+                    "name": "Shane Klakken",
+                    "lastName": "Klakken",
+                    "party": "R",
+                    "locale": "Grass Range",
+                    "district": "HD 37"
+                },
+                {
+                    "option": "N",
+                    "name": "Caleb Hinkle",
+                    "lastName": "Hinkle",
+                    "party": "R",
+                    "locale": "Belgrade",
+                    "district": "HD 68"
+                },
+                {
+                    "option": "N",
+                    "name": "Jedediah Hinkle",
+                    "lastName": "Hinkle",
+                    "party": "R",
+                    "locale": "Belgrade",
+                    "district": "HD 67"
+                },
+                {
+                    "option": "N",
+                    "name": "Amy Regier",
+                    "lastName": "Regier",
+                    "party": "R",
+                    "locale": "Kalispell",
+                    "district": "HD 6"
                 }
             ]
         }
+    },
+    {
+        "id": "HB478-0024",
+        "bill": "HB 478",
+        "date": "03/03/2025",
+        "description": "Tabled in Committee",
+        "possession": "House",
+        "committee": "(H) Judiciary",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Tabled in Committee",
+        "committeeHearingTime": null,
+        "vote": null
     }
 ]
