@@ -276,25 +276,25 @@
             "thresholdRequired": "simple",
             "count": {
                 "Y": 14,
-                "N": 0
+                "N": 1
             },
             "gopCount": {
-                "Y": 8,
-                "N": 0,
+                "Y": 0,
+                "N": 1,
                 "A": 0,
                 "E": 0,
                 "O": 0
             },
             "demCount": {
-                "Y": 6,
+                "Y": 0,
                 "N": 0,
                 "A": 0,
                 "E": 0,
                 "O": 0
             },
             "motionPassed": true,
-            "gopSupported": true,
-            "demSupported": true,
+            "gopSupported": false,
+            "demSupported": false,
             "votes": [
                 {
                     "option": "Y",
@@ -407,8 +407,30 @@
                     "party": "R",
                     "locale": "Cascade",
                     "district": "HD 25"
+                },
+                {
+                    "option": "N",
+                    "name": "Lukas Schubert",
+                    "lastName": "Schubert",
+                    "party": "R",
+                    "locale": "Kalispell",
+                    "district": "HD 8"
                 }
             ]
         }
+    },
+    {
+        "id": "HB481-0020",
+        "bill": "HB 481",
+        "date": "03/03/2025",
+        "description": "Tabled in Committee",
+        "possession": "House",
+        "committee": "(H) Natural Resources",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Tabled in Committee",
+        "committeeHearingTime": null,
+        "vote": null
     }
 ]
