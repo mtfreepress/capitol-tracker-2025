@@ -34,6 +34,7 @@ export const fetchLawmakerData = (key) => {
         email: lawmaker.email || null,
         articles: lawmaker.articles || [],
         districtLocale: lawmaker.districtLocale || '', // not sure if this is used
+        lawmakerPageText: lawmaker.lawmakerPageText || null,
         portrait: lawmaker.imageSlug,
     };
 };
