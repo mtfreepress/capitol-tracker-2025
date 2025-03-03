@@ -60,7 +60,6 @@ into format expected by process step
     },
 '''
 
-
 import json
 import pandas as pd
 from pathlib import Path
@@ -87,6 +86,13 @@ output_path = script_dir / 'legislator-roster-2025.json'
 
 lawmakers = pd.read_csv(lawmakers_path)
 annotations = pd.read_csv(annotations_path)
+
+# Convert the 'active' column to proper boolean values
+if 'active' in annotations.columns:
+    # Replace 'false' with actual boolean False
+    annotations.loc[annotations['active'].astype(str).str.lower() == 'false', 'active'] = False
+    annotations.loc[annotations['active'] != False, 'active'] = True
+
 committee_assignments = pd.read_csv(committee_assignments_path)
 session_history = read_json(session_history_path)
 
@@ -114,11 +120,16 @@ lawmakers['address'] = 'TK'
 lawmakers['email'] = lawmakers['Email']
 lawmakers['image_path'] = 'TK'
 
-lawmakers = lawmakers[['name', 'first_name', 'last_name', 'district', 'party', 'locale', 'phone', 'email']].to_dict(orient='records')
+# Include 'active' in the list of columns to keep
+lawmakers = lawmakers[['name', 'first_name', 'last_name', 'district', 'party', 'locale', 'phone', 'email', 'active']].to_dict(orient='records')
 
 for lawmaker in lawmakers:
     committee_key = (lawmaker['last_name'] + ', ' + lawmaker['first_name'])
     lawmaker_committees = committee_assignments[committee_assignments['lawmaker'] == committee_key]
+    
+    # Set default active value for all lawmakers, unless explicitly set to False
+    if 'active' in lawmaker and pd.isna(lawmaker['active']):
+        lawmaker['active'] = True
     
     lawmaker['sessions'] = next(
         filter(lambda l: l['name'] == lawmaker['name'], session_history),
@@ -128,7 +139,6 @@ for lawmaker in lawmakers:
     lawmaker['note'] = ''  # Possible TODO depending on how we do annotations
     lawmaker['source'] = None  # May be able to update with link to official roster page
     lawmaker['image_path'] = f"portraits/2025/{lawmaker['first_name'].lower().replace(' ', '-')}-{lawmaker['last_name'].lower().replace(' ', '-')}.jpg"
-
 
 # Write output
 write_json(lawmakers, output_path)

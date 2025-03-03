@@ -81,6 +81,7 @@ const LawmakerPage = ({ lawmaker }) => {
     portrait,
   } = lawmaker;
 
+  console.log({ lawmakerPageText })
   return (
     <Layout
       relativePath={`/${key}`}
@@ -120,9 +121,16 @@ const LawmakerPage = ({ lawmaker }) => {
         {articles.length > 0 && <a href="#mtfp-coverage">MTFP Coverage</a>}
       </div>
 
-      <ReactMarkdown>{lawmakerPageText}</ReactMarkdown>
+      {/* Display both the custom text and the history component when lawmakerPageText exists */}
+      {lawmakerPageText ? (
+        <>
+          <ReactMarkdown>{lawmakerPageText}</ReactMarkdown>
+          <History name={lastName} history={legislativeHistory} />
+        </>
+      ) : (
+        <History name={lastName} history={legislativeHistory} />
+      )}
 
-      <History name={name} history={legislativeHistory} />
       <h3 id="mtfp-coverage">Montana Free Press coverage</h3>
       {articles.length > 0 ? <LinksList articles={articles} /> : <div>Nothing currently tagged in our archive.</div>}
 
