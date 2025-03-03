@@ -81,7 +81,7 @@ const LawmakerPage = ({ lawmaker }) => {
     portrait,
   } = lawmaker;
 
-  console.log({lawmakerPageText})
+  console.log({ lawmakerPageText })
   return (
     <Layout
       relativePath={`/${key}`}
@@ -121,9 +121,12 @@ const LawmakerPage = ({ lawmaker }) => {
         {articles.length > 0 && <a href="#mtfp-coverage">MTFP Coverage</a>}
       </div>
 
-      {/* Use lawmakerPageText if it exists, otherwise show the History component */}
+      {/* Display both the custom text and the history component when lawmakerPageText exists */}
       {lawmakerPageText ? (
-        <ReactMarkdown>{lawmakerPageText}</ReactMarkdown>
+        <>
+          <ReactMarkdown>{lawmakerPageText}</ReactMarkdown>
+          <History name={name} history={legislativeHistory} />
+        </>
       ) : (
         <History name={name} history={legislativeHistory} />
       )}
