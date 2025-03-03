@@ -125,10 +125,10 @@ const LawmakerPage = ({ lawmaker }) => {
       {lawmakerPageText ? (
         <>
           <ReactMarkdown>{lawmakerPageText}</ReactMarkdown>
-          <History name={name} history={legislativeHistory} />
+          <History name={lastName} history={legislativeHistory} />
         </>
       ) : (
-        <History name={name} history={legislativeHistory} />
+        <History name={lastName} history={legislativeHistory} />
       )}
 
       <h3 id="mtfp-coverage">Montana Free Press coverage</h3>
