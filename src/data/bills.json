@@ -7415,10 +7415,10 @@
         "lcIdentifier": "LC2809",
         "type": "senate bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
-            "step": "First chamber",
-            "label": "In committee",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -7483,7 +7483,7 @@
         "tags": [],
         "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2809?open_tab=sum",
         "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2809?open_tab=bill",
-        "fiscalNoteUrl": null,
+        "fiscalNoteUrl": "/bills/fiscal-note/sb-521",
         "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2809?open_tab=amend",
         "legalNoteUrl": null,
         "vetoMemoUrl": null,
@@ -7667,9 +7667,9 @@
         "lcIdentifier": "LC2192",
         "type": "senate bill",
         "status": {
-            "key": "In First House Committee--Tabled",
-            "step": "First chamber",
-            "label": "Tabled in committee",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
             "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
@@ -7734,7 +7734,7 @@
         "tags": [],
         "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2192?open_tab=sum",
         "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2192?open_tab=bill",
-        "fiscalNoteUrl": null,
+        "fiscalNoteUrl": "/bills/fiscal-note/sb-519",
         "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2192?open_tab=amend",
         "legalNoteUrl": null,
         "vetoMemoUrl": null,
@@ -26415,10 +26415,10 @@
         "lcIdentifier": "LC0931",
         "type": "senate bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
-            "step": "First chamber",
-            "label": "In committee",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -26484,7 +26484,7 @@
         "tags": [],
         "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0931?open_tab=sum",
         "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0931?open_tab=bill",
-        "fiscalNoteUrl": null,
+        "fiscalNoteUrl": "/bills/fiscal-note/sb-318",
         "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0931?open_tab=amend",
         "legalNoteUrl": null,
         "vetoMemoUrl": null,
@@ -38785,8 +38785,25 @@
         "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2812?open_tab=amend",
         "legalNoteUrl": null,
         "vetoMemoUrl": null,
-        "articles": [],
-        "numArticles": 0
+        "articles": [
+            {
+                "title": "Bill to allow community solar projects clears Senate",
+                "category": "2025 Legislature",
+                "subtitle": "",
+                "date": "2025-03-04T10:49:05.000Z",
+                "link": "https://montanafreepress.org/2025/03/04/bill-to-allow-community-solar-projects-clears-senate/",
+                "author": "Amanda Eggert",
+                "imageUrl": "https://montanafreepress.org/2023/02/27/blm-explores-utility-scale-solar-in-montana/untitled-design-315/",
+                "billTags": [
+                    "SB 188"
+                ],
+                "lawmakerTags": [
+                    "Chris Pope"
+                ],
+                "governorTags": []
+            }
+        ],
+        "numArticles": 1
     },
     {
         "key": "sb-187",
@@ -39011,8 +39028,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "TWO_THIRDS_LEGISLATURE",
-            "SIMPLE"
+            "SIMPLE",
+            "TWO_THIRDS_LEGISLATURE"
         ],
         "subjects": [
             "Constitutional Amendment Proposals",
@@ -42076,8 +42093,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "TWO_THIRDS_LEGISLATURE",
-            "SIMPLE"
+            "SIMPLE",
+            "TWO_THIRDS_LEGISLATURE"
         ],
         "subjects": [
             "Constitutional Amendment Proposals",
@@ -48488,8 +48505,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "SIMPLE",
-            "TWO_THIRDS_LEGISLATURE"
+            "TWO_THIRDS_LEGISLATURE",
+            "SIMPLE"
         ],
         "subjects": [
             "Legislature",
@@ -51056,8 +51073,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "SIMPLE",
-            "TWO_THIRDS_LEGISLATURE"
+            "TWO_THIRDS_LEGISLATURE",
+            "SIMPLE"
         ],
         "subjects": [
             "Elections  (see also: Ballot Issues)",
@@ -51128,8 +51145,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "SIMPLE",
-            "TWO_THIRDS_LEGISLATURE"
+            "TWO_THIRDS_LEGISLATURE",
+            "SIMPLE"
         ],
         "subjects": [
             "Elections  (see also: Ballot Issues)",
@@ -53212,8 +53229,8 @@
         "voteMajorityRequired": "3/4 of Each House",
         "voteRequirements": [
             "TWO_THIRDS",
-            "SIMPLE",
-            "THREE_FOURTHS"
+            "THREE_FOURTHS",
+            "SIMPLE"
         ],
         "subjects": [
             "Appropriations, Coal Tax Fund Principal",
@@ -53375,8 +53392,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "SIMPLE",
-            "TWO_THIRDS_LEGISLATURE"
+            "TWO_THIRDS_LEGISLATURE",
+            "SIMPLE"
         ],
         "subjects": [
             "Family Law  (see also: Minors)",
@@ -56047,7 +56064,7 @@
         "tags": [],
         "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1421?open_tab=sum",
         "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1421?open_tab=bill",
-        "fiscalNoteUrl": null,
+        "fiscalNoteUrl": "/bills/fiscal-note/hb-769",
         "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1421?open_tab=amend",
         "legalNoteUrl": null,
         "vetoMemoUrl": null,
@@ -57049,7 +57066,7 @@
         "tags": [],
         "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2288?open_tab=sum",
         "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2288?open_tab=bill",
-        "fiscalNoteUrl": null,
+        "fiscalNoteUrl": "/bills/fiscal-note/hb-758",
         "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2288?open_tab=amend",
         "legalNoteUrl": null,
         "vetoMemoUrl": null,
@@ -64035,7 +64052,7 @@
         "tags": [],
         "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0898?open_tab=sum",
         "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0898?open_tab=bill",
-        "fiscalNoteUrl": null,
+        "fiscalNoteUrl": "/bills/fiscal-note/hb-682",
         "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0898?open_tab=amend",
         "legalNoteUrl": null,
         "vetoMemoUrl": null,
@@ -67225,7 +67242,7 @@
         "tags": [],
         "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1709?open_tab=sum",
         "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1709?open_tab=bill",
-        "fiscalNoteUrl": null,
+        "fiscalNoteUrl": "/bills/fiscal-note/hb-647",
         "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1709?open_tab=amend",
         "legalNoteUrl": null,
         "vetoMemoUrl": null,
@@ -67556,7 +67573,8 @@
             "Corrections",
             "Counties  (see also: Local Government)",
             "Criminal Procedure  (see also: Law Enforcement)",
-            "Health (see also: Health Care Services; Safety)"
+            "Health (see also: Health Care Services; Safety)",
+            "Appropriations  (see also: State Finance)"
         ],
         "tags": [],
         "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2222?open_tab=sum",
@@ -74698,7 +74716,7 @@
         "tags": [],
         "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3601?open_tab=sum",
         "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3601?open_tab=bill",
-        "fiscalNoteUrl": null,
+        "fiscalNoteUrl": "/bills/fiscal-note/hb-567",
         "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3601?open_tab=amend",
         "legalNoteUrl": null,
         "vetoMemoUrl": null,
@@ -78278,8 +78296,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "SIMPLE",
-            "TWO_THIRDS_LEGISLATURE"
+            "TWO_THIRDS_LEGISLATURE",
+            "SIMPLE"
         ],
         "subjects": [
             "Taxation--Individual Income",
@@ -80226,8 +80244,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "SIMPLE",
-            "TWO_THIRDS_LEGISLATURE"
+            "TWO_THIRDS_LEGISLATURE",
+            "SIMPLE"
         ],
         "subjects": [
             "Constitutional Amendment Proposals",
@@ -80302,8 +80320,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "SIMPLE",
-            "TWO_THIRDS_LEGISLATURE"
+            "TWO_THIRDS_LEGISLATURE",
+            "SIMPLE"
         ],
         "subjects": [
             "Constitutional Amendment Proposals",
@@ -84573,8 +84591,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "SIMPLE",
-            "TWO_THIRDS_LEGISLATURE"
+            "TWO_THIRDS_LEGISLATURE",
+            "SIMPLE"
         ],
         "subjects": [
             "Constitutional Amendment Proposals",
@@ -89721,9 +89739,9 @@
         "lcIdentifier": "LC0892",
         "type": "house bill",
         "status": {
-            "key": "In Second House--Out of Committee",
-            "step": "Second chamber",
-            "label": "On floor",
+            "key": "In First House Committee--Nontabled",
+            "step": "First chamber",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -89737,8 +89755,8 @@
             {
                 "step": "first committee",
                 "status": "passed",
-                "statusLabel": "Blasted to floor",
-                "statusDate": "03/03/2025"
+                "statusLabel": "Advanced",
+                "statusDate": "03/04/2025"
             },
             {
                 "step": "first chamber",
@@ -98049,8 +98067,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "SIMPLE",
-            "TWO_THIRDS_LEGISLATURE"
+            "TWO_THIRDS_LEGISLATURE",
+            "SIMPLE"
         ],
         "subjects": [
             "Abortion",
