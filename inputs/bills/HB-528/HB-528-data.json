@@ -21,21 +21,6 @@
     "primarySponsor": "Ed Byrne",
     "subjects": [
         {
-            "subject": "Taxation--Individual Income",
-            "fiscalCode": "",
-            "voteReq": "SIMPLE"
-        },
-        {
-            "subject": "Constitutional Amendment Proposals",
-            "fiscalCode": "",
-            "voteReq": "TWO_THIRDS_LEGISLATURE"
-        },
-        {
-            "subject": "Revenue, State",
-            "fiscalCode": "Revenue",
-            "voteReq": "SIMPLE"
-        },
-        {
             "subject": "Agriculture  (see also: Livestock; Taxation--Agriculture/Livestock)",
             "fiscalCode": "",
             "voteReq": "SIMPLE"
@@ -46,13 +31,18 @@
             "voteReq": "SIMPLE"
         },
         {
-            "subject": "Taxation--Property",
-            "fiscalCode": "",
+            "subject": "Revenue, Local",
+            "fiscalCode": "Revenue",
             "voteReq": "SIMPLE"
         },
         {
-            "subject": "Revenue, Local",
+            "subject": "Revenue, State",
             "fiscalCode": "Revenue",
+            "voteReq": "SIMPLE"
+        },
+        {
+            "subject": "Taxation--Property",
+            "fiscalCode": "",
             "voteReq": "SIMPLE"
         },
         {
@@ -62,8 +52,7 @@
         }
     ],
     "voteRequirements": [
-        "SIMPLE",
-        "TWO_THIRDS_LEGISLATURE"
+        "SIMPLE"
     ],
     "deadlineCategory": "undefined",
     "transmittalDeadline": "undefined",

@@ -205,26 +205,26 @@
             "motion": "Tabled in Committee",
             "thresholdRequired": "simple",
             "count": {
-                "Y": 18,
-                "N": 0
+                "Y": 19,
+                "N": 1
             },
             "gopCount": {
-                "Y": 10,
+                "Y": 1,
                 "N": 0,
-                "A": 2,
+                "A": 1,
                 "E": 0,
                 "O": 0
             },
             "demCount": {
-                "Y": 8,
-                "N": 0,
+                "Y": 0,
+                "N": 1,
                 "A": 0,
                 "E": 0,
                 "O": 0
             },
             "motionPassed": true,
             "gopSupported": true,
-            "demSupported": true,
+            "demSupported": false,
             "votes": [
                 {
                     "option": "Y",
@@ -385,8 +385,46 @@
                     "party": "R",
                     "locale": "Great Falls",
                     "district": "HD 21"
+                },
+                {
+                    "option": "A",
+                    "name": "Courtenay Sprunger",
+                    "lastName": "Sprunger",
+                    "party": "R",
+                    "locale": "Kalispell",
+                    "district": "HD 7"
+                },
+                {
+                    "option": "N",
+                    "name": "Joshua Seckinger",
+                    "lastName": "Seckinger",
+                    "party": "D",
+                    "locale": "Bozeman",
+                    "district": "HD 62"
+                },
+                {
+                    "option": "Y",
+                    "name": "Brandon Ler",
+                    "lastName": "Ler",
+                    "party": "R",
+                    "locale": "Savage",
+                    "district": "HD 33"
                 }
             ]
         }
+    },
+    {
+        "id": "HB747-0015",
+        "bill": "HB 747",
+        "date": "03/04/2025",
+        "description": "Tabled in Committee",
+        "possession": "House",
+        "committee": "(H) Business and Labor",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Tabled in Committee",
+        "committeeHearingTime": null,
+        "vote": null
     }
 ]
