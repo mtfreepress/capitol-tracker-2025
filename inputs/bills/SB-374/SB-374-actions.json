@@ -366,33 +366,33 @@
             "bill": "SB 374",
             "date": "03/05/2025",
             "type": "committee",
-            "seqNumber": "S816",
+            "seqNumber": "S815",
             "voteChamber": "senate",
             "voteUrl": null,
             "session": "2",
             "motion": "2nd Reading Pass Motion Failed",
             "thresholdRequired": "simple",
             "count": {
-                "Y": 50,
-                "N": 48
+                "Y": 24,
+                "N": 26
             },
             "gopCount": {
-                "Y": 8,
-                "N": 22,
+                "Y": 24,
+                "N": 8,
                 "A": 0,
                 "E": 0,
                 "O": 0
             },
             "demCount": {
-                "Y": 18,
-                "N": 0,
+                "Y": 0,
+                "N": 18,
                 "A": 0,
                 "E": 0,
                 "O": 0
             },
-            "motionPassed": true,
-            "gopSupported": false,
-            "demSupported": true,
+            "motionPassed": false,
+            "gopSupported": true,
+            "demSupported": false,
             "votes": [
                 {
                     "option": "Y",
@@ -793,7 +793,55 @@
                     "party": "D",
                     "locale": "Arlee",
                     "district": "SD 46"
-                },
+                }
+            ]
+        }
+    },
+    {
+        "id": "SB374-0020",
+        "bill": "SB 374",
+        "date": "03/05/2025",
+        "description": "2nd Reading Indefinitely Postponed",
+        "possession": "Senate",
+        "committee": "undefined",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "2nd Reading Indefinitely Postponed",
+        "committeeHearingTime": null,
+        "vote": {
+            "action": "SB374-0020",
+            "bill": "SB 374",
+            "date": "03/05/2025",
+            "type": "committee",
+            "seqNumber": "S816",
+            "voteChamber": "senate",
+            "voteUrl": null,
+            "session": "2",
+            "motion": "2nd Reading Indefinitely Postponed",
+            "thresholdRequired": "simple",
+            "count": {
+                "Y": 28,
+                "N": 22
+            },
+            "gopCount": {
+                "Y": 10,
+                "N": 22,
+                "A": 0,
+                "E": 0,
+                "O": 0
+            },
+            "demCount": {
+                "Y": 18,
+                "N": 0,
+                "A": 0,
+                "E": 0,
+                "O": 0
+            },
+            "motionPassed": true,
+            "gopSupported": false,
+            "demSupported": true,
+            "votes": [
                 {
                     "option": "N",
                     "name": "Tom McGillvray",
@@ -1028,6 +1076,14 @@
                 },
                 {
                     "option": "Y",
+                    "name": "Bruce \"Butch\" Gillespie",
+                    "lastName": "Gillespie",
+                    "party": "R",
+                    "locale": "Unknown",
+                    "district": "SD 9"
+                },
+                {
+                    "option": "Y",
                     "name": "Pat Flowers",
                     "lastName": "Flowers",
                     "party": "D",
@@ -1073,6 +1129,14 @@
                     "party": "R",
                     "locale": "Hamilton",
                     "district": "SD 44"
+                },
+                {
+                    "option": "Y",
+                    "name": "Wendy McKamey",
+                    "lastName": "McKamey",
+                    "party": "R",
+                    "locale": "Great Falls",
+                    "district": "SD 12"
                 },
                 {
                     "option": "Y",
