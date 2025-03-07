@@ -1613,20 +1613,6 @@
         "id": "HB500-0028",
         "bill": "HB 500",
         "date": "03/05/2025",
-        "description": "Scheduled for 3rd Reading",
-        "possession": "House",
-        "committee": "undefined",
-        "actionUrl": null,
-        "recordings": [],
-        "transcriptUrl": null,
-        "key": "Scheduled for 3rd Reading",
-        "committeeHearingTime": null,
-        "vote": null
-    },
-    {
-        "id": "HB500-0029",
-        "bill": "HB 500",
-        "date": "03/05/2025",
         "description": "3rd Reading Failed",
         "possession": "House",
         "committee": "undefined",
@@ -1636,7 +1622,7 @@
         "key": "3rd Reading Failed",
         "committeeHearingTime": null,
         "vote": {
-            "action": "HB500-0029",
+            "action": "HB500-0028",
             "bill": "HB 500",
             "date": "03/05/2025",
             "type": "committee",
@@ -2472,7 +2458,7 @@
         }
     },
     {
-        "id": "HB500-0030",
+        "id": "HB500-0029",
         "bill": "HB 500",
         "date": "03/05/2025",
         "description": "Reconsidered Previous Action; Remains in 3rd Reading Process",
@@ -2484,7 +2470,7 @@
         "key": "Reconsidered Previous Action; Remains in 3rd Reading Process",
         "committeeHearingTime": null,
         "vote": {
-            "action": "HB500-0030",
+            "action": "HB500-0029",
             "bill": "HB 500",
             "date": "03/05/2025",
             "type": "committee",
@@ -3318,5 +3304,19 @@
                 }
             ]
         }
+    },
+    {
+        "id": "HB500-0030",
+        "bill": "HB 500",
+        "date": "03/07/2025",
+        "description": "Scheduled for 3rd Reading",
+        "possession": "House",
+        "committee": "undefined",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Scheduled for 3rd Reading",
+        "committeeHearingTime": null,
+        "vote": null
     }
 ]
