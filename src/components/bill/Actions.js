@@ -140,6 +140,16 @@ const Action = (action, showVotes, annotations) => {
 
   const displayDate = committeeHearingTime ? committeeHearingTime : date;
 
+  // format committee name for display
+  let committeeDisplay = null;
+  if (committee && (description === "Hearing" || description.startsWith("Committee Executive Action"))) {
+    // extract the chamber and clean up the committee name
+    const chamberPrefix = committee.includes("(H)") ? "House" : committee.includes("(S)") ? "Senate" : "";
+    // remove the parenthetical prefix from the committee name
+    const cleanCommitteeName = committee.replace(/\([HS]\)\s*/, "").trim();
+    committeeDisplay = `${chamberPrefix} ${cleanCommitteeName}`;
+  }
+
   return (
     <tr key={id} css={isHighlight ? highlightRow : null}>
       <td css={dateCss}>
@@ -150,16 +160,11 @@ const Action = (action, showVotes, annotations) => {
         <div css={actionWidth}>
           <div css={descriptionCss}>
             <div>{description}</div>
-            <div>
-              {committee && (
-                <>
-                  {/* TODO: This is broken restore when we fix committees */}
-                  {/* 👥 <em>
-                    <Link href={`/committees/${committeeUrl(committee)}`}>{committee}</Link>
-                  </em> */}
-                </>
-              )}
-            </div>
+            {committeeDisplay && (
+              <div>
+                👥 <em>{committeeDisplay}</em>
+              </div>
+            )}
           </div>
 
           {vote && thresholdRequired !== 'simple' ? (
@@ -200,7 +205,6 @@ const Action = (action, showVotes, annotations) => {
                 return <span key={index}>{annot.label(action)}</span>;
               }
             })}
-
         </div>
       </td>
     </tr>
