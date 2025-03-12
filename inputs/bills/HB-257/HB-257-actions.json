@@ -279,22 +279,22 @@
                 "N": 1
             },
             "gopCount": {
-                "Y": 8,
+                "Y": 0,
                 "N": 0,
                 "A": 0,
                 "E": 0,
                 "O": 0
             },
             "demCount": {
-                "Y": 5,
-                "N": 1,
+                "Y": 0,
+                "N": 0,
                 "A": 0,
                 "E": 0,
                 "O": 0
             },
             "motionPassed": true,
-            "gopSupported": true,
-            "demSupported": true,
+            "gopSupported": false,
+            "demSupported": false,
             "votes": [
                 {
                     "option": "Y",
@@ -2189,6 +2189,20 @@
         "transcriptUrl": null,
         "key": "Referred to Committee",
         "committeeHearingTime": null,
+        "vote": null
+    },
+    {
+        "id": "HB257-0028",
+        "bill": "HB 257",
+        "date": "03/12/2025",
+        "description": "Hearing",
+        "possession": "Senate",
+        "committee": "(S) Energy, Technology & Federal Relations",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Hearing",
+        "committeeHearingTime": "03/18/2025",
         "vote": null
     }
 ]
