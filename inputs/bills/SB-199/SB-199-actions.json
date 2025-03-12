@@ -275,25 +275,25 @@
             "motion": "Committee Executive Action--Bill Passed",
             "thresholdRequired": "simple",
             "count": {
-                "Y": 11,
+                "Y": 6,
                 "N": 5
             },
             "gopCount": {
-                "Y": 0,
-                "N": 0,
+                "Y": 6,
+                "N": 1,
                 "A": 0,
                 "E": 0,
                 "O": 0
             },
             "demCount": {
                 "Y": 0,
-                "N": 0,
+                "N": 4,
                 "A": 0,
                 "E": 0,
                 "O": 0
             },
             "motionPassed": true,
-            "gopSupported": false,
+            "gopSupported": true,
             "demSupported": false,
             "votes": [
                 {
@@ -313,7 +313,7 @@
                     "district": "SD 3"
                 },
                 {
-                    "option": "Y",
+                    "option": "N",
                     "name": "Emma Kerr-Carpenter",
                     "lastName": "Kerr-Carpenter",
                     "party": "D",
@@ -337,7 +337,7 @@
                     "district": "SD 24"
                 },
                 {
-                    "option": "Y",
+                    "option": "N",
                     "name": "Jonathan Windy Boy",
                     "lastName": "Windy Boy",
                     "party": "D",
@@ -353,7 +353,7 @@
                     "district": "SD 11"
                 },
                 {
-                    "option": "Y",
+                    "option": "N",
                     "name": "Tom McGillvray",
                     "lastName": "McGillvray",
                     "party": "R",
@@ -361,7 +361,7 @@
                     "district": "SD 26"
                 },
                 {
-                    "option": "Y",
+                    "option": "N",
                     "name": "Cora Neumann",
                     "lastName": "Neumann",
                     "party": "D",
@@ -369,7 +369,7 @@
                     "district": "SD 30"
                 },
                 {
-                    "option": "Y",
+                    "option": "N",
                     "name": "Laura Smith",
                     "lastName": "Smith",
                     "party": "D",
@@ -383,46 +383,6 @@
                     "party": "R",
                     "locale": "Billings",
                     "district": "SD 25"
-                },
-                {
-                    "option": "N",
-                    "name": "Emma Kerr-Carpenter",
-                    "lastName": "Kerr-Carpenter",
-                    "party": "D",
-                    "locale": "Billings",
-                    "district": "SD 23"
-                },
-                {
-                    "option": "N",
-                    "name": "Jonathan Windy Boy",
-                    "lastName": "Windy Boy",
-                    "party": "D",
-                    "locale": "Box Elder",
-                    "district": "SD 16"
-                },
-                {
-                    "option": "N",
-                    "name": "Tom McGillvray",
-                    "lastName": "McGillvray",
-                    "party": "R",
-                    "locale": "Billings",
-                    "district": "SD 26"
-                },
-                {
-                    "option": "N",
-                    "name": "Cora Neumann",
-                    "lastName": "Neumann",
-                    "party": "D",
-                    "locale": "Helena",
-                    "district": "SD 30"
-                },
-                {
-                    "option": "N",
-                    "name": "Laura Smith",
-                    "lastName": "Smith",
-                    "party": "D",
-                    "locale": "Helena",
-                    "district": "SD 40"
                 }
             ]
         }
