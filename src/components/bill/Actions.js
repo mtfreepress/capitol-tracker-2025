@@ -139,10 +139,10 @@ const Action = (action, showVotes, annotations) => {
   const { thresholdRequired } = vote || {};
 
   const displayDate = committeeHearingTime ? committeeHearingTime : date;
-  
+
   // format committee name for display
   let committeeDisplay = null;
-  if (committee && description === "Hearing") {
+  if (committee && (description === "Hearing" || description.startsWith("Committee Executive Action"))) {
     // extract the chamber and clean up the committee name
     const chamberPrefix = committee.includes("(H)") ? "House" : committee.includes("(S)") ? "Senate" : "";
     // remove the parenthetical prefix from the committee name
