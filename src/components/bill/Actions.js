@@ -140,12 +140,12 @@ const Action = (action, showVotes, annotations) => {
 
   const displayDate = committeeHearingTime ? committeeHearingTime : date;
   
-  // Format committee name for display
+  // format committee name for display
   let committeeDisplay = null;
   if (committee && description === "Hearing") {
-    // Extract the chamber and clean up the committee name
+    // extract the chamber and clean up the committee name
     const chamberPrefix = committee.includes("(H)") ? "House" : committee.includes("(S)") ? "Senate" : "";
-    // Remove the parenthetical prefix from the committee name
+    // remove the parenthetical prefix from the committee name
     const cleanCommitteeName = committee.replace(/\([HS]\)\s*/, "").trim();
     committeeDisplay = `${chamberPrefix} ${cleanCommitteeName}`;
   }
