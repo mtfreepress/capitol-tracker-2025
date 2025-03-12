@@ -74,6 +74,7 @@ const highlightRow = css`
 `;
 
 const BillActions = ({ actions, lawsUrl, vetoMemoUrl }) => {
+  console.log(actions)
   const [showMinorActions, setShowMinorActions] = useState(false);
   const [showVotes, setShowVotes] = useState(true);
 
@@ -139,6 +140,16 @@ const Action = (action, showVotes, annotations) => {
   const { thresholdRequired } = vote || {};
 
   const displayDate = committeeHearingTime ? committeeHearingTime : date;
+  
+  // Format committee name for display
+  let committeeDisplay = null;
+  if (committee && description === "Hearing") {
+    // Extract the chamber and clean up the committee name
+    const chamberPrefix = committee.includes("(H)") ? "House" : committee.includes("(S)") ? "Senate" : "";
+    // Remove the parenthetical prefix from the committee name
+    const cleanCommitteeName = committee.replace(/\([HS]\)\s*/, "").trim();
+    committeeDisplay = `${chamberPrefix} ${cleanCommitteeName}`;
+  }
 
   return (
     <tr key={id} css={isHighlight ? highlightRow : null}>
@@ -150,16 +161,11 @@ const Action = (action, showVotes, annotations) => {
         <div css={actionWidth}>
           <div css={descriptionCss}>
             <div>{description}</div>
-            <div>
-              {committee && (
-                <>
-                  {/* TODO: This is broken restore when we fix committees */}
-                  {/* 👥 <em>
-                    <Link href={`/committees/${committeeUrl(committee)}`}>{committee}</Link>
-                  </em> */}
-                </>
-              )}
-            </div>
+            {committeeDisplay && (
+              <div>
+                👥 <em>{committeeDisplay}</em>
+              </div>
+            )}
           </div>
 
           {vote && thresholdRequired !== 'simple' ? (
@@ -200,7 +206,6 @@ const Action = (action, showVotes, annotations) => {
                 return <span key={index}>{annot.label(action)}</span>;
               }
             })}
-
         </div>
       </td>
     </tr>
