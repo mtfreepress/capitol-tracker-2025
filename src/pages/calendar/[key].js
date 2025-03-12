@@ -118,7 +118,27 @@ export default function CalendarDay({ dateData, onCalendarBills, committees, isI
             pageTitle={`Legislative Calendar for ${day} | 2025 MTFP Capitol Tracker`}
             pageDescription={`Committee hearings and legislative activity for ${day}`}
         >
-            <h1>Legislative Calendar for {day}</h1>
+            <h1>Calendar — {day}</h1>
+            <div css={css`
+                background-color: var(--gray1);
+                padding: 0.75em;
+                border-radius: 4px;
+                margin-bottom: 1em;
+                text-align: center;
+                font-weight: 500;
+                `}>
+                {dateData.hearings.length > 0 || dateData.floorDebates.length > 0 || dateData.finalVotes.length > 0 ? (
+                    <>
+                    <span css={css`color: var(--text);`}>
+                        {dateData.hearings.length} {dateData.hearings.length === 1 ? 'hearing' : 'hearings'}{' '}
+                        • {dateData.floorDebates.length} floor {dateData.floorDebates.length === 1 ? 'debate' : 'debates'}{' '}
+                        • {dateData.finalVotes.length} final {dateData.finalVotes.length === 1 ? 'vote' : 'votes'}
+                    </span>
+                    </>
+                ) : (
+                    <span>No scheduled legislative activity</span>
+                )}
+            </div>
 
             <CalendarNavigator
                 dates={calendar.dates}

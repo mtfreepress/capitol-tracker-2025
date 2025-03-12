@@ -49,7 +49,7 @@ const calendarStyle = css`
         
         button {
           width: 100%;
-          text-align: left;
+          text-align: center;
           padding: 0.75em 1em;
           border: none;
           background: none;
@@ -68,6 +68,11 @@ const calendarStyle = css`
       cursor: pointer;
       font-size: 1.2em;
       padding: 0.5em;
+      transition: color 0.2s ease;
+      
+      &:hover {
+        color: #ce5a00;
+      }
       
       &:disabled {
         opacity: 0.5;
@@ -83,7 +88,7 @@ const calendarStyle = css`
     border-bottom: 1px solid var(--gray2);
   }
 
-  .calendar-day {
+ .calendar-day {
     aspect-ratio: 1;
     display: flex;
     align-items: center;
@@ -94,13 +99,22 @@ const calendarStyle = css`
 
     &.active {
       border-color: var(--gray2);
+      padding: 0;
       
       a {
         text-decoration: none;
         font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        border-radius: 3px; 
+        transition: all 0.2s ease;
         
         &:hover {
-          text-decoration: underline;
+          background-color: var(--tan2);
+          color: var(--link);
         }
       }
     }
@@ -110,6 +124,7 @@ const calendarStyle = css`
     }
   }
 `;
+
 
 const CalendarNavigator = ({ dates, currentPageDate }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -124,6 +139,60 @@ const CalendarNavigator = ({ dates, currentPageDate }) => {
     if (yearA !== yearB) return yearA - yearB;
     return monthA - monthB;
   });
+
+  const formatDateKey = (date) => {
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+    const year = date.getFullYear();
+    return `${month}-${day}-${year}`;
+  };
+  
+  const getValidNavigationDate = () => {
+    if (currentPageDate) return currentPageDate;
+    const today = new Date();
+    return formatDateKey(today);
+  };
+  
+  
+  const getNavigationDays = (allDates, currentDate) => {
+    if (!currentDate) return { prev: null, next: null };
+  
+    const activeDates = allDates.filter(d => 
+      d.hearings.length > 0 || d.floorDebates.length > 0 || d.finalVotes.length > 0
+    );
+    
+    if (activeDates.length === 0) return { prev: null, next: null };
+
+    const sortedDates = [...activeDates].sort((a, b) => {
+      const dateA = new Date(a.date);
+      const dateB = new Date(b.date);
+      return dateA - dateB;
+    });
+    
+    const currentIndex = sortedDates.findIndex(d => d.key === currentDate);
+    
+    if (currentIndex !== -1) {
+      const prev = currentIndex > 0 ? sortedDates[currentIndex - 1].key : null;
+      const next = currentIndex < sortedDates.length - 1 ? sortedDates[currentIndex + 1].key : null;
+      return { prev, next };
+    } 
+    else {
+      const currentDateObj = new Date(currentDate.replace(/-/g, '/'));
+      const prevDate = sortedDates.reduce((closest, current) => {
+        const date = new Date(current.date);
+        if (date < currentDateObj && (!closest || date > new Date(closest.date))) {
+          return current;
+        }
+        return closest;
+      }, null);
+      const nextDate = sortedDates.find(d => new Date(d.date) > currentDateObj);
+      
+      return {
+        prev: prevDate?.key || null,
+        next: nextDate?.key || null
+      };
+    }
+  };
 
   const getInitialMonth = () => {
     // If we have a current page date, use its month
@@ -240,6 +309,10 @@ const CalendarNavigator = ({ dates, currentPageDate }) => {
     border-radius: 4px;
   `;
 
+  const navigationDate = getValidNavigationDate();
+  console.log(navigationDate)
+  const { prev, next } = getNavigationDays(dates, navigationDate);
+
   return (
     <div css={calendarStyle}>
       <div className="calendar-header">
@@ -308,6 +381,102 @@ const CalendarNavigator = ({ dates, currentPageDate }) => {
             )}
           </div>
         ))}
+      </div>
+      <div css={css`
+        display: flex;
+        justify-content: space-between;
+        margin-top: 0.75em;
+        gap: 0.5em;
+      `}>
+        {prev ? (
+          <Link href={`/calendar/${prev}`} passHref>
+            <button
+              className="nav-day-button"
+              title="Go to Previous Legislative Day"
+              css={css`
+                background-color: var(--gray1);
+                border: 1px solid transparent;
+                border-radius: 4px;
+                padding: 0.2em 0.6em;
+                font-size: 0.85em;
+                font-weight: 600;
+                cursor: pointer;
+                transition: all 0.2s ease;
+                box-sizing: border-box;
+                min-width: 90px;
+                text-align: center;
+                
+                &:hover {
+                  background-color: var(--gray2);
+                  color: var(--link);
+                  border: 1px solid transparent;
+                }
+              `}
+            >
+              ← Prev
+            </button>
+          </Link>
+        ) : (
+          <div css={css`min-width: 90px;`}></div>
+        )}
+
+        <Link href="/calendar" passHref>
+          <button
+            className="today-button"
+            title="Go to Today"
+            css={css`
+              background-color: var(--tan2);
+              border: 1px solid transparent;
+              border-radius: 4px;
+              padding: 0.2em 0.6em;
+              font-size: 0.85em;
+              font-weight: 600;
+              cursor: pointer;
+              transition: all 0.2s ease;
+              box-sizing: border-box;
+              
+              &:hover {
+                background-color: var(--tan3);
+                color: var(--link);
+                border: 1px solid transparent;
+              }
+            `}
+          >
+            Back to today
+          </button>
+        </Link>
+
+        {next ? (
+          <Link href={`/calendar/${next}`} passHref>
+            <button
+              className="nav-day-button"
+              title="Go to Next Legislative Day"
+              css={css`
+                background-color: var(--gray1);
+                border: 1px solid transparent;
+                border-radius: 4px;
+                padding: 0.2em 0.6em;
+                font-size: 0.85em;
+                font-weight: 600;
+                cursor: pointer;
+                transition: all 0.2s ease;
+                box-sizing: border-box;
+                min-width: 90px;
+                text-align: center;
+                
+                &:hover {
+                  background-color: var(--gray2);
+                  color: var(--link);
+                  border: 1px solid transparent;
+                }
+              `}
+            >
+              Next →
+            </button>
+          </Link>
+        ) : (
+          <div css={css`min-width: 90px;`}></div>
+        )}
       </div>
     </div>
   );
