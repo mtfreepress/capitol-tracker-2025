@@ -74,7 +74,6 @@ const highlightRow = css`
 `;
 
 const BillActions = ({ actions, lawsUrl, vetoMemoUrl }) => {
-  console.log(actions)
   const [showMinorActions, setShowMinorActions] = useState(false);
   const [showVotes, setShowVotes] = useState(true);
 
