@@ -40,7 +40,6 @@ const Committee = ({ committee, onCalendarBills, hearings }) => {
 
 export default function CalendarDay({ dateData, onCalendarBills, committees, isInvalidDate, dateStr }) {
     const router = useRouter();
-    console.log(dateData)
 
     // For invalid dates (no legislative activity), show a custom message
     if (isInvalidDate || (dateData.hearings.length === 0 && dateData.floorDebates.length === 0 && dateData.finalVotes.length === 0)) {

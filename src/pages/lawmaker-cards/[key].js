@@ -28,7 +28,6 @@ export async function getStaticProps({ params }) {
 }
 
 const Lawmaker = ({ lawmaker }) => {
-    console.log(lawmaker)
     if (!lawmaker) {
         return <div>Lawmaker not found</div>;
     }

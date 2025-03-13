@@ -130,12 +130,9 @@ const CalendarNavigator = ({ dates, currentPageDate }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const isTodayPage = () => {
-    // If currentPageDate is null, we're likely on the default calendar page (today)
     if (currentPageDate === null) {
       return true;
     }
-    
-    // Otherwise, compare the formatted date to today
     const today = new Date();
     const todayKey = formatDateKey(today);
     return currentPageDate === todayKey;
@@ -322,7 +319,6 @@ const CalendarNavigator = ({ dates, currentPageDate }) => {
   `;
 
   const navigationDate = getValidNavigationDate();
-  console.log(navigationDate)
   const { prev, next } = getNavigationDays(dates, navigationDate);
 
   return (
