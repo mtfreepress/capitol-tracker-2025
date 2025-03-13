@@ -18,7 +18,6 @@ class LawmakerLookup extends Component {
 
     searchByName(input) {
         const { lawmakers } = this.props;
-        console.log({lawmakers});
         if (input.length < 3) {
             this.setState({
                 lawmakersFound: [],
