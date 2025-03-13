@@ -59,7 +59,7 @@ export default function CalendarDay({ dateData, onCalendarBills, committees, isI
                 pageDescription={`Montana legislative calendar for ${formattedDate}`}
             >
                 <h1>Legislative Calendar</h1>
-                
+
                 <div css={css`
                   background: var(--gray2);
                   padding: 1em;
@@ -70,7 +70,7 @@ export default function CalendarDay({ dateData, onCalendarBills, committees, isI
                     <h2>No Legislative Events on {formattedDate}</h2>
                     <p>There are no scheduled legislative events for this date. Please select a date from the calendar below.</p>
                 </div>
-                
+
                 <CalendarNavigator
                     dates={calendar.dates}
                     currentPageDate={null}
@@ -129,11 +129,11 @@ export default function CalendarDay({ dateData, onCalendarBills, committees, isI
                 `}>
                 {dateData.hearings.length > 0 || dateData.floorDebates.length > 0 || dateData.finalVotes.length > 0 ? (
                     <>
-                    <span css={css`color: var(--text);`}>
-                        {dateData.hearings.length} {dateData.hearings.length === 1 ? 'hearing' : 'hearings'}{' '}
-                        • {dateData.floorDebates.length} floor {dateData.floorDebates.length === 1 ? 'debate' : 'debates'}{' '}
-                        • {dateData.finalVotes.length} final {dateData.finalVotes.length === 1 ? 'vote' : 'votes'}
-                    </span>
+                        <span css={css`color: var(--text);`}>
+                            {dateData.hearings.length} {dateData.hearings.length === 1 ? 'hearing' : 'hearings'}{' '}
+                            • {dateData.floorDebates.length} floor {dateData.floorDebates.length === 1 ? 'debate' : 'debates'}{' '}
+                            • {dateData.finalVotes.length} final {dateData.finalVotes.length === 1 ? 'vote' : 'votes'}
+                        </span>
                     </>
                 ) : (
                     <span>No scheduled legislative activity</span>
@@ -190,15 +190,61 @@ export default function CalendarDay({ dateData, onCalendarBills, committees, isI
                         <div className="note">
                             Debates are followed by Second Reading votes.
                         </div>
-                        <BillTable
-                            bills={onCalendarBills.filter(bill =>
-                                dateData.floorDebates
-                                    .map(d => d.data.bill)
-                                    .includes(bill.identifier)
+
+                        {/* House Floor Debates */}
+                        {dateData.floorDebates.some(debate => debate.data.billHolder?.toLowerCase() === "house") && (
+                            <div css={css`margin-bottom: 1.5em;`}>
+                                <h4>🏠 House</h4>
+                                <BillTable
+                                    bills={onCalendarBills.filter(bill =>
+                                        dateData.floorDebates
+                                            .filter(debate => debate.data.billHolder?.toLowerCase() === "house")
+                                            .map(d => d.data.bill)
+                                            .includes(bill.identifier)
+                                    )}
+                                    displayLimit={10}
+                                    suppressCount={true}
+                                />
+                            </div>
+                        )}
+
+                        {/* Senate Floor Debates */}
+                        {dateData.floorDebates.some(debate => debate.data.billHolder?.toLowerCase() === "senate") && (
+                            <div>
+                                <h4>🏛 Senate</h4>
+                                <BillTable
+                                    bills={onCalendarBills.filter(bill =>
+                                        dateData.floorDebates
+                                            .filter(debate => debate.data.billHolder?.toLowerCase() === "senate")
+                                            .map(d => d.data.bill)
+                                            .includes(bill.identifier)
+                                    )}
+                                    displayLimit={10}
+                                    suppressCount={true}
+                                />
+                            </div>
+                        )}
+
+                        {/* Handle debates without a specified chamber */}
+                        {dateData.floorDebates.some(debate => !debate.data.billHolder ||
+                            (debate.data.billHolder.toLowerCase() !== "house" &&
+                                debate.data.billHolder.toLowerCase() !== "senate")) && (
+                                <div css={css`margin-top: 1.5em;`}>
+                                    <h4>Other Floor Debates</h4>
+                                    <BillTable
+                                        bills={onCalendarBills.filter(bill =>
+                                            dateData.floorDebates
+                                                .filter(debate => !debate.data.billHolder ||
+                                                    (debate.data.billHolder.toLowerCase() !== "house" &&
+                                                        debate.data.billHolder.toLowerCase() !== "senate"))
+                                                .map(d => d.data.bill)
+                                                .includes(bill.identifier)
+                                        )}
+                                        displayLimit={10}
+                                        suppressCount={true}
+                                    />
+                                </div>
                             )}
-                            displayLimit={10}
-                            suppressCount={true}
-                        />
                     </>
                 )}
             </section>
@@ -212,15 +258,61 @@ export default function CalendarDay({ dateData, onCalendarBills, committees, isI
                         <div className="note">
                             Final votes determine if a bill advances to the next chamber or to the governor.
                         </div>
-                        <BillTable
-                            bills={onCalendarBills.filter(bill =>
-                                dateData.finalVotes
-                                    .map(d => d.data.bill)
-                                    .includes(bill.identifier)
+
+                        {/* House Final Votes */}
+                        {dateData.finalVotes.some(vote => vote.data.billHolder?.toLowerCase() === "house") && (
+                            <div css={css`margin-bottom: 1.5em;`}>
+                                <h4>🏠 House</h4>
+                                <BillTable
+                                    bills={onCalendarBills.filter(bill =>
+                                        dateData.finalVotes
+                                            .filter(vote => vote.data.billHolder?.toLowerCase() === "house")
+                                            .map(d => d.data.bill)
+                                            .includes(bill.identifier)
+                                    )}
+                                    displayLimit={10}
+                                    suppressCount={true}
+                                />
+                            </div>
+                        )}
+
+                        {/* Senate Final Votes */}
+                        {dateData.finalVotes.some(vote => vote.data.billHolder?.toLowerCase() === "senate") && (
+                            <div>
+                                <h4>🏛 Senate</h4>
+                                <BillTable
+                                    bills={onCalendarBills.filter(bill =>
+                                        dateData.finalVotes
+                                            .filter(vote => vote.data.billHolder?.toLowerCase() === "senate")
+                                            .map(d => d.data.bill)
+                                            .includes(bill.identifier)
+                                    )}
+                                    displayLimit={10}
+                                    suppressCount={true}
+                                />
+                            </div>
+                        )}
+
+                        {/* Handle votes without a specified chamber */}
+                        {dateData.finalVotes.some(vote => !vote.data.billHolder ||
+                            (vote.data.billHolder.toLowerCase() !== "house" &&
+                                vote.data.billHolder.toLowerCase() !== "senate")) && (
+                                <div css={css`margin-top: 1.5em;`}>
+                                    <h4>Other Final Votes</h4>
+                                    <BillTable
+                                        bills={onCalendarBills.filter(bill =>
+                                            dateData.finalVotes
+                                                .filter(vote => !vote.data.billHolder ||
+                                                    (vote.data.billHolder.toLowerCase() !== "house" &&
+                                                        vote.data.billHolder.toLowerCase() !== "senate"))
+                                                .map(d => d.data.bill)
+                                                .includes(bill.identifier)
+                                        )}
+                                        displayLimit={10}
+                                        suppressCount={true}
+                                    />
+                                </div>
                             )}
-                            displayLimit={10}
-                            suppressCount={true}
-                        />
                     </>
                 )}
             </section>

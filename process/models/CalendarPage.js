@@ -4,7 +4,6 @@ export default class CalendarPage {
     constructor({ actions, updateTime, calendarAnnotations }) {
         const beginningOfToday = new Date(updateTime).setUTCHours(7, 0, 0, 0) // 7 accounts for Montana vs GMT time
         const formattedBeginningOfToday = dateFormat(new Date(beginningOfToday))
-        console.log({ formattedBeginningOfToday })
 
         // For checking that server is handling dates the same as my local machine
         // console.log({

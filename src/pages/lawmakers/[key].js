@@ -81,7 +81,6 @@ const LawmakerPage = ({ lawmaker }) => {
     portrait,
   } = lawmaker;
 
-  console.log({ lawmakerPageText })
   return (
     <Layout
       relativePath={`/${key}`}
