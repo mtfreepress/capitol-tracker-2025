@@ -72,7 +72,7 @@ const Index = ({ keyBills, billIndex, lawmakerIndex }) => {
 export async function getStaticProps() {
   const keyBills = bills.filter(bill => bill.isMajorBill);
   const billIndex = bills;
-  const lawmakerIndex = lawmakers.filter(lawmaker => lawmaker.isActive);
+  const lawmakerIndex = lawmakers;
 
   return {
     props: {

@@ -53,6 +53,16 @@ class LawmakerLookup extends Component {
     }
 }
 
+const inactiveBadge = css`
+  font-size: 0.7em;
+  background-color: #e74c3c;
+  color: white;
+  padding: 2px 5px;
+  border-radius: 3px;
+  margin-left: 5px;
+  vertical-align: middle;
+`;
+
 const resultContainer = css`
     display: flex;
     flex-wrap: wrap;
@@ -87,18 +97,19 @@ const resultName = css`
 const labelCss = css`margin-bottom: 0.2em;`;
 
 const LawmakerEntry = ({ lawmaker }) => {
-    const { key, title, name, party, district, locale, phone, email } = lawmaker;
+    const { key, title, name, party, district, locale, phone, email, isActive } = lawmaker;
     return (
-        <div css={resultItem}>
-            <div css={resultLabel}>{district.key}</div>
-            <div css={resultName}>
-                <Link href={`/lawmakers/${key}`}>{title} {name}</Link>
-            </div>
-            <div>({party} - {locale})</div>
-            <div><a href={`tel:${cleanPhoneString(phone)}`}>{phone}</a></div>
-            <div><a href={`mailto:${email}`}>{email}</a></div>
+      <div css={resultItem}>
+        <div css={resultLabel}>{district.key}</div>
+        <div css={resultName}>
+          <Link href={`/lawmakers/${key}`}>{title} {name}</Link>
+          {!isActive && <span css={inactiveBadge}>Inactive</span>}
         </div>
+        <div>({party} - {locale})</div>
+        <div><a href={`tel:${cleanPhoneString(phone)}`}>{phone}</a></div>
+        <div><a href={`mailto:${email}`}>{email}</a></div>
+      </div>
     );
-};
+  };
 
 export default LawmakerLookup;
