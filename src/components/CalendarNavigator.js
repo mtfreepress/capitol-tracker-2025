@@ -11,7 +11,7 @@ const calendarStyle = css`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1em;
+    margin-bottom: .25em;
     
     .month-selector {
       position: relative;
@@ -128,7 +128,19 @@ const calendarStyle = css`
 
 const CalendarNavigator = ({ dates, currentPageDate }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  
+
+  const isTodayPage = () => {
+    // If currentPageDate is null, we're likely on the default calendar page (today)
+    if (currentPageDate === null) {
+      return true;
+    }
+    
+    // Otherwise, compare the formatted date to today
+    const today = new Date();
+    const todayKey = formatDateKey(today);
+    return currentPageDate === todayKey;
+  };
+
   // Get available months from dates
   const availableMonths = [...new Set(dates.map(date => {
     const d = new Date(date.date);
@@ -146,21 +158,21 @@ const CalendarNavigator = ({ dates, currentPageDate }) => {
     const year = date.getFullYear();
     return `${month}-${day}-${year}`;
   };
-  
+
   const getValidNavigationDate = () => {
     if (currentPageDate) return currentPageDate;
     const today = new Date();
     return formatDateKey(today);
   };
-  
-  
+
+
   const getNavigationDays = (allDates, currentDate) => {
     if (!currentDate) return { prev: null, next: null };
-  
-    const activeDates = allDates.filter(d => 
+
+    const activeDates = allDates.filter(d =>
       d.hearings.length > 0 || d.floorDebates.length > 0 || d.finalVotes.length > 0
     );
-    
+
     if (activeDates.length === 0) return { prev: null, next: null };
 
     const sortedDates = [...activeDates].sort((a, b) => {
@@ -168,14 +180,14 @@ const CalendarNavigator = ({ dates, currentPageDate }) => {
       const dateB = new Date(b.date);
       return dateA - dateB;
     });
-    
+
     const currentIndex = sortedDates.findIndex(d => d.key === currentDate);
-    
+
     if (currentIndex !== -1) {
       const prev = currentIndex > 0 ? sortedDates[currentIndex - 1].key : null;
       const next = currentIndex < sortedDates.length - 1 ? sortedDates[currentIndex + 1].key : null;
       return { prev, next };
-    } 
+    }
     else {
       const currentDateObj = new Date(currentDate.replace(/-/g, '/'));
       const prevDate = sortedDates.reduce((closest, current) => {
@@ -186,7 +198,7 @@ const CalendarNavigator = ({ dates, currentPageDate }) => {
         return closest;
       }, null);
       const nextDate = sortedDates.find(d => new Date(d.date) > currentDateObj);
-      
+
       return {
         prev: prevDate?.key || null,
         next: nextDate?.key || null
@@ -199,42 +211,42 @@ const CalendarNavigator = ({ dates, currentPageDate }) => {
     if (currentPageDate) {
       const pageDate = new Date(currentPageDate.replace(/-/g, '/'));
       const pageYearMonth = `${pageDate.getFullYear()}-${pageDate.getMonth()}`;
-      
+
       if (availableMonths.includes(pageYearMonth)) {
         return pageYearMonth;
       }
     }
-    
+
     // Otherwise, find current month or nearest available
     const now = new Date();
     const currentYM = `${now.getFullYear()}-${now.getMonth()}`;
-    
+
     if (availableMonths.includes(currentYM)) {
       return currentYM;
     }
-    
+
     // If neither is available, find closest month
     const currentTimestamp = now.getTime();
     let closestMonth = availableMonths[0];
     let smallestDiff = Infinity;
-    
+
     availableMonths.forEach(monthStr => {
       const [y, m] = monthStr.split('-').map(Number);
       const monthDate = new Date(y, m, 1);
       const diff = Math.abs(monthDate.getTime() - currentTimestamp);
-      
+
       if (diff < smallestDiff) {
         smallestDiff = diff;
         closestMonth = monthStr;
       }
     });
-    
+
     return closestMonth;
   };
 
   // Initialize with page date's month if provided, otherwise closest month to current date
   const [currentYearMonth, setCurrentYearMonth] = useState(() => getInitialMonth());
-  
+
   // Update when dates or currentPageDate changes
   useEffect(() => {
     setCurrentYearMonth(getInitialMonth());
@@ -324,7 +336,7 @@ const CalendarNavigator = ({ dates, currentPageDate }) => {
         >
           ◀
         </button>
-        
+
         <div className="month-selector">
           <h3
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
@@ -348,7 +360,7 @@ const CalendarNavigator = ({ dates, currentPageDate }) => {
             </div>
           )}
         </div>
-        
+
         <button
           className="navigation-button"
           onClick={goToNextMonth}
@@ -358,7 +370,108 @@ const CalendarNavigator = ({ dates, currentPageDate }) => {
           ▶
         </button>
       </div>
+      <div css={css`
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0em;
+  margin-bottom: .5em;
+  gap: 0.5em;
+`}>
+        {prev ? (
+          <Link href={`/calendar/${prev}`} passHref>
+            <button
+              className="nav-day-button"
+              title="Go to Previous Legislative Day"
+              css={css`
+          background-color: var(--gray1);
+          border: 1px solid transparent;
+          border-radius: 4px;
+          padding: 0.2em 0.6em;
+          font-size: 0.85em;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.2s ease;
+          box-sizing: border-box;
+          min-width: 90px;
+          text-align: center;
+          
+          &:hover {
+            background-color: var(--gray2);
+            color: var(--link);
+            border: 1px solid transparent;
+          }
+        `}
+            >
+              ← Prev
+            </button>
+          </Link>
+        ) : (
+          <div css={css`min-width: 90px;`}></div>
+        )}
 
+        {/* Center section with conditional today button */}
+        <div css={css`min-width: 90px; display: flex; justify-content: center;`}>
+          {!isTodayPage() && (
+            <Link href="/calendar" passHref>
+              <button
+                className="today-button"
+                title="Go to Today"
+                css={css`
+            background-color: var(--tan2);
+            border: 1px solid transparent;
+            border-radius: 4px;
+            padding: 0.2em 0.6em;
+            font-size: 0.85em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-sizing: border-box;
+            
+            &:hover {
+              background-color: var(--tan3);
+              color: var(--link);
+              border: 1px solid transparent;
+            }
+          `}
+              >
+                Back to today
+              </button>
+            </Link>
+          )}
+        </div>
+
+        {next ? (
+          <Link href={`/calendar/${next}`} passHref>
+            <button
+              className="nav-day-button"
+              title="Go to Next Legislative Day"
+              css={css`
+          background-color: var(--gray1);
+          border: 1px solid transparent;
+          border-radius: 4px;
+          padding: 0.2em 0.6em;
+          font-size: 0.85em;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.2s ease;
+          box-sizing: border-box;
+          min-width: 90px;
+          text-align: center;
+          
+          &:hover {
+            background-color: var(--gray2);
+            color: var(--link);
+            border: 1px solid transparent;
+          }
+        `}
+            >
+              Next →
+            </button>
+          </Link>
+        ) : (
+          <div css={css`min-width: 90px;`}></div>
+        )}
+      </div>
       <div css={gridStyle}>
         {weekdays.map(day => (
           <div key={day} className="weekday-header">
@@ -381,102 +494,6 @@ const CalendarNavigator = ({ dates, currentPageDate }) => {
             )}
           </div>
         ))}
-      </div>
-      <div css={css`
-        display: flex;
-        justify-content: space-between;
-        margin-top: 0.75em;
-        gap: 0.5em;
-      `}>
-        {prev ? (
-          <Link href={`/calendar/${prev}`} passHref>
-            <button
-              className="nav-day-button"
-              title="Go to Previous Legislative Day"
-              css={css`
-                background-color: var(--gray1);
-                border: 1px solid transparent;
-                border-radius: 4px;
-                padding: 0.2em 0.6em;
-                font-size: 0.85em;
-                font-weight: 600;
-                cursor: pointer;
-                transition: all 0.2s ease;
-                box-sizing: border-box;
-                min-width: 90px;
-                text-align: center;
-                
-                &:hover {
-                  background-color: var(--gray2);
-                  color: var(--link);
-                  border: 1px solid transparent;
-                }
-              `}
-            >
-              ← Prev
-            </button>
-          </Link>
-        ) : (
-          <div css={css`min-width: 90px;`}></div>
-        )}
-
-        <Link href="/calendar" passHref>
-          <button
-            className="today-button"
-            title="Go to Today"
-            css={css`
-              background-color: var(--tan2);
-              border: 1px solid transparent;
-              border-radius: 4px;
-              padding: 0.2em 0.6em;
-              font-size: 0.85em;
-              font-weight: 600;
-              cursor: pointer;
-              transition: all 0.2s ease;
-              box-sizing: border-box;
-              
-              &:hover {
-                background-color: var(--tan3);
-                color: var(--link);
-                border: 1px solid transparent;
-              }
-            `}
-          >
-            Back to today
-          </button>
-        </Link>
-
-        {next ? (
-          <Link href={`/calendar/${next}`} passHref>
-            <button
-              className="nav-day-button"
-              title="Go to Next Legislative Day"
-              css={css`
-                background-color: var(--gray1);
-                border: 1px solid transparent;
-                border-radius: 4px;
-                padding: 0.2em 0.6em;
-                font-size: 0.85em;
-                font-weight: 600;
-                cursor: pointer;
-                transition: all 0.2s ease;
-                box-sizing: border-box;
-                min-width: 90px;
-                text-align: center;
-                
-                &:hover {
-                  background-color: var(--gray2);
-                  color: var(--link);
-                  border: 1px solid transparent;
-                }
-              `}
-            >
-              Next →
-            </button>
-          </Link>
-        ) : (
-          <div css={css`min-width: 90px;`}></div>
-        )}
       </div>
     </div>
   );
