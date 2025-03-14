@@ -12781,10 +12781,10 @@
         "lcIdentifier": "LC0493",
         "type": "senate bill",
         "status": {
-            "key": "Transmitted to Second House",
-            "step": "Second chamber",
-            "label": "Transmitted",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -25189,10 +25189,10 @@
         "lcIdentifier": "LC1805",
         "type": "senate bill",
         "status": {
-            "key": "In Second House Committee--Nontabled",
-            "step": "Second chamber",
-            "label": "In committee",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -28250,10 +28250,10 @@
         "lcIdentifier": "LC2794",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Out of Committee",
-            "step": "First chamber",
-            "label": "Out of committee",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -42956,8 +42956,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "3/4 of Each House",
         "voteRequirements": [
-            "SIMPLE",
-            "THREE_FOURTHS"
+            "THREE_FOURTHS",
+            "SIMPLE"
         ],
         "subjects": [
             "Appropriations, Coal Tax Fund Principal",
@@ -46329,8 +46329,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "3/4 of Each House",
         "voteRequirements": [
-            "SIMPLE",
-            "THREE_FOURTHS"
+            "THREE_FOURTHS",
+            "SIMPLE"
         ],
         "subjects": [
             "Buildings and Building Regulations",
@@ -52899,8 +52899,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "TWO_THIRDS_LEGISLATURE",
-            "SIMPLE"
+            "SIMPLE",
+            "TWO_THIRDS_LEGISLATURE"
         ],
         "subjects": [
             "Elections  (see also: Ballot Issues)",
@@ -52972,8 +52972,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "TWO_THIRDS_LEGISLATURE",
-            "SIMPLE"
+            "SIMPLE",
+            "TWO_THIRDS_LEGISLATURE"
         ],
         "subjects": [
             "Elections  (see also: Ballot Issues)",
@@ -55080,9 +55080,9 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "3/4 of Each House",
         "voteRequirements": [
-            "TWO_THIRDS",
+            "THREE_FOURTHS",
             "SIMPLE",
-            "THREE_FOURTHS"
+            "TWO_THIRDS"
         ],
         "subjects": [
             "Appropriations, Coal Tax Fund Principal",
@@ -55246,8 +55246,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "TWO_THIRDS_LEGISLATURE",
-            "SIMPLE"
+            "SIMPLE",
+            "TWO_THIRDS_LEGISLATURE"
         ],
         "subjects": [
             "Family Law  (see also: Minors)",
@@ -82431,8 +82431,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Each House",
         "voteRequirements": [
-            "TWO_THIRDS",
-            "SIMPLE"
+            "SIMPLE",
+            "TWO_THIRDS"
         ],
         "subjects": [
             "Schools and Education",
@@ -82930,8 +82930,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "TWO_THIRDS_LEGISLATURE",
-            "SIMPLE"
+            "SIMPLE",
+            "TWO_THIRDS_LEGISLATURE"
         ],
         "subjects": [
             "Constitutional Amendment Proposals",
@@ -83007,8 +83007,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "TWO_THIRDS_LEGISLATURE",
-            "SIMPLE"
+            "SIMPLE",
+            "TWO_THIRDS_LEGISLATURE"
         ],
         "subjects": [
             "Constitutional Amendment Proposals",
@@ -87521,8 +87521,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "TWO_THIRDS_LEGISLATURE",
-            "SIMPLE"
+            "SIMPLE",
+            "TWO_THIRDS_LEGISLATURE"
         ],
         "subjects": [
             "Constitutional Amendment Proposals",
@@ -101433,8 +101433,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "TWO_THIRDS_LEGISLATURE",
-            "SIMPLE"
+            "SIMPLE",
+            "TWO_THIRDS_LEGISLATURE"
         ],
         "subjects": [
             "Abortion",
@@ -113877,8 +113877,8 @@
         "lcIdentifier": "LC0039",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
-            "step": "First chamber",
+            "key": "In Second House Committee--Nontabled",
+            "step": "Second chamber",
             "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
@@ -115495,8 +115495,8 @@
         "lcIdentifier": "LC1500",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
-            "step": "First chamber",
+            "key": "In Second House Committee--Nontabled",
+            "step": "Second chamber",
             "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
@@ -115579,8 +115579,8 @@
         "lcIdentifier": "LC1502",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
-            "step": "First chamber",
+            "key": "In Second House Committee--Nontabled",
+            "step": "Second chamber",
             "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
