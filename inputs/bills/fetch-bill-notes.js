@@ -3,27 +3,28 @@ import fs from 'fs/promises';
 import { fileURLToPath } from 'url';
 import path from 'path';
 
-const GITHUB_API_URLS = {
-    legalNotes: 'https://api.github.com/repos/mtfreepress/legislative-interface/contents/interface/downloads/legal-note-pdfs-2',
-    fiscalNotes: 'https://api.github.com/repos/mtfreepress/legislative-interface/contents/interface/downloads/fiscal-note-pdfs-2'
-};
-
 const UPDATE_URLS = {
     legalNotes: 'https://raw.githubusercontent.com/mtfreepress/legislative-interface/refs/heads/main/interface/legal-note-updates.json',
-    fiscalNotes: 'https://raw.githubusercontent.com/mtfreepress/legislative-interface/refs/heads/main/interface/fiscal-note-updates.json'
+    fiscalNotes: 'https://raw.githubusercontent.com/mtfreepress/legislative-interface/refs/heads/main/interface/fiscal-note-updates.json',
+    amendments: 'https://raw.githubusercontent.com/mtfreepress/legislative-interface/refs/heads/main/interface/amendment-updates.json'
 };
 
 const RAW_URL_BASES = {
     legalNotes: 'https://raw.githubusercontent.com/mtfreepress/legislative-interface/main/interface/downloads/legal-note-pdfs-2/',
-    fiscalNotes: 'https://raw.githubusercontent.com/mtfreepress/legislative-interface/main/interface/downloads/fiscal-note-pdfs-2/'
+    fiscalNotes: 'https://raw.githubusercontent.com/mtfreepress/legislative-interface/main/interface/downloads/fiscal-note-pdfs-2/',
+    amendments: 'https://raw.githubusercontent.com/mtfreepress/legislative-interface/main/interface/downloads/amendment-pdfs-2/'
 };
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const OUT_DIRS = {
     legalNotes: path.join(__dirname, '../../public/legal-notes'),
-    fiscalNotes: path.join(__dirname, '../../public/fiscal-notes')
+    fiscalNotes: path.join(__dirname, '../../public/fiscal-notes'),
+    amendments: path.join(__dirname, '../../public/amendments')
 };
+
+const BILLS_WITH_AMENDMENTS_URL = 'https://raw.githubusercontent.com/mtfreepress/legislative-interface/refs/heads/main/interface/bills-with-amendments.txt';
+const BILLS_WITH_AMENDMENTS_OUTPUT = path.join(__dirname, '../../public/bills-with-amendments.txt');
 
 const fetchJson = async (url) => {
     const headers = process.env.GITHUB_TOKEN ? {
@@ -63,23 +64,40 @@ const clearDirectory = async (dirPath) => {
     }
 };
 
-const downloadFile = async (url, fileName, folderPath) => {
+// Fixed version that uses arrayBuffer instead of buffer
+const downloadFile = async (url, fileName, folderPath, clearBefore = true) => {
     // console.log(`Fetching ${url}`);
     const response = await fetch(url);
     if (!response.ok) {
         throw new Error(`Failed to fetch URL: ${url}, status: ${response.status}`);
     }
     
-    // Clear any existing files before downloading new one
-    await clearDirectory(folderPath);
+    // Clear any existing files before downloading new one, only if flag is set
+    if (clearBefore) {
+        await clearDirectory(folderPath);
+    }
     
-    const data = await response.buffer();
+    // Fix: use arrayBuffer instead of buffer
+    const arrayBuffer = await response.arrayBuffer();
+    const data = Buffer.from(arrayBuffer);
     const outputPath = path.join(folderPath, fileName);
     await fs.writeFile(outputPath, data);
     // console.log(`Saved ${fileName} to ${outputPath}`);
 };
 
-const processUpdates = async (type) => {
+const downloadTextFile = async (url, outputPath) => {
+    console.log(`Downloading text file from ${url}`);
+    const response = await fetch(url);
+    if (!response.ok) {
+        throw new Error(`Failed to fetch text file: ${url}, status: ${response.status}`);
+    }
+    
+    const text = await response.text();
+    await fs.writeFile(outputPath, text);
+    console.log(`Saved text file to ${outputPath}`);
+};
+
+const processNotes = async (type) => {
     console.log(`Processing ${type} updates...`);
     
     // Fetch the updates list
@@ -91,14 +109,78 @@ const processUpdates = async (type) => {
         await createFolderIfNotExists(folderPath);
 
         const fileUrl = `${RAW_URL_BASES[type]}${billFolder}/${update.fileName}`;
-        await downloadFile(fileUrl, update.fileName, folderPath);
+        // For notes, we only keep the latest version
+        await downloadFile(fileUrl, update.fileName, folderPath, true);
+    }
+};
+
+const processAmendments = async () => {
+    console.log('Processing amendments updates...');
+    
+    // Fetch the updates list
+    const updates = await fetchJson(UPDATE_URLS.amendments);
+    
+    // Group amendments by bill for easier processing
+    const billAmendments = {};
+    
+    for (const amendment of updates) {
+        const billKey = `${amendment.billType}-${amendment.billNumber}`;
+        if (!billAmendments[billKey]) {
+            billAmendments[billKey] = [];
+        }
+        billAmendments[billKey].push(amendment);
+    }
+    
+    // Process each bill's amendments
+    for (const [billKey, amendments] of Object.entries(billAmendments)) {
+        console.log(`Processing amendments for ${billKey}...`);
+        const folderPath = path.join(OUT_DIRS.amendments, billKey);
+        await createFolderIfNotExists(folderPath);
+        
+        // Check what files already exist to avoid re-downloading
+        let existingFiles = [];
+        try {
+            existingFiles = await fs.readdir(folderPath);
+        } catch (error) {
+            if (error.code !== 'ENOENT') {
+                throw error;
+            }
+        }
+        
+        // Download each amendment
+        for (const amendment of amendments) {
+            const fileUrl = `${RAW_URL_BASES.amendments}${billKey}/${amendment.fileName}`;
+            
+            // Skip if file already exists
+            if (existingFiles.includes(amendment.fileName)) {
+                console.log(`File already exists, skipping: ${amendment.fileName}`);
+                continue;
+            }
+            
+            // Download without clearing directory (to keep all versions)
+            await downloadFile(fileUrl, amendment.fileName, folderPath, false);
+        }
     }
 };
 
 const main = async () => {
     try {
-        await processUpdates('legalNotes');
-        await processUpdates('fiscalNotes');
+        // Create the output directories if they don't exist
+        for (const dir of Object.values(OUT_DIRS)) {
+            await createFolderIfNotExists(dir);
+        }
+        
+        // Process legal and fiscal notes (keeping only latest)
+        await processNotes('legalNotes');
+        await processNotes('fiscalNotes');
+        
+        // Process amendments (keeping all versions)
+        await processAmendments();
+        
+        // Download the bills-with-amendments.txt file
+        await downloadTextFile(BILLS_WITH_AMENDMENTS_URL, BILLS_WITH_AMENDMENTS_OUTPUT);
+        
+        console.log("All downloads completed successfully");
     } catch (error) {
         console.error(`Error: ${error.message}`);
         process.exit(1);
