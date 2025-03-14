@@ -67,6 +67,16 @@ export const listToText = (list) => {
   }
 }
 
+export async function fetchBillsWithAmendments() {
+  try {
+    const response = await fetch('/capitol-tracker-2025/bills-with-amendments.txt');
+    const text = await response.text();
+    return text.trim().split('\n');
+  } catch (error) {
+    console.error('Error fetching bills with amendments:', error);
+    return [];
+  }
+}
 // export const sortByIdentifier = (a, b) => {
 // Not working
 //   console.log(a, b)

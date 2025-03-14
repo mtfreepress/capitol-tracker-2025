@@ -1,15 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { css } from '@emotion/react';
 import Link from 'next/link';
 import { billStatusSymbols, billProgressStepLabels, statusColors, partyColors } from '../config/config';
-import { billUrl, lawmakerUrl } from '../config/utils';
-
+import { billUrl, lawmakerUrl, fetchBillsWithAmendments } from '../config/utils';
 
 const DEFAULT_DISPLAY_LIMIT = 10;
 const DEFAULT_SORT = (a, b) => +a.identifier.substring(3) - +b.identifier.substring(3);
 
 const BillTable = ({ bills, suppressCount, sortFunction = DEFAULT_SORT, displayLimit = DEFAULT_DISPLAY_LIMIT }) => {
   const [isTruncated, setIsTruncated] = useState(true);
+  const [billsWithAmendments, setBillsWithAmendments] = useState([]);
+
+  useEffect(() => {
+    // Fetch the list of bills with amendments when component mounts
+    const loadBillsWithAmendments = async () => {
+      const amendmentsList = await fetchBillsWithAmendments();
+      setBillsWithAmendments(amendmentsList);
+    };
+
+    loadBillsWithAmendments();
+  }, []);
 
   const toggleDisplayLimit = () => {
     setIsTruncated(!isTruncated);
@@ -23,7 +33,11 @@ const BillTable = ({ bills, suppressCount, sortFunction = DEFAULT_SORT, displayL
   const rendered = isTruncated ? sorted.slice(0, displayLimit) : sorted;
   const rows = rendered.map((bill, i) => {
     const { key, ...rest } = bill;
-    return <Bill key={String(i)} {...rest} />;
+    return <Bill
+      key={String(i)}
+      {...rest}
+      hasAmendments={billsWithAmendments.includes(bill.identifier)}
+    />;
   });
   const isFadeApplied = isTruncated && (rendered.length < sorted.length);
 
@@ -135,7 +149,7 @@ const progressStepStyle = css`
 
 const pluralStory = val => (val !== 1) ? 'stories' : 'story';
 
-const Bill = ({ title, identifier, chamber, status, explanation, textUrl, fiscalNoteUrl, legalNoteUrl, vetoMemoUrl, amendmentsUrl, numArticles, sponsor, progress }) => {
+const Bill = ({ title, identifier, chamber, status, explanation, textUrl, fiscalNoteUrl, legalNoteUrl, vetoMemoUrl, amendmentsUrl, numArticles, sponsor, progress, hasAmendments }) => {
   const statusColor = statusColors(status.status);
   const stepLabels = billProgressStepLabels(chamber);
 
@@ -157,7 +171,7 @@ const Bill = ({ title, identifier, chamber, status, explanation, textUrl, fiscal
 
   return (
     <tr css={tableRowCss} key={identifier}>
-      
+
       <td css={tableBillCell}>
         <Link href={`/bills/${billUrl(identifier)}`} passHref>
           <span css={billCss}>
@@ -184,7 +198,17 @@ const Bill = ({ title, identifier, chamber, status, explanation, textUrl, fiscal
               <span css={billLinkCss}>🏛 Legal note</span>
             </Link>
           )}
-          {amendmentsUrl && <a css={billLinkCss} href={amendmentsUrl} target="_blank" rel="noopener noreferrer">🖍 Proposed amendments</a>}
+          {/* Only show amendments link if bill is in the amendments list */}
+          {hasAmendments && (
+            <a 
+              css={billLinkCss} 
+              href={amendmentsUrl || `/capitol-tracker-2025/amendments/${identifier.replace(' ', '-')}`} 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              🖍 Proposed amendments
+            </a>
+          )}
           {vetoMemoUrl && <a css={billLinkCss} href={vetoMemoUrl} target="_blank" rel="noopener noreferrer">🚫 Veto memo</a>}
           {(numArticles > 0) && (
             <Link href={`/bills/${billUrl(identifier)}`} passHref>
