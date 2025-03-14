@@ -64,17 +64,22 @@ const clearDirectory = async (dirPath) => {
     }
 };
 
-const downloadFile = async (url, fileName, folderPath) => {
+// Fixed version that uses arrayBuffer instead of buffer
+const downloadFile = async (url, fileName, folderPath, clearBefore = true) => {
     // console.log(`Fetching ${url}`);
     const response = await fetch(url);
     if (!response.ok) {
         throw new Error(`Failed to fetch URL: ${url}, status: ${response.status}`);
     }
     
-    // Clear any existing files before downloading new one
-    await clearDirectory(folderPath);
+    // Clear any existing files before downloading new one, only if flag is set
+    if (clearBefore) {
+        await clearDirectory(folderPath);
+    }
     
-    const data = await response.buffer();
+    // Fix: use arrayBuffer instead of buffer
+    const arrayBuffer = await response.arrayBuffer();
+    const data = Buffer.from(arrayBuffer);
     const outputPath = path.join(folderPath, fileName);
     await fs.writeFile(outputPath, data);
     // console.log(`Saved ${fileName} to ${outputPath}`);
@@ -92,7 +97,7 @@ const downloadTextFile = async (url, outputPath) => {
     console.log(`Saved text file to ${outputPath}`);
 };
 
-const processUpdates = async (type) => {
+const processNotes = async (type) => {
     console.log(`Processing ${type} updates...`);
     
     // Fetch the updates list
@@ -104,7 +109,57 @@ const processUpdates = async (type) => {
         await createFolderIfNotExists(folderPath);
 
         const fileUrl = `${RAW_URL_BASES[type]}${billFolder}/${update.fileName}`;
-        await downloadFile(fileUrl, update.fileName, folderPath);
+        // For notes, we only keep the latest version
+        await downloadFile(fileUrl, update.fileName, folderPath, true);
+    }
+};
+
+const processAmendments = async () => {
+    console.log('Processing amendments updates...');
+    
+    // Fetch the updates list
+    const updates = await fetchJson(UPDATE_URLS.amendments);
+    
+    // Group amendments by bill for easier processing
+    const billAmendments = {};
+    
+    for (const amendment of updates) {
+        const billKey = `${amendment.billType}-${amendment.billNumber}`;
+        if (!billAmendments[billKey]) {
+            billAmendments[billKey] = [];
+        }
+        billAmendments[billKey].push(amendment);
+    }
+    
+    // Process each bill's amendments
+    for (const [billKey, amendments] of Object.entries(billAmendments)) {
+        console.log(`Processing amendments for ${billKey}...`);
+        const folderPath = path.join(OUT_DIRS.amendments, billKey);
+        await createFolderIfNotExists(folderPath);
+        
+        // Check what files already exist to avoid re-downloading
+        let existingFiles = [];
+        try {
+            existingFiles = await fs.readdir(folderPath);
+        } catch (error) {
+            if (error.code !== 'ENOENT') {
+                throw error;
+            }
+        }
+        
+        // Download each amendment
+        for (const amendment of amendments) {
+            const fileUrl = `${RAW_URL_BASES.amendments}${billKey}/${amendment.fileName}`;
+            
+            // Skip if file already exists
+            if (existingFiles.includes(amendment.fileName)) {
+                console.log(`File already exists, skipping: ${amendment.fileName}`);
+                continue;
+            }
+            
+            // Download without clearing directory (to keep all versions)
+            await downloadFile(fileUrl, amendment.fileName, folderPath, false);
+        }
     }
 };
 
@@ -115,10 +170,12 @@ const main = async () => {
             await createFolderIfNotExists(dir);
         }
         
-        // Process all note and amendment types
-        await processUpdates('legalNotes');
-        await processUpdates('fiscalNotes');
-        await processUpdates('amendments');
+        // Process legal and fiscal notes (keeping only latest)
+        await processNotes('legalNotes');
+        await processNotes('fiscalNotes');
+        
+        // Process amendments (keeping all versions)
+        await processAmendments();
         
         // Download the bills-with-amendments.txt file
         await downloadTextFile(BILLS_WITH_AMENDMENTS_URL, BILLS_WITH_AMENDMENTS_OUTPUT);
