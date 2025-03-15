@@ -48376,8 +48376,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "3/4 of Each House",
         "voteRequirements": [
-            "SIMPLE",
-            "THREE_FOURTHS"
+            "THREE_FOURTHS",
+            "SIMPLE"
         ],
         "subjects": [
             "Buildings and Building Regulations",
@@ -52629,10 +52629,10 @@
         "lcIdentifier": "LC0513",
         "type": "house bill",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
+            "key": "In Second House--Through 2nd Reading",
+            "step": "Second chamber",
+            "label": "Passed 2nd reading vote",
+            "status": "live",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -52657,8 +52657,8 @@
             {
                 "step": "second chamber",
                 "status": "current",
-                "statusLabel": "Pending",
-                "statusDate": null
+                "statusLabel": "Passed preliminary vote",
+                "statusDate": "03/15/2025"
             },
             {
                 "step": "reconciliation",
@@ -52796,10 +52796,10 @@
         "lcIdentifier": "LC0514",
         "type": "house bill",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
+            "key": "In Second House--Through 2nd Reading",
+            "step": "Second chamber",
+            "label": "Passed 2nd reading vote",
+            "status": "live",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -52824,8 +52824,8 @@
             {
                 "step": "second chamber",
                 "status": "current",
-                "statusLabel": "Pending",
-                "statusDate": null
+                "statusLabel": "Passed preliminary vote",
+                "statusDate": "03/15/2025"
             },
             {
                 "step": "reconciliation",
@@ -52879,10 +52879,10 @@
         "lcIdentifier": "LC0512",
         "type": "house bill",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
+            "key": "In Second House--Through 2nd Reading",
+            "step": "Second chamber",
+            "label": "Passed 2nd reading vote",
+            "status": "live",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -52907,8 +52907,8 @@
             {
                 "step": "second chamber",
                 "status": "current",
-                "statusLabel": "Pending",
-                "statusDate": null
+                "statusLabel": "Passed preliminary vote",
+                "statusDate": "03/15/2025"
             },
             {
                 "step": "reconciliation",
@@ -57127,8 +57127,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "3/4 of Each House",
         "voteRequirements": [
-            "THREE_FOURTHS",
             "SIMPLE",
+            "THREE_FOURTHS",
             "TWO_THIRDS"
         ],
         "subjects": [
@@ -93668,9 +93668,9 @@
         "lcIdentifier": "LC1282",
         "type": "house bill",
         "status": {
-            "key": "Transmitted to Second House",
+            "key": "In Second House Committee--Nontabled",
             "step": "Second chamber",
-            "label": "Transmitted",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -95918,11 +95918,11 @@
         "lcIdentifier": "LC3582",
         "type": "house bill",
         "status": {
-            "key": "In Second House Committee--Nontabled",
-            "step": "Second chamber",
-            "label": "In committee",
+            "key": "Passed By Legislature--Enrolling and Final Preparation Process",
+            "step": "Through Legislature",
+            "label": "Passed both chambers",
             "status": "live",
-            "statusAtSessionEnd": "failed"
+            "statusAtSessionEnd": "pending, passed legislature"
         },
         "progress": [
             {
