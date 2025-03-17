@@ -237,22 +237,22 @@
                 "N": 1
             },
             "gopCount": {
-                "Y": 6,
-                "N": 1,
+                "Y": 0,
+                "N": 0,
                 "A": 0,
                 "E": 0,
                 "O": 0
             },
             "demCount": {
-                "Y": 4,
+                "Y": 0,
                 "N": 0,
                 "A": 0,
                 "E": 0,
                 "O": 0
             },
             "motionPassed": true,
-            "gopSupported": true,
-            "demSupported": true,
+            "gopSupported": false,
+            "demSupported": false,
             "votes": [
                 {
                     "option": "Y",
@@ -1322,6 +1322,20 @@
         "recordings": [],
         "transcriptUrl": null,
         "key": "Referred to Committee",
+        "committeeHearingTime": null,
+        "vote": null
+    },
+    {
+        "id": "SB404-0025",
+        "bill": "SB 404",
+        "date": "03/17/2025",
+        "description": "First Reading",
+        "possession": "House",
+        "committee": "undefined",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "First Reading",
         "committeeHearingTime": null,
         "vote": null
     }
