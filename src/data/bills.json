@@ -15224,7 +15224,7 @@
         "tags": [],
         "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0493?open_tab=sum",
         "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0493?open_tab=bill",
-        "fiscalNoteUrl": null,
+        "fiscalNoteUrl": "/bills/fiscal-note/sb-468",
         "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0493?open_tab=amend",
         "legalNoteUrl": null,
         "vetoMemoUrl": null,
@@ -22334,9 +22334,9 @@
         "lcIdentifier": "LC1015",
         "type": "senate bill",
         "status": {
-            "key": "In First House--Through 3rd Reading",
-            "step": "First chamber",
-            "label": "Passed chamber",
+            "key": "Transmitted to Second House",
+            "step": "Second chamber",
+            "label": "Transmitted",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -42697,8 +42697,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "SIMPLE",
-            "TWO_THIRDS_LEGISLATURE"
+            "TWO_THIRDS_LEGISLATURE",
+            "SIMPLE"
         ],
         "subjects": [
             "Constitutional Amendment Proposals",
@@ -45332,8 +45332,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "3/4 of Each House",
         "voteRequirements": [
-            "THREE_FOURTHS",
-            "SIMPLE"
+            "SIMPLE",
+            "THREE_FOURTHS"
         ],
         "subjects": [
             "Appropriations, Coal Tax Fund Principal",
@@ -45921,8 +45921,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "SIMPLE",
-            "TWO_THIRDS_LEGISLATURE"
+            "TWO_THIRDS_LEGISLATURE",
+            "SIMPLE"
         ],
         "subjects": [
             "Constitutional Amendment Proposals",
@@ -48705,8 +48705,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "3/4 of Each House",
         "voteRequirements": [
-            "THREE_FOURTHS",
-            "SIMPLE"
+            "SIMPLE",
+            "THREE_FOURTHS"
         ],
         "subjects": [
             "Buildings and Building Regulations",
@@ -57456,9 +57456,9 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "3/4 of Each House",
         "voteRequirements": [
-            "THREE_FOURTHS",
             "SIMPLE",
-            "TWO_THIRDS"
+            "TWO_THIRDS",
+            "THREE_FOURTHS"
         ],
         "subjects": [
             "Appropriations, Coal Tax Fund Principal",
@@ -85407,7 +85407,7 @@
         "identifier": "HB 505",
         "identifierLong": "House Bill 505",
         "chamber": "house",
-        "title": "Revise laws on Montana housing infrastructure revolving loan fund on deed restrictions, usage, and interest",
+        "title": "Allow Montana housing infrastructure revolving loan fun to retain its interest and income and provide for fund transfers",
         "session": "2",
         "lcIdentifier": "LC1905",
         "type": "house bill",
@@ -85474,7 +85474,8 @@
         "subjects": [
             "State Finance  (see also: Appropriations; Taxation Subjects)",
             "Housing",
-            "Money Transfer"
+            "Money Transfer",
+            "Appropriations  (see also: State Finance)"
         ],
         "tags": [],
         "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1905?open_tab=sum",
@@ -98308,10 +98309,10 @@
         "lcIdentifier": "LC1441",
         "type": "house bill",
         "status": {
-            "key": "In First House--Out of Committee",
-            "step": "First chamber",
-            "label": "Out of committee",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -105433,9 +105434,9 @@
         "lcIdentifier": "LC0707",
         "type": "budget bill",
         "status": {
-            "key": "In Second House--Through 3rd Reading",
-            "step": "Second chamber",
-            "label": "Passed chamber",
+            "key": "Returned to First House with Second House Amendments",
+            "step": "Reconciliation",
+            "label": "In reconciliation",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
