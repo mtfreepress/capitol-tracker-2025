@@ -417,4 +417,5 @@ export const LAWMAKER_NAME_CLEANING = {
     'Mike Vinton': 'Mike Vinton',
     'Ken Walsh': 'Ken Walsh',
     'Jane Weber': 'Jane Weber',
-}
+    'Terry Nelson': 'Terry Nelson'
+};
