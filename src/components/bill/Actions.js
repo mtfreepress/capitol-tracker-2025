@@ -335,7 +335,7 @@ const VoteListing = ({ votes, voteUrl, defaultOpen = false }) => {
   const gopVotes = votes.filter(d => d.party === 'R').sort((a, b) => a.lastName.localeCompare(b.lastName))
   const demVotes = votes.filter(d => d.party === 'D').sort((a, b) => a.lastName.localeCompare(b.lastName))
   return <div>
-    <button class='inline-button' onClick={() => setIsOpen(!isOpen)}>
+    <button className='inline-button' onClick={() => setIsOpen(!isOpen)}>
       {isOpen ? <span>&#x25BE; Hide full vote breakdown</span> : <span>&#x25B8; Show full vote breakdown</span>}
     </button>
     {/* <span>  <a href={voteUrl}>Official vote page.</a></span> */}
