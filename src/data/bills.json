@@ -21234,9 +21234,9 @@
         "lcIdentifier": "LC0329",
         "type": "senate bill",
         "status": {
-            "key": "Transmitted to Second House",
+            "key": "In Second House Committee--Nontabled",
             "step": "Second chamber",
-            "label": "Transmitted",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -25728,9 +25728,9 @@
         "lcIdentifier": "LC0736",
         "type": "senate bill",
         "status": {
-            "key": "Transmitted to Second House",
+            "key": "In Second House Committee--Nontabled",
             "step": "Second chamber",
-            "label": "Transmitted",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -26576,9 +26576,9 @@
         "lcIdentifier": "LC0326",
         "type": "senate bill",
         "status": {
-            "key": "Transmitted to Second House",
+            "key": "In Second House Committee--Nontabled",
             "step": "Second chamber",
-            "label": "Transmitted",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -34355,9 +34355,9 @@
         "lcIdentifier": "LC0181",
         "type": "senate bill",
         "status": {
-            "key": "Transmitted to Second House",
+            "key": "In Second House Committee--Nontabled",
             "step": "Second chamber",
-            "label": "Transmitted",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -42949,9 +42949,9 @@
         "lcIdentifier": "LC2812",
         "type": "senate bill",
         "status": {
-            "key": "Transmitted to Second House",
+            "key": "In Second House Committee--Nontabled",
             "step": "Second chamber",
-            "label": "Transmitted",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -55011,6 +55011,94 @@
         "isOnCalendar": true
     },
     {
+        "key": "hb-836",
+        "identifier": "HB 836",
+        "identifierLong": "House Bill 836",
+        "chamber": "house",
+        "title": "Provide for a property tax deferral loan program",
+        "session": "2",
+        "lcIdentifier": "LC3693",
+        "type": "house bill",
+        "status": {
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "passed",
+                "statusLabel": "Introduced",
+                "statusDate": "03/18/2025"
+            },
+            {
+                "step": "first committee",
+                "status": "current",
+                "statusLabel": "Pending",
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Scott Rosenzweig",
+            "party": "D",
+            "locale": "Bozeman",
+            "district": "HD 57"
+        },
+        "requestor": "Scott Rosenzweig",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "Simple",
+        "voteRequirements": [
+            "SIMPLE"
+        ],
+        "subjects": [
+            "Taxation (Generally)",
+            "Taxation--Property",
+            "Senior Citizens  (see also: Retirement)",
+            "Appropriations  (see also: State Finance)",
+            "Military Affairs",
+            "Rule Making"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3693?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3693?open_tab=bill",
+        "fiscalNoteUrl": null,
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC3693?open_tab=amend",
+        "legalNoteUrl": null,
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0,
+        "isOnCalendar": false
+    },
+    {
         "key": "hb-835",
         "identifier": "HB 835",
         "identifierLong": "House Bill 835",
@@ -56305,8 +56393,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "TWO_THIRDS_LEGISLATURE",
-            "SIMPLE"
+            "SIMPLE",
+            "TWO_THIRDS_LEGISLATURE"
         ],
         "subjects": [
             "Elections  (see also: Ballot Issues)",
@@ -56378,8 +56466,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "TWO_THIRDS_LEGISLATURE",
-            "SIMPLE"
+            "SIMPLE",
+            "TWO_THIRDS_LEGISLATURE"
         ],
         "subjects": [
             "Elections  (see also: Ballot Issues)",
@@ -58652,8 +58740,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "TWO_THIRDS_LEGISLATURE",
-            "SIMPLE"
+            "SIMPLE",
+            "TWO_THIRDS_LEGISLATURE"
         ],
         "subjects": [
             "Family Law  (see also: Minors)",
@@ -86336,8 +86424,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "TWO_THIRDS_LEGISLATURE",
-            "SIMPLE"
+            "SIMPLE",
+            "TWO_THIRDS_LEGISLATURE"
         ],
         "subjects": [
             "Constitutional Amendment Proposals",
@@ -86413,8 +86501,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "TWO_THIRDS_LEGISLATURE",
-            "SIMPLE"
+            "SIMPLE",
+            "TWO_THIRDS_LEGISLATURE"
         ],
         "subjects": [
             "Constitutional Amendment Proposals",
@@ -90928,8 +91016,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "TWO_THIRDS_LEGISLATURE",
-            "SIMPLE"
+            "SIMPLE",
+            "TWO_THIRDS_LEGISLATURE"
         ],
         "subjects": [
             "Constitutional Amendment Proposals",
@@ -91318,10 +91406,10 @@
         "lcIdentifier": "LC1787",
         "type": "house bill",
         "status": {
-            "key": "In First House--Out of Committee",
-            "step": "First chamber",
-            "label": "Out of committee",
-            "status": "live",
+            "key": "Probably Dead",
+            "label": "",
+            "step": "Failed",
+            "status": "stalled",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
