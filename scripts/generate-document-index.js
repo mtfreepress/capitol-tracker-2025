@@ -32,12 +32,14 @@ documentTypes.forEach(type => {
                 const files = fs.readdirSync(billPath)
                     .filter(file => file.toLowerCase().endsWith('.pdf'))
                     .map(file => {
-                        // make the document name more human-readable?
+                        // Format filename for display
                         let name = file.replace(/\.pdf$/i, '');
-                        const matches = file.match(/([A-Z]+\d+)\.(\d+)\.(\d+)_(.+)\.pdf/i);
+
+                        // Apply regex for better naming
+                        const matches = file.match(/([A-Z]{2})0*(\d+)((?:\.\d+)+(?:\.[A-Z]\.\d+)*)_[^_]+_(final-\w+)(?:\.pdf)?/i);
                         if (matches) {
-                            const [_, billCode, major, minor, description] = matches;
-                            name = `Version ${major}.${minor}: ${description.replace(/-/g, ' ')}`;
+                            const [_, prefix, billNum, versionInfo, finalType] = matches;
+                            name = `${prefix}-${billNum}${versionInfo} (${finalType})`;
                         }
 
                         return {
