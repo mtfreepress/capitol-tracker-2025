@@ -240,7 +240,7 @@ const Bill = ({ title, identifier, chamber, status, explanation, textUrl, fiscal
         isOpen={isAmendmentsModalOpen}
         onClose={() => setIsAmendmentsModalOpen(false)}
         documents={amendments}
-        title={`Amendments for ${identifier}`}
+        title={`Proposed amendments for ${identifier}`}
       />
     </>
   );

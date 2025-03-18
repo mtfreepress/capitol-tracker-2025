@@ -203,7 +203,7 @@ const BillInfo = ({ bill }) => {
                 onClose={() => setIsModalOpen(false)}
                 documents={documents}
                 isLoading={isLoading}
-                title={`Amendments for ${bill.identifier}`}
+                title={`Proposed amendments for ${bill.identifier}`}
             />
         </div>
     );
