@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "node scripts/generate-document-index.js && next dev",
+    "build": "node scripts/generate-document-index.js && next build",
+    "generate-docs": "node scripts/generate-document-index.js",
     "start": "next start",
     "lint": "next lint",
     "sitemap": "next-sitemap"

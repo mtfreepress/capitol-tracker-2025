@@ -23,6 +23,9 @@ export const lawmakerUrl = name => name.replace(/\s/g, '-') // These have capita
 export const committeeUrl = name => name.replace(/\s/g, '-').replace(/,/g, '').toLowerCase()
 export const urlize = text => text.replace(/'/g, '').replace(/\s/g, '-').toLowerCase()
 
+// Documents
+let documentIndexCache = null;
+
 
 // Misc
 export const parseDate = timeParse('%Y-%m-%d')
@@ -74,6 +77,30 @@ export async function fetchBillsWithAmendments() {
     return text.trim().split('\n');
   } catch (error) {
     console.error('Error fetching bills with amendments:', error);
+    return [];
+  }
+}
+
+export async function fetchDocumentList(type, billId) {
+  try {
+    // convert bill format to match the document index (ie HB 123 -> HB-123)
+    const formattedBillId = billId.replace(' ', '-');
+
+    // use cached index
+    if (!documentIndexCache) {
+      const response = await fetch('/capitol-tracker-2025/document-index.json');
+
+      if (!response.ok) {
+        throw new Error('Document index not found');
+      }
+
+      documentIndexCache = await response.json();
+    }
+
+    // return docs for bill or empty array if no docs
+    return documentIndexCache[type]?.[formattedBillId] || [];
+  } catch (error) {
+    console.error(`Error fetching ${type} documents:`, error);
     return [];
   }
 }
