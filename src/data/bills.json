@@ -5148,9 +5148,9 @@
         "lcIdentifier": "LC0027",
         "type": "joint resolution",
         "status": {
-            "key": "In First House--Introduced",
-            "step": "First chamber",
-            "label": "Introduced",
+            "key": "In Second House Committee--Nontabled",
+            "step": "Second chamber",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -26887,8 +26887,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Each House",
         "voteRequirements": [
-            "SIMPLE",
-            "TWO_THIRDS"
+            "TWO_THIRDS",
+            "SIMPLE"
         ],
         "subjects": [
             "State/Other Government Levels, Immunity From Suit",
@@ -27591,9 +27591,9 @@
         "lcIdentifier": "LC2492",
         "type": "senate bill",
         "status": {
-            "key": "Transmitted to Second House",
+            "key": "In Second House Committee--Nontabled",
             "step": "Second chamber",
-            "label": "Transmitted",
+            "label": "In committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -28676,7 +28676,7 @@
         "tags": [],
         "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1507?open_tab=sum",
         "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1507?open_tab=bill",
-        "fiscalNoteUrl": null,
+        "fiscalNoteUrl": "/bills/fiscal-note/sb-333",
         "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC1507?open_tab=amend",
         "legalNoteUrl": null,
         "vetoMemoUrl": null,
@@ -55020,9 +55020,9 @@
         "lcIdentifier": "LC3693",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
+            "key": "In First House--Introduced",
             "step": "First chamber",
-            "label": "In committee",
+            "label": "Introduced",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -55108,9 +55108,9 @@
         "lcIdentifier": "LC0754",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
+            "key": "In First House--Introduced",
             "step": "First chamber",
-            "label": "In committee",
+            "label": "Introduced",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -55192,9 +55192,9 @@
         "lcIdentifier": "LC4230",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
+            "key": "In First House--Introduced",
             "step": "First chamber",
-            "label": "In committee",
+            "label": "Introduced",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -55275,9 +55275,9 @@
         "lcIdentifier": "LC1119",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
+            "key": "In First House--Introduced",
             "step": "First chamber",
-            "label": "In committee",
+            "label": "Introduced",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -56393,8 +56393,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "TWO_THIRDS_LEGISLATURE",
-            "SIMPLE"
+            "SIMPLE",
+            "TWO_THIRDS_LEGISLATURE"
         ],
         "subjects": [
             "Elections  (see also: Ballot Issues)",
@@ -56466,8 +56466,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "TWO_THIRDS_LEGISLATURE",
-            "SIMPLE"
+            "SIMPLE",
+            "TWO_THIRDS_LEGISLATURE"
         ],
         "subjects": [
             "Elections  (see also: Ballot Issues)",
@@ -58740,8 +58740,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "TWO_THIRDS_LEGISLATURE",
-            "SIMPLE"
+            "SIMPLE",
+            "TWO_THIRDS_LEGISLATURE"
         ],
         "subjects": [
             "Family Law  (see also: Minors)",
@@ -61973,10 +61973,10 @@
         "lcIdentifier": "LC2565",
         "type": "house bill",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
+            "key": "In First House--Through 2nd Reading",
+            "step": "First chamber",
+            "label": "Passed second reading vote",
+            "status": "live",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -61995,8 +61995,8 @@
             {
                 "step": "first chamber",
                 "status": "current",
-                "statusLabel": "Pending",
-                "statusDate": null
+                "statusLabel": "Passed preliminary floor vote",
+                "statusDate": "03/18/2025"
             },
             {
                 "step": "second chamber",
@@ -69767,9 +69767,9 @@
         "lcIdentifier": "LC0113",
         "type": "house bill",
         "status": {
-            "key": "In Second House Committee--Nontabled",
+            "key": "In Second House--Out of Committee",
             "step": "Second chamber",
-            "label": "In committee",
+            "label": "On floor",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -73317,9 +73317,9 @@
         "lcIdentifier": "LC0460",
         "type": "house bill",
         "status": {
-            "key": "In First House Committee--Nontabled",
+            "key": "In First House--Out of Committee",
             "step": "First chamber",
-            "label": "In committee",
+            "label": "Out of committee",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -88149,10 +88149,10 @@
         "lcIdentifier": "LC0209",
         "type": "house bill",
         "status": {
-            "key": "Probably Dead",
-            "label": "",
-            "step": "Failed",
-            "status": "stalled",
+            "key": "In Second House--Through 2nd Reading",
+            "step": "Second chamber",
+            "label": "Passed 2nd reading vote",
+            "status": "live",
             "statusAtSessionEnd": "failed"
         },
         "progress": [
@@ -88177,8 +88177,8 @@
             {
                 "step": "second chamber",
                 "status": "current",
-                "statusLabel": "Pending",
-                "statusDate": null
+                "statusLabel": "Passed preliminary vote",
+                "statusDate": "03/18/2025"
             },
             {
                 "step": "reconciliation",
@@ -91016,8 +91016,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "TWO_THIRDS_LEGISLATURE",
-            "SIMPLE"
+            "SIMPLE",
+            "TWO_THIRDS_LEGISLATURE"
         ],
         "subjects": [
             "Constitutional Amendment Proposals",
@@ -99680,9 +99680,9 @@
         "lcIdentifier": "LC0234",
         "type": "house bill",
         "status": {
-            "key": "In Second House Committee--Nontabled",
+            "key": "In Second House--Out of Committee",
             "step": "Second chamber",
-            "label": "In committee",
+            "label": "On floor",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -104928,8 +104928,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "TWO_THIRDS_LEGISLATURE",
-            "SIMPLE"
+            "SIMPLE",
+            "TWO_THIRDS_LEGISLATURE"
         ],
         "subjects": [
             "Abortion",
@@ -109579,9 +109579,9 @@
         "lcIdentifier": "LC3854",
         "type": "house bill",
         "status": {
-            "key": "In Second House Committee--Nontabled",
+            "key": "In Second House--Out of Committee",
             "step": "Second chamber",
-            "label": "In committee",
+            "label": "On floor",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -117372,9 +117372,9 @@
         "lcIdentifier": "LC0039",
         "type": "house bill",
         "status": {
-            "key": "In Second House Committee--Nontabled",
+            "key": "In Second House--Out of Committee",
             "step": "Second chamber",
-            "label": "In committee",
+            "label": "On floor",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -120435,9 +120435,9 @@
         "lcIdentifier": "LC2532",
         "type": "house bill",
         "status": {
-            "key": "In Second House Committee--Nontabled",
+            "key": "In Second House--Out of Committee",
             "step": "Second chamber",
-            "label": "In committee",
+            "label": "On floor",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
@@ -122035,9 +122035,9 @@
         "lcIdentifier": "LC2251",
         "type": "house bill",
         "status": {
-            "key": "In Second House Committee--Nontabled",
+            "key": "In Second House--Out of Committee",
             "step": "Second chamber",
-            "label": "In committee",
+            "label": "On floor",
             "status": "live",
             "statusAtSessionEnd": "failed"
         },
