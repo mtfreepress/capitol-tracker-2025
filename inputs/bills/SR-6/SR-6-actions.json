@@ -325,16 +325,30 @@
         "id": "SR6-0017",
         "bill": "SR 6",
         "date": "03/18/2025",
-        "description": "2nd Reading Passed",
+        "description": "Sent to Enrolling",
         "possession": "Senate",
         "committee": "undefined",
         "actionUrl": null,
         "recordings": [],
         "transcriptUrl": null,
-        "key": "2nd Reading Passed",
+        "key": "Sent to Enrolling",
+        "committeeHearingTime": null,
+        "vote": null
+    },
+    {
+        "id": "SR6-0018",
+        "bill": "SR 6",
+        "date": "03/18/2025",
+        "description": "Resolution Adopted",
+        "possession": "Senate",
+        "committee": "undefined",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Resolution Adopted",
         "committeeHearingTime": null,
         "vote": {
-            "action": "SR6-0017",
+            "action": "SR6-0018",
             "bill": "SR 6",
             "date": "03/18/2025",
             "type": "committee",
@@ -342,7 +356,7 @@
             "voteChamber": "senate",
             "voteUrl": null,
             "session": "2",
-            "motion": "2nd Reading Passed",
+            "motion": "Resolution Adopted",
             "thresholdRequired": "simple",
             "count": {
                 "Y": 47,
@@ -768,19 +782,5 @@
                 }
             ]
         }
-    },
-    {
-        "id": "SR6-0018",
-        "bill": "SR 6",
-        "date": "03/18/2025",
-        "description": "Sent to Enrolling",
-        "possession": "Senate",
-        "committee": "undefined",
-        "actionUrl": null,
-        "recordings": [],
-        "transcriptUrl": null,
-        "key": "Sent to Enrolling",
-        "committeeHearingTime": null,
-        "vote": null
     }
 ]
