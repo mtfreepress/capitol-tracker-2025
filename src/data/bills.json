@@ -26887,8 +26887,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Each House",
         "voteRequirements": [
-            "SIMPLE",
-            "TWO_THIRDS"
+            "TWO_THIRDS",
+            "SIMPLE"
         ],
         "subjects": [
             "State/Other Government Levels, Immunity From Suit",
@@ -55156,6 +55156,91 @@
         "isOnCalendar": true
     },
     {
+        "key": "hb-838",
+        "identifier": "HB 838",
+        "identifierLong": "House Bill 838",
+        "chamber": "house",
+        "title": "Allow supreme court justices to use partisan affiliation",
+        "session": "2",
+        "lcIdentifier": "LC2372",
+        "type": "house bill",
+        "status": {
+            "key": "In First House--Introduced",
+            "step": "First chamber",
+            "label": "Introduced",
+            "status": "live",
+            "statusAtSessionEnd": "failed"
+        },
+        "progress": [
+            {
+                "step": "introduced",
+                "status": "passed",
+                "statusLabel": "Introduced",
+                "statusDate": "03/18/2025"
+            },
+            {
+                "step": "first committee",
+                "status": "current",
+                "statusLabel": "Pending",
+                "statusDate": null
+            },
+            {
+                "step": "first chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "second chamber",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "reconciliation",
+                "status": "skipped",
+                "statusLabel": null,
+                "statusDate": null
+            },
+            {
+                "step": "governor",
+                "status": "future",
+                "statusLabel": null,
+                "statusDate": null
+            }
+        ],
+        "hasBeenSentToGovernor": false,
+        "sponsor": {
+            "name": "Brandon Ler",
+            "party": "R",
+            "locale": "Savage",
+            "district": "HD 33"
+        },
+        "requestor": "Steve Fitzpatrick",
+        "deadlineCategory": "undefined",
+        "transmittalDeadline": "undefined",
+        "secondHouseReturnIfAmendedDeadline": "undefined",
+        "voteMajorityRequired": "Simple",
+        "voteRequirements": [
+            "SIMPLE"
+        ],
+        "subjects": [
+            "Judges and Justices  (see also: Courts)",
+            "Elections  (see also: Ballot Issues)",
+            "Appropriations  (see also: State Finance)"
+        ],
+        "tags": [],
+        "lawsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2372?open_tab=sum",
+        "textUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2372?open_tab=bill",
+        "fiscalNoteUrl": null,
+        "amendmentsUrl": "https://bills.legmt.gov/#/laws/bill/2/LC2372?open_tab=amend",
+        "legalNoteUrl": null,
+        "vetoMemoUrl": null,
+        "articles": [],
+        "numArticles": 0,
+        "isOnCalendar": false
+    },
+    {
         "key": "hb-837",
         "identifier": "HB 837",
         "identifierLong": "House Bill 837",
@@ -56623,8 +56708,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "TWO_THIRDS_LEGISLATURE",
-            "SIMPLE"
+            "SIMPLE",
+            "TWO_THIRDS_LEGISLATURE"
         ],
         "subjects": [
             "Elections  (see also: Ballot Issues)",
@@ -56696,8 +56781,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "TWO_THIRDS_LEGISLATURE",
-            "SIMPLE"
+            "SIMPLE",
+            "TWO_THIRDS_LEGISLATURE"
         ],
         "subjects": [
             "Elections  (see also: Ballot Issues)",
@@ -58663,9 +58748,9 @@
         "lcIdentifier": "LC0531",
         "type": "house bill",
         "status": {
-            "key": "Passed By Legislature--Enrolling and Final Preparation Process",
-            "step": "Through Legislature",
-            "label": "Passed both chambers",
+            "key": "Transmitted to Governor",
+            "step": "Governor",
+            "label": "Before governor",
             "status": "live",
             "statusAtSessionEnd": "pending, passed legislature"
         },
@@ -58707,7 +58792,7 @@
                 "statusDate": null
             }
         ],
-        "hasBeenSentToGovernor": false,
+        "hasBeenSentToGovernor": true,
         "sponsor": {
             "name": "Randyn Gregg",
             "party": "R",
@@ -58970,8 +59055,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "TWO_THIRDS_LEGISLATURE",
-            "SIMPLE"
+            "SIMPLE",
+            "TWO_THIRDS_LEGISLATURE"
         ],
         "subjects": [
             "Family Law  (see also: Minors)",
@@ -59673,9 +59758,9 @@
         "lcIdentifier": "LC0535",
         "type": "house bill",
         "status": {
-            "key": "Passed By Legislature--Enrolling and Final Preparation Process",
-            "step": "Through Legislature",
-            "label": "Passed both chambers",
+            "key": "Transmitted to Governor",
+            "step": "Governor",
+            "label": "Before governor",
             "status": "live",
             "statusAtSessionEnd": "pending, passed legislature"
         },
@@ -59717,7 +59802,7 @@
                 "statusDate": null
             }
         ],
-        "hasBeenSentToGovernor": false,
+        "hasBeenSentToGovernor": true,
         "sponsor": {
             "name": "Curtis Cochran",
             "party": "R",
@@ -63377,9 +63462,9 @@
         "lcIdentifier": "LC0233",
         "type": "house bill",
         "status": {
-            "key": "Passed By Legislature--Enrolling and Final Preparation Process",
-            "step": "Through Legislature",
-            "label": "Passed both chambers",
+            "key": "Transmitted to Governor",
+            "step": "Governor",
+            "label": "Before governor",
             "status": "live",
             "statusAtSessionEnd": "pending, passed legislature"
         },
@@ -63421,7 +63506,7 @@
                 "statusDate": null
             }
         ],
-        "hasBeenSentToGovernor": false,
+        "hasBeenSentToGovernor": true,
         "sponsor": {
             "name": "Steve Gist",
             "party": "R",
@@ -66138,9 +66223,9 @@
         "lcIdentifier": "LC0278",
         "type": "house bill",
         "status": {
-            "key": "Passed By Legislature--Enrolling and Final Preparation Process",
-            "step": "Through Legislature",
-            "label": "Passed both chambers",
+            "key": "Transmitted to Governor",
+            "step": "Governor",
+            "label": "Before governor",
             "status": "live",
             "statusAtSessionEnd": "pending, passed legislature"
         },
@@ -66182,7 +66267,7 @@
                 "statusDate": null
             }
         ],
-        "hasBeenSentToGovernor": false,
+        "hasBeenSentToGovernor": true,
         "sponsor": {
             "name": "Brad Barker",
             "party": "R",
@@ -71826,9 +71911,9 @@
         "lcIdentifier": "LC0281",
         "type": "house bill",
         "status": {
-            "key": "Passed By Legislature--Enrolling and Final Preparation Process",
-            "step": "Through Legislature",
-            "label": "Passed both chambers",
+            "key": "Transmitted to Governor",
+            "step": "Governor",
+            "label": "Before governor",
             "status": "live",
             "statusAtSessionEnd": "pending, passed legislature"
         },
@@ -71870,7 +71955,7 @@
                 "statusDate": null
             }
         ],
-        "hasBeenSentToGovernor": false,
+        "hasBeenSentToGovernor": true,
         "sponsor": {
             "name": "Pete Elverum",
             "party": "D",
@@ -74643,9 +74728,9 @@
         "lcIdentifier": "LC0275",
         "type": "house bill",
         "status": {
-            "key": "Passed By Legislature--Enrolling and Final Preparation Process",
-            "step": "Through Legislature",
-            "label": "Passed both chambers",
+            "key": "Transmitted to Governor",
+            "step": "Governor",
+            "label": "Before governor",
             "status": "live",
             "statusAtSessionEnd": "pending, passed legislature"
         },
@@ -74687,7 +74772,7 @@
                 "statusDate": null
             }
         ],
-        "hasBeenSentToGovernor": false,
+        "hasBeenSentToGovernor": true,
         "sponsor": {
             "name": "Julie Darling",
             "party": "R",
@@ -76610,9 +76695,9 @@
         "lcIdentifier": "LC0273",
         "type": "house bill",
         "status": {
-            "key": "Passed By Legislature--Enrolling and Final Preparation Process",
-            "step": "Through Legislature",
-            "label": "Passed both chambers",
+            "key": "Transmitted to Governor",
+            "step": "Governor",
+            "label": "Before governor",
             "status": "live",
             "statusAtSessionEnd": "pending, passed legislature"
         },
@@ -76654,7 +76739,7 @@
                 "statusDate": null
             }
         ],
-        "hasBeenSentToGovernor": false,
+        "hasBeenSentToGovernor": true,
         "sponsor": {
             "name": "Gary Parry",
             "party": "R",
@@ -83528,9 +83613,9 @@
         "lcIdentifier": "LC0272",
         "type": "house bill",
         "status": {
-            "key": "Passed By Legislature--Enrolling and Final Preparation Process",
-            "step": "Through Legislature",
-            "label": "Passed both chambers",
+            "key": "Transmitted to Governor",
+            "step": "Governor",
+            "label": "Before governor",
             "status": "live",
             "statusAtSessionEnd": "pending, passed legislature"
         },
@@ -83572,7 +83657,7 @@
                 "statusDate": null
             }
         ],
-        "hasBeenSentToGovernor": false,
+        "hasBeenSentToGovernor": true,
         "sponsor": {
             "name": "Gary Parry",
             "party": "R",
@@ -86654,8 +86739,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "TWO_THIRDS_LEGISLATURE",
-            "SIMPLE"
+            "SIMPLE",
+            "TWO_THIRDS_LEGISLATURE"
         ],
         "subjects": [
             "Constitutional Amendment Proposals",
@@ -86731,8 +86816,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "TWO_THIRDS_LEGISLATURE",
-            "SIMPLE"
+            "SIMPLE",
+            "TWO_THIRDS_LEGISLATURE"
         ],
         "subjects": [
             "Constitutional Amendment Proposals",
@@ -91246,8 +91331,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "TWO_THIRDS_LEGISLATURE",
-            "SIMPLE"
+            "SIMPLE",
+            "TWO_THIRDS_LEGISLATURE"
         ],
         "subjects": [
             "Constitutional Amendment Proposals",
@@ -93153,9 +93238,9 @@
         "lcIdentifier": "LC0320",
         "type": "house bill",
         "status": {
-            "key": "Passed By Legislature--Enrolling and Final Preparation Process",
-            "step": "Through Legislature",
-            "label": "Passed both chambers",
+            "key": "Transmitted to Governor",
+            "step": "Governor",
+            "label": "Before governor",
             "status": "live",
             "statusAtSessionEnd": "pending, passed legislature"
         },
@@ -93197,7 +93282,7 @@
                 "statusDate": null
             }
         ],
-        "hasBeenSentToGovernor": false,
+        "hasBeenSentToGovernor": true,
         "sponsor": {
             "name": "Denise Baum",
             "party": "D",
@@ -94078,9 +94163,9 @@
         "lcIdentifier": "LC0171",
         "type": "house bill",
         "status": {
-            "key": "Passed By Legislature--Enrolling and Final Preparation Process",
-            "step": "Through Legislature",
-            "label": "Passed both chambers",
+            "key": "Transmitted to Governor",
+            "step": "Governor",
+            "label": "Before governor",
             "status": "live",
             "statusAtSessionEnd": "pending, passed legislature"
         },
@@ -94122,7 +94207,7 @@
                 "statusDate": null
             }
         ],
-        "hasBeenSentToGovernor": false,
+        "hasBeenSentToGovernor": true,
         "sponsor": {
             "name": "Denise Baum",
             "party": "D",
@@ -98976,9 +99061,9 @@
         "lcIdentifier": "LC0235",
         "type": "house bill",
         "status": {
-            "key": "Passed By Legislature--Enrolling and Final Preparation Process",
-            "step": "Through Legislature",
-            "label": "Passed both chambers",
+            "key": "Transmitted to Governor",
+            "step": "Governor",
+            "label": "Before governor",
             "status": "live",
             "statusAtSessionEnd": "pending, passed legislature"
         },
@@ -99020,7 +99105,7 @@
                 "statusDate": null
             }
         ],
-        "hasBeenSentToGovernor": false,
+        "hasBeenSentToGovernor": true,
         "sponsor": {
             "name": "Greg Oblander",
             "party": "R",
@@ -105158,8 +105243,8 @@
         "secondHouseReturnIfAmendedDeadline": "undefined",
         "voteMajorityRequired": "2/3 of Entire Legislature",
         "voteRequirements": [
-            "TWO_THIRDS_LEGISLATURE",
-            "SIMPLE"
+            "SIMPLE",
+            "TWO_THIRDS_LEGISLATURE"
         ],
         "subjects": [
             "Abortion",
@@ -117263,9 +117348,9 @@
         "lcIdentifier": "LC0417",
         "type": "house bill",
         "status": {
-            "key": "Passed By Legislature--Enrolling and Final Preparation Process",
-            "step": "Through Legislature",
-            "label": "Passed both chambers",
+            "key": "Transmitted to Governor",
+            "step": "Governor",
+            "label": "Before governor",
             "status": "live",
             "statusAtSessionEnd": "pending, passed legislature"
         },
@@ -117307,7 +117392,7 @@
                 "statusDate": null
             }
         ],
-        "hasBeenSentToGovernor": false,
+        "hasBeenSentToGovernor": true,
         "sponsor": {
             "name": "Bill Mercer",
             "party": "R",
