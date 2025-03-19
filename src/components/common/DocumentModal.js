@@ -41,9 +41,17 @@ const closeButtonCss = css`
   cursor: pointer;
   padding: 0.25rem 0.5rem;
   color: #777;
+  outline: none;
   
   &:hover {
-    color: #333;
+    color: #ce5a00;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
+  
+  &:focus {
+    outline: none;
   }
 `;
 
@@ -66,9 +74,9 @@ const documentListCss = css`
     a {
       display: flex;
       align-items: center;
-      text-decoration: underline;
-      // color: #444;
-      font-size: 0.9rem;
+      text-decoration: bold;
+      font-size: .95rem;
+      font-family: futura-pt, Arial, Helvetica, sans-serif;
       
       svg, .icon {
         margin-right: 0.5rem;
@@ -76,7 +84,7 @@ const documentListCss = css`
       }
       
       &:hover {
-        color: #AE9864;
+        text-decoration: underline;
       }
     }
   }
@@ -95,39 +103,39 @@ const noDocumentsCss = css`
 `;
 
 const DocumentModal = ({ isOpen, onClose, documents, title = "Documents", isLoading = false }) => {
-    if (!isOpen) return null;
+  if (!isOpen) return null;
 
-    return (
-        <div css={modalOverlayCss} onClick={onClose}>
-            <div css={modalContentCss} onClick={(e) => e.stopPropagation()}>
-                <div css={modalHeaderCss}>
-                    <h3>{title}</h3>
-                    <button css={closeButtonCss} onClick={onClose}>×</button>
-                </div>
-
-                {isLoading ? (
-                    <div css={loadingCss}>
-                        Loading documents...
-                    </div>
-                ) : documents.length === 0 ? (
-                    <div css={noDocumentsCss}>
-                        No documents available
-                    </div>
-                ) : (
-                    <ul css={documentListCss}>
-                        {documents.map((doc, index) => (
-                            <li key={index}>
-                                <a href={doc.url} target="_blank" rel="noopener noreferrer">
-                                    <span className="icon">📄</span>
-                                    {doc.name}
-                                </a>
-                            </li>
-                        ))}
-                    </ul>
-                )}
-            </div>
+  return (
+    <div css={modalOverlayCss} onClick={onClose}>
+      <div css={modalContentCss} onClick={(e) => e.stopPropagation()}>
+        <div css={modalHeaderCss}>
+          <h3>{title}</h3>
+          <button css={closeButtonCss} onClick={onClose}>×</button>
         </div>
-    );
+
+        {isLoading ? (
+          <div css={loadingCss}>
+            Loading documents...
+          </div>
+        ) : documents.length === 0 ? (
+          <div css={noDocumentsCss}>
+            No documents available
+          </div>
+        ) : (
+          <ul css={documentListCss}>
+            {documents.map((doc, index) => (
+              <li key={index}>
+                <a href={doc.url} target="_blank" rel="noopener noreferrer">
+                  <span className="icon">📄</span>
+                  {doc.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+    </div>
+  );
 };
 
 export default DocumentModal;
