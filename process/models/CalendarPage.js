@@ -28,7 +28,7 @@ export default class CalendarPage {
         const canceledHearings = actions
             .filter(action => action.data.description === "Hearing Canceled")
             .reduce((map, action) => {
-                // Create a unique key for this hearing
+                // create unique key for hearing
                 const key = `${action.data.bill}|${action.data.committee}|${action.data.committeeHearingTime}`;
                 map[key] = true;
                 return map;
@@ -38,11 +38,11 @@ export default class CalendarPage {
             // Skip the cancellation actions themselves - we'll use the map instead
             if (action.data.description === "Hearing Canceled") return acc;
 
-            // Check if this hearing has been canceled
+            // check if canceled by key
             if (action.data.committeeHearingTime && action.data.committee) {
                 const hearingKey = `${action.data.bill}|${action.data.committee}|${action.data.committeeHearingTime}`;
                 if (canceledHearings[hearingKey]) {
-                    // Skip this hearing as it was canceled
+                    // skip hearing if canceled
                     return acc;
                 }
             }
