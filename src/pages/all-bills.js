@@ -66,7 +66,7 @@ const AllBills = () => {
               {capitalize(group.type)}s ({group.bills.length}){" "}
               {i !== 0 && <Link className="top-link" href="/all-bills">&raquo; top of page</Link>}
             </h2>
-            <BillTable bills={group.bills} displayLimit={20} />
+            <BillTable bills={group.bills} displayLimit={1200} />
             {i === 0 && <NewsletterSignup />}
           </div>
         ))}
