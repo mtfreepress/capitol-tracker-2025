@@ -7,6 +7,7 @@ import ContactUs from "../components/ContactUs";
 import NewsletterSignup from "../components/NewsletterSignup";
 import { capitalize, numberFormat } from "../config/utils";
 import billsJson from "../data/bills.json";
+import TruncatedContainer from "../components/TruncatedContainer";
 const types = [
   "budget bill",
   "house bill",
@@ -65,7 +66,7 @@ const AllBills = () => {
               {capitalize(group.type)}s ({group.bills.length}){" "}
               {i !== 0 && <Link className="top-link" href="/all-bills">&raquo; top of page</Link>}
             </h2>
-            <BillTable bills={group.bills} displayLimit={1200} />
+            <BillTable bills={group.bills} displayLimit={20} />
             {i === 0 && <NewsletterSignup />}
           </div>
         ))}
