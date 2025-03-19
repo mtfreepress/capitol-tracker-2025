@@ -7,6 +7,7 @@ import ContactUs from "../components/ContactUs";
 import NewsletterSignup from "../components/NewsletterSignup";
 import { capitalize, numberFormat } from "../config/utils";
 import billsJson from "../data/bills.json";
+import TruncatedContainer from "../components/TruncatedContainer";
 const types = [
   "budget bill",
   "house bill",

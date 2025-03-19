@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { css } from '@emotion/react';
 import Link from 'next/link';
+import DocumentModal from './common/DocumentModal';
+import { fetchDocumentList } from '../config/utils';
 import { billStatusSymbols, billProgressStepLabels, statusColors, partyColors } from '../config/config';
 import { billUrl, lawmakerUrl, fetchBillsWithAmendments } from '../config/utils';
 
@@ -12,7 +14,7 @@ const BillTable = ({ bills, suppressCount, sortFunction = DEFAULT_SORT, displayL
   const [billsWithAmendments, setBillsWithAmendments] = useState([]);
 
   useEffect(() => {
-    // Fetch the list of bills with amendments when component mounts
+    // fetch the list of bills with amendments when component mounts
     const loadBillsWithAmendments = async () => {
       const amendmentsList = await fetchBillsWithAmendments();
       setBillsWithAmendments(amendmentsList);
@@ -153,6 +155,18 @@ const Bill = ({ title, identifier, chamber, status, explanation, textUrl, fiscal
   const statusColor = statusColors(status.status);
   const stepLabels = billProgressStepLabels(chamber);
 
+
+  const [isAmendmentsModalOpen, setIsAmendmentsModalOpen] = useState(false);
+  const [amendments, setAmendments] = useState([]);
+
+  const handleOpenAmendmentsModal = async (e) => {
+    e.preventDefault();
+    const amendmentsList = await fetchDocumentList('amendments', identifier);
+    setAmendments(amendmentsList);
+    setIsAmendmentsModalOpen(true);
+  };
+
+
   const progression = progress
     .filter(d => ['first committee', 'first chamber', 'second chamber', 'reconciliation', 'governor'].includes(d.step))
     .filter(d => {
@@ -170,58 +184,65 @@ const Bill = ({ title, identifier, chamber, status, explanation, textUrl, fiscal
     });
 
   return (
-    <tr css={tableRowCss} key={identifier}>
+    <>
+      <tr css={tableRowCss} key={identifier}>
 
-      <td css={tableBillCell}>
-        <Link href={`/bills/${billUrl(identifier)}`} passHref>
-          <span css={billCss}>
-            <span>📋</span> <span css={identifierCss}>{identifier}:</span> {title}
-          </span>
-        </Link>
-        <div css={billLabelCss}>{explanation}</div>
-        <div css={billInfoLineCss}>
-          {sponsor && (
-            <Link href={`/lawmakers/${lawmakerUrl(sponsor.name)}`} passHref>
-              <span css={billLinkCss}>
-                {sponsor.name} <span css={css`color: ${partyColors(sponsor.party)}; opacity: 0.8;`}>({sponsor.party})</span>
-              </span>
-            </Link>
-          )}
-          {textUrl && <a css={billLinkCss} href={textUrl} target="_blank" rel="noopener noreferrer">📃 Bill text</a>}
-          {fiscalNoteUrl && (
-            <Link href={fiscalNoteUrl} target="_blank" rel="noopener noreferrer">
-              <span css={billLinkCss}>💵 Fiscal note</span>
-            </Link>
-          )}
-          {legalNoteUrl && (
-            <Link href={legalNoteUrl} target="_blank" rel="noopener noreferrer">
-              <span css={billLinkCss}>🏛 Legal note</span>
-            </Link>
-          )}
-          {/* Only show amendments link if bill is in the amendments list */}
-          {hasAmendments && (
-            <a 
-              css={billLinkCss} 
-              href={amendmentsUrl || `/capitol-tracker-2025/amendments/${identifier.replace(' ', '-')}`} 
-              target="_blank" 
-              rel="noopener noreferrer"
-            >
-              🖍 Proposed amendments
-            </a>
-          )}
-          {vetoMemoUrl && <a css={billLinkCss} href={vetoMemoUrl} target="_blank" rel="noopener noreferrer">🚫 Veto memo</a>}
-          {(numArticles > 0) && (
-            <Link href={`/bills/${billUrl(identifier)}`} passHref>
-              <span css={billLinkCss}>📰 <strong>{numArticles}</strong> MTFP {pluralStory(numArticles)}</span>
-            </Link>
-          )}
-        </div>
-      </td>
+        <td css={tableBillCell}>
+          <Link href={`/bills/${billUrl(identifier)}`} passHref>
+            <span css={billCss}>
+              <span>📋</span> <span css={identifierCss}>{identifier}:</span> {title}
+            </span>
+          </Link>
+          <div css={billLabelCss}>{explanation}</div>
+          <div css={billInfoLineCss}>
+            {sponsor && (
+              <Link href={`/lawmakers/${lawmakerUrl(sponsor.name)}`} passHref>
+                <span css={billLinkCss}>
+                  {sponsor.name} <span css={css`color: ${partyColors(sponsor.party)}; opacity: 0.8;`}>({sponsor.party})</span>
+                </span>
+              </Link>
+            )}
+            {textUrl && <a css={billLinkCss} href={textUrl} target="_blank" rel="noopener noreferrer">📃 Bill text</a>}
+            {fiscalNoteUrl && (
+              <Link href={fiscalNoteUrl} target="_blank" rel="noopener noreferrer">
+                <span css={billLinkCss}>💵 Fiscal note</span>
+              </Link>
+            )}
+            {legalNoteUrl && (
+              <Link href={legalNoteUrl} target="_blank" rel="noopener noreferrer">
+                <span css={billLinkCss}>🏛 Legal note</span>
+              </Link>
+            )}
+            {/* Only show amendments link if bill is in the amendments list */}
+            {hasAmendments && (
+                <a
+                  css={billLinkCss}
+                  href="#"
+                  onClick={handleOpenAmendmentsModal}
+                >
+                  🖍 Proposed amendments
+                </a>
+            )}
+            {vetoMemoUrl && <a css={billLinkCss} href={vetoMemoUrl} target="_blank" rel="noopener noreferrer">🚫 Veto memo</a>}
+            {(numArticles > 0) && (
+              <Link href={`/bills/${billUrl(identifier)}`} passHref>
+                <span css={billLinkCss}>📰 <strong>{numArticles}</strong> MTFP {pluralStory(numArticles)}</span>
+              </Link>
+            )}
+          </div>
+        </td>
 
-      <td css={[statusColCss, css`border-left: 3px solid ${statusColor}`]}>
-        <div>{progression}</div>
-      </td>
-    </tr>
+        <td css={[statusColCss, css`border-left: 3px solid ${statusColor}`]}>
+          <div>{progression}</div>
+        </td>
+      </tr>
+      <DocumentModal
+        isOpen={isAmendmentsModalOpen}
+        onClose={() => setIsAmendmentsModalOpen(false)}
+        documents={amendments}
+        title={`Proposed amendments for ${identifier}`}
+      />
+    </>
   );
 }
 

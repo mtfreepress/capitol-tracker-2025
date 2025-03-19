@@ -23,8 +23,8 @@ const OUT_DIRS = {
     amendments: path.join(__dirname, '../../public/amendments')
 };
 
-const BILLS_WITH_AMENDMENTS_URL = 'https://raw.githubusercontent.com/mtfreepress/legislative-interface/refs/heads/main/interface/bills-with-amendments.txt';
-const BILLS_WITH_AMENDMENTS_OUTPUT = path.join(__dirname, '../../public/bills-with-amendments.txt');
+// const BILLS_WITH_AMENDMENTS_URL = 'https://raw.githubusercontent.com/mtfreepress/legislative-interface/refs/heads/main/interface/bills-with-amendments.txt';
+// const BILLS_WITH_AMENDMENTS_OUTPUT = path.join(__dirname, '../../public/bills-with-amendments.txt');
 
 const fetchJson = async (url) => {
     const headers = process.env.GITHUB_TOKEN ? {
@@ -85,17 +85,17 @@ const downloadFile = async (url, fileName, folderPath, clearBefore = true) => {
     // console.log(`Saved ${fileName} to ${outputPath}`);
 };
 
-const downloadTextFile = async (url, outputPath) => {
-    console.log(`Downloading text file from ${url}`);
-    const response = await fetch(url);
-    if (!response.ok) {
-        throw new Error(`Failed to fetch text file: ${url}, status: ${response.status}`);
-    }
+// const downloadTextFile = async (url, outputPath) => {
+//     console.log(`Downloading text file from ${url}`);
+//     const response = await fetch(url);
+//     if (!response.ok) {
+//         throw new Error(`Failed to fetch text file: ${url}, status: ${response.status}`);
+//     }
     
-    const text = await response.text();
-    await fs.writeFile(outputPath, text);
-    console.log(`Saved text file to ${outputPath}`);
-};
+//     const text = await response.text();
+//     await fs.writeFile(outputPath, text);
+//     console.log(`Saved text file to ${outputPath}`);
+// };
 
 const processNotes = async (type) => {
     console.log(`Processing ${type} updates...`);
@@ -178,7 +178,7 @@ const main = async () => {
         await processAmendments();
         
         // Download the bills-with-amendments.txt file
-        await downloadTextFile(BILLS_WITH_AMENDMENTS_URL, BILLS_WITH_AMENDMENTS_OUTPUT);
+        // await downloadTextFile(BILLS_WITH_AMENDMENTS_URL, BILLS_WITH_AMENDMENTS_OUTPUT);
         
         console.log("All downloads completed successfully");
     } catch (error) {
