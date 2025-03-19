@@ -106,6 +106,19 @@ if (documentIndex.amendments) {
     });
 }
 
+billsWithAmendments.sort((a, b) => {
+    // extract bill type and number (ie "HB 123" -> ["HB", "123"])
+    const [aType, aNumStr] = a.split(' ');
+    const [bType, bNumStr] = b.split(' ');
+
+    // alphabetical sort by bill type
+    if (aType !== bType) {
+        return aType.localeCompare(bType);
+    }
+    // sort by bill number
+    return parseInt(aNumStr, 10) - parseInt(bNumStr, 10);
+});
+
 // save simple text file to generate amendments to speed things up
 const billsWithAmendmentsPath = path.join(baseDir, 'bills-with-amendments.txt');
 fs.writeFileSync(
