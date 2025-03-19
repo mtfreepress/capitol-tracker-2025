@@ -8,6 +8,7 @@ const outputPath = path.join(baseDir, 'document-index.json');
 
 console.log('Generating document index...');
 const documentIndex = {};
+const billsWithAmendments = [];
 
 // iterate through each document type
 documentTypes.forEach(type => {
@@ -35,7 +36,7 @@ documentTypes.forEach(type => {
                         // format filename for display
                         let name = file.replace(/\.pdf$/i, '');
 
-                        // Extract any parenthetical suffixes like (1), (2) etc.
+                        // extract any parenthetical suffixes like (1), (2) etc.
                         const suffixMatch = file.match(/\((\d+)\)\.pdf$/i);
                         const suffix = suffixMatch ? `(${suffixMatch[1]})` : '';
 
@@ -48,7 +49,7 @@ documentTypes.forEach(type => {
                             if (sectionMatch) {
                                 const [_, prefix, billNum, major, minor, sectionLetter, amendNum, finalType] = sectionMatch;
 
-                                // Map section letters to names
+                                // map section letters to names
                                 const sectionMap = {
                                     'A': 'general-government',
                                     'B': 'health',
@@ -95,6 +96,25 @@ documentTypes.forEach(type => {
         documentIndex[type] = {};
     }
 });
+
+if (documentIndex.amendments) {
+    Object.keys(documentIndex.amendments).forEach(billId => {
+        if (documentIndex.amendments[billId].length > 0) {
+            // Convert from "HB-123" format to "HB 123" format for frontend use
+            billsWithAmendments.push(billId.replace('-', ' '));
+        }
+    });
+}
+
+// save simple text file to generate amendments to speed things up
+const billsWithAmendmentsPath = path.join(baseDir, 'bills-with-amendments.txt');
+fs.writeFileSync(
+    billsWithAmendmentsPath,
+    billsWithAmendments.join('\n'),
+    'utf8'
+);
+
+console.log(`Generated bills-with-amendments list with ${billsWithAmendments.length} bills`);
 
 // write to index file
 fs.writeFileSync(outputPath, JSON.stringify(documentIndex, null, 2));

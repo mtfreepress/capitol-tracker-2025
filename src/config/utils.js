@@ -24,7 +24,8 @@ export const urlize = text => text.replace(/'/g, '').replace(/\s/g, '-').toLower
 
 // Documents
 let documentIndexCache = null;
-let documentFetchPromise = null;
+let billsWithAmendmentsCache = null;
+let billsWithAmendmentsPromise = null;
 
 
 // Misc
@@ -70,47 +71,86 @@ export const listToText = (list) => {
   }
 }
 
+// export async function fetchBillsWithAmendments() {
+//   try {
+//     // Use existing cache if available
+//     if (documentIndexCache) {
+//       return extractBillsWithAmendments(documentIndexCache);
+//     }
+
+//     // Use existing promise if a fetch is already in progress
+//     if (!documentFetchPromise) {
+//       documentFetchPromise = fetch('/capitol-tracker-2025/document-index.json')
+//         .then(response => {
+//           if (!response.ok) throw new Error('Document index not found');
+//           return response.json();
+//         })
+//         .then(data => {
+//           documentIndexCache = data;
+//           documentFetchPromise = null;
+//           return data;
+//         })
+//         .catch(error => {
+//           console.error('Error loading document index:', error);
+//           documentFetchPromise = null;
+//           throw error;
+//         });
+//     }
+
+//     const data = await documentFetchPromise;
+//     return extractBillsWithAmendments(data);
+//   } catch (error) {
+//     console.error('Error determining bills with amendments:', error);
+//     return [];
+//   }
+// }
+
+// function extractBillsWithAmendments(data) {
+//   if (data?.amendments) {
+//     return Object.keys(data.amendments)
+//       .filter(billId => data.amendments[billId]?.length > 0)
+//       .map(billId => billId.replace('-', ' '));
+//   }
+//   return [];
+// }
+
 export async function fetchBillsWithAmendments() {
   try {
-    // Use existing cache if available
-    if (documentIndexCache) {
-      return extractBillsWithAmendments(documentIndexCache);
+    // Return cached result if available
+    if (billsWithAmendmentsCache) {
+      return billsWithAmendmentsCache;
     }
-
-    // Use existing promise if a fetch is already in progress
-    if (!documentFetchPromise) {
-      documentFetchPromise = fetch('/capitol-tracker-2025/document-index.json')
+    
+    // Reuse in-progress promise if exists
+    if (!billsWithAmendmentsPromise) {
+      billsWithAmendmentsPromise = fetch('/capitol-tracker-2025/bills-with-amendments.txt')
         .then(response => {
-          if (!response.ok) throw new Error('Document index not found');
-          return response.json();
+          if (!response.ok) {
+            throw new Error('Bills with amendments list not found');
+          }
+          return response.text();
         })
-        .then(data => {
-          documentIndexCache = data;
-          documentFetchPromise = null;
-          return data;
+        .then(text => {
+          const bills = text.split('\n').filter(line => line.trim().length > 0);
+          billsWithAmendmentsCache = bills;
+          return bills;
         })
         .catch(error => {
-          console.error('Error loading document index:', error);
-          documentFetchPromise = null;
-          throw error;
+          console.error('Error fetching bills with amendments:', error);
+          billsWithAmendmentsPromise = null; // Reset promise on error
+          return [];
+        })
+        .finally(() => {
+          // Clear the promise but keep the cache
+          billsWithAmendmentsPromise = null;
         });
     }
-
-    const data = await documentFetchPromise;
-    return extractBillsWithAmendments(data);
+    
+    return await billsWithAmendmentsPromise;
   } catch (error) {
-    console.error('Error determining bills with amendments:', error);
+    console.error('Error fetching bills with amendments:', error);
     return [];
   }
-}
-
-function extractBillsWithAmendments(data) {
-  if (data?.amendments) {
-    return Object.keys(data.amendments)
-      .filter(billId => data.amendments[billId]?.length > 0)
-      .map(billId => billId.replace('-', ' '));
-  }
-  return [];
 }
 
 export async function fetchDocumentList(type, billId) {
