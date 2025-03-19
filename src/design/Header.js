@@ -11,7 +11,8 @@ import { formatTimeLong } from '../config/utils';
 import '../styles/base.css';
 
 
-import headerBackground from "../../public/cap-tracker-background.png";
+// import headerBackground from "../../public/cap-tracker-background.png";
+import headerBackground from "../../public/cap-tracker-background.jpg";
 
 const title = '2025 Capitol Tracker';
 const subtitle = 'The lawmakers, bills and votes of the 69th Montana Legislature'; 

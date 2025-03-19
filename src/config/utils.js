@@ -25,6 +25,7 @@ export const urlize = text => text.replace(/'/g, '').replace(/\s/g, '-').toLower
 
 // Documents
 let documentIndexCache = null;
+let documentFetchPromise = null;
 
 
 // Misc
@@ -72,13 +73,45 @@ export const listToText = (list) => {
 
 export async function fetchBillsWithAmendments() {
   try {
-    const response = await fetch('/capitol-tracker-2025/bills-with-amendments.txt');
-    const text = await response.text();
-    return text.trim().split('\n');
+    // Use existing cache if available
+    if (documentIndexCache) {
+      return extractBillsWithAmendments(documentIndexCache);
+    }
+
+    // Use existing promise if a fetch is already in progress
+    if (!documentFetchPromise) {
+      documentFetchPromise = fetch('/capitol-tracker-2025/document-index.json')
+        .then(response => {
+          if (!response.ok) throw new Error('Document index not found');
+          return response.json();
+        })
+        .then(data => {
+          documentIndexCache = data;
+          documentFetchPromise = null;
+          return data;
+        })
+        .catch(error => {
+          console.error('Error loading document index:', error);
+          documentFetchPromise = null;
+          throw error;
+        });
+    }
+
+    const data = await documentFetchPromise;
+    return extractBillsWithAmendments(data);
   } catch (error) {
-    console.error('Error fetching bills with amendments:', error);
+    console.error('Error determining bills with amendments:', error);
     return [];
   }
+}
+
+function extractBillsWithAmendments(data) {
+  if (data?.amendments) {
+    return Object.keys(data.amendments)
+      .filter(billId => data.amendments[billId]?.length > 0)
+      .map(billId => billId.replace('-', ' '));
+  }
+  return [];
 }
 
 export async function fetchDocumentList(type, billId) {

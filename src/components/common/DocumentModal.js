@@ -66,8 +66,8 @@ const documentListCss = css`
     a {
       display: flex;
       align-items: center;
-      text-decoration: none;
-      color: #444;
+      text-decoration: underline;
+      // color: #444;
       font-size: 0.9rem;
       
       svg, .icon {

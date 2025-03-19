@@ -32,12 +32,16 @@ documentTypes.forEach(type => {
                 const files = fs.readdirSync(billPath)
                     .filter(file => file.toLowerCase().endsWith('.pdf'))
                     .map(file => {
-                        // Format filename for display
+                        // format filename for display
                         let name = file.replace(/\.pdf$/i, '');
 
-                        // Special handling for HB-2 with section letters
+                        // Extract any parenthetical suffixes like (1), (2) etc.
+                        const suffixMatch = file.match(/\((\d+)\)\.pdf$/i);
+                        const suffix = suffixMatch ? `(${suffixMatch[1]})` : '';
+
+                        // special handling for HB-2 with section letters
                         if (billDir === 'HB-2') {
-                            // Pattern to match HB-2 amendment files with section codes
+                            // pattern to match HB-2 amendment files with section codes
                             const sectionPattern = /([A-Z]{2})0*(\d+)\.(\d+)\.(\d+)\.([A-Z])\.(\d+)_[^_]+_(final-\w+)(?:\.pdf)?/i;
                             const sectionMatch = file.match(sectionPattern);
 
@@ -52,13 +56,15 @@ documentTypes.forEach(type => {
                                     'D': 'public-safety',
                                     'E': 'k-12-education',
                                     'F': 'long-range',
-                                    'O': 'other'
+                                    // Might be `Office of Budget and Program Planning`? 
+                                    // TODO: Find out what this is
+                                    // 'O': 'other'
                                 };
 
                                 const sectionName = sectionMap[sectionLetter.toUpperCase()] || sectionLetter;
 
-                                // FIX: Remove "final-" prefix since it's already in finalType
-                                name = `${prefix}-${billNum}.${major}.${minor}.${amendNum}.${sectionName}.${finalType}`;
+                                // Add suffix to name if it exists
+                                name = `${prefix}-${billNum}.${major}.${minor}.${amendNum}.${sectionName}.${finalType}${suffix}`;
 
                                 return {
                                     name: name,
@@ -71,7 +77,8 @@ documentTypes.forEach(type => {
                         const matches = file.match(/([A-Z]{2})0*(\d+)((?:\.\d+)+(?:\.[A-Z]\.\d+)*)_[^_]+_(final-\w+)(?:\.pdf)?/i);
                         if (matches) {
                             const [_, prefix, billNum, versionInfo, finalType] = matches;
-                            name = `${prefix}-${billNum}${versionInfo}.${finalType}`;
+                            // Add suffix to the name
+                            name = `${prefix}-${billNum}${versionInfo}.${finalType}${suffix}`;
                         }
 
                         return {
