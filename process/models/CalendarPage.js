@@ -35,7 +35,6 @@ export default class CalendarPage {
             }, {});
 
         const dateMap = actions.reduce((acc, action) => {
-            // Skip the cancellation actions themselves - we'll use the map instead
             if (action.data.description === "Hearing Canceled") return acc;
 
             // check if canceled by key
