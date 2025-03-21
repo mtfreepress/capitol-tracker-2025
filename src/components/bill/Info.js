@@ -87,7 +87,7 @@ const BillInfo = ({ bill }) => {
                 <div css={sponsorCss}>
                     Sponsor: <LawmakerInline lawmaker={sponsor} />
                     {/* TODO: Put back when requestor logic is fixed */}
-                    {/* {requestor && <span>| Requestor: {requestor}</span>} */}
+                    {requestor && <span>| Requester: {requestor}</span>}
                 </div>
 
                 <div css={infoRowCss}>
