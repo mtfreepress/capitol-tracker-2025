@@ -17,7 +17,7 @@
     "legalNoteUrl": null,
     "amendmentListUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0713?open_tab=amend",
     "draftRequestor": null,
-    "billRequestor": "Office of Budget and Program Planning by Legislative Council",
+    "billRequestor": "Error: Expecting value: line 1 column 1 (char 0)",
     "primarySponsor": "John Fitzpatrick",
     "subjects": [
         {
@@ -47,9 +47,9 @@
         }
     ],
     "voteRequirements": [
-        "TWO_THIRDS",
         "THREE_FOURTHS",
-        "SIMPLE"
+        "SIMPLE",
+        "TWO_THIRDS"
     ],
     "deadlineCategory": "undefined",
     "transmittalDeadline": "undefined",
