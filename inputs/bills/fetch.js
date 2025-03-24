@@ -60,9 +60,7 @@ const downloadFile = async (url, fileName, folderPath) => {
 
 const main = async () => {
     try {
-        console.time('Fetch Bill List');
         const billList = await fetchJson(BILL_LIST_URL);
-        console.timeEnd('Fetch Bill List');
 
         const downloadPromises = billList.map(async (bill) => {
             const billIdentifier = `${bill.billType}-${bill.billNumber}`;
@@ -77,22 +75,16 @@ const main = async () => {
             const billFileUrl = `${RAW_URL_BASE_BILLS}${billFileName}`;
             const actionFileUrl = `${RAW_URL_BASE_ACTIONS}${actionFileName}`;
 
-            // console.time(`Download ${billFileName}`);
             const billDownloaded = downloadFile(billFileUrl, billFileName, folderPath);
-            console.timeEnd(`Download ${billFileName}`);
 
             // console.time(`Download ${actionFileName}`);
             const actionDownloaded = downloadFile(actionFileUrl, actionFileName, folderPath);
-            // console.timeEnd(`Download ${actionFileName}`);
 
             return Promise.all([billDownloaded, actionDownloaded]);
         });
 
-        // console.time('Download All Files');
         await Promise.all(downloadPromises);
-        // console.timeEnd('Download All Files');
 
-        // console.log('### All bill and action JSON files fetched successfully!');
     } catch (error) {
         console.error('Error:', error.message);
         process.exit(1);
