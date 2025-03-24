@@ -62,7 +62,7 @@ const main = async () => {
     try {
         const billList = await fetchJson(BILL_LIST_URL);
 
-        for (const bill of billList) {
+        const downloadPromises = billList.map(async (bill) => {
             const billIdentifier = `${bill.billType}-${bill.billNumber}`;
             const folderPath = path.join(OUT_DIR, billIdentifier);
 
@@ -75,14 +75,16 @@ const main = async () => {
             const billFileUrl = `${RAW_URL_BASE_BILLS}${billFileName}`;
             const actionFileUrl = `${RAW_URL_BASE_ACTIONS}${actionFileName}`;
 
-            const billDownloaded = await downloadFile(billFileUrl, billFileName, folderPath);
-            const actionDownloaded = await downloadFile(actionFileUrl, actionFileName, folderPath);
+            const billDownloaded = downloadFile(billFileUrl, billFileName, folderPath);
 
-            if (!billDownloaded) console.warn(`Bill file not found for: ${billIdentifier}`);
-            if (!actionDownloaded) console.warn(`Action file not found for: ${billIdentifier}`);
-        }
+            // console.time(`Download ${actionFileName}`);
+            const actionDownloaded = downloadFile(actionFileUrl, actionFileName, folderPath);
 
-        console.log('### All bill and action JSON files fetched successfully!');
+            return Promise.all([billDownloaded, actionDownloaded]);
+        });
+
+        await Promise.all(downloadPromises);
+
     } catch (error) {
         console.error('Error:', error.message);
         process.exit(1);
