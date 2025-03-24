@@ -57,15 +57,15 @@ documentTypes.forEach(type => {
                                     'D': 'public-safety',
                                     'E': 'k-12-education',
                                     'F': 'long-range',
+                                    'O': 'global-amendment'
                                     // Might be `Office of Budget and Program Planning`? 
                                     // TODO: Find out what this is
-                                    // 'O': 'other'
                                 };
 
                                 const sectionName = sectionMap[sectionLetter.toUpperCase()] || sectionLetter;
 
                                 // Add suffix to name if it exists
-                                name = `${prefix}-${billNum}.${major}.${minor}.${amendNum}.${sectionName}.${finalType}${suffix}`;
+                                name = `${prefix}-${billNum}.${major}.${minor}.${sectionLetter}.${amendNum}.${sectionName}.${finalType}${suffix}`;
 
                                 return {
                                     name: name,
