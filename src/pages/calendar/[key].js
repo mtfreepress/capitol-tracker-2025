@@ -126,13 +126,30 @@ export default function CalendarDay({ dateData, onCalendarBills, committees, isI
                 margin-bottom: 1em;
                 text-align: center;
                 font-weight: 500;
-                `}>
+            `}>
                 {dateData.hearings.length > 0 || dateData.floorDebates.length > 0 || dateData.finalVotes.length > 0 ? (
                     <>
                         <span css={css`color: var(--text);`}>
-                            {dateData.hearings.length} {dateData.hearings.length === 1 ? 'hearing' : 'hearings'}{' '}
-                            • {dateData.floorDebates.length} floor {dateData.floorDebates.length === 1 ? 'debate' : 'debates'}{' '}
-                            • {dateData.finalVotes.length} final {dateData.finalVotes.length === 1 ? 'vote' : 'votes'}
+                            <a href="#hearings" css={css`
+                                text-decoration: none;
+                                &:hover { color: #ce5a00; }
+                            `}>
+                                <b>{dateData.hearings.length}</b> {dateData.hearings.length === 1 ? 'hearing' : 'hearings'}
+                            </a>{' '}
+                            <span css={css`color: #ce5a00;`}>•</span>{' '}
+                            <a href="#debates" css={css`
+                                text-decoration: none;
+                                &:hover { color: #ce5a00; }
+                            `}>
+                                <b>{dateData.floorDebates.length}</b> floor {dateData.floorDebates.length === 1 ? 'debate' : 'debates'}
+                            </a>{' '}
+                            <span css={css`color: #ce5a00;`}>•</span>{' '}
+                            <a href="#votes" css={css`
+                                text-decoration: none;
+                                &:hover { color: #ce5a00; }
+                            `}>
+                                <b>{dateData.finalVotes.length}</b> final {dateData.finalVotes.length === 1 ? 'vote' : 'votes'}
+                            </a>
                         </span>
                     </>
                 ) : (
