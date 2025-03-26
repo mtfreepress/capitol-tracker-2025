@@ -125,11 +125,11 @@ const Row = ({ name, party, district, locale, portrait, lawmakers }) => {
             </td>
             <td>
                 {imageUrl && (
-                    <a href={imageUrl} target="_blank" rel="noopener noreferrer">
+                    <Link href={`/lawmakers/${lawmakerUrl(name)}`}>
                         <div css={{ width: '80px', height: '80px', overflow: 'hidden', position: 'relative' }}>
                             <img src={imageUrl} alt={`Portrait of ${name}`} css={{ width: '100%', height: 'auto', position: 'absolute', top: '0' }} />
                         </div>
-                    </a>
+                    </Link>
                 )}
             </td>
         </tr>
