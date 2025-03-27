@@ -4,7 +4,8 @@ import { css } from '@emotion/react';
 import { shortDateWithWeekday } from '../config/utils';
 
 const calendarStyle = css`
-  width: 400px;
+  width: 100%;
+  max-width: 420px;
   margin: 0 auto;
 
   .calendar-header {
@@ -116,6 +117,18 @@ const calendarStyle = css`
         &:hover {
           background-color: var(--tan2);
           color: var(--link);
+        }
+        
+        &.current {
+          background-color: #ce5a00;
+          color: white;
+          font-weight: bold;
+          font-size: 1.1em;
+          
+          &:hover {
+            background-color: darken(#ce5a00, 10%);
+            color: white;
+          }
         }
       }
     }
@@ -481,22 +494,30 @@ const CalendarNavigator = ({ dates, currentPageDate }) => {
             {day}
           </div>
         ))}
-        {calendarDays.map((day, index) => (
-          <div
-            key={index}
-            className={`calendar-day ${day?.isActive ? 'active' : 'inactive'}`}
-          >
-            {day && (
-              day.isActive ? (
-                <Link href={`/calendar/${day.key}`}>
-                  {day.day}
-                </Link>
-              ) : (
-                day.day
-              )
-            )}
-          </div>
-        ))}
+        {calendarDays.map((day, index) => {
+          // Check if this day is the currently selected day
+          const isCurrentDay = day && day.key === currentPageDate;
+          
+          return (
+            <div
+              key={index}
+              className={`calendar-day ${day?.isActive ? 'active' : 'inactive'}`}
+            >
+              {day && (
+                day.isActive ? (
+                  <Link 
+                    href={`/calendar/${day.key}`}
+                    className={isCurrentDay ? 'current' : ''}
+                  >
+                    {day.day}
+                  </Link>
+                ) : (
+                  day.day
+                )
+              )}
+            </div>
+          );
+        })}
       </div>
     </div>
   );

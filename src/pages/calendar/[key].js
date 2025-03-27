@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/router';
 import { css } from "@emotion/react";
 import Layout from "../../design/Layout";
@@ -8,6 +8,8 @@ import { shortDateWithWeekday } from "../../config/utils";
 import calendar from "../../data/calendar.json";
 import allBills from "../../data/bills.json";
 import committees from "../../data/committees.json";
+
+
 
 const capitalizeFirstLetter = string => string.charAt(0).toUpperCase() + string.slice(1);
 
@@ -39,42 +41,187 @@ const Committee = ({ committee, onCalendarBills, hearings }) => {
 };
 
 export default function CalendarDay({ dateData, onCalendarBills, committees, isInvalidDate, dateStr }) {
-    const router = useRouter();
+    const [isSticky, setIsSticky] = useState(false);
+    const [navHeight, setNavHeight] = useState(88);
+    const headerRef = useRef(null);
+    const observerRef = useRef(null);
 
+    useEffect(() => {
+        // calculate nav height for position of "sticky" header
+        function updateNavHeight() {
+            const navElement = document.querySelector('nav') ||
+                document.querySelector('header nav') ||
+                document.querySelector('[css*="navCss"]');
+
+            if (navElement) {
+                const isMobile = window.innerWidth <= 440;
+                const navRect = navElement.getBoundingClientRect();
+
+                const mobileHeight = navRect.height + 20;
+                const desktopHeight = navRect.height + 5;
+
+                setNavHeight(isMobile ? mobileHeight : desktopHeight);
+
+                document.documentElement.style.setProperty('--nav-height-mobile', `${mobileHeight}px`);
+                document.documentElement.style.setProperty('--nav-height-desktop', `${desktopHeight}px`);
+
+                console.log('Nav measurements:', {
+                    isMobile,
+                    height: navRect.height,
+                    mobileHeight,
+                    desktopHeight
+                });
+            }
+        }
+
+        observerRef.current = new IntersectionObserver(
+            ([entry]) => {
+                setIsSticky(!entry.isIntersecting);
+            },
+            {
+                rootMargin: `-${navHeight}px 0px 0px 0px`,
+                threshold: 0
+            }
+        );
+
+        if (headerRef.current) {
+            observerRef.current.observe(headerRef.current);
+        }
+
+        updateNavHeight();
+        window.addEventListener('resize', updateNavHeight);
+
+        return () => {
+            if (observerRef.current) {
+                observerRef.current.disconnect();
+            }
+            window.removeEventListener('resize', updateNavHeight);
+        };
+    }, [navHeight]);
+
+
+    const headerStyle = css`
+        display: flex;
+        justify-content: center;
+        
+        h1 {
+            color: white;
+            background-color: var(--gray5);
+            padding: 0.5em 0.5em;
+            padding-right: 120px;  /* Make space for the button */
+            border-radius: 4px;
+            margin: 0 0 0.5em 0;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            max-width: 768px;
+            position: relative;  /* To position the button absolutely inside */
+            
+            &::before {
+                content: "📅";
+                margin-right: 0.5em;
+            }
+            
+            .back-to-top {
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: var(--link);
+                color: white;
+                border: none;
+                padding: 0.3em 0.8em;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 0.8em;
+                font-weight: normal;
+                text-transform: none;
+                letter-spacing: normal;
+                
+                /* Desktop-specific smaller size */
+                @media (min-width: 768px) {
+                    font-size: 0.7em; /* 20% smaller font */
+                    padding: 0.25em 0.7em; /* Smaller padding */
+                }
+                
+                &:hover {
+                    background-color: var(--link);
+                    text-decoration: underline;
+                    color: white;
+                    border: none;
+                }
+            }
+        }
+    `;
+
+    const stickyStyle = css`
+        position: fixed;
+        top: var(--nav-height-desktop, ${navHeight + 20}px);
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        padding: 0;
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+
+        h1 {
+            margin: 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            width: 100%;
+            max-width: 768px;
+        }
+
+        @media (max-width: 440px) {
+            top: var(--nav-height-mobile, ${navHeight + 65}px); 
+            width: 97%
+        }
+    `;
     // For invalid dates (no legislative activity), show a custom message
-    if (isInvalidDate || (dateData.hearings.length === 0 && dateData.floorDebates.length === 0 && dateData.finalVotes.length === 0)) {
-        // Parse the date for display
-        const [month, day, year] = dateStr.split('-').map(Number);
-        const requestedDate = new Date(year, month - 1, day);
-        const formattedDate = requestedDate.toLocaleDateString('en-US', {
-            month: 'long',
-            day: 'numeric',
-            year: 'numeric'
-        });
+    if (isInvalidDate || (!dateData) || (dateData?.hearings?.length === 0 && dateData?.floorDebates?.length === 0 && dateData?.finalVotes?.length === 0)) {
+        // Return only the initial header for these states
+        const formattedDate = dateStr ? (() => {
+            const [month, day, year] = dateStr.split('-').map(Number);
+            const requestedDate = new Date(year, month - 1, day);
+            return requestedDate.toLocaleDateString('en-US', {
+                month: 'long', day: 'numeric', year: 'numeric'
+            });
+        })() : "Loading...";
+
 
         return (
             <Layout
-                relativePath={`/calendar/${dateStr}`}
+                relativePath={`/calendar/${dateStr || ''}`}
                 pageTitle={`Legislative Calendar for ${formattedDate} | MTFP Capitol Tracker`}
                 pageDescription={`Montana legislative calendar for ${formattedDate}`}
             >
-                <h1>Legislative Calendar</h1>
-
-                <div css={css`
-                  background: var(--gray2);
-                  padding: 1em;
-                  margin-bottom: 2em;
-                  border-radius: 4px;
-                  text-align: center;
-                `}>
-                    <h2>No Legislative Events on {formattedDate}</h2>
-                    <p>There are no scheduled legislative events for this date. Please select a date from the calendar below.</p>
+                <div id="calendar-header" css={initialHeaderStyle}>
+                    <h1>Calendar — {!dateData ? "Loading..." : "No Activity"}</h1>
                 </div>
 
-                <CalendarNavigator
-                    dates={calendar.dates}
-                    currentPageDate={null}
-                />
+                {isInvalidDate || (dateData?.hearings?.length === 0 && dateData?.floorDebates?.length === 0 && dateData?.finalVotes?.length === 0) ? (
+                    <>
+                        <div css={css`
+                          background: var(--gray2);
+                          padding: 1em;
+                          margin-bottom: 2em;
+                          border-radius: 4px;
+                          text-align: center;
+                        `}>
+                            <h2>No Legislative Events on {formattedDate}</h2>
+                            <p>There are no scheduled legislative events for this date. Please select a date from the calendar below.</p>
+                        </div>
+                        <CalendarNavigator
+                            dates={calendar.dates}
+                            currentPageDate={null}
+                        />
+                    </>
+                ) : null}
             </Layout>
         );
     }
@@ -82,7 +229,9 @@ export default function CalendarDay({ dateData, onCalendarBills, committees, isI
     if (!dateData) {
         return (
             <Layout>
-                <h1>Loading...</h1>
+                <div css={calendarHeaderStyle}>
+                    <h1>Loading...</h1>
+                </div>
             </Layout>
         );
     }
@@ -112,13 +261,76 @@ export default function CalendarDay({ dateData, onCalendarBills, committees, isI
         ),
     };
 
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
+
+    const handleAnchorClick = (e, targetId) => {
+        e.preventDefault();
+        
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+            // Add offset for nav + header height + extra padding
+            const offset = navHeight + 110; 
+            
+            // Scroll to adjusted position
+            window.scrollTo({
+                top: targetPosition - offset,
+                behavior: 'smooth'
+            });
+            
+            // Update URL without triggering browser scroll
+            window.history.pushState(null, '', `#${targetId}`);
+        }
+    };
+
     return (
         <Layout
             relativePath={`/calendar/${dateData.key}`}
-            pageTitle={`Legislative Calendar for ${day} | 2025 MTFP Capitol Tracker`}
+            pageTitle={`Legislative Calendar for ${day} | MTFP Capitol Tracker`}
             pageDescription={`Committee hearings and legislative activity for ${day}`}
         >
-            <h1>Calendar — {day}</h1>
+
+            <div
+                ref={headerRef}
+                id="header-observer"
+                css={css`height: 1px; margin-bottom: -1px;`}
+            />
+
+
+
+            <div css={[headerStyle, isSticky && stickyStyle]}>
+                {isSticky ? (
+                    <h1>
+                        {day}
+                        <button
+                            className="back-to-top"
+                            onClick={scrollToTop}
+                            aria-label="Back to top"
+                        >
+                            Back to top
+                        </button>
+                    </h1>
+                ) : (
+                    <h1>{day}</h1>
+                )}
+            </div>
+
+            {isSticky && (
+                <div css={css`
+                    height: 60px;
+                    margin-bottom: 0.5em;
+                    
+                    @media (max-width: 768px) {
+                        height: 70px;
+                    }
+                `}></div>
+            )}
+
             <div css={css`
                 background-color: var(--gray1);
                 padding: 0.75em;
@@ -130,24 +342,31 @@ export default function CalendarDay({ dateData, onCalendarBills, committees, isI
                 {dateData.hearings.length > 0 || dateData.floorDebates.length > 0 || dateData.finalVotes.length > 0 ? (
                     <>
                         <span css={css`color: var(--text);`}>
-                            <a href="#hearings" css={css`
-                                text-decoration: none;
-                                &:hover { color: #ce5a00; }
-                            `}>
+                            <a href="#hearings" 
+                                onClick={(e) => handleAnchorClick(e, 'hearings')}
+                                css={css`
+                                    text-decoration: none;
+                                    &:hover { color: #ce5a00; }
+                                `}
+                            >
                                 <b>{dateData.hearings.length}</b> {dateData.hearings.length === 1 ? 'hearing' : 'hearings'}
                             </a>{' '}
                             <span css={css`color: #ce5a00;`}>•</span>{' '}
-                            <a href="#debates" css={css`
-                                text-decoration: none;
-                                &:hover { color: #ce5a00; }
-                            `}>
+                            <a href="#debates" 
+                                onClick={(e) => handleAnchorClick(e, 'debates')}
+                                css={css`
+                                    text-decoration: none;
+                                    &:hover { color: #ce5a00; }
+                                `}>
                                 <b>{dateData.floorDebates.length}</b> floor {dateData.floorDebates.length === 1 ? 'debate' : 'debates'}
                             </a>{' '}
                             <span css={css`color: #ce5a00;`}>•</span>{' '}
-                            <a href="#votes" css={css`
-                                text-decoration: none;
-                                &:hover { color: #ce5a00; }
-                            `}>
+                            <a href="#votes" 
+                            onClick={(e) => handleAnchorClick(e, 'votes')}
+                                css={css`
+                                    text-decoration: none;
+                                    &:hover { color: #ce5a00; }
+                                `}>
                                 <b>{dateData.finalVotes.length}</b> final {dateData.finalVotes.length === 1 ? 'vote' : 'votes'}
                             </a>
                         </span>
@@ -162,7 +381,7 @@ export default function CalendarDay({ dateData, onCalendarBills, committees, isI
                 currentPageDate={dateData.key}
             />
 
-            <section>
+            <section id="hearings">
                 <h3>Committee Hearings</h3>
                 <div className="note">
                     Bill hearings allow the sponsor to explain a bill and enable public testimony.
@@ -198,7 +417,8 @@ export default function CalendarDay({ dateData, onCalendarBills, committees, isI
                 )}
             </section>
 
-            <section>
+
+            <section id="debates">
                 <h3>Floor Debates</h3>
                 {!dateData.floorDebates?.length ? (
                     <p>No floor debates scheduled for this date.</p>
@@ -266,7 +486,7 @@ export default function CalendarDay({ dateData, onCalendarBills, committees, isI
                 )}
             </section>
 
-            <section>
+            <section id="votes">
                 <h3>Final Votes</h3>
                 {!dateData.finalVotes?.length ? (
                     <p>No final votes scheduled for this date.</p>
