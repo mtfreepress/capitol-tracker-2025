@@ -194,6 +194,8 @@ export default function CalendarDay({ dateData, onCalendarBills, committees, isI
         })() : "Loading...";
 
 
+
+
         return (
             <Layout
                 relativePath={`/calendar/${dateStr || ''}`}
@@ -270,23 +272,29 @@ export default function CalendarDay({ dateData, onCalendarBills, committees, isI
 
     const handleAnchorClick = (e, targetId) => {
         e.preventDefault();
-        
+
         const targetElement = document.getElementById(targetId);
         if (targetElement) {
             const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
             // Add offset for nav + header height + extra padding
-            const offset = navHeight + 110; 
-            
+            const offset = navHeight + 110;
+
             // Scroll to adjusted position
             window.scrollTo({
                 top: targetPosition - offset,
                 behavior: 'smooth'
             });
-            
+
             // Update URL without triggering browser scroll
             window.history.pushState(null, '', `#${targetId}`);
         }
     };
+
+    const getCommitteeChamber = (committeeName, committeesData) => {
+        const match = committeesData.find(d => d.name === committeeName);
+        return match?.chamber?.toLowerCase() || 'other';
+    };
+
 
     return (
         <Layout
@@ -331,143 +339,461 @@ export default function CalendarDay({ dateData, onCalendarBills, committees, isI
                 `}></div>
             )}
 
+<div css={css`
+    background-color: var(--gray1);
+    padding: 0.75em;
+    border-radius: 4px;
+    margin-bottom: 1em;
+    text-align: center;
+    font-weight: 500;
+`}>
+    {dateData.hearings.length > 0 || dateData.floorDebates.length > 0 || dateData.finalVotes.length > 0 ? (
+        <>
             <div css={css`
-                background-color: var(--gray1);
-                padding: 0.75em;
-                border-radius: 4px;
-                margin-bottom: 1em;
-                text-align: center;
-                font-weight: 500;
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                max-width: 900px;
+                margin: 0 auto;
             `}>
-                {dateData.hearings.length > 0 || dateData.floorDebates.length > 0 || dateData.finalVotes.length > 0 ? (
-                    <>
-                        <span css={css`color: var(--text);`}>
-                            <a href="#hearings" 
-                                onClick={(e) => handleAnchorClick(e, 'hearings')}
-                                css={css`
-                                    text-decoration: none;
-                                    &:hover { color: #ce5a00; }
-                                `}
-                            >
-                                <b>{dateData.hearings.length}</b> {dateData.hearings.length === 1 ? 'hearing' : 'hearings'}
-                            </a>{' '}
-                            <span css={css`color: #ce5a00;`}>•</span>{' '}
-                            <a href="#debates" 
-                                onClick={(e) => handleAnchorClick(e, 'debates')}
-                                css={css`
-                                    text-decoration: none;
-                                    &:hover { color: #ce5a00; }
-                                `}>
-                                <b>{dateData.floorDebates.length}</b> floor {dateData.floorDebates.length === 1 ? 'debate' : 'debates'}
-                            </a>{' '}
-                            <span css={css`color: #ce5a00;`}>•</span>{' '}
-                            <a href="#votes" 
-                            onClick={(e) => handleAnchorClick(e, 'votes')}
+                {/* HOUSE SECTION */}
+                <div css={css`margin: 0.5em 1em;`}>
+                    <div css={css`font-weight: bold; margin-bottom: 0.5em;`}>🏠 House</div>
+                    <div css={css`
+                        display: flex;
+                        align-items: center;
+                        font-size: 1em;
+                    `}>
+                        {/* Hearings */}
+                        <div css={css`
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                        `}>
+                            <b css={css`color: #ce5a00; margin-bottom: 0.1em;`}> {/* Reduced margin */}
+                                {dateData.hearings.filter(h => getCommitteeChamber(h.data.committee, committees) === 'house').length}
+                            </b>
+                            <a href="#house-hearings"
+                                onClick={(e) => handleAnchorClick(e, 'house-hearings')}
                                 css={css`
                                     text-decoration: none;
                                     &:hover { color: #ce5a00; }
                                 `}>
-                                <b>{dateData.finalVotes.length}</b> final {dateData.finalVotes.length === 1 ? 'vote' : 'votes'}
+                                Hearings
                             </a>
-                        </span>
-                    </>
-                ) : (
-                    <span>No scheduled legislative activity</span>
-                )}
+                        </div>
+                        
+                        {/* Bullet separator - centered */}
+                        <span css={css`
+                            margin: 0 0.8em;
+                            color: #ce5a00;
+                            align-self: center;
+                            position: relative;
+                            top: -0.1em; /* Slight adjustment to center with text */
+                        `}>•</span>
+                        
+                        {/* Floor Debates */}
+                        <div css={css`
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                        `}>
+                            <b css={css`color: #ce5a00; margin-bottom: 0.1em;`}> {/* Reduced margin */}
+                                {dateData.floorDebates?.filter(debate => debate.data.billHolder?.toLowerCase() === "house").length || 0}
+                            </b>
+                            <a href="#house-debates"
+                                onClick={(e) => handleAnchorClick(e, 'house-debates')}
+                                css={css`
+                                    text-decoration: none;
+                                    display: flex;
+                                    flex-direction: column;
+                                    line-height: 0.85; /* Further tightened line spacing */
+                                    text-align: center;
+                                    &:hover { color: #ce5a00; }
+                                `}>
+                                <span>Floor</span>
+                                <span>Debates</span>
+                            </a>
+                        </div>
+                        
+                        {/* Bullet separator - centered */}
+                        <span css={css`
+                            margin: 0 0.8em;
+                            color: #ce5a00;
+                            align-self: center;
+                            position: relative;
+                            top: -0.1em; /* Slight adjustment to center with text */
+                        `}>•</span>
+                        
+                        {/* Floor Votes */}
+                        <div css={css`
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                        `}>
+                            <b css={css`color: #ce5a00; margin-bottom: 0.1em;`}> {/* Reduced margin */}
+                                {dateData.finalVotes?.filter(vote => vote.data.billHolder?.toLowerCase() === "house").length || 0}
+                            </b>
+                            <a href="#house-votes"
+                                onClick={(e) => handleAnchorClick(e, 'house-votes')}
+                                css={css`
+                                    text-decoration: none;
+                                    display: flex;
+                                    flex-direction: column;
+                                    line-height: 0.85; /* Further tightened line spacing */
+                                    text-align: center;
+                                    &:hover { color: #ce5a00; }
+                                `}>
+                                <span>Floor</span>
+                                <span>Votes</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                {/* SENATE SECTION - with the same spacing adjustments */}
+                <div css={css`margin: 0.5em 1em;`}>
+                    <div css={css`font-weight: bold; margin-bottom: 0.5em;`}>🏛 Senate</div>
+                    <div css={css`
+                        display: flex;
+                        align-items: center;
+                        font-size: 1em;
+                    `}>
+                        {/* Hearings */}
+                        <div css={css`
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                        `}>
+                            <b css={css`color: #ce5a00; margin-bottom: 0.1em;`}> {/* Reduced margin */}
+                                {dateData.hearings.filter(h => getCommitteeChamber(h.data.committee, committees) === 'senate').length}
+                            </b>
+                            <a href="#senate-hearings"
+                                onClick={(e) => handleAnchorClick(e, 'senate-hearings')}
+                                css={css`
+                                    text-decoration: none;
+                                    &:hover { color: #ce5a00; }
+                                `}>
+                                Hearings
+                            </a>
+                        </div>
+                        
+                        {/* Bullet separator - centered */}
+                        <span css={css`
+                            margin: 0 0.8em;
+                            color: #ce5a00;
+                            align-self: center;
+                            position: relative;
+                            top: -0.1em; /* Slight adjustment to center with text */
+                        `}>•</span>
+                        
+                        {/* Floor Debates */}
+                        <div css={css`
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                        `}>
+                            <b css={css`color: #ce5a00; margin-bottom: 0.04em;`}> {/* Reduced margin */}
+                                {dateData.floorDebates?.filter(debate => debate.data.billHolder?.toLowerCase() === "senate").length || 0}
+                            </b>
+                            <a href="#senate-debates"
+                                onClick={(e) => handleAnchorClick(e, 'senate-debates')}
+                                css={css`
+                                    text-decoration: none;
+                                    display: flex;
+                                    flex-direction: column;
+                                    line-height: 0.85; /* Further tightened line spacing */
+                                    text-align: center;
+                                    &:hover { color: #ce5a00; }
+                                `}>
+                                <span>Floor</span>
+                                <span>Debates</span>
+                            </a>
+                        </div>
+                        
+                        {/* Bullet separator - centered */}
+                        <span css={css`
+                            margin: 0 0.8em;
+                            color: #ce5a00;
+                            align-self: center;
+                            position: relative;
+                            top: -0.1em; /* Slight adjustment to center with text */
+                        `}>•</span>
+                        
+                        {/* Floor Votes */}
+                        <div css={css`
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                        `}>
+                            <b css={css`color: #ce5a00; margin-bottom: 0.04em;`}> {/* Reduced margin */}
+                                {dateData.finalVotes?.filter(vote => vote.data.billHolder?.toLowerCase() === "senate").length || 0}
+                            </b>
+                            <a href="#senate-votes"
+                                onClick={(e) => handleAnchorClick(e, 'senate-votes')}
+                                css={css`
+                                    text-decoration: none;
+                                    display: flex;
+                                    flex-direction: column;
+                                    line-height: 0.85; /* Further tightened line spacing */
+                                    text-align: center;
+                                    &:hover { color: #ce5a00; }
+                                `}>
+                                <span>Floor</span>
+                                <span>Votes</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </>
+    ) : (
+        <span>No scheduled legislative activity</span>
+    )}
+</div>
 
             <CalendarNavigator
                 dates={calendar.dates}
                 currentPageDate={dateData.key}
             />
 
-            <section id="hearings">
-                <h3>Committee Hearings</h3>
-                <div className="note">
-                    Bill hearings allow the sponsor to explain a bill and enable public testimony.
-                </div>
-                {dateData.hearings.length === 0 ? (
-                    <p>No committee hearings scheduled for this date.</p>
-                ) : (
-                    Object.entries(categories).map(([key, categoryCommittees]) => {
-                        if (categoryCommittees.length > 0) {
-                            const title = {
-                                amPolicyCommittees: "Morning Policy Committees",
-                                pmPolicyCommittees: "Afternoon Policy Committees",
-                                appropsCommittees: "Budget Committees",
-                                otherCommittees: "Other Committees",
-                            }[key];
+            <section id="house" css={css`margin-bottom: 3em;`}>
+                <h2 css={css`
+                border-bottom: 2px solid var(--gray3);
+                padding-bottom: 0.5em;
+                margin-bottom: 1em;
+            `}>🏠 House</h2>
 
-                            return (
-                                <div key={key}>
-                                    <h4>{title}</h4>
-                                    {categoryCommittees.map((committee) => (
-                                        <Committee
-                                            key={`${day}-${committee.name}`}
-                                            committee={committee.name}
-                                            hearings={dateData.hearings}
-                                            onCalendarBills={onCalendarBills}
-                                        />
-                                    ))}
-                                </div>
-                            );
-                        }
-                        return null;
-                    })
-                )}
+                {/* House Hearings */}
+                <section id="house-hearings">
+                    <h3>Committee Hearings</h3>
+                    <div className="note">
+                        Bill hearings allow the sponsor to explain a bill and enable public testimony.
+                    </div>
+                    {dateData.hearings.filter(h => getCommitteeChamber(h.data.committee, committees) === 'house').length === 0 ? (
+                        <p>No House committee hearings scheduled for this date.</p>
+                    ) : (
+                        // Filter committees by House chamber
+                        Object.entries({
+                            amPolicyCommittees: committeesWithHearings
+                                .filter(d => d.cat === "morning-policy" && getCommitteeChamber(d.name, committees) === 'house'),
+                            pmPolicyCommittees: committeesWithHearings
+                                .filter(d => d.cat === "afternoon-policy" && getCommitteeChamber(d.name, committees) === 'house'),
+                            appropsCommittees: committeesWithHearings
+                                .filter(d => ["morning-fiscal-sub", "varies-fiscal"].includes(d.cat) &&
+                                    getCommitteeChamber(d.name, committees) === 'house'),
+                            otherCommittees: committeesWithHearings
+                                .filter(d => !["morning-policy", "afternoon-policy", "morning-fiscal-sub", "varies-fiscal"].includes(d.cat) &&
+                                    getCommitteeChamber(d.name, committees) === 'house')
+                        }).map(([key, categoryCommittees]) => {
+                            if (categoryCommittees.length > 0) {
+                                const title = {
+                                    amPolicyCommittees: "Morning Policy Committees",
+                                    pmPolicyCommittees: "Afternoon Policy Committees",
+                                    appropsCommittees: "Budget Committees",
+                                    otherCommittees: "Other Committees",
+                                }[key];
+
+                                return (
+                                    <div key={key}>
+                                        <h4>{title}</h4>
+                                        {categoryCommittees.map((committee) => (
+                                            <Committee
+                                                key={`${day}-${committee.name}`}
+                                                committee={committee.name}
+                                                hearings={dateData.hearings}
+                                                onCalendarBills={onCalendarBills}
+                                            />
+                                        ))}
+                                    </div>
+                                );
+                            }
+                            return null;
+                        })
+                    )}
+                </section>
+
+                {/* House Floor Debates */}
+                <section id="house-debates">
+                    <h3>Floor Debates</h3>
+                    {!dateData.floorDebates?.some(debate => debate.data.billHolder?.toLowerCase() === "house") ? (
+                        <p>No House floor debates scheduled for this date.</p>
+                    ) : (
+                        <>
+                            <div className="note">
+                                Debates are followed by Second Reading votes.
+                            </div>
+                            <BillTable
+                                bills={onCalendarBills.filter(bill =>
+                                    dateData.floorDebates
+                                        .filter(debate => debate.data.billHolder?.toLowerCase() === "house")
+                                        .map(d => d.data.bill)
+                                        .includes(bill.identifier)
+                                )}
+                                displayLimit={10}
+                                suppressCount={true}
+                            />
+                        </>
+                    )}
+                </section>
+
+                {/* House Final Votes */}
+                <section id="house-votes">
+                    <h3>Final Votes</h3>
+                    {!dateData.finalVotes?.some(vote => vote.data.billHolder?.toLowerCase() === "house") ? (
+                        <p>No House final votes scheduled for this date.</p>
+                    ) : (
+                        <>
+                            <div className="note">
+                                Final votes determine if a bill advances to the next chamber or to the governor.
+                            </div>
+                            <BillTable
+                                bills={onCalendarBills.filter(bill =>
+                                    dateData.finalVotes
+                                        .filter(vote => vote.data.billHolder?.toLowerCase() === "house")
+                                        .map(d => d.data.bill)
+                                        .includes(bill.identifier)
+                                )}
+                                displayLimit={10}
+                                suppressCount={true}
+                            />
+                        </>
+                    )}
+                </section>
             </section>
 
+            {/* SENATE SECTION */}
+            <section id="senate" css={css`margin-bottom: 3em;`}>
+                <h2 css={css`
+                border-bottom: 2px solid var(--gray3);
+                padding-bottom: 0.5em;
+                margin-bottom: 1em;
+            `}>🏛 Senate</h2>
 
-            <section id="debates">
-                <h3>Floor Debates</h3>
-                {!dateData.floorDebates?.length ? (
-                    <p>No floor debates scheduled for this date.</p>
-                ) : (
-                    <>
-                        <div className="note">
-                            Debates are followed by Second Reading votes.
-                        </div>
+                {/* Senate Hearings */}
+                <section id="senate-hearings">
+                    <h3>Committee Hearings</h3>
+                    <div className="note">
+                        Bill hearings allow the sponsor to explain a bill and enable public testimony.
+                    </div>
+                    {dateData.hearings.filter(h => getCommitteeChamber(h.data.committee, committees) === 'senate').length === 0 ? (
+                        <p>No Senate committee hearings scheduled for this date.</p>
+                    ) : (
+                        // Filter committees by Senate chamber
+                        Object.entries({
+                            amPolicyCommittees: committeesWithHearings
+                                .filter(d => d.cat === "morning-policy" && getCommitteeChamber(d.name, committees) === 'senate'),
+                            pmPolicyCommittees: committeesWithHearings
+                                .filter(d => d.cat === "afternoon-policy" && getCommitteeChamber(d.name, committees) === 'senate'),
+                            appropsCommittees: committeesWithHearings
+                                .filter(d => ["morning-fiscal-sub", "varies-fiscal"].includes(d.cat) &&
+                                    getCommitteeChamber(d.name, committees) === 'senate'),
+                            otherCommittees: committeesWithHearings
+                                .filter(d => !["morning-policy", "afternoon-policy", "morning-fiscal-sub", "varies-fiscal"].includes(d.cat) &&
+                                    getCommitteeChamber(d.name, committees) === 'senate')
+                        }).map(([key, categoryCommittees]) => {
+                            if (categoryCommittees.length > 0) {
+                                const title = {
+                                    amPolicyCommittees: "Morning Policy Committees",
+                                    pmPolicyCommittees: "Afternoon Policy Committees",
+                                    appropsCommittees: "Budget Committees",
+                                    otherCommittees: "Other Committees",
+                                }[key];
 
-                        {/* House Floor Debates */}
-                        {dateData.floorDebates.some(debate => debate.data.billHolder?.toLowerCase() === "house") && (
-                            <div css={css`margin-bottom: 1.5em;`}>
-                                <h4>🏠 House</h4>
-                                <BillTable
-                                    bills={onCalendarBills.filter(bill =>
-                                        dateData.floorDebates
-                                            .filter(debate => debate.data.billHolder?.toLowerCase() === "house")
-                                            .map(d => d.data.bill)
-                                            .includes(bill.identifier)
-                                    )}
-                                    displayLimit={10}
-                                    suppressCount={true}
-                                />
+                                return (
+                                    <div key={key}>
+                                        <h4>{title}</h4>
+                                        {categoryCommittees.map((committee) => (
+                                            <Committee
+                                                key={`${day}-${committee.name}`}
+                                                committee={committee.name}
+                                                hearings={dateData.hearings}
+                                                onCalendarBills={onCalendarBills}
+                                            />
+                                        ))}
+                                    </div>
+                                );
+                            }
+                            return null;
+                        })
+                    )}
+                </section>
+
+                {/* Senate Floor Debates */}
+                <section id="senate-debates">
+                    <h3>Floor Debates</h3>
+                    {!dateData.floorDebates?.some(debate => debate.data.billHolder?.toLowerCase() === "senate") ? (
+                        <p>No Senate floor debates scheduled for this date.</p>
+                    ) : (
+                        <>
+                            <div className="note">
+                                Debates are followed by Second Reading votes.
                             </div>
+                            <BillTable
+                                bills={onCalendarBills.filter(bill =>
+                                    dateData.floorDebates
+                                        .filter(debate => debate.data.billHolder?.toLowerCase() === "senate")
+                                        .map(d => d.data.bill)
+                                        .includes(bill.identifier)
+                                )}
+                                displayLimit={10}
+                                suppressCount={true}
+                            />
+                        </>
+                    )}
+                </section>
+
+                {/* Senate Final Votes */}
+                <section id="senate-votes">
+                    <h3>Final Votes</h3>
+                    {!dateData.finalVotes?.some(vote => vote.data.billHolder?.toLowerCase() === "senate") ? (
+                        <p>No Senate final votes scheduled for this date.</p>
+                    ) : (
+                        <>
+                            <div className="note">
+                                Final votes determine if a bill advances to the next chamber or to the governor.
+                            </div>
+                            <BillTable
+                                bills={onCalendarBills.filter(bill =>
+                                    dateData.finalVotes
+                                        .filter(vote => vote.data.billHolder?.toLowerCase() === "senate")
+                                        .map(d => d.data.bill)
+                                        .includes(bill.identifier)
+                                )}
+                                displayLimit={10}
+                                suppressCount={true}
+                            />
+                        </>
+                    )}
+                </section>
+            </section>
+
+            {/* OTHER SECTION (for items without a clear chamber) */}
+            {(dateData.hearings.some(h => getCommitteeChamber(h.data.committee, committees) === 'other') ||
+                dateData.floorDebates.some(d => !d.data.billHolder ||
+                    (d.data.billHolder.toLowerCase() !== "house" && d.data.billHolder.toLowerCase() !== "senate")) ||
+                dateData.finalVotes.some(v => !v.data.billHolder ||
+                    (v.data.billHolder.toLowerCase() !== "house" && v.data.billHolder.toLowerCase() !== "senate"))) && (
+                    <section id="other" css={css`margin-bottom: 3em;`}>
+                        <h2 css={css`
+                    border-bottom: 2px solid var(--gray3);
+                    padding-bottom: 0.5em;
+                    margin-bottom: 1em;
+                `}>Other Events</h2>
+
+                        {/* Other hearings */}
+                        {dateData.hearings.some(h => getCommitteeChamber(h.data.committee, committees) === 'other') && (
+                            <section id="other-hearings">
+                                <h3>Committee Hearings</h3>
+                                {/* Similar structure to the committees above, but for 'other' chamber */}
+                            </section>
                         )}
 
-                        {/* Senate Floor Debates */}
-                        {dateData.floorDebates.some(debate => debate.data.billHolder?.toLowerCase() === "senate") && (
-                            <div>
-                                <h4>🏛 Senate</h4>
-                                <BillTable
-                                    bills={onCalendarBills.filter(bill =>
-                                        dateData.floorDebates
-                                            .filter(debate => debate.data.billHolder?.toLowerCase() === "senate")
-                                            .map(d => d.data.bill)
-                                            .includes(bill.identifier)
-                                    )}
-                                    displayLimit={10}
-                                    suppressCount={true}
-                                />
-                            </div>
-                        )}
-
-                        {/* Handle debates without a specified chamber */}
-                        {dateData.floorDebates.some(debate => !debate.data.billHolder ||
-                            (debate.data.billHolder.toLowerCase() !== "house" &&
-                                debate.data.billHolder.toLowerCase() !== "senate")) && (
-                                <div css={css`margin-top: 1.5em;`}>
-                                    <h4>Other Floor Debates</h4>
+                        {/* Other floor debates */}
+                        {dateData.floorDebates.some(d => !d.data.billHolder ||
+                            (d.data.billHolder.toLowerCase() !== "house" && d.data.billHolder.toLowerCase() !== "senate")) && (
+                                <section id="other-debates">
+                                    <h3>Floor Debates</h3>
                                     <BillTable
                                         bills={onCalendarBills.filter(bill =>
                                             dateData.floorDebates
@@ -480,62 +806,14 @@ export default function CalendarDay({ dateData, onCalendarBills, committees, isI
                                         displayLimit={10}
                                         suppressCount={true}
                                     />
-                                </div>
+                                </section>
                             )}
-                    </>
-                )}
-            </section>
 
-            <section id="votes">
-                <h3>Final Votes</h3>
-                {!dateData.finalVotes?.length ? (
-                    <p>No final votes scheduled for this date.</p>
-                ) : (
-                    <>
-                        <div className="note">
-                            Final votes determine if a bill advances to the next chamber or to the governor.
-                        </div>
-
-                        {/* House Final Votes */}
-                        {dateData.finalVotes.some(vote => vote.data.billHolder?.toLowerCase() === "house") && (
-                            <div css={css`margin-bottom: 1.5em;`}>
-                                <h4>🏠 House</h4>
-                                <BillTable
-                                    bills={onCalendarBills.filter(bill =>
-                                        dateData.finalVotes
-                                            .filter(vote => vote.data.billHolder?.toLowerCase() === "house")
-                                            .map(d => d.data.bill)
-                                            .includes(bill.identifier)
-                                    )}
-                                    displayLimit={10}
-                                    suppressCount={true}
-                                />
-                            </div>
-                        )}
-
-                        {/* Senate Final Votes */}
-                        {dateData.finalVotes.some(vote => vote.data.billHolder?.toLowerCase() === "senate") && (
-                            <div>
-                                <h4>🏛 Senate</h4>
-                                <BillTable
-                                    bills={onCalendarBills.filter(bill =>
-                                        dateData.finalVotes
-                                            .filter(vote => vote.data.billHolder?.toLowerCase() === "senate")
-                                            .map(d => d.data.bill)
-                                            .includes(bill.identifier)
-                                    )}
-                                    displayLimit={10}
-                                    suppressCount={true}
-                                />
-                            </div>
-                        )}
-
-                        {/* Handle votes without a specified chamber */}
-                        {dateData.finalVotes.some(vote => !vote.data.billHolder ||
-                            (vote.data.billHolder.toLowerCase() !== "house" &&
-                                vote.data.billHolder.toLowerCase() !== "senate")) && (
-                                <div css={css`margin-top: 1.5em;`}>
-                                    <h4>Other Final Votes</h4>
+                        {/* Other final votes */}
+                        {dateData.finalVotes.some(v => !v.data.billHolder ||
+                            (v.data.billHolder.toLowerCase() !== "house" && v.data.billHolder.toLowerCase() !== "senate")) && (
+                                <section id="other-votes">
+                                    <h3>Final Votes</h3>
                                     <BillTable
                                         bills={onCalendarBills.filter(bill =>
                                             dateData.finalVotes
@@ -548,11 +826,10 @@ export default function CalendarDay({ dateData, onCalendarBills, committees, isI
                                         displayLimit={10}
                                         suppressCount={true}
                                     />
-                                </div>
+                                </section>
                             )}
-                    </>
+                    </section>
                 )}
-            </section>
         </Layout>
     );
 }
