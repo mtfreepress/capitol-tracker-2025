@@ -179,20 +179,34 @@
         "transcriptUrl": null,
         "key": "Tabled in Committee",
         "committeeHearingTime": null,
+        "vote": null
+    },
+    {
+        "id": "HJ5-0015",
+        "bill": "HJ 5",
+        "date": "03/31/2025",
+        "description": "Committee Executive Action--Resolution Adopted",
+        "possession": "House",
+        "committee": "(H) Business and Labor",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Committee Executive Action--Resolution Adopted",
+        "committeeHearingTime": null,
         "vote": {
-            "action": "HJ5-0013",
+            "action": "HJ5-0015",
             "bill": "HJ 5",
-            "date": "01/27/2025",
+            "date": "03/31/2025",
             "type": "committee",
-            "seqNumber": "H4",
+            "seqNumber": "H5",
             "voteChamber": "house",
             "voteUrl": null,
             "session": "2",
-            "motion": "Tabled in Committee",
+            "motion": "Committee Executive Action--Resolution Adopted",
             "thresholdRequired": "simple",
             "count": {
-                "Y": 18,
-                "N": 2
+                "Y": 11,
+                "N": 9
             },
             "gopCount": {
                 "Y": 10,
@@ -202,15 +216,15 @@
                 "O": 0
             },
             "demCount": {
-                "Y": 8,
-                "N": 0,
+                "Y": 1,
+                "N": 7,
                 "A": 0,
                 "E": 0,
                 "O": 0
             },
             "motionPassed": true,
             "gopSupported": true,
-            "demSupported": true,
+            "demSupported": false,
             "votes": [
                 {
                     "option": "Y",
@@ -221,7 +235,7 @@
                     "district": "HD 39"
                 },
                 {
-                    "option": "Y",
+                    "option": "N",
                     "name": "Jennifer Lynch",
                     "lastName": "Lynch",
                     "party": "D",
@@ -230,10 +244,10 @@
                 },
                 {
                     "option": "Y",
-                    "name": "Ron Marshall",
-                    "lastName": "Marshall",
+                    "name": "Terry Nelson",
+                    "lastName": "Nelson",
                     "party": "R",
-                    "locale": "Hamilton",
+                    "locale": "Unknown",
                     "district": "HD 87"
                 },
                 {
@@ -245,7 +259,7 @@
                     "district": "HD 38"
                 },
                 {
-                    "option": "Y",
+                    "option": "N",
                     "name": "Jonathan Karlen",
                     "lastName": "Karlen",
                     "party": "D",
@@ -253,7 +267,7 @@
                     "district": "HD 98"
                 },
                 {
-                    "option": "Y",
+                    "option": "N",
                     "name": "Bob Carter",
                     "lastName": "Carter",
                     "party": "D",
@@ -277,7 +291,7 @@
                     "district": "HD 53"
                 },
                 {
-                    "option": "Y",
+                    "option": "N",
                     "name": "Chip Fitzpatrick",
                     "lastName": "Fitzpatrick",
                     "party": "D",
@@ -293,7 +307,7 @@
                     "district": "HD 71"
                 },
                 {
-                    "option": "N",
+                    "option": "Y",
                     "name": "Courtenay Sprunger",
                     "lastName": "Sprunger",
                     "party": "R",
@@ -301,7 +315,7 @@
                     "district": "HD 7"
                 },
                 {
-                    "option": "Y",
+                    "option": "N",
                     "name": "Shannon Maness",
                     "lastName": "Maness",
                     "party": "R",
@@ -309,7 +323,7 @@
                     "district": "HD 70"
                 },
                 {
-                    "option": "Y",
+                    "option": "N",
                     "name": "Morgan Thiel",
                     "lastName": "Thiel",
                     "party": "R",
@@ -317,7 +331,7 @@
                     "district": "HD 30"
                 },
                 {
-                    "option": "Y",
+                    "option": "N",
                     "name": "Jamie Isaly",
                     "lastName": "Isaly",
                     "party": "D",
@@ -325,7 +339,7 @@
                     "district": "HD 58"
                 },
                 {
-                    "option": "Y",
+                    "option": "N",
                     "name": "Joshua Seckinger",
                     "lastName": "Seckinger",
                     "party": "D",
@@ -333,7 +347,7 @@
                     "district": "HD 62"
                 },
                 {
-                    "option": "N",
+                    "option": "Y",
                     "name": "Curtis Schomer",
                     "lastName": "Schomer",
                     "party": "R",
@@ -341,7 +355,7 @@
                     "district": "HD 48"
                 },
                 {
-                    "option": "Y",
+                    "option": "N",
                     "name": "Katie Sullivan",
                     "lastName": "Sullivan",
                     "party": "D",
