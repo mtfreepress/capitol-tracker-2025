@@ -2,7 +2,8 @@ export const VOTE_THRESHOLD_MAPPING = {
     'TWO_THIRDS_LEGISLATURE': '2/3 of Entire Legislature',
     'THREE_FOURTHS': '3/4 of Each House',
     'TWO_THIRDS': '2/3 of Each House',
-    'SIMPLE': 'Simple'
+    'SIMPLE': 'Simple',
+    'THREE_FIFTHS': 'Three-Fifths',
 };
 
 export const VOTE_THRESHOLDS = [
@@ -10,6 +11,7 @@ export const VOTE_THRESHOLDS = [
     '3/4 of Each House',
     '2/3 of Each House',
     'Simple',
+    'Three-Fifths',
 ];
 
 export const BILL_TYPES = [
