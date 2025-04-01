@@ -5,13 +5,7 @@ on:
     branches:
       - main
   schedule:
-    # Mountain Standard Time (GMT-7): Runs 5am to 12am MST (Switch to this when DST ends in November)
-    # Runs every 20 minutes from 12pm (noon) UTC to 11pm and then Midnight UTC to 6:59am. Working out to 5am to 11:59pm MST
-    # Note: Both are written to deal with the fact that we are jumping dates in the middle of the night.
-    - cron: '*/20 12-23,0-6 * * *'
-    #  Runs every 20 minutes from 11am UTC to 11pm and then Midnight UTC to 5:59am. Working out to 5am to 11:59pm MDT
-    # Mountain Daylight Time (GMT-6): Runs 5am to 12am MDT (Switch to this when DST starts in March)
-    # - cron: '*/20 11-23,0-5 * * *'
+    - cron: '*/20 12-23,0-5 * * *'
   workflow_dispatch:
 
 jobs:
