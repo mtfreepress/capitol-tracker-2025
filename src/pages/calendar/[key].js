@@ -13,6 +13,12 @@ import committees from "../../data/committees.json";
 
 const capitalizeFirstLetter = string => string.charAt(0).toUpperCase() + string.slice(1);
 
+const formatDateForLegMtUrl = (dateStr) => {
+    // MM-DD-YYYY to YYYY-MM-DD for state site
+    const [month, day, year] = dateStr.split('-');
+    return `${year}-${month}-${day}`;
+  };
+
 const groupHearingsByCommittee = hearings => {
     return hearings.reduce((acc, hearing) => {
         const committee = hearing.data.committee;
@@ -99,6 +105,7 @@ export default function CalendarDay({ dateData, onCalendarBills, committees, isI
         };
     }, [navHeight]);
 
+    const initialHeaderStyle = css``;
 
     const headerStyle = css`
         display: flex;
@@ -108,14 +115,14 @@ export default function CalendarDay({ dateData, onCalendarBills, committees, isI
             color: white;
             background-color: var(--gray5);
             padding: 0.5em 0.5em;
-            padding-right: 120px;  /* Make space for the button */
+            padding-right: 120px;
             border-radius: 4px;
             margin: 0 0 0.5em 0;
             display: flex;
             align-items: center;
             width: 100%;
             max-width: 768px;
-            position: relative;  /* To position the button absolutely inside */
+            position: relative;
             
             &::before {
                 content: "📅";
@@ -127,11 +134,10 @@ export default function CalendarDay({ dateData, onCalendarBills, committees, isI
                 right: 10px;
                 top: 50%;
                 transform: translateY(-50%);
-                background-color: var(--link);
-                color: white;
+                background-color: transparent;
+                color: var(--link);
                 border: none;
                 padding: 0.3em 0.8em;
-                border-radius: 4px;
                 cursor: pointer;
                 font-size: 0.8em;
                 font-weight: normal;
@@ -140,19 +146,20 @@ export default function CalendarDay({ dateData, onCalendarBills, committees, isI
                 
                 /* Desktop-specific smaller size */
                 @media (min-width: 768px) {
-                    font-size: 0.7em; /* 20% smaller font */
-                    padding: 0.25em 0.7em; /* Smaller padding */
+                    font-size: 0.7em;
+                    padding: 0.25em 0.7em;
                 }
                 
-                &:hover {
-                    background-color: var(--link);
+               &:hover {
+                    background-color: transparent;
                     text-decoration: underline;
-                    color: white;
+                    color: var(--link);
                     border: none;
                 }
             }
         }
     `;
+    
 
     const stickyStyle = css`
         position: fixed;
@@ -209,7 +216,7 @@ export default function CalendarDay({ dateData, onCalendarBills, committees, isI
                 {isInvalidDate || (dateData?.hearings?.length === 0 && dateData?.floorDebates?.length === 0 && dateData?.finalVotes?.length === 0) ? (
                     <>
                         <div css={css`
-                          background: var(--gray2);
+                          background: var(--gray1);
                           padding: 1em;
                           margin-bottom: 2em;
                           border-radius: 4px;
@@ -526,7 +533,7 @@ export default function CalendarDay({ dateData, onCalendarBills, committees, isI
                             flex-direction: column;
                             align-items: center;
                         `}>
-                            <b css={css`color: #ce5a00; margin-bottom: 0.04em;`}> {/* Reduced margin */}
+                            <b css={css`color: #ce5a00; margin-bottom: 0.04em;`}>
                                 {dateData.finalVotes?.filter(vote => vote.data.billHolder?.toLowerCase() === "senate").length || 0}
                             </b>
                             <a href="#senate-votes"
@@ -557,6 +564,43 @@ export default function CalendarDay({ dateData, onCalendarBills, committees, isI
                 currentPageDate={dateData.key}
             />
 
+            <div css={css`
+                text-align: center;
+                margin: 1em 0 1.5em;
+            `}>
+                <a 
+                    href={`https://www.legmt.gov/events/${formatDateForLegMtUrl(dateData.key)}/`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    css={css`
+                        display: inline-flex;
+                        align-items: center;
+                        background-color: var(--gray1);
+                        color: var(--link);
+                        padding: 0.5em 1em;
+                        border-radius: 4px;
+                        text-decoration: none;
+                        font-weight: 500;
+                        transition: all 0.2s ease;
+                        
+                        &:hover {
+                            background-color: var(--gray2);
+                            text-decoration: none; /* Remove default underline */
+                        }
+                        
+                        &::before {
+                            content: "🔗";
+                            margin-right: 0.5em;
+                        }
+                    `}
+                >
+                    <span css={css`
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    `}>Official Legislature Calendar</span>
+                </a>
+            </div>
             <section id="house" css={css`margin-bottom: 3em;`}>
                 <h2 css={css`
                 border-bottom: 2px solid var(--gray3);
