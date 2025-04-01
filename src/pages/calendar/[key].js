@@ -46,13 +46,28 @@ const Committee = ({ committee, onCalendarBills, hearings }) => {
     );
 };
 
-export default function CalendarDay({ dateData, onCalendarBills, committees, isInvalidDate, dateStr }) {
+export default function CalendarDay({ dateData, onCalendarBills, committees, isInvalidDate, dateStr, redirectToDate }) {
+    const router = useRouter();
     const [isSticky, setIsSticky] = useState(false);
     const [navHeight, setNavHeight] = useState(88);
     const headerRef = useRef(null);
     const observerRef = useRef(null);
 
     useEffect(() => {
+        // Check if we should redirect (no activity and have a redirect date)
+        if ((isInvalidDate || !dateData || 
+            (dateData.hearings.length === 0 && 
+             dateData.floorDebates.length === 0 && 
+             dateData.finalVotes.length === 0)) && 
+            redirectToDate && redirectToDate !== dateStr) {
+            
+            // Redirect to the date with activity
+            router.replace(`/calendar/${redirectToDate}`, undefined, { shallow: true });
+        }
+    }, [isInvalidDate, dateData, redirectToDate, dateStr, router]);
+
+    useEffect(() => {
+        
         // calculate nav height for position of "sticky" header
         function updateNavHeight() {
             const navElement = document.querySelector('nav') ||
@@ -890,13 +905,16 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
     const dateData = calendar.dateMap[params.key];
 
+    // For completely invalid dates
     if (!dateData) {
         return {
             props: {
                 isInvalidDate: true,
                 dateStr: params.key,
                 committees: committees || [],
-                onCalendarBills: []
+                onCalendarBills: [],
+                // Use the mostRecentActiveDay from calendar.json
+                redirectToDate: calendar.mostRecentActiveDay
             }
         };
     }
@@ -905,13 +923,20 @@ export async function getStaticProps({ params }) {
         dateData.billsInvolved.includes(bill.identifier)
     );
 
+    // For dates with no legislative activity
+    const hasActivity = dateData.hearings.length > 0 || 
+                        dateData.floorDebates.length > 0 || 
+                        dateData.finalVotes.length > 0;
+    
     return {
         props: {
             dateData,
             onCalendarBills,
             committees: committees || [],
             isInvalidDate: false,
-            dateStr: params.key
+            dateStr: params.key,
+            // If no activity, provide the nearest active day for redirection
+            redirectToDate: hasActivity ? null : dateData.nearestActiveDay || calendar.mostRecentActiveDay
         }
     };
 }

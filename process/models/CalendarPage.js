@@ -14,8 +14,6 @@ export default class CalendarPage {
         // })
 
         // Helper function to convert MM/DD/YYYY to comparable date
-
-
         const parseDate = (dateStr) => {
             const [month, day, year] = dateStr.split('/').map(Number);
             return new Date(year, month - 1, day);
@@ -24,6 +22,52 @@ export default class CalendarPage {
         const compareDates = (a, b) => {
             return parseDate(a) - parseDate(b);
         };
+
+        const activeDates = new Set();
+            Object.keys(dateMap).forEach(key => {
+                const date = dateMap[key];
+                if (date.hearings.length > 0 || date.floorDebates.length > 0 || date.finalVotes.length > 0) {
+                    activeDates.add(key);
+                    date.hasActivity = true;
+                } else {
+                    date.hasActivity = false;
+                }
+            });
+        
+        const activeKeysSorted = Array.from(activeDates).sort((a, b) => {
+            const dateA = new Date(a.replace(/-/g, '/'));
+            const dateB = new Date(b.replace(/-/g, '/'));
+            return dateA - dateB;
+        });
+
+        Object.keys(dateMap).forEach(key => {
+            if (dateMap[key].hasActivity) {
+               // if today has activity — it is the nearest active day
+                dateMap[key].nearestActiveDay = key;
+            } else {
+                // find nearest previous active day
+                const dateObj = new Date(key.replace(/-/g, '/'));
+                
+                // find most recent
+                const prevActiveDay = activeKeysSorted
+                    .filter(activeKey => new Date(activeKey.replace(/-/g, '/')) <= dateObj)
+                    .pop();
+
+                dateMap[key].nearestActiveDay = prevActiveDay || activeKeysSorted[0];
+            }
+        });
+
+        if (activeDates.has(formattedToday)) {
+            // Today has activity
+            mostRecentActiveDay = formattedToday;
+        } else {
+            // Find the most recent day with activity
+            const todayObj = new Date(formattedToday.replace(/-/g, '/'));
+            const prevActiveDays = activeKeysSorted
+                .filter(key => new Date(key.replace(/-/g, '/')) <= todayObj);
+                
+            mostRecentActiveDay = prevActiveDays.length ? prevActiveDays[prevActiveDays.length - 1] : activeKeysSorted[0];
+        }
 
         const canceledHearings = actions
             .filter(action => action.data.description === "Hearing Canceled")
@@ -142,7 +186,9 @@ export default class CalendarPage {
             scheduledHearings: actions.filter(d => d.data.committeeHearingTime),
             scheduledFloorDebates: actions.filter(d => d.data.scheduledForFloorDebate),
             scheduledFinalVotes: actions.filter(d => d.data.scheduledForFinalVote),
-            calendarAnnotations
+            calendarAnnotations,
+            activeDates: Array.from(activeDates),
+            mostRecentActiveDay,
         };
     }
 
