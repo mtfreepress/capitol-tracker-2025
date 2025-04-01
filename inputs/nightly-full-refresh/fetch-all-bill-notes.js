@@ -5,20 +5,35 @@ import path from 'path';
 
 const GITHUB_API_URLS = {
     legalNotes: 'https://api.github.com/repos/mtfreepress/legislative-interface/contents/interface/downloads/legal-note-pdfs-2',
-    fiscalNotes: 'https://api.github.com/repos/mtfreepress/legislative-interface/contents/interface/downloads/fiscal-note-pdfs-2'
+    fiscalNotes: 'https://api.github.com/repos/mtfreepress/legislative-interface/contents/interface/downloads/fiscal-note-pdfs-2',
+    amendments: 'https://api.github.com/repos/mtfreepress/legislative-interface/contents/interface/downloads/amendment-pdfs-2'
 };
 
 const RAW_URL_BASES = {
     legalNotes: 'https://raw.githubusercontent.com/mtfreepress/legislative-interface/main/interface/downloads/legal-note-pdfs-2/',
-    fiscalNotes: 'https://raw.githubusercontent.com/mtfreepress/legislative-interface/main/interface/downloads/fiscal-note-pdfs-2/'
+    fiscalNotes: 'https://raw.githubusercontent.com/mtfreepress/legislative-interface/main/interface/downloads/fiscal-note-pdfs-2/',
+    amendments: 'https://raw.githubusercontent.com/mtfreepress/legislative-interface/main/interface/downloads/amendment-pdfs-2/'
 };
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const OUT_DIRS = {
     legalNotes: path.join(__dirname, '../../public/legal-notes'),
-    fiscalNotes: path.join(__dirname, '../../public/fiscal-notes')
+    fiscalNotes: path.join(__dirname, '../../public/fiscal-notes'),
+    amendments: path.join(__dirname, '../../public/amendments')
 };
+
+const processBatch = async (items, batchSize, processFn) => {
+    const results = [];
+    for (let i = 0; i < items.length; i += batchSize) {
+        const batch = items.slice(i, i + batchSize);
+        // console.log(`Processing batch ${Math.ceil((i+1)/batchSize)}/${Math.ceil(items.length/batchSize)} (${batch.length} items)`);
+        const batchResults = await Promise.all(batch.map(processFn));
+        results.push(...batchResults);
+    }
+    return results;
+};
+
 
 const fetchJson = async (url) => {
     const headers = process.env.GITHUB_TOKEN ? {
@@ -36,7 +51,7 @@ const fetchJson = async (url) => {
 const createFolderIfNotExists = async folderPath => {
     try {
         await fs.mkdir(folderPath, { recursive: true });
-        console.log(`Created folder: ${folderPath}`);
+        // console.log(`Created folder: ${folderPath}`);
     } catch (error) {
         if (error.code !== 'EEXIST') {
             throw error;
@@ -49,7 +64,7 @@ const clearDirectory = async (dirPath) => {
         const files = await fs.readdir(dirPath);
         for (const file of files) {
             await fs.unlink(path.join(dirPath, file));
-            console.log(`Deleted old file: ${file}`);
+            // console.log(`Deleted old file: ${file}`);
         }
     } catch (error) {
         if (error.code !== 'ENOENT') {
@@ -59,46 +74,49 @@ const clearDirectory = async (dirPath) => {
 };
 
 const downloadFile = async (url, fileName, folderPath) => {
-    console.log(`Fetching ${url}`);
+    // console.log(`Fetching ${url}`);
     const response = await fetch(url);
     if (!response.ok) {
         throw new Error(`Failed to fetch URL: ${url}, status: ${response.status}`);
     }
     
-    // Clear any existing files before downloading new one
-    await clearDirectory(folderPath);
-    
     const data = await response.buffer();
     const outputPath = path.join(folderPath, fileName);
     await fs.writeFile(outputPath, data);
-    console.log(`Saved ${fileName} to ${outputPath}`);
+    // console.log(`Saved ${fileName} to ${outputPath}`);
 };
-
 const fetchAllFiles = async (type) => {
-    console.log(`Fetching all ${type}...`);
+    // console.log(`Fetching all ${type}...`);
     
-    // Get the list of all directories (bill folders)
+    // get the list of all directories (bill folders)
     const directories = await fetchJson(GITHUB_API_URLS[type]);
+    const dirList = directories.filter(dir => dir.type === 'dir');
     
-    for (const dir of directories) {
-        if (dir.type !== 'dir') continue;
-        
-        // Get contents of each bill directory
-        const billContents = await fetchJson(dir.url);
-        const pdfFiles = billContents.filter(file => file.name.endsWith('.pdf'));
-        
-        if (pdfFiles.length === 0) continue;
-        
-        // Create local folder for this bill
-        const folderPath = path.join(OUT_DIRS[type], dir.name);
-        await createFolderIfNotExists(folderPath);
-        
-        // Download all PDFs for this bill
-        for (const pdf of pdfFiles) {
-            const fileUrl = `${RAW_URL_BASES[type]}${dir.name}/${pdf.name}`;
-            await downloadFile(fileUrl, pdf.name, folderPath);
+    // batch size of 10 to avoid making GH angry
+    await processBatch(dirList, 10, async (dir) => {
+        try {
+            const billContents = await fetchJson(dir.url);
+            const pdfFiles = billContents.filter(file => file.name.endsWith('.pdf'));
+            
+            if (pdfFiles.length === 0) return;
+            
+            const folderPath = path.join(OUT_DIRS[type], dir.name);
+            await createFolderIfNotExists(folderPath);
+            
+            // clear directory once per bill
+            await clearDirectory(folderPath);
+            
+            // download all PDF files in parallel
+            await Promise.all(pdfFiles.map(pdf => {
+                const fileUrl = `${RAW_URL_BASES[type]}${dir.name}/${pdf.name}`;
+                return downloadFile(fileUrl, pdf.name, folderPath);
+            }));
+            
+            console.log(`Completed ${dir.name} (${pdfFiles.length} files)`);
+        } catch (error) {
+            console.error(`Error processing ${dir.name}: ${error.message}`);
         }
-    }
+    });
 };
 
 const main = async () => {
@@ -106,6 +124,7 @@ const main = async () => {
         console.log('Starting full download of all bill notes...');
         await fetchAllFiles('legalNotes');
         await fetchAllFiles('fiscalNotes');
+        await fetchAllFiles('amendments');
         console.log('Successfully downloaded all bill notes!');
     } catch (error) {
         console.error(`Error downloading all bill notes: ${error.message}`);
