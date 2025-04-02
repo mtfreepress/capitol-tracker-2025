@@ -104,7 +104,7 @@ const lawmakerCardCss = css`
 // TODO: Change this to projects.montanafreepress.org
 const BASE_URL = 'https://projects.montanafreepress.org/capitol-tracker-2025';
 
-const LawmakerCard = ({ lawmaker, portrait }) => {
+const LawmakerCard = ({ lawmaker, portrait, hideEmbed = false }) => {
   const {
     key,
     title,
@@ -122,44 +122,80 @@ const LawmakerCard = ({ lawmaker, portrait }) => {
   const mainCommittee = committees[0];
   const otherCommittees = committees.slice(1);
 
-  return (
-    <div css={lawmakerCardCss}>
-      <div>
-        <Link href={`${BASE_URL}/lawmakers/${key}`} passHref>
-          <div className="name">{title} {name}</div>
-        </Link>
-      </div>
-      <div className="top-section" style={{ borderBottom: `3px solid ${color}` }}>
-        <div className="left">
-          <div className="party" style={{ background: color }}>
-            {{ 'R': 'Republican', 'D': 'Democrat' }[party]}
-          </div>
-          <div className="locale">{locale}</div>
-          <div className="district">{district}</div>
-          <div className="leadership-role">{leadershipTitle}</div>
-        </div>
-        <div className="right" style={{ borderTop: `6px solid ${color}`, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-          <LawmakerPortrait
-            image={portrait}
-            alt={`${title} ${name}, ${district}`}
-            width={194}
-          />
-        </div>
+  console.log(committees)
 
+  const embedCode = `<div class="tracker-sidebar alignleft">
+  <style>
+      @media (max-width: 680px) {
+          .tracker-sidebar.alignleft {
+              max-width: 100% !important;  
+              width: 100%;
+          }
+      }
+  </style>
+  <iframe
+      width="300px"
+      height="450px"
+      scrolling="no"
+      title="Lawmaker embed ${name}"
+      style="margin: 0 auto; border: 1px solid #666; box-shadow: 1px 1px 2px #444;"
+      src="${BASE_URL}/lawmaker-cards/${key}?embed=true"></iframe>
+  </div>`;
+
+  return (
+    <div>
+      <div id="embed" css={lawmakerCardCss}>
+        <div>
+          <Link href={`${BASE_URL}/lawmakers/${key}`} passHref>
+            <div className="name">{title} {name}</div>
+          </Link>
+        </div>
+        <div className="top-section" style={{ borderBottom: `3px solid ${color}` }}>
+          <div className="left">
+            <div className="party" style={{ background: color }}>
+              {{ 'R': 'Republican', 'D': 'Democrat' }[party]}
+            </div>
+            <div className="locale">{locale}</div>
+            <div className="district">{district}</div>
+            <div className="leadership-role">{leadershipTitle}</div>
+          </div>
+          <div className="right" style={{ borderTop: `6px solid ${color}`, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <LawmakerPortrait
+              image={portrait}
+              alt={`${title} ${name}, ${district}`}
+              width={194}
+            />
+          </div>
+        </div>
+        <div className="bottom-section">
+          <div className="session">2025 Legislature – {ordinalize(legislativeHistory.length)} session</div>
+          <div className="item">
+            {committees && committees.length > 0 ? (
+              <>
+                👥 {mainCommittee.role} of {mainCommittee.displayName} and{' '}
+                <strong>{otherCommittees.length}</strong>{' '}
+                <Link href={`${BASE_URL}/lawmakers/${key}#committees`} passHref>
+                  other committee assignment{pluralize(otherCommittees.length)}
+                </Link>
+              </>
+            ) : (
+              <>👥 <strong>0</strong> committee assignments</>
+            )}
+          </div>
+          <div className="item"><Link href={`${BASE_URL}/lawmakers/${key}#bills-sponsored`} passHref>📋 <strong>{sponsoredBills.length}</strong> bill(s) introduced</Link></div>
+          <div className="promo"><Link href={`${BASE_URL}/`} passHref>See more</Link> on MTFP&#39;s 2025 Capitol Tracker.</div>
+        </div>
       </div>
-      <div className="bottom-section">
-        <div className="session">2025 Legislature – {ordinalize(legislativeHistory.length)} session</div>
-        {/* <div className="item">
-          {committees.length > 0 ? (
-            <>👥 {mainCommittee.role} {mainCommittee.committee} and <strong>{otherCommittees.length}</strong> <Link href={`${BASE_URL}/lawmakers/${key}#committees`} passHref>other committee assignments</Link></>
-          ) : (
-            <>👥 <strong>0</strong> committee assignments</>
-          )}
-        </div> */}
-        <div className="item"><Link href={`${BASE_URL}/lawmakers/${key}#bills-sponsored`} passHref>📋 <strong>{sponsoredBills.length}</strong> bill(s) introduced</Link></div>
-        <div className="promo"><Link href={`${BASE_URL}/`} passHref>See more</Link> on MTFP&#39;s 2025 Capitol Tracker.</div>
-      </div>
-    </div>
+
+      {
+        !hideEmbed && (
+          <div>
+            <div>Embed code (Copy into HTML block in MTFP CMS)</div>
+            <textarea rows="12" cols="80" value={embedCode} readOnly></textarea>
+          </div>
+        )
+      }
+    </div >
   );
 };
 
