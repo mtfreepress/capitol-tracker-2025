@@ -4,6 +4,7 @@ export default class CalendarPage {
     constructor({ actions, updateTime, calendarAnnotations }) {
         const beginningOfToday = new Date(updateTime).setUTCHours(7, 0, 0, 0) // 7 accounts for Montana vs GMT time
         const formattedBeginningOfToday = dateFormat(new Date(beginningOfToday))
+        const activeDates = new Set();
 
         // For checking that server is handling dates the same as my local machine
         // console.log({
@@ -13,7 +14,7 @@ export default class CalendarPage {
         //     compare: dateParse('01/11/2023') >= beginningOfToday,
         // })
 
-        // Helper function to convert MM/DD/YYYY to comparable date
+        // convert MM/DD/YYYY to comparable date
         const parseDate = (dateStr) => {
             const [month, day, year] = dateStr.split('/').map(Number);
             return new Date(year, month - 1, day);
@@ -23,60 +24,15 @@ export default class CalendarPage {
             return parseDate(a) - parseDate(b);
         };
 
-        const activeDates = new Set();
-            Object.keys(dateMap).forEach(key => {
-                const date = dateMap[key];
-                if (date.hearings.length > 0 || date.floorDebates.length > 0 || date.finalVotes.length > 0) {
-                    activeDates.add(key);
-                    date.hasActivity = true;
-                } else {
-                    date.hasActivity = false;
-                }
-            });
-        
-        const activeKeysSorted = Array.from(activeDates).sort((a, b) => {
-            const dateA = new Date(a.replace(/-/g, '/'));
-            const dateB = new Date(b.replace(/-/g, '/'));
-            return dateA - dateB;
-        });
-
-        Object.keys(dateMap).forEach(key => {
-            if (dateMap[key].hasActivity) {
-               // if today has activity — it is the nearest active day
-                dateMap[key].nearestActiveDay = key;
-            } else {
-                // find nearest previous active day
-                const dateObj = new Date(key.replace(/-/g, '/'));
-                
-                // find most recent
-                const prevActiveDay = activeKeysSorted
-                    .filter(activeKey => new Date(activeKey.replace(/-/g, '/')) <= dateObj)
-                    .pop();
-
-                dateMap[key].nearestActiveDay = prevActiveDay || activeKeysSorted[0];
-            }
-        });
-
-        if (activeDates.has(formattedToday)) {
-            // Today has activity
-            mostRecentActiveDay = formattedToday;
-        } else {
-            // Find the most recent day with activity
-            const todayObj = new Date(formattedToday.replace(/-/g, '/'));
-            const prevActiveDays = activeKeysSorted
-                .filter(key => new Date(key.replace(/-/g, '/')) <= todayObj);
-                
-            mostRecentActiveDay = prevActiveDays.length ? prevActiveDays[prevActiveDays.length - 1] : activeKeysSorted[0];
-        }
 
         const canceledHearings = actions
             .filter(action => action.data.description === "Hearing Canceled")
             .reduce((map, action) => {
-                // create unique key for hearing
                 const key = `${action.data.bill}|${action.data.committee}|${action.data.committeeHearingTime}`;
                 map[key] = true;
                 return map;
             }, {});
+
 
         const dateMap = actions.reduce((acc, action) => {
             if (action.data.description === "Hearing Canceled") return acc;
@@ -133,6 +89,50 @@ export default class CalendarPage {
 
             return acc;
         }, {});
+
+        Object.keys(dateMap).forEach(key => {
+            const date = dateMap[key];
+            if (date.hearings.length > 0 || date.floorDebates.length > 0 || date.finalVotes.length > 0) {
+                activeDates.add(key);
+                date.hasActivity = true;
+            } else {
+                date.hasActivity = false;
+            }
+        });
+
+        const activeKeysSorted = Array.from(activeDates).sort((a, b) => {
+            const dateA = new Date(a.replace(/-/g, '/'));
+            const dateB = new Date(b.replace(/-/g, '/'));
+            return dateA - dateB;
+        });
+        
+        // Calculate most recent active day relative to today
+        const today = new Date();
+        const formattedToday = `${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}-${today.getFullYear()}`;
+        let mostRecentActiveDay;
+        
+        if (activeDates.has(formattedToday)) {
+            // Today has activity, so use today
+            mostRecentActiveDay = formattedToday;
+        } else {
+            // Find the most recent day with activity before today
+            const todayObj = new Date(formattedToday.replace(/-/g, '/'));
+            const prevActiveDays = Array.from(activeDates)
+                .filter(key => {
+                    const keyDate = new Date(key.replace(/-/g, '/'));
+                    return keyDate <= todayObj;
+                })
+                .sort((a, b) => {
+                    const dateA = new Date(a.replace(/-/g, '/'));
+                    const dateB = new Date(b.replace(/-/g, '/'));
+                    return dateB - dateA; // Sort descending for most recent first
+                });
+            
+            // Use most recent active day, or first active day if all are in the future
+            mostRecentActiveDay = prevActiveDays.length > 0 
+                ? prevActiveDays[0] 
+                : (activeKeysSorted.length > 0 ? activeKeysSorted[0] : null);
+        }
 
         // Debug the final dateMap
         // console.log('Final dateMap stats:', {

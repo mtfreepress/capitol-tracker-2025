@@ -47,6 +47,7 @@ const Committee = ({ committee, onCalendarBills, hearings }) => {
 };
 
 export default function CalendarDay({ dateData, onCalendarBills, committees, isInvalidDate, dateStr, redirectToDate }) {
+    console.log({redirectToDate})
     const router = useRouter();
     const [isSticky, setIsSticky] = useState(false);
     const [navHeight, setNavHeight] = useState(88);
@@ -54,15 +55,14 @@ export default function CalendarDay({ dateData, onCalendarBills, committees, isI
     const observerRef = useRef(null);
 
     useEffect(() => {
-        // Check if we should redirect (no activity and have a redirect date)
+        // check if date has no activity
         if ((isInvalidDate || !dateData || 
             (dateData.hearings.length === 0 && 
              dateData.floorDebates.length === 0 && 
              dateData.finalVotes.length === 0)) && 
             redirectToDate && redirectToDate !== dateStr) {
             
-            // Redirect to the date with activity
-            router.replace(`/calendar/${redirectToDate}`, undefined, { shallow: true });
+            router.replace(`/calendar/${redirectToDate}`);
         }
     }, [isInvalidDate, dateData, redirectToDate, dateStr, router]);
 
@@ -206,7 +206,6 @@ export default function CalendarDay({ dateData, onCalendarBills, committees, isI
     `;
     // For invalid dates (no legislative activity), show a custom message
     if (isInvalidDate || (!dateData) || (dateData?.hearings?.length === 0 && dateData?.floorDebates?.length === 0 && dateData?.finalVotes?.length === 0)) {
-        // Return only the initial header for these states
         const formattedDate = dateStr ? (() => {
             const [month, day, year] = dateStr.split('-').map(Number);
             const requestedDate = new Date(year, month - 1, day);
@@ -298,16 +297,16 @@ export default function CalendarDay({ dateData, onCalendarBills, committees, isI
         const targetElement = document.getElementById(targetId);
         if (targetElement) {
             const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-            // Add offset for nav + header height + extra padding
+            // adjust this for extra padding
             const offset = navHeight + 110;
 
-            // Scroll to adjusted position
+            // scroll to the right spot
             window.scrollTo({
                 top: targetPosition - offset,
                 behavior: 'smooth'
             });
 
-            // Update URL without triggering browser scroll
+            // update URL without triggering browser scroll
             window.history.pushState(null, '', `#${targetId}`);
         }
     };
@@ -632,7 +631,7 @@ export default function CalendarDay({ dateData, onCalendarBills, committees, isI
                     {dateData.hearings.filter(h => getCommitteeChamber(h.data.committee, committees) === 'house').length === 0 ? (
                         <p>No House committee hearings scheduled for this date.</p>
                     ) : (
-                        // Filter committees by House chamber
+                        // filter committees by House chamber
                         Object.entries({
                             amPolicyCommittees: committeesWithHearings
                                 .filter(d => d.cat === "morning-policy" && getCommitteeChamber(d.name, committees) === 'house'),
@@ -738,7 +737,7 @@ export default function CalendarDay({ dateData, onCalendarBills, committees, isI
                     {dateData.hearings.filter(h => getCommitteeChamber(h.data.committee, committees) === 'senate').length === 0 ? (
                         <p>No Senate committee hearings scheduled for this date.</p>
                     ) : (
-                        // Filter committees by Senate chamber
+                        // filter committees by Senate chamber
                         Object.entries({
                             amPolicyCommittees: committeesWithHearings
                                 .filter(d => d.cat === "morning-policy" && getCommitteeChamber(d.name, committees) === 'senate'),
@@ -905,15 +904,13 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
     const dateData = calendar.dateMap[params.key];
 
-    // For completely invalid dates
     if (!dateData) {
         return {
             props: {
                 isInvalidDate: true,
-                dateStr: params.key,
+                dateStr: params.key, 
                 committees: committees || [],
                 onCalendarBills: [],
-                // Use the mostRecentActiveDay from calendar.json
                 redirectToDate: calendar.mostRecentActiveDay
             }
         };
@@ -923,11 +920,11 @@ export async function getStaticProps({ params }) {
         dateData.billsInvolved.includes(bill.identifier)
     );
 
-    // For dates with no legislative activity
+    // check if this date has any legislative activity
     const hasActivity = dateData.hearings.length > 0 || 
-                        dateData.floorDebates.length > 0 || 
-                        dateData.finalVotes.length > 0;
-    
+                       dateData.floorDebates.length > 0 || 
+                       dateData.finalVotes.length > 0;
+
     return {
         props: {
             dateData,
@@ -935,8 +932,8 @@ export async function getStaticProps({ params }) {
             committees: committees || [],
             isInvalidDate: false,
             dateStr: params.key,
-            // If no activity, provide the nearest active day for redirection
-            redirectToDate: hasActivity ? null : dateData.nearestActiveDay || calendar.mostRecentActiveDay
+            // set redirectToDate if this day has no activity
+            redirectToDate: hasActivity ? null : calendar.mostRecentActiveDay
         }
     };
 }
