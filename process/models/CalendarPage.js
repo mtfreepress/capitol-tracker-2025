@@ -3,7 +3,6 @@ import { dateParse, dateFormat } from '../functions.js'
 export default class CalendarPage {
     constructor({ actions, updateTime, calendarAnnotations }) {
         const beginningOfToday = new Date(updateTime).setUTCHours(7, 0, 0, 0) // 7 accounts for Montana vs GMT time
-        const formattedBeginningOfToday = dateFormat(new Date(beginningOfToday))
         const activeDates = new Set();
 
         // For checking that server is handling dates the same as my local machine
@@ -106,13 +105,13 @@ export default class CalendarPage {
             return dateA - dateB;
         });
         
-        // Calculate most recent active day relative to today
+        // calculate most recent active day relative to today
         const today = new Date();
         const formattedToday = `${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}-${today.getFullYear()}`;
         let mostRecentActiveDay;
         
         if (activeDates.has(formattedToday)) {
-            // Today has activity, so use today
+            // if today has activity use it as the most recent active day
             mostRecentActiveDay = formattedToday;
         } else {
             // Find the most recent day with activity before today
@@ -125,10 +124,10 @@ export default class CalendarPage {
                 .sort((a, b) => {
                     const dateA = new Date(a.replace(/-/g, '/'));
                     const dateB = new Date(b.replace(/-/g, '/'));
-                    return dateB - dateA; // Sort descending for most recent first
+                    return dateB - dateA; // descending order — most recent first
                 });
             
-            // Use most recent active day, or first active day if all are in the future
+            // use most recent active day, or first active day if all are in the future
             mostRecentActiveDay = prevActiveDays.length > 0 
                 ? prevActiveDays[0] 
                 : (activeKeysSorted.length > 0 ? activeKeysSorted[0] : null);
@@ -144,7 +143,7 @@ export default class CalendarPage {
         //     sampleDate: Object.values(dateMap)[0]
         // });
 
-        // Generate endpoints for all days in months with valid legislative days
+        // generate endpoints for all days in months with valid legislative days
         const allDates = new Set(Object.keys(dateMap));
         Object.keys(dateMap).forEach(key => {
             const [month, , year] = key.split('-').map(Number);
