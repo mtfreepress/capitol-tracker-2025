@@ -395,8 +395,22 @@
         "transcriptUrl": null,
         "key": "2nd Reading Passed",
         "committeeHearingTime": null,
+        "vote": null
+    },
+    {
+        "id": "HJ35-0020",
+        "bill": "HJ 35",
+        "date": "04/03/2025",
+        "description": "Resolution Adopted",
+        "possession": "House",
+        "committee": "undefined",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Resolution Adopted",
+        "committeeHearingTime": null,
         "vote": {
-            "action": "HJ35-0019",
+            "action": "HJ35-0020",
             "bill": "HJ 35",
             "date": "04/03/2025",
             "type": "committee",
@@ -404,7 +418,7 @@
             "voteChamber": "house",
             "voteUrl": null,
             "session": "2",
-            "motion": "2nd Reading Passed",
+            "motion": "Resolution Adopted",
             "thresholdRequired": "simple",
             "count": {
                 "Y": 58,
@@ -1230,5 +1244,19 @@
                 }
             ]
         }
+    },
+    {
+        "id": "HJ35-0021",
+        "bill": "HJ 35",
+        "date": "04/03/2025",
+        "description": "Sent to Enrolling",
+        "possession": "House",
+        "committee": "undefined",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Sent to Enrolling",
+        "committeeHearingTime": null,
+        "vote": null
     }
 ]
