@@ -250,5 +250,117 @@
         "key": "Fiscal Note Signed",
         "committeeHearingTime": null,
         "vote": null
+    },
+    {
+        "id": "SB547-0019",
+        "bill": "SB 547",
+        "date": "04/04/2025",
+        "description": "Tabled in Committee",
+        "possession": "Senate",
+        "committee": "(S) Highways and Transportation",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Tabled in Committee",
+        "committeeHearingTime": null,
+        "vote": {
+            "action": "SB547-0019",
+            "bill": "SB 547",
+            "date": "04/04/2025",
+            "type": "committee",
+            "seqNumber": "S4",
+            "voteChamber": "senate",
+            "voteUrl": null,
+            "session": "2",
+            "motion": "Tabled in Committee",
+            "thresholdRequired": "simple",
+            "count": {
+                "Y": 6,
+                "N": 0
+            },
+            "gopCount": {
+                "Y": 4,
+                "N": 0,
+                "A": 1,
+                "E": 0,
+                "O": 0
+            },
+            "demCount": {
+                "Y": 2,
+                "N": 0,
+                "A": 1,
+                "E": 0,
+                "O": 0
+            },
+            "motionPassed": true,
+            "gopSupported": true,
+            "demSupported": true,
+            "votes": [
+                {
+                    "option": "A",
+                    "name": "Dave Fern",
+                    "lastName": "Fern",
+                    "party": "D",
+                    "locale": "Whitefish",
+                    "district": "SD 2"
+                },
+                {
+                    "option": "Y",
+                    "name": "Mary Ann Dunwell",
+                    "lastName": "Dunwell",
+                    "party": "D",
+                    "locale": "Helena",
+                    "district": "SD 42"
+                },
+                {
+                    "option": "Y",
+                    "name": "Andrea Olsen",
+                    "lastName": "Olsen",
+                    "party": "D",
+                    "locale": "Missoula",
+                    "district": "SD 48"
+                },
+                {
+                    "option": "Y",
+                    "name": "Gregg Hunter",
+                    "lastName": "Hunter",
+                    "party": "R",
+                    "locale": "Glasgow",
+                    "district": "SD 15"
+                },
+                {
+                    "option": "Y",
+                    "name": "John Esp",
+                    "lastName": "Esp",
+                    "party": "R",
+                    "locale": "Big Timber",
+                    "district": "SD 29"
+                },
+                {
+                    "option": "A",
+                    "name": "Josh Kassmier",
+                    "lastName": "Kassmier",
+                    "party": "R",
+                    "locale": "Fort Benton",
+                    "district": "SD 13"
+                },
+                {
+                    "option": "Y",
+                    "name": "Denley Loge",
+                    "lastName": "Loge",
+                    "party": "R",
+                    "locale": "St Regis",
+                    "district": "SD 45"
+                },
+                {
+                    "option": "Y",
+                    "name": "Russ Tempel",
+                    "lastName": "Tempel",
+                    "party": "R",
+                    "locale": "Chester",
+                    "district": "SD 14"
+                }
+            ]
+        }
     }
 ]
