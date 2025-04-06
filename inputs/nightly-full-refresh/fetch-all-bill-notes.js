@@ -23,17 +23,67 @@ const OUT_DIRS = {
     amendments: path.join(__dirname, '../../public/amendments')
 };
 
-const processBatch = async (items, batchSize, processFn) => {
-    const results = [];
-    for (let i = 0; i < items.length; i += batchSize) {
-        const batch = items.slice(i, i + batchSize);
-        // console.log(`Processing batch ${Math.ceil((i+1)/batchSize)}/${Math.ceil(items.length/batchSize)} (${batch.length} items)`);
-        const batchResults = await Promise.all(batch.map(processFn));
-        results.push(...batchResults);
-    }
-    return results;
-};
+// fetch with rate limit handling
+const fetchWithRateLimitHandling = async (url, options = {}, retries = 3) => {
+    let lastError;
+    let waitTime = 1000; // start with 1 second backoff
 
+    for (let attempt = 0; attempt <= retries; attempt++) {
+        try {
+            const response = await fetch(url, options);
+
+            // check if rate limited
+            if (response.status === 403 || response.status === 429) {
+                const rateLimitRemaining = response.headers.get('x-ratelimit-remaining');
+                const rateLimitReset = response.headers.get('x-ratelimit-reset');
+                const retryAfter = response.headers.get('retry-after');
+
+                if (rateLimitRemaining === '0' && rateLimitReset) {
+                    // Primary rate limit hit - wait until reset time
+                    const resetTime = new Date(parseInt(rateLimitReset) * 1000);
+                    const waitMs = resetTime - new Date() + 1000; // Add 1 second buffer
+
+                    console.warn(`🛑 Rate limit exceeded! Waiting until ${resetTime.toLocaleTimeString()}...`);
+
+                    if (waitMs > 0) {
+                        await new Promise(resolve => setTimeout(resolve, waitMs));
+                        continue; // retry after waiting
+                    }
+                } else if (retryAfter) {
+                    // secondary rate limit with retry-after header
+                    const waitSeconds = parseInt(retryAfter);
+                    console.warn(`⚠️ Secondary rate limit hit. Waiting ${waitSeconds} seconds...`);
+                    await new Promise(resolve => setTimeout(resolve, waitSeconds * 1000));
+                    continue; // Retry after waiting
+                } else {
+                    // secondary rate limit without guidance, use exponential backoff
+                    console.warn(`⚠️ Rate limit hit. Using exponential backoff: ${waitTime}ms`);
+                    await new Promise(resolve => setTimeout(resolve, waitTime));
+                    waitTime *= 2; // exponential backoff
+                    continue; // retry after waiting
+                }
+            }
+
+            // check for other errors
+            if (!response.ok) {
+                throw new Error(`HTTP error ${response.status}: ${response.statusText}`);
+            }
+
+            return response;
+
+        } catch (error) {
+            lastError = error;
+
+            if (attempt < retries) {
+                console.warn(`Attempt ${attempt + 1}/${retries + 1} failed: ${error.message}. Retrying in ${waitTime}ms...`);
+                await new Promise(resolve => setTimeout(resolve, waitTime));
+                waitTime *= 2; // exponential backoff
+            }
+        }
+    }
+
+    throw lastError || new Error(`Failed after ${retries + 1} attempts`);
+};
 
 const fetchJson = async (url) => {
     const headers = process.env.GITHUB_TOKEN ? {
@@ -41,17 +91,13 @@ const fetchJson = async (url) => {
         'Accept': 'application/vnd.github.v3+json'
     } : {};
 
-    const response = await fetch(url, { headers });
-    if (!response.ok) {
-        throw new Error(`Failed to fetch JSON from ${url}, status: ${response.status}`);
-    }
+    const response = await fetchWithRateLimitHandling(url, { headers });
     return await response.json();
 };
 
 const createFolderIfNotExists = async folderPath => {
     try {
         await fs.mkdir(folderPath, { recursive: true });
-        // console.log(`Created folder: ${folderPath}`);
     } catch (error) {
         if (error.code !== 'EEXIST') {
             throw error;
@@ -64,7 +110,6 @@ const clearDirectory = async (dirPath) => {
         const files = await fs.readdir(dirPath);
         for (const file of files) {
             await fs.unlink(path.join(dirPath, file));
-            // console.log(`Deleted old file: ${file}`);
         }
     } catch (error) {
         if (error.code !== 'ENOENT') {
@@ -73,61 +118,128 @@ const clearDirectory = async (dirPath) => {
     }
 };
 
-const downloadFile = async (url, fileName, folderPath) => {
-    // console.log(`Fetching ${url}`);
-    const response = await fetch(url);
-    if (!response.ok) {
-        throw new Error(`Failed to fetch URL: ${url}, status: ${response.status}`);
+const downloadFile = async (url, fileName, tempFolderPath) => {
+    try {
+        const response = await fetchWithRateLimitHandling(url);
+
+        const filePath = path.join(tempFolderPath, fileName);
+        const data = await response.buffer();
+        await fs.writeFile(filePath, data);
+        return true;
+    } catch (error) {
+        console.error(`Failed to download ${fileName}: ${error.message}`);
+        return false;
     }
-    
-    const data = await response.buffer();
-    const outputPath = path.join(folderPath, fileName);
-    await fs.writeFile(outputPath, data);
-    // console.log(`Saved ${fileName} to ${outputPath}`);
 };
+
+const processBatch = async (items, batchSize, processFn) => {
+    const results = [];
+    for (let i = 0; i < items.length; i += batchSize) {
+        const batch = items.slice(i, i + batchSize);
+        console.log(`Processing batch ${Math.floor(i / batchSize) + 1}/${Math.ceil(items.length / batchSize)} (${batch.length} items)`);
+        const batchResults = await Promise.all(batch.map(processFn));
+        results.push(...batchResults);
+    }
+    return results;
+};
+
 const fetchAllFiles = async (type) => {
-    // console.log(`Fetching all ${type}...`);
+    console.log(`Fetching all ${type}...`);
     
     // get the list of all directories (bill folders)
     const directories = await fetchJson(GITHUB_API_URLS[type]);
     const dirList = directories.filter(dir => dir.type === 'dir');
+    console.log(`Found ${dirList.length} bill folders for ${type}`);
     
-    // batch size of 10 to avoid making GH angry
-    await processBatch(dirList, 10, async (dir) => {
+    // create temp directory
+    const tempBaseDir = path.join(OUT_DIRS[type], '_temp');
+    await createFolderIfNotExists(tempBaseDir);
+    
+    // process bills in batches
+    await processBatch(dirList, 6, async (dir) => {
         try {
             const billContents = await fetchJson(dir.url);
             const pdfFiles = billContents.filter(file => file.name.endsWith('.pdf'));
             
-            if (pdfFiles.length === 0) return;
+            if (pdfFiles.length === 0) {
+                console.log(`No PDF files found for ${dir.name}`);
+                return;
+            }
             
-            const folderPath = path.join(OUT_DIRS[type], dir.name);
-            await createFolderIfNotExists(folderPath);
+            // create a temp folder for this bill
+            const tempFolderPath = path.join(tempBaseDir, dir.name);
+            await createFolderIfNotExists(tempFolderPath);
             
-            // clear directory once per bill
-            await clearDirectory(folderPath);
-            
-            // download all PDF files in parallel
-            await Promise.all(pdfFiles.map(pdf => {
+            // download all PDF files to temp folder
+            const downloadResults = await Promise.all(pdfFiles.map(pdf => {
                 const fileUrl = `${RAW_URL_BASES[type]}${dir.name}/${pdf.name}`;
-                return downloadFile(fileUrl, pdf.name, folderPath);
+                return downloadFile(fileUrl, pdf.name, tempFolderPath);
             }));
             
-            console.log(`Completed ${dir.name} (${pdfFiles.length} files)`);
+            // check if all downloads were successful
+            const allSuccessful = downloadResults.every(result => result);
+            
+            if (allSuccessful) {
+                // all downloads succeeded, now we can safely replace the original files
+                const finalFolderPath = path.join(OUT_DIRS[type], dir.name);
+                await createFolderIfNotExists(finalFolderPath);
+                
+                // clear target directory
+                await clearDirectory(finalFolderPath);
+                
+                // move all files from temp to final location
+                const tempFiles = await fs.readdir(tempFolderPath);
+                for (const file of tempFiles) {
+                    const tempFilePath = path.join(tempFolderPath, file);
+                    const finalFilePath = path.join(finalFolderPath, file);
+                    await fs.rename(tempFilePath, finalFilePath);
+                }
+                
+                console.log(`✓ Completed ${dir.name} (${pdfFiles.length} files)`);
+            } else {
+                console.error(`❌ Failed to download all files for ${dir.name}, keeping existing files`);
+            }
+            
+            // clean up temp folder for this bill
+            await clearDirectory(tempFolderPath);
+            try {
+                await fs.rmdir(tempFolderPath);
+            } catch (e) {
+                // ignore errors on temp directory removal
+            }
+            
         } catch (error) {
             console.error(`Error processing ${dir.name}: ${error.message}`);
         }
     });
+    
+    // clean temp directory at the end
+    try {
+        await clearDirectory(tempBaseDir);
+        await fs.rmdir(tempBaseDir);
+        console.log(`Cleaned up temporary files for ${type}`);
+    } catch (e) {
+        console.warn(`Warning: Could not remove temp directory: ${e.message}`);
+    }
 };
 
 const main = async () => {
     try {
         console.log('Starting full download of all bill notes...');
+
+        if (process.env.GITHUB_TOKEN) {
+            console.log('✓ Using authenticated GitHub API requests (higher rate limits: 5000 requests/hour)');
+        } else {
+            console.warn('⚠️ No GITHUB_TOKEN found. Using unauthenticated requests (60 requests/hour limit).');
+        }
+
         await fetchAllFiles('legalNotes');
         await fetchAllFiles('fiscalNotes');
         await fetchAllFiles('amendments');
-        console.log('Successfully downloaded all bill notes!');
+
+        console.log('✅ Successfully downloaded all bill notes!');
     } catch (error) {
-        console.error(`Error downloading all bill notes: ${error.message}`);
+        console.error(`❌ Error downloading bill notes: ${error.message}`);
         process.exit(1);
     }
 };
