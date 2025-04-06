@@ -195,7 +195,7 @@ const fetchAllFiles = async (type) => {
                     await fs.rename(tempFilePath, finalFilePath);
                 }
                 
-                console.log(`✓ Completed ${dir.name} (${pdfFiles.length} files)`);
+                // console.log(`✓ Completed ${dir.name} (${pdfFiles.length} files)`);
             } else {
                 console.error(`❌ Failed to download all files for ${dir.name}, keeping existing files`);
             }
