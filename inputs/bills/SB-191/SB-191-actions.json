@@ -251,22 +251,22 @@
                 "N": 1
             },
             "gopCount": {
-                "Y": 6,
-                "N": 1,
+                "Y": 0,
+                "N": 0,
                 "A": 0,
                 "E": 0,
                 "O": 0
             },
             "demCount": {
-                "Y": 4,
+                "Y": 0,
                 "N": 0,
                 "A": 0,
                 "E": 0,
                 "O": 0
             },
             "motionPassed": true,
-            "gopSupported": true,
-            "demSupported": true,
+            "gopSupported": false,
+            "demSupported": false,
             "votes": [
                 {
                     "option": "Y",
@@ -825,20 +825,6 @@
         "id": "SB191-0021",
         "bill": "SB 191",
         "date": "02/12/2025",
-        "description": "Scheduled for 3rd Reading",
-        "possession": "Senate",
-        "committee": "undefined",
-        "actionUrl": null,
-        "recordings": [],
-        "transcriptUrl": null,
-        "key": "Scheduled for 3rd Reading",
-        "committeeHearingTime": null,
-        "vote": null
-    },
-    {
-        "id": "SB191-0022",
-        "bill": "SB 191",
-        "date": "02/12/2025",
         "description": "3rd Reading Passed",
         "possession": "Senate",
         "committee": "undefined",
@@ -848,7 +834,7 @@
         "key": "3rd Reading Passed",
         "committeeHearingTime": null,
         "vote": {
-            "action": "SB191-0022",
+            "action": "SB191-0021",
             "bill": "SB 191",
             "date": "02/12/2025",
             "type": "committee",
@@ -1284,7 +1270,7 @@
         }
     },
     {
-        "id": "SB191-0023",
+        "id": "SB191-0022",
         "bill": "SB 191",
         "date": "02/13/2025",
         "description": "Transmitted to House",
@@ -1298,7 +1284,7 @@
         "vote": null
     },
     {
-        "id": "SB191-0024",
+        "id": "SB191-0023",
         "bill": "SB 191",
         "date": "02/13/2025",
         "description": "Referred to Committee",
@@ -1312,7 +1298,7 @@
         "vote": null
     },
     {
-        "id": "SB191-0025",
+        "id": "SB191-0024",
         "bill": "SB 191",
         "date": "02/13/2025",
         "description": "First Reading",
@@ -1326,7 +1312,7 @@
         "vote": null
     },
     {
-        "id": "SB191-0026",
+        "id": "SB191-0025",
         "bill": "SB 191",
         "date": "03/05/2025",
         "description": "Hearing",
@@ -1340,7 +1326,7 @@
         "vote": null
     },
     {
-        "id": "SB191-0027",
+        "id": "SB191-0026",
         "bill": "SB 191",
         "date": "03/25/2025",
         "description": "Committee Executive Action--Bill Concurred as Amended",
@@ -1352,7 +1338,7 @@
         "key": "Committee Executive Action--Bill Concurred as Amended",
         "committeeHearingTime": null,
         "vote": {
-            "action": "SB191-0027",
+            "action": "SB191-0026",
             "bill": "SB 191",
             "date": "03/25/2025",
             "type": "committee",
@@ -1556,7 +1542,7 @@
         }
     },
     {
-        "id": "SB191-0028",
+        "id": "SB191-0027",
         "bill": "SB 191",
         "date": "03/26/2025",
         "description": "Committee Report--Bill Concurred as Amended",
@@ -1570,7 +1556,7 @@
         "vote": null
     },
     {
-        "id": "SB191-0029",
+        "id": "SB191-0028",
         "bill": "SB 191",
         "date": "04/01/2025",
         "description": "Revised Fiscal Note Received",
@@ -1584,7 +1570,7 @@
         "vote": null
     },
     {
-        "id": "SB191-0030",
+        "id": "SB191-0029",
         "bill": "SB 191",
         "date": "04/01/2025",
         "description": "Revised Fiscal Note Signed",
@@ -1598,7 +1584,7 @@
         "vote": null
     },
     {
-        "id": "SB191-0031",
+        "id": "SB191-0030",
         "bill": "SB 191",
         "date": "04/01/2025",
         "description": "Scheduled for 2nd Reading",
@@ -1612,7 +1598,7 @@
         "vote": null
     },
     {
-        "id": "SB191-0032",
+        "id": "SB191-0031",
         "bill": "SB 191",
         "date": "04/01/2025",
         "description": "2nd Reading Concurred",
@@ -1624,7 +1610,7 @@
         "key": "2nd Reading Concurred",
         "committeeHearingTime": null,
         "vote": {
-            "action": "SB191-0032",
+            "action": "SB191-0031",
             "bill": "SB 191",
             "date": "04/01/2025",
             "type": "committee",
@@ -2460,7 +2446,7 @@
         }
     },
     {
-        "id": "SB191-0033",
+        "id": "SB191-0032",
         "bill": "SB 191",
         "date": "04/01/2025",
         "description": "Revised Fiscal Note Printed",
@@ -2474,7 +2460,7 @@
         "vote": null
     },
     {
-        "id": "SB191-0034",
+        "id": "SB191-0033",
         "bill": "SB 191",
         "date": "04/02/2025",
         "description": "Scheduled for 3rd Reading",
@@ -2488,7 +2474,7 @@
         "vote": null
     },
     {
-        "id": "SB191-0035",
+        "id": "SB191-0034",
         "bill": "SB 191",
         "date": "04/02/2025",
         "description": "3rd Reading Concurred",
@@ -2500,7 +2486,7 @@
         "key": "3rd Reading Concurred",
         "committeeHearingTime": null,
         "vote": {
-            "action": "SB191-0035",
+            "action": "SB191-0034",
             "bill": "SB 191",
             "date": "04/02/2025",
             "type": "committee",
@@ -3336,7 +3322,7 @@
         }
     },
     {
-        "id": "SB191-0036",
+        "id": "SB191-0035",
         "bill": "SB 191",
         "date": "04/03/2025",
         "description": "Returned to Senate with Amendments",
@@ -3350,7 +3336,7 @@
         "vote": null
     },
     {
-        "id": "SB191-0037",
+        "id": "SB191-0036",
         "bill": "SB 191",
         "date": "04/07/2025",
         "description": "Scheduled for 2nd Reading",
@@ -3364,7 +3350,7 @@
         "vote": null
     },
     {
-        "id": "SB191-0038",
+        "id": "SB191-0037",
         "bill": "SB 191",
         "date": "04/07/2025",
         "description": "2nd Reading Passed",
@@ -3376,7 +3362,7 @@
         "key": "2nd Reading Passed",
         "committeeHearingTime": null,
         "vote": {
-            "action": "SB191-0038",
+            "action": "SB191-0037",
             "bill": "SB 191",
             "date": "04/07/2025",
             "type": "committee",
@@ -3810,5 +3796,19 @@
                 }
             ]
         }
+    },
+    {
+        "id": "SB191-0038",
+        "bill": "SB 191",
+        "date": "04/08/2025",
+        "description": "Scheduled for 3rd Reading",
+        "possession": "Senate",
+        "committee": "undefined",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Scheduled for 3rd Reading",
+        "committeeHearingTime": null,
+        "vote": null
     }
 ]
