@@ -4,7 +4,8 @@ import { css } from '@emotion/react';
 import { shortDateWithWeekday } from '../config/utils';
 
 const calendarStyle = css`
-  width: 400px;
+  width: 100%;
+  max-width: 420px;
   margin: 0 auto;
 
   .calendar-header {
@@ -19,6 +20,7 @@ const calendarStyle = css`
       flex: 1;
       display: flex;
       justify-content: center;
+      font-size: 1.2em;
       
       h3 {
         display: flex;
@@ -115,6 +117,18 @@ const calendarStyle = css`
         &:hover {
           background-color: var(--tan2);
           color: var(--link);
+        }
+        
+        &.current {
+          background-color: #ce5a00;
+          color: white;
+          font-weight: bold;
+          font-size: 1.1em;
+          
+          &:hover {
+            background-color: darken(#ce5a00, 10%);
+            color: white;
+          }
         }
       }
     }
@@ -324,15 +338,6 @@ const CalendarNavigator = ({ dates, currentPageDate }) => {
   return (
     <div css={calendarStyle}>
       <div className="calendar-header">
-        <button
-          className="navigation-button"
-          onClick={goToPreviousMonth}
-          disabled={isFirstMonth}
-          title="Previous Month"
-        >
-          ◀
-        </button>
-
         <div className="month-selector">
           <h3
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
@@ -356,49 +361,55 @@ const CalendarNavigator = ({ dates, currentPageDate }) => {
             </div>
           )}
         </div>
-
-        <button
-          className="navigation-button"
-          onClick={goToNextMonth}
-          disabled={isLastMonth}
-          title="Next Month"
-        >
-          ▶
-        </button>
       </div>
-      <div css={css`
-  display: flex;
-  justify-content: space-between;
-  margin-top: 0em;
-  margin-bottom: .5em;
-  gap: 0.5em;
-`}>
+
+      <div
+        css={css`
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-top: 0em;
+          margin-bottom: 0.5em;
+          gap: 0.5em;
+          min-height: 50px;
+        `}
+      >
         {prev ? (
           <Link href={`/calendar/${prev}`} passHref>
             <button
               className="nav-day-button"
               title="Go to Previous Legislative Day"
               css={css`
-          background-color: var(--gray1);
-          border: 1px solid transparent;
-          border-radius: 4px;
-          padding: 0.2em 0.6em;
-          font-size: 0.85em;
-          font-weight: 600;
-          cursor: pointer;
-          transition: all 0.2s ease;
-          box-sizing: border-box;
-          min-width: 90px;
-          text-align: center;
-          
-          &:hover {
-            background-color: var(--gray2);
-            color: var(--link);
-            border: 1px solid transparent;
-          }
-        `}
+                background: none !important;
+                border: none !important;
+                cursor: pointer;
+                font-size: 1.2em;
+                padding: 0.5em;
+                transition: color 0.2s ease;
+                outline: none !important;
+                box-shadow: none !important;
+
+                &:hover {
+                  color: #ce5a00 !important;
+                  background: none !important;
+                  border: none !important;
+                  outline: none !important;
+                  box-shadow: none !important;
+                }
+
+                &:focus {
+                  outline: none !important;
+                  box-shadow: none !important;
+                }
+
+                &:disabled {
+                  opacity: 0.5;
+                  cursor: not-allowed;
+                  visibility: hidden;
+                }
+              `}
             >
-              ← Prev
+              ◀
             </button>
           </Link>
         ) : (
@@ -406,29 +417,37 @@ const CalendarNavigator = ({ dates, currentPageDate }) => {
         )}
 
         {/* Center section with conditional today button */}
-        <div css={css`min-width: 90px; display: flex; justify-content: center;`}>
+        <div
+          css={css`
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-width: 90px;
+          `}
+        >
           {!isTodayPage() && (
             <Link href="/calendar" passHref>
               <button
                 className="today-button"
                 title="Go to Today"
                 css={css`
-            background-color: var(--tan2);
-            border: 1px solid transparent;
-            border-radius: 4px;
-            padding: 0.2em 0.6em;
-            font-size: 0.85em;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            box-sizing: border-box;
-            
-            &:hover {
-              background-color: var(--tan3);
-              color: var(--link);
-              border: 1px solid transparent;
-            }
-          `}
+                  background-color: var(--tan2);
+                  border: 1px solid transparent;
+                  border-radius: 4px;
+                  padding: 0.2em 0.6em;
+                  font-size: 0.85em;
+                  font-weight: 600;
+                  cursor: pointer;
+                  transition: all 0.2s ease;
+                  box-sizing: border-box;
+
+                  &:hover {
+                    background-color: var(--tan3);
+                    color: var(--link);
+                    border: 1px solid transparent;
+                  }
+                `}
               >
                 Back to today
               </button>
@@ -442,54 +461,73 @@ const CalendarNavigator = ({ dates, currentPageDate }) => {
               className="nav-day-button"
               title="Go to Next Legislative Day"
               css={css`
-          background-color: var(--gray1);
-          border: 1px solid transparent;
-          border-radius: 4px;
-          padding: 0.2em 0.6em;
-          font-size: 0.85em;
-          font-weight: 600;
-          cursor: pointer;
-          transition: all 0.2s ease;
-          box-sizing: border-box;
-          min-width: 90px;
-          text-align: center;
-          
-          &:hover {
-            background-color: var(--gray2);
-            color: var(--link);
-            border: 1px solid transparent;
-          }
-        `}
+                background: none !important;
+                border: none !important;
+                cursor: pointer;
+                font-size: 1.2em;
+                padding: 0.5em;
+                transition: color 0.2s ease;
+                outline: none !important;
+                box-shadow: none !important;
+
+                &:hover {
+                  color: #ce5a00 !important;
+                  background: none !important;
+                  border: none !important;
+                  outline: none !important;
+                  box-shadow: none !important;
+                }
+
+                &:focus {
+                  outline: none !important;
+                  box-shadow: none !important;
+                }
+
+                &:disabled {
+                  opacity: 0.5;
+                  cursor: not-allowed;
+                  visibility: hidden;
+                }
+              `}
             >
-              Next →
+              ▶
             </button>
           </Link>
         ) : (
           <div css={css`min-width: 90px;`}></div>
         )}
       </div>
+
       <div css={gridStyle}>
         {weekdays.map(day => (
           <div key={day} className="weekday-header">
             {day}
           </div>
         ))}
-        {calendarDays.map((day, index) => (
-          <div
-            key={index}
-            className={`calendar-day ${day?.isActive ? 'active' : 'inactive'}`}
-          >
-            {day && (
-              day.isActive ? (
-                <Link href={`/calendar/${day.key}`}>
-                  {day.day}
-                </Link>
-              ) : (
-                day.day
-              )
-            )}
-          </div>
-        ))}
+        {calendarDays.map((day, index) => {
+          // Check if this day is the currently selected day
+          const isCurrentDay = day && day.key === currentPageDate;
+
+          return (
+            <div
+              key={index}
+              className={`calendar-day ${day?.isActive ? 'active' : 'inactive'}`}
+            >
+              {day && (
+                day.isActive ? (
+                  <Link
+                    href={`/calendar/${day.key}`}
+                    className={isCurrentDay ? 'current' : ''}
+                  >
+                    {day.day}
+                  </Link>
+                ) : (
+                  day.day
+                )
+              )}
+            </div>
+          );
+        })}
       </div>
     </div>
   );

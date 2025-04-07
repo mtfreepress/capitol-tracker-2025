@@ -7,7 +7,12 @@ const CalendarRedirect = () => {
 
   useEffect(() => {
     if (!router.isReady) return;
-      
+    
+    if (calendar.mostRecentActiveDay) {
+      router.replace(`/calendar/${calendar.mostRecentActiveDay}`);
+      return;
+    }
+    
     const today = new Date();
     const todayKey = `${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}-${today.getFullYear()}`;
     
