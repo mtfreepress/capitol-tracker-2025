@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { css } from '@emotion/react';
+import { statusColors } from '../../config/config';
 import Link from 'next/link';
 import Layout from '../../design/Layout';
 
@@ -274,9 +275,19 @@ const VoteBlock = ({ vote, description }) => {
   let demSupportColor = 'var(--gray2)'
   if ((thresholdRequired !== '2/3 entire legislature') || (!['2nd Reading Passed', '3rd Reading Passed'].includes(description))) {
     icon = billAdvanced ? '✅' : '❌'
-    passageColor = billAdvanced ? positionColors('Y') : positionColors('N')
-    gopSupportColor = gopSupported ? positionColors('Y') : positionColors('N')
-    demSupportColor = demSupported ? positionColors('Y') : positionColors('N')
+    // Use the "stalled" color for "Tabled in Committee" votes that pass 
+    passageColor = (description === 'Tabled in Committee' && !billAdvanced)
+      ? statusColors('stalled') // to ensure the bill advanced background is orange when tabled motion passes
+      : (billAdvanced ? positionColors('Y') : positionColors('N'));
+
+    // Update GOP and Democrat support colors for "Tabled in Committee"
+    gopSupportColor = (description === 'Tabled in Committee')
+      ? statusColors('stalled') // if pass, use stalled color 
+      : (gopSupported ? positionColors('Y') : positionColors('N'));
+
+    demSupportColor = (description === 'Tabled in Committee')
+      ? statusColors('stalled') // if pass use stalled color
+      : (demSupported ? positionColors('Y') : positionColors('N'));
   }
   return <div>
     <div css={voteSummariesCss}>
