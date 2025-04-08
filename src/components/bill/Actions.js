@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { css } from '@emotion/react';
+import { statusColors } from '../../config/config';
 import Link from 'next/link';
 import Layout from '../../design/Layout';
 
@@ -274,9 +275,19 @@ const VoteBlock = ({ vote, description }) => {
   let demSupportColor = 'var(--gray2)'
   if ((thresholdRequired !== '2/3 entire legislature') || (!['2nd Reading Passed', '3rd Reading Passed'].includes(description))) {
     icon = billAdvanced ? '✅' : '❌'
-    passageColor = billAdvanced ? positionColors('Y') : positionColors('N')
-    gopSupportColor = gopSupported ? positionColors('Y') : positionColors('N')
-    demSupportColor = demSupported ? positionColors('Y') : positionColors('N')
+    // Use the "stalled" color for "Tabled in Committee" votes that pass 
+    passageColor = (description === 'Tabled in Committee' && !billAdvanced)
+      ? statusColors('stalled') // to ensure the bill advanced background is orange when tabled motion passes
+      : (billAdvanced ? positionColors('Y') : positionColors('N'));
+
+    // Update GOP and Democrat support colors for "Tabled in Committee"
+    gopSupportColor = (description === 'Tabled in Committee')
+      ? statusColors('stalled') // if pass, use stalled color 
+      : (gopSupported ? positionColors('Y') : positionColors('N'));
+
+    demSupportColor = (description === 'Tabled in Committee')
+      ? statusColors('stalled') // if pass use stalled color
+      : (demSupported ? positionColors('Y') : positionColors('N'));
   }
   return <div>
     <div css={voteSummariesCss}>
@@ -298,7 +309,7 @@ const VoteBlock = ({ vote, description }) => {
         </div>
       }
     </div>
-    {(votes.length > 1) && <VoteListing votes={votes} voteUrl={voteUrl} />}
+    {(votes.length > 1) && <VoteListing votes={votes} voteUrl={voteUrl} description={description} />}
 
   </div>
 }
@@ -330,46 +341,46 @@ const partyVotes = css`
   margin-bottom: 1em;
 `
 
-const VoteListing = ({ votes, voteUrl, defaultOpen = false }) => {
-  const [isOpen, setIsOpen] = useState(defaultOpen)
-  const gopVotes = votes.filter(d => d.party === 'R').sort((a, b) => a.lastName.localeCompare(b.lastName))
-  const demVotes = votes.filter(d => d.party === 'D').sort((a, b) => a.lastName.localeCompare(b.lastName))
-  return <div>
-    <button className='inline-button' onClick={() => setIsOpen(!isOpen)}>
-      {isOpen ? <span>&#x25BE; Hide full vote breakdown</span> : <span>&#x25B8; Show full vote breakdown</span>}
-    </button>
-    {/* <span>  <a href={voteUrl}>Official vote page.</a></span> */}
-    {
-      isOpen ?
+const VoteListing = ({ votes, voteUrl, description, defaultOpen = false }) => {
+  const [isOpen, setIsOpen] = useState(defaultOpen);
+  const gopVotes = votes.filter(d => d.party === 'R').sort((a, b) => a.lastName.localeCompare(b.lastName));
+  const demVotes = votes.filter(d => d.party === 'D').sort((a, b) => a.lastName.localeCompare(b.lastName));
+
+  return (
+    <div>
+      <button className="inline-button" onClick={() => setIsOpen(!isOpen)}>
+        {isOpen ? <span>&#x25BE; Hide full vote breakdown</span> : <span>&#x25B8; Show full vote breakdown</span>}
+      </button>
+      {isOpen ? (
         <div css={voteListing}>
           <div css={col}>
             <div css={partyLabel}>Republicans</div>
             <div css={partyVotes}>
-              {
-                gopVotes.map(VoteItem)
-              }
+              {gopVotes.map(vote => (
+                <VoteItem key={vote.name} vote={vote} description={description} />
+              ))}
             </div>
           </div>
           <div css={col}>
             <div css={partyLabel}>Democrats</div>
             <div css={partyVotes}>
-              {
-                demVotes.map(VoteItem)
-              }
+              {demVotes.map(vote => (
+                <VoteItem key={vote.name} vote={vote} description={description} />
+              ))}
             </div>
           </div>
-          {voteUrl && <div className="note"><a href={voteUrl} target="_blank" rel="noopener noreferrer">Official vote page</a></div>}
-        </div> : null
-    }
-    {
-      isOpen ?
-        <button className='inline-button' onClick={() => setIsOpen(false)}>
-          Hide full vote breakdown
-        </button> : null
-    }
-
-  </div>
-}
+          {voteUrl && (
+            <div className="note">
+              <a href={voteUrl} target="_blank" rel="noopener noreferrer">
+                Official vote page
+              </a>
+            </div>
+          )}
+        </div>
+      ) : null}
+    </div>
+  );
+};
 
 const voteItemCss = css`
   display: flex;
@@ -391,20 +402,36 @@ const nameLine = css`
   padding: 0.1em;
 `
 
-const VoteItem = (vote) => {
-  const { option, name, locale, party } = vote
-  const choice = option.replace('absent', 'abs').replace('excused', 'exc')
-  const localeRender = locale.replace(' ', '\u00a0') // prevents line break on space
+const VoteItem = ({ vote, description }) => {
+  const { option, name, locale, party } = vote;
+  const choice = option.replace('absent', 'abs').replace('excused', 'exc');
+  const localeRender = locale.replace(' ', '\u00a0'); // prevents line break on space
+
+  // determine the vote color
   const voteColor = css`
-    background-color: ${positionColors(choice.toUpperCase()[0])};
-  `
+    background-color: ${
+      description === 'Tabled in Committee'
+        ? // flip positionColors for "Tabled in Committee"
+          choice.toUpperCase() === 'Y'
+          ? positionColors('N') // Yes -> No color (green for "live")
+          : choice.toUpperCase() === 'N'
+          ? positionColors('Y') // No -> Yes color (orange for "stalled")
+          : '#bbb' // Abstain -> Grey
+        : // normal behavior for other actions
+          positionColors(choice.toUpperCase()[0])
+    };
+  `;
+
   const nameColor = css`
     color: ${partyColors(party, 'darker')};
-  `
-  return <div key={name} css={voteItemCss}>
-    <div css={[voteIndicator, voteColor]}>{choice}</div>
-    <div css={nameLine}>
-      <strong css={nameColor}>{name}</strong> (<em>{localeRender}</em>)
+  `;
+
+  return (
+    <div key={name} css={voteItemCss}>
+      <div css={[voteIndicator, voteColor]}>{choice}</div>
+      <div css={nameLine}>
+        <strong css={nameColor}>{name}</strong> (<em>{localeRender}</em>)
+      </div>
     </div>
-  </div>
-}
+  );
+};
