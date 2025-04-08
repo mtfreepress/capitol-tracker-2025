@@ -2135,22 +2135,22 @@
                 "N": 0
             },
             "gopCount": {
-                "Y": 8,
+                "Y": 0,
                 "N": 0,
-                "A": 0,
+                "A": 3,
                 "E": 0,
                 "O": 0
             },
             "demCount": {
-                "Y": 5,
+                "Y": 0,
                 "N": 0,
                 "A": 0,
                 "E": 0,
                 "O": 0
             },
             "motionPassed": true,
-            "gopSupported": true,
-            "demSupported": true,
+            "gopSupported": false,
+            "demSupported": false,
             "votes": [
                 {
                     "option": "Y",
@@ -2255,6 +2255,30 @@
                     "party": "D",
                     "locale": "Unknown",
                     "district": "SD 33"
+                },
+                {
+                    "option": "A",
+                    "name": "Matt Regier",
+                    "lastName": "Regier",
+                    "party": "R",
+                    "locale": "Kalispell",
+                    "district": "SD 5"
+                },
+                {
+                    "option": "A",
+                    "name": "Kenneth Bogner",
+                    "lastName": "Bogner",
+                    "party": "R",
+                    "locale": "Miles City",
+                    "district": "SD 18"
+                },
+                {
+                    "option": "A",
+                    "name": "Gayle  Lammers",
+                    "lastName": "Lammers",
+                    "party": "R",
+                    "locale": "Unknown",
+                    "district": "SD 21"
                 }
             ]
         }
