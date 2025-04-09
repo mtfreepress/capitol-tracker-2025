@@ -79,19 +79,19 @@ const senateFloorVotes = votes.filter(v => v.voteLocation === 'floor' && v.voteC
 const houseFloorVoteAnalysis = new VotingAnalysis({ votes: houseFloorVotes })
 const senateFloorVoteAnalysis = new VotingAnalysis({ votes: senateFloorVotes })
 
-// const committees = committeesRaw
-//     .filter(d => ![
-//         'conference',
-//         'select',
-//         'procedural',
-//         // 'fiscal-sub'
-//     ].includes(d.type))
-//     .map(schema => new Committee({
-//         schema,
-//         committeeBills: bills.filter(b => b.committees.includes(schema.displayName)),
-//         lawmakers: lawmakers.filter(l => l.data.committees.map(d => d.committee).includes(schema.name)), // Cleaner to do this backwards -- assign lawmakers based on committee data?
-//         updateTime
-//     }))
+const committees = committeesRaw
+    .filter(d => ![
+        'conference',
+        'select',
+        'procedural',
+        // 'fiscal-sub'
+    ].includes(d.type))
+    .map(schema => new Committee({
+        schema,
+        committeeBills: bills.filter(b => b.committees.includes(schema.displayName)),
+        lawmakers: lawmakers.filter(l => l.data.committees.map(d => d.committee).includes(schema.name)), // Cleaner to do this backwards -- assign lawmakers based on committee data?
+        updateTime
+    }))
 
 // Calculations that need both lawmakers and bills populated
 lawmakers.forEach(lawmaker => {
@@ -176,8 +176,8 @@ writeJson('./src/data/bills.json', billsOutput)
 
 const lawmakerOutput = lawmakers.map(l => l.exportMerged())
 writeJson('./src/data/lawmakers.json', lawmakerOutput)
-// const committeeOutput = committees.map(l => l.export())
-// writeJson('./src/data/committees.json', committeeOutput)
+const committeeOutput = committees.map(l => l.export())
+writeJson('./src/data/committees.json', committeeOutput)
 
 writeJson('./src/data/header.json', headerOutput)
 writeJson('./src/data/articles.json', articles)

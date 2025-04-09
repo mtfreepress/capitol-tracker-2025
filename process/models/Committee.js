@@ -1,4 +1,3 @@
-
 import { dateParse } from '../functions.js'
 
 
@@ -16,7 +15,9 @@ export default class Committee {
             type
         } = schema;
 
-        const addressKey = displayName.toLowerCase().replace(/\s+/g, '-'); // Dynamically generate the key
+        const addressKey = displayName.toLowerCase()
+            .replace(/[,\.&;:()]/g, '')
+            .replace(/\s+/g, '-');
 
         const beginningOfToday = new Date(updateTime).setUTCHours(7, 0, 0, 0) // 7 accounts for Montana vs GMT time
 
@@ -31,6 +32,10 @@ export default class Committee {
         committeeBills.forEach(bill => {
             const billActions = bill.actions.map(a => a.export())
             const billActionsInCommittee = billActions.filter(a => a.committee === commiteeKey)
+
+            // Skip processing if there are no actions for this bill in this committee
+            if (billActionsInCommittee.length === 0) return;
+
             const lastCommitteeActionIndex = billActions.findIndex(a => a.id === billActionsInCommittee.slice(-1)[0].id)
             const postCommitteeActions = billActions
                 .slice(lastCommitteeActionIndex + 1,)

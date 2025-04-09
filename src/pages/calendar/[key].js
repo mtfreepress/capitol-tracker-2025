@@ -47,7 +47,6 @@ const Committee = ({ committee, onCalendarBills, hearings }) => {
 };
 
 export default function CalendarDay({ dateData, onCalendarBills, committees, isInvalidDate, dateStr, redirectToDate }) {
-    console.log({redirectToDate})
     const router = useRouter();
     const [isSticky, setIsSticky] = useState(false);
     const [navHeight, setNavHeight] = useState(88);
@@ -261,11 +260,19 @@ export default function CalendarDay({ dateData, onCalendarBills, committees, isI
 
     const day = shortDateWithWeekday(new Date(dateData.date));
     const hearingsByCommittee = groupHearingsByCommittee(dateData.hearings);
+    
 
     const committeesWithHearings = Array.from(
-        new Set(dateData.hearings.map((a) => a.data.committee))
+        new Set(dateData.hearings
+          .filter(hearing => hearing && hearing.data && typeof hearing.data.committee === 'string')
+          .map((a) => a.data.committee))
     ).map((name) => {
-        const match = committees.find((d) => d.name === name) || {};
+        const normalizedName = name.toLowerCase().replace(/[,\.]/g, '').replace(/\s+/g, ' ').trim();
+        const match = committees.find((d) => {
+            const normalizedCommitteeName = d.name.toLowerCase().replace(/[,\.]/g, '').replace(/\s+/g, ' ').trim();
+            return normalizedCommitteeName === normalizedName;
+        }) || {};
+        
         return {
             name,
             key: match.key || null,
@@ -312,7 +319,21 @@ export default function CalendarDay({ dateData, onCalendarBills, committees, isI
     };
 
     const getCommitteeChamber = (committeeName, committeesData) => {
-        const match = committeesData.find(d => d.name === committeeName);
+        // Guard against undefined/null
+        if (typeof committeeName !== 'string') {
+            return 'other';
+        }
+        
+        const normalizedName = committeeName.toLowerCase().replace(/[,\.]/g, '').replace(/\s+/g, ' ').trim();
+        const match = committeesData.find(d => {
+            // Guard against committee objects without name property
+            if (!d || typeof d.name !== 'string') return false;
+            
+            const normalizedCommitteeName = d.name.toLowerCase().replace(/[,\.]/g, '').replace(/\s+/g, ' ').trim();
+            return normalizedCommitteeName === normalizedName;
+        });
+        
+        // Safely access chamber
         return match?.chamber?.toLowerCase() || 'other';
     };
 
