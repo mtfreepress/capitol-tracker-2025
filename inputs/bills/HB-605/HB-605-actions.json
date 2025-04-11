@@ -2445,26 +2445,26 @@
             "motion": "Taken from Table in Committee",
             "thresholdRequired": "simple",
             "count": {
-                "Y": 5,
+                "Y": 8,
                 "N": 1
             },
             "gopCount": {
-                "Y": 5,
+                "Y": 0,
                 "N": 0,
                 "A": 0,
                 "E": 0,
                 "O": 0
             },
             "demCount": {
-                "Y": 0,
-                "N": 1,
-                "A": 2,
+                "Y": 3,
+                "N": 0,
+                "A": 0,
                 "E": 0,
                 "O": 0
             },
             "motionPassed": true,
-            "gopSupported": true,
-            "demSupported": false,
+            "gopSupported": false,
+            "demSupported": true,
             "votes": [
                 {
                     "option": "Y",
@@ -2529,6 +2529,30 @@
                     "party": "R",
                     "locale": "Laurel",
                     "district": "SD 19"
+                },
+                {
+                    "option": "Y",
+                    "name": "Laura Smith",
+                    "lastName": "Smith",
+                    "party": "D",
+                    "locale": "Helena",
+                    "district": "SD 40"
+                },
+                {
+                    "option": "Y",
+                    "name": "Andrea Olsen",
+                    "lastName": "Olsen",
+                    "party": "D",
+                    "locale": "Missoula",
+                    "district": "SD 48"
+                },
+                {
+                    "option": "Y",
+                    "name": "Cora Neumann",
+                    "lastName": "Neumann",
+                    "party": "D",
+                    "locale": "Helena",
+                    "district": "SD 30"
                 }
             ]
         }
