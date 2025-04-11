@@ -249,7 +249,209 @@
         "transcriptUrl": null,
         "key": "Committee Executive Action--Bill Passed as Amended",
         "committeeHearingTime": null,
-        "vote": null
+        "vote": {
+            "action": "HB76-0018",
+            "bill": "HB 76",
+            "date": "01/10/2025",
+            "type": "committee",
+            "seqNumber": "H5",
+            "voteChamber": "house",
+            "voteUrl": null,
+            "session": "2",
+            "motion": "Committee Executive Action--Bill Passed as Amended",
+            "thresholdRequired": "simple",
+            "count": {
+                "Y": 14,
+                "N": 3
+            },
+            "gopCount": {
+                "Y": 7,
+                "N": 3,
+                "A": 2,
+                "E": 0,
+                "O": 0
+            },
+            "demCount": {
+                "Y": 7,
+                "N": 0,
+                "A": 2,
+                "E": 0,
+                "O": 0
+            },
+            "motionPassed": true,
+            "gopSupported": true,
+            "demSupported": true,
+            "votes": [
+                {
+                    "option": "Y",
+                    "name": "Jodee Etchart",
+                    "lastName": "Etchart",
+                    "party": "R",
+                    "locale": "Billings",
+                    "district": "HD 51"
+                },
+                {
+                    "option": "Y",
+                    "name": "Ed Buttrey",
+                    "lastName": "Buttrey",
+                    "party": "R",
+                    "locale": "Great Falls",
+                    "district": "HD 21"
+                },
+                {
+                    "option": "Y",
+                    "name": "SJ Howell",
+                    "lastName": "Howell",
+                    "party": "D",
+                    "locale": "Missoula",
+                    "district": "HD 100"
+                },
+                {
+                    "option": "Y",
+                    "name": "Lyn Bennett",
+                    "lastName": "Bennett",
+                    "party": "R",
+                    "locale": "Columbia Falls",
+                    "district": "HD 4"
+                },
+                {
+                    "option": "N",
+                    "name": "Kathy Love",
+                    "lastName": "Love",
+                    "party": "R",
+                    "locale": "Hamilton",
+                    "district": "HD 85"
+                },
+                {
+                    "option": "Y",
+                    "name": "Valerie Moore",
+                    "lastName": "Moore",
+                    "party": "R",
+                    "locale": "Plentywood",
+                    "district": "HD 29"
+                },
+                {
+                    "option": "Y",
+                    "name": "Melody Cunningham",
+                    "lastName": "Cunningham",
+                    "party": "D",
+                    "locale": "Missoula",
+                    "district": "HD 97"
+                },
+                {
+                    "option": "Y",
+                    "name": "Brian Close",
+                    "lastName": "Close",
+                    "party": "D",
+                    "locale": "Bozeman",
+                    "district": "HD 65"
+                },
+                {
+                    "option": "Y",
+                    "name": "George Nikolakakos",
+                    "lastName": "Nikolakakos",
+                    "party": "R",
+                    "locale": "Great Falls",
+                    "district": "HD 22"
+                },
+                {
+                    "option": "N",
+                    "name": "Brandon Ler",
+                    "lastName": "Ler",
+                    "party": "R",
+                    "locale": "Savage",
+                    "district": "HD 33"
+                },
+                {
+                    "option": "Y",
+                    "name": "James Reavis",
+                    "lastName": "Reavis",
+                    "party": "D",
+                    "locale": "Billings",
+                    "district": "HD 47"
+                },
+                {
+                    "option": "Y",
+                    "name": "Steven Kelly",
+                    "lastName": "Kelly",
+                    "party": "R",
+                    "locale": "Kalispell",
+                    "district": "HD 9"
+                },
+                {
+                    "option": "Y",
+                    "name": "Scott DeMarois",
+                    "lastName": "DeMarois",
+                    "party": "D",
+                    "locale": "Anaconda",
+                    "district": "HD 71"
+                },
+                {
+                    "option": "A",
+                    "name": "Nelly Nicol",
+                    "lastName": "Nicol",
+                    "party": "R",
+                    "locale": "Billings",
+                    "district": "HD 53"
+                },
+                {
+                    "option": "Y",
+                    "name": "Ron Marshall",
+                    "lastName": "Marshall",
+                    "party": "R",
+                    "locale": "Hamilton",
+                    "district": "HD 87"
+                },
+                {
+                    "option": "N",
+                    "name": "Amy Regier",
+                    "lastName": "Regier",
+                    "party": "R",
+                    "locale": "Kalispell",
+                    "district": "HD 6"
+                },
+                {
+                    "option": "Y",
+                    "name": "Zooey Zephyr",
+                    "lastName": "Zephyr",
+                    "party": "D",
+                    "locale": "Missoula",
+                    "district": "HD 95"
+                },
+                {
+                    "option": "A",
+                    "name": "Katie Sullivan",
+                    "lastName": "Sullivan",
+                    "party": "D",
+                    "locale": "Missoula",
+                    "district": "HD 93"
+                },
+                {
+                    "option": "A",
+                    "name": "Jade Sooktis",
+                    "lastName": "Sooktis",
+                    "party": "D",
+                    "locale": "Lame Deer",
+                    "district": "HD 41"
+                },
+                {
+                    "option": "Y",
+                    "name": "Jane Weber",
+                    "lastName": "Weber",
+                    "party": "D",
+                    "locale": "Great Falls",
+                    "district": "HD 19"
+                },
+                {
+                    "option": "A",
+                    "name": "Curtis Schomer",
+                    "lastName": "Schomer",
+                    "party": "R",
+                    "locale": "Billings",
+                    "district": "HD 48"
+                }
+            ]
+        }
     },
     {
         "id": "HB76-0020",
@@ -2765,5 +2967,19 @@
                 }
             ]
         }
+    },
+    {
+        "id": "HB76-0032",
+        "bill": "HB 76",
+        "date": "04/11/2025",
+        "description": "Scheduled for 2nd Reading",
+        "possession": "Senate",
+        "committee": "undefined",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Scheduled for 2nd Reading",
+        "committeeHearingTime": null,
+        "vote": null
     }
 ]
