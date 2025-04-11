@@ -207,10 +207,164 @@
         "transcriptUrl": null,
         "key": "Committee Executive Action--Bill Passed",
         "committeeHearingTime": null,
-        "vote": null
+        "vote": {
+            "action": "HB255-0015",
+            "bill": "HB 255",
+            "date": "02/03/2025",
+            "type": "committee",
+            "seqNumber": "H5",
+            "voteChamber": "house",
+            "voteUrl": null,
+            "session": "2",
+            "motion": "Committee Executive Action--Bill Passed",
+            "thresholdRequired": "simple",
+            "count": {
+                "Y": 15,
+                "N": 0
+            },
+            "gopCount": {
+                "Y": 9,
+                "N": 0,
+                "A": 0,
+                "E": 0,
+                "O": 0
+            },
+            "demCount": {
+                "Y": 6,
+                "N": 0,
+                "A": 0,
+                "E": 0,
+                "O": 0
+            },
+            "motionPassed": true,
+            "gopSupported": true,
+            "demSupported": true,
+            "votes": [
+                {
+                    "option": "Y",
+                    "name": "Marta Bertoglio",
+                    "lastName": "Bertoglio",
+                    "party": "R",
+                    "locale": "Clancy",
+                    "district": "HD 75"
+                },
+                {
+                    "option": "Y",
+                    "name": "Melissa Nikolakakos",
+                    "lastName": "Nikolakakos",
+                    "party": "R",
+                    "locale": "Great Falls",
+                    "district": "HD 20"
+                },
+                {
+                    "option": "Y",
+                    "name": "Sherry Essmann",
+                    "lastName": "Essmann",
+                    "party": "R",
+                    "locale": "Billings",
+                    "district": "HD 49"
+                },
+                {
+                    "option": "Y",
+                    "name": "Jamie Isaly",
+                    "lastName": "Isaly",
+                    "party": "D",
+                    "locale": "Bozeman",
+                    "district": "HD 58"
+                },
+                {
+                    "option": "Y",
+                    "name": "Jennifer Lynch",
+                    "lastName": "Lynch",
+                    "party": "D",
+                    "locale": "Butte",
+                    "district": "HD 73"
+                },
+                {
+                    "option": "Y",
+                    "name": "Lee Deming",
+                    "lastName": "Deming",
+                    "party": "R",
+                    "locale": "Laurel",
+                    "district": "HD 54"
+                },
+                {
+                    "option": "Y",
+                    "name": "Kerri Seekins-Crowe",
+                    "lastName": "Seekins-Crowe",
+                    "party": "R",
+                    "locale": "Billings",
+                    "district": "HD 39"
+                },
+                {
+                    "option": "Y",
+                    "name": "Pete Elverum",
+                    "lastName": "Elverum",
+                    "party": "D",
+                    "locale": "Helena",
+                    "district": "HD 82"
+                },
+                {
+                    "option": "Y",
+                    "name": "Mark Thane",
+                    "lastName": "Thane",
+                    "party": "D",
+                    "locale": "Missoula",
+                    "district": "HD 89"
+                },
+                {
+                    "option": "Y",
+                    "name": "Peter Strand",
+                    "lastName": "Strand",
+                    "party": "D",
+                    "locale": "Bozeman",
+                    "district": "HD 63"
+                },
+                {
+                    "option": "Y",
+                    "name": "Eric Tilleman",
+                    "lastName": "Tilleman",
+                    "party": "R",
+                    "locale": "Cascade",
+                    "district": "HD 23"
+                },
+                {
+                    "option": "Y",
+                    "name": "Greg Overstreet",
+                    "lastName": "Overstreet",
+                    "party": "R",
+                    "locale": "Stevensville",
+                    "district": "HD 88"
+                },
+                {
+                    "option": "Y",
+                    "name": "Melissa Romano",
+                    "lastName": "Romano",
+                    "party": "D",
+                    "locale": "Helena",
+                    "district": "HD 80"
+                },
+                {
+                    "option": "Y",
+                    "name": "Randyn Gregg",
+                    "lastName": "Gregg",
+                    "party": "R",
+                    "locale": "White Sulphur Springs",
+                    "district": "HD 78"
+                },
+                {
+                    "option": "Y",
+                    "name": "Linda Reksten",
+                    "lastName": "Reksten",
+                    "party": "R",
+                    "locale": "Polson",
+                    "district": "HD 13"
+                }
+            ]
+        }
     },
     {
-        "id": "HB255-0016",
+        "id": "HB255-0017",
         "bill": "HB 255",
         "date": "02/04/2025",
         "description": "Committee Report--Bill Passed",
@@ -224,7 +378,7 @@
         "vote": null
     },
     {
-        "id": "HB255-0017",
+        "id": "HB255-0018",
         "bill": "HB 255",
         "date": "02/07/2025",
         "description": "Scheduled for 2nd Reading",
@@ -238,7 +392,7 @@
         "vote": null
     },
     {
-        "id": "HB255-0018",
+        "id": "HB255-0019",
         "bill": "HB 255",
         "date": "02/07/2025",
         "description": "2nd Reading Passed",
@@ -250,7 +404,7 @@
         "key": "2nd Reading Passed",
         "committeeHearingTime": null,
         "vote": {
-            "action": "HB255-0018",
+            "action": "HB255-0019",
             "bill": "HB 255",
             "date": "02/07/2025",
             "type": "committee",
@@ -1086,7 +1240,7 @@
         }
     },
     {
-        "id": "HB255-0019",
+        "id": "HB255-0020",
         "bill": "HB 255",
         "date": "02/10/2025",
         "description": "Scheduled for 3rd Reading",
@@ -1100,7 +1254,7 @@
         "vote": null
     },
     {
-        "id": "HB255-0020",
+        "id": "HB255-0021",
         "bill": "HB 255",
         "date": "02/10/2025",
         "description": "3rd Reading Passed",
@@ -1112,7 +1266,7 @@
         "key": "3rd Reading Passed",
         "committeeHearingTime": null,
         "vote": {
-            "action": "HB255-0020",
+            "action": "HB255-0021",
             "bill": "HB 255",
             "date": "02/10/2025",
             "type": "committee",
@@ -1948,7 +2102,7 @@
         }
     },
     {
-        "id": "HB255-0021",
+        "id": "HB255-0022",
         "bill": "HB 255",
         "date": "02/10/2025",
         "description": "Transmitted to Senate",
@@ -1962,7 +2116,7 @@
         "vote": null
     },
     {
-        "id": "HB255-0022",
+        "id": "HB255-0023",
         "bill": "HB 255",
         "date": "02/11/2025",
         "description": "First Reading",
@@ -1976,7 +2130,7 @@
         "vote": null
     },
     {
-        "id": "HB255-0023",
+        "id": "HB255-0024",
         "bill": "HB 255",
         "date": "02/20/2025",
         "description": "Referred to Committee",
@@ -1990,7 +2144,7 @@
         "vote": null
     },
     {
-        "id": "HB255-0024",
+        "id": "HB255-0025",
         "bill": "HB 255",
         "date": "03/31/2025",
         "description": "Hearing",
@@ -2004,7 +2158,7 @@
         "vote": null
     },
     {
-        "id": "HB255-0025",
+        "id": "HB255-0026",
         "bill": "HB 255",
         "date": "04/08/2025",
         "description": "Tabled in Committee",
@@ -2016,7 +2170,7 @@
         "key": "Tabled in Committee",
         "committeeHearingTime": null,
         "vote": {
-            "action": "HB255-0025",
+            "action": "HB255-0026",
             "bill": "HB 255",
             "date": "04/08/2025",
             "type": "committee",
