@@ -192,7 +192,7 @@
         "recordings": [],
         "transcriptUrl": null,
         "key": "Hearing",
-        "committeeHearingTime": "02/25/2025",
+        "committeeHearingTime": null,
         "vote": null
     },
     {
@@ -206,7 +206,7 @@
         "recordings": [],
         "transcriptUrl": null,
         "key": "Committee Executive Action--Bill Passed",
-        "committeeHearingTime": null,
+        "committeeHearingTime": "02/25/2025",
         "vote": {
             "action": "SB342-0015",
             "bill": "SB 342",
@@ -326,7 +326,7 @@
         "recordings": [],
         "transcriptUrl": null,
         "key": "Committee Report--Bill Passed",
-        "committeeHearingTime": null,
+        "committeeHearingTime": "02/25/2025",
         "vote": null
     },
     {
@@ -1320,7 +1320,7 @@
         "recordings": [],
         "transcriptUrl": null,
         "key": "Hearing Canceled",
-        "committeeHearingTime": "03/26/2025",
+        "committeeHearingTime": null,
         "vote": null
     },
     {
@@ -1334,7 +1334,7 @@
         "recordings": [],
         "transcriptUrl": null,
         "key": "Hearing",
-        "committeeHearingTime": "03/27/2025",
+        "committeeHearingTime": "03/26/2025",
         "vote": null
     },
     {
@@ -1597,8 +1597,8 @@
             "motion": "2nd Reading Concurred",
             "thresholdRequired": "simple",
             "count": {
-                "Y": 58,
-                "N": 42
+                "Y": 59,
+                "N": 41
             },
             "gopCount": {
                 "Y": 58,
@@ -1608,8 +1608,8 @@
                 "O": 0
             },
             "demCount": {
-                "Y": 0,
-                "N": 42,
+                "Y": 1,
+                "N": 41,
                 "A": 0,
                 "E": 0,
                 "O": 0
@@ -1987,7 +1987,7 @@
                     "district": "HD 80"
                 },
                 {
-                    "option": "N",
+                    "option": "Y",
                     "name": "SJ Howell",
                     "lastName": "Howell",
                     "party": "D",
@@ -3294,6 +3294,20 @@
         "recordings": [],
         "transcriptUrl": null,
         "key": "Sent to Enrolling",
+        "committeeHearingTime": null,
+        "vote": null
+    },
+    {
+        "id": "SB342-0034",
+        "bill": "SB 342",
+        "date": "04/12/2025",
+        "description": "Returned from Enrolling",
+        "possession": "Senate",
+        "committee": "undefined",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Returned from Enrolling",
         "committeeHearingTime": null,
         "vote": null
     }
