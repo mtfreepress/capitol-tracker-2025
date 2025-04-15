@@ -2349,6 +2349,112 @@
         "transcriptUrl": null,
         "key": "Taken from Table in Committee",
         "committeeHearingTime": null,
-        "vote": null
+        "vote": {
+            "action": "HB722-0028",
+            "bill": "HB 722",
+            "date": "04/14/2025",
+            "type": "committee",
+            "seqNumber": "S11",
+            "voteChamber": "senate",
+            "voteUrl": null,
+            "session": "2",
+            "motion": "Taken from Table in Committee",
+            "thresholdRequired": "simple",
+            "count": {
+                "Y": 2,
+                "N": 5
+            },
+            "gopCount": {
+                "Y": 2,
+                "N": 3,
+                "A": 1,
+                "E": 0,
+                "O": 0
+            },
+            "demCount": {
+                "Y": 0,
+                "N": 2,
+                "A": 1,
+                "E": 0,
+                "O": 0
+            },
+            "motionPassed": false,
+            "gopSupported": false,
+            "demSupported": false,
+            "votes": [
+                {
+                    "option": "N",
+                    "name": "Bob Phalen",
+                    "lastName": "Phalen",
+                    "party": "R",
+                    "locale": "Glendive",
+                    "district": "SD 17"
+                },
+                {
+                    "option": "N",
+                    "name": "Janet Ellis",
+                    "lastName": "Ellis",
+                    "party": "D",
+                    "locale": "Helena",
+                    "district": "SD 41"
+                },
+                {
+                    "option": "A",
+                    "name": "Matt Regier",
+                    "lastName": "Regier",
+                    "party": "R",
+                    "locale": "Kalispell",
+                    "district": "SD 5"
+                },
+                {
+                    "option": "N",
+                    "name": "Tony Tezak",
+                    "lastName": "Tezak",
+                    "party": "R",
+                    "locale": "Ennis",
+                    "district": "SD 35"
+                },
+                {
+                    "option": "N",
+                    "name": "Denise Hayman",
+                    "lastName": "Hayman",
+                    "party": "D",
+                    "locale": "Bozeman",
+                    "district": "SD 32"
+                },
+                {
+                    "option": "Y",
+                    "name": "Shelley Vance",
+                    "lastName": "Vance",
+                    "party": "R",
+                    "locale": "Belgrade",
+                    "district": "SD 34"
+                },
+                {
+                    "option": "N",
+                    "name": "Theresa Manzella",
+                    "lastName": "Manzella",
+                    "party": "R",
+                    "locale": "Hamilton",
+                    "district": "SD 44"
+                },
+                {
+                    "option": "Y",
+                    "name": "Wendy McKamey",
+                    "lastName": "McKamey",
+                    "party": "R",
+                    "locale": "Great Falls",
+                    "district": "SD 12"
+                },
+                {
+                    "option": "A",
+                    "name": "Jacinda Morigeau",
+                    "lastName": "Morigeau",
+                    "party": "D",
+                    "locale": "Arlee",
+                    "district": "SD 46"
+                }
+            ]
+        }
     }
 ]
