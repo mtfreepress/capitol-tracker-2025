@@ -193,10 +193,108 @@
         "transcriptUrl": null,
         "key": "Committee Executive Action--Bill Passed",
         "committeeHearingTime": "03/04/2025",
-        "vote": null
+        "vote": {
+            "action": "SB479-0014",
+            "bill": "SB 479",
+            "date": "03/04/2025",
+            "type": "committee",
+            "seqNumber": "S5",
+            "voteChamber": "senate",
+            "voteUrl": null,
+            "session": "2",
+            "motion": "Committee Executive Action--Bill Passed",
+            "thresholdRequired": "simple",
+            "count": {
+                "Y": 5,
+                "N": 3
+            },
+            "gopCount": {
+                "Y": 5,
+                "N": 0,
+                "A": 0,
+                "E": 0,
+                "O": 0
+            },
+            "demCount": {
+                "Y": 0,
+                "N": 3,
+                "A": 0,
+                "E": 0,
+                "O": 0
+            },
+            "motionPassed": true,
+            "gopSupported": true,
+            "demSupported": false,
+            "votes": [
+                {
+                    "option": "Y",
+                    "name": "Vince Ricci",
+                    "lastName": "Ricci",
+                    "party": "R",
+                    "locale": "Billings",
+                    "district": "SD 27"
+                },
+                {
+                    "option": "N",
+                    "name": "Andrea Olsen",
+                    "lastName": "Olsen",
+                    "party": "D",
+                    "locale": "Missoula",
+                    "district": "SD 48"
+                },
+                {
+                    "option": "Y",
+                    "name": "Daniel Emrich",
+                    "lastName": "Emrich",
+                    "party": "R",
+                    "locale": "Great Falls",
+                    "district": "SD 11"
+                },
+                {
+                    "option": "Y",
+                    "name": "Theresa Manzella",
+                    "lastName": "Manzella",
+                    "party": "R",
+                    "locale": "Hamilton",
+                    "district": "SD 44"
+                },
+                {
+                    "option": "N",
+                    "name": "Cora Neumann",
+                    "lastName": "Neumann",
+                    "party": "D",
+                    "locale": "Helena",
+                    "district": "SD 30"
+                },
+                {
+                    "option": "N",
+                    "name": "Laura Smith",
+                    "lastName": "Smith",
+                    "party": "D",
+                    "locale": "Helena",
+                    "district": "SD 40"
+                },
+                {
+                    "option": "Y",
+                    "name": "Sue Vinton",
+                    "lastName": "Vinton",
+                    "party": "R",
+                    "locale": "Billings",
+                    "district": "SD 20"
+                },
+                {
+                    "option": "Y",
+                    "name": "Barry Usher",
+                    "lastName": "Usher",
+                    "party": "R",
+                    "locale": "Laurel",
+                    "district": "SD 19"
+                }
+            ]
+        }
     },
     {
-        "id": "SB479-0015",
+        "id": "SB479-0016",
         "bill": "SB 479",
         "date": "03/04/2025",
         "description": "Committee Report--Bill Passed",
@@ -210,7 +308,7 @@
         "vote": null
     },
     {
-        "id": "SB479-0016",
+        "id": "SB479-0017",
         "bill": "SB 479",
         "date": "03/04/2025",
         "description": "Fiscal Note Received",
@@ -224,7 +322,7 @@
         "vote": null
     },
     {
-        "id": "SB479-0017",
+        "id": "SB479-0018",
         "bill": "SB 479",
         "date": "03/04/2025",
         "description": "Fiscal Note Unsigned",
@@ -238,7 +336,7 @@
         "vote": null
     },
     {
-        "id": "SB479-0018",
+        "id": "SB479-0019",
         "bill": "SB 479",
         "date": "03/05/2025",
         "description": "Fiscal Note Printed",
@@ -252,7 +350,7 @@
         "vote": null
     },
     {
-        "id": "SB479-0019",
+        "id": "SB479-0020",
         "bill": "SB 479",
         "date": "03/06/2025",
         "description": "Scheduled for 2nd Reading",
@@ -266,7 +364,7 @@
         "vote": null
     },
     {
-        "id": "SB479-0020",
+        "id": "SB479-0021",
         "bill": "SB 479",
         "date": "03/06/2025",
         "description": "2nd Reading Pass Motion Failed",
@@ -278,7 +376,7 @@
         "key": "2nd Reading Pass Motion Failed",
         "committeeHearingTime": null,
         "vote": {
-            "action": "SB479-0020",
+            "action": "SB479-0021",
             "bill": "SB 479",
             "date": "03/06/2025",
             "type": "committee",
@@ -714,7 +812,7 @@
         }
     },
     {
-        "id": "SB479-0021",
+        "id": "SB479-0022",
         "bill": "SB 479",
         "date": "03/06/2025",
         "description": "2nd Reading Indefinitely Postponed",
@@ -728,7 +826,7 @@
         "vote": null
     },
     {
-        "id": "SB479-0022",
+        "id": "SB479-0023",
         "bill": "SB 479",
         "date": "03/06/2025",
         "description": "Motion to Reconsider Failed",
@@ -740,7 +838,7 @@
         "key": "Motion to Reconsider Failed",
         "committeeHearingTime": null,
         "vote": {
-            "action": "SB479-0022",
+            "action": "SB479-0023",
             "bill": "SB 479",
             "date": "03/06/2025",
             "type": "committee",
@@ -1176,7 +1274,7 @@
         }
     },
     {
-        "id": "SB479-0023",
+        "id": "SB479-0024",
         "bill": "SB 479",
         "date": "03/12/2025",
         "description": "Missed Deadline for General Bill Transmittal",
