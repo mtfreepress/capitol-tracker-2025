@@ -3695,32 +3695,32 @@
         "id": "HB185-0062",
         "bill": "HB 185",
         "date": "04/14/2025",
-        "description": "Committee Executive Action--Bill Not Concurred",
+        "description": "Tabled in Committee",
         "possession": "Senate",
         "committee": "(S) Public Health, Welfare and Safety",
         "actionUrl": null,
         "recordings": [],
         "transcriptUrl": null,
-        "key": "Committee Executive Action--Bill Not Concurred",
+        "key": "Tabled in Committee",
         "committeeHearingTime": "04/14/2025",
         "vote": {
             "action": "HB185-0062",
             "bill": "HB 185",
             "date": "04/14/2025",
             "type": "committee",
-            "seqNumber": "S11",
+            "seqNumber": "S4",
             "voteChamber": "senate",
             "voteUrl": null,
             "session": "2",
-            "motion": "Committee Executive Action--Bill Not Concurred",
+            "motion": "Tabled in Committee",
             "thresholdRequired": "simple",
             "count": {
-                "Y": 5,
-                "N": 6
+                "Y": 11,
+                "N": 0
             },
             "gopCount": {
-                "Y": 1,
-                "N": 6,
+                "Y": 7,
+                "N": 0,
                 "A": 0,
                 "E": 0,
                 "O": 0
@@ -3732,17 +3732,17 @@
                 "E": 0,
                 "O": 0
             },
-            "motionPassed": false,
-            "gopSupported": false,
+            "motionPassed": true,
+            "gopSupported": true,
             "demSupported": true,
             "votes": [
                 {
-                    "option": "N",
-                    "name": "John Fuller",
-                    "lastName": "Fuller",
+                    "option": "Y",
+                    "name": "Mike Yakawich",
+                    "lastName": "Yakawich",
                     "party": "R",
-                    "locale": "Kalispell",
-                    "district": "SD 4"
+                    "locale": "Billings",
+                    "district": "SD 24"
                 },
                 {
                     "option": "Y",
@@ -3754,22 +3754,14 @@
                 },
                 {
                     "option": "Y",
-                    "name": "Jonathan Windy Boy",
-                    "lastName": "Windy Boy",
-                    "party": "D",
-                    "locale": "Box Elder",
-                    "district": "SD 16"
-                },
-                {
-                    "option": "N",
-                    "name": "Carl Glimm",
-                    "lastName": "Glimm",
+                    "name": "John Fuller",
+                    "lastName": "Fuller",
                     "party": "R",
-                    "locale": "Kila",
-                    "district": "SD 3"
+                    "locale": "Kalispell",
+                    "district": "SD 4"
                 },
                 {
-                    "option": "N",
+                    "option": "Y",
                     "name": "Vince Ricci",
                     "lastName": "Ricci",
                     "party": "R",
@@ -3778,14 +3770,22 @@
                 },
                 {
                     "option": "Y",
-                    "name": "Mike Yakawich",
-                    "lastName": "Yakawich",
+                    "name": "Tom McGillvray",
+                    "lastName": "McGillvray",
                     "party": "R",
                     "locale": "Billings",
-                    "district": "SD 24"
+                    "district": "SD 26"
                 },
                 {
-                    "option": "N",
+                    "option": "Y",
+                    "name": "Carl Glimm",
+                    "lastName": "Glimm",
+                    "party": "R",
+                    "locale": "Kila",
+                    "district": "SD 3"
+                },
+                {
+                    "option": "Y",
                     "name": "Daniel Emrich",
                     "lastName": "Emrich",
                     "party": "R",
@@ -3793,12 +3793,20 @@
                     "district": "SD 11"
                 },
                 {
-                    "option": "N",
-                    "name": "Tom McGillvray",
-                    "lastName": "McGillvray",
-                    "party": "R",
-                    "locale": "Billings",
-                    "district": "SD 26"
+                    "option": "Y",
+                    "name": "Jonathan Windy Boy",
+                    "lastName": "Windy Boy",
+                    "party": "D",
+                    "locale": "Box Elder",
+                    "district": "SD 16"
+                },
+                {
+                    "option": "Y",
+                    "name": "Cora Neumann",
+                    "lastName": "Neumann",
+                    "party": "D",
+                    "locale": "Helena",
+                    "district": "SD 30"
                 },
                 {
                     "option": "Y",
@@ -3809,20 +3817,12 @@
                     "district": "SD 40"
                 },
                 {
-                    "option": "N",
+                    "option": "Y",
                     "name": "Dennis Lenz",
                     "lastName": "Lenz",
                     "party": "R",
                     "locale": "Billings",
                     "district": "SD 25"
-                },
-                {
-                    "option": "Y",
-                    "name": "Cora Neumann",
-                    "lastName": "Neumann",
-                    "party": "D",
-                    "locale": "Helena",
-                    "district": "SD 30"
                 }
             ]
         }
