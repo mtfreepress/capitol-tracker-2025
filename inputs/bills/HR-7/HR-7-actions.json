@@ -199,13 +199,13 @@
         "id": "HR7-0015",
         "bill": "HR 7",
         "date": "04/17/2025",
-        "description": "Committee Executive Action--Bill Passed",
+        "description": "Committee Executive Action--Resolution Adopted",
         "possession": "House",
         "committee": "(H) State Administration",
         "actionUrl": null,
         "recordings": [],
         "transcriptUrl": null,
-        "key": "Committee Executive Action--Bill Passed",
+        "key": "Committee Executive Action--Resolution Adopted",
         "committeeHearingTime": "04/17/2025",
         "vote": {
             "action": "HR7-0015",
@@ -216,30 +216,38 @@
             "voteChamber": "house",
             "voteUrl": null,
             "session": "2",
-            "motion": "Committee Executive Action--Bill Passed",
+            "motion": "Committee Executive Action--Resolution Adopted",
             "thresholdRequired": "simple",
             "count": {
                 "Y": 13,
                 "N": 6
             },
             "gopCount": {
-                "Y": 0,
+                "Y": 11,
                 "N": 0,
                 "A": 0,
                 "E": 0,
                 "O": 0
             },
             "demCount": {
-                "Y": 0,
-                "N": 0,
+                "Y": 2,
+                "N": 6,
                 "A": 0,
                 "E": 0,
                 "O": 0
             },
             "motionPassed": true,
-            "gopSupported": false,
+            "gopSupported": true,
             "demSupported": false,
             "votes": [
+                {
+                    "option": "N",
+                    "name": "Kelly Kortum",
+                    "lastName": "Kortum",
+                    "party": "D",
+                    "locale": "Bozeman",
+                    "district": "HD 64"
+                },
                 {
                     "option": "Y",
                     "name": "Marta Bertoglio",
@@ -247,6 +255,14 @@
                     "party": "R",
                     "locale": "Clancy",
                     "district": "HD 75"
+                },
+                {
+                    "option": "Y",
+                    "name": "Lyn Bennett",
+                    "lastName": "Bennett",
+                    "party": "R",
+                    "locale": "Columbia Falls",
+                    "district": "HD 4"
                 },
                 {
                     "option": "Y",
@@ -258,11 +274,19 @@
                 },
                 {
                     "option": "Y",
-                    "name": "Lyn Bennett",
-                    "lastName": "Bennett",
+                    "name": "Ed Byrne",
+                    "lastName": "Byrne",
                     "party": "R",
-                    "locale": "Columbia Falls",
-                    "district": "HD 4"
+                    "locale": "Bigfork",
+                    "district": "HD 11"
+                },
+                {
+                    "option": "N",
+                    "name": "Shelly Fyant",
+                    "lastName": "Fyant",
+                    "party": "D",
+                    "locale": "Arlee",
+                    "district": "HD 91"
                 },
                 {
                     "option": "N",
@@ -274,27 +298,11 @@
                 },
                 {
                     "option": "Y",
-                    "name": "Ed Byrne",
-                    "lastName": "Byrne",
+                    "name": "Kathy Love",
+                    "lastName": "Love",
                     "party": "R",
-                    "locale": "Bigfork",
-                    "district": "HD 11"
-                },
-                {
-                    "option": "Y",
-                    "name": "Marc Lee",
-                    "lastName": "Lee",
-                    "party": "D",
-                    "locale": "Butte",
-                    "district": "HD 74"
-                },
-                {
-                    "option": "N",
-                    "name": "Shelly Fyant",
-                    "lastName": "Fyant",
-                    "party": "D",
-                    "locale": "Arlee",
-                    "district": "HD 91"
+                    "locale": "Hamilton",
+                    "district": "HD 85"
                 },
                 {
                     "option": "Y",
@@ -303,6 +311,14 @@
                     "party": "R",
                     "locale": "Colstrip",
                     "district": "HD 35"
+                },
+                {
+                    "option": "Y",
+                    "name": "Marc Lee",
+                    "lastName": "Lee",
+                    "party": "D",
+                    "locale": "Butte",
+                    "district": "HD 74"
                 },
                 {
                     "option": "Y",
@@ -337,12 +353,28 @@
                     "district": "HD 31"
                 },
                 {
-                    "option": "N",
-                    "name": "Kelly Kortum",
-                    "lastName": "Kortum",
+                    "option": "Y",
+                    "name": "Eric Tilleman",
+                    "lastName": "Tilleman",
+                    "party": "R",
+                    "locale": "Cascade",
+                    "district": "HD 23"
+                },
+                {
+                    "option": "Y",
+                    "name": "Becky Edwards",
+                    "lastName": "Edwards",
                     "party": "D",
                     "locale": "Bozeman",
-                    "district": "HD 64"
+                    "district": "HD 61"
+                },
+                {
+                    "option": "Y",
+                    "name": "Zack Wirth",
+                    "lastName": "Wirth",
+                    "party": "R",
+                    "locale": "Wolf Creek",
+                    "district": "HD 17"
                 },
                 {
                     "option": "N",
@@ -354,45 +386,27 @@
                 },
                 {
                     "option": "Y",
-                    "name": "Kathy Love",
-                    "lastName": "Love",
-                    "party": "R",
-                    "locale": "Hamilton",
-                    "district": "HD 85"
-                },
-                {
-                    "option": "Y",
-                    "name": "Eric Tilleman",
-                    "lastName": "Tilleman",
-                    "party": "R",
-                    "locale": "Cascade",
-                    "district": "HD 23"
-                },
-                {
-                    "option": "Y",
                     "name": "Julie Darling",
                     "lastName": "Darling",
                     "party": "R",
                     "locale": "Helena",
                     "district": "HD 84"
-                },
-                {
-                    "option": "Y",
-                    "name": "Zack Wirth",
-                    "lastName": "Wirth",
-                    "party": "R",
-                    "locale": "Wolf Creek",
-                    "district": "HD 17"
-                },
-                {
-                    "option": "Y",
-                    "name": "Becky Edwards",
-                    "lastName": "Edwards",
-                    "party": "D",
-                    "locale": "Bozeman",
-                    "district": "HD 61"
                 }
             ]
         }
+    },
+    {
+        "id": "HR7-0016",
+        "bill": "HR 7",
+        "date": "04/17/2025",
+        "description": "Committee Report--Resolution Adopted",
+        "possession": "House",
+        "committee": "(H) State Administration",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Committee Report--Resolution Adopted",
+        "committeeHearingTime": "04/17/2025",
+        "vote": null
     }
 ]

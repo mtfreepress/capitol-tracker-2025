@@ -1345,46 +1345,46 @@
         "id": "SJ26-0025",
         "bill": "SJ 26",
         "date": "04/16/2025",
-        "description": "Committee Executive Action--Resolution Adopted",
+        "description": "Committee Executive Action--Bill Concurred",
         "possession": "House",
         "committee": "(H) Energy, Technology and Federal Relations",
         "actionUrl": null,
         "recordings": [],
         "transcriptUrl": null,
-        "key": "Committee Executive Action--Resolution Adopted",
+        "key": "Committee Executive Action--Bill Concurred",
         "committeeHearingTime": "04/16/2025",
         "vote": {
             "action": "SJ26-0025",
             "bill": "SJ 26",
             "date": "04/16/2025",
             "type": "committee",
-            "seqNumber": "H5",
+            "seqNumber": "H11",
             "voteChamber": "house",
             "voteUrl": null,
             "session": "2",
-            "motion": "Committee Executive Action--Resolution Adopted",
+            "motion": "Committee Executive Action--Bill Concurred",
             "thresholdRequired": "simple",
             "count": {
                 "Y": 14,
                 "N": 0
             },
             "gopCount": {
-                "Y": 0,
+                "Y": 8,
                 "N": 0,
                 "A": 0,
                 "E": 0,
                 "O": 0
             },
             "demCount": {
-                "Y": 0,
+                "Y": 6,
                 "N": 0,
                 "A": 0,
                 "E": 0,
                 "O": 0
             },
             "motionPassed": true,
-            "gopSupported": false,
-            "demSupported": false,
+            "gopSupported": true,
+            "demSupported": true,
             "votes": [
                 {
                     "option": "Y",
@@ -1393,6 +1393,22 @@
                     "party": "R",
                     "locale": "Thompson Falls",
                     "district": "HD 14"
+                },
+                {
+                    "option": "Y",
+                    "name": "Denise Joy",
+                    "lastName": "Joy",
+                    "party": "D",
+                    "locale": "Billings",
+                    "district": "HD 46"
+                },
+                {
+                    "option": "Y",
+                    "name": "Marc Lee",
+                    "lastName": "Lee",
+                    "party": "D",
+                    "locale": "Butte",
+                    "district": "HD 74"
                 },
                 {
                     "option": "Y",
@@ -1412,35 +1428,11 @@
                 },
                 {
                     "option": "Y",
-                    "name": "Denise Joy",
-                    "lastName": "Joy",
-                    "party": "D",
-                    "locale": "Billings",
-                    "district": "HD 46"
-                },
-                {
-                    "option": "Y",
                     "name": "Larry Brewster",
                     "lastName": "Brewster",
                     "party": "R",
                     "locale": "Billings",
                     "district": "HD 43"
-                },
-                {
-                    "option": "Y",
-                    "name": "Bob Carter",
-                    "lastName": "Carter",
-                    "party": "D",
-                    "locale": "Missoula",
-                    "district": "HD 96"
-                },
-                {
-                    "option": "Y",
-                    "name": "Tracy Sharp",
-                    "lastName": "Sharp",
-                    "party": "R",
-                    "locale": "Polson",
-                    "district": "HD 12"
                 },
                 {
                     "option": "Y",
@@ -1452,11 +1444,11 @@
                 },
                 {
                     "option": "Y",
-                    "name": "Katie Zolnikov",
-                    "lastName": "Zolnikov",
+                    "name": "Tracy Sharp",
+                    "lastName": "Sharp",
                     "party": "R",
-                    "locale": "Billings",
-                    "district": "HD 44"
+                    "locale": "Polson",
+                    "district": "HD 12"
                 },
                 {
                     "option": "Y",
@@ -1468,11 +1460,19 @@
                 },
                 {
                     "option": "Y",
-                    "name": "Braxton Mitchell",
-                    "lastName": "Mitchell",
+                    "name": "Katie Zolnikov",
+                    "lastName": "Zolnikov",
                     "party": "R",
-                    "locale": "Columbia Falls",
-                    "district": "HD 5"
+                    "locale": "Billings",
+                    "district": "HD 44"
+                },
+                {
+                    "option": "Y",
+                    "name": "Bob Carter",
+                    "lastName": "Carter",
+                    "party": "D",
+                    "locale": "Missoula",
+                    "district": "HD 96"
                 },
                 {
                     "option": "Y",
@@ -1484,11 +1484,11 @@
                 },
                 {
                     "option": "Y",
-                    "name": "Marc Lee",
-                    "lastName": "Lee",
-                    "party": "D",
-                    "locale": "Butte",
-                    "district": "HD 74"
+                    "name": "Braxton Mitchell",
+                    "lastName": "Mitchell",
+                    "party": "R",
+                    "locale": "Columbia Falls",
+                    "district": "HD 5"
                 },
                 {
                     "option": "Y",
@@ -1500,5 +1500,19 @@
                 }
             ]
         }
+    },
+    {
+        "id": "SJ26-0026",
+        "bill": "SJ 26",
+        "date": "04/17/2025",
+        "description": "Committee Report--Bill Concurred",
+        "possession": "House",
+        "committee": "(H) Energy, Technology and Federal Relations",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Committee Report--Bill Concurred",
+        "committeeHearingTime": null,
+        "vote": null
     }
 ]
