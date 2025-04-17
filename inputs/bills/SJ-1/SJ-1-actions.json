@@ -1381,22 +1381,22 @@
                 "N": 1
             },
             "gopCount": {
-                "Y": 0,
+                "Y": 9,
                 "N": 0,
-                "A": 0,
+                "A": 4,
                 "E": 0,
                 "O": 0
             },
             "demCount": {
-                "Y": 0,
-                "N": 0,
-                "A": 0,
+                "Y": 6,
+                "N": 1,
+                "A": 2,
                 "E": 0,
                 "O": 0
             },
             "motionPassed": true,
-            "gopSupported": false,
-            "demSupported": false,
+            "gopSupported": true,
+            "demSupported": true,
             "votes": [
                 {
                     "option": "A",
@@ -1576,5 +1576,19 @@
                 }
             ]
         }
+    },
+    {
+        "id": "SJ1-0025",
+        "bill": "SJ 1",
+        "date": "04/17/2025",
+        "description": "Committee Report--Bill Concurred",
+        "possession": "House",
+        "committee": "(H) Rules",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Committee Report--Bill Concurred",
+        "committeeHearingTime": null,
+        "vote": null
     }
 ]
