@@ -11,7 +11,7 @@ import BillTable from '../../components/BillTable';
 
 import LawmakerPortrait from '../../components/lawmaker/Portrait';
 import LawmakerElectionHistory from '../../components/lawmaker/ElectionHistory';
-import LawmakerCommittees from '../../components/lawmaker/Commitees';
+import LawmakerCommittees from '../../components/lawmaker/Committees';
 import LawmakerVotingSummary from '../../components/lawmaker/VotingSummary';
 import LawmakerKeyVotes from '../../components/lawmaker/KeyVotes';
 import { fetchLawmakerPaths, fetchLawmakerData, fetchPortraitImage } from "../../lib/lawmaker";
