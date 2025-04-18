@@ -15,5 +15,8 @@ node inputs/bills/fetch.js
 # Grab bill legal and fiscal notes
 node inputs/bills/fetch-bill-notes.js
 
+# Grab committee data 
+node inputs/committees/fetch-committees.js
+
 # Run data process
 node  process/main.js

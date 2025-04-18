@@ -32,13 +32,13 @@ const CommitteePage = ({ committee, bills }) => {
         date: day.day,
         bills: bills.filter(d => day.bills.includes(d.identifier)),
     }));
-    
+
     const awaitingVoteBills = bills.filter(d => billsAwaitingVote.includes(d.identifier));
     const withdrawnBills = bills.filter(d => billsWithdrawn.includes(d.identifier));
     const failedBills = bills.filter(d => billsFailed.includes(d.identifier));
     const passedBills = bills.filter(d => billsAdvanced.includes(d.identifier));
     const blastedBills = bills.filter(d => billsBlasted.includes(d.identifier));
-    
+
     const chair = members.find(d => d.role === 'chair');
 
     return (
@@ -54,9 +54,9 @@ const CommitteePage = ({ committee, bills }) => {
 
             {chair && (
                 <div style={{ fontSize: '1.2em', margin: '0.5em 0' }}>
-                    🪑 Chair: 
+                    🪑 Chair:
                     <a href={`${basePath}/lawmakers/${lawmakerUrl(chair.name)}`}>
-                        <strong>{chair.name}</strong> 
+                        <strong>{chair.name}</strong>
                         <span style={{ color: partyColors(chair.party) }}>
                             ({chair.party}-{chair.locale})
                         </span>
@@ -69,9 +69,10 @@ const CommitteePage = ({ committee, bills }) => {
             <h2>Members ({members.length})</h2>
             <div css={committeeMemberListStyle}>
                 {members.map(member => (
-                    <div key={member.id}>
+                    console.log(member.name),
+                    <div key={member.name}>
                         <a href={`${basePath}/lawmakers/${lawmakerUrl(member.name)}`}>
-                            <strong>{member.name}</strong> 
+                            <strong>{member.name}</strong>
                             <span style={{ color: partyColors(member.party) }}>
                                 ({member.party}-{member.locale})
                             </span>
