@@ -1,5 +1,3 @@
-## committee/CommitteePage.js
-
 import React from "react";
 import { css } from '@emotion/react';
 import ReactMarkdown from 'react-markdown';
