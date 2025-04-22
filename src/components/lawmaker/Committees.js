@@ -22,10 +22,9 @@ const LawmakerCommittees = ({ committees }) => {
     <div css={lawmakerCommitteesStyle}>
       {committees.map(c => (
         <div key={c.key} className="committee">
-          <strong>{c.displayName}</strong>
-          {/* <Link href={`/committees/${committeeUrl(c.key)}`}>
+          <Link href={`/committees/${committeeUrl(c.key)}`}>
             <strong>{c.displayName}</strong>
-          </Link> */}
+          </Link>
           {c.role !== 'Member' ? ` - ${c.role} ${c.role === 'Chair' ? '🪑' : ''}` : null}
         </div>
       ))}
