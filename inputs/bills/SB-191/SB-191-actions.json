@@ -251,22 +251,22 @@
                 "N": 1
             },
             "gopCount": {
-                "Y": 6,
-                "N": 1,
+                "Y": 0,
+                "N": 0,
                 "A": 0,
                 "E": 0,
                 "O": 0
             },
             "demCount": {
-                "Y": 4,
+                "Y": 0,
                 "N": 0,
                 "A": 0,
                 "E": 0,
                 "O": 0
             },
             "motionPassed": true,
-            "gopSupported": true,
-            "demSupported": true,
+            "gopSupported": false,
+            "demSupported": false,
             "votes": [
                 {
                     "option": "Y",
@@ -359,6 +359,20 @@
             ]
         },
         "voteSeq": "S5"
+    },
+    {
+        "id": "SB191-0018",
+        "bill": "SB 191",
+        "date": "02/05/2025",
+        "description": "Committee Executive Action--Bill Passed",
+        "possession": "Senate",
+        "committee": "(S) Public Health, Welfare and Safety",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Committee Executive Action--Bill Passed",
+        "committeeHearingTime": null,
+        "vote": null
     },
     {
         "id": "SB191-0019",
@@ -4292,6 +4306,20 @@
         "recordings": [],
         "transcriptUrl": null,
         "key": "Returned from Enrolling",
+        "committeeHearingTime": null,
+        "vote": null
+    },
+    {
+        "id": "SB191-0042",
+        "bill": "SB 191",
+        "date": "04/21/2025",
+        "description": "Signed by President",
+        "possession": "Senate",
+        "committee": "undefined",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Signed by President",
         "committeeHearingTime": null,
         "vote": null
     }
