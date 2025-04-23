@@ -221,8 +221,22 @@
         "transcriptUrl": null,
         "key": "Committee Executive Action--Bill Passed",
         "committeeHearingTime": "03/04/2025",
+        "vote": null
+    },
+    {
+        "id": "SB491-0017",
+        "bill": "SB 491",
+        "date": "03/04/2025",
+        "description": "Committee Executive Action--Bill Passed",
+        "possession": "Senate",
+        "committee": "(S) Judiciary",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Committee Executive Action--Bill Passed",
+        "committeeHearingTime": "03/04/2025",
         "vote": {
-            "action": "SB491-0016",
+            "action": "SB491-0017",
             "bill": "SB 491",
             "date": "03/04/2025",
             "type": "committee",
@@ -321,20 +335,6 @@
             ]
         },
         "voteSeq": "S5"
-    },
-    {
-        "id": "SB491-0017",
-        "bill": "SB 491",
-        "date": "03/04/2025",
-        "description": "Committee Executive Action--Bill Passed",
-        "possession": "Senate",
-        "committee": "(S) Judiciary",
-        "actionUrl": null,
-        "recordings": [],
-        "transcriptUrl": null,
-        "key": "Committee Executive Action--Bill Passed",
-        "committeeHearingTime": "03/04/2025",
-        "vote": null
     },
     {
         "id": "SB491-0018",
@@ -2752,6 +2752,267 @@
         "recordings": [],
         "transcriptUrl": null,
         "key": "Revised Fiscal Note Received",
+        "committeeHearingTime": null,
+        "vote": null
+    },
+    {
+        "id": "SB491-0041",
+        "bill": "SB 491",
+        "date": "04/22/2025",
+        "description": "Tabled in Committee",
+        "possession": "House",
+        "committee": "(H) Appropriations",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Tabled in Committee",
+        "committeeHearingTime": null,
+        "vote": {
+            "action": "SB491-0041",
+            "bill": "SB 491",
+            "date": "04/22/2025",
+            "type": "committee",
+            "seqNumber": "H4",
+            "voteChamber": "house",
+            "voteUrl": null,
+            "session": "2",
+            "motion": "Tabled in Committee",
+            "thresholdRequired": "simple",
+            "count": {
+                "Y": 12,
+                "N": 11
+            },
+            "gopCount": {
+                "Y": 11,
+                "N": 2,
+                "A": 0,
+                "E": 0,
+                "O": 0
+            },
+            "demCount": {
+                "Y": 1,
+                "N": 9,
+                "A": 0,
+                "E": 0,
+                "O": 0
+            },
+            "motionPassed": true,
+            "gopSupported": true,
+            "demSupported": false,
+            "votes": [
+                {
+                    "option": "N",
+                    "name": "Mary Caferro",
+                    "lastName": "Caferro",
+                    "party": "D",
+                    "locale": "Helena",
+                    "district": "HD 81"
+                },
+                {
+                    "option": "Y",
+                    "name": "Brad Barker",
+                    "lastName": "Barker",
+                    "party": "R",
+                    "locale": "Red Lodge",
+                    "district": "HD 55"
+                },
+                {
+                    "option": "Y",
+                    "name": "Eric Albus",
+                    "lastName": "Albus",
+                    "party": "R",
+                    "locale": "Glasgow",
+                    "district": "HD 28"
+                },
+                {
+                    "option": "N",
+                    "name": "Thedis Crowe",
+                    "lastName": "Crowe",
+                    "party": "D",
+                    "locale": "Browning",
+                    "district": "HD 15"
+                },
+                {
+                    "option": "Y",
+                    "name": "David Bedey",
+                    "lastName": "Bedey",
+                    "party": "R",
+                    "locale": "Hamilton",
+                    "district": "HD 86"
+                },
+                {
+                    "option": "Y",
+                    "name": "John Fitzpatrick",
+                    "lastName": "Fitzpatrick",
+                    "party": "R",
+                    "locale": "Anaconda",
+                    "district": "HD 76"
+                },
+                {
+                    "option": "Y",
+                    "name": "Bill Mercer",
+                    "lastName": "Mercer",
+                    "party": "R",
+                    "locale": "Billings",
+                    "district": "HD 52"
+                },
+                {
+                    "option": "Y",
+                    "name": "Terry Falk",
+                    "lastName": "Falk",
+                    "party": "R",
+                    "locale": "Kalispell",
+                    "district": "HD 10"
+                },
+                {
+                    "option": "N",
+                    "name": "Mike Fox",
+                    "lastName": "Fox",
+                    "party": "D",
+                    "locale": "Hays",
+                    "district": "HD 32"
+                },
+                {
+                    "option": "N",
+                    "name": "Jane Gillette",
+                    "lastName": "Gillette",
+                    "party": "R",
+                    "locale": "Three Forks",
+                    "district": "HD 77"
+                },
+                {
+                    "option": "Y",
+                    "name": "Donavon Hawk",
+                    "lastName": "Hawk",
+                    "party": "D",
+                    "locale": "Butte",
+                    "district": "HD 72"
+                },
+                {
+                    "option": "N",
+                    "name": "Eric Matthews",
+                    "lastName": "Matthews",
+                    "party": "D",
+                    "locale": "Bozeman",
+                    "district": "HD 66"
+                },
+                {
+                    "option": "N",
+                    "name": "Connie Keogh",
+                    "lastName": "Keogh",
+                    "party": "D",
+                    "locale": "Missoula",
+                    "district": "HD 92"
+                },
+                {
+                    "option": "Y",
+                    "name": "Anthony Nicastro",
+                    "lastName": "Nicastro",
+                    "party": "R",
+                    "locale": "Billings",
+                    "district": "HD 50"
+                },
+                {
+                    "option": "N",
+                    "name": "Debo Powers",
+                    "lastName": "Powers",
+                    "party": "D",
+                    "locale": "Whitefish",
+                    "district": "HD 3"
+                },
+                {
+                    "option": "Y",
+                    "name": "Fiona Nave",
+                    "lastName": "Nave",
+                    "party": "R",
+                    "locale": "Columbus",
+                    "district": "HD 56"
+                },
+                {
+                    "option": "N",
+                    "name": "Luke Muszkiewicz",
+                    "lastName": "Muszkiewicz",
+                    "party": "D",
+                    "locale": "Helena",
+                    "district": "HD 79"
+                },
+                {
+                    "option": "N",
+                    "name": "Scott Rosenzweig",
+                    "lastName": "Rosenzweig",
+                    "party": "D",
+                    "locale": "Bozeman",
+                    "district": "HD 57"
+                },
+                {
+                    "option": "N",
+                    "name": "Jerry Schillinger",
+                    "lastName": "Schillinger",
+                    "party": "R",
+                    "locale": "Circle",
+                    "district": "HD 34"
+                },
+                {
+                    "option": "N",
+                    "name": "Paul Tuss",
+                    "lastName": "Tuss",
+                    "party": "D",
+                    "locale": "Havre",
+                    "district": "HD 27"
+                },
+                {
+                    "option": "Y",
+                    "name": "Llew Jones",
+                    "lastName": "Jones",
+                    "party": "R",
+                    "locale": "Conrad",
+                    "district": "HD 18"
+                },
+                {
+                    "option": "Y",
+                    "name": "Ken Walsh",
+                    "lastName": "Walsh",
+                    "party": "R",
+                    "locale": "Twin Bridges",
+                    "district": "HD 69"
+                },
+                {
+                    "option": "Y",
+                    "name": "Mike Vinton",
+                    "lastName": "Vinton",
+                    "party": "R",
+                    "locale": "Billings",
+                    "district": "HD 40"
+                }
+            ]
+        },
+        "voteSeq": "H4"
+    },
+    {
+        "id": "SB491-0042",
+        "bill": "SB 491",
+        "date": "04/22/2025",
+        "description": "Fiscal Note Unsigned",
+        "possession": "Senate",
+        "committee": "undefined",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Fiscal Note Unsigned",
+        "committeeHearingTime": null,
+        "vote": null
+    },
+    {
+        "id": "SB491-0043",
+        "bill": "SB 491",
+        "date": "04/22/2025",
+        "description": "Revised Fiscal Note Printed",
+        "possession": "Senate",
+        "committee": "undefined",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Revised Fiscal Note Printed",
         "committeeHearingTime": null,
         "vote": null
     }
