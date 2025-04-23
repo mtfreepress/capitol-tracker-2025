@@ -1426,23 +1426,31 @@
                 "N": 8
             },
             "gopCount": {
-                "Y": 0,
+                "Y": 12,
                 "N": 0,
                 "A": 0,
                 "E": 0,
                 "O": 0
             },
             "demCount": {
-                "Y": 0,
-                "N": 0,
+                "Y": 1,
+                "N": 8,
                 "A": 0,
                 "E": 0,
                 "O": 0
             },
             "motionPassed": true,
-            "gopSupported": false,
+            "gopSupported": true,
             "demSupported": false,
             "votes": [
+                {
+                    "option": "N",
+                    "name": "SJ Howell",
+                    "lastName": "Howell",
+                    "party": "D",
+                    "locale": "Missoula",
+                    "district": "HD 100"
+                },
                 {
                     "option": "N",
                     "name": "Melody Cunningham",
@@ -1450,6 +1458,14 @@
                     "party": "D",
                     "locale": "Missoula",
                     "district": "HD 97"
+                },
+                {
+                    "option": "Y",
+                    "name": "Lyn Bennett",
+                    "lastName": "Bennett",
+                    "party": "R",
+                    "locale": "Columbia Falls",
+                    "district": "HD 4"
                 },
                 {
                     "option": "Y",
@@ -1461,27 +1477,11 @@
                 },
                 {
                     "option": "Y",
-                    "name": "Lyn Bennett",
-                    "lastName": "Bennett",
+                    "name": "Brandon Ler",
+                    "lastName": "Ler",
                     "party": "R",
-                    "locale": "Columbia Falls",
-                    "district": "HD 4"
-                },
-                {
-                    "option": "N",
-                    "name": "Brian Close",
-                    "lastName": "Close",
-                    "party": "D",
-                    "locale": "Bozeman",
-                    "district": "HD 65"
-                },
-                {
-                    "option": "Y",
-                    "name": "Steven Kelly",
-                    "lastName": "Kelly",
-                    "party": "R",
-                    "locale": "Kalispell",
-                    "district": "HD 9"
+                    "locale": "Savage",
+                    "district": "HD 33"
                 },
                 {
                     "option": "Y",
@@ -1492,20 +1492,12 @@
                     "district": "HD 71"
                 },
                 {
-                    "option": "N",
-                    "name": "SJ Howell",
-                    "lastName": "Howell",
-                    "party": "D",
-                    "locale": "Missoula",
-                    "district": "HD 100"
-                },
-                {
                     "option": "Y",
-                    "name": "Brandon Ler",
-                    "lastName": "Ler",
+                    "name": "Steven Kelly",
+                    "lastName": "Kelly",
                     "party": "R",
-                    "locale": "Savage",
-                    "district": "HD 33"
+                    "locale": "Kalispell",
+                    "district": "HD 9"
                 },
                 {
                     "option": "Y",
@@ -1525,6 +1517,22 @@
                 },
                 {
                     "option": "Y",
+                    "name": "Nelly Nicol",
+                    "lastName": "Nicol",
+                    "party": "R",
+                    "locale": "Billings",
+                    "district": "HD 53"
+                },
+                {
+                    "option": "N",
+                    "name": "Brian Close",
+                    "lastName": "Close",
+                    "party": "D",
+                    "locale": "Bozeman",
+                    "district": "HD 65"
+                },
+                {
+                    "option": "Y",
                     "name": "Terry Nelson",
                     "lastName": "Nelson",
                     "party": "R",
@@ -1533,19 +1541,27 @@
                 },
                 {
                     "option": "Y",
-                    "name": "Amy Regier",
-                    "lastName": "Regier",
-                    "party": "R",
-                    "locale": "Kalispell",
-                    "district": "HD 6"
-                },
-                {
-                    "option": "Y",
                     "name": "George Nikolakakos",
                     "lastName": "Nikolakakos",
                     "party": "R",
                     "locale": "Great Falls",
                     "district": "HD 22"
+                },
+                {
+                    "option": "N",
+                    "name": "James Reavis",
+                    "lastName": "Reavis",
+                    "party": "D",
+                    "locale": "Billings",
+                    "district": "HD 47"
+                },
+                {
+                    "option": "Y",
+                    "name": "Amy Regier",
+                    "lastName": "Regier",
+                    "party": "R",
+                    "locale": "Kalispell",
+                    "district": "HD 6"
                 },
                 {
                     "option": "Y",
@@ -1570,22 +1586,6 @@
                     "party": "D",
                     "locale": "Great Falls",
                     "district": "HD 19"
-                },
-                {
-                    "option": "N",
-                    "name": "James Reavis",
-                    "lastName": "Reavis",
-                    "party": "D",
-                    "locale": "Billings",
-                    "district": "HD 47"
-                },
-                {
-                    "option": "Y",
-                    "name": "Nelly Nicol",
-                    "lastName": "Nicol",
-                    "party": "R",
-                    "locale": "Billings",
-                    "district": "HD 53"
                 },
                 {
                     "option": "N",
