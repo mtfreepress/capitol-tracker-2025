@@ -2325,8 +2325,22 @@
         "transcriptUrl": null,
         "key": "Tabled in Committee",
         "committeeHearingTime": null,
+        "vote": null
+    },
+    {
+        "id": "HB605-0027",
+        "bill": "HB 605",
+        "date": "03/28/2025",
+        "description": "Tabled in Committee",
+        "possession": "Senate",
+        "committee": "(S) Judiciary",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Tabled in Committee",
+        "committeeHearingTime": null,
         "vote": {
-            "action": "HB605-0026",
+            "action": "HB605-0027",
             "bill": "HB 605",
             "date": "03/28/2025",
             "type": "committee",
@@ -2425,20 +2439,6 @@
             ]
         },
         "voteSeq": "S10"
-    },
-    {
-        "id": "HB605-0027",
-        "bill": "HB 605",
-        "date": "03/28/2025",
-        "description": "Tabled in Committee",
-        "possession": "Senate",
-        "committee": "(S) Judiciary",
-        "actionUrl": null,
-        "recordings": [],
-        "transcriptUrl": null,
-        "key": "Tabled in Committee",
-        "committeeHearingTime": null,
-        "vote": null
     },
     {
         "id": "HB605-0028",
@@ -3718,5 +3718,19 @@
             ]
         },
         "voteSeq": "S2672"
+    },
+    {
+        "id": "HB605-0036",
+        "bill": "HB 605",
+        "date": "04/22/2025",
+        "description": "Returned to House with Amendments",
+        "possession": "Senate",
+        "committee": "undefined",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Returned to House with Amendments",
+        "committeeHearingTime": null,
+        "vote": null
     }
 ]
