@@ -2170,7 +2170,106 @@
         "transcriptUrl": null,
         "key": "Committee Executive Action--Bill Not Concurred",
         "committeeHearingTime": "03/21/2025",
-        "vote": null
+        "vote": {
+            "action": "HB475-0022",
+            "bill": "HB 475",
+            "date": "03/21/2025",
+            "type": "committee",
+            "seqNumber": "S11",
+            "voteChamber": "senate",
+            "voteUrl": null,
+            "session": "2",
+            "motion": "Committee Executive Action--Bill Not Concurred",
+            "thresholdRequired": "simple",
+            "count": {
+                "Y": 6,
+                "N": 2
+            },
+            "gopCount": {
+                "Y": 3,
+                "N": 2,
+                "A": 0,
+                "E": 0,
+                "O": 0
+            },
+            "demCount": {
+                "Y": 3,
+                "N": 0,
+                "A": 0,
+                "E": 0,
+                "O": 0
+            },
+            "motionPassed": true,
+            "gopSupported": true,
+            "demSupported": true,
+            "votes": [
+                {
+                    "option": "N",
+                    "name": "Daniel Emrich",
+                    "lastName": "Emrich",
+                    "party": "R",
+                    "locale": "Great Falls",
+                    "district": "SD 11"
+                },
+                {
+                    "option": "Y",
+                    "name": "Andrea Olsen",
+                    "lastName": "Olsen",
+                    "party": "D",
+                    "locale": "Missoula",
+                    "district": "SD 48"
+                },
+                {
+                    "option": "Y",
+                    "name": "Sue Vinton",
+                    "lastName": "Vinton",
+                    "party": "R",
+                    "locale": "Billings",
+                    "district": "SD 20"
+                },
+                {
+                    "option": "Y",
+                    "name": "Cora Neumann",
+                    "lastName": "Neumann",
+                    "party": "D",
+                    "locale": "Helena",
+                    "district": "SD 30"
+                },
+                {
+                    "option": "Y",
+                    "name": "Laura Smith",
+                    "lastName": "Smith",
+                    "party": "D",
+                    "locale": "Helena",
+                    "district": "SD 40"
+                },
+                {
+                    "option": "N",
+                    "name": "Barry Usher",
+                    "lastName": "Usher",
+                    "party": "R",
+                    "locale": "Laurel",
+                    "district": "SD 19"
+                },
+                {
+                    "option": "Y",
+                    "name": "Theresa Manzella",
+                    "lastName": "Manzella",
+                    "party": "R",
+                    "locale": "Hamilton",
+                    "district": "SD 44"
+                },
+                {
+                    "option": "Y",
+                    "name": "Vince Ricci",
+                    "lastName": "Ricci",
+                    "party": "R",
+                    "locale": "Billings",
+                    "district": "SD 27"
+                }
+            ]
+        },
+        "voteSeq": "S11"
     },
     {
         "id": "HB475-0023",
@@ -2325,106 +2424,7 @@
         "transcriptUrl": null,
         "key": "Committee Executive Action--Bill Concurred",
         "committeeHearingTime": null,
-        "vote": {
-            "action": "HB475-0026",
-            "bill": "HB 475",
-            "date": "04/08/2025",
-            "type": "committee",
-            "seqNumber": "S11",
-            "voteChamber": "senate",
-            "voteUrl": null,
-            "session": "2",
-            "motion": "Committee Executive Action--Bill Concurred",
-            "thresholdRequired": "simple",
-            "count": {
-                "Y": 6,
-                "N": 2
-            },
-            "gopCount": {
-                "Y": 3,
-                "N": 2,
-                "A": 0,
-                "E": 0,
-                "O": 0
-            },
-            "demCount": {
-                "Y": 3,
-                "N": 0,
-                "A": 0,
-                "E": 0,
-                "O": 0
-            },
-            "motionPassed": true,
-            "gopSupported": true,
-            "demSupported": true,
-            "votes": [
-                {
-                    "option": "N",
-                    "name": "Daniel Emrich",
-                    "lastName": "Emrich",
-                    "party": "R",
-                    "locale": "Great Falls",
-                    "district": "SD 11"
-                },
-                {
-                    "option": "Y",
-                    "name": "Andrea Olsen",
-                    "lastName": "Olsen",
-                    "party": "D",
-                    "locale": "Missoula",
-                    "district": "SD 48"
-                },
-                {
-                    "option": "Y",
-                    "name": "Sue Vinton",
-                    "lastName": "Vinton",
-                    "party": "R",
-                    "locale": "Billings",
-                    "district": "SD 20"
-                },
-                {
-                    "option": "Y",
-                    "name": "Cora Neumann",
-                    "lastName": "Neumann",
-                    "party": "D",
-                    "locale": "Helena",
-                    "district": "SD 30"
-                },
-                {
-                    "option": "Y",
-                    "name": "Laura Smith",
-                    "lastName": "Smith",
-                    "party": "D",
-                    "locale": "Helena",
-                    "district": "SD 40"
-                },
-                {
-                    "option": "N",
-                    "name": "Barry Usher",
-                    "lastName": "Usher",
-                    "party": "R",
-                    "locale": "Laurel",
-                    "district": "SD 19"
-                },
-                {
-                    "option": "Y",
-                    "name": "Theresa Manzella",
-                    "lastName": "Manzella",
-                    "party": "R",
-                    "locale": "Hamilton",
-                    "district": "SD 44"
-                },
-                {
-                    "option": "Y",
-                    "name": "Vince Ricci",
-                    "lastName": "Ricci",
-                    "party": "R",
-                    "locale": "Billings",
-                    "district": "SD 27"
-                }
-            ]
-        },
-        "voteSeq": "S11"
+        "vote": null
     },
     {
         "id": "HB475-0027",
@@ -3391,6 +3391,20 @@
         "recordings": [],
         "transcriptUrl": null,
         "key": "Returned from Enrolling",
+        "committeeHearingTime": null,
+        "vote": null
+    },
+    {
+        "id": "HB475-0034",
+        "bill": "HB 475",
+        "date": "04/23/2025",
+        "description": "Signed by Speaker",
+        "possession": "House",
+        "committee": "undefined",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Signed by Speaker",
         "committeeHearingTime": null,
         "vote": null
     }
