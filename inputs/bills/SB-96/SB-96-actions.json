@@ -165,10 +165,24 @@
         "transcriptUrl": null,
         "key": "Committee Executive Action--Bill Passed",
         "committeeHearingTime": null,
+        "vote": null
+    },
+    {
+        "id": "SB96-0013",
+        "bill": "SB 96",
+        "date": "01/28/2025",
+        "description": "Committee Executive Action--Bill Passed",
+        "possession": "Senate",
+        "committee": "(S) Local Government",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Committee Executive Action--Bill Passed",
+        "committeeHearingTime": null,
         "vote": {
-            "action": "SB96-0012",
+            "action": "SB96-0013",
             "bill": "SB 96",
-            "date": "01/27/2025",
+            "date": "01/28/2025",
             "type": "committee",
             "seqNumber": "S5",
             "voteChamber": "senate",
@@ -289,20 +303,6 @@
             ]
         },
         "voteSeq": "S5"
-    },
-    {
-        "id": "SB96-0013",
-        "bill": "SB 96",
-        "date": "01/28/2025",
-        "description": "Committee Executive Action--Bill Passed",
-        "possession": "Senate",
-        "committee": "(S) Local Government",
-        "actionUrl": null,
-        "recordings": [],
-        "transcriptUrl": null,
-        "key": "Committee Executive Action--Bill Passed",
-        "committeeHearingTime": null,
-        "vote": null
     },
     {
         "id": "SB96-0014",
@@ -1484,5 +1484,19 @@
             ]
         },
         "voteSeq": "H10"
+    },
+    {
+        "id": "SB96-0024",
+        "bill": "SB 96",
+        "date": "03/20/2025",
+        "description": "Tabled in Committee",
+        "possession": "House",
+        "committee": "(H) Local Government",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Tabled in Committee",
+        "committeeHearingTime": null,
+        "vote": null
     }
 ]
