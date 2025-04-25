@@ -209,39 +209,23 @@
                 "N": 1
             },
             "gopCount": {
-                "Y": 0,
-                "N": 0,
+                "Y": 6,
+                "N": 1,
                 "A": 0,
                 "E": 0,
                 "O": 0
             },
             "demCount": {
-                "Y": 0,
+                "Y": 4,
                 "N": 0,
                 "A": 0,
                 "E": 0,
                 "O": 0
             },
             "motionPassed": true,
-            "gopSupported": false,
-            "demSupported": false,
+            "gopSupported": true,
+            "demSupported": true,
             "votes": [
-                {
-                    "option": "Y",
-                    "name": "Sara Novak",
-                    "lastName": "Novak",
-                    "party": "D",
-                    "locale": "Anaconda",
-                    "district": "SD 36"
-                },
-                {
-                    "option": "Y",
-                    "name": "Daniel Zolnikov",
-                    "lastName": "Zolnikov",
-                    "party": "R",
-                    "locale": "Billings",
-                    "district": "SD 22"
-                },
                 {
                     "option": "Y",
                     "name": "Jeremy Trebas",
@@ -252,11 +236,11 @@
                 },
                 {
                     "option": "Y",
-                    "name": "Susan Webber",
-                    "lastName": "Webber",
+                    "name": "Sara Novak",
+                    "lastName": "Novak",
                     "party": "D",
-                    "locale": "Browning",
-                    "district": "SD 8"
+                    "locale": "Anaconda",
+                    "district": "SD 36"
                 },
                 {
                     "option": "Y",
@@ -265,6 +249,14 @@
                     "party": "D",
                     "locale": "Arlee",
                     "district": "SD 46"
+                },
+                {
+                    "option": "Y",
+                    "name": "Susan Webber",
+                    "lastName": "Webber",
+                    "party": "D",
+                    "locale": "Browning",
+                    "district": "SD 8"
                 },
                 {
                     "option": "Y",
@@ -284,19 +276,19 @@
                 },
                 {
                     "option": "Y",
-                    "name": "Willis Curdy",
-                    "lastName": "Curdy",
-                    "party": "D",
-                    "locale": "Missoula",
-                    "district": "SD 49"
-                },
-                {
-                    "option": "Y",
                     "name": "Bruce \"Butch\" Gillespie",
                     "lastName": "Gillespie",
                     "party": "R",
                     "locale": "Unknown",
                     "district": "SD 9"
+                },
+                {
+                    "option": "Y",
+                    "name": "Daniel Zolnikov",
+                    "lastName": "Zolnikov",
+                    "party": "R",
+                    "locale": "Billings",
+                    "district": "SD 22"
                 },
                 {
                     "option": "N",
@@ -305,6 +297,14 @@
                     "party": "R",
                     "locale": "Glendive",
                     "district": "SD 17"
+                },
+                {
+                    "option": "Y",
+                    "name": "Willis Curdy",
+                    "lastName": "Curdy",
+                    "party": "D",
+                    "locale": "Missoula",
+                    "district": "SD 49"
                 },
                 {
                     "option": "Y",
@@ -1535,6 +1535,20 @@
         "transcriptUrl": null,
         "key": "Committee Report--Bill Concurred",
         "committeeHearingTime": "04/24/2025",
+        "vote": null
+    },
+    {
+        "id": "SJ33-0026",
+        "bill": "SJ 33",
+        "date": "04/28/2025",
+        "description": "Scheduled for 2nd Reading",
+        "possession": "House",
+        "committee": "undefined",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Scheduled for 2nd Reading",
+        "committeeHearingTime": null,
         "vote": null
     }
 ]
