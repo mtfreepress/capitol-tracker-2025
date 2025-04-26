@@ -179,8 +179,22 @@
         "transcriptUrl": null,
         "key": "Committee Executive Action--Bill Passed",
         "committeeHearingTime": "01/27/2025",
+        "vote": null
+    },
+    {
+        "id": "SB154-0014",
+        "bill": "SB 154",
+        "date": "01/27/2025",
+        "description": "Committee Executive Action--Bill Passed",
+        "possession": "Senate",
+        "committee": "(S) Judiciary",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Committee Executive Action--Bill Passed",
+        "committeeHearingTime": "01/27/2025",
         "vote": {
-            "action": "SB154-0013",
+            "action": "SB154-0014",
             "bill": "SB 154",
             "date": "01/27/2025",
             "type": "committee",
@@ -287,20 +301,6 @@
             ]
         },
         "voteSeq": "S5"
-    },
-    {
-        "id": "SB154-0014",
-        "bill": "SB 154",
-        "date": "01/27/2025",
-        "description": "Committee Executive Action--Bill Passed",
-        "possession": "Senate",
-        "committee": "(S) Judiciary",
-        "actionUrl": null,
-        "recordings": [],
-        "transcriptUrl": null,
-        "key": "Committee Executive Action--Bill Passed",
-        "committeeHearingTime": "01/27/2025",
-        "vote": null
     },
     {
         "id": "SB154-0015",
@@ -5047,6 +5047,34 @@
         "recordings": [],
         "transcriptUrl": null,
         "key": "Signed by President",
+        "committeeHearingTime": null,
+        "vote": null
+    },
+    {
+        "id": "SB154-0037",
+        "bill": "SB 154",
+        "date": "04/25/2025",
+        "description": "Signed by Speaker",
+        "possession": "House",
+        "committee": "undefined",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Signed by Speaker",
+        "committeeHearingTime": null,
+        "vote": null
+    },
+    {
+        "id": "SB154-0038",
+        "bill": "SB 154",
+        "date": "04/25/2025",
+        "description": "Transmitted to Governor",
+        "possession": "Senate",
+        "committee": "undefined",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Transmitted to Governor",
         "committeeHearingTime": null,
         "vote": null
     }
