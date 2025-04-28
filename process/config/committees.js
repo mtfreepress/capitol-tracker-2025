@@ -1,4 +1,3 @@
-
 export const COMMITEE_NAME_CLEANING = {
     // standardizeCommiteeNames in functions.js accounts for '(H) (H)' and '(S) (S)' quirk
     '(H) Appropriations': 'House Appropriations',
@@ -25,6 +24,7 @@ export const COMMITEE_NAME_CLEANING = {
     '(S) Taxation': 'Senate Taxation',
     '(S) Energy and Telecommunications': 'Senate Energy, Technology and Federal Relations',
     '(S) Energy, Technology & Federal Relations': 'Senate Energy, Technology and Federal Relations',
+    '(S) Energy, Technology and Federal Relations': 'Senate Energy, Technology and Federal Relations',
     '(S) Local Government': 'Senate Local Government',
     '(S) Natural Resources': 'Senate Natural Resources',
     '(S) Public Health, Welfare and Safety': 'Senate Public Health, Welfare and Safety',
@@ -37,6 +37,7 @@ export const COMMITEE_NAME_CLEANING = {
     '(S) Ethics': 'Senate Ethics',
     '(S) Rules': 'Senate Rules',
     '(S) Legislative Administration': 'Senate Legislative Administration',
+    '(S) Executive Branch Review': 'Senate Executive Branch Review',
 
     '(H) Joint Appropriations Subcommittee on General Government': 'Joint Appropriations Section A — General Government',
     '(H) Joint Appropriations Subcommittee on Health and Human Services': 'Joint Appropriations Section B — Health and Human Services',
@@ -47,6 +48,13 @@ export const COMMITEE_NAME_CLEANING = {
     '(H) Joint Appropriations Subcommittee on Education': 'Joint Appropriations Section E — Education',
     '(H) Joint Appropriations Subcommittee on Long Range Planning': 'Joint Appropriations Section F — Long-Range Planning',
     '(H) Joint Appropriations Subcommittee on Long-Range Planning': 'Joint Appropriations Section F — Long-Range Planning',
+    
+    // Add the missing variants with section designations
+    'Joint Appropriations Subcommittee on General Government (A)': 'Joint Appropriations Section A — General Government',
+    'Joint Appropriations Subcommittee on Health and Human Services (B)': 'Joint Appropriations Section B — Health and Human Services',
+    'Joint Appropriations Subcommittee on Natural Resources and Transportation (C)': 'Joint Appropriations Section C — Natural Resources and Transportation',
+    'Joint Appropriations Subcommittee on Education (E)': 'Joint Appropriations Section E — Education',
+    'Joint Appropriations Subcommittee on Long Range Planning (F)': 'Joint Appropriations Section F — Long-Range Planning',
 
     '(H) Joint Rules Committee': 'Joint Rules',
     '(S) Joint Select Committee on Redistricting': 'Joint Select Committee on Redistricting',
