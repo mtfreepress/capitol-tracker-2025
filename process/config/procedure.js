@@ -218,11 +218,11 @@ export const ACTIONS = [
     { key: 'Committee Executive Action--Bill Passed as Amended', isMajor, isHighlight, committeeAction, advanced, amended },
     { key: 'Committee Executive Action--Bill Not Passed', isMajor, isHighlight, committeeAction, failed },
     { key: 'Committee Executive Action--Bill Not Passed as Amended', isMajor, isHighlight, committeeAction, failed },
-    { key: 'Committee Executive Action--Bill Not Concurred as Amended', isMajor, isHighlight, committeeAction, secondChamberAction, failed, reconciliationAction },
     // second chamber committee actions
     { key: 'Committee Executive Action--Bill Concurred', isMajor, isHighlight, committeeAction, advanced, },
     { key: 'Committee Executive Action--Bill Concurred as Amended', isMajor, isHighlight, committeeAction, advanced, amended },
     { key: 'Committee Executive Action--Bill Not Concurred', isMajor, isHighlight, committeeAction, secondChamberAction, failed, },
+    { key: 'Committee Executive Action--Bill Not Concurred as Amended', isMajor, isHighlight, committeeAction, secondChamberAction, failed },
     // secondChamberAction here to catch bills killed in second chamber committee. Leaving off other two lines to exclude conference committees.
     // Blast motions
     { key: 'Taken from Committee; Placed on 2nd Reading', isMajor, isHighlight, committeeAction, firstChamberFloorAction, secondChamberAction, advanced, blasted },
