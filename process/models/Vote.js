@@ -124,12 +124,7 @@ export default class Vote {
         throw `classifyMotionThreshold failed, ${voteType}, ${billVoteMajorityRequired}`
     }
 
-    didMotionPass = (count, threshold, billStartingChamber, voteChamber, motion) => {
-        // Special case for House blast motions
-        if (voteChamber === 'house' && 
-            motion === 'Taken from Committee; Placed on 2nd Reading') {
-            return (count.Y >= 55); // constitutional majority required — senate is just bare majority
-        }
+    didMotionPass = (count, threshold, billStartingChamber, voteChamber) => {
         const isVoteInFirstChamber = (billStartingChamber === voteChamber)
         if (threshold === 'simple') {
             return (count.Y > count.N)

@@ -53,6 +53,18 @@ const contactUsComponentText = getText('./inputs/annotations/components/about.md
 
 const articles = articlesRaw.map(article => new Article({ article }).export())
 
+// actionsFlat.forEach(action => {
+//     // Apply special House blast motion rule
+//     if (action.vote && 
+//         action.vote.voteChamber === "house" && 
+//         action.vote.motion === "Taken from Committee; Placed on 2nd Reading" && 
+//         action.vote.count.Y < 55) {
+      
+//       // Force override to false if it doesn't meet the 55-vote requirement
+//       action.vote.motionPassed = false;
+//     }
+//   });
+
 /// do lawmakers first, then bills
 const lawmakers = lawmakersRaw.map(lawmaker => new Lawmaker({
     lawmaker,
@@ -114,6 +126,21 @@ lawmakers.forEach(lawmaker => {
 const allActions = bills.flatMap(bill => bill.actions);
 const calendarOutput = new CalendarPage({ actions: allActions, bills, updateTime }).export();
 bills.forEach(bill => bill.data.isOnCalendar = calendarOutput.billsOnCalendar.includes(bill.data.identifier))
+bills.forEach(bill => {
+    bill.actions.forEach(action => {
+      const actionData = action.data;
+      if (action.vote && 
+          actionData.billHolder === 'house' && 
+          actionData.description === 'Taken from Committee; Placed on 2nd Reading' && 
+          action.vote.data.count.Y < 55) {
+        
+        console.log(`Fixing House blast motion for ${bill.identifier}: ${actionData.id}`);
+        // Force override to enforce 55-vote constitutional majority requirement
+        action.vote.data.motionPassed = false;
+      }
+    });
+  });
+  
 // const recapOutput = new RecapPage({ actions: actionsFlat, bills, updateTime }).export()
 
 const keyBillCategoryKeys = Array.from(new Set(billAnnotations.map(d => d.category))).filter(d => d !== null).filter(d => d !== undefined)
