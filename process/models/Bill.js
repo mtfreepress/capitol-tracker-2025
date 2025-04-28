@@ -313,8 +313,20 @@ export default class Bill {
                     if (lastFloorAction.failed) { status = 'blocked'; statusLabel = 'Voted down' }
                     if (lastFloorAction.preliminaryPassage) { status = 'current'; statusLabel = 'Passed preliminary vote' }
                     if (lastFloorAction.finalPassage) { status = 'passed'; statusLabel = `Passed ${capitalize(secondChamber)}`, hasPassedSecondChamber = true }
+                    // if (lastFloorAction.finalPassage && progressFlagInActions(secondChamberActions, 'amended')) {
+                    //     reconciliationNecessary = true
+                    // }
+                    //  Fix for HB-337 (maybe others)
                     if (lastFloorAction.finalPassage && progressFlagInActions(secondChamberActions, 'amended')) {
-                        reconciliationNecessary = true
+                        // Look for explicit "returned with amendments" actions that indicate formal reconciliation
+                        const needsReconciliation = actions.some(a => 
+                            a.description && (
+                                a.description.includes("Returned to House with Amendments") || 
+                                a.description.includes("Returned to Senate with Amendments")
+                            )
+                        );
+                        
+                        reconciliationNecessary = needsReconciliation;
                     }
                     statusDate = lastFloorAction.date
                     return { step, status, statusLabel, statusDate }
