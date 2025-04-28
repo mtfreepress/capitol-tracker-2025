@@ -126,6 +126,8 @@ lawmakers.forEach(lawmaker => {
 const allActions = bills.flatMap(bill => bill.actions);
 const calendarOutput = new CalendarPage({ actions: allActions, bills, updateTime }).export();
 bills.forEach(bill => bill.data.isOnCalendar = calendarOutput.billsOnCalendar.includes(bill.data.identifier))
+// Manual handling for house blast motions and their 55 vote majority requirement 
+// Senate is bare majority for 2025 session
 bills.forEach(bill => {
     bill.actions.forEach(action => {
       const actionData = action.data;
@@ -134,7 +136,7 @@ bills.forEach(bill => {
           actionData.description === 'Taken from Committee; Placed on 2nd Reading' && 
           action.vote.data.count.Y < 55) {
         
-        console.log(`Fixing House blast motion for ${bill.identifier}: ${actionData.id}`);
+        // console.log(`Fixing House blast motion for ${bill.identifier}: ${actionData.id}`);
         // Force override to enforce 55-vote constitutional majority requirement
         action.vote.data.motionPassed = false;
       }
