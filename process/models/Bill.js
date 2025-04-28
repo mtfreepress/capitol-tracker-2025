@@ -314,7 +314,17 @@ export default class Bill {
                     if (lastFloorAction.preliminaryPassage) { status = 'current'; statusLabel = 'Passed preliminary vote' }
                     if (lastFloorAction.finalPassage) { status = 'passed'; statusLabel = `Passed ${capitalize(secondChamber)}`, hasPassedSecondChamber = true }
                     if (lastFloorAction.finalPassage && progressFlagInActions(secondChamberActions, 'amended')) {
-                        reconciliationNecessary = true
+                        // Check if there are any explicit reconciliation actions
+                        const explicitReconciliationNeeded = actions.some(a => 
+                            a.description && (
+                                a.description.includes("Returned to") ||
+                                a.description.includes("Amendments Concurred") ||
+                                a.description.includes("Amendments Not Concurred") ||
+                                a.description.includes("Conference Committee Appointed")
+                            )
+                        );
+                        
+                        reconciliationNecessary = explicitReconciliationNeeded;
                     }
                     statusDate = lastFloorAction.date
                     return { step, status, statusLabel, statusDate }
