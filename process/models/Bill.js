@@ -188,8 +188,6 @@ export default class Bill {
             if (all.length === 0) return null
             return all.slice(-1)[0]
         }
-        const blastMotions = actionsWithFlag(actions, 'blasted');
-        const hasBeenBlasted = blastMotions.length > 0;
 
         const firstChamberActions = actions.filter(a => a.billHolder === firstChamber)
         const secondChamber = (firstChamber === 'house') ? 'senate' : 'house'
@@ -278,22 +276,17 @@ export default class Bill {
                 if (floorActionsInFirstChamber.length === 0) {
                     if (committeeActionsInSubsequentCommittees.length === 0) {
                         return { step, status, statusLabel, statusDate }
-                    } if (hasBeenBlasted) {
-                        // Blast motion should override tabled status
-                        status = 'passed';
-                        statusLabel = 'Blasted to floor';
-                        hasPassedACommittee = true;
-                        statusDate = blastMotions[0].date;
-                    }
-                    else if (lastCommitteeAction) {
-                        // Only apply these statuses if not blasted
+                    } else {
+                        // unlabled actions default to 'Pending'
+                        const lastCommitteeAction = committeeActionsInSubsequentCommittees.slice(-1)[0]
                         if (lastCommitteeAction.failed) { status = 'blocked'; statusLabel = 'Voted down' }
                         if (lastCommitteeAction.missedDeadline) { status = 'blocked'; statusLabel = 'Missed deadline' }
                         if (lastCommitteeAction.tabled) { status = 'blocked'; statusLabel = 'Tabled' }
                         if (lastCommitteeAction.withdrawn) { status = 'blocked'; statusLabel = 'Withdrawn' }
                         if (lastCommitteeAction.advanced) { status = 'passed'; statusLabel = 'Advanced'; hasPassedACommittee = true }
                         if (lastCommitteeAction.blasted) { status = 'passed'; statusLabel = 'Blasted to floor'; hasPassedACommittee = true }
-                        statusDate = lastCommitteeAction.date;
+                        statusDate = lastCommitteeAction.date
+                        return { step, status, statusLabel, statusDate }
                     }
                 } else {
                     const lastFloorAction = floorActionsInFirstChamber.slice(-1)[0]
