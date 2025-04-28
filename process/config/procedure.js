@@ -229,7 +229,7 @@ export const ACTIONS = [
 
     // first chamber floor votes
     { key: '2nd Reading Passed', isMajor, isHighlight, firstChamberFloorAction, floorDebate, preliminaryPassage },
-    { key: '2nd Reading Not Passed', isMajor, isHighlight, firstChamberFloorAction, floorDebate, failed },
+    { key: '2nd Reading Not Passed', isMajor, isHighlight, firstChamberFloorAction, secondChamberAction, floorDebate, failed },
     { key: '2nd Reading Not Passed as Amended', isMajor, isHighlight, firstChamberFloorAction, floorDebate, failed },
     { key: '2nd Reading Not Passed; 3rd Reading Vote Required', isMajor, isHighlight, firstChamberFloorAction, floorDebate, failed },
     { key: '2nd Reading Pass as Amended Motion Failed', isMajor, firstChamberFloorAction, floorDebate, failed },
