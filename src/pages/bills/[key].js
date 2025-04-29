@@ -30,25 +30,17 @@ export async function getStaticProps({ params }) {
     };
 }
 
+// for new indivudual bill-actions
 async function loadBillActions(billId) {
-    const dataDir = path.join(process.cwd(), 'src/data');
-    const files = await fs.readdir(dataDir);
-    const actionFiles = files.filter(file => file.startsWith('bill-actions-') && file.endsWith('.json'));
-
-    let allActions = [];
-
-    for (const file of actionFiles) {
-        const filePath = path.join(dataDir, file);
-        const fileContent = await fs.readFile(filePath, 'utf8');
-        const actionsChunk = JSON.parse(fileContent);
-        const billActions = actionsChunk.find(item => item.bill === billId);
-        if (billActions) {
-            allActions = billActions.actions;
-            break;
-        }
-    }
-
-    return allActions;
+  try {
+    const normalizedBillId = billId.replace(' ', '-');
+    const filePath = path.join(process.cwd(), 'src/data/bills', `${normalizedBillId}-actions.json`);
+    const fileContent = await fs.readFile(filePath, 'utf8');
+    return JSON.parse(fileContent);
+  } catch (error) {
+    console.error(`Error loading actions for ${billId}:`, error);
+    return [];
+  }
 }
 
 const Bill = ({ bill }) => {
