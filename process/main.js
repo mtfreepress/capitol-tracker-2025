@@ -1,4 +1,5 @@
 import { getJson, collectJsons, writeJson, getYaml, collectYamls, getText, getCsv } from './utils.js'
+import fs from 'fs'
 
 import Lawmaker from './models/Lawmaker.js'
 import Bill from './models/Bill.js'
@@ -193,14 +194,17 @@ const actionsOutput = bills.map(b => ({
     actions: b.exportActionDataWithVotes()
 }))
 
-// Breaking this into chunks to avoid too-large-for-github-files
-const chunkSize = 200
-let index = 1;
-for (let start = 0; start < actionsOutput.length; start += chunkSize) {
-    writeJson(`./src/data/bill-actions-${index}.json`, actionsOutput.slice(start, start + chunkSize))
-    index += 1;
-}
+// Old chunking method for actions
 
+// Breaking this into chunks to avoid too-large-for-github-files
+// const chunkSize = 200
+// let index = 1;
+// for (let start = 0; start < actionsOutput.length; start += chunkSize) {
+//     writeJson(`./src/data/bill-actions-${index}.json`, actionsOutput.slice(start, start + chunkSize))
+//     index += 1;
+// }
+
+// Memory optimization so we don't have to load entire bill page
 // Write individual files per bill:
 if (!fs.existsSync('./src/data/bills')) {
     fs.mkdirSync('./src/data/bills', { recursive: true });

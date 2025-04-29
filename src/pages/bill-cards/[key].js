@@ -32,27 +32,21 @@ export async function getStaticProps({ params }) {
 }
 
 async function loadBillActions(billId) {
-    const dataDir = path.join(process.cwd(), 'src/data');
-    const files = await fs.readdir(dataDir);
-    const actionFiles = files.filter(
-        (file) => file.startsWith('bill-actions-') && file.endsWith('.json')
-    );
-
-    let allActions = [];
-
-    for (const file of actionFiles) {
-        const filePath = path.join(dataDir, file);
-        const fileContent = await fs.readFile(filePath, 'utf8');
-        const actionsChunk = JSON.parse(fileContent);
-        const billActions = actionsChunk.find((item) => item.bill === billId);
-        if (billActions) {
-            allActions = billActions.actions;
-            break;
-        }
+    try {
+      // Normalize bill ID format (e.g., "HB 123" -> "HB-123")
+      const normalizedBillId = billId.replace(' ', '-');
+      
+      // Construct direct path to this specific bill's actions file
+      const filePath = path.join(process.cwd(), 'src/data/bills', `${normalizedBillId}-actions.json`);
+      
+      // Read and parse the file
+      const fileContent = await fs.readFile(filePath, 'utf8');
+      return JSON.parse(fileContent);
+    } catch (error) {
+      console.error(`Error loading actions for ${billId}:`, error);
+      return [];
     }
-
-    return allActions;
-}
+  }
 
 const Bill = ({ bill }) => {
     if (!bill) return <div>Bill not found</div>;
