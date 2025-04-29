@@ -21,6 +21,9 @@ const BillTable = ({ bills, suppressCount, sortFunction = DEFAULT_SORT, displayL
     };
 
     loadBillsWithAmendments();
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
   const toggleDisplayLimit = () => {
@@ -215,13 +218,13 @@ const Bill = ({ title, identifier, chamber, status, explanation, textUrl, fiscal
             )}
             {/* Only show amendments link if bill is in the amendments list */}
             {hasAmendments && (
-                <a
-                  css={billLinkCss}
-                  href="#"
-                  onClick={handleOpenAmendmentsModal}
-                >
-                  🖍 Proposed amendments
-                </a>
+              <a
+                css={billLinkCss}
+                href="#"
+                onClick={handleOpenAmendmentsModal}
+              >
+                🖍 Proposed amendments
+              </a>
             )}
             {vetoMemoUrl && <a css={billLinkCss} href={vetoMemoUrl} target="_blank" rel="noopener noreferrer">🚫 Veto memo</a>}
             {(numArticles > 0) && (

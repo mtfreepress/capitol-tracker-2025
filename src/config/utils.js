@@ -23,9 +23,31 @@ export const committeeUrl = name => name.replace(/\s/g, '-').replace(/,/g, '').t
 export const urlize = text => text.replace(/'/g, '').replace(/\s/g, '-').toLowerCase()
 
 // Documents
-let documentIndexCache = null;
-let billsWithAmendmentsCache = null;
-let billsWithAmendmentsPromise = null;
+export const documentCache = {
+  _documentIndex: null,
+  _billsWithAmendments: null,
+  
+  clear() {
+    this._documentIndex = null;
+    this._billsWithAmendments = null;
+  },
+  
+  getDocumentIndex() {
+    return this._documentIndex;
+  },
+  
+  setDocumentIndex(data) {
+    this._documentIndex = data;
+  },
+  
+  getBillsWithAmendments() {
+    return this._billsWithAmendments;
+  },
+  
+  setBillsWithAmendments(data) {
+    this._billsWithAmendments = data;
+  }
+};
 
 
 // Misc
@@ -117,34 +139,22 @@ export const listToText = (list) => {
 export async function fetchBillsWithAmendments() {
   try {
     // Return cached result if available
-    if (billsWithAmendmentsCache) {
-      return billsWithAmendmentsCache;
+    if (documentCache.getBillsWithAmendments()) {
+      return documentCache.getBillsWithAmendments();
     }
     
-    // Reuse in-progress promise if exists
-    if (!billsWithAmendmentsPromise) {
-      billsWithAmendmentsPromise = fetch('/capitol-tracker-2025/bills-with-amendments.txt')
-        .then(response => {
-          if (!response.ok) {
-            throw new Error('Bills with amendments list not found');
-          }
-          return response.text();
-        })
-        .then(text => {
-          const bills = text.split('\n').filter(line => line.trim().length > 0);
-          billsWithAmendmentsCache = bills;
-          return bills;
-        })
-        .catch(error => {
-          console.error('Error fetching bills with amendments:', error);
-          billsWithAmendmentsPromise = null; // Reset promise on error
-          return [];
-        })
-        .finally(() => {
-          // Clear the promise but keep the cache
-          billsWithAmendmentsPromise = null;
-        });
-    }
+    let billsWithAmendmentsPromise = fetch('/capitol-tracker-2025/bills-with-amendments.txt')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Bills with amendments list not found');
+        }
+        return response.text();
+      })
+      .then(text => {
+        const bills = text.split('\n').filter(line => line.trim().length > 0);
+        documentCache.setBillsWithAmendments(bills);
+        return bills;
+      });
     
     return await billsWithAmendmentsPromise;
   } catch (error) {
@@ -155,22 +165,20 @@ export async function fetchBillsWithAmendments() {
 
 export async function fetchDocumentList(type, billId) {
   try {
-    // convert bill format to match the document index (ie HB 123 -> HB-123)
+    // convert bill format to match the document index
     const formattedBillId = billId.replace(' ', '-');
 
     // use cached index
-    if (!documentIndexCache) {
+    if (!documentCache.getDocumentIndex()) {
       const response = await fetch('/capitol-tracker-2025/document-index.json');
-
       if (!response.ok) {
         throw new Error('Document index not found');
       }
-
-      documentIndexCache = await response.json();
+      documentCache.setDocumentIndex(await response.json());
     }
 
     // return docs for bill or empty array if no docs
-    return documentIndexCache[type]?.[formattedBillId] || [];
+    return documentCache.getDocumentIndex()?.[type]?.[formattedBillId] || [];
   } catch (error) {
     console.error(`Error fetching ${type} documents:`, error);
     return [];

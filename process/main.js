@@ -195,11 +195,19 @@ const actionsOutput = bills.map(b => ({
 
 // Breaking this into chunks to avoid too-large-for-github-files
 const chunkSize = 200
-let index = 1
+let index = 1;
 for (let start = 0; start < actionsOutput.length; start += chunkSize) {
     writeJson(`./src/data/bill-actions-${index}.json`, actionsOutput.slice(start, start + chunkSize))
-    index += 1
+    index += 1;
 }
+
+// Write individual files per bill:
+if (!fs.existsSync('./src/data/bills')) {
+    fs.mkdirSync('./src/data/bills', { recursive: true });
+}
+actionsOutput.forEach(billActions => {
+    writeJson(`./src/data/bills/${billActions.bill.replace(' ', '-')}-actions.json`, billActions.actions);
+});
 
 writeJson('./src/data/bills.json', billsOutput)
 
