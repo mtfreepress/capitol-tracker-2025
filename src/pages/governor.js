@@ -113,6 +113,13 @@ const Governor = ({ billsTransmittedToGovernor, passedBothChambersNotSent }) => 
         <h4>Signed into law ({numberFormat(signedBills.length)})</h4>
         <BillTable bills={signedBills} displayLimit={5} />
 
+        {passedBothChambersNotSent.length > 0 && (
+          <>
+            <h4>Passed the Legislature but not yet sent to governor ({numberFormat(passedBothChambersNotSent.length)})</h4>
+            <BillTable bills={passedBothChambersNotSent} displayLimit={5} />
+          </>
+        )}
+
         <h4>Became law without signature</h4>
         <div className="note">
           Bills that have become law without the governor&#39;s signature after the governor chooses not to issue a signature or a veto by the 10-day deadline specified in the Montana Constitution.
