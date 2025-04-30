@@ -77,7 +77,7 @@ const Governor = ({ billsTransmittedToGovernor, passedBothChambersNotSent }) => 
         </div>
 
         <div>
-          Another <strong style={{ fontSize: '1.8em' }}>{numberFormat(passedBothChambersNotSent.length)}</strong> bills have been passed by both chambers of the Legislature but haven't yet been transmitted to the governor.
+          Another <strong style={{ fontSize: '1.8em' }}>{numberFormat(passedBothChambersNotSent.length)}</strong> bills have been passed by both chambers of the Legislature but haven`&#39t yet been transmitted to the governor.
         </div>
 
         <h4>Awaiting action ({numberFormat(awaitingActionBills.length)})</h4>
