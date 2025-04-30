@@ -12,7 +12,7 @@ import { numberFormat, dateFormat } from '../config/utils';
 
 const plural = (value) => (value !== 1 ? 's' : '');
 
-const Governor = ({ billsTransmittedToGovernor }) => {
+const Governor = ({ billsTransmittedToGovernor, passedBothChambersNotSent }) => {
   const { text, articles } = governorData;
 
   // filter functions
@@ -76,6 +76,10 @@ const Governor = ({ billsTransmittedToGovernor }) => {
           <strong style={{ fontSize: '1.8em' }}>{numberFormat(billsTransmittedToGovernor.length)}</strong> 2025 bill{plural(billsTransmittedToGovernor.length)} have been transmitted to Gov. Gianforte for his signature.
         </div>
 
+        <div>
+          Another <strong style={{ fontSize: '1.8em' }}>{numberFormat(passedBothChambersNotSent.length)}</strong> bills have been passed by both chambers of the Legislature but haven't yet been transmitted to the governor.
+        </div>
+
         <h4>Awaiting action ({numberFormat(awaitingActionBills.length)})</h4>
         <BillTable bills={awaitingActionBills} displayLimit={5} />
 
@@ -129,12 +133,43 @@ const Governor = ({ billsTransmittedToGovernor }) => {
 
 // Fetch data at build time
 export async function getStaticProps() {
-  const bills = await import('../data/bills.json')
-  const billsTransmittedToGovernor = bills.default.filter(bill => bill.hasBeenSentToGovernor)
+  const bills = await import('../data/bills.json');
+  
+  // Filter to include only House Bills and Senate Bills — No resolutions
+  const regularBills = bills.default.filter(bill => {
+    return bill.type === 'house bill' || bill.type === 'senate bill';
+  });
+  
+  // Apply the transmitted to governor filter to only HB and SB bills
+  const billsTransmittedToGovernor = regularBills.filter(bill => bill.hasBeenSentToGovernor);
+
+  // Filter bills that passed both chambers but not yet sent to governor
+  // Also only include HB and SB bills (not resolutions)
+  const passedBothChambersNotSent = regularBills.filter(bill => {
+    // Check if the bill passed first chamber
+    const firstChamberProgress = bill.progress.find(d => d.step === 'first chamber');
+    const passedFirstChamber = firstChamberProgress && firstChamberProgress.status === 'passed';
+
+    // Check if the bill passed second chamber
+    const secondChamberProgress = bill.progress.find(d => d.step === 'second chamber');
+    const passedSecondChamber = secondChamberProgress && secondChamberProgress.status === 'passed';
+
+    // Check if reconciliation was needed and completed (if applicable)
+    const reconciliationProgress = bill.progress.find(d => d.step === 'reconciliation');
+    const reconciliationComplete = !reconciliationProgress ||
+      reconciliationProgress.status === 'passed' ||
+      reconciliationProgress.status === 'skipped';
+
+    // Not yet sent to governor
+    const notSentToGovernor = !bill.hasBeenSentToGovernor;
+
+    return passedFirstChamber && passedSecondChamber && reconciliationComplete && notSentToGovernor;
+  });
 
   return {
     props: {
       billsTransmittedToGovernor,
+      passedBothChambersNotSent,
     },
   };
 }
