@@ -293,22 +293,22 @@
                 "N": 0
             },
             "gopCount": {
-                "Y": 0,
+                "Y": 12,
                 "N": 0,
                 "A": 0,
                 "E": 0,
                 "O": 0
             },
             "demCount": {
-                "Y": 0,
+                "Y": 8,
                 "N": 0,
                 "A": 0,
                 "E": 0,
                 "O": 0
             },
             "motionPassed": true,
-            "gopSupported": false,
-            "demSupported": false,
+            "gopSupported": true,
+            "demSupported": true,
             "votes": [
                 {
                     "option": "Y",
@@ -320,22 +320,6 @@
                 },
                 {
                     "option": "Y",
-                    "name": "Jill Cohenour",
-                    "lastName": "Cohenour",
-                    "party": "D",
-                    "locale": "East Helena",
-                    "district": "HD 83"
-                },
-                {
-                    "option": "Y",
-                    "name": "Paul Fielder",
-                    "lastName": "Fielder",
-                    "party": "R",
-                    "locale": "Thompson Falls",
-                    "district": "HD 14"
-                },
-                {
-                    "option": "Y",
                     "name": "Shannon Maness",
                     "lastName": "Maness",
                     "party": "R",
@@ -344,27 +328,11 @@
                 },
                 {
                     "option": "Y",
-                    "name": "Jamie Isaly",
-                    "lastName": "Isaly",
+                    "name": "Jill Cohenour",
+                    "lastName": "Cohenour",
                     "party": "D",
-                    "locale": "Bozeman",
-                    "district": "HD 58"
-                },
-                {
-                    "option": "Y",
-                    "name": "Joshua Seckinger",
-                    "lastName": "Seckinger",
-                    "party": "D",
-                    "locale": "Bozeman",
-                    "district": "HD 62"
-                },
-                {
-                    "option": "Y",
-                    "name": "Ed Byrne",
-                    "lastName": "Byrne",
-                    "party": "R",
-                    "locale": "Bigfork",
-                    "district": "HD 11"
+                    "locale": "East Helena",
+                    "district": "HD 83"
                 },
                 {
                     "option": "Y",
@@ -376,11 +344,19 @@
                 },
                 {
                     "option": "Y",
-                    "name": "Chip Fitzpatrick",
-                    "lastName": "Fitzpatrick",
+                    "name": "Jamie Isaly",
+                    "lastName": "Isaly",
                     "party": "D",
-                    "locale": "Unknown",
-                    "district": "HD 42"
+                    "locale": "Bozeman",
+                    "district": "HD 58"
+                },
+                {
+                    "option": "Y",
+                    "name": "Paul Fielder",
+                    "lastName": "Fielder",
+                    "party": "R",
+                    "locale": "Thompson Falls",
+                    "district": "HD 14"
                 },
                 {
                     "option": "Y",
@@ -392,11 +368,35 @@
                 },
                 {
                     "option": "Y",
+                    "name": "Ed Byrne",
+                    "lastName": "Byrne",
+                    "party": "R",
+                    "locale": "Bigfork",
+                    "district": "HD 11"
+                },
+                {
+                    "option": "Y",
                     "name": "Tom Millett",
                     "lastName": "Millett",
                     "party": "R",
                     "locale": "Marion",
                     "district": "HD 2"
+                },
+                {
+                    "option": "Y",
+                    "name": "Chip Fitzpatrick",
+                    "lastName": "Fitzpatrick",
+                    "party": "D",
+                    "locale": "Unknown",
+                    "district": "HD 42"
+                },
+                {
+                    "option": "Y",
+                    "name": "Joshua Seckinger",
+                    "lastName": "Seckinger",
+                    "party": "D",
+                    "locale": "Bozeman",
+                    "district": "HD 62"
                 },
                 {
                     "option": "Y",
@@ -448,6 +448,14 @@
                 },
                 {
                     "option": "Y",
+                    "name": "Jedediah Hinkle",
+                    "lastName": "Hinkle",
+                    "party": "R",
+                    "locale": "Belgrade",
+                    "district": "HD 67"
+                },
+                {
+                    "option": "Y",
                     "name": "Lukas Schubert",
                     "lastName": "Schubert",
                     "party": "R",
@@ -461,14 +469,6 @@
                     "party": "R",
                     "locale": "Laurel",
                     "district": "HD 54"
-                },
-                {
-                    "option": "Y",
-                    "name": "Jedediah Hinkle",
-                    "lastName": "Hinkle",
-                    "party": "R",
-                    "locale": "Belgrade",
-                    "district": "HD 67"
                 }
             ]
         },
