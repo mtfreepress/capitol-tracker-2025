@@ -179,10 +179,171 @@
         "transcriptUrl": null,
         "key": "Committee Executive Action--Bill Passed",
         "committeeHearingTime": null,
-        "vote": null
+        "vote": {
+            "action": "SB271-0013",
+            "bill": "SB 271",
+            "date": "02/13/2025",
+            "type": "committee",
+            "seqNumber": "S5",
+            "voteChamber": "senate",
+            "voteUrl": null,
+            "session": "2",
+            "motion": "Committee Executive Action--Bill Passed",
+            "thresholdRequired": "simple",
+            "count": {
+                "Y": 10,
+                "N": 4
+            },
+            "gopCount": {
+                "Y": 5,
+                "N": 4,
+                "A": 0,
+                "E": 0,
+                "O": 0
+            },
+            "demCount": {
+                "Y": 5,
+                "N": 0,
+                "A": 0,
+                "E": 0,
+                "O": 0
+            },
+            "motionPassed": true,
+            "gopSupported": true,
+            "demSupported": true,
+            "votes": [
+                {
+                    "option": "N",
+                    "name": "Becky Beard",
+                    "lastName": "Beard",
+                    "party": "R",
+                    "locale": "Elliston",
+                    "district": "SD 38"
+                },
+                {
+                    "option": "N",
+                    "name": "Daniel Emrich",
+                    "lastName": "Emrich",
+                    "party": "R",
+                    "locale": "Great Falls",
+                    "district": "SD 11"
+                },
+                {
+                    "option": "Y",
+                    "name": "John Esp",
+                    "lastName": "Esp",
+                    "party": "R",
+                    "locale": "Big Timber",
+                    "district": "SD 29"
+                },
+                {
+                    "option": "N",
+                    "name": "Forrest Mandeville",
+                    "lastName": "Mandeville",
+                    "party": "R",
+                    "locale": "Columbus",
+                    "district": "SD 28"
+                },
+                {
+                    "option": "Y",
+                    "name": "Theresa Manzella",
+                    "lastName": "Manzella",
+                    "party": "R",
+                    "locale": "Hamilton",
+                    "district": "SD 44"
+                },
+                {
+                    "option": "Y",
+                    "name": "Jacinda Morigeau",
+                    "lastName": "Morigeau",
+                    "party": "D",
+                    "locale": "Arlee",
+                    "district": "SD 46"
+                },
+                {
+                    "option": "Y",
+                    "name": "Andrea Olsen",
+                    "lastName": "Olsen",
+                    "party": "D",
+                    "locale": "Missoula",
+                    "district": "SD 48"
+                },
+                {
+                    "option": "Y",
+                    "name": "Jeremy Trebas",
+                    "lastName": "Trebas",
+                    "party": "R",
+                    "locale": "Great Falls",
+                    "district": "SD 10"
+                },
+                {
+                    "option": "N",
+                    "name": "Sue Vinton",
+                    "lastName": "Vinton",
+                    "party": "R",
+                    "locale": "Billings",
+                    "district": "SD 20"
+                },
+                {
+                    "option": "Y",
+                    "name": "Susan Webber",
+                    "lastName": "Webber",
+                    "party": "D",
+                    "locale": "Browning",
+                    "district": "SD 8"
+                },
+                {
+                    "option": "Y",
+                    "name": "Jonathan Windy Boy",
+                    "lastName": "Windy Boy",
+                    "party": "D",
+                    "locale": "Box Elder",
+                    "district": "SD 16"
+                },
+                {
+                    "option": "Y",
+                    "name": "Sara Novak",
+                    "lastName": "Novak",
+                    "party": "D",
+                    "locale": "Anaconda",
+                    "district": "SD 36"
+                },
+                {
+                    "option": "Y",
+                    "name": "Russ Tempel",
+                    "lastName": "Tempel",
+                    "party": "R",
+                    "locale": "Chester",
+                    "district": "SD 14"
+                },
+                {
+                    "option": "Y",
+                    "name": "John Fuller",
+                    "lastName": "Fuller",
+                    "party": "R",
+                    "locale": "Kalispell",
+                    "district": "SD 4"
+                }
+            ]
+        },
+        "voteSeq": "S5"
     },
     {
         "id": "SB271-0014",
+        "bill": "SB 271",
+        "date": "02/13/2025",
+        "description": "Committee Executive Action--Bill Passed",
+        "possession": "Senate",
+        "committee": "(S) Education and Cultural Resources",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Committee Executive Action--Bill Passed",
+        "committeeHearingTime": null,
+        "vote": null
+    },
+    {
+        "id": "SB271-0015",
         "bill": "SB 271",
         "date": "02/14/2025",
         "description": "Committee Report--Bill Passed",
@@ -196,7 +357,7 @@
         "vote": null
     },
     {
-        "id": "SB271-0015",
+        "id": "SB271-0016",
         "bill": "SB 271",
         "date": "02/18/2025",
         "description": "Scheduled for 2nd Reading",
@@ -210,7 +371,7 @@
         "vote": null
     },
     {
-        "id": "SB271-0016",
+        "id": "SB271-0017",
         "bill": "SB 271",
         "date": "02/18/2025",
         "description": "2nd Reading Passed",
@@ -222,7 +383,7 @@
         "key": "2nd Reading Passed",
         "committeeHearingTime": null,
         "vote": {
-            "action": "SB271-0016",
+            "action": "SB271-0017",
             "bill": "SB 271",
             "date": "02/18/2025",
             "type": "committee",
@@ -659,7 +820,7 @@
         "voteSeq": "S441"
     },
     {
-        "id": "SB271-0017",
+        "id": "SB271-0018",
         "bill": "SB 271",
         "date": "02/19/2025",
         "description": "Scheduled for 3rd Reading",
@@ -673,7 +834,7 @@
         "vote": null
     },
     {
-        "id": "SB271-0018",
+        "id": "SB271-0019",
         "bill": "SB 271",
         "date": "02/19/2025",
         "description": "3rd Reading Passed",
@@ -685,7 +846,7 @@
         "key": "3rd Reading Passed",
         "committeeHearingTime": null,
         "vote": {
-            "action": "SB271-0018",
+            "action": "SB271-0019",
             "bill": "SB 271",
             "date": "02/19/2025",
             "type": "committee",
@@ -1122,7 +1283,7 @@
         "voteSeq": "S491"
     },
     {
-        "id": "SB271-0019",
+        "id": "SB271-0020",
         "bill": "SB 271",
         "date": "02/19/2025",
         "description": "Transmitted to House",
@@ -1136,7 +1297,7 @@
         "vote": null
     },
     {
-        "id": "SB271-0020",
+        "id": "SB271-0021",
         "bill": "SB 271",
         "date": "02/20/2025",
         "description": "Referred to Committee",
@@ -1150,7 +1311,7 @@
         "vote": null
     },
     {
-        "id": "SB271-0021",
+        "id": "SB271-0022",
         "bill": "SB 271",
         "date": "02/20/2025",
         "description": "First Reading",
@@ -1164,7 +1325,7 @@
         "vote": null
     },
     {
-        "id": "SB271-0022",
+        "id": "SB271-0023",
         "bill": "SB 271",
         "date": "04/06/2025",
         "description": "Hearing",
@@ -1178,7 +1339,7 @@
         "vote": null
     },
     {
-        "id": "SB271-0023",
+        "id": "SB271-0024",
         "bill": "SB 271",
         "date": "04/07/2025",
         "description": "Committee Executive Action--Bill Concurred",
@@ -1190,7 +1351,7 @@
         "key": "Committee Executive Action--Bill Concurred",
         "committeeHearingTime": "04/07/2025",
         "vote": {
-            "action": "SB271-0023",
+            "action": "SB271-0024",
             "bill": "SB 271",
             "date": "04/07/2025",
             "type": "committee",
@@ -1347,7 +1508,7 @@
         "voteSeq": "H11"
     },
     {
-        "id": "SB271-0024",
+        "id": "SB271-0025",
         "bill": "SB 271",
         "date": "04/08/2025",
         "description": "Committee Report--Bill Concurred",
@@ -1361,7 +1522,7 @@
         "vote": null
     },
     {
-        "id": "SB271-0025",
+        "id": "SB271-0026",
         "bill": "SB 271",
         "date": "04/10/2025",
         "description": "Scheduled for 2nd Reading",
@@ -1375,7 +1536,7 @@
         "vote": null
     },
     {
-        "id": "SB271-0026",
+        "id": "SB271-0027",
         "bill": "SB 271",
         "date": "04/10/2025",
         "description": "2nd Reading Concurred",
@@ -1387,7 +1548,7 @@
         "key": "2nd Reading Concurred",
         "committeeHearingTime": null,
         "vote": {
-            "action": "SB271-0026",
+            "action": "SB271-0027",
             "bill": "SB 271",
             "date": "04/10/2025",
             "type": "committee",
@@ -2224,7 +2385,7 @@
         "voteSeq": "H2100"
     },
     {
-        "id": "SB271-0027",
+        "id": "SB271-0028",
         "bill": "SB 271",
         "date": "04/11/2025",
         "description": "Scheduled for 3rd Reading",
@@ -2238,7 +2399,7 @@
         "vote": null
     },
     {
-        "id": "SB271-0028",
+        "id": "SB271-0029",
         "bill": "SB 271",
         "date": "04/11/2025",
         "description": "3rd Reading Concurred",
@@ -2250,7 +2411,7 @@
         "key": "3rd Reading Concurred",
         "committeeHearingTime": null,
         "vote": {
-            "action": "SB271-0028",
+            "action": "SB271-0029",
             "bill": "SB 271",
             "date": "04/11/2025",
             "type": "committee",
@@ -3087,7 +3248,7 @@
         "voteSeq": "H2232"
     },
     {
-        "id": "SB271-0029",
+        "id": "SB271-0030",
         "bill": "SB 271",
         "date": "04/11/2025",
         "description": "Sent to Enrolling",
@@ -3101,7 +3262,7 @@
         "vote": null
     },
     {
-        "id": "SB271-0030",
+        "id": "SB271-0031",
         "bill": "SB 271",
         "date": "04/12/2025",
         "description": "Returned from Enrolling",
@@ -3115,7 +3276,7 @@
         "vote": null
     },
     {
-        "id": "SB271-0031",
+        "id": "SB271-0032",
         "bill": "SB 271",
         "date": "04/21/2025",
         "description": "Signed by President",
@@ -3129,7 +3290,7 @@
         "vote": null
     },
     {
-        "id": "SB271-0032",
+        "id": "SB271-0033",
         "bill": "SB 271",
         "date": "04/25/2025",
         "description": "Signed by Speaker",
@@ -3143,7 +3304,7 @@
         "vote": null
     },
     {
-        "id": "SB271-0033",
+        "id": "SB271-0034",
         "bill": "SB 271",
         "date": "04/25/2025",
         "description": "Transmitted to Governor",
