@@ -14,6 +14,7 @@ const BillTable = ({ bills, suppressCount, sortFunction = DEFAULT_SORT, displayL
   const [billsWithAmendments, setBillsWithAmendments] = useState([]);
 
   useEffect(() => {
+    let isMounted = true; 
     // fetch the list of bills with amendments when component mounts
     const loadBillsWithAmendments = async () => {
       const amendmentsList = await fetchBillsWithAmendments();
