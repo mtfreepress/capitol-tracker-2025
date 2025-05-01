@@ -16,7 +16,7 @@ node inputs/bills/fetch.js
 node inputs/bills/fetch-bill-notes.js
 
 # Grab committee data 
-node inputs/committees/fetch-committees.js
+# node inputs/committees/fetch-committees.js
 
 # Run data process
 node  process/main.js
