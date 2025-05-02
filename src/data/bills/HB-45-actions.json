@@ -187,9 +187,26 @@
         "isHighlight": true,
         "committeeAction": true,
         "advanced": true,
+        "vote": null
+    },
+    {
+        "id": "HB45-0014",
+        "bill": "HB 45",
+        "date": "01/16/2025",
+        "committeeHearingTime": null,
+        "description": "Committee Executive Action--Bill Passed",
+        "billHolder": "house",
+        "committee": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Committee Executive Action--Bill Passed",
+        "isMajor": true,
+        "isHighlight": true,
+        "committeeAction": true,
+        "advanced": true,
         "vote": {
             "bill": "HB 45",
-            "date": "01/15/2025",
+            "date": "01/16/2025",
             "type": "committee",
             "voteLocation": "committee",
             "seqNumber": "H5",
@@ -332,23 +349,6 @@
                 }
             ]
         }
-    },
-    {
-        "id": "HB45-0014",
-        "bill": "HB 45",
-        "date": "01/16/2025",
-        "committeeHearingTime": null,
-        "description": "Committee Executive Action--Bill Passed",
-        "billHolder": "house",
-        "committee": null,
-        "recordings": [],
-        "transcriptUrl": null,
-        "key": "Committee Executive Action--Bill Passed",
-        "isMajor": true,
-        "isHighlight": true,
-        "committeeAction": true,
-        "advanced": true,
-        "vote": null
     },
     {
         "id": "HB45-0015",
@@ -7494,6 +7494,19 @@
         "recordings": [],
         "transcriptUrl": null,
         "key": "Signed by Speaker",
+        "vote": null
+    },
+    {
+        "id": "HB45-0036",
+        "bill": "HB 45",
+        "date": "05/02/2025",
+        "committeeHearingTime": null,
+        "description": "Signed by President",
+        "billHolder": "senate",
+        "committee": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Signed by President",
         "vote": null
     }
 ]
