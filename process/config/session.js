@@ -1,0 +1,1 @@
+export const SESSION_END_DATE = '2025-04-30'; // YYYY-MM-DD

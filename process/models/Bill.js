@@ -2,6 +2,7 @@ import Action from './Action.js'
 
 import { MANUAL_SIGNINGS, MANUAL_VETOS } from '../config/overrides.js'
 import { BILL_TYPES, VOTE_THRESHOLDS, VOTE_THRESHOLD_MAPPING, BILL_STATUSES } from '../config/procedure.js'
+import { SESSION_END_DATE } from '../config/session.js'
 import { capitalize } from '../functions.js'
 
 import {
@@ -13,6 +14,8 @@ import {
     // firstActionWithFlag,
     // lastActionWithFlag
 } from '../functions.js'
+
+const sessionEndDate = timeParse('%Y-%m-%d')(SESSION_END_DATE);
 
 export default class Bill {
     constructor({
@@ -386,6 +389,20 @@ export default class Bill {
                 }
             }
         })
+        const now = new Date();
+        if (now > sessionEndDate) {
+            progressionSteps.forEach(step => {
+                // Only override if not at governor or already law
+                if (
+                    (step.status === 'current' || step.status === 'future') &&
+                    step.step !== 'governor' &&
+                    step.statusLabel !== 'Became law'
+                ) {
+                    step.status = 'blocked';
+                    step.statusLabel = 'Failed (session ended)';
+                }
+            });
+        }
         return progressionSteps
     }
 

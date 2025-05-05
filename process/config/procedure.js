@@ -291,9 +291,9 @@ export const ACTIONS = [
     { key: "2nd Reading Governor's Proposed Amendments Not Adopt Motion Failed", isMajor, floorDebate, reconciliationAction },
 
     { key: '3rd Reading Passed as Amended by House', isMajor, isHighlight, reconciliationAction, advanced },
-    { key: '3rd Reading Not Passed as Amended by House', isMajor, isHighlight, reconciliationAction, },
+    { key: '3rd Reading Not Passed as Amended by House', isMajor, isHighlight, reconciliationAction, failed},
     { key: '3rd Reading Passed as Amended by Senate', isMajor, isHighlight, reconciliationAction, advanced },
-    { key: '3rd Reading Not Passed as Amended by Senate', isMajor, isHighlight, reconciliationAction, },
+    { key: '3rd Reading Not Passed as Amended by Senate', isMajor, isHighlight, reconciliationAction, failed},
 
     { key: '3rd Reading Conference Committee Report Adopted', isMajor, reconciliationAction, advanced },
     { key: '3rd Reading Conference Committee Report Rejected', isMajor, reconciliationAction },
