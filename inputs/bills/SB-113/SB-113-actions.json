@@ -193,10 +193,38 @@
         "transcriptUrl": null,
         "key": "Committee Executive Action--Bill Passed",
         "committeeHearingTime": null,
+        "vote": null
+    },
+    {
+        "id": "SB113-0015",
+        "bill": "SB 113",
+        "date": "01/30/2025",
+        "description": "Committee Report--Bill Passed",
+        "possession": "Senate",
+        "committee": "undefined",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Committee Report--Bill Passed",
+        "committeeHearingTime": null,
+        "vote": null
+    },
+    {
+        "id": "SB113-0016",
+        "bill": "SB 113",
+        "date": "01/31/2025",
+        "description": "Committee Executive Action--Bill Passed",
+        "possession": "Senate",
+        "committee": "undefined",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Committee Executive Action--Bill Passed",
+        "committeeHearingTime": null,
         "vote": {
-            "action": "SB113-0014",
+            "action": "SB113-0016",
             "bill": "SB 113",
-            "date": "01/29/2025",
+            "date": "01/31/2025",
             "type": "committee",
             "seqNumber": "S5",
             "voteChamber": "senate",
@@ -317,34 +345,6 @@
             ]
         },
         "voteSeq": "S5"
-    },
-    {
-        "id": "SB113-0015",
-        "bill": "SB 113",
-        "date": "01/30/2025",
-        "description": "Committee Report--Bill Passed",
-        "possession": "Senate",
-        "committee": "undefined",
-        "actionUrl": null,
-        "recordings": [],
-        "transcriptUrl": null,
-        "key": "Committee Report--Bill Passed",
-        "committeeHearingTime": null,
-        "vote": null
-    },
-    {
-        "id": "SB113-0016",
-        "bill": "SB 113",
-        "date": "01/31/2025",
-        "description": "Committee Executive Action--Bill Passed",
-        "possession": "Senate",
-        "committee": "undefined",
-        "actionUrl": null,
-        "recordings": [],
-        "transcriptUrl": null,
-        "key": "Committee Executive Action--Bill Passed",
-        "committeeHearingTime": null,
-        "vote": null
     },
     {
         "id": "SB113-0017",
@@ -4719,6 +4719,20 @@
         "recordings": [],
         "transcriptUrl": null,
         "key": "Signed by Governor",
+        "committeeHearingTime": null,
+        "vote": null
+    },
+    {
+        "id": "SB113-0041",
+        "bill": "SB 113",
+        "date": "04/18/2025",
+        "description": "Chapter Number Assigned",
+        "possession": "undefined",
+        "committee": "undefined",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Chapter Number Assigned",
         "committeeHearingTime": null,
         "vote": null
     }
