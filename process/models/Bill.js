@@ -2,7 +2,9 @@ import Action from './Action.js'
 
 import { MANUAL_SIGNINGS, MANUAL_VETOS } from '../config/overrides.js'
 import { BILL_TYPES, VOTE_THRESHOLDS, VOTE_THRESHOLD_MAPPING, BILL_STATUSES } from '../config/procedure.js'
+import { SESSION_END_DATE } from '../config/session.js'
 import { capitalize } from '../functions.js'
+import { timeParse } from 'd3-time-format'
 
 import {
     billKey,
@@ -13,6 +15,8 @@ import {
     // firstActionWithFlag,
     // lastActionWithFlag
 } from '../functions.js'
+
+const sessionEndDate = timeParse('%Y-%m-%d')(SESSION_END_DATE);
 
 export default class Bill {
     constructor({
@@ -248,6 +252,16 @@ export default class Bill {
                     statusLabel = 'Pending'
                 }
 
+                const failedBlast = committeeActionsInFirstChamber.find(
+                    a => a.key === 'Taken from Committee; Placed on 2nd Reading' && a.vote && a.vote.motionPassed === false
+                );
+                if (failedBlast) {
+                    status = 'blocked';
+                    statusLabel = 'Blast motion failed';
+                    statusDate = failedBlast.date;
+                    return { step, status, statusLabel, statusDate };
+                }
+
                 if (committeeActionsInFirstChamber.length === 0) {
                     return { step, status, statusLabel, statusDate }
                 } else {
@@ -319,13 +333,13 @@ export default class Bill {
                     //  Fix for HB-337 (maybe others)
                     if (lastFloorAction.finalPassage && progressFlagInActions(secondChamberActions, 'amended')) {
                         // Look for explicit "returned with amendments" actions that indicate formal reconciliation
-                        const needsReconciliation = actions.some(a => 
+                        const needsReconciliation = actions.some(a =>
                             a.description && (
-                                a.description.includes("Returned to House with Amendments") || 
+                                a.description.includes("Returned to House with Amendments") ||
                                 a.description.includes("Returned to Senate with Amendments")
                             )
                         );
-                        
+
                         reconciliationNecessary = needsReconciliation;
                     }
                     statusDate = lastFloorAction.date
@@ -386,7 +400,126 @@ export default class Bill {
                 }
             }
         })
-        return progressionSteps
+        const now = new Date();
+        if (now > sessionEndDate) {
+            // find committee step
+            const committeeStepIdx = progressionSteps.findIndex(s => s.step === 'first committee');
+            let committeeStepWasBlast = false;
+            if (committeeStepIdx !== -1) {
+                const committeeStep = progressionSteps[committeeStepIdx];
+                const lastCommitteeAction = committeeActionsInFirstCommittee.slice(-1)[0];
+
+                // if last committee action is a blast motion and it's pending (no vote or not passed)
+                if (
+                    lastCommitteeAction &&
+                    lastCommitteeAction.key === 'Taken from Table in Committee' &&
+                    (!lastCommitteeAction.vote || lastCommitteeAction.vote.motionPassed === false)
+                ) {
+                    committeeStep.status = 'blocked';
+                    committeeStep.statusLabel = 'Blast motion not taken up';
+                    committeeStepWasBlast = true;
+                }
+            }
+
+            // only mark the last pending step as failed if it's not the committee step,
+            // and only if the committee step wasn't just marked as a failed blast
+            let blockedFound = false;
+            for (let i = 0; i < progressionSteps.length; i++) {
+                if (blockedFound) {
+                    progressionSteps[i].status = 'future';
+                    progressionSteps[i].statusLabel = null;
+                    progressionSteps[i].statusDate = null;
+                }
+                if (progressionSteps[i].status === 'blocked') {
+                    blockedFound = true;
+                }
+            }
+            const firstCommitteeIdx = progressionSteps.findIndex(s => s.step === 'first committee');
+            const billUltimatelyPassed = actions.some(a => a.ultimatelyPassed);
+
+            if (
+                firstCommitteeIdx !== -1 &&
+                progressionSteps[firstCommitteeIdx].status === 'current' &&
+                !billUltimatelyPassed
+            ) {
+                progressionSteps[firstCommitteeIdx].status = 'blocked';
+                progressionSteps[firstCommitteeIdx].statusLabel = 'No committee action before deadline';
+            }
+            const firstChamberIdx = progressionSteps.findIndex(
+                s => s.step === 'first chamber' && (s.status === 'current' || s.status === 'future')
+            );
+            const anyBlockedBeforeFirst = progressionSteps.slice(0, firstChamberIdx).some(s => s.status === 'blocked');
+            const committeePassed = firstCommitteeIdx !== -1 && progressionSteps[firstCommitteeIdx].status === 'passed';
+            if (
+                firstChamberIdx !== -1 &&
+                !anyBlockedBeforeFirst &&
+                committeePassed &&
+                !billUltimatelyPassed
+            ) {
+                progressionSteps[firstChamberIdx].status = 'blocked';
+                progressionSteps[firstChamberIdx].statusLabel = `Failed in ${capitalize(firstChamber)}`;
+            }
+
+            // only mark second chamber as failed if first chamber is passed
+            const secondChamberIdx = progressionSteps.findIndex(
+                s => s.step === 'second chamber' && (s.status === 'current' || s.status === 'future')
+            );
+            const anyBlockedBeforeSecond = progressionSteps.slice(0, secondChamberIdx).some(s => s.status === 'blocked');
+            const hasTransmittedToSecondChamber = actions.some(a =>
+                a.key === `Transmitted to ${capitalize(secondChamber)}`
+            );
+            if (
+                secondChamberIdx !== -1 &&
+                !anyBlockedBeforeSecond &&
+                hasTransmittedToSecondChamber
+            ) {
+                const secondChamberName = (firstChamber === 'house') ? 'Senate' : 'House';
+                progressionSteps[secondChamberIdx].status = 'blocked';
+                progressionSteps[secondChamberIdx].statusLabel = `Failed in ${secondChamberName}`;
+            }
+
+            //  use hasReachedGovernor for all governor/reconciliation logic
+            const reconciliationIdx = progressionSteps.findIndex(s => s.step === 'reconciliation');
+            if (
+                reconciliationIdx !== -1 &&
+                hasReachedGovernor &&
+                progressionSteps[reconciliationIdx].status !== 'passed'
+            ) {
+                progressionSteps[reconciliationIdx].status = 'skipped';
+                progressionSteps[reconciliationIdx].statusLabel = 'Not required';
+            }
+            // only mark as failed if there is no blocked step before it
+            const anyBlockedBeforeReconciliation = progressionSteps.slice(0, reconciliationIdx).some(s => s.status === 'blocked');
+            if (
+                reconciliationIdx !== -1 &&
+                !anyBlockedBeforeReconciliation &&
+                progressionSteps[reconciliationIdx].status !== 'skipped' &&
+                progressionSteps[reconciliationIdx].status !== 'passed'
+            ) {
+                progressionSteps[reconciliationIdx].status = 'blocked';
+                progressionSteps[reconciliationIdx].statusLabel = 'No agreement between chambers';
+            }
+        }
+
+        const billUltimatelyPassed = actions.some(a => a.ultimatelyPassed);
+        const firstChamberIdx = progressionSteps.findIndex(s => s.step === 'first chamber');
+        const secondChamberIdx = progressionSteps.findIndex(s => s.step === 'second chamber');
+        const reconciliationIdx = progressionSteps.findIndex(s => s.step === 'reconciliation');
+
+        // if the bill reached the governor or ultimately passed, force both chambers to "passed"
+        if ((hasReachedGovernor || billUltimatelyPassed) && firstChamberIdx !== -1) {
+            progressionSteps[firstChamberIdx].status = 'passed';
+            progressionSteps[firstChamberIdx].statusLabel = `Passed ${capitalize(firstChamber)}`;
+        }
+        if ((hasReachedGovernor || billUltimatelyPassed) && secondChamberIdx !== -1) {
+            progressionSteps[secondChamberIdx].status = 'passed';
+            progressionSteps[secondChamberIdx].statusLabel = `Passed ${capitalize(secondChamber)}`;
+        }
+        if ((hasReachedGovernor || billUltimatelyPassed) && reconciliationIdx !== -1) {
+            progressionSteps[reconciliationIdx].status = 'skipped';
+            progressionSteps[reconciliationIdx].statusLabel = 'Not required';
+        }
+        return progressionSteps;
     }
 
     getVoteMajorityRequired = (voteRequirements) => {

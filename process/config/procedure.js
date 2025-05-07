@@ -218,6 +218,7 @@ export const ACTIONS = [
     { key: 'Committee Executive Action--Bill Passed as Amended', isMajor, isHighlight, committeeAction, advanced, amended },
     { key: 'Committee Executive Action--Bill Not Passed', isMajor, isHighlight, committeeAction, failed },
     { key: 'Committee Executive Action--Bill Not Passed as Amended', isMajor, isHighlight, committeeAction, failed },
+    {key: 'Committee Report--Bill Passed', isMajor, isHighlight, committeeAction, advanced },
     // second chamber committee actions
     { key: 'Committee Executive Action--Bill Concurred', isMajor, isHighlight, committeeAction, advanced, },
     { key: 'Committee Executive Action--Bill Concurred as Amended', isMajor, isHighlight, committeeAction, advanced, amended },
@@ -291,9 +292,9 @@ export const ACTIONS = [
     { key: "2nd Reading Governor's Proposed Amendments Not Adopt Motion Failed", isMajor, floorDebate, reconciliationAction },
 
     { key: '3rd Reading Passed as Amended by House', isMajor, isHighlight, reconciliationAction, advanced },
-    { key: '3rd Reading Not Passed as Amended by House', isMajor, isHighlight, reconciliationAction, advanced },
+    { key: '3rd Reading Not Passed as Amended by House', isMajor, isHighlight, reconciliationAction, failed},
     { key: '3rd Reading Passed as Amended by Senate', isMajor, isHighlight, reconciliationAction, advanced },
-    { key: '3rd Reading Not Passed as Amended by Senate', isMajor, isHighlight, reconciliationAction, advanced },
+    { key: '3rd Reading Not Passed as Amended by Senate', isMajor, isHighlight, reconciliationAction, failed},
 
     { key: '3rd Reading Conference Committee Report Adopted', isMajor, reconciliationAction, advanced },
     { key: '3rd Reading Conference Committee Report Rejected', isMajor, reconciliationAction },
