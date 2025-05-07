@@ -1,5 +1,3 @@
-## procedure.js
-
 export const VOTE_THRESHOLD_MAPPING = {
     'TWO_THIRDS_LEGISLATURE': '2/3 of Entire Legislature',
     'THREE_FOURTHS': '3/4 of Each House',
