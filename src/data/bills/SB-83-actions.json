@@ -319,111 +319,7 @@
         "committeeAction": true,
         "advanced": true,
         "amended": true,
-        "vote": {
-            "bill": "SB 83",
-            "date": "01/27/2025",
-            "type": "committee",
-            "voteLocation": "committee",
-            "seqNumber": "S5",
-            "voteChamber": "senate",
-            "session": "2",
-            "thresholdRequired": "simple",
-            "count": {
-                "Y": 9,
-                "N": 0
-            },
-            "gopCount": {
-                "Y": 6,
-                "N": 0,
-                "A": 0,
-                "E": 0,
-                "O": 0
-            },
-            "demCount": {
-                "Y": 3,
-                "N": 0,
-                "A": 0,
-                "E": 0,
-                "O": 0
-            },
-            "motionPassed": true,
-            "gopSupported": true,
-            "demSupported": true,
-            "votes": [
-                {
-                    "option": "Y",
-                    "name": "Vince Ricci",
-                    "lastName": "Ricci",
-                    "party": "R",
-                    "locale": "Billings",
-                    "district": "SD 27"
-                },
-                {
-                    "option": "Y",
-                    "name": "Andrea Olsen",
-                    "lastName": "Olsen",
-                    "party": "D",
-                    "locale": "Missoula",
-                    "district": "SD 48"
-                },
-                {
-                    "option": "Y",
-                    "name": "Daniel Emrich",
-                    "lastName": "Emrich",
-                    "party": "R",
-                    "locale": "Great Falls",
-                    "district": "SD 11"
-                },
-                {
-                    "option": "Y",
-                    "name": "Gayle Lammers",
-                    "lastName": "Lammers",
-                    "party": "R",
-                    "locale": "Hardin",
-                    "district": "SD 21"
-                },
-                {
-                    "option": "Y",
-                    "name": "Theresa Manzella",
-                    "lastName": "Manzella",
-                    "party": "R",
-                    "locale": "Hamilton",
-                    "district": "SD 44"
-                },
-                {
-                    "option": "Y",
-                    "name": "Cora Neumann",
-                    "lastName": "Neumann",
-                    "party": "D",
-                    "locale": "Bozeman",
-                    "district": "SD 30"
-                },
-                {
-                    "option": "Y",
-                    "name": "Laura Smith",
-                    "lastName": "Smith",
-                    "party": "D",
-                    "locale": "Helena",
-                    "district": "SD 40"
-                },
-                {
-                    "option": "Y",
-                    "name": "Sue Vinton",
-                    "lastName": "Vinton",
-                    "party": "R",
-                    "locale": "Billings",
-                    "district": "SD 20"
-                },
-                {
-                    "option": "Y",
-                    "name": "Barry Usher",
-                    "lastName": "Usher",
-                    "party": "R",
-                    "locale": "Laurel",
-                    "district": "SD 19"
-                }
-            ]
-        }
+        "vote": null
     },
     {
         "id": "SB83-0015",
@@ -561,7 +457,111 @@
         "committeeAction": true,
         "advanced": true,
         "amended": true,
-        "vote": null
+        "vote": {
+            "bill": "SB 83",
+            "date": "01/27/2025",
+            "type": "committee",
+            "voteLocation": "committee",
+            "seqNumber": "S5",
+            "voteChamber": "senate",
+            "session": "2",
+            "thresholdRequired": "simple",
+            "count": {
+                "Y": 9,
+                "N": 0
+            },
+            "gopCount": {
+                "Y": 6,
+                "N": 0,
+                "A": 0,
+                "E": 0,
+                "O": 0
+            },
+            "demCount": {
+                "Y": 3,
+                "N": 0,
+                "A": 0,
+                "E": 0,
+                "O": 0
+            },
+            "motionPassed": true,
+            "gopSupported": true,
+            "demSupported": true,
+            "votes": [
+                {
+                    "option": "Y",
+                    "name": "Vince Ricci",
+                    "lastName": "Ricci",
+                    "party": "R",
+                    "locale": "Billings",
+                    "district": "SD 27"
+                },
+                {
+                    "option": "Y",
+                    "name": "Andrea Olsen",
+                    "lastName": "Olsen",
+                    "party": "D",
+                    "locale": "Missoula",
+                    "district": "SD 48"
+                },
+                {
+                    "option": "Y",
+                    "name": "Daniel Emrich",
+                    "lastName": "Emrich",
+                    "party": "R",
+                    "locale": "Great Falls",
+                    "district": "SD 11"
+                },
+                {
+                    "option": "Y",
+                    "name": "Gayle Lammers",
+                    "lastName": "Lammers",
+                    "party": "R",
+                    "locale": "Hardin",
+                    "district": "SD 21"
+                },
+                {
+                    "option": "Y",
+                    "name": "Theresa Manzella",
+                    "lastName": "Manzella",
+                    "party": "R",
+                    "locale": "Hamilton",
+                    "district": "SD 44"
+                },
+                {
+                    "option": "Y",
+                    "name": "Cora Neumann",
+                    "lastName": "Neumann",
+                    "party": "D",
+                    "locale": "Bozeman",
+                    "district": "SD 30"
+                },
+                {
+                    "option": "Y",
+                    "name": "Laura Smith",
+                    "lastName": "Smith",
+                    "party": "D",
+                    "locale": "Helena",
+                    "district": "SD 40"
+                },
+                {
+                    "option": "Y",
+                    "name": "Sue Vinton",
+                    "lastName": "Vinton",
+                    "party": "R",
+                    "locale": "Billings",
+                    "district": "SD 20"
+                },
+                {
+                    "option": "Y",
+                    "name": "Barry Usher",
+                    "lastName": "Usher",
+                    "party": "R",
+                    "locale": "Laurel",
+                    "district": "SD 19"
+                }
+            ]
+        }
     },
     {
         "id": "SB83-0017",
@@ -5095,6 +5095,22 @@
         "isHighlight": true,
         "governorAction": true,
         "signed": true,
+        "vote": null
+    },
+    {
+        "id": "SB83-0038",
+        "bill": "SB 83",
+        "date": "05/09/2025",
+        "committeeHearingTime": null,
+        "description": "Chapter Number Assigned",
+        "billHolder": "sos",
+        "committee": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Chapter Number Assigned",
+        "isMajor": true,
+        "ultimatelyPassed": true,
+        "secretaryOfStateAction": true,
         "vote": null
     }
 ]
