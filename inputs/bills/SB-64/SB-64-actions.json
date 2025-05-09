@@ -1328,7 +1328,154 @@
         "transcriptUrl": null,
         "key": "Committee Executive Action--Bill Concurred as Amended",
         "committeeHearingTime": null,
-        "vote": null
+        "vote": {
+            "action": "SB64-0027",
+            "bill": "SB 64",
+            "date": "02/21/2025",
+            "type": "committee",
+            "seqNumber": "H11",
+            "voteChamber": "house",
+            "voteUrl": null,
+            "session": "2",
+            "motion": "Committee Executive Action--Bill Concurred as Amended",
+            "thresholdRequired": "simple",
+            "count": {
+                "Y": 11,
+                "N": 1
+            },
+            "gopCount": {
+                "Y": 5,
+                "N": 1,
+                "A": 2,
+                "E": 0,
+                "O": 0
+            },
+            "demCount": {
+                "Y": 6,
+                "N": 0,
+                "A": 0,
+                "E": 0,
+                "O": 0
+            },
+            "motionPassed": true,
+            "gopSupported": true,
+            "demSupported": true,
+            "votes": [
+                {
+                    "option": "Y",
+                    "name": "Ken Walsh",
+                    "lastName": "Walsh",
+                    "party": "R",
+                    "locale": "Twin Bridges",
+                    "district": "HD 69"
+                },
+                {
+                    "option": "Y",
+                    "name": "Paul Tuss",
+                    "lastName": "Tuss",
+                    "party": "D",
+                    "locale": "Havre",
+                    "district": "HD 27"
+                },
+                {
+                    "option": "Y",
+                    "name": "Gary Parry",
+                    "lastName": "Parry",
+                    "party": "R",
+                    "locale": "Colstrip",
+                    "district": "HD 35"
+                },
+                {
+                    "option": "N",
+                    "name": "Lukas Schubert",
+                    "lastName": "Schubert",
+                    "party": "R",
+                    "locale": "Kalispell",
+                    "district": "HD 8"
+                },
+                {
+                    "option": "Y",
+                    "name": "Jonathan Karlen",
+                    "lastName": "Karlen",
+                    "party": "D",
+                    "locale": "Missoula",
+                    "district": "HD 98"
+                },
+                {
+                    "option": "Y",
+                    "name": "Terry Falk",
+                    "lastName": "Falk",
+                    "party": "R",
+                    "locale": "Kalispell",
+                    "district": "HD 10"
+                },
+                {
+                    "option": "Y",
+                    "name": "Shelly Fyant",
+                    "lastName": "Fyant",
+                    "party": "D",
+                    "locale": "Arlee",
+                    "district": "HD 91"
+                },
+                {
+                    "option": "A",
+                    "name": "Lee Deming",
+                    "lastName": "Deming",
+                    "party": "R",
+                    "locale": "Laurel",
+                    "district": "HD 54"
+                },
+                {
+                    "option": "Y",
+                    "name": "Becky Edwards",
+                    "lastName": "Edwards",
+                    "party": "D",
+                    "locale": "Bozeman",
+                    "district": "HD 61"
+                },
+                {
+                    "option": "Y",
+                    "name": "Amy Regier",
+                    "lastName": "Regier",
+                    "party": "R",
+                    "locale": "Kalispell",
+                    "district": "HD 6"
+                },
+                {
+                    "option": "Y",
+                    "name": "Marilyn Marler",
+                    "lastName": "Marler",
+                    "party": "D",
+                    "locale": "Missoula",
+                    "district": "HD 94"
+                },
+                {
+                    "option": "A",
+                    "name": "Greg Kmetz",
+                    "lastName": "Kmetz",
+                    "party": "R",
+                    "locale": "Miles City",
+                    "district": "HD 36"
+                },
+                {
+                    "option": "Y",
+                    "name": "Melissa Romano",
+                    "lastName": "Romano",
+                    "party": "D",
+                    "locale": "Helena",
+                    "district": "HD 80"
+                },
+                {
+                    "option": "Y",
+                    "name": "George Nikolakakos",
+                    "lastName": "Nikolakakos",
+                    "party": "R",
+                    "locale": "Great Falls",
+                    "district": "HD 22"
+                }
+            ]
+        },
+        "voteSeq": "H11"
     },
     {
         "id": "SB64-0028",
@@ -4105,6 +4252,20 @@
         "recordings": [],
         "transcriptUrl": null,
         "key": "Signed by Governor",
+        "committeeHearingTime": null,
+        "vote": null
+    },
+    {
+        "id": "SB64-0045",
+        "bill": "SB 64",
+        "date": "04/17/2025",
+        "description": "Chapter Number Assigned",
+        "possession": "undefined",
+        "committee": "undefined",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Chapter Number Assigned",
         "committeeHearingTime": null,
         "vote": null
     }
