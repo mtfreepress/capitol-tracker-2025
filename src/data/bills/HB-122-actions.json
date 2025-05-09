@@ -3178,7 +3178,7 @@
             "thresholdRequired": "simple",
             "count": {
                 "Y": 13,
-                "N": 4
+                "N": 0
             },
             "gopCount": {
                 "Y": 8,
@@ -3189,7 +3189,7 @@
             },
             "demCount": {
                 "Y": 5,
-                "N": 4,
+                "N": 0,
                 "A": 0,
                 "E": 0,
                 "O": 0
@@ -3231,7 +3231,7 @@
                     "district": "SD 1"
                 },
                 {
-                    "option": "N",
+                    "option": "Y",
                     "name": "Emma Kerr-Carpenter",
                     "lastName": "Kerr-Carpenter",
                     "party": "D",
@@ -3247,7 +3247,7 @@
                     "district": "SD 15"
                 },
                 {
-                    "option": "N",
+                    "option": "Y",
                     "name": "Denise Hayman",
                     "lastName": "Hayman",
                     "party": "D",
@@ -3255,7 +3255,7 @@
                     "district": "SD 32"
                 },
                 {
-                    "option": "N",
+                    "option": "Y",
                     "name": "Janet Ellis",
                     "lastName": "Ellis",
                     "party": "D",
@@ -3295,38 +3295,6 @@
                     "district": "SD 22"
                 },
                 {
-                    "option": "N",
-                    "name": "Chris Pope",
-                    "lastName": "Pope",
-                    "party": "D",
-                    "locale": "Bozeman",
-                    "district": "SD 33"
-                },
-                {
-                    "option": "Y",
-                    "name": "Emma Kerr-Carpenter",
-                    "lastName": "Kerr-Carpenter",
-                    "party": "D",
-                    "locale": "Billings",
-                    "district": "SD 23"
-                },
-                {
-                    "option": "Y",
-                    "name": "Denise Hayman",
-                    "lastName": "Hayman",
-                    "party": "D",
-                    "locale": "Bozeman",
-                    "district": "SD 32"
-                },
-                {
-                    "option": "Y",
-                    "name": "Janet Ellis",
-                    "lastName": "Ellis",
-                    "party": "D",
-                    "locale": "Helena",
-                    "district": "SD 41"
-                },
-                {
                     "option": "Y",
                     "name": "Chris Pope",
                     "lastName": "Pope",
@@ -3336,23 +3304,6 @@
                 }
             ]
         }
-    },
-    {
-        "id": "HB122-0025",
-        "bill": "HB 122",
-        "date": "03/25/2025",
-        "committeeHearingTime": null,
-        "description": "Committee Executive Action--Bill Concurred",
-        "billHolder": "senate",
-        "committee": null,
-        "recordings": [],
-        "transcriptUrl": null,
-        "key": "Committee Executive Action--Bill Concurred",
-        "isMajor": true,
-        "isHighlight": true,
-        "committeeAction": true,
-        "advanced": true,
-        "vote": null
     },
     {
         "id": "HB122-0026",
@@ -4877,6 +4828,22 @@
         "isHighlight": true,
         "governorAction": true,
         "signed": true,
+        "vote": null
+    },
+    {
+        "id": "HB122-0037",
+        "bill": "HB 122",
+        "date": "05/05/2025",
+        "committeeHearingTime": null,
+        "description": "Chapter Number Assigned",
+        "billHolder": "sos",
+        "committee": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Chapter Number Assigned",
+        "isMajor": true,
+        "ultimatelyPassed": true,
+        "secretaryOfStateAction": true,
         "vote": null
     }
 ]
