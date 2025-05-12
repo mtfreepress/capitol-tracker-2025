@@ -189,6 +189,25 @@
         "secondChamberAction": true,
         "failed": true,
         "tabled": true,
+        "vote": null
+    },
+    {
+        "id": "HB153-0014",
+        "bill": "HB 153",
+        "date": "01/27/2025",
+        "committeeHearingTime": null,
+        "description": "Tabled in Committee",
+        "billHolder": "house",
+        "committee": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Tabled in Committee",
+        "isMajor": true,
+        "isHighlight": true,
+        "committeeAction": true,
+        "secondChamberAction": true,
+        "failed": true,
+        "tabled": true,
         "vote": {
             "bill": "HB 153",
             "date": "01/27/2025",
@@ -344,24 +363,6 @@
         }
     },
     {
-        "id": "HB153-0014",
-        "bill": "HB 153",
-        "date": "02/03/2025",
-        "committeeHearingTime": null,
-        "description": "Committee Executive Action--Bill Passed as Amended",
-        "billHolder": "house",
-        "committee": null,
-        "recordings": [],
-        "transcriptUrl": null,
-        "key": "Committee Executive Action--Bill Passed as Amended",
-        "isMajor": true,
-        "isHighlight": true,
-        "committeeAction": true,
-        "advanced": true,
-        "amended": true,
-        "vote": null
-    },
-    {
         "id": "HB153-0015",
         "bill": "HB 153",
         "date": "02/03/2025",
@@ -375,159 +376,7 @@
         "isMajor": true,
         "committeeAction": true,
         "secondChamberAction": true,
-        "vote": {
-            "bill": "HB 153",
-            "date": "02/03/2025",
-            "type": "committee",
-            "voteLocation": "committee",
-            "seqNumber": "H5",
-            "voteChamber": "house",
-            "session": "2",
-            "thresholdRequired": "simple",
-            "count": {
-                "Y": 14,
-                "N": 0
-            },
-            "gopCount": {
-                "Y": 8,
-                "N": 0,
-                "A": 1,
-                "E": 0,
-                "O": 0
-            },
-            "demCount": {
-                "Y": 6,
-                "N": 0,
-                "A": 0,
-                "E": 0,
-                "O": 0
-            },
-            "motionPassed": true,
-            "gopSupported": true,
-            "demSupported": true,
-            "votes": [
-                {
-                    "option": "A",
-                    "name": "Marta Bertoglio",
-                    "lastName": "Bertoglio",
-                    "party": "R",
-                    "locale": "Clancy",
-                    "district": "HD 75"
-                },
-                {
-                    "option": "Y",
-                    "name": "Melissa Nikolakakos",
-                    "lastName": "Nikolakakos",
-                    "party": "R",
-                    "locale": "Great Falls",
-                    "district": "HD 20"
-                },
-                {
-                    "option": "Y",
-                    "name": "Sherry Essmann",
-                    "lastName": "Essmann",
-                    "party": "R",
-                    "locale": "Billings",
-                    "district": "HD 49"
-                },
-                {
-                    "option": "Y",
-                    "name": "Jamie Isaly",
-                    "lastName": "Isaly",
-                    "party": "D",
-                    "locale": "Livingston",
-                    "district": "HD 58"
-                },
-                {
-                    "option": "Y",
-                    "name": "Jennifer Lynch",
-                    "lastName": "Lynch",
-                    "party": "D",
-                    "locale": "Butte",
-                    "district": "HD 73"
-                },
-                {
-                    "option": "Y",
-                    "name": "Lee Deming",
-                    "lastName": "Deming",
-                    "party": "R",
-                    "locale": "Laurel",
-                    "district": "HD 54"
-                },
-                {
-                    "option": "Y",
-                    "name": "Kerri Seekins-Crowe",
-                    "lastName": "Seekins-Crowe",
-                    "party": "R",
-                    "locale": "Billings",
-                    "district": "HD 39"
-                },
-                {
-                    "option": "Y",
-                    "name": "Pete Elverum",
-                    "lastName": "Elverum",
-                    "party": "D",
-                    "locale": "Helena",
-                    "district": "HD 82"
-                },
-                {
-                    "option": "Y",
-                    "name": "Mark Thane",
-                    "lastName": "Thane",
-                    "party": "D",
-                    "locale": "Missoula",
-                    "district": "HD 89"
-                },
-                {
-                    "option": "Y",
-                    "name": "Peter Strand",
-                    "lastName": "Strand",
-                    "party": "D",
-                    "locale": "Bozeman",
-                    "district": "HD 63"
-                },
-                {
-                    "option": "Y",
-                    "name": "Eric Tilleman",
-                    "lastName": "Tilleman",
-                    "party": "R",
-                    "locale": "Cascade",
-                    "district": "HD 23"
-                },
-                {
-                    "option": "Y",
-                    "name": "Greg Overstreet",
-                    "lastName": "Overstreet",
-                    "party": "R",
-                    "locale": "Stevensville",
-                    "district": "HD 88"
-                },
-                {
-                    "option": "Y",
-                    "name": "Melissa Romano",
-                    "lastName": "Romano",
-                    "party": "D",
-                    "locale": "Helena",
-                    "district": "HD 80"
-                },
-                {
-                    "option": "Y",
-                    "name": "Randyn Gregg",
-                    "lastName": "Gregg",
-                    "party": "R",
-                    "locale": "White Sulphur Springs",
-                    "district": "HD 78"
-                },
-                {
-                    "option": "Y",
-                    "name": "Linda Reksten",
-                    "lastName": "Reksten",
-                    "party": "R",
-                    "locale": "Polson",
-                    "district": "HD 13"
-                }
-            ]
-        }
+        "vote": null
     },
     {
         "id": "HB153-0016",
@@ -702,6 +551,192 @@
     {
         "id": "HB153-0017",
         "bill": "HB 153",
+        "date": "02/03/2025",
+        "committeeHearingTime": null,
+        "description": "Taken from Table in Committee",
+        "billHolder": "house",
+        "committee": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Taken from Table in Committee",
+        "isMajor": true,
+        "committeeAction": true,
+        "secondChamberAction": true,
+        "vote": {
+            "bill": "HB 153",
+            "date": "02/03/2025",
+            "type": "committee",
+            "voteLocation": "committee",
+            "seqNumber": "H5",
+            "voteChamber": "house",
+            "session": "2",
+            "thresholdRequired": "simple",
+            "count": {
+                "Y": 14,
+                "N": 0
+            },
+            "gopCount": {
+                "Y": 8,
+                "N": 0,
+                "A": 1,
+                "E": 0,
+                "O": 0
+            },
+            "demCount": {
+                "Y": 6,
+                "N": 0,
+                "A": 0,
+                "E": 0,
+                "O": 0
+            },
+            "motionPassed": true,
+            "gopSupported": true,
+            "demSupported": true,
+            "votes": [
+                {
+                    "option": "A",
+                    "name": "Marta Bertoglio",
+                    "lastName": "Bertoglio",
+                    "party": "R",
+                    "locale": "Clancy",
+                    "district": "HD 75"
+                },
+                {
+                    "option": "Y",
+                    "name": "Melissa Nikolakakos",
+                    "lastName": "Nikolakakos",
+                    "party": "R",
+                    "locale": "Great Falls",
+                    "district": "HD 20"
+                },
+                {
+                    "option": "Y",
+                    "name": "Sherry Essmann",
+                    "lastName": "Essmann",
+                    "party": "R",
+                    "locale": "Billings",
+                    "district": "HD 49"
+                },
+                {
+                    "option": "Y",
+                    "name": "Jamie Isaly",
+                    "lastName": "Isaly",
+                    "party": "D",
+                    "locale": "Livingston",
+                    "district": "HD 58"
+                },
+                {
+                    "option": "Y",
+                    "name": "Jennifer Lynch",
+                    "lastName": "Lynch",
+                    "party": "D",
+                    "locale": "Butte",
+                    "district": "HD 73"
+                },
+                {
+                    "option": "Y",
+                    "name": "Lee Deming",
+                    "lastName": "Deming",
+                    "party": "R",
+                    "locale": "Laurel",
+                    "district": "HD 54"
+                },
+                {
+                    "option": "Y",
+                    "name": "Kerri Seekins-Crowe",
+                    "lastName": "Seekins-Crowe",
+                    "party": "R",
+                    "locale": "Billings",
+                    "district": "HD 39"
+                },
+                {
+                    "option": "Y",
+                    "name": "Pete Elverum",
+                    "lastName": "Elverum",
+                    "party": "D",
+                    "locale": "Helena",
+                    "district": "HD 82"
+                },
+                {
+                    "option": "Y",
+                    "name": "Mark Thane",
+                    "lastName": "Thane",
+                    "party": "D",
+                    "locale": "Missoula",
+                    "district": "HD 89"
+                },
+                {
+                    "option": "Y",
+                    "name": "Peter Strand",
+                    "lastName": "Strand",
+                    "party": "D",
+                    "locale": "Bozeman",
+                    "district": "HD 63"
+                },
+                {
+                    "option": "Y",
+                    "name": "Eric Tilleman",
+                    "lastName": "Tilleman",
+                    "party": "R",
+                    "locale": "Cascade",
+                    "district": "HD 23"
+                },
+                {
+                    "option": "Y",
+                    "name": "Greg Overstreet",
+                    "lastName": "Overstreet",
+                    "party": "R",
+                    "locale": "Stevensville",
+                    "district": "HD 88"
+                },
+                {
+                    "option": "Y",
+                    "name": "Melissa Romano",
+                    "lastName": "Romano",
+                    "party": "D",
+                    "locale": "Helena",
+                    "district": "HD 80"
+                },
+                {
+                    "option": "Y",
+                    "name": "Randyn Gregg",
+                    "lastName": "Gregg",
+                    "party": "R",
+                    "locale": "White Sulphur Springs",
+                    "district": "HD 78"
+                },
+                {
+                    "option": "Y",
+                    "name": "Linda Reksten",
+                    "lastName": "Reksten",
+                    "party": "R",
+                    "locale": "Polson",
+                    "district": "HD 13"
+                }
+            ]
+        }
+    },
+    {
+        "id": "HB153-0018",
+        "bill": "HB 153",
+        "date": "02/03/2025",
+        "committeeHearingTime": null,
+        "description": "Committee Executive Action--Bill Passed as Amended",
+        "billHolder": "house",
+        "committee": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Committee Executive Action--Bill Passed as Amended",
+        "isMajor": true,
+        "isHighlight": true,
+        "committeeAction": true,
+        "advanced": true,
+        "amended": true,
+        "vote": null
+    },
+    {
+        "id": "HB153-0019",
+        "bill": "HB 153",
         "date": "02/04/2025",
         "committeeHearingTime": null,
         "description": "Committee Report--Bill Passed as Amended",
@@ -713,7 +748,7 @@
         "vote": null
     },
     {
-        "id": "HB153-0018",
+        "id": "HB153-0020",
         "bill": "HB 153",
         "date": "02/13/2025",
         "committeeHearingTime": null,
@@ -2063,7 +2098,7 @@
         }
     },
     {
-        "id": "HB153-0019",
+        "id": "HB153-0021",
         "bill": "HB 153",
         "date": "02/14/2025",
         "committeeHearingTime": null,
@@ -3413,7 +3448,7 @@
         }
     },
     {
-        "id": "HB153-0020",
+        "id": "HB153-0022",
         "bill": "HB 153",
         "date": "02/14/2025",
         "committeeHearingTime": null,
@@ -3427,7 +3462,7 @@
         "vote": null
     },
     {
-        "id": "HB153-0021",
+        "id": "HB153-0023",
         "bill": "HB 153",
         "date": "02/15/2025",
         "committeeHearingTime": null,
@@ -3442,7 +3477,7 @@
         "vote": null
     },
     {
-        "id": "HB153-0022",
+        "id": "HB153-0024",
         "bill": "HB 153",
         "date": "02/21/2025",
         "committeeHearingTime": null,
@@ -3457,7 +3492,7 @@
         "vote": null
     },
     {
-        "id": "HB153-0023",
+        "id": "HB153-0025",
         "bill": "HB 153",
         "date": "03/17/2025",
         "committeeHearingTime": null,
@@ -3470,7 +3505,7 @@
         "vote": null
     },
     {
-        "id": "HB153-0024",
+        "id": "HB153-0026",
         "bill": "HB 153",
         "date": "03/19/2025",
         "committeeHearingTime": null,
@@ -3485,7 +3520,7 @@
         "vote": null
     },
     {
-        "id": "HB153-0025",
+        "id": "HB153-0027",
         "bill": "HB 153",
         "date": "04/01/2025",
         "committeeHearingTime": null,
@@ -3647,7 +3682,7 @@
         }
     },
     {
-        "id": "HB153-0026",
+        "id": "HB153-0028",
         "bill": "HB 153",
         "date": "04/02/2025",
         "committeeHearingTime": null,
@@ -3660,7 +3695,7 @@
         "vote": null
     },
     {
-        "id": "HB153-0027",
+        "id": "HB153-0029",
         "bill": "HB 153",
         "date": "04/12/2025",
         "committeeHearingTime": null,
@@ -3674,7 +3709,7 @@
         "vote": null
     },
     {
-        "id": "HB153-0028",
+        "id": "HB153-0030",
         "bill": "HB 153",
         "date": "04/12/2025",
         "committeeHearingTime": null,
@@ -4374,7 +4409,7 @@
         }
     },
     {
-        "id": "HB153-0029",
+        "id": "HB153-0031",
         "bill": "HB 153",
         "date": "04/14/2025",
         "committeeHearingTime": null,
@@ -4388,7 +4423,7 @@
         "vote": null
     },
     {
-        "id": "HB153-0030",
+        "id": "HB153-0032",
         "bill": "HB 153",
         "date": "04/14/2025",
         "committeeHearingTime": null,
@@ -5088,7 +5123,7 @@
         }
     },
     {
-        "id": "HB153-0031",
+        "id": "HB153-0033",
         "bill": "HB 153",
         "date": "04/14/2025",
         "committeeHearingTime": null,
@@ -5102,7 +5137,7 @@
         "vote": null
     },
     {
-        "id": "HB153-0032",
+        "id": "HB153-0034",
         "bill": "HB 153",
         "date": "04/16/2025",
         "committeeHearingTime": null,
@@ -5116,7 +5151,7 @@
         "vote": null
     },
     {
-        "id": "HB153-0033",
+        "id": "HB153-0035",
         "bill": "HB 153",
         "date": "04/16/2025",
         "committeeHearingTime": null,
@@ -6465,7 +6500,7 @@
         }
     },
     {
-        "id": "HB153-0034",
+        "id": "HB153-0036",
         "bill": "HB 153",
         "date": "04/17/2025",
         "committeeHearingTime": null,
@@ -6479,7 +6514,7 @@
         "vote": null
     },
     {
-        "id": "HB153-0035",
+        "id": "HB153-0037",
         "bill": "HB 153",
         "date": "04/17/2025",
         "committeeHearingTime": null,
@@ -7828,7 +7863,7 @@
         }
     },
     {
-        "id": "HB153-0036",
+        "id": "HB153-0038",
         "bill": "HB 153",
         "date": "04/18/2025",
         "committeeHearingTime": null,
@@ -7841,7 +7876,7 @@
         "vote": null
     },
     {
-        "id": "HB153-0037",
+        "id": "HB153-0039",
         "bill": "HB 153",
         "date": "04/22/2025",
         "committeeHearingTime": null,
@@ -7854,7 +7889,7 @@
         "vote": null
     },
     {
-        "id": "HB153-0038",
+        "id": "HB153-0040",
         "bill": "HB 153",
         "date": "05/01/2025",
         "committeeHearingTime": null,
@@ -7867,7 +7902,7 @@
         "vote": null
     },
     {
-        "id": "HB153-0039",
+        "id": "HB153-0041",
         "bill": "HB 153",
         "date": "05/02/2025",
         "committeeHearingTime": null,
@@ -7880,7 +7915,7 @@
         "vote": null
     },
     {
-        "id": "HB153-0040",
+        "id": "HB153-0042",
         "bill": "HB 153",
         "date": "05/05/2025",
         "committeeHearingTime": null,
