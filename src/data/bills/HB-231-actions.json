@@ -240,24 +240,6 @@
         "committeeAction": true,
         "advanced": true,
         "amended": true,
-        "vote": null
-    },
-    {
-        "id": "HB231-0018",
-        "bill": "HB 231",
-        "date": "01/31/2025",
-        "committeeHearingTime": null,
-        "description": "Committee Executive Action--Bill Passed as Amended",
-        "billHolder": "house",
-        "committee": "House Taxation",
-        "recordings": [],
-        "transcriptUrl": null,
-        "key": "Committee Executive Action--Bill Passed as Amended",
-        "isMajor": true,
-        "isHighlight": true,
-        "committeeAction": true,
-        "advanced": true,
-        "amended": true,
         "vote": {
             "bill": "HB 231",
             "date": "01/31/2025",
@@ -459,6 +441,24 @@
                 }
             ]
         }
+    },
+    {
+        "id": "HB231-0018",
+        "bill": "HB 231",
+        "date": "01/31/2025",
+        "committeeHearingTime": null,
+        "description": "Committee Executive Action--Bill Passed as Amended",
+        "billHolder": "house",
+        "committee": "House Taxation",
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Committee Executive Action--Bill Passed as Amended",
+        "isMajor": true,
+        "isHighlight": true,
+        "committeeAction": true,
+        "advanced": true,
+        "amended": true,
+        "vote": null
     },
     {
         "id": "HB231-0019",
@@ -23356,6 +23356,23 @@
         "key": "Transmitted to Governor",
         "isMajor": true,
         "transmittedToGovernor": true,
+        "vote": null
+    },
+    {
+        "id": "HB231-0081",
+        "bill": "HB 231",
+        "date": "05/13/2025",
+        "committeeHearingTime": null,
+        "description": "Signed by Governor",
+        "billHolder": "governor",
+        "committee": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Signed by Governor",
+        "isMajor": true,
+        "isHighlight": true,
+        "governorAction": true,
+        "signed": true,
         "vote": null
     }
 ]

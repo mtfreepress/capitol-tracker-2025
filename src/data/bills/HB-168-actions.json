@@ -239,23 +239,6 @@
         "isHighlight": true,
         "committeeAction": true,
         "advanced": true,
-        "vote": null
-    },
-    {
-        "id": "HB168-0018",
-        "bill": "HB 168",
-        "date": "01/27/2025",
-        "committeeHearingTime": null,
-        "description": "Committee Executive Action--Bill Passed",
-        "billHolder": "house",
-        "committee": "House Education",
-        "recordings": [],
-        "transcriptUrl": null,
-        "key": "Committee Executive Action--Bill Passed",
-        "isMajor": true,
-        "isHighlight": true,
-        "committeeAction": true,
-        "advanced": true,
         "vote": {
             "bill": "HB 168",
             "date": "01/27/2025",
@@ -409,6 +392,23 @@
                 }
             ]
         }
+    },
+    {
+        "id": "HB168-0018",
+        "bill": "HB 168",
+        "date": "01/27/2025",
+        "committeeHearingTime": null,
+        "description": "Committee Executive Action--Bill Passed",
+        "billHolder": "house",
+        "committee": "House Education",
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Committee Executive Action--Bill Passed",
+        "isMajor": true,
+        "isHighlight": true,
+        "committeeAction": true,
+        "advanced": true,
+        "vote": null
     },
     {
         "id": "HB168-0019",
@@ -7751,6 +7751,23 @@
         "key": "Transmitted to Governor",
         "isMajor": true,
         "transmittedToGovernor": true,
+        "vote": null
+    },
+    {
+        "id": "HB168-0053",
+        "bill": "HB 168",
+        "date": "05/13/2025",
+        "committeeHearingTime": null,
+        "description": "Signed by Governor",
+        "billHolder": "governor",
+        "committee": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Signed by Governor",
+        "isMajor": true,
+        "isHighlight": true,
+        "governorAction": true,
+        "signed": true,
         "vote": null
     }
 ]
