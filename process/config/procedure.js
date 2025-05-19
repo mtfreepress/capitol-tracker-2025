@@ -226,7 +226,7 @@ export const ACTIONS = [
     { key: 'Committee Executive Action--Bill Not Concurred as Amended', isMajor, isHighlight, committeeAction, secondChamberAction, failed },
     // secondChamberAction here to catch bills killed in second chamber committee. Leaving off other two lines to exclude conference committees.
     // Blast motions
-    { key: 'Taken from Committee; Placed on 2nd Reading', isMajor, isHighlight, committeeAction, firstChamberFloorAction, secondChamberAction, advanced, blasted },
+    { key: 'Taken from Committee; Placed on 2nd Reading', isMajor, isHighlight, firstChamberFloorAction, secondChamberAction, advanced, blasted },
 
     // first chamber floor votes
     { key: '2nd Reading Passed', isMajor, isHighlight, firstChamberFloorAction, floorDebate, preliminaryPassage },
