@@ -5100,7 +5100,6 @@
         "key": "Taken from Committee; Placed on 2nd Reading",
         "isMajor": true,
         "isHighlight": true,
-        "committeeAction": true,
         "firstChamberFloorAction": true,
         "secondChamberAction": true,
         "advanced": true,
@@ -5109,7 +5108,7 @@
             "bill": "HB 56",
             "date": "04/03/2025",
             "type": "floor",
-            "voteLocation": "committee",
+            "voteLocation": "floor",
             "seqNumber": "S1514",
             "voteChamber": "senate",
             "session": "2",
@@ -5142,7 +5141,12 @@
                     "lastName": "McGillvray",
                     "party": "R",
                     "locale": "Billings",
-                    "district": "SD 26"
+                    "district": "SD 26",
+                    "voteOutcome": true,
+                    "lawmakerPresent": true,
+                    "lawmakerOnWinningSide": false,
+                    "lawmakerWithGopCaucus": true,
+                    "lawmakerWithDemCaucus": false
                 },
                 {
                     "option": "N",
@@ -5150,7 +5154,12 @@
                     "lastName": "Glimm",
                     "party": "R",
                     "locale": "Kila",
-                    "district": "SD 3"
+                    "district": "SD 3",
+                    "voteOutcome": true,
+                    "lawmakerPresent": true,
+                    "lawmakerOnWinningSide": false,
+                    "lawmakerWithGopCaucus": true,
+                    "lawmakerWithDemCaucus": false
                 },
                 {
                     "option": "Y",
@@ -5158,7 +5167,12 @@
                     "lastName": "Olsen",
                     "party": "D",
                     "locale": "Missoula",
-                    "district": "SD 48"
+                    "district": "SD 48",
+                    "voteOutcome": true,
+                    "lawmakerPresent": true,
+                    "lawmakerOnWinningSide": true,
+                    "lawmakerWithGopCaucus": false,
+                    "lawmakerWithDemCaucus": true
                 },
                 {
                     "option": "N",
@@ -5166,7 +5180,12 @@
                     "lastName": "Noland",
                     "party": "R",
                     "locale": "Bigfork",
-                    "district": "SD 6"
+                    "district": "SD 6",
+                    "voteOutcome": true,
+                    "lawmakerPresent": true,
+                    "lawmakerOnWinningSide": false,
+                    "lawmakerWithGopCaucus": true,
+                    "lawmakerWithDemCaucus": false
                 },
                 {
                     "option": "N",
@@ -5174,7 +5193,12 @@
                     "lastName": "Hertz",
                     "party": "R",
                     "locale": "Polson",
-                    "district": "SD 7"
+                    "district": "SD 7",
+                    "voteOutcome": true,
+                    "lawmakerPresent": true,
+                    "lawmakerOnWinningSide": false,
+                    "lawmakerWithGopCaucus": true,
+                    "lawmakerWithDemCaucus": false
                 },
                 {
                     "option": "Y",
@@ -5182,7 +5206,12 @@
                     "lastName": "Dunwell",
                     "party": "D",
                     "locale": "Helena",
-                    "district": "SD 42"
+                    "district": "SD 42",
+                    "voteOutcome": true,
+                    "lawmakerPresent": true,
+                    "lawmakerOnWinningSide": true,
+                    "lawmakerWithGopCaucus": false,
+                    "lawmakerWithDemCaucus": true
                 },
                 {
                     "option": "Y",
@@ -5190,7 +5219,12 @@
                     "lastName": "Loge",
                     "party": "R",
                     "locale": "St Regis",
-                    "district": "SD 45"
+                    "district": "SD 45",
+                    "voteOutcome": true,
+                    "lawmakerPresent": true,
+                    "lawmakerOnWinningSide": true,
+                    "lawmakerWithGopCaucus": false,
+                    "lawmakerWithDemCaucus": true
                 },
                 {
                     "option": "Y",
@@ -5198,7 +5232,12 @@
                     "lastName": "Ellis",
                     "party": "D",
                     "locale": "Helena",
-                    "district": "SD 41"
+                    "district": "SD 41",
+                    "voteOutcome": true,
+                    "lawmakerPresent": true,
+                    "lawmakerOnWinningSide": true,
+                    "lawmakerWithGopCaucus": false,
+                    "lawmakerWithDemCaucus": true
                 },
                 {
                     "option": "Y",
@@ -5206,7 +5245,12 @@
                     "lastName": "Hayman",
                     "party": "D",
                     "locale": "Bozeman",
-                    "district": "SD 32"
+                    "district": "SD 32",
+                    "voteOutcome": true,
+                    "lawmakerPresent": true,
+                    "lawmakerOnWinningSide": true,
+                    "lawmakerWithGopCaucus": false,
+                    "lawmakerWithDemCaucus": true
                 },
                 {
                     "option": "N",
@@ -5214,7 +5258,12 @@
                     "lastName": "Trebas",
                     "party": "R",
                     "locale": "Great Falls",
-                    "district": "SD 10"
+                    "district": "SD 10",
+                    "voteOutcome": true,
+                    "lawmakerPresent": true,
+                    "lawmakerOnWinningSide": false,
+                    "lawmakerWithGopCaucus": true,
+                    "lawmakerWithDemCaucus": false
                 },
                 {
                     "option": "N",
@@ -5222,7 +5271,12 @@
                     "lastName": "Mandeville",
                     "party": "R",
                     "locale": "Columbus",
-                    "district": "SD 28"
+                    "district": "SD 28",
+                    "voteOutcome": true,
+                    "lawmakerPresent": true,
+                    "lawmakerOnWinningSide": false,
+                    "lawmakerWithGopCaucus": true,
+                    "lawmakerWithDemCaucus": false
                 },
                 {
                     "option": "Y",
@@ -5230,7 +5284,12 @@
                     "lastName": "Pope",
                     "party": "D",
                     "locale": "Bozeman",
-                    "district": "SD 33"
+                    "district": "SD 33",
+                    "voteOutcome": true,
+                    "lawmakerPresent": true,
+                    "lawmakerOnWinningSide": true,
+                    "lawmakerWithGopCaucus": false,
+                    "lawmakerWithDemCaucus": true
                 },
                 {
                     "option": "Y",
@@ -5238,7 +5297,12 @@
                     "lastName": "Tempel",
                     "party": "R",
                     "locale": "Chester",
-                    "district": "SD 14"
+                    "district": "SD 14",
+                    "voteOutcome": true,
+                    "lawmakerPresent": true,
+                    "lawmakerOnWinningSide": true,
+                    "lawmakerWithGopCaucus": false,
+                    "lawmakerWithDemCaucus": true
                 },
                 {
                     "option": "N",
@@ -5246,7 +5310,12 @@
                     "lastName": "Regier",
                     "party": "R",
                     "locale": "Kalispell",
-                    "district": "SD 5"
+                    "district": "SD 5",
+                    "voteOutcome": true,
+                    "lawmakerPresent": true,
+                    "lawmakerOnWinningSide": false,
+                    "lawmakerWithGopCaucus": true,
+                    "lawmakerWithDemCaucus": false
                 },
                 {
                     "option": "Y",
@@ -5254,7 +5323,12 @@
                     "lastName": "Kerr-Carpenter",
                     "party": "D",
                     "locale": "Billings",
-                    "district": "SD 23"
+                    "district": "SD 23",
+                    "voteOutcome": true,
+                    "lawmakerPresent": true,
+                    "lawmakerOnWinningSide": true,
+                    "lawmakerWithGopCaucus": false,
+                    "lawmakerWithDemCaucus": true
                 },
                 {
                     "option": "N",
@@ -5262,7 +5336,12 @@
                     "lastName": "Vinton",
                     "party": "R",
                     "locale": "Billings",
-                    "district": "SD 20"
+                    "district": "SD 20",
+                    "voteOutcome": true,
+                    "lawmakerPresent": true,
+                    "lawmakerOnWinningSide": false,
+                    "lawmakerWithGopCaucus": true,
+                    "lawmakerWithDemCaucus": false
                 },
                 {
                     "option": "Y",
@@ -5270,7 +5349,12 @@
                     "lastName": "Harvey",
                     "party": "D",
                     "locale": "Butte",
-                    "district": "SD 37"
+                    "district": "SD 37",
+                    "voteOutcome": true,
+                    "lawmakerPresent": true,
+                    "lawmakerOnWinningSide": true,
+                    "lawmakerWithGopCaucus": false,
+                    "lawmakerWithDemCaucus": true
                 },
                 {
                     "option": "Y",
@@ -5278,7 +5362,12 @@
                     "lastName": "Ellsworth",
                     "party": "R",
                     "locale": "Hamilton",
-                    "district": "SD 43"
+                    "district": "SD 43",
+                    "voteOutcome": true,
+                    "lawmakerPresent": true,
+                    "lawmakerOnWinningSide": true,
+                    "lawmakerWithGopCaucus": false,
+                    "lawmakerWithDemCaucus": true
                 },
                 {
                     "option": "N",
@@ -5286,7 +5375,12 @@
                     "lastName": "Fuller",
                     "party": "R",
                     "locale": "Kalispell",
-                    "district": "SD 4"
+                    "district": "SD 4",
+                    "voteOutcome": true,
+                    "lawmakerPresent": true,
+                    "lawmakerOnWinningSide": false,
+                    "lawmakerWithGopCaucus": true,
+                    "lawmakerWithDemCaucus": false
                 },
                 {
                     "option": "N",
@@ -5294,7 +5388,12 @@
                     "lastName": "Phalen",
                     "party": "R",
                     "locale": "Glendive",
-                    "district": "SD 17"
+                    "district": "SD 17",
+                    "voteOutcome": true,
+                    "lawmakerPresent": true,
+                    "lawmakerOnWinningSide": false,
+                    "lawmakerWithGopCaucus": true,
+                    "lawmakerWithDemCaucus": false
                 },
                 {
                     "option": "N",
@@ -5302,7 +5401,12 @@
                     "lastName": "Bogner",
                     "party": "R",
                     "locale": "Miles City",
-                    "district": "SD 18"
+                    "district": "SD 18",
+                    "voteOutcome": true,
+                    "lawmakerPresent": true,
+                    "lawmakerOnWinningSide": false,
+                    "lawmakerWithGopCaucus": true,
+                    "lawmakerWithDemCaucus": false
                 },
                 {
                     "option": "N",
@@ -5310,7 +5414,12 @@
                     "lastName": "Emrich",
                     "party": "R",
                     "locale": "Great Falls",
-                    "district": "SD 11"
+                    "district": "SD 11",
+                    "voteOutcome": true,
+                    "lawmakerPresent": true,
+                    "lawmakerOnWinningSide": false,
+                    "lawmakerWithGopCaucus": true,
+                    "lawmakerWithDemCaucus": false
                 },
                 {
                     "option": "N",
@@ -5318,7 +5427,12 @@
                     "lastName": "Esp",
                     "party": "R",
                     "locale": "Big Timber",
-                    "district": "SD 29"
+                    "district": "SD 29",
+                    "voteOutcome": true,
+                    "lawmakerPresent": true,
+                    "lawmakerOnWinningSide": false,
+                    "lawmakerWithGopCaucus": true,
+                    "lawmakerWithDemCaucus": false
                 },
                 {
                     "option": "N",
@@ -5326,7 +5440,12 @@
                     "lastName": "Cuffe",
                     "party": "R",
                     "locale": "Eureka",
-                    "district": "SD 1"
+                    "district": "SD 1",
+                    "voteOutcome": true,
+                    "lawmakerPresent": true,
+                    "lawmakerOnWinningSide": false,
+                    "lawmakerWithGopCaucus": true,
+                    "lawmakerWithDemCaucus": false
                 },
                 {
                     "option": "E",
@@ -5334,7 +5453,12 @@
                     "lastName": "Zolnikov",
                     "party": "R",
                     "locale": "Billings",
-                    "district": "SD 22"
+                    "district": "SD 22",
+                    "voteOutcome": true,
+                    "lawmakerPresent": false,
+                    "lawmakerOnWinningSide": false,
+                    "lawmakerWithGopCaucus": false,
+                    "lawmakerWithDemCaucus": false
                 },
                 {
                     "option": "N",
@@ -5342,7 +5466,12 @@
                     "lastName": "Lenz",
                     "party": "R",
                     "locale": "Billings",
-                    "district": "SD 25"
+                    "district": "SD 25",
+                    "voteOutcome": true,
+                    "lawmakerPresent": true,
+                    "lawmakerOnWinningSide": false,
+                    "lawmakerWithGopCaucus": true,
+                    "lawmakerWithDemCaucus": false
                 },
                 {
                     "option": "Y",
@@ -5350,7 +5479,12 @@
                     "lastName": "Curdy",
                     "party": "D",
                     "locale": "Missoula",
-                    "district": "SD 49"
+                    "district": "SD 49",
+                    "voteOutcome": true,
+                    "lawmakerPresent": true,
+                    "lawmakerOnWinningSide": true,
+                    "lawmakerWithGopCaucus": false,
+                    "lawmakerWithDemCaucus": true
                 },
                 {
                     "option": "Y",
@@ -5358,7 +5492,12 @@
                     "lastName": "Webber",
                     "party": "D",
                     "locale": "Browning",
-                    "district": "SD 8"
+                    "district": "SD 8",
+                    "voteOutcome": true,
+                    "lawmakerPresent": true,
+                    "lawmakerOnWinningSide": true,
+                    "lawmakerWithGopCaucus": false,
+                    "lawmakerWithDemCaucus": true
                 },
                 {
                     "option": "N",
@@ -5366,7 +5505,12 @@
                     "lastName": "Beard",
                     "party": "R",
                     "locale": "Elliston",
-                    "district": "SD 38"
+                    "district": "SD 38",
+                    "voteOutcome": true,
+                    "lawmakerPresent": true,
+                    "lawmakerOnWinningSide": false,
+                    "lawmakerWithGopCaucus": true,
+                    "lawmakerWithDemCaucus": false
                 },
                 {
                     "option": "Y",
@@ -5374,7 +5518,12 @@
                     "lastName": "Gillespie",
                     "party": "R",
                     "locale": "Ethridge",
-                    "district": "SD 9"
+                    "district": "SD 9",
+                    "voteOutcome": true,
+                    "lawmakerPresent": true,
+                    "lawmakerOnWinningSide": true,
+                    "lawmakerWithGopCaucus": false,
+                    "lawmakerWithDemCaucus": true
                 },
                 {
                     "option": "Y",
@@ -5382,7 +5531,12 @@
                     "lastName": "Flowers",
                     "party": "D",
                     "locale": "Belgrade",
-                    "district": "SD 31"
+                    "district": "SD 31",
+                    "voteOutcome": true,
+                    "lawmakerPresent": true,
+                    "lawmakerOnWinningSide": true,
+                    "lawmakerWithGopCaucus": false,
+                    "lawmakerWithDemCaucus": true
                 },
                 {
                     "option": "N",
@@ -5390,7 +5544,12 @@
                     "lastName": "Yakawich",
                     "party": "R",
                     "locale": "Billings",
-                    "district": "SD 24"
+                    "district": "SD 24",
+                    "voteOutcome": true,
+                    "lawmakerPresent": true,
+                    "lawmakerOnWinningSide": false,
+                    "lawmakerWithGopCaucus": true,
+                    "lawmakerWithDemCaucus": false
                 },
                 {
                     "option": "Y",
@@ -5398,7 +5557,12 @@
                     "lastName": "Vance",
                     "party": "R",
                     "locale": "Belgrade",
-                    "district": "SD 34"
+                    "district": "SD 34",
+                    "voteOutcome": true,
+                    "lawmakerPresent": true,
+                    "lawmakerOnWinningSide": true,
+                    "lawmakerWithGopCaucus": false,
+                    "lawmakerWithDemCaucus": true
                 },
                 {
                     "option": "Y",
@@ -5406,7 +5570,12 @@
                     "lastName": "Windy Boy",
                     "party": "D",
                     "locale": "Box Elder",
-                    "district": "SD 16"
+                    "district": "SD 16",
+                    "voteOutcome": true,
+                    "lawmakerPresent": true,
+                    "lawmakerOnWinningSide": true,
+                    "lawmakerWithGopCaucus": false,
+                    "lawmakerWithDemCaucus": true
                 },
                 {
                     "option": "Y",
@@ -5414,7 +5583,12 @@
                     "lastName": "Boldman",
                     "party": "D",
                     "locale": "Missoula",
-                    "district": "SD 47"
+                    "district": "SD 47",
+                    "voteOutcome": true,
+                    "lawmakerPresent": true,
+                    "lawmakerOnWinningSide": true,
+                    "lawmakerWithGopCaucus": false,
+                    "lawmakerWithDemCaucus": true
                 },
                 {
                     "option": "N",
@@ -5422,7 +5596,12 @@
                     "lastName": "Manzella",
                     "party": "R",
                     "locale": "Hamilton",
-                    "district": "SD 44"
+                    "district": "SD 44",
+                    "voteOutcome": true,
+                    "lawmakerPresent": true,
+                    "lawmakerOnWinningSide": false,
+                    "lawmakerWithGopCaucus": true,
+                    "lawmakerWithDemCaucus": false
                 },
                 {
                     "option": "Y",
@@ -5430,7 +5609,12 @@
                     "lastName": "McKamey",
                     "party": "R",
                     "locale": "Great Falls",
-                    "district": "SD 12"
+                    "district": "SD 12",
+                    "voteOutcome": true,
+                    "lawmakerPresent": true,
+                    "lawmakerOnWinningSide": true,
+                    "lawmakerWithGopCaucus": false,
+                    "lawmakerWithDemCaucus": true
                 },
                 {
                     "option": "Y",
@@ -5438,7 +5622,12 @@
                     "lastName": "Fern",
                     "party": "D",
                     "locale": "Whitefish",
-                    "district": "SD 2"
+                    "district": "SD 2",
+                    "voteOutcome": true,
+                    "lawmakerPresent": true,
+                    "lawmakerOnWinningSide": true,
+                    "lawmakerWithGopCaucus": false,
+                    "lawmakerWithDemCaucus": true
                 },
                 {
                     "option": "N",
@@ -5446,7 +5635,12 @@
                     "lastName": "Usher",
                     "party": "R",
                     "locale": "Laurel",
-                    "district": "SD 19"
+                    "district": "SD 19",
+                    "voteOutcome": true,
+                    "lawmakerPresent": true,
+                    "lawmakerOnWinningSide": false,
+                    "lawmakerWithGopCaucus": true,
+                    "lawmakerWithDemCaucus": false
                 },
                 {
                     "option": "Y",
@@ -5454,7 +5648,12 @@
                     "lastName": "Kassmier",
                     "party": "R",
                     "locale": "Fort Benton",
-                    "district": "SD 13"
+                    "district": "SD 13",
+                    "voteOutcome": true,
+                    "lawmakerPresent": true,
+                    "lawmakerOnWinningSide": true,
+                    "lawmakerWithGopCaucus": false,
+                    "lawmakerWithDemCaucus": true
                 },
                 {
                     "option": "Y",
@@ -5462,7 +5661,12 @@
                     "lastName": "Smith",
                     "party": "D",
                     "locale": "Helena",
-                    "district": "SD 40"
+                    "district": "SD 40",
+                    "voteOutcome": true,
+                    "lawmakerPresent": true,
+                    "lawmakerOnWinningSide": true,
+                    "lawmakerWithGopCaucus": false,
+                    "lawmakerWithDemCaucus": true
                 },
                 {
                     "option": "Y",
@@ -5470,7 +5674,12 @@
                     "lastName": "Morigeau",
                     "party": "D",
                     "locale": "Missoula",
-                    "district": "SD 50"
+                    "district": "SD 50",
+                    "voteOutcome": true,
+                    "lawmakerPresent": true,
+                    "lawmakerOnWinningSide": true,
+                    "lawmakerWithGopCaucus": false,
+                    "lawmakerWithDemCaucus": true
                 },
                 {
                     "option": "Y",
@@ -5478,7 +5687,12 @@
                     "lastName": "Lammers",
                     "party": "R",
                     "locale": "Hardin",
-                    "district": "SD 21"
+                    "district": "SD 21",
+                    "voteOutcome": true,
+                    "lawmakerPresent": true,
+                    "lawmakerOnWinningSide": true,
+                    "lawmakerWithGopCaucus": false,
+                    "lawmakerWithDemCaucus": true
                 },
                 {
                     "option": "Y",
@@ -5486,7 +5700,12 @@
                     "lastName": "Hunter",
                     "party": "R",
                     "locale": "Glasgow",
-                    "district": "SD 15"
+                    "district": "SD 15",
+                    "voteOutcome": true,
+                    "lawmakerPresent": true,
+                    "lawmakerOnWinningSide": true,
+                    "lawmakerWithGopCaucus": false,
+                    "lawmakerWithDemCaucus": true
                 },
                 {
                     "option": "N",
@@ -5494,7 +5713,12 @@
                     "lastName": "Tezak",
                     "party": "R",
                     "locale": "Ennis",
-                    "district": "SD 35"
+                    "district": "SD 35",
+                    "voteOutcome": true,
+                    "lawmakerPresent": true,
+                    "lawmakerOnWinningSide": false,
+                    "lawmakerWithGopCaucus": true,
+                    "lawmakerWithDemCaucus": false
                 },
                 {
                     "option": "N",
@@ -5502,7 +5726,12 @@
                     "lastName": "Ricci",
                     "party": "R",
                     "locale": "Billings",
-                    "district": "SD 27"
+                    "district": "SD 27",
+                    "voteOutcome": true,
+                    "lawmakerPresent": true,
+                    "lawmakerOnWinningSide": false,
+                    "lawmakerWithGopCaucus": true,
+                    "lawmakerWithDemCaucus": false
                 },
                 {
                     "option": "N",
@@ -5510,7 +5739,12 @@
                     "lastName": "Galt",
                     "party": "R",
                     "locale": "Martinsdale",
-                    "district": "SD 39"
+                    "district": "SD 39",
+                    "voteOutcome": true,
+                    "lawmakerPresent": true,
+                    "lawmakerOnWinningSide": false,
+                    "lawmakerWithGopCaucus": true,
+                    "lawmakerWithDemCaucus": false
                 },
                 {
                     "option": "Y",
@@ -5518,7 +5752,12 @@
                     "lastName": "Novak",
                     "party": "D",
                     "locale": "Anaconda",
-                    "district": "SD 36"
+                    "district": "SD 36",
+                    "voteOutcome": true,
+                    "lawmakerPresent": true,
+                    "lawmakerOnWinningSide": true,
+                    "lawmakerWithGopCaucus": false,
+                    "lawmakerWithDemCaucus": true
                 },
                 {
                     "option": "Y",
@@ -5526,7 +5765,12 @@
                     "lastName": "Neumann",
                     "party": "D",
                     "locale": "Bozeman",
-                    "district": "SD 30"
+                    "district": "SD 30",
+                    "voteOutcome": true,
+                    "lawmakerPresent": true,
+                    "lawmakerOnWinningSide": true,
+                    "lawmakerWithGopCaucus": false,
+                    "lawmakerWithDemCaucus": true
                 },
                 {
                     "option": "Y",
@@ -5534,7 +5778,12 @@
                     "lastName": "Morigeau",
                     "party": "D",
                     "locale": "Arlee",
-                    "district": "SD 46"
+                    "district": "SD 46",
+                    "voteOutcome": true,
+                    "lawmakerPresent": true,
+                    "lawmakerOnWinningSide": true,
+                    "lawmakerWithGopCaucus": false,
+                    "lawmakerWithDemCaucus": true
                 }
             ]
         }
