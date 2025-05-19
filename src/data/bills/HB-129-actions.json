@@ -4390,7 +4390,7 @@
         "vote": {
             "bill": "HB 129",
             "date": "04/23/2025",
-            "type": "committee",
+            "type": "floor",
             "voteLocation": "committee",
             "seqNumber": "S2806",
             "voteChamber": "senate",
@@ -6282,6 +6282,23 @@
         "key": "Transmitted to Governor",
         "isMajor": true,
         "transmittedToGovernor": true,
+        "vote": null
+    },
+    {
+        "id": "HB129-0043",
+        "bill": "HB 129",
+        "date": "05/12/2025",
+        "committeeHearingTime": null,
+        "description": "Signed by Governor",
+        "billHolder": "governor",
+        "committee": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Signed by Governor",
+        "isMajor": true,
+        "isHighlight": true,
+        "governorAction": true,
+        "signed": true,
         "vote": null
     }
 ]
