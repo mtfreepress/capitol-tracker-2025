@@ -466,11 +466,27 @@
             "votes": [
                 {
                     "option": "N",
+                    "name": "Tom McGillvray",
+                    "lastName": "McGillvray",
+                    "party": "R",
+                    "locale": "Billings",
+                    "district": "SD 26"
+                },
+                {
+                    "option": "N",
                     "name": "Carl Glimm",
                     "lastName": "Glimm",
                     "party": "R",
                     "locale": "Kila",
                     "district": "SD 3"
+                },
+                {
+                    "option": "Y",
+                    "name": "Andrea Olsen",
+                    "lastName": "Olsen",
+                    "party": "D",
+                    "locale": "Missoula",
+                    "district": "SD 48"
                 },
                 {
                     "option": "N",
@@ -495,6 +511,14 @@
                     "party": "D",
                     "locale": "Helena",
                     "district": "SD 42"
+                },
+                {
+                    "option": "N",
+                    "name": "Denley Loge",
+                    "lastName": "Loge",
+                    "party": "R",
+                    "locale": "St Regis",
+                    "district": "SD 45"
                 },
                 {
                     "option": "Y",
@@ -586,6 +610,22 @@
                 },
                 {
                     "option": "N",
+                    "name": "John Fuller",
+                    "lastName": "Fuller",
+                    "party": "R",
+                    "locale": "Kalispell",
+                    "district": "SD 4"
+                },
+                {
+                    "option": "N",
+                    "name": "Bob Phalen",
+                    "lastName": "Phalen",
+                    "party": "R",
+                    "locale": "Glendive",
+                    "district": "SD 17"
+                },
+                {
+                    "option": "N",
                     "name": "Kenneth Bogner",
                     "lastName": "Bogner",
                     "party": "R",
@@ -599,6 +639,22 @@
                     "party": "R",
                     "locale": "Great Falls",
                     "district": "SD 11"
+                },
+                {
+                    "option": "N",
+                    "name": "John Esp",
+                    "lastName": "Esp",
+                    "party": "R",
+                    "locale": "Big Timber",
+                    "district": "SD 29"
+                },
+                {
+                    "option": "N",
+                    "name": "Mike Cuffe",
+                    "lastName": "Cuffe",
+                    "party": "R",
+                    "locale": "Eureka",
+                    "district": "SD 1"
                 },
                 {
                     "option": "N",
@@ -639,6 +695,14 @@
                     "party": "R",
                     "locale": "Elliston",
                     "district": "SD 38"
+                },
+                {
+                    "option": "N",
+                    "name": "Bruce \"Butch\" Gillespie",
+                    "lastName": "Gillespie",
+                    "party": "R",
+                    "locale": "Unknown",
+                    "district": "SD 9"
                 },
                 {
                     "option": "Y",
@@ -799,70 +863,6 @@
                     "party": "D",
                     "locale": "Arlee",
                     "district": "SD 46"
-                },
-                {
-                    "option": "N",
-                    "name": "Bruce \"Butch\" Gillespie",
-                    "lastName": "Gillespie",
-                    "party": "R",
-                    "locale": "Unknown",
-                    "district": "SD 9"
-                },
-                {
-                    "option": "N",
-                    "name": "Mike Cuffe",
-                    "lastName": "Cuffe",
-                    "party": "R",
-                    "locale": "Eureka",
-                    "district": "SD 1"
-                },
-                {
-                    "option": "N",
-                    "name": "John Esp",
-                    "lastName": "Esp",
-                    "party": "R",
-                    "locale": "Big Timber",
-                    "district": "SD 29"
-                },
-                {
-                    "option": "N",
-                    "name": "Bob Phalen",
-                    "lastName": "Phalen",
-                    "party": "R",
-                    "locale": "Glendive",
-                    "district": "SD 17"
-                },
-                {
-                    "option": "N",
-                    "name": "John Fuller",
-                    "lastName": "Fuller",
-                    "party": "R",
-                    "locale": "Kalispell",
-                    "district": "SD 4"
-                },
-                {
-                    "option": "N",
-                    "name": "Denley Loge",
-                    "lastName": "Loge",
-                    "party": "R",
-                    "locale": "St Regis",
-                    "district": "SD 45"
-                },
-                {
-                    "option": "Y",
-                    "name": "Andrea Olsen",
-                    "lastName": "Olsen",
-                    "party": "D",
-                    "locale": "Missoula",
-                    "district": "SD 48"
-                },
-                {
-                    "option": "N",
-                    "name": "Tom McGillvray",
-                    "lastName": "McGillvray",
-                    "party": "R",
-                    "locale": "Billings",
-                    "district": "SD 26"
                 }
             ]
         },
@@ -4596,6 +4596,20 @@
         "recordings": [],
         "transcriptUrl": null,
         "key": "Signed by Governor",
+        "committeeHearingTime": null,
+        "vote": null
+    },
+    {
+        "id": "SB91-0057",
+        "bill": "SB 91",
+        "date": "05/13/2025",
+        "description": "Chapter Number Assigned",
+        "possession": "undefined",
+        "committee": "undefined",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Chapter Number Assigned",
         "committeeHearingTime": null,
         "vote": null
     }
