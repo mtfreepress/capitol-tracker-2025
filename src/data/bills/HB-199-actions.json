@@ -187,23 +187,6 @@
         "isHighlight": true,
         "committeeAction": true,
         "advanced": true,
-        "vote": null
-    },
-    {
-        "id": "HB199-0014",
-        "bill": "HB 199",
-        "date": "01/27/2025",
-        "committeeHearingTime": null,
-        "description": "Committee Executive Action--Bill Passed",
-        "billHolder": "house",
-        "committee": "House Business and Labor",
-        "recordings": [],
-        "transcriptUrl": null,
-        "key": "Committee Executive Action--Bill Passed",
-        "isMajor": true,
-        "isHighlight": true,
-        "committeeAction": true,
-        "advanced": true,
         "vote": {
             "bill": "HB 199",
             "date": "01/27/2025",
@@ -397,6 +380,23 @@
                 }
             ]
         }
+    },
+    {
+        "id": "HB199-0014",
+        "bill": "HB 199",
+        "date": "01/27/2025",
+        "committeeHearingTime": null,
+        "description": "Committee Executive Action--Bill Passed",
+        "billHolder": "house",
+        "committee": "House Business and Labor",
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Committee Executive Action--Bill Passed",
+        "isMajor": true,
+        "isHighlight": true,
+        "committeeAction": true,
+        "advanced": true,
+        "vote": null
     },
     {
         "id": "HB199-0015",
@@ -1795,6 +1795,22 @@
         "committeeAction": true,
         "failed": true,
         "missedDeadline": true,
+        "vote": null
+    },
+    {
+        "id": "HB199-0019",
+        "bill": "HB 199",
+        "date": "05/20/2025",
+        "committeeHearingTime": null,
+        "description": "Died in Process",
+        "billHolder": "house",
+        "committee": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Died in Process",
+        "isMajor": true,
+        "firstChamberFloorAction": true,
+        "ultimatelyFailed": true,
         "vote": null
     }
 ]
