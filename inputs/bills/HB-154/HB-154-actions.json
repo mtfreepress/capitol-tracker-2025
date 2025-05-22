@@ -2595,22 +2595,22 @@
                 "N": 0
             },
             "gopCount": {
-                "Y": 0,
+                "Y": 5,
                 "N": 0,
                 "A": 0,
                 "E": 0,
                 "O": 0
             },
             "demCount": {
-                "Y": 0,
+                "Y": 3,
                 "N": 0,
                 "A": 0,
                 "E": 0,
                 "O": 0
             },
             "motionPassed": true,
-            "gopSupported": false,
-            "demSupported": false,
+            "gopSupported": true,
+            "demSupported": true,
             "votes": [
                 {
                     "option": "Y",
@@ -2691,6 +2691,119 @@
         "recordings": [],
         "transcriptUrl": null,
         "key": "Tabled in Committee",
+        "committeeHearingTime": null,
+        "vote": {
+            "action": "HB154-0037",
+            "bill": "HB 154",
+            "date": "04/16/2025",
+            "type": "committee",
+            "seqNumber": "S10",
+            "voteChamber": "senate",
+            "voteUrl": null,
+            "session": "2",
+            "motion": "Tabled in Committee",
+            "thresholdRequired": "simple",
+            "count": {
+                "Y": 8,
+                "N": 0
+            },
+            "gopCount": {
+                "Y": 5,
+                "N": 0,
+                "A": 0,
+                "E": 0,
+                "O": 0
+            },
+            "demCount": {
+                "Y": 3,
+                "N": 0,
+                "A": 0,
+                "E": 0,
+                "O": 0
+            },
+            "motionPassed": true,
+            "gopSupported": true,
+            "demSupported": true,
+            "votes": [
+                {
+                    "option": "Y",
+                    "name": "Dave Fern",
+                    "lastName": "Fern",
+                    "party": "D",
+                    "locale": "Whitefish",
+                    "district": "SD 2"
+                },
+                {
+                    "option": "Y",
+                    "name": "Wylie Galt",
+                    "lastName": "Galt",
+                    "party": "R",
+                    "locale": "Martinsdale",
+                    "district": "SD 39"
+                },
+                {
+                    "option": "Y",
+                    "name": "Becky Beard",
+                    "lastName": "Beard",
+                    "party": "R",
+                    "locale": "Elliston",
+                    "district": "SD 38"
+                },
+                {
+                    "option": "Y",
+                    "name": "Wendy McKamey",
+                    "lastName": "McKamey",
+                    "party": "R",
+                    "locale": "Great Falls",
+                    "district": "SD 12"
+                },
+                {
+                    "option": "Y",
+                    "name": "Mike Yakawich",
+                    "lastName": "Yakawich",
+                    "party": "R",
+                    "locale": "Billings",
+                    "district": "SD 24"
+                },
+                {
+                    "option": "Y",
+                    "name": "Denise Hayman",
+                    "lastName": "Hayman",
+                    "party": "D",
+                    "locale": "Bozeman",
+                    "district": "SD 32"
+                },
+                {
+                    "option": "Y",
+                    "name": "Mary Ann Dunwell",
+                    "lastName": "Dunwell",
+                    "party": "D",
+                    "locale": "Helena",
+                    "district": "SD 42"
+                },
+                {
+                    "option": "Y",
+                    "name": "Greg Hertz",
+                    "lastName": "Hertz",
+                    "party": "R",
+                    "locale": "Polson",
+                    "district": "SD 7"
+                }
+            ]
+        },
+        "voteSeq": "S10"
+    },
+    {
+        "id": "HB154-0038",
+        "bill": "HB 154",
+        "date": "05/22/2025",
+        "description": "Died in Standing Committee",
+        "possession": "House",
+        "committee": "undefined",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Died in Standing Committee",
         "committeeHearingTime": null,
         "vote": null
     }
