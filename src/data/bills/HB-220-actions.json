@@ -325,25 +325,6 @@
         "secondChamberAction": true,
         "failed": true,
         "tabled": true,
-        "vote": null
-    },
-    {
-        "id": "HB220-0024",
-        "bill": "HB 220",
-        "date": "02/04/2025",
-        "committeeHearingTime": null,
-        "description": "Tabled in Committee",
-        "billHolder": "house",
-        "committee": "House Taxation",
-        "recordings": [],
-        "transcriptUrl": null,
-        "key": "Tabled in Committee",
-        "isMajor": true,
-        "isHighlight": true,
-        "committeeAction": true,
-        "secondChamberAction": true,
-        "failed": true,
-        "tabled": true,
         "vote": {
             "bill": "HB 220",
             "date": "02/04/2025",
@@ -545,6 +526,25 @@
                 }
             ]
         }
+    },
+    {
+        "id": "HB220-0024",
+        "bill": "HB 220",
+        "date": "02/04/2025",
+        "committeeHearingTime": null,
+        "description": "Tabled in Committee",
+        "billHolder": "house",
+        "committee": "House Taxation",
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Tabled in Committee",
+        "isMajor": true,
+        "isHighlight": true,
+        "committeeAction": true,
+        "secondChamberAction": true,
+        "failed": true,
+        "tabled": true,
+        "vote": null
     },
     {
         "id": "HB220-0025",
@@ -4933,6 +4933,21 @@
         "isMajor": true,
         "committeeReferral": true,
         "committeeSubsequentReferral": true,
+        "vote": null
+    },
+    {
+        "id": "HB220-0046",
+        "bill": "HB 220",
+        "date": "05/22/2025",
+        "committeeHearingTime": null,
+        "description": "Died in Standing Committee",
+        "billHolder": "house",
+        "committee": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Died in Standing Committee",
+        "isMajor": true,
+        "ultimatelyFailed": true,
         "vote": null
     }
 ]
