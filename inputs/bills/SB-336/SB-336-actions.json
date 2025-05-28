@@ -209,22 +209,22 @@
                 "N": 0
             },
             "gopCount": {
-                "Y": 0,
+                "Y": 7,
                 "N": 0,
                 "A": 0,
                 "E": 0,
                 "O": 0
             },
             "demCount": {
-                "Y": 0,
+                "Y": 4,
                 "N": 0,
                 "A": 0,
                 "E": 0,
                 "O": 0
             },
             "motionPassed": true,
-            "gopSupported": false,
-            "demSupported": false,
+            "gopSupported": true,
+            "demSupported": true,
             "votes": [
                 {
                     "option": "Y",
@@ -1387,7 +1387,7 @@
             "bill": "SB 336",
             "date": "04/08/2025",
             "type": "committee",
-            "seqNumber": "H10",
+            "seqNumber": "H4",
             "voteChamber": "house",
             "voteUrl": null,
             "session": "2",
@@ -1553,6 +1553,20 @@
                 }
             ]
         },
-        "voteSeq": "H10"
+        "voteSeq": "H4"
+    },
+    {
+        "id": "SB336-0029",
+        "bill": "SB 336",
+        "date": "05/23/2025",
+        "description": "Died in Standing Committee",
+        "possession": "Senate",
+        "committee": "undefined",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Died in Standing Committee",
+        "committeeHearingTime": null,
+        "vote": null
     }
 ]
