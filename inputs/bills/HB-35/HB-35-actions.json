@@ -227,16 +227,30 @@
         "id": "HB35-0018",
         "bill": "HB 35",
         "date": "01/20/2025",
-        "description": "Committee Executive Action--Bill Not Passed",
+        "description": "Committee Executive Action--Bill Passed",
         "possession": "House",
         "committee": "(H) Judiciary",
         "actionUrl": null,
         "recordings": [],
         "transcriptUrl": null,
-        "key": "Committee Executive Action--Bill Not Passed",
+        "key": "Committee Executive Action--Bill Passed",
+        "committeeHearingTime": null,
+        "vote": null
+    },
+    {
+        "id": "HB35-0019",
+        "bill": "HB 35",
+        "date": "01/20/2025",
+        "description": "Committee Executive Action--Bill Passed",
+        "possession": "House",
+        "committee": "(H) Judiciary",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Committee Executive Action--Bill Passed",
         "committeeHearingTime": null,
         "vote": {
-            "action": "HB35-0018",
+            "action": "HB35-0019",
             "bill": "HB 35",
             "date": "01/20/2025",
             "type": "committee",
@@ -244,7 +258,7 @@
             "voteChamber": "house",
             "voteUrl": null,
             "session": "2",
-            "motion": "Committee Executive Action--Bill Not Passed",
+            "motion": "Committee Executive Action--Bill Passed",
             "thresholdRequired": "simple",
             "count": {
                 "Y": 12,
@@ -431,20 +445,6 @@
             ]
         },
         "voteSeq": "H5"
-    },
-    {
-        "id": "HB35-0019",
-        "bill": "HB 35",
-        "date": "01/20/2025",
-        "description": "Committee Executive Action--Bill Passed",
-        "possession": "House",
-        "committee": "(H) Judiciary",
-        "actionUrl": null,
-        "recordings": [],
-        "transcriptUrl": null,
-        "key": "Committee Executive Action--Bill Passed",
-        "committeeHearingTime": null,
-        "vote": null
     },
     {
         "id": "HB35-0020",
@@ -3700,6 +3700,20 @@
         "recordings": [],
         "transcriptUrl": null,
         "key": "2nd Reading Indefinitely Postponed",
+        "committeeHearingTime": null,
+        "vote": null
+    },
+    {
+        "id": "HB35-0035",
+        "bill": "HB 35",
+        "date": "05/22/2025",
+        "description": "Died in Process",
+        "possession": "House",
+        "committee": "undefined",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Died in Process",
         "committeeHearingTime": null,
         "vote": null
     }

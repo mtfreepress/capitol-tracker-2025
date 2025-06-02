@@ -215,6 +215,23 @@
         "isHighlight": true,
         "committeeAction": true,
         "advanced": true,
+        "vote": null
+    },
+    {
+        "id": "HB255-0016",
+        "bill": "HB 255",
+        "date": "02/03/2025",
+        "committeeHearingTime": null,
+        "description": "Committee Executive Action--Bill Passed",
+        "billHolder": "house",
+        "committee": "House Education",
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Committee Executive Action--Bill Passed",
+        "isMajor": true,
+        "isHighlight": true,
+        "committeeAction": true,
+        "advanced": true,
         "vote": {
             "bill": "HB 255",
             "date": "02/03/2025",
@@ -368,23 +385,6 @@
                 }
             ]
         }
-    },
-    {
-        "id": "HB255-0016",
-        "bill": "HB 255",
-        "date": "02/03/2025",
-        "committeeHearingTime": null,
-        "description": "Committee Executive Action--Bill Passed",
-        "billHolder": "house",
-        "committee": "House Education",
-        "recordings": [],
-        "transcriptUrl": null,
-        "key": "Committee Executive Action--Bill Passed",
-        "isMajor": true,
-        "isHighlight": true,
-        "committeeAction": true,
-        "advanced": true,
-        "vote": null
     },
     {
         "id": "HB255-0017",
@@ -3212,7 +3212,7 @@
             "date": "04/08/2025",
             "type": "committee",
             "voteLocation": "committee",
-            "seqNumber": "S10",
+            "seqNumber": "S4",
             "voteChamber": "senate",
             "session": "2",
             "thresholdRequired": "simple",
@@ -3352,5 +3352,20 @@
                 }
             ]
         }
+    },
+    {
+        "id": "HB255-0027",
+        "bill": "HB 255",
+        "date": "05/22/2025",
+        "committeeHearingTime": null,
+        "description": "Died in Standing Committee",
+        "billHolder": "house",
+        "committee": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Died in Standing Committee",
+        "isMajor": true,
+        "ultimatelyFailed": true,
+        "vote": null
     }
 ]

@@ -177,16 +177,33 @@
         "bill": "HB 36",
         "date": "01/20/2025",
         "committeeHearingTime": null,
-        "description": "Committee Executive Action--Bill Not Passed",
+        "description": "Committee Executive Action--Bill Passed",
         "billHolder": "house",
         "committee": "House Judiciary",
         "recordings": [],
         "transcriptUrl": null,
-        "key": "Committee Executive Action--Bill Not Passed",
+        "key": "Committee Executive Action--Bill Passed",
         "isMajor": true,
         "isHighlight": true,
         "committeeAction": true,
-        "failed": true,
+        "advanced": true,
+        "vote": null
+    },
+    {
+        "id": "HB36-0014",
+        "bill": "HB 36",
+        "date": "01/20/2025",
+        "committeeHearingTime": null,
+        "description": "Committee Executive Action--Bill Passed",
+        "billHolder": "house",
+        "committee": "House Judiciary",
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Committee Executive Action--Bill Passed",
+        "isMajor": true,
+        "isHighlight": true,
+        "committeeAction": true,
+        "advanced": true,
         "vote": {
             "bill": "HB 36",
             "date": "01/20/2025",
@@ -380,23 +397,6 @@
                 }
             ]
         }
-    },
-    {
-        "id": "HB36-0014",
-        "bill": "HB 36",
-        "date": "01/20/2025",
-        "committeeHearingTime": null,
-        "description": "Committee Executive Action--Bill Passed",
-        "billHolder": "house",
-        "committee": "House Judiciary",
-        "recordings": [],
-        "transcriptUrl": null,
-        "key": "Committee Executive Action--Bill Passed",
-        "isMajor": true,
-        "isHighlight": true,
-        "committeeAction": true,
-        "advanced": true,
-        "vote": null
     },
     {
         "id": "HB36-0015",
@@ -4063,6 +4063,22 @@
         "firstChamberFloorAction": true,
         "secondChamberAction": true,
         "failed": true,
+        "vote": null
+    },
+    {
+        "id": "HB36-0029",
+        "bill": "HB 36",
+        "date": "05/22/2025",
+        "committeeHearingTime": null,
+        "description": "Died in Process",
+        "billHolder": "house",
+        "committee": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Died in Process",
+        "isMajor": true,
+        "firstChamberFloorAction": true,
+        "ultimatelyFailed": true,
         "vote": null
     }
 ]
