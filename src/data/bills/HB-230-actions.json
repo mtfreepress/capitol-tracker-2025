@@ -227,7 +227,26 @@
     {
         "id": "HB230-0017",
         "bill": "HB 230",
-        "date": "01/31/2025",
+        "date": "01/28/2025",
+        "committeeHearingTime": null,
+        "description": "Tabled in Committee",
+        "billHolder": "house",
+        "committee": "House Human Services",
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Tabled in Committee",
+        "isMajor": true,
+        "isHighlight": true,
+        "committeeAction": true,
+        "secondChamberAction": true,
+        "failed": true,
+        "tabled": true,
+        "vote": null
+    },
+    {
+        "id": "HB230-0018",
+        "bill": "HB 230",
+        "date": "01/28/2025",
         "committeeHearingTime": null,
         "description": "Tabled in Committee",
         "billHolder": "house",
@@ -243,7 +262,7 @@
         "tabled": true,
         "vote": {
             "bill": "HB 230",
-            "date": "01/31/2025",
+            "date": "01/28/2025",
             "type": "committee",
             "voteLocation": "committee",
             "seqNumber": "H4",
@@ -442,5 +461,51 @@
                 }
             ]
         }
+    },
+    {
+        "id": "HB230-0019",
+        "bill": "HB 230",
+        "date": "02/20/2025",
+        "committeeHearingTime": null,
+        "description": "Hearing Canceled",
+        "billHolder": "house",
+        "committee": "House Human Services",
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Hearing Canceled",
+        "vote": null
+    },
+    {
+        "id": "HB230-0020",
+        "bill": "HB 230",
+        "date": "04/09/2025",
+        "committeeHearingTime": null,
+        "description": "Missed Deadline for Appropriation Bill Transmittal",
+        "billHolder": "house",
+        "committee": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Missed Deadline for Appropriation Bill Transmittal",
+        "isMajor": true,
+        "committeeAction": true,
+        "failed": true,
+        "missedDeadline": true,
+        "vote": null
+    },
+    {
+        "id": "HB230-0021",
+        "bill": "HB 230",
+        "date": "05/20/2025",
+        "committeeHearingTime": null,
+        "description": "Died in Process",
+        "billHolder": "house",
+        "committee": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Died in Process",
+        "isMajor": true,
+        "firstChamberFloorAction": true,
+        "ultimatelyFailed": true,
+        "vote": null
     }
 ]
