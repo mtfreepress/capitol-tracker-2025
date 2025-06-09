@@ -235,8 +235,22 @@
         "transcriptUrl": null,
         "key": "Committee Executive Action--Bill Passed",
         "committeeHearingTime": null,
+        "vote": null
+    },
+    {
+        "id": "HB146-0018",
+        "bill": "HB 146",
+        "date": "01/30/2025",
+        "description": "Committee Executive Action--Bill Passed",
+        "possession": "House",
+        "committee": "(H) Fish, Wildlife and Parks",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Committee Executive Action--Bill Passed",
+        "committeeHearingTime": null,
         "vote": {
-            "action": "HB146-0017",
+            "action": "HB146-0018",
             "bill": "HB 146",
             "date": "01/30/2025",
             "type": "committee",
@@ -431,20 +445,6 @@
             ]
         },
         "voteSeq": "H5"
-    },
-    {
-        "id": "HB146-0018",
-        "bill": "HB 146",
-        "date": "01/30/2025",
-        "description": "Committee Executive Action--Bill Passed",
-        "possession": "House",
-        "committee": "(H) Fish, Wildlife and Parks",
-        "actionUrl": null,
-        "recordings": [],
-        "transcriptUrl": null,
-        "key": "Committee Executive Action--Bill Passed",
-        "committeeHearingTime": null,
-        "vote": null
     },
     {
         "id": "HB146-0019",
@@ -3401,20 +3401,6 @@
         "id": "HB146-0039",
         "bill": "HB 146",
         "date": "04/07/2025",
-        "description": "Chapter Number Assigned",
-        "possession": "undefined",
-        "committee": "undefined",
-        "actionUrl": null,
-        "recordings": [],
-        "transcriptUrl": null,
-        "key": "Chapter Number Assigned",
-        "committeeHearingTime": null,
-        "vote": null
-    },
-    {
-        "id": "HB146-0040",
-        "bill": "HB 146",
-        "date": "04/07/2025",
         "description": "Signed by Governor",
         "possession": "House",
         "committee": "undefined",
@@ -3422,6 +3408,20 @@
         "recordings": [],
         "transcriptUrl": null,
         "key": "Signed by Governor",
+        "committeeHearingTime": null,
+        "vote": null
+    },
+    {
+        "id": "HB146-0040",
+        "bill": "HB 146",
+        "date": "04/07/2025",
+        "description": "Chapter Number Assigned",
+        "possession": "undefined",
+        "committee": "undefined",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Chapter Number Assigned",
         "committeeHearingTime": null,
         "vote": null
     }
