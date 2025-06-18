@@ -144,7 +144,7 @@ export async function getStaticProps() {
   
   // Filter to include only House Bills and Senate Bills — No resolutions
   const regularBills = bills.default.filter(bill => {
-    return bill.type === 'house bill' || bill.type === 'senate bill';
+    return bill.type === 'house bill' || bill.type === 'senate bill' || bill.type === 'budget bill';
   });
   
   // Apply the transmitted to governor filter to only HB and SB bills
