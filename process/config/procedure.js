@@ -305,7 +305,7 @@ export const ACTIONS = [
     { key: 'Vetoed by Governor', isMajor, isHighlight, governorAction, failed, vetoed },
     { key: 'Signed by Governor', isMajor, isHighlight, governorAction, signed },
     { key: 'Returned with Governor\'s Proposed Amendments', isMajor, isHighlight, governorAction, amendmentSuggested },
-    { key: 'Returned with Governor\'s Line-item Veto', isMajor, isHighlight, governorAction, amendmentSuggested },
+    { key: 'Returned with Governor\'s Line-item Veto', isMajor, isHighlight, governorAction, vetoed },
     { key: 'Veto Overridden in Senate', isMajor, isHighlight, governorAction, vetoed, vetoOverriddenSenate },
     { key: 'Veto Overridden in House', isMajor, isHighlight, governorAction, vetoed, vetoOverriddenHouse },
     { key: 'Veto Overridden by Legislature', isMajor, isHighlight, governorAction, vetoed, vetoOverridden },
