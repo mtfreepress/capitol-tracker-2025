@@ -156,6 +156,7 @@ const finalPassage = true // for 3rd readings
 
 const transmittedToGovernor = true // for bills in governor's posession
 const vetoed = true
+const lineItemVetoed = true // for bills with line-item vetoes
 const amendmentSuggested = true
 const signed = true
 const vetoOverridePending = true
@@ -305,7 +306,7 @@ export const ACTIONS = [
     { key: 'Vetoed by Governor', isMajor, isHighlight, governorAction, failed, vetoed },
     { key: 'Signed by Governor', isMajor, isHighlight, governorAction, signed },
     { key: 'Returned with Governor\'s Proposed Amendments', isMajor, isHighlight, governorAction, amendmentSuggested },
-    { key: 'Returned with Governor\'s Line-item Veto', isMajor, isHighlight, governorAction, vetoed },
+    { key: 'Returned with Governor\'s Line-item Veto', isMajor, isHighlight, governorAction, lineItemVetoed },
     { key: 'Veto Overridden in Senate', isMajor, isHighlight, governorAction, vetoed, vetoOverriddenSenate },
     { key: 'Veto Overridden in House', isMajor, isHighlight, governorAction, vetoed, vetoOverriddenHouse },
     { key: 'Veto Overridden by Legislature', isMajor, isHighlight, governorAction, vetoed, vetoOverridden },

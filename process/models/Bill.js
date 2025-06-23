@@ -178,6 +178,7 @@ export default class Bill {
     }
 
     getProgress = ({ identifier, billType, firstChamber, actions }) => {
+        const now = new Date();
         // Get bill progression as calculated from actions
         // bill is rawBill data
         // actions are data only, should be sorted first to last
@@ -386,6 +387,15 @@ export default class Bill {
                     const houseHasOverridenVeto = progressFlagInActions(governorActions, 'vetoOverriddenHouse')
                     const senateHasOverridenVeto = progressFlagInActions(governorActions, 'vetoOverriddenSenate')
                     const legislatureHasOverridenVeto = progressFlagInActions(governorActions, 'vetoOverridden')
+                    if (lastGovernorAction.lineItemVetoed) {
+                        if (now > sessionEndDate) {
+                            status = 'passed';
+                            statusLabel = 'Became law with line-item vetoes';
+                            hasPassedGovernor = true;
+                        } else {
+                            statusLabel = 'Line-item veto: awaiting legislative action';
+                        }
+                    }
                     if (lastGovernorAction.signed) { status = 'passed'; statusLabel = 'Signed', hasPassedGovernor = true }
                     if (lastGovernorAction.vetoed) { status = 'blocked'; statusLabel = 'Vetoed' }
                     if (lastGovernorAction.amendmentSuggested) { statusLabel = 'Amendment suggested' }
@@ -400,7 +410,6 @@ export default class Bill {
                 }
             }
         })
-        const now = new Date();
         if (now > sessionEndDate) {
             // find committee step
             const committeeStepIdx = progressionSteps.findIndex(s => s.step === 'first committee');

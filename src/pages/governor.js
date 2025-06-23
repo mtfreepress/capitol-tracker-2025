@@ -59,6 +59,11 @@ const Governor = ({ billsTransmittedToGovernor, passedBothChambersNotSent }) => 
     return governorProgress && governorProgress.statusLabel === 'Became law unsigned';
   });
 
+  const becameLawWithLineItemVetoBills = billsTransmittedToGovernor.filter(b => {
+    const governorProgress = b.progress.find(d => d.step === 'governor');
+    return governorProgress && governorProgress.statusLabel === 'Became law with line-item vetoes';
+  });
+
   return (
     <div>
       <Layout
@@ -107,6 +112,16 @@ const Governor = ({ billsTransmittedToGovernor, passedBothChambersNotSent }) => 
           <>
             <h4>Vetoes overridden by Legislature ({numberFormat(successfulVetoOverrides.length)})</h4>
             <BillTable bills={successfulVetoOverrides} displayLimit={5} />
+          </>
+        )}
+
+        {becameLawWithLineItemVetoBills.length > 0 && (
+          <>
+            <h4>Became law with line-item vetoes ({numberFormat(becameLawWithLineItemVetoBills.length)})</h4>
+            <div className="note">
+              These bills became law after the session ended, with the Governor's line-item vetoes taking effect automatically.
+            </div>
+            <BillTable bills={becameLawWithLineItemVetoBills} displayLimit={5} />
           </>
         )}
 
