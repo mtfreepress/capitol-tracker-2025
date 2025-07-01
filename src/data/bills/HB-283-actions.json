@@ -239,23 +239,6 @@
         "isHighlight": true,
         "committeeAction": true,
         "advanced": true,
-        "vote": null
-    },
-    {
-        "id": "HB283-0018",
-        "bill": "HB 283",
-        "date": "02/06/2025",
-        "committeeHearingTime": null,
-        "description": "Committee Executive Action--Bill Passed",
-        "billHolder": "house",
-        "committee": "House Fish, Wildlife and Parks",
-        "recordings": [],
-        "transcriptUrl": null,
-        "key": "Committee Executive Action--Bill Passed",
-        "isMajor": true,
-        "isHighlight": true,
-        "committeeAction": true,
-        "advanced": true,
         "vote": {
             "bill": "HB 283",
             "date": "02/06/2025",
@@ -449,6 +432,23 @@
                 }
             ]
         }
+    },
+    {
+        "id": "HB283-0018",
+        "bill": "HB 283",
+        "date": "02/06/2025",
+        "committeeHearingTime": null,
+        "description": "Committee Executive Action--Bill Passed",
+        "billHolder": "house",
+        "committee": "House Fish, Wildlife and Parks",
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Committee Executive Action--Bill Passed",
+        "isMajor": true,
+        "isHighlight": true,
+        "committeeAction": true,
+        "advanced": true,
+        "vote": null
     },
     {
         "id": "HB283-0019",
@@ -5147,6 +5147,24 @@
         "failed": true,
         "vetoed": true,
         "vetoOverridePending": true,
+        "vote": null
+    },
+    {
+        "id": "HB283-0046",
+        "bill": "HB 283",
+        "date": "06/27/2025",
+        "committeeHearingTime": null,
+        "description": "Veto Override Failed in Legislature",
+        "billHolder": "governor",
+        "committee": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Veto Override Failed in Legislature",
+        "isMajor": true,
+        "governorAction": true,
+        "failed": true,
+        "vetoed": true,
+        "vetoOverrideFailed": true,
         "vote": null
     }
 ]
