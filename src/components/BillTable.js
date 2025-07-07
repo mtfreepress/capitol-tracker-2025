@@ -159,7 +159,6 @@ const Bill = ({ title, identifier, chamber, status, explanation, textUrl, fiscal
   const statusColor = statusColors(status.status);
   const stepLabels = billProgressStepLabels(chamber);
 
-
   const [isAmendmentsModalOpen, setIsAmendmentsModalOpen] = useState(false);
   const [amendments, setAmendments] = useState([]);
 
@@ -227,7 +226,12 @@ const Bill = ({ title, identifier, chamber, status, explanation, textUrl, fiscal
                 🖍 Proposed amendments
               </a>
             )}
-            {vetoMemoUrl && <a css={billLinkCss} href={vetoMemoUrl} target="_blank" rel="noopener noreferrer">🚫 Veto memo</a>}
+            {vetoMemoUrl && (
+              <Link href={vetoMemoUrl} target="_blank" rel="noopener noreferrer">
+                <span css={billLinkCss}>🚫 Veto memo</span>
+              </Link>
+            )}
+            {/* {vetoMemoUrl && <a css={billLinkCss} href={vetoMemoUrl} target="_blank" rel="noopener noreferrer">🚫 Veto memo</a>} */}
             {(numArticles > 0) && (
               <Link href={`/bills/${billUrl(identifier)}`} passHref>
                 <span css={billLinkCss}>📰 <strong>{numArticles}</strong> MTFP {pluralStory(numArticles)}</span>

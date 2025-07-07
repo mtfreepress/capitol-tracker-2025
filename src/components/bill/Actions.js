@@ -201,7 +201,7 @@ const Action = (action, showVotes, annotations) => {
             .filter((a) => a.descriptionFilter(action))
             .map((annot, index) => {
               if (annot.url(action)) {
-                return <a key={index} href={annot.url(action)}>{annot.label(action)}</a>;
+                return <Link key={index} href={annot.url(action)}>{annot.label(action)}</Link>;
               } else {
                 return <span key={index}>{annot.label(action)}</span>;
               }
