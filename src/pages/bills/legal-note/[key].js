@@ -15,7 +15,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
     const { key } = params;
     const billDir = key.toUpperCase();
-    const billNumber = billDir.replace('-', '00');
+    const billNumber = billDir.replace('-', '0');
     const fileName = encodeURIComponent(`${billNumber} Legal Review Note.pdf`);
     const filePath = path.join(process.env.BASE_PATH || '', 'legal-notes', billDir, fileName);
     
