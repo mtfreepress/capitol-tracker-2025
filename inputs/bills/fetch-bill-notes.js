@@ -26,6 +26,7 @@ const OUT_DIRS = {
     vetoLetters: path.join(__dirname, '../../public/veto-letters')
 };
 
+// probably not needed, but leaving for now
 // const BILLS_WITH_AMENDMENTS_URL = 'https://raw.githubusercontent.com/mtfreepress/legislative-interface/refs/heads/main/interface/bills-with-amendments.txt';
 // const BILLS_WITH_AMENDMENTS_OUTPUT = path.join(__dirname, '../../public/bills-with-amendments.txt');
 
