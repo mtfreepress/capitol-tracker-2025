@@ -119,7 +119,7 @@ const Governor = ({ billsTransmittedToGovernor, passedBothChambersNotSent }) => 
           <>
             <h4>Became law with line-item vetoes ({numberFormat(becameLawWithLineItemVetoBills.length)})</h4>
             <div className="note">
-              These bills became law after the session ended, with the Governor's line-item vetoes taking effect automatically.
+              These bills became law after the session ended, with the Governor&#39;s line-item vetoes taking effect automatically.
             </div>
             <BillTable bills={becameLawWithLineItemVetoBills} displayLimit={5} />
           </>
