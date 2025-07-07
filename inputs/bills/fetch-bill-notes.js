@@ -6,13 +6,15 @@ import path from 'path';
 const UPDATE_URLS = {
     legalNotes: 'https://raw.githubusercontent.com/mtfreepress/legislative-interface/refs/heads/main/interface/legal-note-updates.json',
     fiscalNotes: 'https://raw.githubusercontent.com/mtfreepress/legislative-interface/refs/heads/main/interface/fiscal-note-updates.json',
-    amendments: 'https://raw.githubusercontent.com/mtfreepress/legislative-interface/refs/heads/main/interface/amendment-updates.json'
+    amendments: 'https://raw.githubusercontent.com/mtfreepress/legislative-interface/refs/heads/main/interface/amendment-updates.json',
+    vetoLetters: 'https://raw.githubusercontent.com/mtfreepress/legislative-interface/refs/heads/main/interface/veto_letter_updates.json'
 };
 
 const RAW_URL_BASES = {
     legalNotes: 'https://raw.githubusercontent.com/mtfreepress/legislative-interface/main/interface/downloads/legal-note-pdfs-2/',
     fiscalNotes: 'https://raw.githubusercontent.com/mtfreepress/legislative-interface/main/interface/downloads/fiscal-note-pdfs-2/',
-    amendments: 'https://raw.githubusercontent.com/mtfreepress/legislative-interface/main/interface/downloads/amendment-pdfs-2/'
+    amendments: 'https://raw.githubusercontent.com/mtfreepress/legislative-interface/main/interface/downloads/amendment-pdfs-2/',
+    vetoLetters: 'https://raw.githubusercontent.com/mtfreepress/legislative-interface/main/interface/downloads/veto-letter-pdfs-2/'
 };
 
 const __filename = fileURLToPath(import.meta.url);
@@ -20,7 +22,8 @@ const __dirname = path.dirname(__filename);
 const OUT_DIRS = {
     legalNotes: path.join(__dirname, '../../public/legal-notes'),
     fiscalNotes: path.join(__dirname, '../../public/fiscal-notes'),
-    amendments: path.join(__dirname, '../../public/amendments')
+    amendments: path.join(__dirname, '../../public/amendments'),
+    vetoLetters: path.join(__dirname, '../../public/veto-letters')
 };
 
 // const BILLS_WITH_AMENDMENTS_URL = 'https://raw.githubusercontent.com/mtfreepress/legislative-interface/refs/heads/main/interface/bills-with-amendments.txt';
@@ -173,6 +176,7 @@ const main = async () => {
         // Process legal and fiscal notes (keeping only latest)
         await processNotes('legalNotes');
         await processNotes('fiscalNotes');
+        await processNotes('vetoLetters');
         
         // Process amendments (keeping all versions)
         await processAmendments();
