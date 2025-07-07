@@ -110,7 +110,7 @@ export default class Bill {
             fiscalNoteUrl: fiscalNotesListUrl || null,
             amendmentsUrl: amendmentListUrl || null,
             legalNoteUrl: legalNoteUrl || null,
-            vetoMemoUrl: vetoMemoUrl || null,
+            vetoMemoUrl: vetoMemoUrl || bill.governorVetoLetterUrl || null,
 
             // annotations
             isMajorBill: isKeyBill,

@@ -168,7 +168,7 @@ const BillInfo = ({ bill }) => {
                             <div css={infoColContentCss}>
                                 {vetoMemoUrl ? (
                                     <span>
-                                        <a href={vetoMemoUrl} target="_blank" rel="noopener noreferrer">Available here</a>
+                                        <Link href={vetoMemoUrl} target="_blank" rel="noopener noreferrer">Available here</Link>
                                     </span>
                                 ) : (
                                     <em>None on file</em>
