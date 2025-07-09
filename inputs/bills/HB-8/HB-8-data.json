@@ -4,7 +4,7 @@
     "session": "2",
     "billPageUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0713?open_tab=sum",
     "billTextUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0713?open_tab=bill",
-    "billPdfUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0713?open_tab=bill",
+    "billPdfUrl": "/bills/bill-text/hb-8",
     "lc": "LC0713",
     "title": "Renewable resource bonds and loans",
     "sponsor": "John Fitzpatrick",
@@ -48,9 +48,9 @@
         }
     ],
     "voteRequirements": [
-        "SIMPLE",
         "THREE_FOURTHS",
-        "TWO_THIRDS"
+        "TWO_THIRDS",
+        "SIMPLE"
     ],
     "deadlineCategory": "undefined",
     "transmittalDeadline": "undefined",

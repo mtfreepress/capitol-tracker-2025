@@ -4,7 +4,7 @@
     "session": "2",
     "billPageUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0001?open_tab=sum",
     "billTextUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0001?open_tab=bill",
-    "billPdfUrl": "https://bills.legmt.gov/#/laws/bill/2/LC0001?open_tab=bill",
+    "billPdfUrl": "/bills/bill-text/sb-123",
     "lc": "LC0001",
     "title": "Allowing emergency permitting authority during an emergency",
     "sponsor": "Forrest Mandeville",
@@ -63,8 +63,8 @@
         }
     ],
     "voteRequirements": [
-        "SIMPLE",
-        "THREE_FOURTHS"
+        "THREE_FOURTHS",
+        "SIMPLE"
     ],
     "deadlineCategory": "undefined",
     "transmittalDeadline": "undefined",
