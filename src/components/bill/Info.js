@@ -95,13 +95,13 @@ const BillInfo = ({ bill }) => {
                             📃 Bill text
                         </div>
                         <div css={infoColContentCss}>
-                            {textUrl ? (
-                                <span>
-                                    <a href={textUrl} target="_blank" rel="noopener noreferrer">Available here</a>
-                                </span>
-                            ) : (
-                                <span>Not available</span>
-                            )}
+                        {textUrl ? (
+                            <Link href={textUrl} target="_blank" rel="noopener noreferrer">
+                            <span>Available here</span>
+                            </Link>
+                        ) : (
+                            <span>Not available</span>
+                        )}
                         </div>
                     </div>
 

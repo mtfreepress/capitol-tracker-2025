@@ -163,9 +163,14 @@ const BillCard = ({ bill }) => {
 
                 <div className="row">
                     <div className="info-boxes">
-                        <div className="info-text">{textUrl ?
-                            <a href={textUrl} target="_blank" rel="noopener noreferrer">📃 Bill text</a> :
-                            <span className="info-absent">📃 No bill text</span>}
+                        <div className="info-text">
+                        {textUrl ? (
+                            <Link href={textUrl} target="_blank" rel="noopener noreferrer">
+                            <span>📃 Bill text</span>
+                            </Link>
+                        ) : (
+                            <span className="info-absent">📃 No bill text</span>
+                        )}
                         </div>
                         <div className="info-fiscal">
                             {fiscalNoteUrl ? (
