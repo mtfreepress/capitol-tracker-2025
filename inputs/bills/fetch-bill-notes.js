@@ -177,6 +177,7 @@ const main = async () => {
         await processNotes('legalNotes');
         await processNotes('fiscalNotes');
         await processNotes('vetoLetters');
+        await processNotes('billText');
         
         // Process amendments (keeping all versions)
         await processAmendments();
