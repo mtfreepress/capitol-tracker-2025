@@ -31,13 +31,14 @@ npm install
 
 ```bash
 # Fetch all upstream data and process it
-npm run fetch-all
+chmod +x ./refresh-inputs
+./refresh-inputs
 
 # Or run steps manually:
-node inputs/coverage/fetch.js        # MTFP article coverage
-node inputs/bills/fetch.js           # Bill and action data
-node inputs/bills/fetch-bill-notes.js # PDFs and documents
-node process/main.js                 # Transform data for frontend
+node inputs/coverage/fetch.js           # MTFP article coverage
+node inputs/bills/fetch.js              # Bill and action data
+node inputs/bills/fetch-bill-notes.js   # PDFs and documents
+node process/main.js                    # Transform data for frontend
 ```
 
 ### 5. Start Development Server
