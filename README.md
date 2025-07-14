@@ -1,147 +1,243 @@
-# Montana Free Press Capitol Tracker — README.md
+# Montana Free Press Capitol Tracker
 
-## Overview
+This project is a Next.js-based static site by [Jacob Olness](https://github.com/jolness1) and [Eric Dietrich](https://github.com/eidietrich) that transforms legislative data from Montana's Legislature into an accessible public-facing web application for [Montana Free Press](https://montanafreepress.org/). It processes bills, lawmakers, committees, votes, and documents to help journalists and citizens track Montana's biannual legislative sessions in near real-time.
 
-This repository powers the [Montana Free Press Capitol Tracker](https://projects.montanafreepress.org/capitol-tracker-2025/), a public-facing web app that tracks Montana’s biannual legislative session. It is rebuilt every two years for the new session, and is designed to help journalists and the public follow bills, lawmakers, committees, and legislative actions in near real-time.
+Montana Free Press is a 501(c)(3) nonprofit newsroom that aims to provide Montanans with in-depth, nonpartisan news coverage.
 
-**Key features:**
-- Static site built with Next.js (see `/src/pages` for endpoints)
-- Data pipeline for ingesting, cleaning, and transforming legislative data
-- Custom logic to handle Montana’s unique legislative quirks and messy data
-- Deploys to AWS S3/CloudFront via GitHub Actions
+A live version of the 2025 tracker can be found at [https://projects.montanafreepress.org/capitol-tracker-2025/](https://projects.montanafreepress.org/capitol-tracker-2025/)
 
 ---
 
-## Getting Started
+## Quick Start
 
-### 1. **Clone the Repo**
+### 1. Fork the Upstream Data Repository
 
-```bash
-git clone https://github.com/mtfreepress/capitol-tracker-25.git
-cd capitol-tracker-25
-```
+**Important:** You must first fork the [legislative-interface](https://github.com/mtfreepress/legislative-interface/) repository and update all data-fetching scripts to point to your fork.
 
-### 2. **Set Up the Upstream Data Source**
+### 2. Fork this repository and cleanup all old data in 
+[`inputs/`](inputs/)  
+[`public/`](public/)  
+[`data/`](data/)  
 
-**Important:**  
-You must fork the [legislative-interface](https://github.com/mtfreepress/legislative-interface/) repository and point all data-fetching scripts to your fork.  
-This is the source for all raw bill, action, and vote data.
-
-### 3. **Install Dependencies**
+### 3. Clone and Setup
 
 ```bash
+git clone {forked-repo-url}
+cd {forked-repo-name}
 npm install
 ```
 
-### 4. **Run the Data Pipeline**
-
-This step fetches, cleans, and processes all legislative data into the format the frontend expects.
+### 4. Run the Data Pipeline
 
 ```bash
-# Fetch and process all data (see scripts in /inputs and /process)
+# Fetch all upstream data and process it
 npm run fetch-all
-# Or run the steps manually:
-node inputs/coverage/fetch.js
-node inputs/bills/fetch.js
-node inputs/bills/fetch-bill-notes.js
-node process/main.js
+
+# Or run steps manually:
+node inputs/coverage/fetch.js        # MTFP article coverage
+node inputs/bills/fetch.js           # Bill and action data
+node inputs/bills/fetch-bill-notes.js # PDFs and documents
+node process/main.js                 # Transform data for frontend
 ```
 
-### 5. **Start the Development Server**
+### 5. Start Development Server
 
 ```bash
 npm run dev
 ```
 
-Visit [http://localhost:3000](http://localhost:3000) to view the app.
+Visit [http://localhost:3000/capitol-tracker-{year}](http://localhost:3000/capitol-tracker-{year}) to view the tracker.
 
 ---
 
-## Deployment
+## How the Data Pipeline Works
 
-Deployment is handled via GitHub Actions (see `.github/workflows/actions.yaml`).  
-On push to `main`, the workflow:
+The pipeline consists of three main phases that transform raw legislative data into a public-facing website:
 
-- Runs the data pipeline
-- Builds the Next.js static site
-- Syncs the output to AWS S3
-- Invalidates the CloudFront cache
+### Phase 1: Data Collection
 
-**Manual deploy:**  
-You can also run:
+| Script | Purpose |
+|--------|---------|
+| [`inputs/coverage/fetch.js`](inputs/coverage/fetch.js) | Downloads MTFP article data from CMS to link stories to bills/lawmakers |
+| [`inputs/bills/fetch.js`](inputs/bills/fetch.js) | Downloads bill data and actions from the [legislative-interface](https://github.com/mtfreepress/legislative-interface/) repository |
+| [`inputs/bills/fetch-bill-notes.js`](inputs/bills/fetch-bill-notes.js) | Downloads PDFs (fiscal notes, legal notes, amendments, veto letters, bill text) |
 
-```bash
-npm run build
-# Then sync the build/ directory to S3 as in build-and-deploy.sh
-```
+### Phase 2: Data Processing
+
+| Script | Purpose |
+|--------|---------|
+| [`process/main.js`](process/main.js) | Main processing script that transforms raw data into frontend-ready JSON |
+| [`process/models/Bill.js`](process/models/Bill.js) | Processes bill data, determines status, handles Montana-specific legislative quirks |
+| [`process/models/Lawmaker.js`](process/models/Lawmaker.js) | Processes lawmaker data, calculates voting records and sponsored bills |
+
+### Phase 3: Frontend Generation
+
+| Component | Purpose |
+|-----------|---------|
+| [`src/pages/`](src/pages/) | Next.js pages for all public endpoints (`/bills/[key]`, `/lawmakers/[key]`, etc.) |
+| [`src/components/`](src/components/) | React components for tables, charts, and UI elements |
+| [`src/data/`](src/data/) | Generated JSON files consumed by frontend components |
+
+---
+
+## Key Features
+
+- **Bill Tracking**: Progress through committees, floor votes, and governor's desk
+- **Lawmaker Profiles**: Voting records, sponsored bills, committee assignments
+- **Document Viewer**: Integrated PDF viewer for fiscal notes, legal notes, amendments
+- **Vote Analysis**: Detailed breakdowns of legislative votes with party-line analysis
+- **Calendar Integration**: Upcoming hearings and floor votes
+- **Mobile Responsive**: Works on all devices with progressive enhancement
 
 ---
 
 ## Directory Structure
 
-- `/src/pages/` — All public-facing endpoints (e.g., `/governor`, `/house`, `/senate`, `/lawmakers/[key]`, `/committees/[key]`)
-- `/process/` — Data processing logic (models, main.js, config)
-- `/inputs/` — Scripts for fetching and updating raw data from upstream
-- `/public/` — Static assets (PDFs, images, etc.)
-- `/data/` — Generated data files used by the frontend
+```
+capitol-tracker-25/
+├── src/
+│   ├── pages/               # Next.js pages (routes)
+│   ├── components/          # React components
+│   ├── data/               # Generated JSON data files
+│   └── config/             # Frontend configuration
+├── process/
+│   ├── main.js             # Main data processing script
+│   ├── models/             # Data transformation classes
+│   └── config/             # Processing configuration
+├── inputs/
+│   ├── bills/              # Bill data fetching scripts
+│   ├── coverage/           # MTFP article fetching
+│   └── annotations/        # Manual data annotations
+├── public/
+│   ├── fiscal-notes/       # Downloaded fiscal note PDFs
+│   ├── legal-notes/        # Downloaded legal note PDFs
+│   ├── amendments/         # Downloaded amendment PDFs
+│   ├── veto-letters/       # Downloaded veto letter PDFs
+│   └── bill-texts/         # Downloaded bill text PDFs
+└── scripts/                # Utility scripts
+```
 
 ---
 
-## Quirks & Gotchas
+## Session Configuration
 
-- **Session End Date:**  
-  The session end date is set manually in `/process/config/session.js`.  
-  **Always set this to a date well after the expected session end (e.g., July),** since the session can end early. This ensures bills aren’t marked dead prematurely.
+For new legislative sessions, update these key files:
 
-- **Messy Data:**  
-  The Montana Legislature’s data is inconsistent and often requires manual overrides or cleaning.  
-  Expect to see lots of edge-case logic in `/process/models/Bill.js` and related files.
+### Session Timing
+- **Session End Date**: [`process/config/session.js`](process/config/session.js) - Set this **well after** expected session end to avoid marking bills as failed prematurely
 
-- **Upstream Data:**  
-  All data comes from the `legislative-interface` repo.  
-  **Fork it first** and update fetch scripts to point to your fork.
+### Data Sources
+- **Upstream URLs**: Update all fetch scripts in [`inputs/`](inputs/) to point to your forked legislative-interface repository
+- **API Endpoints**: Check that Montana's legislative API endpoints are still functional
 
-- **Bill Types:**  
-  Bill types can be inconsistent (`"house bill"`, `"senate bill"`, `"budget bill"`, etc.).  
-  Always check for new or unexpected types when updating data.
-
-- **Manual Overrides:**  
-  Some bills or actions require manual status overrides (see `/process/config/overrides.js`).
+### Display Configuration
+- **Legislature Number**: Update references to "69th Legislature" throughout the codebase
+- **Session Year**: Update "2025" references in titles and metadata
 
 ---
 
-## Adding/Updating Data
+## Montana Legislative Quirks
 
-- To update data, run the scripts in `/inputs/` and then the main process:
-  ```bash
-  node inputs/bills/fetch.js
-  node process/main.js
-  ```
-- To add new bill types or handle new quirks, update `/process/config/procedure.js` and related model logic.
+The Montana Legislature has unique procedures that require special handling:
+
+### House Blast Motions
+- Require 55 votes (constitutional majority) instead of simple majority
+- Handled in [`process/main.js`](process/main.js) with vote count overrides
+
+### Bill Status Complexity
+- Bills can be "blasted" from committee to floor
+- Reconciliation process for different House/Senate versions
+- Governor can suggest amendments or line-item veto appropriations
+
+### Data Inconsistencies
+- Committee names change between sessions
+- Action descriptions vary for similar parliamentary moves
+- Bill types can be inconsistent (`"house bill"` vs `"budget bill"`)
+
+---
+
+## Deployment
+
+Deployment is handled via GitHub Actions in [`.github/workflows/actions.yaml`](.github/workflows/actions.yaml):
+
+1. **Nightly Updates**: Runs data pipeline automatically during session
+2. **Static Site Generation**: Builds Next.js app with `next export`
+3. **AWS Deployment**: Syncs to S3 bucket with CloudFront invalidation
+
+### Manual Deploy
+```bash
+npm run build
+# Then sync the out/ directory to S3
+```
+
+---
+
+## Automation
+
+The tracker updates automatically via the [`nightly-pdf-refresh.sh`](nightly-pdf-refresh.sh) script:
+
+1. **Data Collection**: Fetches latest bills, actions, and documents
+2. **Processing**: Transforms data and generates frontend files
+3. **Deployment**: Builds and deploys updated site
+
+---
+
+## License
+
+"New" BSD License (aka "3-clause"). See [LICENSE](LICENSE) for details.
+
+---
+
+## Development Notes
+
+### Adding New Features
+- **New Pages**: Add to [`src/pages/`](src/pages/) following Next.js conventions
+- **New Data Types**: Add processing logic to [`process/models/`](process/models/)
+- **New Documents**: Update [`fetch-bill-notes.js`](inputs/bills/fetch-bill-notes.js) for new PDF types
+
+### Debugging
+- **Bill Status Issues**: Check [`process/models/Bill.js`](process/models/Bill.js) for status determination logic
+- **Missing Data**: Verify upstream data exists in legislative-interface repository
+- **Frontend Errors**: Ensure data pipeline completed successfully before starting dev server
+
+### Performance
+- **Large Data Sets**: Individual bill actions are split into separate files to avoid memory issues
+- **PDF Optimization**: PDFs are compressed and cached to minimize bandwidth
+- **Static Generation**: Entire site is pre-generated for fast loading
 
 ---
 
 ## Troubleshooting
 
-- **Bills not showing up?**  
-  Check the bill type and status in the processed data.  
-  Use debug logs in `/process/main.js` and `/process/models/Bill.js`.
+### Common Issues
 
-- **Frontend not updating?**  
-  Make sure to re-run the data pipeline and restart the dev server.
+1. **Bills not showing up**: Check bill type filtering in [`process/models/Bill.js`](process/models/Bill.js)
+2. **Data pipeline fails**: Verify legislative-interface repository is accessible and has latest data
+3. **PDFs not loading**: Check that PDF files exist in [`public/`](public/) directories
+4. **Vote counts wrong**: Review House blast motion logic in [`process/main.js`](process/main.js)
 
-- **Deployment issues?**  
-  Check the GitHub Actions logs and AWS S3/CloudFront settings.
-
----
-
-## Summary
-
-- **Fork and point to the upstream data repo:** [https://github.com/mtfreepress/legislative-interface/](https://github.com/mtfreepress/legislative-interface/)
-- **Set session end date far enough out**
-- **Run the data pipeline before starting the frontend**
-- **Expect to handle Montana-specific data quirks**
+### Dependencies
+- **Node.js 18+**
+- **Next.js 13+** for static site generation
+- **React 18+** for frontend components
+- **node-fetch** for API requests
 
 ---
 
-**If you get stuck, check the README, code comments, and previous commit messages. When in doubt, ask the last dev or open an issue!**
+## Contributing
+
+When adding new features:
+
+1. **Follow conventions**: Use existing patterns for data processing and component structure
+2. **Update documentation**: Add new scripts to this README
+3. **Test thoroughly**: Montana's legislative data is messy and requires extensive edge case handling
+4. **Consider performance**: Large datasets require careful memory management - avoiding loading the entire bills.json file if possible or more PDFs than absolutely needed. By the end of the session just the bills.json file can be 300MB or more and there are 1GB+ of PDFs
+
+---
+
+**For the next legislative session (2027)**:
+1. Fork and update the [legislative-interface](https://github.com/mtfreepress/legislative-interface/) repository
+2. Update session configuration files
+3. Test all data fetching scripts for API changes
+4. Update legislature numbers and session references throughout codebase
+5. Verify committee names and structures
