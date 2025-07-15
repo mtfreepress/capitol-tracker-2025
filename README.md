@@ -31,7 +31,10 @@ npm install
 
 ```bash
 # Fetch all upstream data and process it
+# make refresh inputs executable
 chmod +x ./refresh-inputs
+
+# run the script
 ./refresh-inputs
 
 # Or run steps manually:
@@ -88,7 +91,7 @@ The pipeline consists of three main phases that transform raw legislative data i
 - **Document Viewer**: Integrated PDF viewer for fiscal notes, legal notes, amendments
 - **Vote Analysis**: Detailed breakdowns of legislative votes with party-line analysis
 - **Calendar Integration**: Upcoming hearings and floor votes
-- **Mobile Responsive**: Works on all devices with progressive enhancement
+- **Mobile Responsive**: Works on properly all devices from the iPhone SE to a 5K monitor
 
 ---
 
@@ -97,8 +100,8 @@ The pipeline consists of three main phases that transform raw legislative data i
 ```
 capitol-tracker-25/
 ├── src/
-│   ├── pages/               # Next.js pages (routes)
-│   ├── components/          # React components
+│   ├── pages/              # Next.js pages (routes)
+│   ├── components/         # React components
 │   ├── data/               # Generated JSON data files
 │   └── config/             # Frontend configuration
 ├── process/
@@ -129,7 +132,7 @@ For new legislative sessions, update these key files:
 
 ### Data Sources
 - **Upstream URLs**: Update all fetch scripts in [`inputs/`](inputs/) to point to your forked legislative-interface repository
-- **API Endpoints**: Check that Montana's legislative API endpoints are still functional
+- **API Endpoints**: Check that Montana's legislative API endpoints are still functional in `legislative-interface` repo
 
 ### Display Configuration
 - **Legislature Number**: Update references to "69th Legislature" throughout the codebase
@@ -167,19 +170,12 @@ Deployment is handled via GitHub Actions in [`.github/workflows/actions.yaml`](.
 
 ### Manual Deploy
 ```bash
-npm run build
-# Then sync the out/ directory to S3
+# make build and deploy script executable
+chmod +x ./build-and-deploy.sh
+
+# run the script
+./build-and-deploy.sh
 ```
-
----
-
-## Automation
-
-The tracker updates automatically via the [`nightly-pdf-refresh.sh`](nightly-pdf-refresh.sh) script:
-
-1. **Data Collection**: Fetches latest bills, actions, and documents
-2. **Processing**: Transforms data and generates frontend files
-3. **Deployment**: Builds and deploys updated site
 
 ---
 
@@ -219,9 +215,15 @@ The tracker updates automatically via the [`nightly-pdf-refresh.sh`](nightly-pdf
 
 ### Dependencies
 - **Node.js 18+**
-- **Next.js 13+** for static site generation
-- **React 18+** for frontend components
-- **node-fetch** for API requests
+- **Python 3.13+** (for make-lawmaker-roster.py)
+
+#### Create Python Virtual Environment & Install Dependencies:
+
+```bash
+python3 -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
+```
 
 ---
 
