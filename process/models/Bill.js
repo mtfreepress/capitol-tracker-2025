@@ -403,7 +403,7 @@ export default class Bill {
                         || (houseHasOverridenVeto || senateHasOverridenVeto) && !lastGovernorAction.vetoOverrideFailed
                     ) { status = 'blocked'; statusLabel = 'Veto Override Pending' }
                     if (legislatureHasOverridenVeto || lastGovernorAction.vetoOverridden || (houseHasOverridenVeto && senateHasOverridenVeto)) {
-                        status = 'passed'; statusLabel = 'Veto Overriden'; hasPassedGovernor = true
+                        status = 'passed'; statusLabel = 'Veto Overridden'; hasPassedGovernor = true
                     }
                     statusDate = lastGovernorAction.date
                     return { step, status, statusLabel, statusDate }
