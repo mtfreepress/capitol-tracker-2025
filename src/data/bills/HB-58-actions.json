@@ -513,13 +513,13 @@
             "thresholdRequired": "simple",
             "count": {
                 "Y": 99,
-                "N": 1
+                "N": 0
             },
             "gopCount": {
                 "Y": 57,
-                "N": 1,
+                "N": 0,
                 "A": 0,
-                "E": 0,
+                "E": 1,
                 "O": 0
             },
             "demCount": {
@@ -1015,14 +1015,14 @@
                     "lawmakerWithDemCaucus": true
                 },
                 {
-                    "option": "N",
+                    "option": "E",
                     "name": "Kerri Seekins-Crowe",
                     "lastName": "Seekins-Crowe",
                     "party": "R",
                     "locale": "Billings",
                     "district": "HD 39",
                     "voteOutcome": true,
-                    "lawmakerPresent": true,
+                    "lawmakerPresent": false,
                     "lawmakerOnWinningSide": false,
                     "lawmakerWithGopCaucus": false,
                     "lawmakerWithDemCaucus": false

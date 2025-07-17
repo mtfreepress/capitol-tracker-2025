@@ -3353,13 +3353,13 @@
             "thresholdRequired": "simple",
             "count": {
                 "Y": 46,
-                "N": 1
+                "N": 0
             },
             "gopCount": {
                 "Y": 29,
-                "N": 1,
+                "N": 0,
                 "A": 2,
-                "E": 0,
+                "E": 1,
                 "O": 0
             },
             "demCount": {
@@ -3452,14 +3452,14 @@
                     "lawmakerWithDemCaucus": true
                 },
                 {
-                    "option": "N",
+                    "option": "E",
                     "name": "Denley Loge",
                     "lastName": "Loge",
                     "party": "R",
                     "locale": "St Regis",
                     "district": "SD 45",
                     "voteOutcome": true,
-                    "lawmakerPresent": true,
+                    "lawmakerPresent": false,
                     "lawmakerOnWinningSide": false,
                     "lawmakerWithGopCaucus": false,
                     "lawmakerWithDemCaucus": false

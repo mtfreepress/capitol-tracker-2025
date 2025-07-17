@@ -3162,13 +3162,13 @@
             "thresholdRequired": "simple",
             "count": {
                 "Y": 43,
-                "N": 57
+                "N": 56
             },
             "gopCount": {
                 "Y": 37,
-                "N": 21,
+                "N": 20,
                 "A": 0,
-                "E": 0,
+                "E": 1,
                 "O": 0
             },
             "demCount": {
@@ -3859,17 +3859,17 @@
                     "lawmakerWithDemCaucus": true
                 },
                 {
-                    "option": "N",
+                    "option": "E",
                     "name": "Ron Marshall",
                     "lastName": "Marshall",
                     "party": "R",
                     "locale": "Hamilton",
                     "district": "HD 87",
                     "voteOutcome": false,
-                    "lawmakerPresent": true,
-                    "lawmakerOnWinningSide": true,
+                    "lawmakerPresent": false,
+                    "lawmakerOnWinningSide": false,
                     "lawmakerWithGopCaucus": false,
-                    "lawmakerWithDemCaucus": true
+                    "lawmakerWithDemCaucus": false
                 },
                 {
                     "option": "Y",

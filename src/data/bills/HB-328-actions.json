@@ -497,7 +497,7 @@
             "thresholdRequired": "simple",
             "count": {
                 "Y": 97,
-                "N": 3
+                "N": 2
             },
             "gopCount": {
                 "Y": 58,
@@ -508,9 +508,9 @@
             },
             "demCount": {
                 "Y": 39,
-                "N": 3,
+                "N": 2,
                 "A": 0,
-                "E": 0,
+                "E": 1,
                 "O": 0
             },
             "motionPassed": true,
@@ -1701,14 +1701,14 @@
                     "lawmakerWithDemCaucus": true
                 },
                 {
-                    "option": "N",
+                    "option": "E",
                     "name": "Jade Sooktis",
                     "lastName": "Sooktis",
                     "party": "D",
                     "locale": "Lame Deer",
                     "district": "HD 41",
                     "voteOutcome": true,
-                    "lawmakerPresent": true,
+                    "lawmakerPresent": false,
                     "lawmakerOnWinningSide": false,
                     "lawmakerWithGopCaucus": false,
                     "lawmakerWithDemCaucus": false

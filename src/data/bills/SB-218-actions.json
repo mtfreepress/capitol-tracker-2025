@@ -2044,13 +2044,13 @@
             "thresholdRequired": "simple",
             "count": {
                 "Y": 56,
-                "N": 44
+                "N": 43
             },
             "gopCount": {
                 "Y": 14,
-                "N": 44,
+                "N": 43,
                 "A": 0,
-                "E": 0,
+                "E": 1,
                 "O": 0
             },
             "demCount": {
@@ -2624,16 +2624,16 @@
                     "lawmakerWithDemCaucus": false
                 },
                 {
-                    "option": "N",
+                    "option": "E",
                     "name": "Nelly Nicol",
                     "lastName": "Nicol",
                     "party": "R",
                     "locale": "Billings",
                     "district": "HD 53",
                     "voteOutcome": true,
-                    "lawmakerPresent": true,
+                    "lawmakerPresent": false,
                     "lawmakerOnWinningSide": false,
-                    "lawmakerWithGopCaucus": true,
+                    "lawmakerWithGopCaucus": false,
                     "lawmakerWithDemCaucus": false
                 },
                 {
@@ -3395,13 +3395,13 @@
             "thresholdRequired": "simple",
             "count": {
                 "Y": 57,
-                "N": 43
+                "N": 42
             },
             "gopCount": {
                 "Y": 57,
-                "N": 1,
+                "N": 0,
                 "A": 0,
-                "E": 0,
+                "E": 1,
                 "O": 0
             },
             "demCount": {
@@ -3975,17 +3975,17 @@
                     "lawmakerWithDemCaucus": false
                 },
                 {
-                    "option": "N",
+                    "option": "E",
                     "name": "Nelly Nicol",
                     "lastName": "Nicol",
                     "party": "R",
                     "locale": "Billings",
                     "district": "HD 53",
                     "voteOutcome": true,
-                    "lawmakerPresent": true,
+                    "lawmakerPresent": false,
                     "lawmakerOnWinningSide": false,
                     "lawmakerWithGopCaucus": false,
-                    "lawmakerWithDemCaucus": true
+                    "lawmakerWithDemCaucus": false
                 },
                 {
                     "option": "N",
@@ -7657,12 +7657,12 @@
             "session": "2",
             "thresholdRequired": "simple",
             "count": {
-                "Y": 46,
-                "N": 54
+                "Y": 47,
+                "N": 53
             },
             "gopCount": {
-                "Y": 46,
-                "N": 12,
+                "Y": 47,
+                "N": 11,
                 "A": 0,
                 "E": 0,
                 "O": 0
@@ -8485,7 +8485,7 @@
                     "lawmakerWithDemCaucus": false
                 },
                 {
-                    "option": "N",
+                    "option": "Y",
                     "name": "Curtis Cochran",
                     "lastName": "Cochran",
                     "party": "R",
@@ -8493,9 +8493,9 @@
                     "district": "HD 90",
                     "voteOutcome": false,
                     "lawmakerPresent": true,
-                    "lawmakerOnWinningSide": true,
-                    "lawmakerWithGopCaucus": false,
-                    "lawmakerWithDemCaucus": true
+                    "lawmakerOnWinningSide": false,
+                    "lawmakerWithGopCaucus": true,
+                    "lawmakerWithDemCaucus": false
                 },
                 {
                     "option": "N",

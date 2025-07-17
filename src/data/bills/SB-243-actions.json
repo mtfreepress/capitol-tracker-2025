@@ -2071,8 +2071,8 @@
             "session": "2",
             "thresholdRequired": "simple",
             "count": {
-                "Y": 32,
-                "N": 68
+                "Y": 33,
+                "N": 67
             },
             "gopCount": {
                 "Y": 1,
@@ -2082,8 +2082,8 @@
                 "O": 0
             },
             "demCount": {
-                "Y": 31,
-                "N": 11,
+                "Y": 32,
+                "N": 10,
                 "A": 0,
                 "E": 0,
                 "O": 0
@@ -3354,7 +3354,7 @@
                     "lawmakerWithDemCaucus": false
                 },
                 {
-                    "option": "N",
+                    "option": "Y",
                     "name": "Scott Rosenzweig",
                     "lastName": "Rosenzweig",
                     "party": "D",
@@ -3362,9 +3362,9 @@
                     "district": "HD 57",
                     "voteOutcome": false,
                     "lawmakerPresent": true,
-                    "lawmakerOnWinningSide": true,
-                    "lawmakerWithGopCaucus": true,
-                    "lawmakerWithDemCaucus": false
+                    "lawmakerOnWinningSide": false,
+                    "lawmakerWithGopCaucus": false,
+                    "lawmakerWithDemCaucus": true
                 },
                 {
                     "option": "N",

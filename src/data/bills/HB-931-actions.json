@@ -1914,13 +1914,13 @@
             "thresholdRequired": "simple",
             "count": {
                 "Y": 50,
-                "N": 49
+                "N": 48
             },
             "gopCount": {
                 "Y": 50,
-                "N": 8,
+                "N": 7,
                 "A": 0,
-                "E": 0,
+                "E": 1,
                 "O": 0
             },
             "demCount": {
@@ -2091,17 +2091,17 @@
                     "lawmakerWithDemCaucus": true
                 },
                 {
-                    "option": "N",
+                    "option": "E",
                     "name": "Steve Gist",
                     "lastName": "Gist",
                     "party": "R",
                     "locale": "Cascade",
                     "district": "HD 25",
                     "voteOutcome": true,
-                    "lawmakerPresent": true,
+                    "lawmakerPresent": false,
                     "lawmakerOnWinningSide": false,
                     "lawmakerWithGopCaucus": false,
-                    "lawmakerWithDemCaucus": true
+                    "lawmakerWithDemCaucus": false
                 },
                 {
                     "option": "Y",

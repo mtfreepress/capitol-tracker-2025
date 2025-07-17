@@ -4770,7 +4770,7 @@
             "thresholdRequired": "simple",
             "count": {
                 "Y": 98,
-                "N": 2
+                "N": 1
             },
             "gopCount": {
                 "Y": 57,
@@ -4781,9 +4781,9 @@
             },
             "demCount": {
                 "Y": 41,
-                "N": 1,
+                "N": 0,
                 "A": 0,
-                "E": 0,
+                "E": 1,
                 "O": 0
             },
             "motionPassed": true,
@@ -6000,14 +6000,14 @@
                     "lawmakerWithDemCaucus": true
                 },
                 {
-                    "option": "N",
+                    "option": "E",
                     "name": "Sidney Fitzpatrick",
                     "lastName": "Fitzpatrick",
                     "party": "D",
                     "locale": "Crow Agency",
                     "district": "HD 42",
                     "voteOutcome": true,
-                    "lawmakerPresent": true,
+                    "lawmakerPresent": false,
                     "lawmakerOnWinningSide": false,
                     "lawmakerWithGopCaucus": false,
                     "lawmakerWithDemCaucus": false

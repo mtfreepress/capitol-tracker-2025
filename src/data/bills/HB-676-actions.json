@@ -502,7 +502,7 @@
             "thresholdRequired": "simple",
             "count": {
                 "Y": 53,
-                "N": 46
+                "N": 45
             },
             "gopCount": {
                 "Y": 53,
@@ -513,9 +513,9 @@
             },
             "demCount": {
                 "Y": 0,
-                "N": 42,
+                "N": 41,
                 "A": 0,
-                "E": 0,
+                "E": 1,
                 "O": 0
             },
             "motionPassed": true,
@@ -1511,17 +1511,17 @@
                     "lawmakerWithDemCaucus": true
                 },
                 {
-                    "option": "N",
+                    "option": "E",
                     "name": "Thedis Crowe",
                     "lastName": "Crowe",
                     "party": "D",
                     "locale": "Browning",
                     "district": "HD 15",
                     "voteOutcome": true,
-                    "lawmakerPresent": true,
+                    "lawmakerPresent": false,
                     "lawmakerOnWinningSide": false,
                     "lawmakerWithGopCaucus": false,
-                    "lawmakerWithDemCaucus": true
+                    "lawmakerWithDemCaucus": false
                 },
                 {
                     "option": "Y",
