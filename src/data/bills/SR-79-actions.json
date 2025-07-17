@@ -463,13 +463,13 @@
             "thresholdRequired": "simple",
             "count": {
                 "Y": 45,
-                "N": 3
+                "N": 2
             },
             "gopCount": {
                 "Y": 27,
-                "N": 3,
+                "N": 2,
                 "A": 2,
-                "E": 0,
+                "E": 1,
                 "O": 0
             },
             "demCount": {
@@ -705,14 +705,14 @@
                     "lawmakerWithDemCaucus": true
                 },
                 {
-                    "option": "N",
+                    "option": "E",
                     "name": "Jason Ellsworth",
                     "lastName": "Ellsworth",
                     "party": "R",
                     "locale": "Hamilton",
                     "district": "SD 43",
                     "voteOutcome": true,
-                    "lawmakerPresent": true,
+                    "lawmakerPresent": false,
                     "lawmakerOnWinningSide": false,
                     "lawmakerWithGopCaucus": false,
                     "lawmakerWithDemCaucus": false
