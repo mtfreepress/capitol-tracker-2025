@@ -6935,8 +6935,8 @@
             "session": "2",
             "thresholdRequired": "simple",
             "count": {
-                "Y": 59,
-                "N": 41
+                "Y": 58,
+                "N": 42
             },
             "gopCount": {
                 "Y": 58,
@@ -6946,8 +6946,8 @@
                 "O": 0
             },
             "demCount": {
-                "Y": 1,
-                "N": 41,
+                "Y": 0,
+                "N": 42,
                 "A": 0,
                 "E": 0,
                 "O": 0
@@ -7997,7 +7997,7 @@
                     "lawmakerWithDemCaucus": false
                 },
                 {
-                    "option": "Y",
+                    "option": "N",
                     "name": "Brian Close",
                     "lastName": "Close",
                     "party": "D",
@@ -8005,9 +8005,9 @@
                     "district": "HD 65",
                     "voteOutcome": true,
                     "lawmakerPresent": true,
-                    "lawmakerOnWinningSide": true,
-                    "lawmakerWithGopCaucus": true,
-                    "lawmakerWithDemCaucus": false
+                    "lawmakerOnWinningSide": false,
+                    "lawmakerWithGopCaucus": false,
+                    "lawmakerWithDemCaucus": true
                 },
                 {
                     "option": "Y",
