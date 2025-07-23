@@ -145,7 +145,7 @@ For new legislative sessions, update these key files:
 The Montana Legislature has unique procedures that require special handling:
 
 ### House Blast Motions
-- Require 55 votes (constitutional majority) instead of simple majority
+- Require 55 votes (constitutional majority) instead of simple majority (as of 2025 — note this threshold sometimes changes session to session)
 - Handled in [`process/main.js`](process/main.js) with vote count overrides
 
 ### Bill Status Complexity
