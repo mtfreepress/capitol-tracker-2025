@@ -6,7 +6,7 @@ import { writeJson } from '../../process/utils.js';
 
 // TODO: NEED TO ADD VOTES ONCE THEY START HAPPENING
 
-const BILL_LIST_URL = 'https://raw.githubusercontent.com/mtfreepress/legislative-interface/refs/heads/main/list-bills-2.json';
+const BILL_LIST_URL = 'https://raw.githubusercontent.com/mtfreepress/legislative-interface/refs/heads/main/interface/list-bills-2.json';
 const RAW_URL_BASE_BILLS = 'https://raw.githubusercontent.com/mtfreepress/legislative-interface/main/process/cleaned/bills-2/';
 const RAW_URL_BASE_ACTIONS = 'https://raw.githubusercontent.com/mtfreepress/legislative-interface/main/process/cleaned/actions-2/';
 const __filename = fileURLToPath(import.meta.url);

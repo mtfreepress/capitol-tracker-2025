@@ -1341,25 +1341,25 @@
             "thresholdRequired": "simple",
             "count": {
                 "Y": 14,
-                "N": 0
+                "N": 1
             },
             "gopCount": {
-                "Y": 8,
-                "N": 0,
+                "Y": 0,
+                "N": 1,
                 "A": 0,
                 "E": 0,
                 "O": 0
             },
             "demCount": {
-                "Y": 6,
+                "Y": 0,
                 "N": 0,
                 "A": 0,
                 "E": 0,
                 "O": 0
             },
             "motionPassed": true,
-            "gopSupported": true,
-            "demSupported": true,
+            "gopSupported": false,
+            "demSupported": false,
             "votes": [
                 {
                     "option": "Y",
@@ -1472,6 +1472,14 @@
                     "party": "R",
                     "locale": "Colstrip",
                     "district": "HD 35"
+                },
+                {
+                    "option": "N",
+                    "name": "Katie Zolnikov",
+                    "lastName": "Zolnikov",
+                    "party": "R",
+                    "locale": "Billings",
+                    "district": "HD 44"
                 }
             ]
         },
@@ -3234,20 +3242,6 @@
     {
         "id": "SB22-0030",
         "bill": "SB 22",
-        "date": "03/18/2025",
-        "description": "Returned to Senate",
-        "possession": "House",
-        "committee": "undefined",
-        "actionUrl": null,
-        "recordings": [],
-        "transcriptUrl": null,
-        "key": "Returned to Senate",
-        "committeeHearingTime": null,
-        "vote": null
-    },
-    {
-        "id": "SB22-0031",
-        "bill": "SB 22",
         "date": "03/20/2025",
         "description": "Returned from Enrolling",
         "possession": "Senate",
@@ -3260,7 +3254,7 @@
         "vote": null
     },
     {
-        "id": "SB22-0032",
+        "id": "SB22-0031",
         "bill": "SB 22",
         "date": "03/24/2025",
         "description": "Signed by President",
@@ -3274,7 +3268,7 @@
         "vote": null
     },
     {
-        "id": "SB22-0033",
+        "id": "SB22-0032",
         "bill": "SB 22",
         "date": "03/26/2025",
         "description": "Signed by Speaker",
@@ -3288,7 +3282,7 @@
         "vote": null
     },
     {
-        "id": "SB22-0034",
+        "id": "SB22-0033",
         "bill": "SB 22",
         "date": "03/27/2025",
         "description": "Transmitted to Governor",
@@ -3302,7 +3296,7 @@
         "vote": null
     },
     {
-        "id": "SB22-0035",
+        "id": "SB22-0034",
         "bill": "SB 22",
         "date": "04/03/2025",
         "description": "Signed by Governor",
@@ -3316,7 +3310,7 @@
         "vote": null
     },
     {
-        "id": "SB22-0036",
+        "id": "SB22-0035",
         "bill": "SB 22",
         "date": "04/03/2025",
         "description": "Chapter Number Assigned",
