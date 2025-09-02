@@ -2772,20 +2772,6 @@
         "id": "HJ50-0028",
         "bill": "HJ 50",
         "date": "04/30/2025",
-        "description": "Sent to Enrolling",
-        "possession": "House",
-        "committee": "undefined",
-        "actionUrl": null,
-        "recordings": [],
-        "transcriptUrl": null,
-        "key": "Sent to Enrolling",
-        "committeeHearingTime": null,
-        "vote": null
-    },
-    {
-        "id": "HJ50-0029",
-        "bill": "HJ 50",
-        "date": "04/30/2025",
         "description": "3rd Reading Concurred",
         "possession": "Senate",
         "committee": "undefined",
@@ -2795,7 +2781,7 @@
         "key": "3rd Reading Concurred",
         "committeeHearingTime": null,
         "vote": {
-            "action": "HJ50-0029",
+            "action": "HJ50-0028",
             "bill": "HJ 50",
             "date": "04/30/2025",
             "type": "floor",
@@ -3232,7 +3218,7 @@
         "voteSeq": "S3074"
     },
     {
-        "id": "HJ50-0030",
+        "id": "HJ50-0029",
         "bill": "HJ 50",
         "date": "04/30/2025",
         "description": "Returned to House",
@@ -3242,6 +3228,20 @@
         "recordings": [],
         "transcriptUrl": null,
         "key": "Returned to House",
+        "committeeHearingTime": null,
+        "vote": null
+    },
+    {
+        "id": "HJ50-0030",
+        "bill": "HJ 50",
+        "date": "04/30/2025",
+        "description": "Sent to Enrolling",
+        "possession": "House",
+        "committee": "undefined",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Sent to Enrolling",
         "committeeHearingTime": null,
         "vote": null
     },

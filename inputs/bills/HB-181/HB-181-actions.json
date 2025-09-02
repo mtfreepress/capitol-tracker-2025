@@ -235,8 +235,22 @@
         "transcriptUrl": null,
         "key": "Committee Executive Action--Bill Passed",
         "committeeHearingTime": null,
+        "vote": null
+    },
+    {
+        "id": "HB181-0018",
+        "bill": "HB 181",
+        "date": "01/21/2025",
+        "description": "Committee Executive Action--Bill Passed",
+        "possession": "House",
+        "committee": "(H) State Administration",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Committee Executive Action--Bill Passed",
+        "committeeHearingTime": null,
         "vote": {
-            "action": "HB181-0017",
+            "action": "HB181-0018",
             "bill": "HB 181",
             "date": "01/21/2025",
             "type": "committee",
@@ -423,20 +437,6 @@
             ]
         },
         "voteSeq": "H5"
-    },
-    {
-        "id": "HB181-0018",
-        "bill": "HB 181",
-        "date": "01/21/2025",
-        "description": "Committee Executive Action--Bill Passed",
-        "possession": "House",
-        "committee": "(H) State Administration",
-        "actionUrl": null,
-        "recordings": [],
-        "transcriptUrl": null,
-        "key": "Committee Executive Action--Bill Passed",
-        "committeeHearingTime": null,
-        "vote": null
     },
     {
         "id": "HB181-0019",
@@ -3369,20 +3369,6 @@
         "id": "HB181-0039",
         "bill": "HB 181",
         "date": "03/04/2025",
-        "description": "Chapter Number Assigned",
-        "possession": "undefined",
-        "committee": "undefined",
-        "actionUrl": null,
-        "recordings": [],
-        "transcriptUrl": null,
-        "key": "Chapter Number Assigned",
-        "committeeHearingTime": null,
-        "vote": null
-    },
-    {
-        "id": "HB181-0040",
-        "bill": "HB 181",
-        "date": "03/04/2025",
         "description": "Signed by Governor",
         "possession": "House",
         "committee": "undefined",
@@ -3390,6 +3376,20 @@
         "recordings": [],
         "transcriptUrl": null,
         "key": "Signed by Governor",
+        "committeeHearingTime": null,
+        "vote": null
+    },
+    {
+        "id": "HB181-0040",
+        "bill": "HB 181",
+        "date": "03/04/2025",
+        "description": "Chapter Number Assigned",
+        "possession": "undefined",
+        "committee": "undefined",
+        "actionUrl": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Chapter Number Assigned",
         "committeeHearingTime": null,
         "vote": null
     }

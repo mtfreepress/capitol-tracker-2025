@@ -239,6 +239,23 @@
         "isHighlight": true,
         "committeeAction": true,
         "advanced": true,
+        "vote": null
+    },
+    {
+        "id": "HB181-0018",
+        "bill": "HB 181",
+        "date": "01/21/2025",
+        "committeeHearingTime": null,
+        "description": "Committee Executive Action--Bill Passed",
+        "billHolder": "house",
+        "committee": "House State Administration",
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Committee Executive Action--Bill Passed",
+        "isMajor": true,
+        "isHighlight": true,
+        "committeeAction": true,
+        "advanced": true,
         "vote": {
             "bill": "HB 181",
             "date": "01/21/2025",
@@ -424,23 +441,6 @@
                 }
             ]
         }
-    },
-    {
-        "id": "HB181-0018",
-        "bill": "HB 181",
-        "date": "01/21/2025",
-        "committeeHearingTime": null,
-        "description": "Committee Executive Action--Bill Passed",
-        "billHolder": "house",
-        "committee": "House State Administration",
-        "recordings": [],
-        "transcriptUrl": null,
-        "key": "Committee Executive Action--Bill Passed",
-        "isMajor": true,
-        "isHighlight": true,
-        "committeeAction": true,
-        "advanced": true,
-        "vote": null
     },
     {
         "id": "HB181-0019",
@@ -4880,22 +4880,6 @@
         "bill": "HB 181",
         "date": "03/04/2025",
         "committeeHearingTime": null,
-        "description": "Chapter Number Assigned",
-        "billHolder": "sos",
-        "committee": null,
-        "recordings": [],
-        "transcriptUrl": null,
-        "key": "Chapter Number Assigned",
-        "isMajor": true,
-        "ultimatelyPassed": true,
-        "secretaryOfStateAction": true,
-        "vote": null
-    },
-    {
-        "id": "HB181-0040",
-        "bill": "HB 181",
-        "date": "03/04/2025",
-        "committeeHearingTime": null,
         "description": "Signed by Governor",
         "billHolder": "governor",
         "committee": null,
@@ -4906,6 +4890,22 @@
         "isHighlight": true,
         "governorAction": true,
         "signed": true,
+        "vote": null
+    },
+    {
+        "id": "HB181-0040",
+        "bill": "HB 181",
+        "date": "03/04/2025",
+        "committeeHearingTime": null,
+        "description": "Chapter Number Assigned",
+        "billHolder": "sos",
+        "committee": null,
+        "recordings": [],
+        "transcriptUrl": null,
+        "key": "Chapter Number Assigned",
+        "isMajor": true,
+        "ultimatelyPassed": true,
+        "secretaryOfStateAction": true,
         "vote": null
     }
 ]
