@@ -58,7 +58,7 @@ export default class Bill {
             isKeyBill,
             category,
             Explanation,
-            BillPageText,
+            billPageText = null,
             // legalNoteLink, // Replaced by legal notes direct from LAWS system
             tags,
             vetoMemoUrl,
@@ -116,7 +116,7 @@ export default class Bill {
             isMajorBill: isKeyBill,
             majorBillCategory: category,
             explanation: Explanation,
-            billPageText: BillPageText,
+            billPageText: billPageText,
 
             articles,
             numArticles: articles.length // for bill table summaries

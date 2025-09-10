@@ -48,6 +48,10 @@ const governorPageTopper = getText('./inputs/annotations/pages/governor.md')
 const participationPageContent = getText('./inputs/annotations/pages/participation.md')
 const contactUsComponentText = getText('./inputs/annotations/components/about.md')
 
+function normalizeBillKey(key) {
+    return key.replace(/[\s\-]/g, '').toLowerCase();
+}
+
 /* 
 ### DATA BUNDLING + WRANGLING
 */
@@ -80,9 +84,10 @@ const bills = billsRaw.map(bill => new Bill({
     bill,
     actions: actionsFlat.filter(d => d.bill === bill.key),
     votes: actionsFlat.filter(d => d.vote && d.vote.bill === bill.key).map(d => d.vote),
-    annotation: billAnnotations.find(d => d.Identifier === bill.key) || {},
+    annotation: billAnnotations.find(d => d.identifier && normalizeBillKey(d.identifier) === normalizeBillKey(bill.key)) || {},
     articles: articles.filter(d => d.billTags.includes(bill.key)),
 }))
+
 
 const votes = bills.map(bill => bill.exportVoteData()).flat()
 
