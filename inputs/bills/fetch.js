@@ -53,16 +53,19 @@ const downloadFile = async (url, fileName, folderPath) => {
         await writeJson(outputPath, data);
         return true;
     } catch (error) {
-        console.error(`Error downloading ${fileName}:`, error.message);
+        console.error(`Error downloading ${fileName}:`, error.code || error.message || 'Unknown error');
         return false;
     }
 };
 
-const main = async () => {
-    try {
-        const billList = await fetchJson(BILL_LIST_URL);
-
-        const downloadPromises = billList.map(async (bill) => {
+// Process bills in batches to avoid overwhelming the connection
+const processBatch = async (bills, batchSize = 10) => {
+    const results = [];
+    for (let i = 0; i < bills.length; i += batchSize) {
+        const batch = bills.slice(i, i + batchSize);
+        console.log(`Processing batch ${Math.floor(i / batchSize) + 1}/${Math.ceil(bills.length / batchSize)} (${batch.length} bills)`);
+        
+        const batchPromises = batch.map(async (bill) => {
             const billIdentifier = `${bill.billType}-${bill.billNumber}`;
             const folderPath = path.join(OUT_DIR, billIdentifier);
 
@@ -75,16 +78,27 @@ const main = async () => {
             const billFileUrl = `${RAW_URL_BASE_BILLS}${billFileName}`;
             const actionFileUrl = `${RAW_URL_BASE_ACTIONS}${actionFileName}`;
 
-            const billDownloaded = downloadFile(billFileUrl, billFileName, folderPath);
+            const billDownloaded = await downloadFile(billFileUrl, billFileName, folderPath);
+            const actionDownloaded = await downloadFile(actionFileUrl, actionFileName, folderPath);
 
-            // console.time(`Download ${actionFileName}`);
-            const actionDownloaded = downloadFile(actionFileUrl, actionFileName, folderPath);
-
-            return Promise.all([billDownloaded, actionDownloaded]);
+            return [billDownloaded, actionDownloaded];
         });
 
-        await Promise.all(downloadPromises);
+        const batchResults = await Promise.all(batchPromises);
+        results.push(...batchResults);
+    }
+    return results;
+};
 
+const main = async () => {
+    try {
+        console.log('Fetching bill list...');
+        const billList = await fetchJson(BILL_LIST_URL);
+        console.log(`Found ${billList.length} bills to download`);
+        
+        await processBatch(billList, 10); // Process 10 bills at a time
+        
+        console.log('Download complete!');
     } catch (error) {
         console.error('Error:', error.message);
         process.exit(1);

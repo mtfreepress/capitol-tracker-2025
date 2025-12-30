@@ -2,7 +2,8 @@ import React from 'react';
 import { css } from '@emotion/react';
 import ReactMarkdown from 'react-markdown';
 
-import { text } from '../data/contact.json'
+import contactData from '../data/contact.json';
+const { text } = contactData;
 
 const containerCss = css`
     margin-top: 3em;

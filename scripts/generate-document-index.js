@@ -1,5 +1,5 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
 
 // setting up generation for fiscal-notes and legal-notes just in case™
 const documentTypes = ['amendments', 'fiscal-notes', 'legal-notes'];
