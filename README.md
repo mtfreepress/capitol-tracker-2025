@@ -22,8 +22,8 @@ A live version of the 2025 tracker can be found at [https://projects.montanafree
 ### 3. Clone and Setup
 
 ```bash
-git clone {forked-repo-url}
-cd {forked-repo-name}
+git clone https://github.com/mtfreepress/capitol-tracker-2025.git
+cd capitol-tracker-2025
 npm install
 ```
 
@@ -212,6 +212,8 @@ chmod +x ./build-and-deploy.sh
 2. **Data pipeline fails**: Verify legislative-interface repository is accessible and has latest data
 3. **PDFs not loading**: Check that PDF files exist in [`public/`](public/) directories
 4. **Vote counts wrong**: Review House blast motion logic in [`process/main.js`](process/main.js)
+
+    
 
 ### Dependencies
 - **Node.js 18+**
