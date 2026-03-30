@@ -91,7 +91,7 @@ const Footer = (props) => {
         const itemsRendered = menu.items.map((item, i) => <li key={String(i)}><a href={item.url}>{item.label}</a></li>)
         return <section className="footer-menu" key={String(i)}>
             <h2>{menu.label}</h2>
-            <ul class="footer-menu-item">{itemsRendered}</ul>
+            <ul className="footer-menu-item">{itemsRendered}</ul>
         </section>
     })
 

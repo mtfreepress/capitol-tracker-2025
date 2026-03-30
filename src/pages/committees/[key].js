@@ -17,9 +17,10 @@ const normalizeBillId = (id) => {
 
 export async function getStaticProps({ params }) {
     const committee = committees.find(committee => committee.key === params.key);
-    const normalizedCommitteeBills = committee.bills.map(normalizeBillId);
-    const relevantBills = bills.filter(bill => 
-        normalizedCommitteeBills.includes(normalizeBillId(bill.identifier))
+    // Use a Set for O(1) membership checks instead of O(n) array.includes()
+    const normalizedCommitteeBillsSet = new Set(committee.bills.map(normalizeBillId));
+    const relevantBills = bills.filter(bill =>
+        normalizedCommitteeBillsSet.has(normalizeBillId(bill.identifier))
     );
 
     return {

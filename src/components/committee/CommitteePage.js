@@ -36,6 +36,18 @@ const committeeMemberListStyle = css`
 
 const getDay = d => shortDateWithWeekday(new Date(d));
 
+// Normalize a bill identifier for comparison (e.g. "HB 1", "HB-1", "hb1" → "HB1")
+const normalizeBillId = (id) => {
+    if (!id) return '';
+    return id.replace(/\s+|-/g, '').toUpperCase();
+};
+
+// Build a Set of normalized bill ids from an array, for O(1) membership checks
+const buildNormalizedSet = (ids) => {
+    if (!ids || ids.length === 0) return new Set();
+    return new Set(ids.map(normalizeBillId));
+};
+
 const CommitteePage = ({ committee, bills }) => {
     const basePath = process.env.BASE_PATH || '';
 
@@ -45,66 +57,47 @@ const CommitteePage = ({ committee, bills }) => {
         billsFailed, billsAdvanced, billsBlasted, members, committeePageText
     } = committee;
 
-    console.log({ committee })
+    // Build Sets once so each category lookup is O(1) instead of O(category_size)
+    const unscheduledSet   = buildNormalizedSet(billsUnscheduled);
+    const awaitingVoteSet  = buildNormalizedSet(billsAwaitingVote);
+    const withdrawnSet     = buildNormalizedSet(billsWithdrawn);
+    const failedSet        = buildNormalizedSet(billsFailed);
+    const advancedSet      = buildNormalizedSet(billsAdvanced);
+    const blastedSet       = buildNormalizedSet(billsBlasted);
 
-    const normalizeBillId = (id) => {
-        if (!id) return '';
-        return id.replace(/\s+|-/g, '').toUpperCase();
-    };
-    // calculate bills for each category
-    const unscheduledBills = bills.filter(d =>
-        billsUnscheduled &&
-        billsUnscheduled.some(billId =>
-            normalizeBillId(billId) === normalizeBillId(d.identifier)
-        )
-    );
-    const scheduledBillsByDay = billsScheduledByDay && billsScheduledByDay.map(day => ({
-        date: day.day,
-        bills: bills.filter(d => day.bills && day.bills.includes(d.identifier)),
-    })) || [];
+    // Build a Map from normalized identifier → bill object for O(1) day-schedule lookups
+    const billByNormalizedId = new Map(bills.map(d => [normalizeBillId(d.identifier), d]));
+
+    // Single pass: categorize each bill instead of 6 separate filter passes
+    const unscheduledBills  = [];
+    const awaitingVoteBills = [];
+    const withdrawnBills    = [];
+    const failedBills       = [];
+    const passedBills       = [];
+    const blastedBills      = [];
+
+    for (const bill of bills) {
+        const nid = normalizeBillId(bill.identifier);
+        if (unscheduledSet.has(nid))  unscheduledBills.push(bill);
+        if (awaitingVoteSet.has(nid)) awaitingVoteBills.push(bill);
+        if (withdrawnSet.has(nid))    withdrawnBills.push(bill);
+        if (failedSet.has(nid))       failedBills.push(bill);
+        if (advancedSet.has(nid))     passedBills.push(bill);
+        if (blastedSet.has(nid))      blastedBills.push(bill);
+    }
+
+    const scheduledBillsByDay = billsScheduledByDay
+        ? billsScheduledByDay.map(day => ({
+            date: day.day,
+            // Map scheduled identifiers directly to bill objects via the lookup map
+            bills: (day.bills || []).map(id => billByNormalizedId.get(normalizeBillId(id))).filter(Boolean),
+        }))
+        : [];
 
     // create a combined unheard bills array (both unscheduled and scheduled)
     const unheard = Array.from(new Set(
         [...unscheduledBills, ...scheduledBillsByDay.flatMap(d => d.bills)]
     ));
-
-
-    const awaitingVoteBills = bills.filter(d =>
-        billsAwaitingVote &&
-        billsAwaitingVote.some(billId =>
-            normalizeBillId(billId) === normalizeBillId(d.identifier)
-        )
-    );
-    const withdrawnBills = bills.filter(d =>
-        billsWithdrawn &&
-        billsWithdrawn.some(billId =>
-            normalizeBillId(billId) === normalizeBillId(d.identifier)
-        )
-    );
-
-    const failedBills = bills.filter(d =>
-        billsFailed &&
-        billsFailed.some(billId =>
-            normalizeBillId(billId) === normalizeBillId(d.identifier)
-        )
-    );
-
-    const passedBills = bills.filter(d =>
-        billsAdvanced &&
-        billsAdvanced.some(billId =>
-            normalizeBillId(billId) === normalizeBillId(d.identifier)
-        )
-    );
-
-    const blastedBills = bills.filter(d =>
-        billsBlasted &&
-        billsBlasted.some(billId =>
-            normalizeBillId(billId) === normalizeBillId(d.identifier)
-        )
-    );
-
-    console.log(bills)
-    console.log(awaitingVoteBills, withdrawnBills, failedBills, passedBills, blastedBills);
 
     const chair = members && members.find(d => d.role && d.role.toLowerCase() === 'chair');
 

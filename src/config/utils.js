@@ -136,32 +136,42 @@ export const listToText = (list) => {
 //   return [];
 // }
 
+// Module-level promise reference deduplicate concurrent callers (e.g. multiple BillTable mounts)
+let _billsFetchPromise = null;
+
 export async function fetchBillsWithAmendments() {
   try {
     // Return cached result if available
-    if (documentCache.getBillsWithAmendments()) {
-      return documentCache.getBillsWithAmendments();
+    const cached = documentCache.getBillsWithAmendments();
+    if (cached) return cached;
+
+    // Reuse the in-flight promise so simultaneous callers share one network request
+    if (!_billsFetchPromise) {
+      _billsFetchPromise = fetch('/capitol-tracker-2025/bills-with-amendments.txt')
+        .then(response => {
+          if (!response.ok) throw new Error('Bills with amendments list not found');
+          return response.text();
+        })
+        .then(text => {
+          const bills = text.split('\n').filter(line => line.trim().length > 0);
+          documentCache.setBillsWithAmendments(bills);
+          return bills;
+        })
+        .catch(err => {
+          _billsFetchPromise = null; // allow retry on next call
+          throw err;
+        });
     }
-    
-    let billsWithAmendmentsPromise = fetch('/capitol-tracker-2025/bills-with-amendments.txt')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Bills with amendments list not found');
-        }
-        return response.text();
-      })
-      .then(text => {
-        const bills = text.split('\n').filter(line => line.trim().length > 0);
-        documentCache.setBillsWithAmendments(bills);
-        return bills;
-      });
-    
-    return await billsWithAmendmentsPromise;
+
+    return await _billsFetchPromise;
   } catch (error) {
     console.error('Error fetching bills with amendments:', error);
     return [];
   }
 }
+
+// Module-level promise reference to deduplicate concurrent document-index fetches
+let _documentIndexPromise = null;
 
 export async function fetchDocumentList(type, billId) {
   try {
@@ -170,11 +180,22 @@ export async function fetchDocumentList(type, billId) {
 
     // use cached index
     if (!documentCache.getDocumentIndex()) {
-      const response = await fetch('/capitol-tracker-2025/document-index.json');
-      if (!response.ok) {
-        throw new Error('Document index not found');
+      if (!_documentIndexPromise) {
+        _documentIndexPromise = fetch('/capitol-tracker-2025/document-index.json')
+          .then(response => {
+            if (!response.ok) throw new Error('Document index not found');
+            return response.json();
+          })
+          .then(data => {
+            documentCache.setDocumentIndex(data);
+            return data;
+          })
+          .catch(err => {
+            _documentIndexPromise = null;
+            throw err;
+          });
       }
-      documentCache.setDocumentIndex(await response.json());
+      await _documentIndexPromise;
     }
 
     // return docs for bill or empty array if no docs
