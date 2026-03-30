@@ -1,4 +1,3 @@
-import fetch from 'node-fetch';
 import fs from 'fs/promises';
 import { fileURLToPath } from 'url';
 import path from 'path';

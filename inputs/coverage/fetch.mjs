@@ -1,5 +1,4 @@
 import fs from 'fs';
-import fetch from 'node-fetch';
 
 const writeJson = (path, data) => {
   fs.writeFile(path, JSON.stringify(data, null, 2), err => {
