@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { css } from '@emotion/react';
 import Link from 'next/link';
 import DocumentModal from './common/DocumentModal';
@@ -35,7 +35,8 @@ const BillTable = ({ bills, suppressCount, sortFunction = DEFAULT_SORT, displayL
     return <div className='note'>None at present</div>;
   }
 
-  const sorted = bills.sort(sortFunction);
+  // Spread to avoid mutating the prop array; memoize to skip re-sort on unrelated re-renders
+  const sorted = useMemo(() => [...bills].sort(sortFunction), [bills, sortFunction]);
   const rendered = isTruncated ? sorted.slice(0, displayLimit) : sorted;
   const rows = rendered.map((bill, i) => {
     const { key, ...rest } = bill;

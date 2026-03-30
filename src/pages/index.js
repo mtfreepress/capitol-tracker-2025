@@ -71,8 +71,12 @@ const Index = ({ keyBills, billIndex, lawmakerIndex }) => {
 
 export async function getStaticProps() {
   const keyBills = bills.filter(bill => bill.isMajorBill);
-  const billIndex = bills;
-  const lawmakerIndex = lawmakers;
+  // Trim to only fields used by BillLookup (key, identifier, title)
+  const billIndex = bills.map(({ key, identifier, title }) => ({ key, identifier, title }));
+  // Trim to only fields used by LawmakerLookup and DistrictLookup
+  const lawmakerIndex = lawmakers.map(({ key, title, name, party, district, locale, phone, email, isActive }) => ({
+    key, title, name, party, district, locale, phone, email, isActive,
+  }));
 
   return {
     props: {

@@ -8,6 +8,7 @@ import NewsletterSignup from "../components/NewsletterSignup";
 import { capitalize, numberFormat } from "../config/utils";
 import billsJson from "../data/bills.json";
 import TruncatedContainer from "../components/TruncatedContainer";
+
 const types = [
   "budget bill",
   "house bill",
@@ -28,14 +29,9 @@ const allBillsPageStyle = css`
   }
 `;
 
-const AllBills = () => {
-  const allBills = billsJson;
-
-  const byType = types.map(type => ({
-    type,
-    bills: allBills.filter(d => d.type === type),
-  }));
-
+// billsByType and totalCount come from getStaticProps — bills.json is excluded
+// from the client JS bundle because it is only referenced inside getStaticProps.
+const AllBills = ({ billsByType, totalCount }) => {
   return (
     <div css={allBillsPageStyle}>
       <Layout
@@ -47,20 +43,20 @@ const AllBills = () => {
       >
         <h1>All 2025 bills</h1>
         <div className="note">
-          <strong>{numberFormat(allBills.length)}</strong> total bills, resolutions, and other measures introduced
+          <strong>{numberFormat(totalCount)}</strong> total bills, resolutions, and other measures introduced
         </div>
         <div>
-          {types.map((type, i) => (
-            <span key={type}>
+          {billsByType.map((group, i) => (
+            <span key={group.type}>
               {i !== 0 ? " • " : ""}
-              <Link href={`/all-bills#${type.replace(" ", "-")}`}>
-                {capitalize(type)}s ({byType.find((d) => d.type === type).bills.length})
+              <Link href={`/all-bills#${group.type.replace(" ", "-")}`}>
+                {capitalize(group.type)}s ({group.bills.length})
               </Link>
             </span>
           ))}
         </div>
 
-        {byType.map((group, i) => (
+        {billsByType.map((group, i) => (
           <div id={group.type.replace(" ", "-")} key={group.type}>
             <h2>
               {capitalize(group.type)}s ({group.bills.length}){" "}
@@ -76,6 +72,21 @@ const AllBills = () => {
     </div>
   );
 };
+
+export async function getStaticProps() {
+  // Group bills by type at build time — avoids bundling bills.json into the client JS
+  const billsByType = types.map(type => ({
+    type,
+    bills: billsJson.filter(d => d.type === type),
+  }));
+
+  return {
+    props: {
+      billsByType,
+      totalCount: billsJson.length,
+    },
+  };
+}
 
 // head component for SEO
 import Head from "next/head";

@@ -86,12 +86,15 @@ const NewsletterSignup = props => {
     return <div css={style}>
         <div className="row">
             <div className="img-col">
-            <a href="https://montanafreepress.org/newsletters-sign-up/"><Image
-                    src={wideCapitolizedLogo}
-                    alt="Capitolized newsletter"
-                    fill
-                    style={{objectFit: "cover"}}
-                /></a>
+                <a href="https://montanafreepress.org/newsletters-sign-up/">
+                    <Image
+                        src={wideCapitolizedLogo}
+                        alt="Capitolized newsletter"
+                        width={400}
+                        height={147}
+                        style={{width: '100%', height: 'auto'}}
+                    />
+                </a>
             </div>
             <div className="words-col">
                 {/* <div className="message">Sign up for CAPITOLIZED</div> */}
