@@ -19,8 +19,8 @@ app.use(`${basePath}/_next`, express.static(path.join(buildPath, '_next')));
 // Serve static files (JS, CSS, etc.)
 app.use(basePath, express.static(buildPath));
 
-// Fallback route
-app.get(`${basePath}/*`, (req, res) => {
+// Fallback route — Express 5 requires named wildcards (*path instead of *)
+app.get(`${basePath}/*path`, (req, res) => {
     // Remove basePath from URL
     const relativePath = req.path.replace(basePath, '') || '/';
     const filePath = path.join(buildPath, relativePath);
@@ -36,6 +36,11 @@ app.get(`${basePath}/*`, (req, res) => {
     });
 });
 
-app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}`);
-});
+// Only start listening when run directly, not when imported for testing
+if (require.main === module) {
+    app.listen(port, () => {
+        console.log(`Server running at http://localhost:${port}`);
+    });
+}
+
+module.exports = { app };

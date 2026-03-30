@@ -191,7 +191,7 @@ const Bill = ({ title, identifier, chamber, status, explanation, textUrl, fiscal
       <tr css={tableRowCss} key={identifier}>
 
         <td css={tableBillCell}>
-          <Link href={`/bills/${billUrl(identifier)}`} passHref>
+          <Link href={`/bills/${billUrl(identifier)}`}>
             <span css={billCss}>
               <span>📋</span> <span css={identifierCss}>{identifier}:</span> {title}
             </span>
@@ -199,7 +199,7 @@ const Bill = ({ title, identifier, chamber, status, explanation, textUrl, fiscal
           <div css={billLabelCss}>{explanation}</div>
           <div css={billInfoLineCss}>
             {sponsor && (
-              <Link href={`/lawmakers/${lawmakerUrl(sponsor.name)}`} passHref>
+              <Link href={`/lawmakers/${lawmakerUrl(sponsor.name)}`}>
                 <span css={billLinkCss}>
                   {sponsor.name} <span css={css`color: ${partyColors(sponsor.party)}; opacity: 0.8;`}>({sponsor.party})</span>
                 </span>
@@ -237,7 +237,7 @@ const Bill = ({ title, identifier, chamber, status, explanation, textUrl, fiscal
             )}
             {/* {vetoMemoUrl && <a css={billLinkCss} href={vetoMemoUrl} target="_blank" rel="noopener noreferrer">🚫 Veto memo</a>} */}
             {(numArticles > 0) && (
-              <Link href={`/bills/${billUrl(identifier)}`} passHref>
+              <Link href={`/bills/${billUrl(identifier)}`}>
                 <span css={billLinkCss}>📰 <strong>{numArticles}</strong> MTFP {pluralStory(numArticles)}</span>
               </Link>
             )}

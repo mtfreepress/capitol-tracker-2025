@@ -362,7 +362,6 @@ const CalendarNavigator = ({ dates, currentPageDate }) => {
           )}
         </div>
       </div>
-
       <div
         css={css`
           display: flex;
@@ -375,7 +374,7 @@ const CalendarNavigator = ({ dates, currentPageDate }) => {
         `}
       >
         {prev ? (
-          <Link href={`/calendar/${prev}`} passHref>
+          <Link href={`/calendar/${prev}`}>
             <button
               className="nav-day-button"
               title="Go to Previous Legislative Day"
@@ -427,7 +426,7 @@ const CalendarNavigator = ({ dates, currentPageDate }) => {
           `}
         >
           {!isTodayPage() && (
-            <Link href="/calendar" passHref>
+            <Link href="/calendar">
               <button
                 className="today-button"
                 title="Go to Today"
@@ -456,7 +455,7 @@ const CalendarNavigator = ({ dates, currentPageDate }) => {
         </div>
 
         {next ? (
-          <Link href={`/calendar/${next}`} passHref>
+          <Link href={`/calendar/${next}`}>
             <button
               className="nav-day-button"
               title="Go to Next Legislative Day"
@@ -497,7 +496,6 @@ const CalendarNavigator = ({ dates, currentPageDate }) => {
           <div css={css`min-width: 90px;`}></div>
         )}
       </div>
-
       <div css={gridStyle}>
         {weekdays.map(day => (
           <div key={day} className="weekday-header">

@@ -35,7 +35,7 @@ const AllBillsProgress = () => {
 
         return (
             <tr key={bill.key}>
-                <td><Link href={`/bills/${bill.key}`} passHref>{bill.identifier}</Link></td>
+                <td><Link href={`/bills/${bill.key}`}>{bill.identifier}</Link></td>
                 {dataCells}
             </tr>
         );

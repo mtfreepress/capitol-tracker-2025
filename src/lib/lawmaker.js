@@ -1,5 +1,4 @@
 import lawmakersData from '../data/lawmakers.json';
-import getConfig from 'next/config';
 
 
 export const getAllLawmakerKeys = () => {

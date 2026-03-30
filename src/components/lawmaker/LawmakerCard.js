@@ -146,7 +146,7 @@ const LawmakerCard = ({ lawmaker, portrait, hideEmbed = false }) => {
     <div>
       <div id="embed" css={lawmakerCardCss}>
         <div>
-          <Link href={`${BASE_URL}/lawmakers/${key}`} passHref>
+          <Link href={`${BASE_URL}/lawmakers/${key}`}>
             <div className="name">{title} {name}</div>
           </Link>
         </div>
@@ -174,7 +174,7 @@ const LawmakerCard = ({ lawmaker, portrait, hideEmbed = false }) => {
               <>
                 👥 {mainCommittee.role} of {mainCommittee.displayName} and{' '}
                 <strong>{otherCommittees.length}</strong>{' '}
-                <Link href={`${BASE_URL}/lawmakers/${key}#committees`} passHref>
+                <Link href={`${BASE_URL}/lawmakers/${key}#committees`}>
                   other committee assignment{pluralize(otherCommittees.length)}
                 </Link>
               </>
@@ -182,11 +182,10 @@ const LawmakerCard = ({ lawmaker, portrait, hideEmbed = false }) => {
               <>👥 <strong>0</strong> committee assignments</>
             )}
           </div>
-          <div className="item"><Link href={`${BASE_URL}/lawmakers/${key}#bills-sponsored`} passHref>📋 <strong>{sponsoredBills.length}</strong> bill(s) introduced</Link></div>
-          <div className="promo"><Link href={`${BASE_URL}/`} passHref>See more</Link> on MTFP&#39;s 2025 Capitol Tracker.</div>
+          <div className="item"><Link href={`${BASE_URL}/lawmakers/${key}#bills-sponsored`}>📋 <strong>{sponsoredBills.length}</strong> bill(s) introduced</Link></div>
+          <div className="promo"><Link href={`${BASE_URL}/`}>See more</Link> on MTFP&#39;s 2025 Capitol Tracker.</div>
         </div>
       </div>
-
       {
         !hideEmbed && (
           <div>

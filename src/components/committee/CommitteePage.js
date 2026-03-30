@@ -8,7 +8,6 @@ import CommitteeSummary from './Summary';
 import BillTable from '../BillTable';
 import { lawmakerUrl, shortDateWithWeekday } from '../../config/utils';
 import { partyColors } from '../../config/config';
-import getConfig from 'next/config';
 import Link from 'next/link';
 
 const committeeMemberListStyle = css`
@@ -38,8 +37,7 @@ const committeeMemberListStyle = css`
 const getDay = d => shortDateWithWeekday(new Date(d));
 
 const CommitteePage = ({ committee, bills }) => {
-    const { publicRuntimeConfig } = getConfig() || {};
-    const basePath = publicRuntimeConfig.basePath || process.env.BASE_PATH || '';
+    const basePath = process.env.BASE_PATH || '';
 
     const {
         key, name, time, type, billCount, billsWithdrawn,

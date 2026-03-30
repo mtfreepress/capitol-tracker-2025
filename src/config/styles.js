@@ -1,13 +1,13 @@
-// // central storage point for reused styles
-// import { css } from '@emotion/react'
+// central storage point for reused styles
+import { css } from '@emotion/react'
 
-// export const embedInputContainerStyle = css`
-//     margin: 1em 2em;
+export const embedInputContainerStyle = css`
+    margin: 1em 2em;
 
-//     textarea {
-//         font-family: Courier New;
-//     }
-// `
+    textarea {
+        font-family: Courier New;
+    }
+`
 
 // export const containerStyle = css`
 //     max-width: 1200px;
@@ -56,40 +56,41 @@
 // `
 
 
-// export const bottomFadeCss = css`
-//     position: relative;
-//     :after {
-//         content: '';
-//         position: absolute;
-//         z-index: 10;
-//         bottom: 0;
-//         left: 0;
-//         width: 100%;
-//         height: 4em;
-//         background-image : linear-gradient(to bottom, 
-//                     rgba(255,255,255, 0), 
-//                     rgba(255,255,255, 1) 70%);
+export const bottomFadeCss = css`
+    position: relative;
+    :after {
+        content: '';
+        position: absolute;
+        z-index: 10;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 4em;
+        background-image : linear-gradient(to bottom, 
+                    rgba(255,255,255, 0), 
+                    rgba(255,255,255, 1) 70%);
 
-//     }
-// // `
-// // export const inlineButtonCss = css`
-// //   display: inline-block;
-// //   border: none;
-// //   padding: 0.2em 0.5em;
-// //   border: 1px solid var(--tan6);
-// //   /* color: #ce5a00; */
-// //   color: var(--tan6);
-// //   background-color: rgba(256, 256, 256, 0);
-// //   text-align: left;
-// //   font-size: 1em;
-// //   text-transform: none;
-// //   letter-spacing: normal;
-// //   font-weight: normal;
+    }
+`
 
-// //   :hover {
-// //     background-color: rgba(256, 256, 256, 0);
-// //     border: 1px solid #ce5a00;
-// //     color: #ce5a00;
-// //     text-decoration: none;
-// //   }
-// // `
+export const inlineButtonCss = css`
+  display: inline-block;
+  border: none;
+  padding: 0.2em 0.5em;
+  border: 1px solid var(--tan6);
+  /* color: #ce5a00; */
+  color: var(--tan6);
+  background-color: rgba(256, 256, 256, 0);
+  text-align: left;
+  font-size: 1em;
+  text-transform: none;
+  letter-spacing: normal;
+  font-weight: normal;
+
+  :hover {
+    background-color: rgba(256, 256, 256, 0);
+    border: 1px solid #ce5a00;
+    color: #ce5a00;
+    text-decoration: none;
+  }
+`
