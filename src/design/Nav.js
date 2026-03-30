@@ -123,16 +123,19 @@ const Nav = ({ location }) => {
     const isActiveStyle = location ? activeStyle : null;
 
     const links = PAGE_LINKS.map((l) => (
-        <Link key={l.path} href={l.path} passHref legacyBehavior>
-            <a css={[navItemStyle, navSecondaryStyle, isActiveStyle]}>
-                {l.label}
-            </a>
+        <Link
+            key={l.path}
+            href={l.path}
+            css={[navItemStyle, navSecondaryStyle, isActiveStyle]}>
+
+            {l.label}
+
         </Link>
     ));
 
     return (
         <>
-        {/* TODO: Come back and figure out if there is a better way to handle this floating navbar issue later */}
+            {/* TODO: Come back and figure out if there is a better way to handle this floating navbar issue later */}
             <Global
                 styles={css`
                     html {
@@ -146,23 +149,23 @@ const Nav = ({ location }) => {
                 </div>
 
                 <div css={[navRowStyle, navRowPrimary]}>
-                    <Link href='/house' passHref legacyBehavior>
-                        <a css={[navItemStyle, navPrimaryStyle]}>
-                            <div css={navPrimaryTitle}>🏠 House</div>
-                            <div css={navPrimaryInfo}>{houseControl}-held {houseSplit}</div>
-                        </a>
+                    <Link href='/house' css={[navItemStyle, navPrimaryStyle]}>
+
+                        <div css={navPrimaryTitle}>🏠 House</div>
+                        <div css={navPrimaryInfo}>{houseControl}-held {houseSplit}</div>
+
                     </Link>
-                    <Link href='/senate' passHref legacyBehavior>
-                        <a css={[navItemStyle, navPrimaryStyle]}>
-                            <div css={navPrimaryTitle}>🏛 Senate</div>
-                            <div css={navPrimaryInfo}>{senateControl}-held {senateSplit}</div>
-                        </a>
+                    <Link href='/senate' css={[navItemStyle, navPrimaryStyle]}>
+
+                        <div css={navPrimaryTitle}>🏛 Senate</div>
+                        <div css={navPrimaryInfo}>{senateControl}-held {senateSplit}</div>
+
                     </Link>
-                    <Link href='/governor' passHref legacyBehavior>
-                        <a css={[navItemStyle, navPrimaryStyle]}>
-                            <div css={navPrimaryTitle}>🖋 Governor</div>
-                            <div css={navPrimaryInfo}>Greg Gianforte (R)</div>
-                        </a>
+                    <Link href='/governor' css={[navItemStyle, navPrimaryStyle]}>
+
+                        <div css={navPrimaryTitle}>🖋 Governor</div>
+                        <div css={navPrimaryInfo}>Greg Gianforte (R)</div>
+
                     </Link>
                 </div>
             </div>

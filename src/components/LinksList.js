@@ -74,7 +74,7 @@ const LinksList = ({ articles }) => {
                     articles
                         .sort((a, b) => new Date(b.date) - new Date(a.date))
                         .map((article, i) => (
-                            <Link css={linkStyle} key={String(i)} href={article.link} passHref>
+                            <Link css={linkStyle} key={String(i)} href={article.link}>
                                     <LinkItem {...article} />
                             </Link>
                         ))

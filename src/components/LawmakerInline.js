@@ -33,7 +33,7 @@ const LawmakerInline = ({ lawmaker }) => {
   const partyColor = partyColors(party);
   return (
     <div css={lawmakerInlineStyle}>
-      <Link href={`/lawmakers/${lawmakerUrl(name)}`} passHref>
+      <Link href={`/lawmakers/${lawmakerUrl(name)}`}>
         <span className="name">{name} </span>
         <span className="info">
           <span className="party" style={{ backgroundColor: partyColor, border: `1px solid ${partyColor}` }}>
