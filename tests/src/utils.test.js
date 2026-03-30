@@ -20,9 +20,9 @@ import {
   titleCase,
 } from '../../src/config/utils.js'
 
-// ---------------------------------------------------------------------------
+
 // Number formatters
-// ---------------------------------------------------------------------------
+
 describe('dollarFormat', () => {
   it('formats whole dollar amounts with commas', () => {
     expect(dollarFormat(1234567)).toBe('$1,234,567')
@@ -83,9 +83,9 @@ describe('floatFormat', () => {
   })
 })
 
-// ---------------------------------------------------------------------------
+
 // Date formatters
-// ---------------------------------------------------------------------------
+
 describe('dateFormat', () => {
   it('formats month and day without leading zero in day', () => {
     const date = new Date(2025, 0, 15) // Jan 15
@@ -152,9 +152,9 @@ describe('parseDate', () => {
   })
 })
 
-// ---------------------------------------------------------------------------
+
 // URL helpers
-// ---------------------------------------------------------------------------
+
 describe('billUrl', () => {
   it('converts "HB 123" to "hb-123"', () => {
     expect(billUrl('HB 123')).toBe('hb-123')
@@ -203,9 +203,9 @@ describe('urlize', () => {
   })
 })
 
-// ---------------------------------------------------------------------------
+
 // Text helpers
-// ---------------------------------------------------------------------------
+
 describe('pluralize', () => {
   it('returns empty string for 1', () => {
     expect(pluralize(1)).toBe('')

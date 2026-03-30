@@ -2,11 +2,11 @@ import { describe, it, expect } from 'vitest'
 import { readFileSync } from 'fs'
 import { resolve } from 'path'
 
-// ---------------------------------------------------------------------------
+
 // Source-level checks for src/config/styles.js
 // These caught a bug where the entire file was accidentally commented out,
 // breaking consumers that import from it.
-// ---------------------------------------------------------------------------
+
 
 const stylesSource = readFileSync(
   resolve(process.cwd(), 'src/config/styles.js'),
@@ -27,11 +27,11 @@ describe('src/config/styles.js exports', () => {
   })
 })
 
-// ---------------------------------------------------------------------------
+
 // Ensure no source files import the removed 'next/config' module.
 // next/config (publicRuntimeConfig) was removed in Next.js 13+.
 // Use process.env.* instead.
-// ---------------------------------------------------------------------------
+
 
 import { readdirSync, statSync } from 'fs'
 

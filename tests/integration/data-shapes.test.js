@@ -7,9 +7,9 @@ const DATA_DIR = join(process.cwd(), 'src', 'data')
 const readJson = (filename) =>
   JSON.parse(readFileSync(join(DATA_DIR, filename), 'utf-8'))
 
-// ---------------------------------------------------------------------------
+
 // bills.json
-// ---------------------------------------------------------------------------
+
 describe('bills.json', () => {
   it('is a non-empty array', () => {
     const bills = readJson('bills.json')
@@ -36,9 +36,9 @@ describe('bills.json', () => {
   })
 })
 
-// ---------------------------------------------------------------------------
+
 // lawmakers.json
-// ---------------------------------------------------------------------------
+
 describe('lawmakers.json', () => {
   it('is a non-empty array', () => {
     const lawmakers = readJson('lawmakers.json')
@@ -75,9 +75,9 @@ describe('lawmakers.json', () => {
   })
 })
 
-// ---------------------------------------------------------------------------
+
 // committees.json
-// ---------------------------------------------------------------------------
+
 describe('committees.json', () => {
   it('is a non-empty array', () => {
     const committees = readJson('committees.json')
@@ -94,9 +94,9 @@ describe('committees.json', () => {
   })
 })
 
-// ---------------------------------------------------------------------------
+
 // calendar.json
-// ---------------------------------------------------------------------------
+
 describe('calendar.json', () => {
   it('exists and is an object', () => {
     const cal = readJson('calendar.json')
@@ -106,9 +106,9 @@ describe('calendar.json', () => {
   })
 })
 
-// ---------------------------------------------------------------------------
+
 // house.json
-// ---------------------------------------------------------------------------
+
 describe('house.json', () => {
   it('exists and is an object', () => {
     const house = readJson('house.json')
@@ -117,9 +117,9 @@ describe('house.json', () => {
   })
 })
 
-// ---------------------------------------------------------------------------
+
 // senate.json
-// ---------------------------------------------------------------------------
+
 describe('senate.json', () => {
   it('exists and is an object', () => {
     const senate = readJson('senate.json')
@@ -128,9 +128,9 @@ describe('senate.json', () => {
   })
 })
 
-// ---------------------------------------------------------------------------
+
 // governor.json
-// ---------------------------------------------------------------------------
+
 describe('governor.json', () => {
   it('exists and is an object', () => {
     const gov = readJson('governor.json')
@@ -139,9 +139,9 @@ describe('governor.json', () => {
   })
 })
 
-// ---------------------------------------------------------------------------
+
 // articles.json
-// ---------------------------------------------------------------------------
+
 describe('articles.json', () => {
   it('is an array', () => {
     const articles = readJson('articles.json')
@@ -159,9 +159,9 @@ describe('articles.json', () => {
   })
 })
 
-// ---------------------------------------------------------------------------
+
 // bill-categories.json
-// ---------------------------------------------------------------------------
+
 describe('bill-categories.json', () => {
   it('is an array (may be empty at end of session)', () => {
     const cats = readJson('bill-categories.json')
@@ -177,9 +177,9 @@ describe('bill-categories.json', () => {
   })
 })
 
-// ---------------------------------------------------------------------------
+
 // process-annotations.json
-// ---------------------------------------------------------------------------
+
 describe('process-annotations.json', () => {
   it('is an array of annotation objects', () => {
     const annotations = readJson('process-annotations.json')
@@ -195,9 +195,9 @@ describe('process-annotations.json', () => {
   })
 })
 
-// ---------------------------------------------------------------------------
+
 // participation.json
-// ---------------------------------------------------------------------------
+
 describe('participation.json', () => {
   it('exists and is non-null', () => {
     const p = readJson('participation.json')
@@ -206,9 +206,9 @@ describe('participation.json', () => {
   })
 })
 
-// ---------------------------------------------------------------------------
+
 // contact.json
-// ---------------------------------------------------------------------------
+
 describe('contact.json', () => {
   it('exists and is non-null', () => {
     const c = readJson('contact.json')
