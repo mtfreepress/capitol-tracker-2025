@@ -26,3 +26,10 @@ venv/
 .DS_Store
 **/.DS_Store
 *.swp
+
+# PDFs are deployed from legislative-interface directly to S3
+public/bill-texts/
+public/amendments/
+public/fiscal-notes/
+public/legal-notes/
+public/veto-letters/
